@@ -1,0 +1,97 @@
+{
+  "policy": "source_overlay",
+  "case": "literal_revision",
+  "scope": "adapted_AgentRunbookR_local_update",
+  "starting_snapshot": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/matched-web-v1/memory_state",
+  "starting_cache": "independent clones; exact requests and vectors preserved equally",
+  "setup_load_and_seed_s_excluded": 0.6513341009849682,
+  "update_to_queryable_publish_s": 1.3940093700075522,
+  "started_epoch": 1792044181.6510205,
+  "completed_epoch": 1792044183.078944,
+  "artifact_build_s": 1.3624158349994104,
+  "publication_and_reload_s": 0.03159407700877637,
+  "runner_sha256": "e5aea0cd4d8ccf0e980f4fd80e31e467b1673088cdc9ffab79f67c298562f444",
+  "delta_version": null,
+  "source_append_comparator": false,
+  "current_state_evidence": true,
+  "source_overlay_comparator": true,
+  "reextracted_event_outputs": 0,
+  "regenerated_notes": 0,
+  "llm_calls": 0,
+  "llm_input_tokens_known": 0,
+  "llm_output_tokens_known": 0,
+  "event_llm_elapsed_sum_s_not_wall": 0,
+  "note_llm_elapsed_sum_s_not_wall": 0,
+  "embedding_calls": 2,
+  "embedding_vectors": 3,
+  "embedding_tokens_known": 4909,
+  "unknown_usage_calls": 0,
+  "api_failed_calls": 0,
+  "exact_request_hits": 1,
+  "dependency_reused_event_ids": [],
+  "embedding_hits": 20,
+  "load_verified": true,
+  "event_count": 32,
+  "note_count": 10,
+  "edited_event_outputs": 2,
+  "edited_notes": 0,
+  "delta_fallback_groups": 0,
+  "primary_metric": "total_LLM_input_plus_output_tokens",
+  "matched_construction_signature": "7b6e6e7b08fab7ae5355f171df175b783c9314d093dd40c7a6e0157b01892067",
+  "qa_status": "derived_checks_passed_pending_semantics_and_reader",
+  "quality_checks": {
+    "new_fact_present": false,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": "not_applicable_source_overlay",
+    "dirty_event_ids": [
+      "event_0007_0008",
+      "event_0008_0009"
+    ],
+    "reused_event_count": 0,
+    "unchanged_candidate_event_count": 8,
+    "fixed_reader_regression": "not_run",
+    "derived_event_change_hits": {
+      "event_0007_0008": true,
+      "event_0008_0009": true
+    },
+    "derived_notes_change_hit": null,
+    "notes_change_required": false,
+    "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+    "literal_derived_rules": [
+      {
+        "target": "event_0007_0008",
+        "required_hits": {
+          "stay calm": true,
+          "Preview|preview": true,
+          "Comment|comment": true
+        },
+        "forbidden_hits": {},
+        "pass": true
+      },
+      {
+        "target": "event_0008_0009",
+        "required_hits": {
+          "stay calm": true,
+          "don't panic": true,
+          "17 comments": true,
+          "Post": true
+        },
+        "forbidden_hits": {},
+        "pass": true
+      }
+    ],
+    "derived_automated_checks_pass": true,
+    "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+    "quality_pass": null,
+    "semantic_review": "pending"
+  },
+  "trajectory_id": "2e8f6477",
+  "state_index": 8,
+  "revision_count": 1,
+  "state_indices": [
+    8
+  ],
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/v12-web-2e8f6477-reply-replacement/literal_revision-source_overlay"
+}

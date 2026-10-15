@@ -1,0 +1,264 @@
+[
+  {
+    "record_id": "9f53718d55c04e41905381e4e48b65b1",
+    "timestamp_epoch": 1792044176.490574,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 3.780357111012563,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 3418,
+      "text_sha256": "67d5103f063acfee95b6c336420432698b4df5a0184f5b8c2f32d860878fc190",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 786,
+    "completion_tokens": 126,
+    "total_tokens": 912,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "c37b6c579fee4f41b7666846e834b8aa",
+    "timestamp_epoch": 1792044176.4908464,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "literal_atomic_explicit_v8",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0007_0008"
+    ],
+    "source_delta": [
+      {
+        "state_index": 8,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -107,9 +107,9 @@\n \t\t\t\t\t\t[346] link 'Permalink', clickable, visible\n \t\t\t[1075] Section ''\n-\t\t\t\t[1081] textbox 'Comment' value=\"don't panic\", visible, focused, required, describedby='reply_to_comment_411494_comment_help'\n-\t\t\t\t\tStaticText \"don't panic\"\n+\t\t\t\t[1081] textbox 'Comment' value=\"stay calm\", visible, focused, required, describedby='reply_to_comment_411494_comment_help'\n+\t\t\t\t\tStaticText \"stay calm\"\n \t\t\t\t[1083] heading 'Preview'\n \t\t\t\t[1226] paragraph ''\n-\t\t\t\t\tStaticText \"don't panic\"\n+\t\t\t\t\tStaticText \"stay calm\"\n \t\t\t\t[1086] checkbox 'Formatting help +', clickable, checked='false'\n \t\t\t\tStaticText 'Markdown allowed.'",
+        "append_only": false,
+        "role": "post-state"
+      }
+    ],
+    "input_tokens_preflight": 786,
+    "edits": [
+      {
+        "field": "state_transition",
+        "old": "After filling the textbox with 'don't panic', the post-state shows the same textbox now populated with that exact text. Additionally, a 'Preview' section appears below the input, displaying the entered text 'don't panic' to confirm the content before submission.",
+        "new": "After filling the textbox with 'don't panic', the post-state shows the same textbox now populated with 'stay calm' (the corrected observed value). Additionally, a 'Preview' section appears below the input, displaying the text 'stay calm' to confirm the content before submission."
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent continues the workflow of replying to the first reply by entering the required text. This step involves populating the newly revealed input field with the specific message 'don't panic' to fulfill the task goal.",
+        "state_transition": "In the pre-state, the 'Comment' textbox within the localized reply form is visible but empty. After filling the textbox with 'don't panic', the post-state shows the same textbox now populated with that exact text. Additionally, a 'Preview' section appears below the input, displaying the entered text 'don't panic' to confirm the content before submission."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent continues the workflow of replying to the first reply by entering the required text. This step involves populating the newly revealed input field with the specific message 'don't panic' to fulfill the task goal.",
+        "state_transition": "In the pre-state, the 'Comment' textbox within the localized reply form is visible but empty. After filling the textbox with 'don't panic', the post-state shows the same textbox now populated with 'stay calm' (the corrected observed value). Additionally, a 'Preview' section appears below the input, displaying the text 'stay calm' to confirm the content before submission."
+      }
+    ]
+  },
+  {
+    "record_id": "797277d1894b47b9a17f7adfecb9394b",
+    "timestamp_epoch": 1792044179.4909716,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 2.997329979989445,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 3785,
+      "text_sha256": "9eadd2b6f42c8f54dda5440dc4205ba3d5f646fdf3a9493a2a85a6d7bd522cdf",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 848,
+    "completion_tokens": 101,
+    "total_tokens": 949,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "238a75920ebd4d168318f699d4db0822",
+    "timestamp_epoch": 1792044179.4911091,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "literal_atomic_explicit_v8",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0008_0009"
+    ],
+    "source_delta": [
+      {
+        "state_index": 8,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -107,9 +107,9 @@\n \t\t\t\t\t\t[346] link 'Permalink', clickable, visible\n \t\t\t[1075] Section ''\n-\t\t\t\t[1081] textbox 'Comment' value=\"don't panic\", visible, focused, required, describedby='reply_to_comment_411494_comment_help'\n-\t\t\t\t\tStaticText \"don't panic\"\n+\t\t\t\t[1081] textbox 'Comment' value=\"stay calm\", visible, focused, required, describedby='reply_to_comment_411494_comment_help'\n+\t\t\t\t\tStaticText \"stay calm\"\n \t\t\t\t[1083] heading 'Preview'\n \t\t\t\t[1226] paragraph ''\n-\t\t\t\t\tStaticText \"don't panic\"\n+\t\t\t\t\tStaticText \"stay calm\"\n \t\t\t\t[1086] checkbox 'Formatting help +', clickable, checked='false'\n \t\t\t\tStaticText 'Markdown allowed.'",
+        "append_only": false,
+        "role": "pre-state"
+      }
+    ],
+    "input_tokens_preflight": 848,
+    "edits": [
+      {
+        "field": "state_transition",
+        "old": "In the pre-state, the agent is on the comment view for Barnaby_Cuckoldsniff with an open reply form containing the filled text 'don't panic' and a visible 'Post' button.",
+        "new": "In the pre-state, the agent is on the comment view for Barnaby_Cuckoldsniff with an open reply form containing the filled text 'stay calm' and a visible 'Post' button."
+      }
+    ],
+    "before": [
+      {
+        "overview": "The goal is to reply to the first reply in a Reddit thread with the text 'don't panic'. After navigating to the specific comment by Barnaby_Cuckoldsniff and opening the reply interface, the agent has already filled the comment box with the required text. This transition represents the submission phase of the reply workflow, where the agent attempts to finalize the post by interacting with the submission control.",
+        "state_transition": "In the pre-state, the agent is on the comment view for Barnaby_Cuckoldsniff with an open reply form containing the filled text 'don't panic' and a visible 'Post' button. The action clicks the 'Post' button (element 1221). In the post-state, the page content remains visually identical, showing the same comment thread and the filled reply text 'don't panic' in the preview area. However, the system state has updated to reflect the submission attempt: the comment count in the navigation bar changed from '16 comments' to '17 comments', and a '(1 new)' indicator appeared next to the count, suggesting the interface registered a new item without refreshing the main view to display the actual new comment."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The goal is to reply to the first reply in a Reddit thread with the text 'don't panic'. After navigating to the specific comment by Barnaby_Cuckoldsniff and opening the reply interface, the agent has already filled the comment box with the required text. This transition represents the submission phase of the reply workflow, where the agent attempts to finalize the post by interacting with the submission control.",
+        "state_transition": "In the pre-state, the agent is on the comment view for Barnaby_Cuckoldsniff with an open reply form containing the filled text 'stay calm' and a visible 'Post' button. The action clicks the 'Post' button (element 1221). In the post-state, the page content remains visually identical, showing the same comment thread and the filled reply text 'don't panic' in the preview area. However, the system state has updated to reflect the submission attempt: the comment count in the navigation bar changed from '16 comments' to '17 comments', and a '(1 new)' indicator appeared next to the count, suggesting the interface registered a new item without refreshing the main view to display the actual new comment."
+      }
+    ]
+  },
+  {
+    "record_id": "87fac315b6a34538b04a359aa2ca8412",
+    "timestamp_epoch": 1792044179.491256,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 10,
+    "reused": 8
+  },
+  {
+    "record_id": "6ddf5155be624f87ba1a3e8ea0604bbc",
+    "timestamp_epoch": 1792044179.4958546,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "1080f8e02e0bad0ce0385c766731f034ed9ffe4db0ab381447d6868e7788af60",
+    "stage": "notes"
+  },
+  {
+    "record_id": "6e1fdb9f96804ef5b990b6f458ea33a2",
+    "timestamp_epoch": 1792044180.5570667,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9706751269986853,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 11264,
+    "input_sha256": [
+      "c2e8bf0e137454b5d2be55759415d389c037155d2a813dc9ccf432c96cea5e0c"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "71595eac929b4a98bb74741fc130f98a",
+    "timestamp_epoch": 1792044180.5572498,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 11,
+    "actual_vectors": 1,
+    "cache_hits": 10,
+    "elapsed_seconds": 0.971521119994577,
+    "input_keys": [
+      "8cdf49cfbb561ed936422b7e01ab4a7eab97096db0d0f7c9762d609fec4e5917",
+      "34d9478e9632a4d479771da019c61b5e5aa10f9726f63f588169ec2bf1f91f54",
+      "8d9b0368a73ce57d3a7646a0a851b27baa71e5f703ca43c1c1b0085e4a6b58c0",
+      "8aba149810daf1ec84bf1a2ee6b1b354754b41a9a272b727f27e99c75e3c1b65",
+      "d5d1ef37e12a5578ef39c0c56f3c97b7eab1f58027a8f963b0601619de85e73f",
+      "cc30c21ba5e085b85020a762b7b3c36c3880f5916f45839de482b79447cef860",
+      "ca566cbde4cc05c974079697eb5878e9beb2b367a08479a5295685b82488c9e7",
+      "2c345f3edbf59331f6db160989a0367822c13a53652014de891c4ade3bd7c5a2",
+      "f1f0cd2c35ea8a2401a248aed225ed09e840451ce7cb7ad28103acaac1b27957",
+      "3594a877c247a47c1e3abfcc244a971e5415c1c692892ffae42140f06f2d02df",
+      "7e7239499da6d7a75540f6b590b5b491a02fe1c3179798c18109f1d607f15473"
+    ]
+  },
+  {
+    "record_id": "16f1d08de4a24520841541cc19c4cb0a",
+    "timestamp_epoch": 1792044180.7913089,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.23101764201419428,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 2920,
+    "input_sha256": [
+      "07a4c18cc777677354868440aff33d6854ba7cbe4d9c211d8f923abe083eb851",
+      "dce61636c04b575ea8fe1c9173bb0d598936b6f98deeb7bc9b39a64deb00551d"
+    ],
+    "prompt_tokens": 704,
+    "total_tokens": 704,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "f65551c5017b470abe0324c8b314bf44",
+    "timestamp_epoch": 1792044180.7914455,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 10,
+    "actual_vectors": 2,
+    "cache_hits": 8,
+    "elapsed_seconds": 0.23129662798601203,
+    "input_keys": [
+      "e798f2d05f575706517bf4f3d2bdedc25b8a0011de8e323ae9b3116cf7b48cde",
+      "738691d962d774d4b9bb553e2ddf812a16eabce390ec84a4c4b04e50bb544d52",
+      "810e05a83091f656a2041bbe53b8630de83978bc7bbfca2cfc763c72f0feaa33",
+      "7dd21cae27ee2841af86726176b1c2f65387a02cbd0d0aee3c129bffa87b6643",
+      "2977abfb299d82fc8acc5c7b08fba81dee16c2b7b157d8a169ca50eca4efe15a",
+      "a5c1ce929f13712f74cb907b03a37051f1ca89dd32d83669d4a3b9ec3bf75a5c",
+      "7eb3439657e1ec0aaa58bcc5b86d82d73cd8a0e889f6e4ef9c042cdfe996aaea",
+      "c31a538acb53abf4e125d3b9afe19dd9f105a1cb9c27b7ae7d2dfd36095f7267",
+      "65c4a41d5ff5c49f35e1f943262628bc1723a2961fa1c5d8852259aac848c152",
+      "16df7a84d22ba90b6d4319cccd06a4d748e0cf362e58ef1d8615db1e5882fff8"
+    ]
+  },
+  {
+    "record_id": "74115e588303455e84f96338d03a4928",
+    "timestamp_epoch": 1792044180.7920723,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.9360002372413874e-05,
+    "input_keys": [
+      "d0810c61d9e7ec7c07fa0604e0474d0f1fe2e744e3d0d42ca08f3a100266401a"
+    ]
+  },
+  {
+    "record_id": "c5b1efa39fc346babab866018f8560aa",
+    "timestamp_epoch": 1792044180.7924874,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.929901191033423e-05,
+    "input_keys": [
+      "71de15bbd142b4da2dfd5bdf12ba8a9fa6b0d93bab086f64fa7ac84b06cc49f6"
+    ]
+  }
+]
