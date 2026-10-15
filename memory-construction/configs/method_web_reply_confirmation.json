@@ -1,0 +1,12 @@
+{
+  "trajectory_id": "2e8f6477",
+  "selection_reason": "Previously unused replacement case on the other frozen web trajectory. A reply textbox and its preview both change at state8; attempted text and neighboring state9 remain original. Selected before running the v11 confirmation, not by observed method wins.",
+  "source_edits": [
+    {"state_index": 8, "field": "text", "old": "don't panic", "new": "stay calm", "count": 3}
+  ],
+  "derived_rules": [
+    {"target": "event_0007_0008", "required": ["stay calm", "Preview|preview", "Comment|comment"], "forbidden": []},
+    {"target": "event_0008_0009", "required": ["stay calm", "don't panic", "17 comments", "Post"], "forbidden": []}
+  ],
+  "manual_checks": ["State8 reply and preview are stay calm; action target remains don't panic.", "State9 still shows don't panic and count17. Do not silently propagate the corrected pre-state text to post-state9.", "Keep original user/author, submission button, attempted action and count transition."]
+}

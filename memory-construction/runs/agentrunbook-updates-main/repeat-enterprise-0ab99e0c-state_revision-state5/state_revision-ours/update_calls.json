@@ -1,0 +1,235 @@
+[
+  {
+    "record_id": "471d0150e55b467790acda460b717bc3",
+    "timestamp_epoch": 1791998944.2741408,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "input_tokens_preflight": 40357,
+    "request_sha256": "e33a718566bcaa8d8233974bc6dfee05d06f145f52c74dd25d350c87e69e7979",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "60bd6bb23365476c88ea2eb811429a40",
+    "timestamp_epoch": 1791998944.305357,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 27400,
+    "prepared_input_tokens": 10042,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "b122550376864feb87b87fc602ee2c91",
+    "timestamp_epoch": 1791998951.8221397,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 7.51645520600141,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30673,
+      "text_sha256": "b911bcfffae037790823e0c71420f1e914e5f54c25505c09ba5e9d64790de0cf",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 10042,
+    "completion_tokens": 160,
+    "total_tokens": 10202,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "23e725451f014d4eb23a3aeabd1dcf5d",
+    "timestamp_epoch": 1791998951.8223403,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "7c06fdfa95504f82b27e911c439e4303",
+    "timestamp_epoch": 1791998951.8538883,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 27419,
+    "prepared_input_tokens": 10136,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "0b9855a00ef34e65bbe8cf5c7b6fbfc9",
+    "timestamp_epoch": 1791998959.739088,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 7.884901175973937,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30954,
+      "text_sha256": "03677d114d5be1162875fc3d8af83cb2261702f8ace3f2ea5732e03fdd27c257",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 10136,
+    "completion_tokens": 174,
+    "total_tokens": 10310,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "c2bf3d9c4ed14a9b84298d53bb5bfd48",
+    "timestamp_epoch": 1791998959.7393231,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "3bc96281d1ea4b039edc53069b6b2922",
+    "timestamp_epoch": 1791998959.7393923,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "e254bb06891842008f5fe5e6e317d1b2",
+    "timestamp_epoch": 1791998959.743814,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "6a7c9ffebf180c5eaac5f05b794243994688ace320215f1c587fe1ecfe88f3e4",
+    "stage": "notes"
+  },
+  {
+    "record_id": "139cf6f2ae7b4bba9af66348091f5e7d",
+    "timestamp_epoch": 1791998959.8900168,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.0009106910147238523,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "5769c68b2c2e42878e1526a48471c38b",
+    "timestamp_epoch": 1791998960.0470035,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.15400968099129386,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1544,
+    "input_sha256": [
+      "66676a6fda00d297b2ea6df2b332e826e4f67f1d9e6e24c270fcf5ecbef32192",
+      "a63b3c67446f456b2da9fb5eaec55f7b1be36e0c58639c6030afb006fe9519b5"
+    ],
+    "input_texts": [
+      "The agent is building a multi-condition filter on the Change Requests list to extract specific records matching Type=Normal, Requested by=System Administrator, Model=empty, Short description containing a specific update command, and State=Scheduled. This step represents the first condition setup, attempting to set the Type field to Normal.\n\nThe action clicked the 'Normal' option within the 'Type' field dropdown. Although the thought process anticipated the click would succeed, the post-state shows no visible change to the filter configuration; the Type field remains unselected (value '-- None --'), and the list of 101 unfiltered records persists. The dropdown menu is closed, and the filter panel is still open, indicating the selection was not registered in the UI.",
+      "The agent is building a filter on the Change Requests list to find entries where the Type is 'Normal', Requested by is 'System Administrator', Model is empty, Short description matches a specific update command, and State is 'Scheduled'. This transition marks the successful selection of the 'Normal' value for the Type field, establishing the first condition in a series of AND filters.\n\nIn the pre-state, the Type combobox was open but no value was selected. After the select_option action targeting the combobox with bid a1639, the 'Normal' option was successfully chosen, updating the filter condition to 'Type is Normal'. The UI remains on the same Change Requests list page with the filter panel visible, and the system is ready for the next condition to be added."
+    ],
+    "prompt_tokens": 309,
+    "total_tokens": 309,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "6f614b868e31464187ed5ecc0ba3e180",
+    "timestamp_epoch": 1791998960.047121,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.15427427800022997,
+    "input_keys": [
+      "6642f0b8be20400598c0c4bf685cac49ed1ecf4554349ba8cda4d6b74ad13df5",
+      "75c30af81ebb99f1f319efd1d351778cd9c9ace1bb117f9fbe77adef6e7ed049",
+      "621355920362a6b3bc76f93fee877459f1a3daf424dba06a69fe484e7b643040",
+      "e463f07fa0c11cd069e79fb80980ed854591fd616f77306ca2d1869c3ea8558b",
+      "436b8a2ef1e672675055bc8bc7004ee6995217baaf76be8030316f8c6b48582b",
+      "bb448933b20011e175badc99af765c614c4e4fdc9674f8613c89713d45614d8c",
+      "c17b778dd6c5c0787b8153f6fa87fa098625236540a9a190ac2885046b04be34",
+      "ffc709ed484e05d9ee619fef63315fbdb53f3a8a0b67d5d5cc371f5392aa48b9",
+      "b47096b93284d3e350e9e81890c1a779727cc1eb626261b43aa00d22c0d46705",
+      "ca2b8cf5c545958f75cdc248e53f2b4a09f0ba456498d46bb832a80121e97197",
+      "884deb8f88c9420b3170ab16a4af43f6e51a531d0413a4c0a922b258eaadb6e3",
+      "a4afd42fdf7a86885cfb5e9c91971a0ed8ee057978f5aaacc941fb1fc4a3af8b",
+      "7e1c8d7dda5f21bda4c0c2f3501c6c45144918b5b4327cb52d464753d7cbfa5d",
+      "c5efbfc8b87dddad01943c9383d23fef11bd0aa3cb857f64f57cce80e9ddbcd0",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "c49ee35b353745d38177cfda1ef3e829",
+    "timestamp_epoch": 1791998960.0476947,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.5215995265170932e-05,
+    "input_keys": [
+      "e70e0d86c3610a23eb0c3886b368b55ef3cdc5494a3e5fa4290fd2a5081214d5"
+    ]
+  },
+  {
+    "record_id": "cae2e37b63704372aa964c6cd53dc0e0",
+    "timestamp_epoch": 1791998960.0481205,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.9934988813474774e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

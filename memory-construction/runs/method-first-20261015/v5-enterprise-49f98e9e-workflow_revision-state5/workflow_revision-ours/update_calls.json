@@ -1,0 +1,238 @@
+[
+  {
+    "record_id": "9b257b165a47411cba6c5ba122b02f50",
+    "timestamp_epoch": 1792040357.033877,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.250590872979956,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 42587,
+      "text_sha256": "9cb66252cf61a3290c21a5e3ba71d551060a45134684c422d8384fd8880db427",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13283,
+    "completion_tokens": 270,
+    "total_tokens": 13553,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "b40a27b2c8364bdf98409acc5189dd63",
+    "timestamp_epoch": 1792040357.0343418,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 44992,
+    "single_input_tokens_preflight": [
+      29350,
+      31171
+    ],
+    "prepared_input_tokens": 13283,
+    "state_max_chars": 12000,
+    "request_sha256": "9cb66252cf61a3290c21a5e3ba71d551060a45134684c422d8384fd8880db427",
+    "status": "parsed"
+  },
+  {
+    "record_id": "0d8d052f39f9463a8e8b42c4d1de0c0c",
+    "timestamp_epoch": 1792040357.0344503,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 14,
+    "reused": 12
+  },
+  {
+    "record_id": "c24912d0003c43d686fb93a765b20033",
+    "timestamp_epoch": 1792040384.6628447,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 27.620644484995864,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 8325,
+      "text_sha256": "c41810596b7b31fb27a3ee7bbe19b6708dc3a0bb3e053b0050e0d81cea0bb6ef",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 2556,
+    "completion_tokens": 454,
+    "total_tokens": 3010,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "dee47cabda8d4cab85544a1a7df982eb",
+    "timestamp_epoch": 1792040385.0224938,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 0,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.0015986030048225075,
+    "input_keys": [
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "3a57e30ee914797ac2779df2ab4b2afb5a8d6e0dc454b433ebbbe159d29ca213",
+      "60b689182bda9fe37a9f97696e7be9eb6b36ada1d45d6d76ba9a943ef931e869",
+      "3fdb767cad3be15b79f6767d7f77b33d3fd13adef2e59abb3a02b08e986f5508",
+      "1d355df6deee915f49eff0b6475642acbced364888530a67745e4860889d4d97",
+      "9f8d6ae2071c36acd18932652076fe369abc2af8ac37c2451d095ccfc4a84436",
+      "f12550faeb63d14ee8d60b50b9df42960508993d4ae2d178a0b081d88e21a6c7",
+      "1b9a51c692f14d6661f42d5f5518d3e8c605b263c89784e909e7305951dc6bf5",
+      "7aa6e0c5e71d5b98e1ab65d35b6c84987b0e7f9e486b47bfa3e95d2dea2b7c7b",
+      "32a651e3505dab9a3ef24dcca6647d8370d09c6d02141b4a4101ab608ae1cf54",
+      "d94a00d99c315a04df04a78446244b13d932c20f05c7b7c4e2fed5f473ec1903",
+      "39f153a2c0452e4baa76712fcd8e32b905d29b7108f17b9d6865dc0f745b61a1",
+      "94d2c566137c7745304cb8a9c7ab405da8ad1dca75ac9fac89d29c559ecee244",
+      "9fe9223c74cc095bfc42a895b70fe620dc6cc294b16200e353702427e4359cfe"
+    ]
+  },
+  {
+    "record_id": "450efb872c8e4017af974b18fab10532",
+    "timestamp_epoch": 1792040385.1529727,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.12579161502071656,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1139,
+    "input_sha256": [
+      "62a739623506fa70092a7841a94c2e2f31af5fdadca37a74e99af6062c7b741d",
+      "c8f42ea456f4eb0e94638da0841ad83b21c22af77e6b0f75178a48151bb1dda4"
+    ],
+    "input_texts": [
+      "The agent is configuring the asset list to be sorted by specific criteria as part of the broader task to organize assets by function. This step involves initiating the sorting configuration by clicking the 'Add Sort' button to open the sorting interface.\n\nAfter clicking the 'Add Sort' button, the UI updates to indicate that a new sort order condition has been added (displaying 'New sort order condition added, 1 of 1'). The interface remains on the Assets list page but becomes ready to accept the specific field for sorting, with no modal or new page appearing immediately.",
+      "Continuing the asset sorting configuration, the agent now needs to select the specific field to sort by. This step is crucial for defining the sorting logic required to organize the asset list by 'Asset function' in ascending order.\n\nClicking the 'Order results by the following fields. Acquisition method' combobox opens a dropdown list of available sort options. The interface expands to show a scrollable list of fields including 'Acquisition method', 'Asset function', 'Asset tag', and many others, allowing the agent to choose the desired sorting criterion."
+    ],
+    "prompt_tokens": 223,
+    "total_tokens": 223,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "2f1a1e7751d34367a383dd4c3cd06e1a",
+    "timestamp_epoch": 1792040385.1532917,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 14,
+    "actual_vectors": 2,
+    "cache_hits": 12,
+    "elapsed_seconds": 0.12644830599310808,
+    "input_keys": [
+      "ab01848a66637be6470d7b213013c603e7d52517183bf2c3291bb44833b6c62a",
+      "58e2a07f24b57f3c030b6c12f9663c7cae29630d416f21ff28df89a9b5566bc8",
+      "d4d9ce60f62b2abfe0bc3c827112e356cf982c9fba0b119b6e2914c1307e011a",
+      "430cb894ece27dce2dbf8cde7d89454e4ca123eafb59a7e044541014efb29bd2",
+      "f49c8818adab037431b1b2a440f231eddcf0676c21ceafcafa674a779eb4bcc1",
+      "20ad2de20b3482c318084713d881fa4abd03ae87b339ff0de77959c80d987c35",
+      "088783776db56ff619796c7bfb4487e1e56185d45df3f69e0cec448a983c888b",
+      "27eee66d15b58c5d97238f7683b924029ba7d41bf75540aaed86abce471444e4",
+      "1d9b36f9bf2729319ae408c6fe777f9b42404d806d8c08511a2a156bed1c3d0a",
+      "0e66bdc81e0d81e86c89d5c26e4f0ec281457772d69398dbb94c4129092724c9",
+      "524bc1eb7ed3f43bc70725b03789234355eb0b3af35732743f843a7b3bbec9b5",
+      "a4c57171b38a3f2e8ab1b0e23d986bc3fb38ef2fb4751cb5c2349555c3b16772",
+      "9fd788fc8dc0a6315ffaa899dd692066c12975b02c44f290fed9b43cd6f4f1f4",
+      "35d55e9f5af5ab658721d0cc48ef6ec266191c18f3cb1598bf49e3a4d14ab591"
+    ]
+  },
+  {
+    "record_id": "fd47c1eac4d747e8a8286d445da61958",
+    "timestamp_epoch": 1792040385.2314308,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.07681257900549099,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 754,
+    "input_sha256": [
+      "8861ddcd995347699272ff6148a378c13d7af9483e476f0b9dd62236ec3e04b1"
+    ],
+    "input_texts": [
+      "Title: Sort ServiceNow Asset List by Function\nDescription: Steps to sort the Asset List module by 'Asset function' and mark the task as complete.\n- Navigate to the 'All Assets' view by clicking 'All', typing 'All Assets' in the filter box, and selecting the link.\n- Click the 'Show / hide filter' button to reveal the filter controls on the Asset List page.\n- Click the 'Add Sort' button to open the sorting configuration.\n- Select the 'Order results by the following fields' combobox.\n- Choose 'Asset function' from the dropdown list.\n- Press Enter to confirm the selection or click the option to finalize it.\n- Click the 'Run filter' button to apply the sorting criteria.\n- Navigate back to the task list and update the task state to 'Closed Complete'."
+    ],
+    "prompt_tokens": 167,
+    "total_tokens": 167,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "6041fa4815894702a808b4c84a86ccc2",
+    "timestamp_epoch": 1792040385.2316864,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.0772332189953886,
+    "input_keys": [
+      "28887d79dd1fab85beb066ef1a583946ac31f8c2e3b3ff163d2596449ae6f860"
+    ]
+  },
+  {
+    "record_id": "fd5d574a398a401080ae9eb39f5ff023",
+    "timestamp_epoch": 1792040385.323958,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.09096157498424873,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 908,
+    "input_sha256": [
+      "c2636051a9c4116c64904d6448293c8772a2c31d5121b80dedd14febf3336f48"
+    ],
+    "input_texts": [
+      "Title: Asset List Sorting and Task Closure Signals\nDescription: Key UI elements and states required for sorting assets and closing the associated task.\n- The 'All Assets' link is found within a filtered menu accessed via the 'All' button and search input.\n- Sorting controls are hidden by default and must be toggled using the 'Show / hide filter' button.\n- The 'Add Sort' button initiates the multi-field sorting workflow.\n- Sorting options appear in a combobox labeled 'Order results by the following fields'.\n- 'Asset function' is a valid sort field available in the dropdown.\n- The 'Run filter' button applies the sort order immediately.\n- The task list view includes a 'History' button and links to specific tasks like 'Private Task'.\n- The task state is managed via a combobox labeled 'State' with options like 'Closed Complete'.\n- Changes to task state require clicking the 'Update' button to persist."
+    ],
+    "prompt_tokens": 191,
+    "total_tokens": 191,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "a6dec8cf5e0f45c3a14890ba3ba1df6f",
+    "timestamp_epoch": 1792040385.3242457,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.09138699498726055,
+    "input_keys": [
+      "fccc3f5d2bc02d71b833ccb5656b6d119d5bf264ed96ed5b24bfc817b07d8d34"
+    ]
+  }
+]

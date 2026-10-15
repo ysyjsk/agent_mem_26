@@ -1,0 +1,240 @@
+[
+  {
+    "record_id": "dc9e9373311347efad6d40d5d66fbaf9",
+    "timestamp_epoch": 1792040337.9535427,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 2.8241812270134687,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 5001,
+      "text_sha256": "0e8908e28a6fb5251d1155f68ca7bc8d7664472be8460b30bb265417b7960843",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1357,
+    "completion_tokens": 36,
+    "total_tokens": 1393,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "4cb8be9065364369b4e8731e78df56ed",
+    "timestamp_epoch": 1792040337.9539218,
+    "channel": "event_delta",
+    "status": "merged",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "mode": "append_generated_observations",
+    "input_tokens_preflight": 1357,
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "thoughts",
+        "diff": "--- \n+++ \n@@ -1 +1 @@\n-Manual action selected at step 5\n+Manual action selected at step 5 Workflow clarification: verify the required field before proceeding to the next form field.",
+        "append_only": true
+      }
+    ],
+    "edits": [
+      {
+        "event_id": "event_0004_0005",
+        "observations": [
+          {
+            "state_index": 5,
+            "source_field": "thoughts",
+            "fact": "Workflow clarification: verify the required field before proceeding to the next form field."
+          }
+        ]
+      },
+      {
+        "event_id": "event_0005_0006",
+        "observations": [
+          {
+            "state_index": 5,
+            "source_field": "thoughts",
+            "fact": "Workflow clarification: verify the required field before proceeding to the next form field."
+          }
+        ]
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent is sorting the assets list based on specific criteria, starting by accessing the filtering toolbar to configure the sort order. This step represents the initiation of the sorting configuration process.",
+        "state_transition": "After clicking the 'Add Sort' button, the interface displays a status message 'New sort order condition added, 1 of 1' in the main content region, confirming that the system is ready to accept sort criteria. The button click activates the sorting functionality without altering the visible asset list immediately."
+      },
+      {
+        "overview": "The agent continues configuring the sort order by selecting the specific field to sort the assets by. This step represents choosing the primary sort criterion from the available options.",
+        "state_transition": "Clicking the 'Order results by the following fields. Acquisition method' combobox opens a dropdown list of sortable fields. The list reveals options including 'Acquisition method', 'Asset function', 'Asset tag', and many others, allowing the agent to select 'Asset function' as the sort key."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is sorting the assets list based on specific criteria, starting by accessing the filtering toolbar to configure the sort order. This step represents the initiation of the sorting configuration process. Revised post-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.",
+        "state_transition": "After clicking the 'Add Sort' button, the interface displays a status message 'New sort order condition added, 1 of 1' in the main content region, confirming that the system is ready to accept sort criteria. The button click activates the sorting functionality without altering the visible asset list immediately."
+      },
+      {
+        "overview": "The agent continues configuring the sort order by selecting the specific field to sort the assets by. This step represents choosing the primary sort criterion from the available options. Revised pre-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.",
+        "state_transition": "Clicking the 'Order results by the following fields. Acquisition method' combobox opens a dropdown list of sortable fields. The list reveals options including 'Acquisition method', 'Asset function', 'Asset tag', and many others, allowing the agent to select 'Asset function' as the sort key."
+      }
+    ]
+  },
+  {
+    "record_id": "aff47d80dd604504b4d559022ee89b60",
+    "timestamp_epoch": 1792040337.9540808,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 14,
+    "reused": 12
+  },
+  {
+    "record_id": "363dfd9552a343d2aa8a3b0673825f22",
+    "timestamp_epoch": 1792040337.9590428,
+    "channel": "note_delta",
+    "status": "merged",
+    "trajectory_id": "49f98e9e",
+    "modified_notes": 1,
+    "unchanged_notes": 1,
+    "source_state_indexes": [
+      5
+    ],
+    "mode": "additive_workflow_only; reuse_generated_source_observation"
+  },
+  {
+    "record_id": "3193c1373efb495c921612b529e4fd81",
+    "timestamp_epoch": 1792040338.2990203,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 0,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.001565006998134777,
+    "input_keys": [
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "3a57e30ee914797ac2779df2ab4b2afb5a8d6e0dc454b433ebbbe159d29ca213",
+      "60b689182bda9fe37a9f97696e7be9eb6b36ada1d45d6d76ba9a943ef931e869",
+      "3fdb767cad3be15b79f6767d7f77b33d3fd13adef2e59abb3a02b08e986f5508",
+      "1d355df6deee915f49eff0b6475642acbced364888530a67745e4860889d4d97",
+      "9f8d6ae2071c36acd18932652076fe369abc2af8ac37c2451d095ccfc4a84436",
+      "f12550faeb63d14ee8d60b50b9df42960508993d4ae2d178a0b081d88e21a6c7",
+      "1b9a51c692f14d6661f42d5f5518d3e8c605b263c89784e909e7305951dc6bf5",
+      "7aa6e0c5e71d5b98e1ab65d35b6c84987b0e7f9e486b47bfa3e95d2dea2b7c7b",
+      "32a651e3505dab9a3ef24dcca6647d8370d09c6d02141b4a4101ab608ae1cf54",
+      "d94a00d99c315a04df04a78446244b13d932c20f05c7b7c4e2fed5f473ec1903",
+      "39f153a2c0452e4baa76712fcd8e32b905d29b7108f17b9d6865dc0f745b61a1",
+      "94d2c566137c7745304cb8a9c7ab405da8ad1dca75ac9fac89d29c559ecee244",
+      "9fe9223c74cc095bfc42a895b70fe620dc6cc294b16200e353702427e4359cfe"
+    ]
+  },
+  {
+    "record_id": "59dfd755aa5e45d28ae9db78c3182624",
+    "timestamp_epoch": 1792040338.4323804,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.12855468501220457,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1260,
+    "input_sha256": [
+      "ffb028a319a062828d79a0c9ca0450fd96b6960f9da5381e6d4635ee70c0dcef",
+      "c08db5c17895ee4f290a9d3e0e5de7ede70ba489d5407531a93f91303d124a64"
+    ],
+    "input_texts": [
+      "The agent is sorting the assets list based on specific criteria, starting by accessing the filtering toolbar to configure the sort order. This step represents the initiation of the sorting configuration process. Revised post-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.\n\nAfter clicking the 'Add Sort' button, the interface displays a status message 'New sort order condition added, 1 of 1' in the main content region, confirming that the system is ready to accept sort criteria. The button click activates the sorting functionality without altering the visible asset list immediately.",
+      "The agent continues configuring the sort order by selecting the specific field to sort the assets by. This step represents choosing the primary sort criterion from the available options. Revised pre-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.\n\nClicking the 'Order results by the following fields. Acquisition method' combobox opens a dropdown list of sortable fields. The list reveals options including 'Acquisition method', 'Asset function', 'Asset tag', and many others, allowing the agent to select 'Asset function' as the sort key."
+    ],
+    "prompt_tokens": 230,
+    "total_tokens": 230,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "043f41cdfb0d4142bf02f44dfcbee12f",
+    "timestamp_epoch": 1792040338.4326246,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 14,
+    "actual_vectors": 2,
+    "cache_hits": 12,
+    "elapsed_seconds": 0.1291422570066061,
+    "input_keys": [
+      "ab01848a66637be6470d7b213013c603e7d52517183bf2c3291bb44833b6c62a",
+      "58e2a07f24b57f3c030b6c12f9663c7cae29630d416f21ff28df89a9b5566bc8",
+      "d4d9ce60f62b2abfe0bc3c827112e356cf982c9fba0b119b6e2914c1307e011a",
+      "430cb894ece27dce2dbf8cde7d89454e4ca123eafb59a7e044541014efb29bd2",
+      "bfd52864109f3d2a759ed581ee0545e28d6c3b6b7bd1161ae59456030536a867",
+      "d040f00a8c50b600f570149a263e9bc0bd78c019e0635985698bb3c2399eaf22",
+      "088783776db56ff619796c7bfb4487e1e56185d45df3f69e0cec448a983c888b",
+      "27eee66d15b58c5d97238f7683b924029ba7d41bf75540aaed86abce471444e4",
+      "1d9b36f9bf2729319ae408c6fe777f9b42404d806d8c08511a2a156bed1c3d0a",
+      "0e66bdc81e0d81e86c89d5c26e4f0ec281457772d69398dbb94c4129092724c9",
+      "524bc1eb7ed3f43bc70725b03789234355eb0b3af35732743f843a7b3bbec9b5",
+      "a4c57171b38a3f2e8ab1b0e23d986bc3fb38ef2fb4751cb5c2349555c3b16772",
+      "9fd788fc8dc0a6315ffaa899dd692066c12975b02c44f290fed9b43cd6f4f1f4",
+      "35d55e9f5af5ab658721d0cc48ef6ec266191c18f3cb1598bf49e3a4d14ab591"
+    ]
+  },
+  {
+    "record_id": "1648c992634c4d6bbb3d752f26308ee3",
+    "timestamp_epoch": 1792040338.535432,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.10161702701589093,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 949,
+    "input_sha256": [
+      "11161391a984682eff9f1bac7a9dc84fee93b8251ab7ec8811d1ce45d40cf49e"
+    ],
+    "input_texts": [
+      "Title: Sort Assets by Function and Close Task\nDescription: Workflow to sort the Asset List by 'Asset function' and mark the associated task as complete.\n- Navigate to the 'All Assets' view by selecting 'All' and typing 'All Assets' in the filter menu.\n- Click the 'Show / hide filter' button to reveal sorting options.\n- Click the 'Add Sort' button to configure a new sort order.\n- Select 'Asset function' from the 'Order results by the following fields' combobox.\n- Confirm the selection by pressing Enter and click 'Run filter' to apply the sort.\n- Go to the task history and open the specific task record (e.g., 'Private Task, Sort the asset list...').\n- Change the 'State' field to 'Closed Complete' and click 'Update' to finalize.\n- Verify the task is updated and the trajectory ends.\n- Recorded workflow clarification (intent, not verified execution): Workflow clarification: verify the required field before proceeding to the next form field."
+    ],
+    "prompt_tokens": 207,
+    "total_tokens": 207,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "f25fe0c3d8e4413fbf880728480ca7c8",
+    "timestamp_epoch": 1792040338.5356848,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.10203168197767809,
+    "input_keys": [
+      "e10aecaaa9ed8d96978eba496218736b7cc52bd06c5fc5911977841c2733238a"
+    ]
+  },
+  {
+    "record_id": "8401ca0526ef475cbc5b9703c44d918a",
+    "timestamp_epoch": 1792040338.5370023,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 6.18619960732758e-05,
+    "input_keys": [
+      "756cb8f22fbf96c14bf44d2a9e529622581c7c6a282e494eb8e8f1af75438353"
+    ]
+  }
+]

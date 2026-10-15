@@ -1,0 +1,236 @@
+[
+  {
+    "record_id": "496dca3ff32d4a10904c1c799b4bdc9e",
+    "timestamp_epoch": 1792016161.7224667,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.028073030989617,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43362,
+      "text_sha256": "79629a7823d33d5302cf177b3661689fd0a97bba5ef057d620d9c2a61652a5e0",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14407,
+    "completion_tokens": 339,
+    "total_tokens": 14746,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "ef1e820b1cbf46ab83d6c4f4d14e3aff",
+    "timestamp_epoch": 1792016161.7227037,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0005_0006",
+      "event_0006_0007"
+    ],
+    "state_ids": [
+      5,
+      6,
+      7
+    ],
+    "full_input_tokens_preflight": 40594,
+    "prepared_input_tokens": 14407,
+    "state_max_chars": 12000,
+    "request_sha256": "79629a7823d33d5302cf177b3661689fd0a97bba5ef057d620d9c2a61652a5e0",
+    "status": "parsed"
+  },
+  {
+    "record_id": "87ae97e8816d47d8bf3d4315ce9329ab",
+    "timestamp_epoch": 1792016161.7227588,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "c3b19110c8774762a89954fe6e8eb6d5",
+    "timestamp_epoch": 1792016174.9783492,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 13.249269158986863,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 10939,
+      "text_sha256": "7c668fb4e2dc0c5ffaae6d22d9e8d722b93a1fc3567384faacce7ebcca90c1e7",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 2833,
+    "completion_tokens": 452,
+    "total_tokens": 3285,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "0c9bbcdb33df4ed48e477fa67bd941f1",
+    "timestamp_epoch": 1792016175.1193924,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.0008705029904376715,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "3147185ba343486b9c141bf63a8e74c4",
+    "timestamp_epoch": 1792016175.2749488,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.1524419599736575,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1278,
+    "input_sha256": [
+      "c3ab68928f706bca08b3228bd1e82586575ae47e9668a7b2e4ba0f756440fb9b",
+      "0d328eee6d55a5030b105b4d40599cdcd8cf43436ce145edf69b5edd85f69729"
+    ],
+    "input_texts": [
+      "The agent is configuring a filter on the Change Requests list to find specific records. This step involves setting the value for the first condition, where the agent attempts to select 'Normal' from the 'Type' field dropdown to satisfy the first part of the required filter criteria.\n\nThe combobox labeled 'Choose option for field: Type' changed from an unexpanded state to an expanded state, revealing the list of available options including 'Normal'. The field value chooser is now focused and ready for selection, allowing the agent to proceed with selecting the specific option required for the filter.",
+      "Continuing the filter configuration process, the agent has successfully set the 'Type' field to 'Normal'. The next step is to finalize this condition by adding it to the filter logic so the agent can proceed to define the subsequent conditions for 'Requested by', 'Model', 'Short description', and 'State'.\n\nClicking the 'Add AND Condition To Condition 1: Type is Normal' button successfully added the first filter condition to the logic chain. A status message appeared indicating 'New AND condition added', and the interface updated to show that the agent is now working on Condition 2, with the field chooser for the next condition becoming focused and ready for input."
+    ],
+    "prompt_tokens": 249,
+    "total_tokens": 249,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "f8c2ffc03a994b89bf7afb238dad58a3",
+    "timestamp_epoch": 1792016175.275052,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.15272027999162674,
+    "input_keys": [
+      "6642f0b8be20400598c0c4bf685cac49ed1ecf4554349ba8cda4d6b74ad13df5",
+      "75c30af81ebb99f1f319efd1d351778cd9c9ace1bb117f9fbe77adef6e7ed049",
+      "621355920362a6b3bc76f93fee877459f1a3daf424dba06a69fe484e7b643040",
+      "e463f07fa0c11cd069e79fb80980ed854591fd616f77306ca2d1869c3ea8558b",
+      "747fcb8e9d93233460861cdb8b4340b7cf41809d309b46acecbacfaae5bae973",
+      "ffd50763eb5d92adb88450b31bb4399d8f43078050f2f50fa734661b90a00bbd",
+      "dea26e0ea8c0a25b2a10b1969c3924a770cbf048fb6af0e7d898bf0a2d6e0faf",
+      "ffc709ed484e05d9ee619fef63315fbdb53f3a8a0b67d5d5cc371f5392aa48b9",
+      "b47096b93284d3e350e9e81890c1a779727cc1eb626261b43aa00d22c0d46705",
+      "ca2b8cf5c545958f75cdc248e53f2b4a09f0ba456498d46bb832a80121e97197",
+      "884deb8f88c9420b3170ab16a4af43f6e51a531d0413a4c0a922b258eaadb6e3",
+      "a4afd42fdf7a86885cfb5e9c91971a0ed8ee057978f5aaacc941fb1fc4a3af8b",
+      "7e1c8d7dda5f21bda4c0c2f3501c6c45144918b5b4327cb52d464753d7cbfa5d",
+      "c5efbfc8b87dddad01943c9383d23fef11bd0aa3cb857f64f57cce80e9ddbcd0",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "2578ab67a46b4f59a1944c2a08029d01",
+    "timestamp_epoch": 1792016175.368365,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.09266364001086913,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 934,
+    "input_sha256": [
+      "e346ca0c46ed9d4e26d5e26a00e564690333bf77267fc552e8d98e93a5aab765"
+    ],
+    "input_texts": [
+      "Title: ServiceNow Change Request Filter Construction\nDescription: Step-by-step workflow for building a multi-condition AND filter on the Change Request list.\n- Open the filter panel by clicking the 'Show / hide filter' control on the Change Request list page.\n- Select the first field from the combobox labeled 'All of these conditions must be met. -- choose field --'.\n- Choose the field value by clicking the corresponding combobox (e.g., 'Choose option for field: Type') and selecting the desired option (e.g., 'Normal').\n- Add the next condition by clicking the button labeled 'Add AND Condition To Condition X: [Previous Field] is [Previous Value]'.\n- Repeat the field selection, value selection, and 'Add AND Condition' steps for each required filter criterion (Requested by, Model, Short description, State).\n- For empty string conditions, use the operator combobox to select 'is empty string' before adding the next condition."
+    ],
+    "prompt_tokens": 194,
+    "total_tokens": 194,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "8ab6331c4af14f2ca74a8b732eb6c280",
+    "timestamp_epoch": 1792016175.36846,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.0928211510181427,
+    "input_keys": [
+      "ad927024dba3af58ed6c023d709bd0d0ef495dc646a20948f131e707f77eea27"
+    ]
+  },
+  {
+    "record_id": "afbab1938e9b42f9b9121af8503eba1a",
+    "timestamp_epoch": 1792016175.4589264,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.08998867298942059,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 960,
+    "input_sha256": [
+      "b7d294868310f2dc09049dadc37195fcccae02cf6a4c6678376b31a29fe9ece2"
+    ],
+    "input_texts": [
+      "Title: ServiceNow Filter UI Interaction Pitfalls\nDescription: Key UI signals and interaction patterns specific to the ServiceNow filter panel.\n- The field chooser is a combobox with the label 'All of these conditions must be met. -- choose field --'.\n- Value selection for fields often requires using `select_option` on the value chooser combobox if direct clicking fails.\n- The 'Add AND Condition' button text dynamically updates to reflect the previous condition (e.g., 'Add AND Condition To Condition 1: Type is Normal').\n- The 'Model' field condition for an empty value requires selecting the 'is empty string' operator from the operator combobox.\n- The filter panel controls are contained within the element controlled by 'change_requestfilterdiv'.\n- Field choosers appear as listboxes when opened, while value and operator choosers appear as menus.\n- The 'Requested by' field uses a standard textbox input for entering values like 'System Administrator'."
+    ],
+    "prompt_tokens": 195,
+    "total_tokens": 195,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "d7b5cb2ebf1c4d0cacfd32bd26caf3c3",
+    "timestamp_epoch": 1792016175.459027,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.09013922000303864,
+    "input_keys": [
+      "76fb523441ff316365e94e356160b07beddb7296a6ce00101750324b250369b3"
+    ]
+  }
+]

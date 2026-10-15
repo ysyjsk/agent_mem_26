@@ -3199,7 +3199,7 @@ class AgentRunbookR(Memory):
             "event_id": spec["event_id"], "trajectory_id": spec["trajectory_id"]})
         return parsed or self._fallback_event_fields(spec)
 
-    def _build_event_group_messages(self, *, trajectory_dir, simplified_trajectory, specs):
+    def _build_event_group_messages(self, *, trajectory_dir, simplified_trajectory, specs, truncate_state_chars=None):
         """Adjacent transitions share the action trace and each complete state once."""
         states = {s["state_index"]: s for s in simplified_trajectory["states"]}
         state_ids = [specs[0]["pre_state_index"]] + [s["post_state_index"] for s in specs]
@@ -3227,7 +3227,12 @@ class AgentRunbookR(Memory):
         incoming.update({s["post_state_index"]: s["local_action"] for s in specs})
         for state_id in state_ids:
             state = states[state_id]
-            parts.append({"type": "text", "text": f"Shared state {state_id}\nURL: {_state_url(state)}\nThought visible in this state: {_state_thoughts(state)}\nIncoming annotated action: {incoming[state_id]}\nFull AXTree:\n{_state_text(state)}"})
+            state_text = _state_text(state)
+            if truncate_state_chars is not None:
+                truncate = globals().get("_truncate_middle")
+                state_text = (truncate(state_text, int(truncate_state_chars))
+                              if truncate is not None else state_text[:int(truncate_state_chars)])
+            parts.append({"type": "text", "text": f"Shared state {state_id}\nURL: {_state_url(state)}\nThought visible in this state: {_state_thoughts(state)}\nIncoming annotated action: {incoming[state_id]}\nFull AXTree:\n{state_text}"})
         return [{"role": "system", "content": system}, {"role": "user", "content": parts}]
 
     def _event_group_input_tokens(self, messages):
@@ -3243,13 +3248,38 @@ class AgentRunbookR(Memory):
     async def _extract_event_group_async(self, *, trajectory_dir, simplified_trajectory, specs):
         if len(specs) == 1:
             return [await self._extract_single_event_fields_async(trajectory_dir=trajectory_dir, simplified_trajectory=simplified_trajectory, spec=specs[0])]
-        messages = self._build_event_group_messages(trajectory_dir=trajectory_dir, simplified_trajectory=simplified_trajectory, specs=specs)
+        max_input_tokens = int(os.getenv("LME_EVENT_MAX_INPUT_TOKENS", "32768"))
+        # Prepare the adjacent pair using the same evidence bound that a
+        # single event would use before deciding whether to merge.  This
+        # avoids comparing an unbounded pair against bounded singles and
+        # prevents repeated oversized requests on long enterprise states.
+        full_messages = self._build_event_group_messages(
+            trajectory_dir=trajectory_dir, simplified_trajectory=simplified_trajectory, specs=specs)
+        full_tokens = self._event_group_input_tokens(full_messages)
+        single_full_tokens = []
+        for spec in specs:
+            single_messages = self._build_event_generation_messages(
+                trajectory_dir=trajectory_dir, simplified_trajectory=simplified_trajectory, spec=spec)
+            single_full_tokens.append(self._event_group_input_tokens(single_messages))
+        prepared_state_chars = None
+        if full_tokens > max_input_tokens or any(value > max_input_tokens for value in single_full_tokens):
+            # Reuse the existing 12,000-character/state fallback. Both the
+            # joint request and any split single requests now see the same
+            # prepared state evidence; no output budget is reduced.
+            prepared_state_chars = globals().get("EVENT_STATE_FALLBACK_MAX_AXTREE_CHARS", 12000)
+            messages = self._build_event_group_messages(
+                trajectory_dir=trajectory_dir, simplified_trajectory=simplified_trajectory,
+                specs=specs, truncate_state_chars=prepared_state_chars)
+        else:
+            messages = full_messages
         tokens = self._event_group_input_tokens(messages)
         meta = {"channel": "event_group", "trajectory_id": specs[0]["trajectory_id"],
             "event_ids": [s["event_id"] for s in specs], "state_ids": [specs[0]["pre_state_index"]] + [s["post_state_index"] for s in specs],
-            "input_tokens_preflight": tokens, "request_sha256": self._request_shape(messages)["text_sha256"]}
+            "full_input_tokens_preflight": full_tokens, "single_input_tokens_preflight": single_full_tokens,
+            "prepared_input_tokens": tokens,
+            "state_max_chars": prepared_state_chars, "request_sha256": self._request_shape(messages)["text_sha256"]}
         reason = "input_context_limit"
-        if tokens <= int(os.getenv("LME_EVENT_MAX_INPUT_TOKENS", "32768")):
+        if tokens <= max_input_tokens:
             try:
                 response = await self._call_controller_text_async(messages, disable_thinking=True,
                     max_completion_tokens=len(specs) * int(os.getenv("LME_EVENT_OUTPUT_TOKENS", "2048")), reject_truncated=True)

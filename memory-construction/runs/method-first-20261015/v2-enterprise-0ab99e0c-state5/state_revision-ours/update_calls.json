@@ -1,0 +1,175 @@
+[
+  {
+    "record_id": "b9446e30be2c4c7ebb806c8fffcc611f",
+    "timestamp_epoch": 1792039013.2176578,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 19.060936490015592,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43336,
+      "text_sha256": "7ea5b2b10c208dc3f8bddf00085983958a7330f207c7e1e61b988b30fea3ccd3",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14409,
+    "completion_tokens": 290,
+    "total_tokens": 14699,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "9448005558e347208bb8edf9175ed6b4",
+    "timestamp_epoch": 1792039013.2181807,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 40354,
+    "single_input_tokens_preflight": [
+      27397,
+      27416
+    ],
+    "prepared_input_tokens": 14409,
+    "state_max_chars": 12000,
+    "request_sha256": "7ea5b2b10c208dc3f8bddf00085983958a7330f207c7e1e61b988b30fea3ccd3",
+    "status": "parsed"
+  },
+  {
+    "record_id": "3727e46b9d1a4a99b9a8f67c7973e3f0",
+    "timestamp_epoch": 1792039013.218303,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "d4cd8493d028448f92cea4bff74e56c7",
+    "timestamp_epoch": 1792039013.2293665,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "6a7c9ffebf180c5eaac5f05b794243994688ace320215f1c587fe1ecfe88f3e4",
+    "stage": "notes"
+  },
+  {
+    "record_id": "60512fe10c624a389389732b79a0540c",
+    "timestamp_epoch": 1792039013.6615074,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.0015762870025355369,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "4e600693d97e4745a75613219f1675d8",
+    "timestamp_epoch": 1792039013.806963,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.14000461899559014,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1008,
+    "input_sha256": [
+      "980edcf6868e76d1bc3a1f2bf4e7ef06458254899afa1286f14c52dd760f46c9",
+      "17f7551fe05c5f8d11662a85b0b1baa259ea285f8df64624f55f721d4c2e52d1"
+    ],
+    "input_texts": [
+      "The agent is building a filter for the Change Requests list to find specific update tasks. This step attempts to select 'Normal' from the 'Type' dropdown to define the first condition of the filter criteria.\n\nThe action to click the 'Normal' option in the 'Type' dropdown failed to change the visible UI. The combobox remains expanded with the 'Normal' option visible but unselected, and the field value still displays '-- None --', indicating the selection was not registered despite the click attempt.",
+      "The agent continues configuring the filter for Change Requests, specifically setting the 'Type' condition to 'Normal'. This step uses a programmatic selection command to ensure the value is applied after the direct click failed.\n\nThe 'select_option' action successfully updated the 'Type' field value from '-- None --' to 'normal'. The combobox remains in an expanded state, but the internal value for the 'Type' condition has been set, allowing the agent to proceed with adding the next filter condition."
+    ],
+    "prompt_tokens": 201,
+    "total_tokens": 201,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "c32d46845d374cfdb3d70d1b1ae60119",
+    "timestamp_epoch": 1792039013.8072698,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.14069656800711527,
+    "input_keys": [
+      "9a756f1863bcf45dd6787f1008cef51f9c4a37cfa2c27031ceccbffc7028e9b3",
+      "624340a63b7866febdae09b6a5dfe2ad1b9d76d5c311e845a8c655afee038ffa",
+      "16aa71dd6768afe8606866a1dd4d765b60606e9762315b1f464700c1c22214a2",
+      "3db9155529813c47457941c0b3a9675116be0f7cf245188621419570d5ccf2a7",
+      "a58795e1701eb8b7de6e702b46101f7a7fa8620e1d47f17786c26c2e184b9222",
+      "36b8a61aeb9a64dd0f0ce1bb10c4c93c6ed659046bf0a89ad0d8443605f4662a",
+      "de80478a7204632f623097b80f6d0abc40cb4076afce13d3d05bbc82db13a0ed",
+      "94b70ab75d8f46b60808fbbd51822d8a909e263166b23f26e61477e2bd8e8ab1",
+      "bcbee332f39229b703d1440045eb9e741295393a7a18706e9f9c78ccdae99a86",
+      "1b55febdb9fd02c04387b81cf823d57e0f9df973c1335221e752f91d4ddabdeb",
+      "93deee367be126fb7f0ec8ed685e9313f9b2cf4809cea186d8dbfc771428bfab",
+      "c2ce6a7af8a9731bc0181f3effc052625469f78f78e845b6698b8f4583569672",
+      "15012222f64f86041d36fc0e3963c50c44a0ef0065f5db873e694917bfc67b2c",
+      "02ed35b503aa986305e6d07b4aaa71d26b414c1ddfe594171baf9046127667c2",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "6ad5e8da94ca4177938ca3ac0cefd26b",
+    "timestamp_epoch": 1792039013.808743,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 6.259701331146061e-05,
+    "input_keys": [
+      "e70e0d86c3610a23eb0c3886b368b55ef3cdc5494a3e5fa4290fd2a5081214d5"
+    ]
+  },
+  {
+    "record_id": "ede28fa4dd944fac9a17b2a08bb9a8b5",
+    "timestamp_epoch": 1792039013.8100507,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 5.0148984882980585e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

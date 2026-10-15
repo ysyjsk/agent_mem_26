@@ -1,0 +1,215 @@
+[
+  {
+    "record_id": "0c7643ea9e724fafa1fd04be8095b20a",
+    "timestamp_epoch": 1792041600.8382592,
+    "channel": "event_delta",
+    "status": "merged",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0005_0006",
+      "event_0006_0007"
+    ],
+    "mode": "deterministic_source_append",
+    "input_tokens_preflight": 1809,
+    "source_delta": [
+      {
+        "state_index": 6,
+        "field": "thoughts",
+        "diff": "--- \n+++ \n@@ -1 +1 @@\n-The Type = Normal condition has been set. Next I need to add the remaining AND conditions (Requested by, Model, Short description, State). I'll add a new AND condition to Condition 1 by clicking the \"Add AND Condition To Condition 1: Type is Normal\" button (bid a1303) so I can choose the next field.\n+The Type = Normal condition has been set. Next I need to add the remaining AND conditions (Requested by, Model, Short description, State). I'll add a new AND condition to Condition 1 by clicking the \"Add AND Condition To Condition 1: Type is Normal\" button (bid a1303) so I can choose the next field. Workflow clarification: verify the required field before proceeding to the next form field.",
+        "append_only": true
+      }
+    ],
+    "edits": [
+      {
+        "event_id": "event_0005_0006",
+        "observations": [
+          {
+            "state_index": 6,
+            "source_field": "thoughts",
+            "fact": "Workflow clarification: verify the required field before proceeding to the next form field."
+          }
+        ]
+      },
+      {
+        "event_id": "event_0006_0007",
+        "observations": [
+          {
+            "state_index": 6,
+            "source_field": "thoughts",
+            "fact": "Workflow clarification: verify the required field before proceeding to the next form field."
+          }
+        ]
+      }
+    ],
+    "before": [
+      {
+        "overview": "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.",
+        "state_transition": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set."
+      },
+      {
+        "overview": "The agent is constructing a complex filter on the Change Requests list to find specific entries. Having already set the first condition where 'Type' is 'Normal', the agent now attempts to add the second condition in the sequence by clicking the 'Add AND Condition To Condition 1: Type is Normal' button to initiate the setup for the 'Requested by' field.",
+        "state_transition": "The action triggered the addition of a new filter row, changing the status message to 'New AND condition added, 2 of 2'. The interface updated to reveal a new field chooser combobox (a1659) focused and ready for input, allowing the selection of the next field for the second condition."
+      }
+    ],
+    "after": [
+      {
+        "overview": "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria. Revised post-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.",
+        "state_transition": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set."
+      },
+      {
+        "overview": "The agent is constructing a complex filter on the Change Requests list to find specific entries. Having already set the first condition where 'Type' is 'Normal', the agent now attempts to add the second condition in the sequence by clicking the 'Add AND Condition To Condition 1: Type is Normal' button to initiate the setup for the 'Requested by' field. Revised pre-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.",
+        "state_transition": "The action triggered the addition of a new filter row, changing the status message to 'New AND condition added, 2 of 2'. The interface updated to reveal a new field chooser combobox (a1659) focused and ready for input, allowing the selection of the next field for the second condition."
+      }
+    ]
+  },
+  {
+    "record_id": "36b43951dd37469485a0573ac9d70bff",
+    "timestamp_epoch": 1792041600.8383784,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "08015d9c23524ddf9fba233fbf5da96a",
+    "timestamp_epoch": 1792041600.8397207,
+    "channel": "note_delta",
+    "status": "merged",
+    "trajectory_id": "0ab99e0c",
+    "modified_notes": 1,
+    "unchanged_notes": 1,
+    "source_state_indexes": [
+      6
+    ],
+    "mode": "additive_workflow_only; reuse_generated_source_observation"
+  },
+  {
+    "record_id": "d167898a14d04ff98bf5251e726c842a",
+    "timestamp_epoch": 1792041600.9853356,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.0008736549934837967,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "3a1e48445f5d487392f9e9c8e674be43",
+    "timestamp_epoch": 1792041601.1223373,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.134829971997533,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1445,
+    "input_sha256": [
+      "b2805166103335659fe5fc718d5c09b1f7a0c51dbf259cd502f3d93c96efb4e8",
+      "4ab77f0cbfca2a14ff5c80676ec726692aeac2d7b2789d358ff0a5cbeb280554"
+    ],
+    "input_texts": [
+      "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria. Revised post-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.\n\nThe selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set.",
+      "The agent is constructing a complex filter on the Change Requests list to find specific entries. Having already set the first condition where 'Type' is 'Normal', the agent now attempts to add the second condition in the sequence by clicking the 'Add AND Condition To Condition 1: Type is Normal' button to initiate the setup for the 'Requested by' field. Revised pre-state recorded intent: Workflow clarification: verify the required field before proceeding to the next form field.\n\nThe action triggered the addition of a new filter row, changing the status message to 'New AND condition added, 2 of 2'. The interface updated to reveal a new field chooser combobox (a1659) focused and ready for input, allowing the selection of the next field for the second condition."
+    ],
+    "prompt_tokens": 286,
+    "total_tokens": 286,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "322b3c37db9043b2a5c346647f6c281d",
+    "timestamp_epoch": 1792041601.1224465,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.1350760109780822,
+    "input_keys": [
+      "9a756f1863bcf45dd6787f1008cef51f9c4a37cfa2c27031ceccbffc7028e9b3",
+      "624340a63b7866febdae09b6a5dfe2ad1b9d76d5c311e845a8c655afee038ffa",
+      "16aa71dd6768afe8606866a1dd4d765b60606e9762315b1f464700c1c22214a2",
+      "3db9155529813c47457941c0b3a9675116be0f7cf245188621419570d5ccf2a7",
+      "07548c186f253c5fa222ce3470c5abf510768d39868f3e23aee3b056e0cebfdb",
+      "151c3c6edb45e989202653d7fe937007d89f8ad9ad88664589b3d4385636f5ce",
+      "8b0a6e736b49e81ddff3d30e6b982597220565228b1466c7771af1a6ee325348",
+      "94b70ab75d8f46b60808fbbd51822d8a909e263166b23f26e61477e2bd8e8ab1",
+      "bcbee332f39229b703d1440045eb9e741295393a7a18706e9f9c78ccdae99a86",
+      "1b55febdb9fd02c04387b81cf823d57e0f9df973c1335221e752f91d4ddabdeb",
+      "93deee367be126fb7f0ec8ed685e9313f9b2cf4809cea186d8dbfc771428bfab",
+      "c2ce6a7af8a9731bc0181f3effc052625469f78f78e845b6698b8f4583569672",
+      "15012222f64f86041d36fc0e3963c50c44a0ef0065f5db873e694917bfc67b2c",
+      "02ed35b503aa986305e6d07b4aaa71d26b414c1ddfe594171baf9046127667c2",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "e0acf14076064ddca4717f085bfb1bdc",
+    "timestamp_epoch": 1792041601.2400699,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.11700508100329898,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1244,
+    "input_sha256": [
+      "fbd42ab04dc990361ef615ef09b4aa6e3614cc3684dc7cc39a5a6fa09c6bad2c"
+    ],
+    "input_texts": [
+      "Title: ServiceNow Change Request List: Building AND Filters\nDescription: Step-by-step workflow to construct a multi-condition AND filter on the Change Request list page.\n- Open the filter panel by clicking the 'Show / hide filter' button (bid a47) to reveal filter inputs.\n- Select the first field (e.g., 'Type') from the combobox labeled 'All of these conditions must be met. -- choose field --' (bid a1181).\n- Set the value for the selected field by clicking the value chooser combobox (e.g., 'Choose option for field: Type') and selecting the specific option (e.g., 'Normal').\n- Add the next condition by clicking the 'Add AND Condition To Condition X: [Field] is [Value]' button (e.g., bid a1303, a1781, a2257).\n- For the new condition, select the required field from its field chooser combobox.\n- For text fields, fill the value textbox directly (e.g., 'Requested by' textbox bid a2118).\n- For empty string checks, select the 'is empty string' option from the operator combobox.\n- Repeat the add-condition step until all required fields (State, Short description) are configured.\n- Recorded workflow clarification (intent, not verified execution): Workflow clarification: verify the required field before proceeding to the next form field."
+    ],
+    "prompt_tokens": 292,
+    "total_tokens": 292,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "42b056dc0e9f4da096a418a46a1fa8de",
+    "timestamp_epoch": 1792041601.2401752,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.1171659380197525,
+    "input_keys": [
+      "b00d97f060b454cc9fefcab226cf8325dafc71600f7b6ffaff6e5670ebdba179"
+    ]
+  },
+  {
+    "record_id": "e8fa828010f24e05a9431d4e0a7519cc",
+    "timestamp_epoch": 1792041601.240713,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.410498564131558e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

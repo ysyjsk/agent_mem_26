@@ -1,0 +1,11 @@
+{
+  "source": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/agentrunbook-update-rate-screen-v1/enterprise-0ab99e0c-start4-n1/state_revision-b3/memory_state",
+  "trajectory_id": "0ab99e0c",
+  "arrivals": 3,
+  "methods": [
+    "b3",
+    "ours"
+  ],
+  "protocol": "one controlled same-trajectory observation per arrival; each method owns an independent clone; actual local Qwen/Embedding; save/reload/query probe",
+  "scope": "text-only/adapted; not official LongMemEval streaming"
+}

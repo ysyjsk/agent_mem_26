@@ -1,0 +1,226 @@
+[
+  {
+    "record_id": "510f11c3a5244ffb9f5b0651205ddf09",
+    "timestamp_epoch": 1792015947.8465698,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 16.140685419988586,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 42630,
+      "text_sha256": "578e9521c21a684103833aba4c9fb81c1bec605b9ddec025f5f0ea870adb76c7",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 15131,
+    "completion_tokens": 399,
+    "total_tokens": 15530,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "3092be48b61d4268b74e342c52139d02",
+    "timestamp_epoch": 1792015947.846837,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "state_ids": [
+      3,
+      4,
+      5
+    ],
+    "full_input_tokens_preflight": 15131,
+    "prepared_input_tokens": 15131,
+    "state_max_chars": null,
+    "request_sha256": "578e9521c21a684103833aba4c9fb81c1bec605b9ddec025f5f0ea870adb76c7",
+    "status": "parsed"
+  },
+  {
+    "record_id": "b7b07e1525dd40bab9da50058962e758",
+    "timestamp_epoch": 1792015947.8468935,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 10,
+    "reused": 8
+  },
+  {
+    "record_id": "0423ac46ed78459692d08f6d46d830f9",
+    "timestamp_epoch": 1792015960.79811,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 12.94863637900562,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 7448,
+      "text_sha256": "51ccbbab7af04241155425adb5b87021a5b2abe8ed99930090a438f5f37fa458",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1940,
+    "completion_tokens": 456,
+    "total_tokens": 2396,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "cfad87ccdeb4403b9c2051c4bd67aba7",
+    "timestamp_epoch": 1792015960.8698702,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 11,
+    "actual_vectors": 0,
+    "cache_hits": 11,
+    "elapsed_seconds": 0.0005590970104094595,
+    "input_keys": [
+      "8cdf49cfbb561ed936422b7e01ab4a7eab97096db0d0f7c9762d609fec4e5917",
+      "34d9478e9632a4d479771da019c61b5e5aa10f9726f63f588169ec2bf1f91f54",
+      "8d9b0368a73ce57d3a7646a0a851b27baa71e5f703ca43c1c1b0085e4a6b58c0",
+      "8aba149810daf1ec84bf1a2ee6b1b354754b41a9a272b727f27e99c75e3c1b65",
+      "d5d1ef37e12a5578ef39c0c56f3c97b7eab1f58027a8f963b0601619de85e73f",
+      "cc30c21ba5e085b85020a762b7b3c36c3880f5916f45839de482b79447cef860",
+      "ca566cbde4cc05c974079697eb5878e9beb2b367a08479a5295685b82488c9e7",
+      "2c345f3edbf59331f6db160989a0367822c13a53652014de891c4ade3bd7c5a2",
+      "f1f0cd2c35ea8a2401a248aed225ed09e840451ce7cb7ad28103acaac1b27957",
+      "2342a4fe95ff35e6d8f06440803c5a66f02bda99e0bc4919bac5e9058c21683c",
+      "7e7239499da6d7a75540f6b590b5b491a02fe1c3179798c18109f1d607f15473"
+    ]
+  },
+  {
+    "record_id": "cfc25082af934ed795438247346b176f",
+    "timestamp_epoch": 1792015961.0202875,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.14834797597723082,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1481,
+    "input_sha256": [
+      "f707f6dc31a6c5f55449f5964bedaecba477af88b305ffae116704f475978a04",
+      "90258389b4e20d6c063b0101949d4db938d0f9651f21d9e2da337c9ae1e6d77b"
+    ],
+    "input_texts": [
+      "To recover the navigation context after an accidental back-step, the agent attempts to move forward in the browser history. This step is part of the recovery process to return to the Forums index page, which is necessary to locate the target post and its replies.\n\nThe action executed was a forward navigation. The pre-state was the Postmill home page, where the agent had navigated away from the forums. The post-state is the 'List of forums' page (URL: http://localhost:9080/forums), confirming that the forward action successfully restored the previous view. The page now displays a list of available forums, including 'AskReddit' at the top, ready for the next navigation step.",
+      "Having returned to the forums index, the agent proceeds to open the specific subforum containing the target post. This step transitions from the general forum list to the specific AskReddit thread listing, moving closer to locating the post titled 'Why bleaching your butthole isn’t called changing your ring tone?' and its associated comments.\n\nThe action clicked the link labeled 'AskReddit — AskReddit'. The pre-state was the 'List of forums' page showing multiple subforums. The post-state is the AskReddit forum page (URL: http://localhost:9080/f/AskReddit). The main content area has changed to display the title '/f/AskReddit' and a list of submissions within that forum, including the target post with a visible '16 comments' link, indicating successful entry into the specific forum context."
+    ],
+    "prompt_tokens": 310,
+    "total_tokens": 310,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "6d5befe62f07401e9974d5920926bc5b",
+    "timestamp_epoch": 1792015961.0204113,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 10,
+    "actual_vectors": 2,
+    "cache_hits": 8,
+    "elapsed_seconds": 0.14859412200166844,
+    "input_keys": [
+      "e798f2d05f575706517bf4f3d2bdedc25b8a0011de8e323ae9b3116cf7b48cde",
+      "738691d962d774d4b9bb553e2ddf812a16eabce390ec84a4c4b04e50bb544d52",
+      "810e05a83091f656a2041bbe53b8630de83978bc7bbfca2cfc763c72f0feaa33",
+      "5ea1cf8a58b8c691b249127c1e6ca64ae450b33ea32c577a25108ffdf135d482",
+      "82cc48c6692425734a3edd3af7c9bf0476c0f5edd4970f81f1fa43df1e3026e4",
+      "c59df0690aa342441ce302e96a4428324129f48209e36ae2ac48a529d797fe35",
+      "ce2d840f33a0e2ca7b89d158a5a108c63bb7342926225e2b9db515d2cdc5efcd",
+      "976adbdc0188055ff9fb2c2b8709312cf3fae5eb57b112f69a4e3856b9acd37c",
+      "8f4c9e67d2e67dbd293eba2d612a52b4e5648304d4556a2d5f0d941ecdfd95fa",
+      "16df7a84d22ba90b6d4319cccd06a4d748e0cf362e58ef1d8615db1e5882fff8"
+    ]
+  },
+  {
+    "record_id": "80b2ba4dc0d14f379204d93de0db9bea",
+    "timestamp_epoch": 1792015961.0845428,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.0636813279998023,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 673,
+    "input_sha256": [
+      "6ac6c0cc710263de67878388f6001bc8108554be71b44f68499d709f2e202d68"
+    ],
+    "input_texts": [
+      "Title: Reply to first comment in AskReddit thread\nDescription: Step-by-step workflow to locate a specific post, open its comment thread, and reply to the top reply.\n- Start from the home page and navigate to 'Forums' to locate the target thread.\n- Enter the specific forum (e.g., 'AskReddit') by clicking the forum link.\n- Click the '16 comments' link on the top post to open the comment thread.\n- Locate the first reply in the thread and click its 'Reply' link to open the reply form.\n- Enter the required text (e.g., 'don't panic') into the 'Comment' textbox.\n- Click the 'Post' button to submit the reply.\n- Verify the new comment appears in the thread after submission."
+    ],
+    "prompt_tokens": 159,
+    "total_tokens": 159,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "9e0cc694b46c4441855abd2e428bce23",
+    "timestamp_epoch": 1792015961.084635,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.06382865400519222,
+    "input_keys": [
+      "676d7b98f412a074253699091da1b481e82495c4f2a4027ea39917cc122010cd"
+    ]
+  },
+  {
+    "record_id": "d7bb3e9d3b9f40a8930e9b830ffb8b89",
+    "timestamp_epoch": 1792015961.172652,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.08744510900578462,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1065,
+    "input_sha256": [
+      "34dc04530c3634bab04e6b7c2293daf63c8e318cfbafe7ec97dfb62485e486e2"
+    ],
+    "input_texts": [
+      "Title: Navigating forums and comment threads\nDescription: Key UI signals and pitfalls when trying to find a specific post and reply within the forum structure.\n- A 404 Not Found page indicates the current URL does not contain the desired post; use the home page or 'Forums' link to restart navigation.\n- The 'Forums' index page lists available forums but does not display individual posts or replies.\n- To access a specific post's comments, click the post title or a 'comments' link (e.g., '16 comments') on the forum listing page.\n- The 'Reply' link is attached to individual comments, not the main post; ensure you click the link under the target reply, not the post itself.\n- The 'Comment' textbox in a reply form may be marked as 'required' and described by a specific help ID.\n- After submitting a reply, the URL typically changes to include a 'comment/' parameter (e.g., /comment/1) indicating the new comment context.\n- If the target post is not visible on the forum listing, check the top-listed forums or use the 'Go to home page' link to reset navigation."
+    ],
+    "prompt_tokens": 242,
+    "total_tokens": 242,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "4d62337e25b843efb18203ae8855237e",
+    "timestamp_epoch": 1792015961.1727552,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.08759990701219067,
+    "input_keys": [
+      "7338dc34197bdc116379597e856ce0247eefc1bacee309fd7a926ba413bd89d7"
+    ]
+  }
+]

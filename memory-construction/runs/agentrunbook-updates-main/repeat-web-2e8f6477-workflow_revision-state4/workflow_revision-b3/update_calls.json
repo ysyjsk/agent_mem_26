@@ -1,0 +1,402 @@
+[
+  {
+    "record_id": "cdc7f4df4f274f7b8fe4496aabb69383",
+    "timestamp_epoch": 1791998900.6157887,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "ed7fc05a80030a0b7bc5cf6bdd78f7ee34b62c3c433625cb49e2c0db0505d311",
+    "stage": "events"
+  },
+  {
+    "record_id": "bfe05c4ba9bc4fe49c90073d5e00d342",
+    "timestamp_epoch": 1791998900.6159005,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "input_tokens_preflight": 6122,
+    "request_sha256": "dae375ab11685824220bcf43460ed1df5fa3a4894b5f0b44e41c4feeafb45dde",
+    "status": "parsed"
+  },
+  {
+    "record_id": "1d47f37cf7d54580a727392d37f4317c",
+    "timestamp_epoch": 1791998916.0428603,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 15.419068702001823,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 29155,
+      "text_sha256": "b4e647ebb8289fbd5009dcc7bbbc2af29cf2e80bb4b9c2b38443e5e42a50eff4",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 9979,
+    "completion_tokens": 445,
+    "total_tokens": 10424,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "c9a7ba8c1cbc4d5a81fd6e98676fc8d0",
+    "timestamp_epoch": 1791998916.0430655,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "input_tokens_preflight": 9979,
+    "request_sha256": "b4e647ebb8289fbd5009dcc7bbbc2af29cf2e80bb4b9c2b38443e5e42a50eff4",
+    "status": "parsed"
+  },
+  {
+    "record_id": "ea67f75ee01a45439947baa246d9d46e",
+    "timestamp_epoch": 1791998916.0589812,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "input_tokens_preflight": 22335,
+    "request_sha256": "1efdf5eed24cb87ac079f8a211ace7f6642fd6c0ef160e4e2781e3db3f53f80d",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "ff356a38d1bf4c7cb0de030465444531",
+    "timestamp_epoch": 1791998925.8706915,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 9.801653776987223,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 40418,
+      "text_sha256": "5decae591b4adc54ddbd92c61d40af9dcb869f15a0f6f254e220a51caa8c436f",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14398,
+    "completion_tokens": 193,
+    "total_tokens": 14591,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "ef8f84fdad7a43168a39d391e840f861",
+    "timestamp_epoch": 1791998925.8709104,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "2e8f6477"
+  },
+  {
+    "record_id": "455b29ea291b45cf80572f5c16ead924",
+    "timestamp_epoch": 1791998925.8917282,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "2e8f6477",
+    "full_input_tokens": 18244,
+    "prepared_input_tokens": 10367,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "1e11fdd6f9484415b5d29bb907e4ea8a",
+    "timestamp_epoch": 1791998925.89202,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "7def6296b8de5848a7b986655372f1d673555288b3038c95dc0e089568576171",
+    "stage": "events"
+  },
+  {
+    "record_id": "32dccb2f1bed4e33ba027848d5db4200",
+    "timestamp_epoch": 1791998925.8920662,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "2e8f6477"
+  },
+  {
+    "record_id": "ed1ae5fc95674ed684bb7a1db3c5b8ff",
+    "timestamp_epoch": 1791998925.9086633,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "input_tokens_preflight": 25149,
+    "request_sha256": "9d33edaf6b2f73950d3f776aef318bcf3400a347648eca67c0a02f3ecc471af8",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "09f51d087dd14488917ae845b95ca0df",
+    "timestamp_epoch": 1791998925.920629,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "90276f027878238b8d63ab42020e1d8436fc495d996fe977cdff67a4937cf3e8",
+    "stage": "events"
+  },
+  {
+    "record_id": "49fb08303f5241bbb0a3b7f18516462e",
+    "timestamp_epoch": 1791998925.9207222,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0006_0007",
+    "trajectory_id": "2e8f6477"
+  },
+  {
+    "record_id": "fbb53fc468ec40109b0c9b9fa0d8068a",
+    "timestamp_epoch": 1791998925.9321835,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "03becb5ceeb64139aa0e204f999a8e94b32008828d6dbe29863b0e75f91587b4",
+    "stage": "events"
+  },
+  {
+    "record_id": "6b430349f3bc4e1b8fd772234aaaa196",
+    "timestamp_epoch": 1791998925.9322593,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0007_0008",
+    "trajectory_id": "2e8f6477"
+  },
+  {
+    "record_id": "4e520d0f28a048828d8b7f8a4fbe72c2",
+    "timestamp_epoch": 1791998925.941675,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "eb02972f5b5ded7b7ab4be66489921ca2961be46e51d39718639e80b0a48c1b0",
+    "stage": "events"
+  },
+  {
+    "record_id": "ef801023c3a642a88bb97738771e19e0",
+    "timestamp_epoch": 1791998925.9417608,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "input_tokens_preflight": 13561,
+    "request_sha256": "dbea9eb5d47e030d0dd4b0c954e837848b015b6e7484fe5261a7cd428a81e869",
+    "status": "parsed"
+  },
+  {
+    "record_id": "4a519282aaa7403aa504e2ac8a4d1517",
+    "timestamp_epoch": 1791998938.84335,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 12.89968668698566,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 7431,
+      "text_sha256": "e93d095a3abe2e772f497654ae5589e4650b51d55a0847e91e90b6ca39a2ad86",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1937,
+    "completion_tokens": 456,
+    "total_tokens": 2393,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "7ec1e719c1cf40578c0ff6d04de5dafb",
+    "timestamp_epoch": 1791998938.9137256,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 11,
+    "actual_vectors": 0,
+    "cache_hits": 11,
+    "elapsed_seconds": 0.0005451129982247949,
+    "input_keys": [
+      "8cdf49cfbb561ed936422b7e01ab4a7eab97096db0d0f7c9762d609fec4e5917",
+      "34d9478e9632a4d479771da019c61b5e5aa10f9726f63f588169ec2bf1f91f54",
+      "8d9b0368a73ce57d3a7646a0a851b27baa71e5f703ca43c1c1b0085e4a6b58c0",
+      "8aba149810daf1ec84bf1a2ee6b1b354754b41a9a272b727f27e99c75e3c1b65",
+      "d5d1ef37e12a5578ef39c0c56f3c97b7eab1f58027a8f963b0601619de85e73f",
+      "cc30c21ba5e085b85020a762b7b3c36c3880f5916f45839de482b79447cef860",
+      "ca566cbde4cc05c974079697eb5878e9beb2b367a08479a5295685b82488c9e7",
+      "2c345f3edbf59331f6db160989a0367822c13a53652014de891c4ade3bd7c5a2",
+      "f1f0cd2c35ea8a2401a248aed225ed09e840451ce7cb7ad28103acaac1b27957",
+      "2342a4fe95ff35e6d8f06440803c5a66f02bda99e0bc4919bac5e9058c21683c",
+      "7e7239499da6d7a75540f6b590b5b491a02fe1c3179798c18109f1d607f15473"
+    ]
+  },
+  {
+    "record_id": "50c4c08bb6b8497f862af4bc329401b9",
+    "timestamp_epoch": 1791998939.0943913,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.1786658419878222,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 3,
+    "input_characters": 2490,
+    "input_sha256": [
+      "29520126d4697bfcc67b4e9c5c9bfbe7df9d9be29635c39823ea0ffb79609dca",
+      "3e9847e6e04fb245c488cbcd6d561fcbbd77ef5340f8c07fcff0b913e516d8c1",
+      "2e0530f1b0a6493a060f8b3df94623cb00870406c83bc9227b0230d1c6dee520"
+    ],
+    "input_texts": [
+      "While attempting to reply to the first reply in the post 'this-is-how-chatgpt-sees-itself' with the message 'don't panic', the agent navigates away from the forums index page. This step represents a navigation correction after clicking the 'Forums' link, moving back to the previously visited home page to re-orient within the application.\n\nThe transition moves from the 'List of forums' page to the 'Postmill' home page. The URL changes from http://localhost:9080/forums to http://localhost:9080/. The main content area shifts from displaying a list of forum subreddits (such as AskReddit, relationship_advice, and worldnews) to displaying a message indicating no subscribed forums and showing 'Featured forums' instead. The navigation structure remains similar, but the specific forum listings are replaced by the home page's featured content section.",
+      "Continuing the effort to reach the target post to reply to the first comment, the agent uses the browser's forward navigation. This step is part of the recovery process after the accidental back navigation, aiming to return to the forums index where the target post can be located.\n\nThe transition moves from the 'Postmill' home page back to the 'List of forums' page. The URL reverts from http://localhost:9080 to http://localhost:9080/forums. The main content area changes from the home page's featured forums section back to the full list of forum subreddits, including 'AskReddit', 'relationship_advice', 'worldnews', and others. The layout and visible elements in the main content area are identical to the pre-state of the first transition, indicating a successful return to the forums index.",
+      "The agent is attempting to reply to the first reply in a specific post on the AskReddit forum with the message \"don't panic\". This transition represents the navigation phase of the workflow, where the agent moves from the general forums index to the specific AskReddit forum listing page to locate the target post and its comment thread.\n\nThe action clicked the link labeled 'AskReddit — AskReddit' found in the forums list. This navigation replaced the 'List of forums' page with the dedicated AskReddit forum listing page (URL: http://localhost:9080/f/AskReddit). The new page displays a list of submissions specific to AskReddit, including the top post titled 'Why bleaching your butthole isn't called changing your ring tone?' which has a visible '16 comments' link, indicating the thread containing the target reply is now accessible."
+    ],
+    "prompt_tokens": 530,
+    "total_tokens": 530,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "ee3f4d8e1c55441eb535542e72fbcdb5",
+    "timestamp_epoch": 1791998939.0945055,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 10,
+    "actual_vectors": 3,
+    "cache_hits": 7,
+    "elapsed_seconds": 0.17890116898342967,
+    "input_keys": [
+      "e798f2d05f575706517bf4f3d2bdedc25b8a0011de8e323ae9b3116cf7b48cde",
+      "738691d962d774d4b9bb553e2ddf812a16eabce390ec84a4c4b04e50bb544d52",
+      "e7d4d7dbef1e9bf9dea34067e16141ed7ca15dee9d9aef2cade0ca80b833ba07",
+      "a0da58f142fb6728a074c5307c335c12358bedb1956661ca7f85857683724800",
+      "73aad5abee3b560e5866fcfd29b77d898c8f1279334d753c9c928da72a519ac0",
+      "c59df0690aa342441ce302e96a4428324129f48209e36ae2ac48a529d797fe35",
+      "ce2d840f33a0e2ca7b89d158a5a108c63bb7342926225e2b9db515d2cdc5efcd",
+      "976adbdc0188055ff9fb2c2b8709312cf3fae5eb57b112f69a4e3856b9acd37c",
+      "8f4c9e67d2e67dbd293eba2d612a52b4e5648304d4556a2d5f0d941ecdfd95fa",
+      "16df7a84d22ba90b6d4319cccd06a4d748e0cf362e58ef1d8615db1e5882fff8"
+    ]
+  },
+  {
+    "record_id": "627c0a96c8034aa2a8146e66772ab732",
+    "timestamp_epoch": 1791998939.1538262,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.05881040098029189,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 769,
+    "input_sha256": [
+      "6bd77c6cb22ee7ff959ef7b1826e197ea0b2c62f7f59fbbe155ff98aa1638131"
+    ],
+    "input_texts": [
+      "Title: Replying to a comment on Postmill Forums\nDescription: Step-by-step workflow to navigate to a specific post, locate the first reply, and submit a response.\n- Start from the home page or forums index and navigate to the target forum (e.g., 'AskReddit') by clicking its link.\n- On the forum listing page, identify the target post and click its 'comments' link (e.g., '16 comments') to open the thread.\n- On the comment thread page, locate the first reply in the list and click its 'Reply' link to open the reply form.\n- In the opened reply form, find the 'Comment' textbox and fill it with the desired text (e.g., 'don't panic').\n- Click the 'Post' button within the reply form to submit the comment.\n- Verify the new comment appears in the thread after submission."
+    ],
+    "prompt_tokens": 180,
+    "total_tokens": 180,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "1a3194e7fb7944d8afdf930287d3cf7b",
+    "timestamp_epoch": 1791998939.153915,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.058949921978637576,
+    "input_keys": [
+      "488cf70b43f366c6a783b73f369b42a522c5124ba0dc0f4230d62ec85df737d8"
+    ]
+  },
+  {
+    "record_id": "5c3752c481df47a693c7f10077c483da",
+    "timestamp_epoch": 1791998939.234517,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.0801325119973626,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 866,
+    "input_sha256": [
+      "05f8a80394adc678b7e5b3447c6dd62bd8081f69733aaf50b2ab6504410e4ee6"
+    ],
+    "input_texts": [
+      "Title: Navigating Postmill navigation pitfalls\nDescription: Key UI signals and potential traps when navigating the Postmill forum structure.\n- The home page may show no posts; use the 'Forums' link to access the forum index.\n- If a direct link results in a 404 Not Found, the post may be missing or the link invalid; try navigating from the home page instead.\n- Use 'go_back' and 'go_forward' to recover from incorrect navigation paths on the forums index.\n- To reply to a specific comment, you must first enter the post's thread page by clicking the 'comments' link on the post listing.\n- The 'Reply' link is attached to individual comments, not the main post title.\n- Ensure the 'Comment' textbox in the reply form is targeted correctly before filling text.\n- The 'Post' button is specific to the reply form; do not confuse it with general site navigation buttons."
+    ],
+    "prompt_tokens": 192,
+    "total_tokens": 192,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "56f0f18f728847f1847e6e63cc9b1f64",
+    "timestamp_epoch": 1791998939.2346041,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.08026555000105873,
+    "input_keys": [
+      "8d80f3516144273a7029cea33e4282cd2ecbfc534f798554daf2c5e188c7db74"
+    ]
+  }
+]

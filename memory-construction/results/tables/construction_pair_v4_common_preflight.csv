@@ -1,0 +1,3 @@
+variant,modality,trajectory_count,trajectory_ids,states,events,build_to_queryable_publish_s,controller_calls,controller_failed_calls,unknown_usage_calls,llm_input_tokens,llm_output_tokens,embedding_calls,embedding_vectors,embedding_unique_exact_inputs,embedding_input_tokens,joint_parsed_groups,joint_split_groups,quality_pass,raw_path
+baseline,text-only/adapted,2,"0ab99e0c,49f98e9e",31,29,277.40058542299084,32,0,0,283175,5868,8,64,62,132324,0,0,True,runs/construction-pair-v4/enterprise2-common-preflight-baseline-v2
+joint,text-only/adapted,2,"0ab99e0c,49f98e9e",31,29,274.71244804700837,20,0,0,224445,6282,8,64,62,131269,13,1,True,runs/construction-pair-v4/enterprise2-common-preflight-joint-v2

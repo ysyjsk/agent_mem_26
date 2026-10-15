@@ -1,3 +1,7 @@
+# Current repository location
+
+As of 2026-10-15, this repository is managed directly in the live source project, not in a separate export directory. Use GIT_USAGE.md for server commits. The earlier snapshot/export descriptions below explain the initial upload; current revisions are ordinary Git commits.
+
 # Guide for AI analysis
 
 ## Research question

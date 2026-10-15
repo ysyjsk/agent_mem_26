@@ -1,0 +1,278 @@
+[
+  {
+    "record_id": "6a40a53f83544dfa9b76fede086bee7f",
+    "timestamp_epoch": 1792039495.5012143,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 2.654996666009538,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 7384,
+      "text_sha256": "1c15711c75760177560a7510316134256645fba8001d56c3ecaca74ecd1a87ae",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1907,
+    "completion_tokens": 54,
+    "total_tokens": 1961,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "7841fdb799904c8fb2e99a8c64fb44b9",
+    "timestamp_epoch": 1792039495.5016177,
+    "channel": "event_delta",
+    "status": "fallback",
+    "event_ids": [
+      "event_0005_0006",
+      "event_0006_0007"
+    ],
+    "reason": "invalid delta output or ambiguous edit anchor"
+  },
+  {
+    "record_id": "293060b39c8641bc8db212d78fe16479",
+    "timestamp_epoch": 1792039520.1518216,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 24.39153453000472,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43362,
+      "text_sha256": "79629a7823d33d5302cf177b3661689fd0a97bba5ef057d620d9c2a61652a5e0",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14407,
+    "completion_tokens": 348,
+    "total_tokens": 14755,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "73c651973fdd45eda5cfd0e9142962ec",
+    "timestamp_epoch": 1792039520.152372,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0005_0006",
+      "event_0006_0007"
+    ],
+    "state_ids": [
+      5,
+      6,
+      7
+    ],
+    "full_input_tokens_preflight": 40594,
+    "single_input_tokens_preflight": [
+      27418,
+      27679
+    ],
+    "prepared_input_tokens": 14407,
+    "state_max_chars": 12000,
+    "request_sha256": "79629a7823d33d5302cf177b3661689fd0a97bba5ef057d620d9c2a61652a5e0",
+    "status": "parsed"
+  },
+  {
+    "record_id": "a7da7dbc3039495393f55f0eb0d67623",
+    "timestamp_epoch": 1792039520.152503,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "a571bfc65a174ccaa58fbae5adcf7b83",
+    "timestamp_epoch": 1792039553.09742,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 32.93414441400091,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 10939,
+      "text_sha256": "7c668fb4e2dc0c5ffaae6d22d9e8d722b93a1fc3567384faacce7ebcca90c1e7",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 2833,
+    "completion_tokens": 616,
+    "total_tokens": 3449,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "8e7238c3852442b091ddff42b22937f6",
+    "timestamp_epoch": 1792039553.2643964,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.0009404050069861114,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "a337eee958ab43cb81f3f89c68110277",
+    "timestamp_epoch": 1792039553.4122753,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.14530761700007133,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1224,
+    "input_sha256": [
+      "b80f39a44b44f63a1843ff5424c8f6b2ff7a112dd6d2d433c7935a2273e5f347",
+      "aa774393af9f6a4b6b475b472afbefeaed1dbd42c56802d45885979fe5109104"
+    ],
+    "input_texts": [
+      "The agent is constructing a filter for the Change Requests list to find specific entries. This step involves setting the value for the first condition field, 'Type', to 'Normal', which is part of a multi-step process to define AND conditions for filtering.\n\nIn the pre-state, the 'Type' combobox (a1639) is expanded and focused, showing available options, but no value is selected yet. After the action, the combobox's value updates to 'normal', indicating that the 'Normal' option has been successfully selected for the 'Type' field in the filter condition.",
+      "Continuing the filter construction, the agent finalizes the first condition by confirming the 'Type is Normal' rule. This action prepares the interface to define the second condition in the series of AND filters required to meet the goal.\n\nIn the pre-state, the filter condition for 'Type' is set to 'Normal' but not yet confirmed in the condition list. After clicking the 'Add AND Condition To Condition 1' button, a new condition entry appears in the filter toolbar labeled 'Type is Normal'. The system then focuses the field chooser combobox (a1659) for the next condition, allowing the agent to select the 'Requested by' field for the subsequent filter criteria."
+    ],
+    "prompt_tokens": 261,
+    "total_tokens": 261,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "832ea0afbae5478099409f4135839502",
+    "timestamp_epoch": 1792039553.4123914,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.14558402600232512,
+    "input_keys": [
+      "9a756f1863bcf45dd6787f1008cef51f9c4a37cfa2c27031ceccbffc7028e9b3",
+      "624340a63b7866febdae09b6a5dfe2ad1b9d76d5c311e845a8c655afee038ffa",
+      "16aa71dd6768afe8606866a1dd4d765b60606e9762315b1f464700c1c22214a2",
+      "3db9155529813c47457941c0b3a9675116be0f7cf245188621419570d5ccf2a7",
+      "07548c186f253c5fa222ce3470c5abf510768d39868f3e23aee3b056e0cebfdb",
+      "7798df1a915d2b8020bee46b9de138a87e99ddf8f296e2d90b2ff712a3eeee5a",
+      "8ebcb7c6f29c72e7905bf75006a6b3ddd7ba4cab617dcdb0e7c5218249bff40f",
+      "94b70ab75d8f46b60808fbbd51822d8a909e263166b23f26e61477e2bd8e8ab1",
+      "bcbee332f39229b703d1440045eb9e741295393a7a18706e9f9c78ccdae99a86",
+      "1b55febdb9fd02c04387b81cf823d57e0f9df973c1335221e752f91d4ddabdeb",
+      "93deee367be126fb7f0ec8ed685e9313f9b2cf4809cea186d8dbfc771428bfab",
+      "c2ce6a7af8a9731bc0181f3effc052625469f78f78e845b6698b8f4583569672",
+      "15012222f64f86041d36fc0e3963c50c44a0ef0065f5db873e694917bfc67b2c",
+      "02ed35b503aa986305e6d07b4aaa71d26b414c1ddfe594171baf9046127667c2",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "2c5094d9e984471bbaea2bf1622f001c",
+    "timestamp_epoch": 1792039553.5086734,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.09553609698195942,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1137,
+    "input_sha256": [
+      "89c60749fef54962c5ac5ae2fd0693559b86df3d67699e5413955185a5ec1d50"
+    ],
+    "input_texts": [
+      "Title: ServiceNow Change Request List: Building AND Filters\nDescription: Step-by-step workflow for adding multiple AND filter conditions to the Change Request list.\n- Open the filter panel by clicking the 'Show / hide filter' button (bid a47) to reveal filter inputs.\n- Click the field chooser combobox for the first condition (e.g., 'All of these conditions must be met. -- choose field --') to select a field.\n- Select the desired field (e.g., 'Type', 'Requested by') from the dropdown list.\n- For fields with fixed values, click the value chooser combobox (e.g., 'Choose option for field: Type') and select the specific option (e.g., 'Normal').\n- For fields requiring text input, click the corresponding textbox (e.g., 'Requested by') and fill in the required value.\n- Click the 'Add AND Condition To Condition X' button (e.g., 'Add AND Condition To Condition 1: Type is Normal') to append the next filter.\n- Repeat the field selection, operator setting, and value entry steps for each subsequent AND condition.\n- Note: The trajectory ended after adding the 'Short description' condition step; the 'State' condition was not yet added."
+    ],
+    "prompt_tokens": 255,
+    "total_tokens": 255,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "5c129bb28664449cb259004389df17dd",
+    "timestamp_epoch": 1792039553.5088851,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.09585196000989527,
+    "input_keys": [
+      "08f692f7c8cc682ae0aa4b029575a20c48b12f410e10b02275c7fa9b72474f31"
+    ]
+  },
+  {
+    "record_id": "e571d718c0864694bd2d27990ebf93bb",
+    "timestamp_epoch": 1792039553.624532,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.11468317097751424,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1255,
+    "input_sha256": [
+      "2654d7295481d97b5ec5700eb260a6886bf9e0303ec22a2f8cfa3ee3d81ae8f0"
+    ],
+    "input_texts": [
+      "Title: ServiceNow Filter UI: Field Choosers and Value Selection\nDescription: Key UI patterns and pitfalls observed when constructing complex AND filters.\n- The initial field chooser uses a combobox with the text 'All of these conditions must be met. -- choose field --'.\n- Once a field is selected, the value is set via a secondary combobox labeled 'Choose option for field: [FieldName]' or a direct textbox for string inputs.\n- Direct clicking on dropdown options (e.g., clicking 'Normal') may fail; using the `select_option` action on the combobox is more reliable.\n- The 'Model' field supports an 'is empty string' operator, which must be selected from the operator combobox (e.g., 'Operator For Condition 3: Model is').\n- After setting a condition, a specific button appears to add the next AND condition, labeled 'Add AND Condition To Condition X: [Previous Field] is [Value]'.\n- The filter logic is strictly AND ('All of these conditions must be met') within the active group until a new OR group is initiated.\n- Field choosers for new conditions are automatically focused when the 'Add AND Condition' button is clicked.\n- The trajectory indicates the workflow can proceed sequentially without needing to re-open the field chooser for the next step."
+    ],
+    "prompt_tokens": 267,
+    "total_tokens": 267,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "e97484a2994c4b0cbe5a0686866c33c1",
+    "timestamp_epoch": 1792039553.6246574,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.11489200999494642,
+    "input_keys": [
+      "6588f126c82f86c664180f75b05dbeac2ff763e8e70fdba4d865e4d8d72cc643"
+    ]
+  }
+]

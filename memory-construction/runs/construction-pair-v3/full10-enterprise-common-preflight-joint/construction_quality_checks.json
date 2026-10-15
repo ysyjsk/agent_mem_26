@@ -1,0 +1,9 @@
+{
+  "trajectory_count": 5,
+  "expected_events": 49,
+  "published_events": 49,
+  "event_source_coverage": true,
+  "save_reload_verified": true,
+  "quality_pass": true,
+  "quality_scope": "structure/source coverage and persisted reload; no fixed Reader rerun"
+}

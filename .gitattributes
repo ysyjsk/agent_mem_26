@@ -1,0 +1,3 @@
+# Applied only to staged Git content; working result files retain their original payloads.
+*.json filter=research-results
+*.jsonl filter=research-results

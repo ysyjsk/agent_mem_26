@@ -1,0 +1,334 @@
+[
+  {
+    "record_id": "d1ec0d3acc9e4acea8cc9efd4ad21991",
+    "timestamp_epoch": 1792017078.3779738,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "ed7fc05a80030a0b7bc5cf6bdd78f7ee34b62c3c433625cb49e2c0db0505d311",
+    "stage": "events"
+  },
+  {
+    "record_id": "6d90883ddbcd4d9790d8c9b63b514d1e",
+    "timestamp_epoch": 1792017078.3782482,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "full_input_tokens_preflight": 6122,
+    "prepared_input_tokens": 6122,
+    "state_max_chars": null,
+    "request_sha256": "dae375ab11685824220bcf43460ed1df5fa3a4894b5f0b44e41c4feeafb45dde",
+    "status": "parsed"
+  },
+  {
+    "record_id": "795c239b281b46caa57d960f0a234286",
+    "timestamp_epoch": 1792017114.2200239,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 35.80826434798655,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 29135,
+      "text_sha256": "9f019ec6098387e9493b18aa0c857203f4b518414d967578e762d7a4963dadf8",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 9980,
+    "completion_tokens": 541,
+    "total_tokens": 10521,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "b171c56e651946ec8214741908bfc1d9",
+    "timestamp_epoch": 1792017114.2204719,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 9980,
+    "prepared_input_tokens": 9980,
+    "state_max_chars": null,
+    "request_sha256": "9f019ec6098387e9493b18aa0c857203f4b518414d967578e762d7a4963dadf8",
+    "status": "parsed"
+  },
+  {
+    "record_id": "be1e40f4f55446709ea833fb7e636c44",
+    "timestamp_epoch": 1792017141.0164323,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 26.72519866100629,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 40578,
+      "text_sha256": "e898462c05ff54b4d9ebe827e2f3517e0d89cf6f8ce55ebab69a35f047eb732c",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14446,
+    "completion_tokens": 368,
+    "total_tokens": 14814,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "2aa7ef1dc38a433b8760ba037d951413",
+    "timestamp_epoch": 1792017141.0170066,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 22323,
+    "prepared_input_tokens": 14446,
+    "state_max_chars": 12000,
+    "request_sha256": "e898462c05ff54b4d9ebe827e2f3517e0d89cf6f8ce55ebab69a35f047eb732c",
+    "status": "parsed"
+  },
+  {
+    "record_id": "3fecaf17beba46a99ef776d909f1f8e5",
+    "timestamp_epoch": 1792017166.2213602,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 25.1359212360112,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 41827,
+      "text_sha256": "8c19302243e28e58fde86c01e0e27f6fb8c530fd5d8a9e09ee7640b9ece076b0",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 15272,
+    "completion_tokens": 335,
+    "total_tokens": 15607,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "27e4684c6aa542758a4c64ada11971f5",
+    "timestamp_epoch": 1792017166.2218697,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "full_input_tokens_preflight": 25149,
+    "prepared_input_tokens": 15272,
+    "state_max_chars": 12000,
+    "request_sha256": "8c19302243e28e58fde86c01e0e27f6fb8c530fd5d8a9e09ee7640b9ece076b0",
+    "status": "parsed"
+  },
+  {
+    "record_id": "7bc42490a8494123b99e6a19e9d22c47",
+    "timestamp_epoch": 1792017166.2671435,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "eb02972f5b5ded7b7ab4be66489921ca2961be46e51d39718639e80b0a48c1b0",
+    "stage": "events"
+  },
+  {
+    "record_id": "aec15f2e646c40108fe2829bdf50000b",
+    "timestamp_epoch": 1792017166.2674422,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "full_input_tokens_preflight": 13561,
+    "prepared_input_tokens": 13561,
+    "state_max_chars": null,
+    "request_sha256": "dbea9eb5d47e030d0dd4b0c954e837848b015b6e7484fe5261a7cd428a81e869",
+    "status": "parsed"
+  },
+  {
+    "record_id": "043d585563f141dfa2fdff51442a4805",
+    "timestamp_epoch": 1792017166.2711005,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "1080f8e02e0bad0ce0385c766731f034ed9ffe4db0ab381447d6868e7788af60",
+    "stage": "notes"
+  },
+  {
+    "record_id": "5e68c92c7b554eea91e3b481e7ba88a9",
+    "timestamp_epoch": 1792017167.4535697,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9994078609743156,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 12031,
+    "input_sha256": [
+      "0ff0f3e7187e4531f2c8f0da92c09d241e2589ce854fa520f99d1b512b3b9d34"
+    ],
+    "input_texts": [
+      "State 3\nRootWebArea 'Postmill', focused\n\t[24] navigation '', visible\n\t\t[25] link 'Jump to main content', clickable\n\t\t[26] link 'Jump to sidebar', clickable\n\t[27] navigation '', visible\n\t\t[30] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[40] list '', visible\n\t\t\t[41] listitem '', visible\n\t\t\t\t[42] link 'Forums', clickable, visible\n\t\t\t[43] listitem '', visible\n\t\t\t\t[44] link 'Wiki', clickable, visible\n\t\t[45] Section '', visible\n\t\t\t[54] searchbox 'Search query', clickable, visible\n\t\t[55] list '', visible\n\t\t\t[56] listitem '', visible\n\t\t\t\t[57] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[60] image '', visible\n\t\t\t[61] listitem '', visible\n\t\t\t\t[62] link 'Submit', clickable, visible\n\t\t\t\t\t[65] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[67] listitem '', visible\n\t\t\t\t[68] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[71] image '', visible\n\t\t\t\t\t[72] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[113] main '', visible\n\t\t[114] navigation '', visible\n\t\t\t[115] list '', visible\n\t\t\t\t[116] listitem '', visible\n\t\t\t\t\t[117] link 'Submissions', clickable, visible\n\t\t\t\t[118] listitem '', visible\n\t\t\t\t\t[119] link 'Comments', clickable, visible\n\t\t\t[120] list '', visible\n\t\t\t\t[121] listitem '', visible\n\t\t\t\t\t[122] button 'Filter on: Featured', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[124] image '', visible\n\t\t\t\t\t\tStaticText 'Featured'\n\t\t\t\t[134] listitem '', visible\n\t\t\t\t\t[135] button 'Sort by: Hot', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[137] image '', visible\n\t\t\t\t\t\tStaticText 'Hot'\n\t\t[158] paragraph '', visible\n\t\t\tStaticText 'You are not subscribed to any forum. Showing featured forums instead.'\n\t[159] complementary '', visible\n\t\t[160] Section '', visible\n\t\t\t[161] heading 'Featured forums', visible\n\t\t\t[162] paragraph '', visible\n\t\t\t\tStaticText 'There are no featured forums to display.'\n\t[164] contentinfo '', visible\n\t\t[165] paragraph '', visible\n\t\t\tStaticText 'Running'\n\t\t\t[167] link 'Postmill', clickable, visible\n[correction] status 'Title validation: saved', visible\n\nState 4\nRootWebArea 'List of forums', focused\n\t[20] navigation '', visible\n\t\t[21] link 'Jump to main content', clickable\n\t\t[22] link 'Jump to sidebar', clickable\n\t[23] navigation '', visible\n\t\t[26] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[36] list '', visible\n\t\t\t[37] listitem '', visible\n\t\t\t\t[38] link 'Forums', clickable, visible\n\t\t\t[39] listitem '', visible\n\t\t\t\t[40] link 'Wiki', clickable, visible\n\t\t[41] Section '', visible\n\t\t\t[50] searchbox 'Search query', clickable, visible\n\t\t[51] list '', visible\n\t\t\t[52] listitem '', visible\n\t\t\t\t[53] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[56] image '', visible\n\t\t\t[57] listitem '', visible\n\t\t\t\t[58] link 'Submit', clickable, visible\n\t\t\t\t\t[61] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[63] listitem '', visible\n\t\t\t\t[64] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[67] image '', visible\n\t\t\t\t\t[68] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[109] main ''\n\t\t[110] navigation '', visible\n\t\t\t[111] list '', visible\n\t\t\t\t[112] listitem '', visible\n\t\t\t\t\t[113] link 'Forums', clickable, visible\n\t\t\t\t[114] listitem '', visible\n\t\t\t\t\t[115] link 'Tags', clickable, visible\n\t\t\t\t[116] listitem '', visible\n\t\t\t\t\t[117] link 'Alphabetical', clickable, visible\n\t\t\t[118] list '', visible\n\t\t\t\t[119] listitem '', visible\n\t\t\t\t\t[120] button 'Sort by: Submissions', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[122] image '', visible\n\t\t\t\t\t\tStaticText 'Submissions'\n\t\t[137] heading 'List of forums', visible\n\t\t[139] link 'Create forum', clickable, visible\n\t\t[141] article '', visible\n\t\t\t[143] heading 'AskReddit — AskReddit', visible\n\t\t\t\t[144] link 'AskReddit — AskReddit', clickable, visible\n\t\t\t[149] paragraph '', visible\n\t\t\t\tStaticText 'AskReddit'\n\t\t\t[152] Section '', visible\n\t\t\t\t[154] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[160] paragraph '', visible\n\t\t\t\tStaticText '10,041 submissions'\n\t\t[161] article '', visible\n\t\t\t[163] heading 'relationship_advice — relationship_advice', visible\n\t\t\t\t[164] link 'relationship_advice — relationship_advice', clickable, visible\n\t\t\t[169] paragraph '', visible\n\t\t\t\tStaticText 'relationship_advice'\n\t\t\t[172] Section '', visible\n\t\t\t\t[174] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[180] paragraph '', visible\n\t\t\t\tStaticText '5,718 submissions'\n\t\t[181] article '', visible\n\t\t\t[183] heading 'worldnews — worldnews', visible\n\t\t\t\t[184] link 'worldnews — worldnews', clickable, visible\n\t\t\t[189] paragraph '', visible\n\t\t\t\tStaticText 'worldnews'\n\t\t\t[192] Section '', visible\n\t\t\t\t[194] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[200] paragraph '', visible\n\t\t\t\tStaticText '3,464 submissions'\n\t\t[201] article '', visible\n\t\t\t[203] heading 'news — news', visible\n\t\t\t\t[204] link 'news — news', clickable, visible\n\t\t\t[209] paragraph '', visible\n\t\t\t\tStaticText 'news'\n\t\t\t[212] Section '', visible\n\t\t\t\t[214] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[220] paragraph '', visible\n\t\t\t\tStaticText '3,322 submissions'\n\t\t[221] article '', visible\n\t\t\t[223] heading 'movies — movies', visible\n\t\t\t\t[224] link 'movies — movies', clickable, visible\n\t\t\t[229] paragraph '', visible\n\t\t\t\tStaticText 'movies'\n\t\t\t[232] Section '', visible\n\t\t\t\t[234] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[240] paragraph '', visible\n\t\t\t\tStaticText '3,261 submissions'\n\t\t[241] article ''\n\t\t\t[243] heading 'memes — memes', visible\n\t\t\t\t[244] link 'memes — memes', clickable, visible\n\t\t\t[249] paragraph ''\n\t\t\t\tStaticText 'memes'\n\t\t\t[252] Section '', visible\n\t\t\t\t[254] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[260] paragraph ''\n\t\t\t\tStaticText '3,129 submissions'\n\t\t[261] article ''\n\t\t\t[263] heading 'wallstreetbets — wallstreetbets'\n\t\t\t\t[264] link 'wallstreetbets — wallstreetbets', clickable\n\t\t\t[269] paragraph ''\n\t\t\t\tStaticText 'wallstreetbets'\n\t\t\t[272] Section ''\n\t\t\t\t[274] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[280] paragraph ''\n\t\t\t\tStaticText '3,089 submissions'\n\t\t[281] article ''\n\t\t\t[283] heading 'gaming — gaming'\n\t\t\t\t[284] link 'gaming — gaming', clickable\n\t\t\t[289] paragraph ''\n\t\t\t\tStaticText 'gaming'\n\t\t\t[292] Section ''\n\t\t\t\t[294] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[300] paragraph ''\n\t\t\t\tStaticText '2,572 submissions'\n\t\t[301] article ''\n\t\t\t[303] heading 'technology — technology'\n\t\t\t\t[304] link 'technology — technology', clickable\n\t\t\t[309] paragraph ''\n\t\t\t\tStaticText 'technology'\n\t\t\t[312] Section ''\n\t\t\t\t[314] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[320] paragraph ''\n\t\t\t\tStaticText '2,472 submissions'\n\t\t[321] article ''\n\t\t\t[323] heading 'pics — pics'\n\t\t\t\t[324] link 'pics — pics', clickable\n\t\t\t[329] paragraph ''\n\t\t\t\tStaticText 'pics'\n\t\t\t[332] Section ''\n\t\t\t\t[334] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[340] paragraph ''\n\t\t\t\tStaticText '2,450 submissions'\n\t\t[341] article ''\n\t\t\t[343] heading 'funny — funny'\n\t\t\t\t[344] link 'funny — funny', clickable\n\t\t\t[349] paragraph ''\n\t\t\t\tStaticText 'funny'\n\t\t\t[352] Section ''\n\t\t\t\t[354] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[360] paragraph ''\n\t\t\t\tStaticText '2,407 submissions'\n\t\t[361] article ''\n\t\t\t[363] heading 'television — television'\n\t\t\t\t[364] link 'television — television', clickable\n\t\t\t[369] paragraph ''\n\t\t\t\tStaticText 'television'\n\t\t\t[372] Section ''\n\t\t\t\t[374] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[380] paragraph ''\n\t\t\t\tStaticText '2,389 submissions'\n\t\t[381] article ''\n\t\t\t[383] heading 'mildlyinteresting — mildlyinteresting'\n\t\t\t\t[384] link 'mildlyinteresting — mildlyinteresting', clickable\n\t\t\t[389] paragraph ''\n\t\t\t\tStaticText 'mildlyinteresting'\n\t\t\t[392] Section ''\n\t\t\t\t[394] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[400] paragraph ''\n\t\t\t\tStaticText '2,211 submissions'\n\t\t[401] article ''\n\t\t\t[403] heading 'Showerthoughts — Showerthoughts'\n\t\t\t\t[404] link 'Showerthoughts — Showerthoughts', clickable\n\t\t\t[409] paragraph ''\n\t\t\t\tStaticText 'Showerthoughts'\n\t\t\t[412] Section ''\n\t\t\t\t[414] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[420] paragraph ''\n\t\t\t\tStaticText '2,175 submissions'\n\t\t[421] article ''\n\t\t\t[423] heading 'todayilearned — todayilearned'\n\t\t\t\t[424] link 'todayilearned — todayilearned', clickable\n\t\t\t[429] paragraph ''\n\t\t\t\tStaticText 'todayilearned'\n\t\t\t[432] Section ''\n\t\t\t\t[434] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[440] paragraph ''\n\t\t\t\tStaticText '2,111 submissions'\n\t\t[441] article ''\n\t\t\t[443] heading 'personalfinance — personalfinance'\n\t\t\t\t[444] link 'personalfinance — personalfinance', clickable\n\t\t\t[449] paragraph ''\n\t\t\t\tStaticText 'personalfinance'\n\t\t\t[452] Section ''\n\t\t\t\t[454] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[460] paragraph ''\n\t\t\t\tStaticText '1,957 submissions'\n\t\t[461] article ''\n\t\t\t[463] heading 'LifeProTips — LifeProTips'\n\t\t\t\t[464] link 'LifeProTips — LifeProTips', clickable\n\t\t\t[469] paragraph ''\n\t\t\t\tStaticText 'LifeProTips'\n\t\t\t[472] Section ''\n\t\t\t\t[474] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[480] paragraph ''\n\t\t\t\tStaticText '1,953 submissions'\n\t\t[481] article ''\n\t\t\t[483] heading 'Futurology — Futurology'\n\t\t\t\t[484] link 'Futurology — Futurology', clickable\n\t\t\t[489] paragraph ''\n\t\t\t\tStaticText 'Futurology'\n\t\t\t[492] Section ''\n\t\t\t\t[494] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[500] paragraph ''\n\t\t\t\tStaticText '1,902 submissions'\n\t\t[501] article ''\n\t\t\t[503] heading 'Music — Music'\n\t\t\t\t[504] link 'Music — Music', clickable\n\t\t\t[509] paragraph ''\n\t\t\t\tStaticText 'Music'\n\t\t\t[512] Section ''\n\t\t\t\t[514] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[520] paragraph ''\n\t\t\t\tStaticText '1,869 submissions'\n\t\t[521] article ''\n\t\t\t[523] heading 'explainlikeimfive — explainlikeimfive'\n\t\t\t\t[524] link 'explainlikeimfive — explainlikeimfive', clickable\n\t\t\t[529] paragraph ''\n\t\t\t\tStaticText 'explainlikeimfive'\n\t\t\t[532] Section ''\n\t\t\t\t[534] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[540] paragraph ''\n\t\t\t\tStaticText '1,818 submissions'\n\t\t[541] article ''\n\t\t\t[543] heading 'books — books'\n\t\t\t\t[544] link 'books — books', clickable\n\t\t\t[549] paragraph ''\n\t\t\t\tStaticText 'books'\n\t\t\t[552] Section ''\n\t\t\t\t[554] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[560] paragraph ''\n\t\t\t\tStaticText '1,796 submissions'\n\t\t[561] article ''\n\t\t\t[563] heading 'science — science'\n\t\t\t\t[564] link 'science — science', clickable\n\t\t\t[569] paragraph ''\n\t\t\t\tStaticText 'science'\n\t\t\t[572] Section ''\n\t\t\t\t[574] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[580] paragraph ''\n\t\t\t\tStaticText '1,792 submissions'\n\t\t[581] article ''\n\t\t\t[583] heading 'Jokes — Jokes'\n\t\t\t\t[584] link 'Jokes — Jokes', clickable\n\t\t\t[589] paragraph ''\n\t\t\t\tStaticText 'Jokes'\n\t\t\t[592] Section ''\n\t\t\t\t[594] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[600] paragraph ''\n\t\t\t\tStaticText '1,758 submissions'\n\t\t[601] article ''\n\t\t\t[603] heading 'tifu — tifu'\n\t\t\t\t[604] link 'tifu — tifu', clickable\n\t\t\t[609] paragraph ''\n\t\t\t\tStaticText 'tifu'\n\t\t\t[612] Section ''\n\t\t\t\t[614] button 'Subscribe No subscribers', clickable"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "ca8eb353b5ad4672952026ecc408ea53",
+    "timestamp_epoch": 1792017167.4538767,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 11,
+    "actual_vectors": 1,
+    "cache_hits": 10,
+    "elapsed_seconds": 1.0007992240134627,
+    "input_keys": [
+      "8cdf49cfbb561ed936422b7e01ab4a7eab97096db0d0f7c9762d609fec4e5917",
+      "34d9478e9632a4d479771da019c61b5e5aa10f9726f63f588169ec2bf1f91f54",
+      "8d9b0368a73ce57d3a7646a0a851b27baa71e5f703ca43c1c1b0085e4a6b58c0",
+      "8aba149810daf1ec84bf1a2ee6b1b354754b41a9a272b727f27e99c75e3c1b65",
+      "907d430d477f966877fc9121f6f0a41d847af99d37039841bbf5f7b8cf550762",
+      "cc30c21ba5e085b85020a762b7b3c36c3880f5916f45839de482b79447cef860",
+      "ca566cbde4cc05c974079697eb5878e9beb2b367a08479a5295685b82488c9e7",
+      "2c345f3edbf59331f6db160989a0367822c13a53652014de891c4ade3bd7c5a2",
+      "f1f0cd2c35ea8a2401a248aed225ed09e840451ce7cb7ad28103acaac1b27957",
+      "2342a4fe95ff35e6d8f06440803c5a66f02bda99e0bc4919bac5e9058c21683c",
+      "7e7239499da6d7a75540f6b590b5b491a02fe1c3179798c18109f1d607f15473"
+    ]
+  },
+  {
+    "record_id": "e80bc48b28754d22896d4ec1d68b23aa",
+    "timestamp_epoch": 1792017167.8983803,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.4392865069967229,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 6,
+    "input_characters": 4513,
+    "input_sha256": [
+      "388949287f7b7b8e9278ecfd7af59cd6fabecc89319f1533dddfd98189284fb2",
+      "cd921ef9fb21c66fe1b99733675623ba30e88a28b66ab570cd9d019cb8ebc2af",
+      "208399da3424c537c284ec434acf64b8df48dfe84ad0e0eaccf13a0604800210",
+      "822facc919bf550e08394b4f5b114ac4b25961978ed7df90bbaff16453ce397d",
+      "1e348d5b7c53f163f2067bc322247b26831a22c7e006e4bae4f5356e1ced850e",
+      "b766cd1ee8a581f8281b01d509f3d2fab72fb93820f5efbb5827e1289569b228"
+    ],
+    "input_texts": [
+      "While attempting to reply to the first reply in the 'this-is-how-chatgpt-sees-it' post with 'don't panic', the agent has navigated to the forums index page. This step represents a corrective maneuver where the agent, having lost the context of the specific post thread, attempts to use the browser's back navigation to return to the previously visited page, expecting it to be the target post or a direct link to it.\n\nThe transition from state 2 to state 3 involves executing a 'go_back()' action. In the pre-state (state 2), the interface displayed the 'List of forums' page at http://localhost:9080/forums, showing various forum categories like 'AskReddit' and 'relationship_advice'. After the action, the post-state (state 3) shows the URL has changed to http://localhost:9080/, displaying the 'Postmill' home page. The content has shifted from a list of forum links to a home view featuring a 'Featured forums' section and submission filters, indicating the browser navigated backward to a previous page in the session history rather than staying on the forums index.",
+      "Still pursuing the goal of replying to the first reply in the target post, the agent is now on the Postmill home page after a failed back-navigation. This step represents the agent correcting the navigation error by using the forward button to return to the forums index, which is necessary to locate the 'AskReddit' forum and the specific post required for the reply.\n\nThe transition from state 3 to state 4 involves executing a 'go_forward()' action. In the pre-state (state 3), the agent was on the 'Postmill' home page (http://localhost:9080/), which displayed a message about no featured forums and submission sorting options. After the action, the post-state (state 4) shows the URL has returned to http://localhost:9080/forums. The interface is identical to the initial pre-state of this sequence, displaying the 'List of forums' with the same articles for 'AskReddit', 'relationship_advice', and other categories, confirming the successful return to the forums index page.",
+      "The agent aims to reply to the first reply in a specific Reddit post by navigating to the correct forum. Currently on the forums index page, the agent identifies 'AskReddit' as the likely location for the target post and clicks its link to enter the forum's submission list.\n\nThe action navigated from the 'List of forums' page to the 'AskReddit' forum listing page. The URL changed to '/f/AskReddit', and the main content area now displays a list of submissions specific to that forum, with the top post 'Why bleaching your butthole isn’t called changing your ring tone?' visible along with its comment count.",
+      "Continuing the navigation to locate the specific comment thread, the agent has reached the AskReddit forum listing. To reply to the first reply within a post, the agent must first enter the comment section of the target post. The agent clicks the link showing the number of comments on the top post.\n\nThe action navigated from the AskReddit forum listing page to the comment thread page of the top post. The URL changed to '/f/AskReddit/10224/...', and the page title now reflects the post content. The view displays the post title, author, and a list of comments, with the first comment by 'Barnaby_Cuckoldsniff' visible at the top, ready for a reply.",
+      "To reply to the first reply in the AskReddit thread with the specific text 'don't panic', the agent navigates to the comment section and targets the initial reply by user Barnaby_Cuckoldsniff. This step involves locating the interaction point for that specific comment to open its dedicated response interface.\n\nThe agent clicked the 'Reply' link associated with the comment by Barnaby_Cuckoldsniff. In the post-state, a new Section element containing a reply form appeared directly beneath that comment. This newly revealed form includes a 'Comment' textbox and a 'Post' button, specifically scoped to replying to the selected comment rather than the main thread.",
+      "With the dedicated reply form now visible for the first comment, the agent proceeds to input the required response text. The goal is to fill the comment field with 'don't panic' so it can be submitted as a reply to the target user.\n\nThe agent filled the 'Comment' textbox within the newly revealed reply form with the text 'don't panic'. In the post-state, the textbox displays this exact value, a 'Preview' section appears showing the entered text, and the input field is marked as focused, indicating the form is ready for submission."
+    ],
+    "prompt_tokens": 977,
+    "total_tokens": 977,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "7bef08c2734c4a8eab7d09551a6355bb",
+    "timestamp_epoch": 1792017167.8986814,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 10,
+    "actual_vectors": 6,
+    "cache_hits": 4,
+    "elapsed_seconds": 0.4399333269975614,
+    "input_keys": [
+      "e798f2d05f575706517bf4f3d2bdedc25b8a0011de8e323ae9b3116cf7b48cde",
+      "738691d962d774d4b9bb553e2ddf812a16eabce390ec84a4c4b04e50bb544d52",
+      "b021b68962ffa30772ba5d4ace4983e5d65a12f743514d60c777e26d23cc825d",
+      "4981da94aa158d3694b8758e573ca91cdc8f001805402c74cd5c06b47ac29cd4",
+      "13d045fe38f13e422e4609eb1610c326788d1eb64775d893f7a8961831cbc44c",
+      "fc74c0d91bd8335e14c6b39ab489e5843d029efd21c8b1d1e61734138ccdfdfd",
+      "8c09e39bb871fdcbf41fc6fe58c6a72d7466ab7c64d065fc82208c2a6e3cb431",
+      "cfd80253c5fa345e9b254a871ac751f54d557375e62a20f2fc258f3a28948eb7",
+      "8f4c9e67d2e67dbd293eba2d612a52b4e5648304d4556a2d5f0d941ecdfd95fa",
+      "16df7a84d22ba90b6d4319cccd06a4d748e0cf362e58ef1d8615db1e5882fff8"
+    ]
+  },
+  {
+    "record_id": "075e23265467403d8a7ab7db748a8b0b",
+    "timestamp_epoch": 1792017167.8998027,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 4.603600245900452e-05,
+    "input_keys": [
+      "d0810c61d9e7ec7c07fa0604e0474d0f1fe2e744e3d0d42ca08f3a100266401a"
+    ]
+  },
+  {
+    "record_id": "b275ba87e74b4168ad5ccf85a771246e",
+    "timestamp_epoch": 1792017167.9004934,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 3.456001286394894e-05,
+    "input_keys": [
+      "71de15bbd142b4da2dfd5bdf12ba8a9fa6b0d93bab086f64fa7ac84b06cc49f6"
+    ]
+  }
+]

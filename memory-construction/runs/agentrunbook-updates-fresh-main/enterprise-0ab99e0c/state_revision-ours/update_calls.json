@@ -1,0 +1,171 @@
+[
+  {
+    "record_id": "d30b704d786b40988d8c69bf0056b2dc",
+    "timestamp_epoch": 1792010786.3524303,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 21.895910283987178,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43338,
+      "text_sha256": "c6b99f65f83e27025e01b791caa5a1dfc4a4e4a009071ee469fcffff13e1efb3",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14409,
+    "completion_tokens": 376,
+    "total_tokens": 14785,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "2edc2b0adac9481d8c93bddc2b1e9c77",
+    "timestamp_epoch": 1792010786.3529625,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 40354,
+    "prepared_input_tokens": 14409,
+    "state_max_chars": 12000,
+    "request_sha256": "c6b99f65f83e27025e01b791caa5a1dfc4a4e4a009071ee469fcffff13e1efb3",
+    "status": "parsed"
+  },
+  {
+    "record_id": "b303d562483d4728ab1e0d37c8b4c25b",
+    "timestamp_epoch": 1792010786.3530924,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "e74a6ce1161c4d8789a4ddd3223163fa",
+    "timestamp_epoch": 1792010786.3639622,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "6a7c9ffebf180c5eaac5f05b794243994688ace320215f1c587fe1ecfe88f3e4",
+    "stage": "notes"
+  },
+  {
+    "record_id": "e772b7283990431abb58fbdd065ad670",
+    "timestamp_epoch": 1792010786.734878,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.001497535005910322,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "513e9e5ea2044046ab8ea3bc6dfea462",
+    "timestamp_epoch": 1792010786.8962731,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.15528045600512996,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1337,
+    "input_sha256": [
+      "6f410a6f94a0f00fdd7b4d7ca912a48ff126ed83db0e58e83a037d0df58df4ff",
+      "9ac438b0a9f1047f7c24269b95a810c50e6de698918af79905abc774a2e9de23"
+    ],
+    "input_texts": [
+      "The agent is constructing a complex filter for Change Requests to find specific entries. This step attempts to finalize the first condition by selecting 'Normal' for the 'Type' field, which is a prerequisite to adding the subsequent conditions for 'Requested by', 'Model', 'Short description', and 'State'.\n\nIn the pre-state, the filter panel is open with the 'Type' dropdown expanded, but the 'Normal' option (a1642) is not selected. The action attempts to click this specific option directly. In the post-state, the UI structure remains identical, the dropdown is still open, and the 'Normal' option remains unselected, indicating the direct click on the list item failed to register.",
+      "Continuing the filter construction workflow, the agent needs to apply the 'Normal' value to the 'Type' field to establish the first condition. This step serves as a recovery from the previous failed direct click attempt by using the programmatic selection method.\n\nThe pre-state shows the 'Type' dropdown (a1639) open with 'Normal' unselected. The action uses 'select_option' on the combobox to choose 'normal'. In the post-state, the filter condition 'Type is Normal' has been successfully added to the filter toolbar (evidenced by the thought in state 6), and the dropdown is no longer the focus, allowing the agent to proceed to the next condition."
+    ],
+    "prompt_tokens": 288,
+    "total_tokens": 288,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "fc0e872c74494f4c8ae679dcdc41ac16",
+    "timestamp_epoch": 1792010786.896579,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.15592041201307438,
+    "input_keys": [
+      "6642f0b8be20400598c0c4bf685cac49ed1ecf4554349ba8cda4d6b74ad13df5",
+      "75c30af81ebb99f1f319efd1d351778cd9c9ace1bb117f9fbe77adef6e7ed049",
+      "621355920362a6b3bc76f93fee877459f1a3daf424dba06a69fe484e7b643040",
+      "e463f07fa0c11cd069e79fb80980ed854591fd616f77306ca2d1869c3ea8558b",
+      "de28f95bb168a555c4ba8577141928643e6ca221cd3a0e951bdafe69dc05313c",
+      "155c771be002df8caf79c69aeb6e5bd897efcaebc3e2d038c249793aef106138",
+      "c17b778dd6c5c0787b8153f6fa87fa098625236540a9a190ac2885046b04be34",
+      "ffc709ed484e05d9ee619fef63315fbdb53f3a8a0b67d5d5cc371f5392aa48b9",
+      "b47096b93284d3e350e9e81890c1a779727cc1eb626261b43aa00d22c0d46705",
+      "ca2b8cf5c545958f75cdc248e53f2b4a09f0ba456498d46bb832a80121e97197",
+      "884deb8f88c9420b3170ab16a4af43f6e51a531d0413a4c0a922b258eaadb6e3",
+      "a4afd42fdf7a86885cfb5e9c91971a0ed8ee057978f5aaacc941fb1fc4a3af8b",
+      "7e1c8d7dda5f21bda4c0c2f3501c6c45144918b5b4327cb52d464753d7cbfa5d",
+      "c5efbfc8b87dddad01943c9383d23fef11bd0aa3cb857f64f57cce80e9ddbcd0",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "bdb4545ddfef49e293c8faa173ce84c7",
+    "timestamp_epoch": 1792010786.897878,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 5.002898979000747e-05,
+    "input_keys": [
+      "e70e0d86c3610a23eb0c3886b368b55ef3cdc5494a3e5fa4290fd2a5081214d5"
+    ]
+  },
+  {
+    "record_id": "9d5aa57bf5b44720b82477da527b8d31",
+    "timestamp_epoch": 1792010786.8989189,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 4.56129782833159e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

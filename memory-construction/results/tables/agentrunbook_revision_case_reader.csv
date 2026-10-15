@@ -1,0 +1,17 @@
+domain,trajectory_id,case,method,questions,correct,complete_parseable,truncated,service_failure,parse_failure,reader_input_tokens,reader_output_tokens,prompt_build_wall_s,reader_generation_wall_s,raw_path
+web,1ad1af4b,state_revision,b3,4,3,4,0,0,0,41813,138,14.004917790007312,15.986701046989765,runs/agentrunbook-updates-main/reader-revision-web-b3-state
+web,1ad1af4b,state_revision,ours,4,3,4,0,0,0,40505,1133,16.097295576008037,43.797335655021016,runs/agentrunbook-updates-main/reader-revision-web-ours-state-r1
+web,1ad1af4b,workflow_revision,b3,4,3,4,0,0,0,40777,158,32.48135814201669,18.401899480988504,runs/agentrunbook-updates-main/reader-revision-web-1ad1af4b-workflow_revision-b3-r2
+web,1ad1af4b,workflow_revision,ours,4,3,4,0,0,0,34348,47,14.621277689991985,11.347008078999352,runs/agentrunbook-updates-main/reader-revision-web-1ad1af4b-workflow_revision-ours-r2
+web,2e8f6477,state_revision,b3,4,3,4,0,0,0,32020,137,15.66774115699809,13.260042139998404,runs/agentrunbook-updates-main/reader-revision-web-2e8f6477-state_revision-b3-r2
+web,2e8f6477,state_revision,ours,4,3,4,0,0,0,32110,138,17.08763897101744,13.205678748025093,runs/agentrunbook-updates-main/reader-revision-web-2e8f6477-state_revision-ours-r2
+web,2e8f6477,workflow_revision,b3,4,3,4,0,0,0,34225,43,21.985758703987813,11.316066406987375,runs/agentrunbook-updates-main/reader-revision-web-2e8f6477-workflow_revision-b3-r2
+web,2e8f6477,workflow_revision,ours,4,4,4,0,0,0,36405,226,17.11917459499091,16.87275783100631,runs/agentrunbook-updates-main/reader-revision-web-2e8f6477-workflow_revision-ours-r2
+enterprise,0ab99e0c,state_revision,b3,4,3,4,0,0,0,21199,693,16.855309639999177,25.0506173990143,runs/agentrunbook-updates-main/reader-revision-enterprise-b3-r2
+enterprise,0ab99e0c,state_revision,ours,4,2,4,0,0,0,17291,256,15.527631686010864,12.067343697999604,runs/agentrunbook-updates-main/reader-revision-enterprise-ours-r2
+enterprise,0ab99e0c,workflow_revision,b3,4,2,4,0,0,0,19186,78,17.421541477000574,7.779805575002683,runs/agentrunbook-updates-main/reader-revision-enterprise-0ab99e0c-workflow_revision-b3-r2
+enterprise,0ab99e0c,workflow_revision,ours,4,2,4,0,0,0,16281,1692,17.72716374800075,51.165330994001124,runs/agentrunbook-updates-main/reader-revision-enterprise-0ab99e0c-workflow_revision-ours-r2
+enterprise,49f98e9e,state_revision,b3,4,2,4,0,0,0,16807,240,17.075601704011206,11.55050998099614,runs/agentrunbook-updates-main/reader-revision-enterprise-49f98e9e-state_revision-b3-r2
+enterprise,49f98e9e,state_revision,ours,4,2,4,0,0,0,15025,95,15.624381111003458,7.135395767982118,runs/agentrunbook-updates-main/reader-revision-enterprise-49f98e9e-state_revision-ours-r2
+enterprise,49f98e9e,workflow_revision,b3,4,2,4,0,0,0,19371,330,17.132053584005916,14.670451560989022,runs/agentrunbook-updates-main/reader-revision-enterprise-49f98e9e-workflow_revision-b3-r2
+enterprise,49f98e9e,workflow_revision,ours,4,2,4,0,0,0,16751,145,16.65995195801952,8.884442132984987,runs/agentrunbook-updates-main/reader-revision-enterprise-49f98e9e-workflow_revision-ours-r2

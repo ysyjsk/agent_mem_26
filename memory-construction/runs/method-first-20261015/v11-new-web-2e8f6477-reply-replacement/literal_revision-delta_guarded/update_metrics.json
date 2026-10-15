@@ -1,0 +1,104 @@
+{
+  "policy": "delta_guarded",
+  "case": "literal_revision",
+  "scope": "adapted_AgentRunbookR_local_update",
+  "starting_snapshot": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/matched-web-v1/memory_state",
+  "starting_cache": "independent clones; exact requests and vectors preserved equally",
+  "setup_load_and_seed_s_excluded": 0.5016510490095243,
+  "update_to_queryable_publish_s": 7.58836543301004,
+  "started_epoch": 1792043141.6096675,
+  "completed_epoch": 1792043149.228638,
+  "artifact_build_s": 7.573038482019911,
+  "publication_and_reload_s": 0.015327533008530736,
+  "runner_sha256": "8d58add830a613c1b7cd13138ab6f3bd8d05f190f6ea715a28934fb66d688963",
+  "delta_version": "source-guarded-v11",
+  "source_append_comparator": false,
+  "reextracted_event_outputs": 0,
+  "regenerated_notes": 0,
+  "llm_calls": 2,
+  "llm_input_tokens_known": 1634,
+  "llm_output_tokens_known": 209,
+  "event_llm_elapsed_sum_s_not_wall": 6.1285355699656066,
+  "note_llm_elapsed_sum_s_not_wall": 0,
+  "embedding_calls": 2,
+  "embedding_vectors": 3,
+  "embedding_tokens_known": 4433,
+  "unknown_usage_calls": 0,
+  "api_failed_calls": 0,
+  "exact_request_hits": 1,
+  "dependency_reused_event_ids": [
+    "event_0000_0001",
+    "event_0001_0002",
+    "event_0002_0003",
+    "event_0003_0004",
+    "event_0004_0005",
+    "event_0005_0006",
+    "event_0006_0007",
+    "event_0009_0010"
+  ],
+  "embedding_hits": 20,
+  "load_verified": true,
+  "event_count": 32,
+  "note_count": 10,
+  "edited_event_outputs": 2,
+  "edited_notes": 0,
+  "delta_fallback_groups": 0,
+  "primary_metric": "total_LLM_input_plus_output_tokens",
+  "matched_construction_signature": "7b6e6e7b08fab7ae5355f171df175b783c9314d093dd40c7a6e0157b01892067",
+  "qa_status": "derived_checks_passed_pending_semantics_and_reader",
+  "quality_checks": {
+    "new_fact_present": false,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": true,
+    "dirty_event_ids": [
+      "event_0007_0008",
+      "event_0008_0009"
+    ],
+    "reused_event_count": 8,
+    "unchanged_candidate_event_count": 8,
+    "fixed_reader_regression": "not_run",
+    "derived_event_change_hits": {
+      "event_0007_0008": true,
+      "event_0008_0009": true
+    },
+    "derived_notes_change_hit": null,
+    "notes_change_required": false,
+    "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+    "literal_derived_rules": [
+      {
+        "target": "event_0007_0008",
+        "required_hits": {
+          "stay calm": true,
+          "Preview|preview": true,
+          "Comment|comment": true
+        },
+        "forbidden_hits": {},
+        "pass": true
+      },
+      {
+        "target": "event_0008_0009",
+        "required_hits": {
+          "stay calm": true,
+          "don't panic": true,
+          "17 comments": true,
+          "Post": true
+        },
+        "forbidden_hits": {},
+        "pass": true
+      }
+    ],
+    "derived_automated_checks_pass": true,
+    "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+    "quality_pass": null,
+    "semantic_review": "pending"
+  },
+  "trajectory_id": "2e8f6477",
+  "state_index": 8,
+  "revision_count": 1,
+  "state_indices": [
+    8
+  ],
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/v11-new-web-2e8f6477-reply-replacement/literal_revision-delta_guarded"
+}

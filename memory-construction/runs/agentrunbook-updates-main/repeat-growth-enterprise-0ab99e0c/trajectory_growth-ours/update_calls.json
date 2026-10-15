@@ -1,0 +1,618 @@
+[
+  {
+    "record_id": "759b07fa551b43a9bd6522c6bb0f87cc",
+    "timestamp_epoch": 1792006947.5553691,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 12.982120547996601,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43248,
+      "text_sha256": "47fdaf211c027c96e2d1c18774ddb540ce8feb43f2165e792f1eaad3f3292069",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13859,
+    "completion_tokens": 312,
+    "total_tokens": 14171,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "4ca27bcfecd5428cbd10105010548405",
+    "timestamp_epoch": 1792006947.5556054,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "full_input_tokens_preflight": 40141,
+    "prepared_input_tokens": 13859,
+    "state_max_chars": 12000,
+    "request_sha256": "47fdaf211c027c96e2d1c18774ddb540ce8feb43f2165e792f1eaad3f3292069",
+    "status": "parsed"
+  },
+  {
+    "record_id": "7e2bda4f415a4f6294ce33d60cc0b02a",
+    "timestamp_epoch": 1792006963.7633672,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 16.16409567001392,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43171,
+      "text_sha256": "cb507852564639ec6c83e960ae2890b9b788995d9ebd14173bfaa4c627c532eb",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13837,
+    "completion_tokens": 425,
+    "total_tokens": 14262,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "8bcdeba310e74d028f6a9002e1604349",
+    "timestamp_epoch": 1792006963.763603,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 41812,
+    "prepared_input_tokens": 13837,
+    "state_max_chars": 12000,
+    "request_sha256": "cb507852564639ec6c83e960ae2890b9b788995d9ebd14173bfaa4c627c532eb",
+    "status": "parsed"
+  },
+  {
+    "record_id": "077dd24432c14962ba6d35c32983fb41",
+    "timestamp_epoch": 1792006977.7269642,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.918062599987024,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43368,
+      "text_sha256": "da393c662fd139d53184fece76ee2632ce5e036a7cd9ad2ba6ba85a3d8243988",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14442,
+    "completion_tokens": 339,
+    "total_tokens": 14781,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "a9311459acd245aa99c2281e4130dbdc",
+    "timestamp_epoch": 1792006977.727188,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 40352,
+    "prepared_input_tokens": 14442,
+    "state_max_chars": 12000,
+    "request_sha256": "da393c662fd139d53184fece76ee2632ce5e036a7cd9ad2ba6ba85a3d8243988",
+    "status": "parsed"
+  },
+  {
+    "record_id": "55473caab83b4928b1521992629ec1fb",
+    "timestamp_epoch": 1792006992.69907,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.92815213999711,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43312,
+      "text_sha256": "ce6d8a6dc299fc4c48be6aa3ac72b95cb2dec097adab48cbf4511c9d9e9e342c",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13876,
+    "completion_tokens": 381,
+    "total_tokens": 14257,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "310c8489b61a48f0821115e835568660",
+    "timestamp_epoch": 1792006992.6993952,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "full_input_tokens_preflight": 42785,
+    "prepared_input_tokens": 13876,
+    "state_max_chars": 12000,
+    "request_sha256": "ce6d8a6dc299fc4c48be6aa3ac72b95cb2dec097adab48cbf4511c9d9e9e342c",
+    "status": "parsed"
+  },
+  {
+    "record_id": "ed8ef12b445a4973adcf31c7a8cc4421",
+    "timestamp_epoch": 1792007005.7255902,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 12.980939875997137,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43172,
+      "text_sha256": "56ae7c3bc68e64742e4c239ef658cb6bb0967c1f381dad8f4a28e6105e64a5fd",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13767,
+    "completion_tokens": 314,
+    "total_tokens": 14081,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "96ab93bd2e614591bde832011299a4ec",
+    "timestamp_epoch": 1792007005.725815,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "full_input_tokens_preflight": 44080,
+    "prepared_input_tokens": 13767,
+    "state_max_chars": 12000,
+    "request_sha256": "56ae7c3bc68e64742e4c239ef658cb6bb0967c1f381dad8f4a28e6105e64a5fd",
+    "status": "parsed"
+  },
+  {
+    "record_id": "ee2e4a6c19b0457f80c9820982d785fe",
+    "timestamp_epoch": 1792007019.6999133,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.929453314020066,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43252,
+      "text_sha256": "5863dc0ea7c4a33a75e3ba59a56cdb6982a2dcf9ba6d79953d5ec3cc872881cb",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13806,
+    "completion_tokens": 347,
+    "total_tokens": 14153,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "a71b6e7b7703415eb8a5e76bc0ef1e9f",
+    "timestamp_epoch": 1792007019.7001493,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0010_0011",
+      "event_0011_0012"
+    ],
+    "state_ids": [
+      10,
+      11,
+      12
+    ],
+    "full_input_tokens_preflight": 45169,
+    "prepared_input_tokens": 13806,
+    "state_max_chars": 12000,
+    "request_sha256": "5863dc0ea7c4a33a75e3ba59a56cdb6982a2dcf9ba6d79953d5ec3cc872881cb",
+    "status": "parsed"
+  },
+  {
+    "record_id": "896a00e2f67e4a898d43cfd08b152570",
+    "timestamp_epoch": 1792007032.1066482,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 12.358991572022205,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43369,
+      "text_sha256": "d25cf31612eebee9695a9da620d831e45721bbad00f7f772bf4d359af47870b5",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13864,
+    "completion_tokens": 291,
+    "total_tokens": 14155,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "2ecda9c0089d434bbac02f221008fa4e",
+    "timestamp_epoch": 1792007032.1068783,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0012_0013",
+      "event_0013_0014"
+    ],
+    "state_ids": [
+      12,
+      13,
+      14
+    ],
+    "full_input_tokens_preflight": 46007,
+    "prepared_input_tokens": 13864,
+    "state_max_chars": 12000,
+    "request_sha256": "d25cf31612eebee9695a9da620d831e45721bbad00f7f772bf4d359af47870b5",
+    "status": "parsed"
+  },
+  {
+    "record_id": "698adda728cb40fbbb9e70fbe8d13d5a",
+    "timestamp_epoch": 1792007046.0857167,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.931732683005976,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 42857,
+      "text_sha256": "3c947f5ba8e66738ebf0615af8f0b07b3539a2997b9ac5361397a29bd9fdade8",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14154,
+    "completion_tokens": 338,
+    "total_tokens": 14492,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "6dc3e0f92709476386ae224d9b6e393f",
+    "timestamp_epoch": 1792007046.0859537,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0014_0015",
+      "event_0015_0016"
+    ],
+    "state_ids": [
+      14,
+      15,
+      16
+    ],
+    "full_input_tokens_preflight": 45014,
+    "prepared_input_tokens": 14154,
+    "state_max_chars": 12000,
+    "request_sha256": "3c947f5ba8e66738ebf0615af8f0b07b3539a2997b9ac5361397a29bd9fdade8",
+    "status": "parsed"
+  },
+  {
+    "record_id": "38ac129f46d444649fa2d31f6e4474c3",
+    "timestamp_epoch": 1792007046.086007,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 16,
+    "reused": 0
+  },
+  {
+    "record_id": "c65b26fc230c4265bcd02026448ebe75",
+    "timestamp_epoch": 1792007065.898144,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 19.805658749013674,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 11114,
+      "text_sha256": "884f7a95e200a620f78ba4fa5c6cddf6d46348f9dcde9b574fe405059e15dbf8",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 2879,
+    "completion_tokens": 702,
+    "total_tokens": 3581,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "fc81388827364296be7eb120a021da5d",
+    "timestamp_epoch": 1792007067.0407143,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9828912670200225,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 15176,
+    "input_sha256": [
+      "560680bb6b209c29ed5a0f1d6eb615d0550eca3a7d0f41374fad669bf6a8a7e0"
+    ],
+    "input_texts": [
+      "State 15\nRootWebArea 'Classic | Unified Navigation App | ServiceNow'\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[235] region 'There are 0 announcements displayed', visible, live='polite', relevant='additions text'\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, describedby='logo-tooltip'\n\t\t\t[66] image 'ServiceNow Service Management', visible\n\t\t[78] button 'All', clickable, visible, expanded=False\n\t\t[79] button 'Favorites', clickable, visible, expanded=False\n\t\t[80] button 'History', clickable, visible, expanded=False\n\t\t[82] button 'Admin', clickable, visible, expanded=False\n\t\t[83] button 'More menus', clickable, visible, expanded=False\n\t\tgeneric, describedby='title-tooltip'\n\t\t\tStaticText 'Change Requests'\n\t\t\t[96] button 'Create favorite for Change Requests', clickable, visible, live='polite', relevant='additions text', pressed='false'\n\t\t[108] search '', visible\n\t\t\t[112] combobox 'Search', clickable, visible, autocomplete='both', hasPopup='listbox', expanded=False\n\t\t\t[113] region '', live='polite', relevant='additions text'\n\t\t\t\tStaticText 'No exact match. Press Enter for full results.'\n\t\t\t[114] combobox 'Choose search context', clickable, visible, hasPopup='listbox', expanded=False\n\t\t[125] button 'Scope selectors', clickable, visible, expanded=False\n\t\t[132] button 'Sidebar discussions', clickable, visible, expanded=False\n\t\t[138] button 'Show help', clickable, visible, expanded=False\n\t\t[166] button 'Show notifications', clickable, visible, expanded=False\n\t\t[178] button 'Matthew Williams: available', clickable, visible, expanded=False\n\t\t\t[181] image 'Matthew Williams is Available', visible\n\t\t\t\tStaticText 'MW'\n\t[196] main '', visible\n\t\t[a] Iframe 'Main Content', visible\n\t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n\t\t\t\t[a35] region '', live='polite', relevant='additions text'\n\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\n\t\t\t\t\tStaticText 'New AND condition added, 2 of 2'\n\t\t\t\t\tStaticText 'New AND condition added, 3 of 3'\n\t\t\t\t\tStaticText 'New AND condition added, 4 of 4'\n\t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n\t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n\t\t\t\t\t[a45] button 'Actions', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b2'\n\t\t\t\t\t\tStaticText 'List controls'\n\t\t\t\t\t[a47] button '\\uf18a Show / hide filter', clickable, visible, expanded=True, controls='change_requestfilterdiv'\n\t\t\t\t\t\tStaticText '\\uf18a'\n\t\t\t\t\t\tStaticText 'Show / hide filter'\n\t\t\t\t\t[a49] button '\\uf1b8 Show / hide natural language filter', clickable, visible, expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b8'\n\t\t\t\t\t\tStaticText 'Show / hide natural language filter'\n\t\t\t\t\t[a51] heading 'Change Requests', visible\n\t\t\t\t\t\t[a52] button 'Change Requests', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\tStaticText 'Change Requests'\n\t\t\t\t\t[a58] search '', visible\n\t\t\t\t\t\t[a61] listbox 'Search a specific field of the Change Requests list, 11 items' value='Number', visible, multiselectable=False, orientation='vertical', expanded=False\n\t\t\t\t\t\t\t[a62] option 'for text', selected=False\n\t\t\t\t\t\t\t[a63] option 'Number', selected=True\n\t\t\t\t\t\t\t[a64] option 'Short description', selected=False\n\t\t\t\t\t\t\t[a65] option 'Risk', selected=False\n\t\t\t\t\t\t\t[a66] option 'Impact', selected=False\n\t\t\t\t\t\t\t[a67] option 'Priority', selected=False\n\t\t\t\t\t\t\t[a68] option 'Assigned to', selected=False\n\t\t\t\t\t\t\t[a69] option 'Planned start date', selected=False\n\t\t\t\t\t\t\t[a70] option 'Planned end date', selected=False\n\t\t\t\t\t\t\t[a71] option 'Implementation plan', selected=False\n\t\t\t\t\t\t\t[a72] option 'Approval', selected=False\n\t\t\t\t\t\tStaticText '\\uf21f'\n\t\t\t\t\t\t[a75] searchbox 'Search', clickable, visible, describedby='04b0fcd093f0f250f629fd085d03d6d1_describedby'\n\t\t\t\t\t[a79] button '\\uf104 Show activity stream in a flyout window', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf104'\n\t\t\t\t\t\tStaticText 'Show activity stream in a flyout window'\n\t\t\t\t\t[a81] button '\\uf13e Personalize List', visible\n\t\t\t\t\t\tStaticText '\\uf13e'\n\t\t\t\t\t\tStaticText 'Personalize List'\n\t\t\t\t\t[a107] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Actions on selected rows'\n\t\t\t\t\t[a108] combobox 'Actions on selected rows' value='Actions on selected rows...', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[a109] option 'Actions on selected rows...', selected=True\n\t\t\t\t\t\t[a110] option 'Delete', selected=False\n\t\t\t\t\t\t[a113] option 'Delete with preview...', selected=False\n\t\t\t\t\t\t[a116] option 'Follow on Live Feed', selected=False\n\t\t\t\t\t\t[a118] option 'Repair SLAs', selected=False\n\t\t\t\t\t\t[a121] option 'Add to Visual Task Board', selected=False\n\t\t\t\t\t\t[a124] option 'Create Application File', selected=False\n\t\t\t\t\t\t[a128] option 'Assign Tag New tag', disabled=True\n\t\t\t\t\t\t[a129] option 'Assign Tag Android', selected=False\n\t\t\t\t\t\t[a130] option 'Assign Tag JavaScript', selected=False\n\t\t\t\t\t\t[a131] option 'Assign Tag Java', selected=False\n\t\t\t\t\t\t[a132] option 'Assign Tag Development', selected=False\n\t\t\t\t\t\t[a133] option 'Assign Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a134] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a135] option 'Assign Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a136] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a137] option 'Assign Tag More...', disabled=True\n\t\t\t\t\t\t[a139] option 'Remove Tag Android', selected=False\n\t\t\t\t\t\t[a140] option 'Remove Tag JavaScript', selected=False\n\t\t\t\t\t\t[a141] option 'Remove Tag Java', selected=False\n\t\t\t\t\t\t[a142] option 'Remove Tag Development', selected=False\n\t\t\t\t\t\t[a143] option 'Remove Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a144] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a145] option 'Remove Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a146] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a147] option 'Remove Tag More...', disabled=True\n\t\t\t\t\t[a149] button 'New', clickable, visible\n\t\t\t\t[a1116] region 'filter controls', visible\n\t\t\t\t\t[a1117] button 'Run filter', clickable, visible\n\t\t\t\t\t[a1118] button 'Show save-as options', clickable, visible, expanded=False, controls='savelayer'\n\t\t\t\t\t\tStaticText 'Save...'\n\t\t\t\t\t[a1119] image '', visible\n\t\t\t\t\t[a1120] button 'Add a new AND filter condition', visible\n\t\t\t\t\t[a1121] button 'Add OR filter: Add a new section of filter conditions', visible\n\t\t\t\t\t[a1122] button 'Add Sort', visible\n\t\t\t\t\t[a1123] button '\\uf203 Toggle Pinned Filter', clickable, visible, pressed='false'\n\t\t\t\t\t\tStaticText '\\uf203'\n\t\t\t\t\t\tStaticText 'Toggle Pinned Filter'\n\t\t\t\t[a1127] table '', visible\n\t\t\t\t\t[a1128] rowgroup '', visible\n\t\t\t\t\t\t[a1129] row '', visible\n\t\t\t\t\t\t\t[a1130] gridcell '', visible\n\t\t\t\t\t\t[a1158] row '', visible\n\t\t\t\t\t\t\t[a1159] gridcell '', visible\n\t\t\t\t\t\t\t\t[a1160] table '', visible\n\t\t\t\t\t\t\t\t\t[a1161] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t[a1162] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t[a1163] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t[a1164] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t[a1165] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1170] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1171] gridcell 'All of these conditions must be met', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1172] heading 'All of these conditions must be met', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1173] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1174] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1175] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1176] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1177] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1179] gridcell 'Type Type', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1181] combobox 'All of these conditions must be met. Type', clickable, hasPopup='listbox', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1297] gridcell 'is', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1627] combobox 'Operator For Condition 1: Type is Normal' value='is', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1628] option 'is', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1629] option 'is not', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1630] option 'is one of', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1631] option 'is not one of', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1632] option 'contains', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1633] option 'starts with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1634] option 'ends with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1635] option 'does not contain', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1636] option 'is anything', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1637] option 'is same', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1638] option 'is different', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1300] gridcell 'Normal', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1639] combobox 'Choose option for field: Type' value='Normal', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1640] option '-- None --', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1641] option 'Standard', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1642] option 'Normal', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1643] option 'Emergency', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1302] gridcell 'Add AND Condition To Condition 1: Type is Normal Add OR Condition To Condition 1: Type is Normal', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1303] button 'Add AND Condition To Condition 1: Type is Normal', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1304] button 'Add OR Condition To Condition 1: Type is Normal', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1305] gridcell 'Remove condition 1: Type is Normal', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1306] button 'Remove condition 1: Type is Normal', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf159'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText \"'Delete'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1651] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1652] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1653] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1654] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1655] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1656] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1657] gridcell 'Requested by Requested by', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1659] combobox 'All of these conditions must be met. Requested by', clickable, hasPopup='listbox', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1775] gridcell 'is', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2103] combobox 'Operator For Condition 2: Requested by is System Administrator' value='is', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2104] option 'is', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2105] option 'is not', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2106] option 'is empty', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2107] option 'is not empty', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2108] option 'starts with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2109] option 'ends with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2110] option 'contains', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2111] option 'does not contain', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2112] option 'is anything', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2113] option 'is same', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2114] option 'is different', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2115] option 'is empty string', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2116] option 'is (dynamic)', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1778] gridcell 'System Administrator Lookup using list', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2118] combobox 'Requested by' value='System Administrator', clickable, visible, autocomplete='list', hasPopup='listbox', expanded=False, controls=''\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText 'System Administrator'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2119] button 'Lookup using list', clickable, visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf1e4'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1780] gridcell 'Add AND Condition To Condition 2: Requested by is System Administrator Add OR Condition To Condition 2: Requested by is System Administrator', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1781] button 'Add AND Condition To Condition 2: Requested by is System Administrator', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1782] button 'Add OR Condition To Condition 2: Requested by is System Administrator', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1783] gridcell 'Remove condition 2: Requested by is System Administrator', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1784] button 'Remove condition 2: Requested by is System Administrator', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf159'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText \"'Delete'\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2127] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2128] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2129] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2130] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2131] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2132] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2133] gridcell 'Model Model', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2135] combobox 'All of these conditions must be met. Model', clickable, hasPopup='listbox', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2251] gridcell 'is empty string', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2579] combobox 'Operator For Condition 3: Model is empty string' value='is empty string', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2580] option 'is', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2581] option 'is not', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2582] option 'is empty', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2583] option 'is not empty', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2584] option 'starts with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2585] option 'ends with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2586] option 'contains', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2587] option 'does not contain', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2588] option 'is anything', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2589] option 'is same', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2590] option 'is different', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2591] option 'is empty string', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2254] gridcell 'No value needed', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2595] textbox 'Model' value='No value needed', disabled=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText 'No value needed'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2256] gridcell 'Add AND Condition To Condition 3: Model is empty string Add OR Condition To Condition 3: Model is empty string', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2257] button 'Add AND Condition To Condition 3: Model is empty string', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2258] button 'Add OR Condition To Condition 3: Model is empty string', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2259] gridcell 'Remove condition 3: Model is empty string', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a2260] button 'Remove condition 3: Model is empty string',"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "14dab6fea3ef4a338377996a2e2d6edb",
+    "timestamp_epoch": 1792007067.0408583,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 17,
+    "actual_vectors": 1,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.9840017160167918,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3",
+      "de1cc221908eb92fd903b0687f05f2ac1d026106f911d7b3b3ab632dc361efd1"
+    ]
+  },
+  {
+    "record_id": "3a6279a030dc4b20a519f0f4b62ba77b",
+    "timestamp_epoch": 1792007067.758894,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.715225030988222,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 16,
+    "input_characters": 10362,
+    "input_sha256": [
+      "610e7da79a3d6bd8303f72e6c54f2db66a140796736513402dcef102f10c1c5f",
+      "63da192ee5f96efe1d8a77e817a3c62f6300bd74231b59096d8a2b28cca507d5",
+      "2283e7451d169f955c5b6e5863708caa51f799028ba25e8f338cd78529f863cc",
+      "bdaa013225969fb6886dfc7ce8bb0bea8adb50b1871d6bd744fc3cbf3783d1e2",
+      "347705fbdd8ce8e8df4b86293e4c38918fff9ad2c61fbdf564afad13d25fb130",
+      "19dfc4f97cb3165c95fbe2670ed15449da51d0b9383a13b57f59786ad85691de",
+      "287b16dce035f79fd06e0afe37f65c9f36b9a959114751b52030b1b43a495260",
+      "758f3e7b7a08e2976d80a9d18c70df42bff0aa72d1db7e70a7e9bb6d62537cd6",
+      "a60429c8b9d700cf11548b2fe789410c1d9b1fff1e52f0f4016587c8040c5fbc",
+      "b465ce0ec19f46dfeee0784cce842626fef8eb7d968048592f152a74c35cc182",
+      "2fc7df4cd42134f1901b9048f7b6eb4b6a097f6b5041fb0e8b3e8b5a95abad9c",
+      "167d5c6c7472da6772e8eff347273f31f513845ec478b5f286297df46450a80e",
+      "6717c70650db3be2784e61b160365c01b4d16049625434fd0db3b20c627d48bc",
+      "fde996870fdda5e6827109e0b2f748056d0f951c77c1036159b10bd7c2a9aab2",
+      "4ae81d44a640c3085ba5716506d107e2b3b13d0db038b64a32d2e9763199c5f4",
+      "0afa818b24d6bc5e584c899e57afe65a7f612011d4abdbc6f43c04eb4a5d774f"
+    ],
+    "input_texts": [
+      "The agent initiates the filtering process on the Change Requests list by activating the filter panel, which is a necessary prerequisite for defining the specific criteria to extract entries where Type is Normal, Requested by is System Administrator, Model is empty, Short description matches a specific text, and State is Scheduled.\n\nClicking the 'Show / hide filter' button transitions the UI from a compact list view to an expanded filtering toolbar. The filter panel, previously collapsed, is now visible and expanded, revealing the input area for constructing AND conditions while the main list of 101 records remains visible behind it.",
+      "With the filter panel open, the agent begins constructing the first condition of the filter chain by interacting with the field selection dropdown, preparing to specify that the 'Type' field must equal 'Normal'.\n\nThe action of clicking the combobox expands a dropdown list of available fields. The interface now displays a scrollable list of options including 'Active', 'Type', 'Requested by', 'Model', 'Short description', and 'State', allowing the agent to select the 'Type' field for the first condition.",
+      "The agent is building a complex filter on the Change Requests list to find specific network update tasks. This step represents the selection of the field for the first condition in the filter chain. The agent has already opened the filter panel and is now choosing the 'Type' field from the available options to begin defining the criteria where the type must be 'Normal'.\n\nIn the pre-state, the field chooser dropdown is open and displaying a long list of available fields, with the placeholder '-- choose field --' selected. The agent clicks on the 'Type' option within this list. In the post-state, the dropdown list collapses, and the 'Type' field is now selected as the active condition for the first filter rule. The UI shifts focus from the field selection list to the next required input: the value selector for the chosen field, which currently displays '-- None --'.",
+      "The agent continues constructing the filter for Change Requests by defining the value for the first condition. Having selected the 'Type' field in the previous step, the agent now needs to specify that the type must be 'Normal'. This step opens the value selector to choose the appropriate option for the 'Type' field.\n\nIn the pre-state, the 'Type' field condition is established, and the value selector combobox is visible but closed, showing the default value '-- None --'. The agent clicks this combobox to open the list of possible values. In the post-state, the combobox expands to reveal a menu of options for the 'Type' field. The list includes various status or classification options, and the interface is ready for the agent to select 'Normal' to complete the first filter condition.",
+      "The agent is building a complex filter on the Change Requests list to isolate specific network update entries. This step represents the selection phase for the first condition, where the agent attempts to click the 'Normal' option within the 'Type' field dropdown to set the initial filter criteria.\n\nThe post-state mirrors the pre-state because the click action on the 'Normal' option failed to register. The 'Type' combobox remains open with the value set to '-- None --', and the 'Normal' option retains its unselected status. No new UI elements, confirmation signals, or list updates appear as a result of the action.",
+      "Continuing the construction of the Change Request filter, the agent successfully applies the 'Type' condition to the first filter slot. This step represents the successful selection of the 'Normal' value, which is necessary before adding subsequent conditions like 'Requested by' and 'Model'.\n\nThe post-state reflects a successful update compared to the pre-state: the 'Type' combobox value has changed from '-- None --' to 'normal', and the combobox is now focused. This confirms that the 'Type is Normal' condition has been established in the filter logic, allowing the agent to proceed with adding the next AND condition.",
+      "The agent is building a complex filter on the Change Requests list to find specific entries. Having just set the first condition that the 'Type' must be 'Normal', the agent now needs to add the subsequent AND conditions. This step represents the transition from finalizing the first filter criterion to initiating the setup of the second one.\n\nThe action of clicking the 'Add AND Condition To Condition 1: Type is Normal' button successfully appended a new condition slot to the filter panel. The UI updated to show the text 'New AND condition added, 2 of 2' in the live region. The interface revealed a new, focused field chooser combobox labeled 'All of these conditions must be met. -- choose field --', ready for the agent to select the next attribute for the second condition.",
+      "Continuing the construction of the filter, the agent is now setting up the second condition in the sequence of AND logic. The goal is to narrow down the results by specifying who requested the change. This step involves interacting with the newly revealed field selection control to choose the appropriate attribute.\n\nClicking the 'choose field' combobox expanded its popup menu, displaying a vertical listbox of available filter attributes. The list includes options such as 'Keywords', 'Active', 'Assigned to', and specifically 'Requested by' further down the list. The combobox is now in a focused, expanded state, allowing the agent to select the next field for the condition.",
+      "The agent is building a filter for Change Requests to find specific updates. After setting the first condition that the Type is Normal, the agent now selects the 'Requested by' field from the dropdown to define the second filter criterion in the 'All of these conditions must be met' group.\n\nIn the post-state, the 'Requested by' option from the field chooser list is selected, and the corresponding input textbox for entering the value becomes visible and ready for interaction. The previous state showed the field chooser list open with 'Requested by' as an available option, but the specific input field for this condition was not yet active.",
+      "Continuing the construction of the Change Request filter, the agent has selected the 'Requested by' field and is now populating the associated text input box with the specific value 'System Administrator' to complete the second condition in the filter chain.\n\nIn the post-state, the text input field for 'Requested by' contains the value 'System Administrator', indicating the second filter condition is fully defined. A tooltip appears suggesting the use of arrow keys for selection, confirming the input mechanism is active and populated.",
+      "The agent is building a complex filter for the Change Requests list to find specific update tasks. After previously setting the 'Type' to 'Normal' and the 'Requested by' field to 'System Administrator', the agent is now finalizing the second condition in the 'All of these conditions must be met' group by confirming the addition of the 'Requested by' constraint.\n\nClicking the 'Add AND Condition To Condition 2: Requested by is System Administrator' button successfully registers the second filter criterion. The status message updates to indicate 'New AND condition added, 2 of 2', and the UI presents a new, focused field chooser combobox (a2135) for the agent to select the 'Model' field for the third condition.",
+      "Continuing the construction of the Change Request filter, the agent needs to specify the third condition. The agent is now preparing to select the 'Model' field from the dropdown to enforce the requirement that the Model must be an empty string.\n\nClicking the focused field chooser combobox expands the list of available fields. The dropdown now displays a scrollable list of options including 'Keywords', 'Active', 'Type', and specifically the target option 'Model', allowing the agent to proceed with selecting it for the next condition.",
+      "The agent is building a complex filter on the Change Requests list to find specific entries. This step involves selecting the 'Model' field to add as the third condition in a chain of AND filters, following the setup of 'Type' and 'Requested by' criteria.\n\nAfter clicking the 'Model' option from the field chooser dropdown, the filter configuration updates to display 'Model' as the selected field for Condition 3. The interface now presents the operator selection controls specific to the Model field, allowing the agent to define how the value should be matched.",
+      "Continuing the filter construction, the agent configures the third condition to exclude any entries with a value in the 'Model' field. This is part of a multi-step process to narrow down the Change Requests list to a specific set of records.\n\nThe operator for the 'Model' condition is successfully set to 'is empty string'. This change configures the filter to only include Change Requests where the Model field contains no data, completing the setup for this specific condition before the agent proceeds to add the next criteria.",
+      "The agent is building a filter for Change Requests to find specific entries. Having already set conditions for 'Type', 'Requested by', and 'Model', the agent is now finalizing the 'Model' condition by confirming the operator before adding the next criterion.\n\nAfter clicking the 'Add AND Condition To Condition 3: Model is empty string' button, the filter panel updates to reflect the successful addition of the third condition. The live region text in the main content area changes to include 'New AND condition added, 3 of 3', confirming that the filter now includes three active criteria. The interface remains on the Change Requests list page, ready for the agent to define the subsequent conditions.",
+      "Continuing the filter construction workflow, the agent has established three conditions and is now proceeding to add the fourth condition for 'Short description' to further narrow down the search results.\n\nThe action results in no immediate change to the visual layout of the page or the filter panel itself, as the agent is in the process of interacting with the filter logic. However, the system state has advanced to the point where the agent is positioned to select the 'Short description' field and enter the specific text required for the fourth condition, moving the filter construction forward."
+    ],
+    "prompt_tokens": 2043,
+    "total_tokens": 2043,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "168a1379eefa4dc5ab780a72003dbdac",
+    "timestamp_epoch": 1792007067.759052,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 16,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.715547191008227,
+    "input_keys": [
+      "53e5b214ca28c12d890be73145f78784a0b583d9993de05e3233eaa30310e4df",
+      "71f5b5b1b2af1bbc70d1207e5b3e34a45458073d04ca2a6943b79622539295c4",
+      "ff0172bba863838032520ae4cadf67e729ffb158ccd503505e598e62951f9356",
+      "7a5dcf09d9786b63a3131c05eef857849b19dc27e4da5d38c5088020636af11f",
+      "c5b9cd4040c381c18bbab540fabf83c69ed5ce6d124352dab1c6dbfb2c8d24c2",
+      "5e879d8a59f9d92eae9a9dc653df3f229df821889341c785261d55437f65fdd1",
+      "64a36865743f98f07613f036dec7cba029835f37feb7789eb69a73ac33afcf93",
+      "f3f3ecaa097af870238a0ac81749a09159a3d2b26dd1ebef4e6e3e0337ab65bb",
+      "bb1e8fcdd014e9bc1b70acf10f9783dab6caf1a4ccd96bdfdf92c9cbe47698da",
+      "6aecf19568046b2b93c2e3e2a77c82c84b8266142f06607233147f071072e6a0",
+      "8aaaf0a247cf5a7d211c09f0cdd1bed4d2296595fd17808b522785f93f8d8f86",
+      "b6e0411a78cdd17b5c5c5803aca99a8ee7faf407c9ddf50043c95840defa1d90",
+      "9d82282aff3125ff70346e8955ef073c84bef038c591254ecfa773b5cfaa42d6",
+      "c1ceffaf0bc3d034f769eab4e9511fab3763f5169360b5e05f5ec2a1f1bf88b7",
+      "6fb10c2ebd4ef90976101ad91043aa288f71021ac313debeedfb22f1bb95987a",
+      "8bae49cad37e44aec066476a30495eaf7b960a5a614d9e523a163b96239a19c5"
+    ]
+  },
+  {
+    "record_id": "7bd21e0d15d14d6dba7b99c3a115a8e6",
+    "timestamp_epoch": 1792007067.8718262,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.11192655202466995,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1065,
+    "input_sha256": [
+      "113427ab585efb05583ea029531f19aad4049e1851a3194bab14ddee5a0c4cd7"
+    ],
+    "input_texts": [
+      "Title: ServiceNow Change Request List: Build AND Filter\nDescription: Step-by-step workflow to construct a multi-condition AND filter on the Change Request list.\n- Open the filter panel by clicking the 'Show / hide filter' button (bid a47) to reveal the filter inputs (change_requestfilterdiv).\n- Select the first field from the combobox 'All of these conditions must be met. -- choose field --' (bid a1181) and choose 'Type' (option a1583).\n- Set the value for 'Type' by selecting 'Normal' from the value chooser combobox (bid a1639), using select_option if clicking fails.\n- Add the next condition by clicking the 'Add AND Condition To Condition 1' button (bid a1303).\n- Repeat the field selection process for 'Requested by' and fill the textbox (bid a2118) with 'System Administrator'.\n- Add another AND condition and select 'Model' from the field chooser (bid a2135).\n- Set the Model operator to 'is empty string' using the operator combobox (bid a2579).\n- Continue adding AND conditions for 'Short description' and 'State' using the 'Add AND Condition' buttons."
+    ],
+    "prompt_tokens": 265,
+    "total_tokens": 265,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "8536258ff4f343ab8b53c8ce23cce669",
+    "timestamp_epoch": 1792007067.871922,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.11207501500030048,
+    "input_keys": [
+      "51044b2ffe3ab96a615808c3709dbe52def34cc5fd20258c14a11334c945fe18"
+    ]
+  },
+  {
+    "record_id": "e71d0b566c9e45299a40f727f0fa4b45",
+    "timestamp_epoch": 1792007067.9898148,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.11724307999247685,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1325,
+    "input_sha256": [
+      "8a0d095ee0e402ab9ff3d310faa6e4d7196aa51318d0073f28cd8aa060246bb6"
+    ],
+    "input_texts": [
+      "Title: ServiceNow Change Request Filter: Field & Operator Details\nDescription: High-value facts about available fields, specific values, and operator behaviors observed in the filter panel.\n- The filter panel is controlled by the div with id 'change_requestfilterdiv' and revealed via bid a47.\n- The primary field selector for all conditions is the combobox with bid a1181.\n- 'Type' is a valid filter field with 'Normal' as a selectable option (bid a1642).\n- 'Requested by' is a valid filter field with 'System Administrator' as a valid value (bid a2118).\n- 'Model' is a valid filter field that supports the 'is empty string' operator (bid a2579).\n- 'Short description' and 'State' are valid fields available for filtering in this module.\n- New conditions are added using buttons with text 'Add AND Condition To Condition X' (e.g., bid a1303, a1781, a2257).\n- Value choachers for fields use comboboxes (e.g., bid a1639) which may require select_option if direct clicks fail.\n- The filter logic defaults to AND ('All of these conditions must be met') as indicated by the combobox placeholder.\n- Field chooser dropdowns appear when clicking the combobox with bid a1181 or subsequent condition field selectors (e.g., a1659, a2135).\n- The URL path '/change_request_list.do' indicates the current module context for these actions."
+    ],
+    "prompt_tokens": 330,
+    "total_tokens": 330,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "ccde71a7bc1d40999601ab3cbbefd2a5",
+    "timestamp_epoch": 1792007067.989913,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.11739414697512984,
+    "input_keys": [
+      "4bc50662d012195ab05979b456a7fd10b5f2a78738c7060a3d21b5c09e58078e"
+    ]
+  }
+]

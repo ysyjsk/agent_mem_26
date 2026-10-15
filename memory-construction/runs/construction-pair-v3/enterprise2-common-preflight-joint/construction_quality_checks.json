@@ -1,0 +1,15 @@
+{
+  "trajectory_ids": [
+    "0ab99e0c",
+    "49f98e9e"
+  ],
+  "trajectory_count": 2,
+  "expected_event_count": 29,
+  "published_event_count": 29,
+  "event_source_coverage": true,
+  "save_reload_verified": true,
+  "successful_joint_groups": 14,
+  "split_joint_groups": 0,
+  "quality_pass": true,
+  "quality_scope": "structure/source coverage and persisted reload; fixed Reader regression is reported separately"
+}

@@ -1,0 +1,68 @@
+{
+  "policy": "delta",
+  "case": "state_revision",
+  "scope": "adapted_AgentRunbookR_local_update",
+  "starting_snapshot": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/matched-web-v1/memory_state",
+  "starting_cache": "independent clones; exact requests and vectors preserved equally",
+  "setup_load_and_seed_s_excluded": 1.354638838005485,
+  "update_to_queryable_publish_s": 80.86720500298543,
+  "reextracted_event_outputs": 2,
+  "regenerated_notes": 0,
+  "llm_calls": 2,
+  "llm_input_tokens_known": 5042,
+  "llm_output_tokens_known": 542,
+  "embedding_calls": 2,
+  "embedding_vectors": 5,
+  "embedding_tokens_known": 7818,
+  "unknown_usage_calls": 0,
+  "api_failed_calls": 0,
+  "exact_request_hits": 2,
+  "dependency_reused_event_ids": [
+    "event_0000_0001",
+    "event_0001_0002",
+    "event_0002_0003",
+    "event_0005_0006",
+    "event_0006_0007"
+  ],
+  "embedding_hits": 12,
+  "load_verified": true,
+  "event_count": 32,
+  "note_count": 10,
+  "edited_event_outputs": 0,
+  "delta_fallback_groups": 1,
+  "primary_metric": "total_LLM_input_plus_output_tokens",
+  "matched_construction_signature": "7b6e6e7b08fab7ae5355f171df175b783c9314d093dd40c7a6e0157b01892067",
+  "qa_status": "derived_checks_failed",
+  "quality_checks": {
+    "new_fact_present": true,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": true,
+    "dirty_event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "reused_event_count": 5,
+    "unchanged_candidate_event_count": 5,
+    "fixed_reader_regression": "not_run",
+    "derived_event_change_hits": {
+      "event_0003_0004": true,
+      "event_0004_0005": false
+    },
+    "derived_notes_change_hit": null,
+    "notes_change_required": false,
+    "old_fact_semantics": "additive controlled revision; no old fact is revoked",
+    "derived_automated_checks_pass": false,
+    "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+    "quality_pass": null,
+    "semantic_review": "pending"
+  },
+  "trajectory_id": "1ad1af4b",
+  "state_index": 4,
+  "revision_count": 1,
+  "state_indices": [
+    4
+  ],
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/r1-web-1ad1af4b-state4/state_revision-delta"
+}

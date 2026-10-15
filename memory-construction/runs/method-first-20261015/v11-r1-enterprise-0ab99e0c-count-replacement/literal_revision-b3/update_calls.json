@@ -1,0 +1,409 @@
+[
+  {
+    "record_id": "684a7ccdd6614cbf8b408a4a8798e5ee",
+    "timestamp_epoch": 1792042863.5887063,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "a52448b537f84e505c0ea7a96387b1acf987ac5acd23163a4367cbaf671bd85a",
+    "stage": "events"
+  },
+  {
+    "record_id": "3b5199be15804d9291cbcf9ca52988c6",
+    "timestamp_epoch": 1792042863.5888298,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "full_input_tokens_preflight": 40130,
+    "single_input_tokens_preflight": [
+      25760,
+      28258
+    ],
+    "prepared_input_tokens": 13848,
+    "state_max_chars": 12000,
+    "request_sha256": "6a051b8115aa17b1c9ed88e617b35460302aa1adf6cff7819cd1b6ae4c5e069f",
+    "status": "parsed"
+  },
+  {
+    "record_id": "e8172bba1fd24670a4d3728c7a696e35",
+    "timestamp_epoch": 1792042863.71855,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "ba377d4004e180603563ace4b632551710ced547bc1ca82d84d545f94cf8122d",
+    "stage": "events"
+  },
+  {
+    "record_id": "6ff6308a63c84f6099d4f230fdb46bd2",
+    "timestamp_epoch": 1792042863.7187157,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 41801,
+    "single_input_tokens_preflight": [
+      28817,
+      27455
+    ],
+    "prepared_input_tokens": 13826,
+    "state_max_chars": 12000,
+    "request_sha256": "8858257574ace919b673594af280cadd5191beaa5045edc064445d8ee734c502",
+    "status": "parsed"
+  },
+  {
+    "record_id": "fbbbea7101bb4214b8e0847ba9a8860a",
+    "timestamp_epoch": 1792042880.7315989,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 16.89185760199325,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43338,
+      "text_sha256": "597ef8fd38954f49a3cfe5116ea8509ae0f54085412befff2d93c9f397e271c4",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14431,
+    "completion_tokens": 335,
+    "total_tokens": 14766,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "2c036878db4b4683b25e4d60f4ca2608",
+    "timestamp_epoch": 1792042880.7320948,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 40341,
+    "single_input_tokens_preflight": [
+      27384,
+      27403
+    ],
+    "prepared_input_tokens": 14431,
+    "state_max_chars": 12000,
+    "request_sha256": "597ef8fd38954f49a3cfe5116ea8509ae0f54085412befff2d93c9f397e271c4",
+    "status": "parsed"
+  },
+  {
+    "record_id": "3e7e83354d14482594b440966d92d16f",
+    "timestamp_epoch": 1792042880.9615433,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "5adf0e53d90e5ca4029baf80baa2470841d462a8eed63bcd5ca7fa5d36bfb008",
+    "stage": "events"
+  },
+  {
+    "record_id": "5cc5f31d20e54465b1775a95e5c272a8",
+    "timestamp_epoch": 1792042880.9619088,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "full_input_tokens_preflight": 42774,
+    "single_input_tokens_preflight": [
+      27664,
+      29855
+    ],
+    "prepared_input_tokens": 13865,
+    "state_max_chars": 12000,
+    "request_sha256": "305b3983c88152821856d7435a238791ba4a0c6ac3d911cceeebc3c97e82b33e",
+    "status": "parsed"
+  },
+  {
+    "record_id": "b50755b61c9448319698b9a18fb1cb72",
+    "timestamp_epoch": 1792042881.115332,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "35905eb1eccf1e60ea2d1e23ed23a929efcc6be5e88dfe71247629aa0c743c96",
+    "stage": "events"
+  },
+  {
+    "record_id": "bd1aa579ec7e413d99f821e88ac97125",
+    "timestamp_epoch": 1792042881.1154604,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "full_input_tokens_preflight": 44069,
+    "single_input_tokens_preflight": [
+      30225,
+      28977
+    ],
+    "prepared_input_tokens": 13756,
+    "state_max_chars": 12000,
+    "request_sha256": "ec5568a5c9ec1c045faec93b19189a954e58d455fc7302932617c0249ecea3dd",
+    "status": "parsed"
+  },
+  {
+    "record_id": "3d31e75497194b6883e0b719f79106fb",
+    "timestamp_epoch": 1792042881.2625327,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "1a3baa4dce9ce7719b99f48952bc6e582ddc6df3aecf144a886b6e7727004aa3",
+    "stage": "events"
+  },
+  {
+    "record_id": "f5098e4b0ea44c9cbc04f6974aeaa166",
+    "timestamp_epoch": 1792042881.2626567,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0010_0011",
+      "event_0011_0012"
+    ],
+    "state_ids": [
+      10,
+      11,
+      12
+    ],
+    "full_input_tokens_preflight": 45158,
+    "single_input_tokens_preflight": [
+      29299,
+      31328
+    ],
+    "prepared_input_tokens": 13795,
+    "state_max_chars": 12000,
+    "request_sha256": "949c58c9d091387f46da6c093de536371f6a2f2f71f1abdae0a88140db0751f3",
+    "status": "parsed"
+  },
+  {
+    "record_id": "1b66ea89a2a74cbf820d07418252e90c",
+    "timestamp_epoch": 1792042881.4203124,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "66d0b0c78ad3009bbe1c4d848e3cd8783337aaeac77eff34b77a8981b29ae6ad",
+    "stage": "events"
+  },
+  {
+    "record_id": "3c3e5f7da49343319a5cd6a21fe0803f",
+    "timestamp_epoch": 1792042881.4205003,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0012_0013",
+      "event_0013_0014"
+    ],
+    "state_ids": [
+      12,
+      13,
+      14
+    ],
+    "full_input_tokens_preflight": 45996,
+    "single_input_tokens_preflight": [
+      31675,
+      30170
+    ],
+    "prepared_input_tokens": 13853,
+    "state_max_chars": 12000,
+    "request_sha256": "715823f39a2f9326975b3e4680f8d36365509ecb2ab90ab2adb2819eb7542fde",
+    "status": "parsed"
+  },
+  {
+    "record_id": "1b9e9ced4f214c77a80280904b72e520",
+    "timestamp_epoch": 1792042881.471734,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 30438,
+    "prepared_input_tokens": 10017,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "1d883bdc332d4e00995c0c5a790a6818",
+    "timestamp_epoch": 1792042881.4720573,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9f5c41ee8bcd14903a430f7635b77c21d0010f05115bfd7070d31869f3865b9b",
+    "stage": "events"
+  },
+  {
+    "record_id": "61c63d2a30e64237a07fca2663e3b49d",
+    "timestamp_epoch": 1792042881.472113,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "3b2fa06a9d684bcaa2c86c3899d083c4",
+    "timestamp_epoch": 1792042881.4772298,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "6a7c9ffebf180c5eaac5f05b794243994688ace320215f1c587fe1ecfe88f3e4",
+    "stage": "notes"
+  },
+  {
+    "record_id": "b217a84252f64f1fb9d02dfe975d569c",
+    "timestamp_epoch": 1792042882.699701,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.997076122002909,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 14441,
+    "input_sha256": [
+      "e4010a9c03fa37ffc23c420fcbb30a55e25f0b34ddd04d09d6ed03cc449b298d"
+    ],
+    "input_texts": [
+      "State 5\nRootWebArea 'Classic | Unified Navigation App | ServiceNow'\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[235] region 'There are 0 announcements displayed', visible, live='polite', relevant='additions text'\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, describedby='logo-tooltip'\n\t\t\t[66] image 'ServiceNow Service Management', visible\n\t\t[78] button 'All', clickable, visible, expanded=False\n\t\t[79] button 'Favorites', clickable, visible, expanded=False\n\t\t[80] button 'History', clickable, visible, expanded=False\n\t\t[82] button 'Admin', clickable, visible, expanded=False\n\t\t[83] button 'More menus', clickable, visible, expanded=False\n\t\tgeneric, describedby='title-tooltip'\n\t\t\tStaticText 'Change Requests'\n\t\t\t[96] button 'Create favorite for Change Requests', clickable, visible, live='polite', relevant='additions text', pressed='false'\n\t\t[108] search '', visible\n\t\t\t[112] combobox 'Search', clickable, visible, autocomplete='both', hasPopup='listbox', expanded=False\n\t\t\t[113] region '', live='polite', relevant='additions text'\n\t\t\t\tStaticText 'No exact match. Press Enter for full results.'\n\t\t\t[114] combobox 'Choose search context', clickable, visible, hasPopup='listbox', expanded=False\n\t\t[125] button 'Scope selectors', clickable, visible, expanded=False\n\t\t[132] button 'Sidebar discussions', clickable, visible, expanded=False\n\t\t[138] button 'Show help', clickable, visible, expanded=False\n\t\t[166] button 'Show notifications', clickable, visible, expanded=False\n\t\t[178] button 'Matthew Williams: available', clickable, visible, expanded=False\n\t\t\t[181] image 'Matthew Williams is Available', visible\n\t\t\t\tStaticText 'MW'\n\t[196] main '', visible\n\t\t[a] Iframe 'Main Content', visible\n\t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n\t\t\t\t[a35] region '', live='polite', relevant='additions text'\n\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n\t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n\t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n\t\t\t\t\t[a45] button 'Actions', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b2'\n\t\t\t\t\t\tStaticText 'List controls'\n\t\t\t\t\t[a47] button '\\uf18a Show / hide filter', clickable, visible, expanded=True, controls='change_requestfilterdiv'\n\t\t\t\t\t\tStaticText '\\uf18a'\n\t\t\t\t\t\tStaticText 'Show / hide filter'\n\t\t\t\t\t[a49] button '\\uf1b8 Show / hide natural language filter', clickable, visible, expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b8'\n\t\t\t\t\t\tStaticText 'Show / hide natural language filter'\n\t\t\t\t\t[a51] heading 'Change Requests', visible\n\t\t\t\t\t\t[a52] button 'Change Requests', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\tStaticText 'Change Requests'\n\t\t\t\t\t[a58] search '', visible\n\t\t\t\t\t\t[a61] listbox 'Search a specific field of the Change Requests list, 11 items' value='Number', visible, multiselectable=False, orientation='vertical', expanded=False\n\t\t\t\t\t\t\t[a62] option 'for text', selected=False\n\t\t\t\t\t\t\t[a63] option 'Number', selected=True\n\t\t\t\t\t\t\t[a64] option 'Short description', selected=False\n\t\t\t\t\t\t\t[a65] option 'Risk', selected=False\n\t\t\t\t\t\t\t[a66] option 'Impact', selected=False\n\t\t\t\t\t\t\t[a67] option 'Priority', selected=False\n\t\t\t\t\t\t\t[a68] option 'Assigned to', selected=False\n\t\t\t\t\t\t\t[a69] option 'Planned start date', selected=False\n\t\t\t\t\t\t\t[a70] option 'Planned end date', selected=False\n\t\t\t\t\t\t\t[a71] option 'Implementation plan', selected=False\n\t\t\t\t\t\t\t[a72] option 'Approval', selected=False\n\t\t\t\t\t\tStaticText '\\uf21f'\n\t\t\t\t\t\t[a75] searchbox 'Search', clickable, visible, describedby='04b0fcd093f0f250f629fd085d03d6d1_describedby'\n\t\t\t\t\t[a79] button '\\uf104 Show activity stream in a flyout window', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf104'\n\t\t\t\t\t\tStaticText 'Show activity stream in a flyout window'\n\t\t\t\t\t[a81] button '\\uf13e Personalize List', visible\n\t\t\t\t\t\tStaticText '\\uf13e'\n\t\t\t\t\t\tStaticText 'Personalize List'\n\t\t\t\t\t[a107] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Actions on selected rows'\n\t\t\t\t\t[a108] combobox 'Actions on selected rows' value='Actions on selected rows...', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[a109] option 'Actions on selected rows...', selected=True\n\t\t\t\t\t\t[a110] option 'Delete', selected=False\n\t\t\t\t\t\t[a113] option 'Delete with preview...', selected=False\n\t\t\t\t\t\t[a116] option 'Follow on Live Feed', selected=False\n\t\t\t\t\t\t[a118] option 'Repair SLAs', selected=False\n\t\t\t\t\t\t[a121] option 'Add to Visual Task Board', selected=False\n\t\t\t\t\t\t[a124] option 'Create Application File', selected=False\n\t\t\t\t\t\t[a128] option 'Assign Tag New tag', disabled=True\n\t\t\t\t\t\t[a129] option 'Assign Tag Android', selected=False\n\t\t\t\t\t\t[a130] option 'Assign Tag JavaScript', selected=False\n\t\t\t\t\t\t[a131] option 'Assign Tag Java', selected=False\n\t\t\t\t\t\t[a132] option 'Assign Tag Development', selected=False\n\t\t\t\t\t\t[a133] option 'Assign Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a134] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a135] option 'Assign Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a136] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a137] option 'Assign Tag More...', disabled=True\n\t\t\t\t\t\t[a139] option 'Remove Tag Android', selected=False\n\t\t\t\t\t\t[a140] option 'Remove Tag JavaScript', selected=False\n\t\t\t\t\t\t[a141] option 'Remove Tag Java', selected=False\n\t\t\t\t\t\t[a142] option 'Remove Tag Development', selected=False\n\t\t\t\t\t\t[a143] option 'Remove Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a144] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a145] option 'Remove Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a146] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a147] option 'Remove Tag More...', disabled=True\n\t\t\t\t\t[a149] button 'New', clickable, visible\n\t\t\t\t[a1116] region 'filter controls', visible\n\t\t\t\t\t[a1117] button 'Run filter', clickable, visible\n\t\t\t\t\t[a1118] button 'Show save-as options', clickable, visible, expanded=False, controls='savelayer'\n\t\t\t\t\t\tStaticText 'Save...'\n\t\t\t\t\t[a1119] image '', visible\n\t\t\t\t\t[a1120] button 'Add a new AND filter condition', visible\n\t\t\t\t\t[a1121] button 'Add OR filter: Add a new section of filter conditions', visible\n\t\t\t\t\t[a1122] button 'Add Sort', visible\n\t\t\t\t\t[a1123] button '\\uf203 Toggle Pinned Filter', clickable, visible, pressed='false'\n\t\t\t\t\t\tStaticText '\\uf203'\n\t\t\t\t\t\tStaticText 'Toggle Pinned Filter'\n\t\t\t\t[a1127] table '', visible\n\t\t\t\t\t[a1128] rowgroup '', visible\n\t\t\t\t\t\t[a1129] row '', visible\n\t\t\t\t\t\t\t[a1130] gridcell '', visible\n\t\t\t\t\t\t[a1158] row '', visible\n\t\t\t\t\t\t\t[a1159] gridcell '', visible\n\t\t\t\t\t\t\t\t[a1160] table '', visible\n\t\t\t\t\t\t\t\t\t[a1161] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t[a1162] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t[a1163] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t[a1164] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t[a1165] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1173] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1174] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1175] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1176] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1177] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1179] gridcell 'Type Type', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1181] combobox 'All of these conditions must be met. Type', clickable, hasPopup='listbox', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1297] gridcell 'is', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1627] combobox 'Operator For Condition 1: Type is -- None --' value='is', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1628] option 'is', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1629] option 'is not', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1630] option 'is one of', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1631] option 'is not one of', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1632] option 'contains', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1633] option 'starts with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1634] option 'ends with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1635] option 'does not contain', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1636] option 'is anything', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1637] option 'is same', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1638] option 'is different', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1300] gridcell '-- None --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1640] option '-- None --', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1641] option 'Standard', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1642] option 'Normal', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1643] option 'Emergency', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1302] gridcell 'Add AND Condition To Condition 1: Type is -- None -- Add OR Condition To Condition 1: Type is -- None --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1303] button 'Add AND Condition To Condition 1: Type is -- None --', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1304] button 'Add OR Condition To Condition 1: Type is -- None --', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1305] gridcell 'Remove condition 1: Type is -- None --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1306] button 'Remove condition 1: Type is -- None --', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf159'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText \"'Delete'\"\n\t\t\t\t[a182] region 'Filter', visible\n\t\t\t\t\t[a184] list '', clickable, visible\n\t\t\t\t\t\t[a185] link 'All Press enter to remove all subsequent conditions. Right click or press either Shift + Space or Alt + F10 to open menu.', clickable, visible\n\t\t\t\t[a187] main 'Change Requests', visible\n\t\t\t\t\t[a191] button 'Edit table data inline', controls='change_request_table'\n\t\t\t\t\t[a193] grid 'Change Requests.', clickable, multiselectable=False\n\t\t\t\t\t\t[a194] caption '', live='polite', relevant='additions text'\n\t\t\t\t\t\t\tStaticText 'Change Requests table. Currently in read mode.'\n\t\t\t\t\t\t[a196] rowgroup '', visible\n\t\t\t\t\t\t\t[a197] row '', visible\n\t\t\t\t\t\t\t\t[a198] columnheader 'Select All', visible\n\t\t\t\t\t\t\t\t\t[a200] checkbox 'Select All', clickable, checked='false'\n\t\t\t\t\t\t\t\t\t[a201] LabelText '', clickable, visible\n\t\t\t\t\t\t\t\t\t\tStaticText 'Select All'\n\t\t\t\t\t\t\t\t[a203] columnheader '\\uf1e4 Show column search row', visible\n\t\t\t\t\t\t\t\t\t[a205] button '\\uf1e4 Show column search row', visible, expanded=False, controls='change_request_table_header_search_control'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf1e4'\n\t\t\t\t\t\t\t\t\t\tStaticText 'Show column search row'\n\t\t\t\t\t\t\t\t[a207] columnheader 'Number \\uf21f Number column options', visible\n\t\t\t\t\t\t\t\t\t[a209] button 'Number', visible\n\t\t\t\t\t\t\t\t\t[a213] button 'Number column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a214] columnheader 'Short description Short description column options', visible\n\t\t\t\t\t\t\t\t\t[a216] button 'Short description', visible\n\t\t\t\t\t\t\t\t\t[a220] button 'Short description column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a221] columnheader 'Risk Risk column options', visible\n\t\t\t\t\t\t\t\t\t[a223] button 'Risk', visible\n\t\t\t\t\t\t\t\t\t[a227] button 'Risk column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a228] columnheader 'Impact Impact column options', visible\n\t\t\t\t\t\t\t\t\t[a230] button 'Impact', visible\n\t\t\t\t\t\t\t\t\t[a234] button 'Impact column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a235] columnheader 'Priority Priority column options', visible\n\t\t\t\t\t\t\t\t\t[a237] button 'Priority', visible\n\t\t\t\t\t\t\t\t\t[a241] button 'Priority column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a242] columnheader 'Assigned to Assigned to column options', visible\n\t\t\t\t\t\t\t\t\t[a244] button 'Assigned to', visible\n\t\t\t\t\t\t\t\t\t[a248] button 'Assigned to column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a249] columnheader 'Planned start date Planned start date column options', visible\n\t\t\t\t\t\t\t\t\t[a251] button 'Planned start date', visible\n\t\t\t\t\t\t\t\t\t[a255] button 'Planned start date column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a256] columnheader 'Planned end date Planned end date column options', visible\n\t\t\t\t\t\t\t\t\t[a258] button 'Planned end date', visible\n\t\t\t\t\t\t\t\t\t[a262] button 'Planned end date column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a263] columnheader 'Implementation plan Implementation plan column options'\n\t\t\t\t\t\t\t\t\t[a265] button 'Implementation plan'\n\t\t\t\t\t\t\t\t\t[a269] button 'Implementation plan column options', hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a270] columnheader 'Approval Approval column options'\n\t\t\t\t\t\t\t\t\t[a272] button 'Approval'\n\t\t\t\t\t\t\t\t\t[a276] button 'Approval column options', hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t[a330] rowgroup '', clickable\n\t\t\t\t\t\t\t[a331] row '', visible\n\t\t\t\t\t\t\t\t[a332] gridcell 'Select record for action: CHG0040007', visible\n\t\t\t\t\t\t\t\t\t[a334] checkbox 'Select record for action: CHG0040007', clickable, checked='false'\n\t\t\t\t\t\t\t\t\t[a335] LabelText '', clickable, visible\n\t\t\t\t\t\t\t\t\t\tStaticText 'Select record for action: CHG0040007'\n\t\t\t\t\t\t\t\t[a337] gridcell 'Preview record: CHG0040007', visible\n\t\t\t\t\t\t\t\t\t[a338] button 'Preview record: CHG0040007', clickable, visible, hasPopup='dialog', expanded=False\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf19c'\n\t\t\t\t\t\t\t\t[a339] gridcell 'Open record: CHG0040007', visible\n\t\t\t\t\t\t\t\t\t[a340] link 'Open record: CHG0040007', clickable, visible\n\t\t\t\t\t\t\t\t[a341] gridcell 'Please reboot ApplicationServerPeopleSoft', visible\n\t\t\t\t\t\t\t\t[a342] gridcell 'Moderate', visible\n\t\t\t\t\t\t\t\t[a343] gridcell '3 - Low', visible\n\t\t\t\t\t\t\t\t[a344] gridcell '4 - Low', visible\n\t\t\t\t\t\t\t\t[a345] gridcell '(empty)', visible\n\t\t\t\t\t\t\t\t[a346] gridcell '(empty)', visible\n\t\t\t\t\t\t\t\t\tStaticText '(empty)'\n\t\t\t\t\t\t\t\t[a350] gridcell '(empty)', visible\n\t\t\t\t\t\t\t\t\tStaticText '(empty)'\n\t\t\t\t\t\t\t\t[a354"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "40242d8feb6546e8825bd3fa89af2631",
+    "timestamp_epoch": 1792042882.7000525,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 1,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.998822765017394,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "31d082b5ddf61c96563ec937c74a3376c55ee393824a6bb0b406b9f0350f4927",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "3e6a83703880474e8e2acc55f5a12161",
+    "timestamp_epoch": 1792042882.8189917,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.11303457099711522,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1192,
+    "input_sha256": [
+      "4513011dc8d8ead6fdd099184f35ba517c562cbb336b13a04e9bea26d4841ca7",
+      "05842fb93d91a24dbd3795a31d8fd2f38c7d28fbfeacf2e09af9240b74f7c8f5"
+    ],
+    "input_texts": [
+      "The agent is constructing a complex filter on the Change Request list to isolate specific updates regarding network interface configuration. This step represents the initial attempt to define the first condition by clicking the 'Normal' option within the 'Type' field chooser.\n\nThe action attempted to select the 'Normal' option (a1642) directly from the dropdown, but the UI state remained unchanged as the option was not clickable. The combobox (a1639) retained its 'Choose option for field: Type' label and the '-- None --' value, with the popup menu still expanded but no selection applied.",
+      "Continuing the filter construction for Change Requests, the agent corrects the previous interaction failure by programmatically selecting the 'Normal' value for the 'Type' field. This step successfully establishes the first part of the AND condition chain required to find the specific network update record.\n\nThe combobox (a1639) successfully updated its value from '-- None --' to 'normal'. The popup menu closed, and the filter condition 'Type is Normal' is now active, allowing the agent to proceed to add the subsequent conditions for 'Requested by', 'Model', 'Short description', and 'State'."
+    ],
+    "prompt_tokens": 245,
+    "total_tokens": 245,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "d559f968874b482a988d31f2143d7150",
+    "timestamp_epoch": 1792042882.8192766,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.11370330798672512,
+    "input_keys": [
+      "9a756f1863bcf45dd6787f1008cef51f9c4a37cfa2c27031ceccbffc7028e9b3",
+      "624340a63b7866febdae09b6a5dfe2ad1b9d76d5c311e845a8c655afee038ffa",
+      "16aa71dd6768afe8606866a1dd4d765b60606e9762315b1f464700c1c22214a2",
+      "3db9155529813c47457941c0b3a9675116be0f7cf245188621419570d5ccf2a7",
+      "0e05aa8900dabd351184038c04e8ca1c982d93671adf2a0393640017880ec336",
+      "4396e1a5d0e53c22d6d698223e98e78de9b951c07f9aacd69af780b13fb76587",
+      "de80478a7204632f623097b80f6d0abc40cb4076afce13d3d05bbc82db13a0ed",
+      "94b70ab75d8f46b60808fbbd51822d8a909e263166b23f26e61477e2bd8e8ab1",
+      "bcbee332f39229b703d1440045eb9e741295393a7a18706e9f9c78ccdae99a86",
+      "1b55febdb9fd02c04387b81cf823d57e0f9df973c1335221e752f91d4ddabdeb",
+      "93deee367be126fb7f0ec8ed685e9313f9b2cf4809cea186d8dbfc771428bfab",
+      "c2ce6a7af8a9731bc0181f3effc052625469f78f78e845b6698b8f4583569672",
+      "15012222f64f86041d36fc0e3963c50c44a0ef0065f5db873e694917bfc67b2c",
+      "02ed35b503aa986305e6d07b4aaa71d26b414c1ddfe594171baf9046127667c2",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "23755fe0bc0247e79edd4ffdd593eb7a",
+    "timestamp_epoch": 1792042882.8208122,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 0.0001020299969241023,
+    "input_keys": [
+      "e70e0d86c3610a23eb0c3886b368b55ef3cdc5494a3e5fa4290fd2a5081214d5"
+    ]
+  },
+  {
+    "record_id": "f29acfc56ac34f35a3ce78c0026e60b9",
+    "timestamp_epoch": 1792042882.8221698,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 7.305998587980866e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

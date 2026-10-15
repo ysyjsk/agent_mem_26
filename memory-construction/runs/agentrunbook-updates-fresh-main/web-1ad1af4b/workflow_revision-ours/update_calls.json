@@ -1,0 +1,220 @@
+[
+  {
+    "record_id": "ef2e69da47d547c89da247c2215409ec",
+    "timestamp_epoch": 1792009743.423565,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.676763570983894,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 13510,
+      "text_sha256": "026e6f44a7caaa96791d438edaeac017a4d1def55e0a926cb99012217ebf46bb",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 3925,
+    "completion_tokens": 375,
+    "total_tokens": 4300,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "dc9acecdf83f4dc3bacb4ba3ec2294f5",
+    "timestamp_epoch": 1792009743.423899,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "state_ids": [
+      3,
+      4,
+      5
+    ],
+    "full_input_tokens_preflight": 3925,
+    "prepared_input_tokens": 3925,
+    "state_max_chars": null,
+    "request_sha256": "026e6f44a7caaa96791d438edaeac017a4d1def55e0a926cb99012217ebf46bb",
+    "status": "parsed"
+  },
+  {
+    "record_id": "e241c6e8e67a494a93e956718f4441df",
+    "timestamp_epoch": 1792009743.4240272,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 7,
+    "reused": 5
+  },
+  {
+    "record_id": "e014664e46e54e068f7e6db9827b3204",
+    "timestamp_epoch": 1792009767.0237036,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 23.59595355700003,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 5895,
+      "text_sha256": "deb55fbfc3f08105247d2e1a32baff3b80355887e3218c4d65f4f1c5d45ad081",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1439,
+    "completion_tokens": 388,
+    "total_tokens": 1827,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "71aae9d08fe4426b80f492bd9eca444d",
+    "timestamp_epoch": 1792009767.1004188,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 0,
+    "cache_hits": 8,
+    "elapsed_seconds": 0.0006165910162962973,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "ed76c1cbd0a47abeaea77d33e86401bff4cf6bde5f985af76800379213b9540f",
+      "2974087fc793c26f7ff034aacd708b882f524f99aba935c7c5ddd4592ccd7e2a",
+      "b4b188e5629e60b0d5f7a56f75f026d05d025b7946c0c1f5be968d79a8bd39a1",
+      "90c856f46852ed9e6ce9fc36aef33e1958e133a5450247c623ec764d46b6913e",
+      "f667050e42ad84b464ac7d2ceca4ffdb13d2f09fa498117a3f0b6afb4722930b"
+    ]
+  },
+  {
+    "record_id": "edef5b74f9044e1ca2d40edfcfd55335",
+    "timestamp_epoch": 1792009767.2643952,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.16134000700549223,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1374,
+    "input_sha256": [
+      "9d9f43632301ea0dab4ef1306ce0dbd435fcd4c154c82a5796c970bbc5974e42",
+      "3d485822da9d851fb2be50b0184deb62fc8120099369246246273e283a6bc553"
+    ],
+    "input_texts": [
+      "In the workflow to create a new forum named Cyberpunk, the agent is populating the required form fields on the 'Create new forum' page. Having just filled the 'Name' field, the agent now focuses on completing the 'Title' field to match the forum name, which is a necessary step before proceeding to the description and sidebar configuration.\n\nThe transition moves from a state where the 'Title' textbox (element 121) is empty to a state where it contains the value 'Cyberpunk'. In the post-state, the 'Title' field is populated and marked as focused, while the 'Name' field retains its previous value of 'Cyberpunk'. No other form fields or page elements change visibly during this specific action.",
+      "Continuing the forum creation process, the agent now addresses the 'Description' field. After successfully setting the name and title, the next logical step in the form sequence is to provide the required description for the new forum, 'Cyberpunk', ensuring the content is ready for the subsequent sidebar configuration.\n\nThe transition updates the 'Description' textbox (element 126) from an empty state to one containing the text 'Welcome to the future'. In the post-state, this field is populated and focused, reflecting the agent's input. The 'Name' and 'Title' fields remain unchanged with their previously entered values, and the overall page structure stays consistent."
+    ],
+    "prompt_tokens": 286,
+    "total_tokens": 286,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "d87aca8887bb4760b59035690f8fd636",
+    "timestamp_epoch": 1792009767.2646506,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 7,
+    "actual_vectors": 2,
+    "cache_hits": 5,
+    "elapsed_seconds": 0.16181065299315378,
+    "input_keys": [
+      "bb1411d48885c1cbe1dcfe7672cbb55eed3fa850458c95a59e66477b07930fc8",
+      "cf3101b22d14cd86849e9f5ff6abf486b8e57a73a5580000689eef50ab1a20b7",
+      "83cc22633810abc5116fa5f555682a70530e7318b55cfb5c4b76cbb609fe5ef2",
+      "d90103dbc1920e3d8fb1f6c4f985698612e3d6536ef4ceb05fc13ad6a5959a27",
+      "2d740f3c14fc3f3868ef4361d846df90a6165500d265450df3d4dae6dca833d5",
+      "4e6f2808e4eea6f8ec523213f2f057530815f04110c15bff0358ffd8523967b4",
+      "b56cf745abf59aba02489bd337ba1b2c5b38ba09be0089a3cfe40cbe44c53c6f"
+    ]
+  },
+  {
+    "record_id": "58f9d6ab70724802a03127b821494838",
+    "timestamp_epoch": 1792009767.3396132,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.07394455000758171,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 620,
+    "input_sha256": [
+      "5557378bde4a8d9fa9ad83232e6e1f56fdd1be0b415074ac7b6872394dfe47d3"
+    ],
+    "input_texts": [
+      "Title: Create New Forum Workflow\nDescription: Steps to create a new forum with specific name, title, description, and sidebar content.\n- Navigate to the Forums section by clicking the 'Forums' link.\n- Open the creation form by clicking the 'Create forum' link.\n- Fill the 'Name' required field with the desired forum name (e.g., 'Cyberpunk').\n- Fill the 'Title' required field with the desired title.\n- Fill the 'Description' required field with the welcome message.\n- Fill the 'Sidebar' required field with a markdown list of items (e.g., '- Games\\n- Books...').\n- Submit the form by clicking the 'Create forum' button."
+    ],
+    "prompt_tokens": 143,
+    "total_tokens": 143,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "1e9540a1e8ba48e8bed139c40549dd23",
+    "timestamp_epoch": 1792009767.3398762,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.07432929298374802,
+    "input_keys": [
+      "62332f57e30f8a11463e5fcb6a45eee3be1c67d3189a6ba1546bcedfdc065337"
+    ]
+  },
+  {
+    "record_id": "ec8c41c7e45b44fb89bda477cffc31e3",
+    "timestamp_epoch": 1792009767.4132423,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.07240068999817595,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 711,
+    "input_sha256": [
+      "deb30f85c5efc95e3e0c86e8a09ce5034cbafcb1e0b47a7178300373fc3db673"
+    ],
+    "input_texts": [
+      "Title: Create Forum Field Requirements\nDescription: Key UI signals and field constraints observed during the forum creation process.\n- The 'Forums' link is the entry point to the forum management area.\n- The 'Create forum' link is located on the 'List of forums' page.\n- The 'Name', 'Title', and 'Description' fields are marked as required.\n- The 'Sidebar' field is also required and accepts a text input.\n- Sidebar content should be formatted as a markdown bullet list.\n- A status message like 'Title validation: saved' may appear after filling the title.\n- The sidebar preview updates to show the formatted list before submission.\n- The final success state displays the new forum at a URL like /f/{ForumName}."
+    ],
+    "prompt_tokens": 153,
+    "total_tokens": 153,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "b14e1235d5c64e62889d49e793939298",
+    "timestamp_epoch": 1792009767.4134758,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.07277213499764912,
+    "input_keys": [
+      "10e75119b05eb4b6fc0300ea7c5a3623bfaf9d099a9b3df3c0449d32ae724466"
+    ]
+  }
+]

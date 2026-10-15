@@ -1,0 +1,43 @@
+{
+  "policy": "b3",
+  "case": "workflow_revision",
+  "scope": "adapted_AgentRunbookR_local_update",
+  "starting_snapshot": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/construction-pair-v2/full10-enterprise-combined/memory_state",
+  "starting_cache": "independent clones; exact requests and vectors preserved equally",
+  "setup_load_and_seed_s_excluded": 1.190215968992561,
+  "update_to_queryable_publish_s": 37.414571250992594,
+  "reextracted_event_outputs": 2,
+  "regenerated_notes": 2,
+  "llm_calls": 3,
+  "llm_input_tokens_known": 21274,
+  "llm_output_tokens_known": 685,
+  "embedding_calls": 3,
+  "embedding_vectors": 4,
+  "embedding_tokens_known": 572,
+  "unknown_usage_calls": 0,
+  "api_failed_calls": 0,
+  "exact_request_hits": 10,
+  "embedding_hits": 27,
+  "load_verified": true,
+  "event_count": 49,
+  "note_count": 10,
+  "qa_status": "source_grounded_checks_passed",
+  "quality_checks": {
+    "new_fact_present": true,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": "not_applicable_b3",
+    "dirty_event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "reused_event_count": 12,
+    "fixed_reader_regression": "not_run",
+    "quality_scope": "source_grounded_update_checks; fixed Reader regression scheduled separately",
+    "quality_pass": true
+  },
+  "trajectory_id": "49f98e9e",
+  "state_index": 5,
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/agentrunbook-updates-main/repeat-enterprise-49f98e9e-workflow_revision-state5/workflow_revision-b3"
+}

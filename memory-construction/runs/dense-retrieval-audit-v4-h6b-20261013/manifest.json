@@ -4,6 +4,16 @@
     "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-quality-v3-20261013",
     "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-quality-v3-compact-emb-20261013"
   ],
+  "embedding": {
+    "batch_size": 2,
+    "device": "cuda:1",
+    "local_path": "/data/predator/ly/Mem/models/Qwen3-Embedding-8B",
+    "max_length": 1024,
+    "model_id": "Qwen/Qwen3-Embedding-8B",
+    "network": "disabled_local_files_only",
+    "query_text_policy": "plain_question_only",
+    "resident_model_loads": 1
+  },
   "evaluator_reference_policy": "source_fields_only_after_retrieval; never in embedding payload",
   "manifest_hash": "eae8c894c8463536b40ca2996e3bca451f93c4e76eeb035a719874dacc93a1f6",
   "methods": [

@@ -1,0 +1,400 @@
+[
+  {
+    "record_id": "5c9ff2db310749a4953707e0022100a0",
+    "timestamp_epoch": 1792006081.6939976,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 25.171776609000517,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 47064,
+      "text_sha256": "6ecb22728abe5d011cdd0dfb95ca2a549581548c4a12b20d7445e301a5a7385a",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 16615,
+    "completion_tokens": 340,
+    "total_tokens": 16955,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "ed5d6eb288f148b1bf31cc2360af6e0d",
+    "timestamp_epoch": 1792006081.6944747,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "full_input_tokens_preflight": 16615,
+    "prepared_input_tokens": 16615,
+    "state_max_chars": null,
+    "request_sha256": "6ecb22728abe5d011cdd0dfb95ca2a549581548c4a12b20d7445e301a5a7385a",
+    "status": "parsed"
+  },
+  {
+    "record_id": "eafc0a886da64c7ab4bfa4ee0a1a064a",
+    "timestamp_epoch": 1792006100.833511,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 19.124983257002896,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 13049,
+      "text_sha256": "bb245e3e5fd766d706cd3d28d7759a842f675990b7b3dead34d043443b98fe12",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 3831,
+    "completion_tokens": 302,
+    "total_tokens": 4133,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "07f629ebac6f44ea89bfe2a8af136fa2",
+    "timestamp_epoch": 1792006100.8338804,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 3831,
+    "prepared_input_tokens": 3831,
+    "state_max_chars": null,
+    "request_sha256": "bb245e3e5fd766d706cd3d28d7759a842f675990b7b3dead34d043443b98fe12",
+    "status": "parsed"
+  },
+  {
+    "record_id": "b76a373e2b754ea9a34a03c196a0171f",
+    "timestamp_epoch": 1792006119.6122615,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 18.762597810011357,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 14278,
+      "text_sha256": "3a8525ae3991cfcaccf64bf91de8879fa3ccf5e7d6f9429387cf67bfaaa85d82",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 4175,
+    "completion_tokens": 299,
+    "total_tokens": 4474,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "b7420d948d3b49a98b2735432ec0ac14",
+    "timestamp_epoch": 1792006119.6126757,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 4175,
+    "prepared_input_tokens": 4175,
+    "state_max_chars": null,
+    "request_sha256": "3a8525ae3991cfcaccf64bf91de8879fa3ccf5e7d6f9429387cf67bfaaa85d82",
+    "status": "parsed"
+  },
+  {
+    "record_id": "46d6f020b88843dabe39af80fed01316",
+    "timestamp_epoch": 1792006140.7853644,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 21.15256396398763,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 15551,
+      "text_sha256": "352de14341cc7f27dd93a8493c03b6f9ac9f6349af931024ab0e997589bf053b",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 4899,
+    "completion_tokens": 405,
+    "total_tokens": 5304,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "664ff5de2a46471b88365b41a5575759",
+    "timestamp_epoch": 1792006140.7857246,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "full_input_tokens_preflight": 4899,
+    "prepared_input_tokens": 4899,
+    "state_max_chars": null,
+    "request_sha256": "352de14341cc7f27dd93a8493c03b6f9ac9f6349af931024ab0e997589bf053b",
+    "status": "parsed"
+  },
+  {
+    "record_id": "9fd3b3fa1dc74d929eb76b9b1412fb22",
+    "timestamp_epoch": 1792006140.785827,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 8,
+    "reused": 0
+  },
+  {
+    "record_id": "8726534690554449a2ca8406830025fd",
+    "timestamp_epoch": 1792006162.912374,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 22.122413167002378,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 6040,
+      "text_sha256": "1475ea216b624187e423cda03f8e51f6954a453187cda097970e2cdaa08e3f0a",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1476,
+    "completion_tokens": 397,
+    "total_tokens": 1873,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "e37968adc6814ff78e80339e711d0c01",
+    "timestamp_epoch": 1792006164.8996665,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 1.9010065120237414,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 17572,
+    "input_sha256": [
+      "2adb271d9ace1d45780d14614476c0865e64b78a970a21fccae8e0890f36a4e9",
+      "478a08d475b3f9b0fdeedfb621d3d14032e2d20558493989f056dc94fd1f1379"
+    ],
+    "input_texts": [
+      "State 6\nRootWebArea 'Create new forum', focused\n\t[18] navigation '', visible\n\t\t[19] link 'Jump to main content', clickable\n\t\t[20] link 'Jump to sidebar', clickable\n\t[21] navigation '', visible\n\t\t[24] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[34] list '', visible\n\t\t\t[35] listitem '', visible\n\t\t\t\t[36] link 'Forums', clickable, visible\n\t\t\t[37] listitem '', visible\n\t\t\t\t[38] link 'Wiki', clickable, visible\n\t\t[39] Section '', visible\n\t\t\t[48] searchbox 'Search query', clickable, visible\n\t\t[49] list '', visible\n\t\t\t[50] listitem '', visible\n\t\t\t\t[51] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[54] image '', visible\n\t\t\t[55] listitem '', visible\n\t\t\t\t[56] link 'Submit', clickable, visible\n\t\t\t\t\t[59] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[61] listitem '', visible\n\t\t\t\t[62] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[65] image '', visible\n\t\t\t\t\t[66] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[107] main '', visible\n\t\t[108] heading 'Create new forum', visible\n\t\t[109] Section '', visible\n\t\t\t[112] LabelText '', clickable, visible\n\t\t\t\tStaticText 'Name'\n\t\t\t\tStaticText '*'\n\t\t\t[114] LabelText '', clickable, visible\n\t\t\t\t[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required\n\t\t\t\t\tStaticText 'Cyberpunk'\n\t\t\t[119] LabelText '', clickable, visible\n\t\t\t\tStaticText 'Title'\n\t\t\t\tStaticText '*'\n\t\t\t[121] textbox 'Title This field is required.' value='Cyberpunk', clickable, visible, required\n\t\t\t\tStaticText 'Cyberpunk'\n\t\t\t[124] LabelText '', visible\n\t\t\t\tStaticText 'Description'\n\t\t\t\tStaticText '*'\n\t\t\t[126] textbox 'Description This field is required.' value='Welcome to the future', visible, required, describedby='forum_description_help'\n\t\t\t\tStaticText 'Welcome to the future'\n\t\t\t[128] paragraph '', visible\n\t\t\t\tStaticText 'A short description of the forum. Search engines will present this description in their results.'\n\t\t\t[131] LabelText '', visible\n\t\t\t\tStaticText 'Sidebar'\n\t\t\t\tStaticText '*'\n\t\t\t[134] textbox 'Sidebar This field is required.' value='- Games\\n- Books\\n- Movies\\n- Future', visible, focused, required, describedby='forum_sidebar_help'\n\t\t\t\tStaticText '- Games'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '- Books'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '- Movies'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '- Future'\n\t\t\t[136] heading 'Preview', visible\n\t\t\t[292] list '', visible\n\t\t\t\t[293] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Games'\n\t\t\t\t[294] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Books'\n\t\t\t\t[295] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Movies'\n\t\t\t\t[296] listitem ''\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Future'\n\t\t\t[139] checkbox 'Formatting help +', clickable, checked='false'\n\t\t\tStaticText 'Markdown allowed.'\n\t\t\t[141] LabelText '', clickable\n\t\t\t\tStaticText 'Formatting help'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '+'\n\t\t\t[268] LabelText ''\n\t\t\t\tStaticText 'Tags'\n\t\t\t[269] textbox 'Tags'\n\t\t\t[271] paragraph ''\n\t\t\t\t[272] link 'See the full list of tags', clickable\n\t\t\t[274] button 'Create forum', clickable\n\t[279] contentinfo ''\n\t\t[280] paragraph ''\n\t\t\tStaticText 'Running'\n\t\t\t[282] link 'Postmill', clickable\n\nState 7\nRootWebArea 'Cyberpunk', focused\n\t[26] navigation '', visible\n\t\t[27] link 'Jump to main content', clickable\n\t\t[28] link 'Jump to sidebar', clickable\n\t[29] navigation '', visible\n\t\t[32] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[42] list '', visible\n\t\t\t[43] listitem '', visible\n\t\t\t\t[44] link 'Forums', clickable, visible\n\t\t\t[45] listitem '', visible\n\t\t\t\t[46] link 'Wiki', clickable, visible\n\t\t[47] Section '', visible\n\t\t\t[56] searchbox 'Search query', clickable, visible\n\t\t[57] list '', visible\n\t\t\t[58] listitem '', visible\n\t\t\t\t[59] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[62] image '', visible\n\t\t\t[63] listitem '', visible\n\t\t\t\t[64] link 'Submit', clickable, visible\n\t\t\t\t\t[67] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[69] listitem '', visible\n\t\t\t\t[70] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[73] image '', visible\n\t\t\t\t\t[74] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[115] main '', visible\n\t\t[116] heading '/f/Cyberpunk', visible\n\t\t\tStaticText '/f/'\n\t\t\t[118] strong '', visible\n\t\t\t\tStaticText 'Cyberpunk'\n\t\t[119] navigation '', visible\n\t\t\t[120] list '', visible\n\t\t\t\t[121] listitem '', visible\n\t\t\t\t\t[122] link 'Submissions', clickable, visible\n\t\t\t\t[123] listitem '', visible\n\t\t\t\t\t[124] link 'Comments', clickable, visible\n\t\t\t[125] list '', visible\n\t\t\t\t[126] listitem '', visible\n\t\t\t\t\t[127] button 'Sort by: Hot', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[129] image '', visible\n\t\t\t\t\t\tStaticText 'Hot'\n\t\t[146] image 'A tense emoji', visible\n\t\t\tStaticText '(・.・;)'\n\t\tStaticText \"There's nothing here…\"\n\t[148] complementary '', visible\n\t\t[149] Section '', visible\n\t\t\t[150] heading 'Cyberpunk', visible\n\t\t\t\t[151] link 'Cyberpunk', clickable, visible\n\t\t\t[152] Section '', visible\n\t\t\t\t[155] button 'Unsubscribe 1 subscriber', clickable, visible\n\t\t\t\t\tStaticText 'Unsubscribe'\n\t\t\t[162] list '', visible\n\t\t\t\t[163] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Games'\n\t\t\t\t[164] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Books'\n\t\t\t\t[165] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Movies'\n\t\t\t\t[166] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Future'\n\t\t\t[167] separator '', visible, orientation='horizontal'\n\t\t\t[168] list '', visible\n\t\t\t\t[169] listitem '', visible\n\t\t\t\t\tStaticText 'Created'\n\t\t\t\t\t[170] time 'March 12, 2026 at 7:31:27 PM EDT', visible\n\t\t\t\t\t\tStaticText '0 seconds ago'\n\t\t\t\t[171] listitem '', visible\n\t\t\t\t\t[172] link 'Subscribe via RSS', clickable, visible\n\t\t\t\t\t\t[174] image '', visible\n\t\t\t\t\t\tStaticText 'Subscribe via RSS'\n\t\t[176] group '', visible\n\t\t\t[177] DisclosureTriangle 'Hide this forum', clickable, visible, expanded=False\n\t\t[183] Section '', visible\n\t\t\t[184] heading 'Toolbox', visible\n\t\t\t[185] list '', visible\n\t\t\t\t[186] listitem '', visible\n\t\t\t\t\t[187] link 'Appearance', clickable, visible\n\t\t\t\t[188] listitem '', visible\n\t\t\t\t\t[189] link 'Bans', clickable, visible\n\t\t\t\t[190] listitem '', visible\n\t\t\t\t\t[191] link 'Delete forum', clickable, visible\n\t\t\t\t[192] listitem '', visible\n\t\t\t\t\t[193] link 'Edit forum', clickable, visible\n\t\t\t\t[194] listitem '', visible\n\t\t\t\t\t[195] link 'Moderation log', clickable, visible\n\t\t\t\t[196] listitem '', visible\n\t\t\t\t\t[197] link 'Trash', clickable, visible\n\t\t[198] Section ''\n\t\t\t[200] heading 'Moderators'\n\t\t\t[201] list ''\n\t\t\t\t[202] listitem ''\n\t\t\t\t\t[203] link 'MarvelsGrantMan136', clickable\n\t\t\t[204] paragraph ''\n\t\t\t\t[205] link 'See full list', clickable\n\t[206] contentinfo ''\n\t\t[207] paragraph ''\n\t\t\tStaticText 'Running'\n\t\t\t[209] link 'Postmill', clickable\n\nState 8\nRootWebArea 'Cyberpunk', focused\n\t[26] navigation '', visible\n\t\t[27] link 'Jump to main content', clickable\n\t\t[28] link 'Jump to sidebar', clickable\n\t[29] navigation '', visible\n\t\t[32] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[42] list '', visible\n\t\t\t[43] listitem '', visible\n\t\t\t\t[44] link 'Forums', clickable, visible\n\t\t\t[45] listitem '', visible\n\t\t\t\t[46] link 'Wiki', clickable, visible\n\t\t[47] Section '', visible\n\t\t\t[56] searchbox 'Search query', clickable, visible\n\t\t[57] list '', visible\n\t\t\t[58] listitem '', visible\n\t\t\t\t[59] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[62] image '', visible\n\t\t\t[63] listitem '', visible\n\t\t\t\t[64] link 'Submit', clickable, visible\n\t\t\t\t\t[67] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[69] listitem '', visible\n\t\t\t\t[70] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[73] image '', visible\n\t\t\t\t\t[74] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[115] main '', visible\n\t\t[116] heading '/f/Cyberpunk', visible\n\t\t\tStaticText '/f/'\n\t\t\t[118] strong '', visible\n\t\t\t\tStaticText 'Cyberpunk'\n\t\t[119] navigation '', visible\n\t\t\t[120] list '', visible\n\t\t\t\t[121] listitem '', visible\n\t\t\t\t\t[122] link 'Submissions', clickable, visible\n\t\t\t\t[123] listitem '', visible\n\t\t\t\t\t[124] link 'Comments', clickable, visible\n\t\t\t[125] list '', visible\n\t\t\t\t[126] listitem '', visible\n\t\t\t\t\t[127] button 'Sort by: Hot', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[129] image '', visible\n\t\t\t\t\t\tStaticText 'Hot'\n\t\t[146] image 'A tense emoji', visible\n\t\t\tStaticText '(・.・;)'\n\t\tStaticText \"There's nothing here…\"\n\t[148] complementary '', visible\n\t\t[149] Section '', visible\n\t\t\t[150] heading 'Cyberpunk', visible\n\t\t\t\t[151] link 'Cyberpunk', clickable, visible\n\t\t\t[152] Section '', visible\n\t\t\t\t[155] button 'Unsubscribe 1 subscriber', clickable, visible\n\t\t\t\t\tStaticText 'Unsubscribe'\n\t\t\t[162] list '', visible\n\t\t\t\t[163] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Games'\n\t\t\t\t[164] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Books'\n\t\t\t\t[165] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Movies'\n\t\t\t\t[166] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Future'\n\t\t\t[167] separator '', visible, orientation='horizontal'\n\t\t\t[168] list '', visible\n\t\t\t\t[169] listitem '', visible\n\t\t\t\t\tStaticText 'Created'\n\t\t\t\t\t[170] time 'March 12, 2026 at 7:31:27 PM EDT', visible\n\t\t\t\t\t\tStaticText '0 seconds ago'\n\t\t\t\t[171] listitem '', visible\n\t\t\t\t\t[172] link 'Subscribe via RSS', clickable, visible\n\t\t\t\t\t\t[174] image '', visible\n\t\t\t\t\t\tStaticText 'Subscribe via RSS'\n\t\t[176] group '', visible\n\t\t\t[177] DisclosureTriangle 'Hide this forum', clickable, visible, expanded=False\n\t\t[183] Section '', visible\n\t\t\t[184] heading 'Toolbox', visible\n\t\t\t[185] list '', visible\n\t\t\t\t[186] listitem '', visible\n\t\t\t\t\t[187] link 'Appearance', clickable, visible\n\t\t\t\t[188] listitem '', visible\n\t\t\t\t\t[189] link 'Bans', clickable, visible\n\t\t\t\t[190] listitem '', visible\n\t\t\t\t\t[191] link 'Delete forum', clickable, visible\n\t\t\t\t[192] listitem '', visible\n\t\t\t\t\t[193] link 'Edit forum', clickable, visible\n\t\t\t\t[194] listitem '', visible\n\t\t\t\t\t[195] link 'Moderation log', clickable, visible\n\t\t\t\t[196] listitem '', visible\n\t\t\t\t\t[197] link 'Trash', clickable, visible\n\t\t[198] Section ''\n\t\t\t[200] heading 'Moderators'\n\t\t\t[201] list ''\n\t\t\t\t[202] listitem ''\n\t\t\t\t\t[203] link 'MarvelsGrantMan136', clickable\n\t\t\t[204] paragraph ''\n\t\t\t\t[205] link 'See full list', clickable\n\t[206] contentinfo ''\n\t\t[207] paragraph ''\n\t\t\tStaticText 'Running'\n\t\t\t[209] link 'Postmill', clickable\n[controlled arrival] forum creation confirmation observed after the published trajectory",
+      "State 7\nRootWebArea 'Cyberpunk', focused\n\t[26] navigation '', visible\n\t\t[27] link 'Jump to main content', clickable\n\t\t[28] link 'Jump to sidebar', clickable\n\t[29] navigation '', visible\n\t\t[32] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[42] list '', visible\n\t\t\t[43] listitem '', visible\n\t\t\t\t[44] link 'Forums', clickable, visible\n\t\t\t[45] listitem '', visible\n\t\t\t\t[46] link 'Wiki', clickable, visible\n\t\t[47] Section '', visible\n\t\t\t[56] searchbox 'Search query', clickable, visible\n\t\t[57] list '', visible\n\t\t\t[58] listitem '', visible\n\t\t\t\t[59] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[62] image '', visible\n\t\t\t[63] listitem '', visible\n\t\t\t\t[64] link 'Submit', clickable, visible\n\t\t\t\t\t[67] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[69] listitem '', visible\n\t\t\t\t[70] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[73] image '', visible\n\t\t\t\t\t[74] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[115] main '', visible\n\t\t[116] heading '/f/Cyberpunk', visible\n\t\t\tStaticText '/f/'\n\t\t\t[118] strong '', visible\n\t\t\t\tStaticText 'Cyberpunk'\n\t\t[119] navigation '', visible\n\t\t\t[120] list '', visible\n\t\t\t\t[121] listitem '', visible\n\t\t\t\t\t[122] link 'Submissions', clickable, visible\n\t\t\t\t[123] listitem '', visible\n\t\t\t\t\t[124] link 'Comments', clickable, visible\n\t\t\t[125] list '', visible\n\t\t\t\t[126] listitem '', visible\n\t\t\t\t\t[127] button 'Sort by: Hot', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[129] image '', visible\n\t\t\t\t\t\tStaticText 'Hot'\n\t\t[146] image 'A tense emoji', visible\n\t\t\tStaticText '(・.・;)'\n\t\tStaticText \"There's nothing here…\"\n\t[148] complementary '', visible\n\t\t[149] Section '', visible\n\t\t\t[150] heading 'Cyberpunk', visible\n\t\t\t\t[151] link 'Cyberpunk', clickable, visible\n\t\t\t[152] Section '', visible\n\t\t\t\t[155] button 'Unsubscribe 1 subscriber', clickable, visible\n\t\t\t\t\tStaticText 'Unsubscribe'\n\t\t\t[162] list '', visible\n\t\t\t\t[163] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Games'\n\t\t\t\t[164] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Books'\n\t\t\t\t[165] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Movies'\n\t\t\t\t[166] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Future'\n\t\t\t[167] separator '', visible, orientation='horizontal'\n\t\t\t[168] list '', visible\n\t\t\t\t[169] listitem '', visible\n\t\t\t\t\tStaticText 'Created'\n\t\t\t\t\t[170] time 'March 12, 2026 at 7:31:27 PM EDT', visible\n\t\t\t\t\t\tStaticText '0 seconds ago'\n\t\t\t\t[171] listitem '', visible\n\t\t\t\t\t[172] link 'Subscribe via RSS', clickable, visible\n\t\t\t\t\t\t[174] image '', visible\n\t\t\t\t\t\tStaticText 'Subscribe via RSS'\n\t\t[176] group '', visible\n\t\t\t[177] DisclosureTriangle 'Hide this forum', clickable, visible, expanded=False\n\t\t[183] Section '', visible\n\t\t\t[184] heading 'Toolbox', visible\n\t\t\t[185] list '', visible\n\t\t\t\t[186] listitem '', visible\n\t\t\t\t\t[187] link 'Appearance', clickable, visible\n\t\t\t\t[188] listitem '', visible\n\t\t\t\t\t[189] link 'Bans', clickable, visible\n\t\t\t\t[190] listitem '', visible\n\t\t\t\t\t[191] link 'Delete forum', clickable, visible\n\t\t\t\t[192] listitem '', visible\n\t\t\t\t\t[193] link 'Edit forum', clickable, visible\n\t\t\t\t[194] listitem '', visible\n\t\t\t\t\t[195] link 'Moderation log', clickable, visible\n\t\t\t\t[196] listitem '', visible\n\t\t\t\t\t[197] link 'Trash', clickable, visible\n\t\t[198] Section ''\n\t\t\t[200] heading 'Moderators'\n\t\t\t[201] list ''\n\t\t\t\t[202] listitem ''\n\t\t\t\t\t[203] link 'MarvelsGrantMan136', clickable\n\t\t\t[204] paragraph ''\n\t\t\t\t[205] link 'See full list', clickable\n\t[206] contentinfo ''\n\t\t[207] paragraph ''\n\t\t\tStaticText 'Running'\n\t\t\t[209] link 'Postmill', clickable\n\nState 8\nRootWebArea 'Cyberpunk', focused\n\t[26] navigation '', visible\n\t\t[27] link 'Jump to main content', clickable\n\t\t[28] link 'Jump to sidebar', clickable\n\t[29] navigation '', visible\n\t\t[32] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[42] list '', visible\n\t\t\t[43] listitem '', visible\n\t\t\t\t[44] link 'Forums', clickable, visible\n\t\t\t[45] listitem '', visible\n\t\t\t\t[46] link 'Wiki', clickable, visible\n\t\t[47] Section '', visible\n\t\t\t[56] searchbox 'Search query', clickable, visible\n\t\t[57] list '', visible\n\t\t\t[58] listitem '', visible\n\t\t\t\t[59] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[62] image '', visible\n\t\t\t[63] listitem '', visible\n\t\t\t\t[64] link 'Submit', clickable, visible\n\t\t\t\t\t[67] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[69] listitem '', visible\n\t\t\t\t[70] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[73] image '', visible\n\t\t\t\t\t[74] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[115] main '', visible\n\t\t[116] heading '/f/Cyberpunk', visible\n\t\t\tStaticText '/f/'\n\t\t\t[118] strong '', visible\n\t\t\t\tStaticText 'Cyberpunk'\n\t\t[119] navigation '', visible\n\t\t\t[120] list '', visible\n\t\t\t\t[121] listitem '', visible\n\t\t\t\t\t[122] link 'Submissions', clickable, visible\n\t\t\t\t[123] listitem '', visible\n\t\t\t\t\t[124] link 'Comments', clickable, visible\n\t\t\t[125] list '', visible\n\t\t\t\t[126] listitem '', visible\n\t\t\t\t\t[127] button 'Sort by: Hot', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[129] image '', visible\n\t\t\t\t\t\tStaticText 'Hot'\n\t\t[146] image 'A tense emoji', visible\n\t\t\tStaticText '(・.・;)'\n\t\tStaticText \"There's nothing here…\"\n\t[148] complementary '', visible\n\t\t[149] Section '', visible\n\t\t\t[150] heading 'Cyberpunk', visible\n\t\t\t\t[151] link 'Cyberpunk', clickable, visible\n\t\t\t[152] Section '', visible\n\t\t\t\t[155] button 'Unsubscribe 1 subscriber', clickable, visible\n\t\t\t\t\tStaticText 'Unsubscribe'\n\t\t\t[162] list '', visible\n\t\t\t\t[163] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Games'\n\t\t\t\t[164] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Books'\n\t\t\t\t[165] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Movies'\n\t\t\t\t[166] listitem '', visible\n\t\t\t\t\tListMarker '•'\n\t\t\t\t\tStaticText 'Future'\n\t\t\t[167] separator '', visible, orientation='horizontal'\n\t\t\t[168] list '', visible\n\t\t\t\t[169] listitem '', visible\n\t\t\t\t\tStaticText 'Created'\n\t\t\t\t\t[170] time 'March 12, 2026 at 7:31:27 PM EDT', visible\n\t\t\t\t\t\tStaticText '0 seconds ago'\n\t\t\t\t[171] listitem '', visible\n\t\t\t\t\t[172] link 'Subscribe via RSS', clickable, visible\n\t\t\t\t\t\t[174] image '', visible\n\t\t\t\t\t\tStaticText 'Subscribe via RSS'\n\t\t[176] group '', visible\n\t\t\t[177] DisclosureTriangle 'Hide this forum', clickable, visible, expanded=False\n\t\t[183] Section '', visible\n\t\t\t[184] heading 'Toolbox', visible\n\t\t\t[185] list '', visible\n\t\t\t\t[186] listitem '', visible\n\t\t\t\t\t[187] link 'Appearance', clickable, visible\n\t\t\t\t[188] listitem '', visible\n\t\t\t\t\t[189] link 'Bans', clickable, visible\n\t\t\t\t[190] listitem '', visible\n\t\t\t\t\t[191] link 'Delete forum', clickable, visible\n\t\t\t\t[192] listitem '', visible\n\t\t\t\t\t[193] link 'Edit forum', clickable, visible\n\t\t\t\t[194] listitem '', visible\n\t\t\t\t\t[195] link 'Moderation log', clickable, visible\n\t\t\t\t[196] listitem '', visible\n\t\t\t\t\t[197] link 'Trash', clickable, visible\n\t\t[198] Section ''\n\t\t\t[200] heading 'Moderators'\n\t\t\t[201] list ''\n\t\t\t\t[202] listitem ''\n\t\t\t\t\t[203] link 'MarvelsGrantMan136', clickable\n\t\t\t[204] paragraph ''\n\t\t\t\t[205] link 'See full list', clickable\n\t[206] contentinfo ''\n\t\t[207] paragraph ''\n\t\t\tStaticText 'Running'\n\t\t\t[209] link 'Postmill', clickable\n[controlled arrival] forum creation confirmation observed after the published trajectory"
+    ],
+    "prompt_tokens": 6053,
+    "total_tokens": 6053,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "b19a27bbcb9e41bb89b9fb312f33f876",
+    "timestamp_epoch": 1792006164.9000912,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 9,
+    "actual_vectors": 2,
+    "cache_hits": 7,
+    "elapsed_seconds": 1.9023185730038676,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "ed76c1cbd0a47abeaea77d33e86401bff4cf6bde5f985af76800379213b9540f",
+      "2974087fc793c26f7ff034aacd708b882f524f99aba935c7c5ddd4592ccd7e2a",
+      "b4b188e5629e60b0d5f7a56f75f026d05d025b7946c0c1f5be968d79a8bd39a1",
+      "90c856f46852ed9e6ce9fc36aef33e1958e133a5450247c623ec764d46b6913e",
+      "bebda8183a71378369e50177ac775f8e43aa9a3d5b8fc225236654eb9a8532be",
+      "45b039c75b5eb9e0863b13633e3f469193860ae95b8dcb07fbe46af864b67a33"
+    ]
+  },
+  {
+    "record_id": "8363e195b6f74947935c218f1aee4189",
+    "timestamp_epoch": 1792006165.3607037,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.45668151997961104,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 8,
+    "input_characters": 4780,
+    "input_sha256": [
+      "754bcd4dd81677e42794f8801bbfe6f485c672a60f64e9abba0183df14166bc2",
+      "1efeff3c1f3b2ebf55fda4071c63399767e4f5cfc942a23ec2e5df84412bb3f0",
+      "c6c8863f13c9cbc6642b8cb2569c2a0f8c6338a11f7bdeaa55cb944e193675ad",
+      "e2c21666cc1a135d6475f0a5eb8a5a26288d06948d66de87f650a0027614dc46",
+      "b879bf765b28311f544979687a3e0a53d38d3e3c94ebce82f2ef1d0027d6513b",
+      "83d5c7a1a399d6ea6a4e990498a88ab464047144484f9a5317b3126860b36263",
+      "db3a028eb55f8704fdcb569278296056468a0327ae71a79f39019e9d20a49ad6",
+      "c17b796fe3a70ea0a1e2d9b815dc3580f35b6b47abb753b29a26f1582d947304"
+    ],
+    "input_texts": [
+      "To initiate the creation of a new forum named 'Cyberpunk' with specific content, the agent navigates from the main homepage to the dedicated forums section. This step transitions the view from a general feed of space-related posts to the central hub where forum management occurs.\n\nThe action of clicking the 'Forums' link navigated the page from the main content feed (displaying articles about astronomy and space) to the 'List of forums' page. The new view displays a list of existing communities like 'AskReddit' and 'space', along with a prominent 'Create forum' link, setting the stage for the subsequent creation steps.",
+      "Having reached the list of forums, the agent proceeds to open the creation interface to define the new 'Cyberpunk' community. This transition moves the workflow from browsing existing topics to the specific form required to input the forum's metadata and sidebar configuration.\n\nClicking the 'Create forum' link replaced the list of existing forums with the 'Create new forum' form. This new page revealed the necessary input fields, including textboxes for 'Name', 'Title', 'Description', and 'Sidebar', along with a 'Create forum' button, allowing the agent to enter the specific details for the new community.",
+      "The agent is creating a new forum named Cyberpunk with a specific description and sidebar. This step involves filling in the Name field with the value 'Cyberpunk' on the 'Create new forum' form, which is the first required input in the workflow.\n\nThe post-state shows the 'Name' textbox (element 116) now contains the value 'Cyberpunk' and is focused, whereas in the pre-state the field was empty. No other visible changes occurred on the page, as the URL and other form fields remained static.",
+      "Continuing the creation of the Cyberpunk forum, the agent proceeds to populate the Title field. This step ensures the required Title attribute matches the forum name before moving on to the Description and Sidebar sections.\n\nIn the post-state, the 'Title' textbox (element 121) has been filled with the value 'Cyberpunk' and is now focused, while the pre-state showed this field empty. The 'Name' field retains its value, and the rest of the form layout remains unchanged.",
+      "The agent is in the process of creating a new forum named 'Cyberpunk' on the Postmill platform. Having already populated the Name and Title fields, this step involves entering the required description text to proceed with the form completion.\n\nThe action fills the 'Description' textbox with the text 'Welcome to the future'. In the post-state, the Description field now contains this value and is focused, whereas in the pre-state it was empty. No other visible changes occurred on the form page.",
+      "Continuing the forum creation workflow for 'Cyberpunk', the agent now populates the Sidebar configuration field with the requested list of categories to define the forum's structure before submission.\n\nThe action fills the 'Sidebar' textbox with the Markdown-formatted list '- Games', '- Books', '- Movies', '- Future'. In the post-state, the Sidebar field displays these values, and a preview panel below the field updates to show the four bullet-pointed items, whereas in the pre-state the sidebar field was empty and the preview was absent or blank.",
+      "The agent is in the final stage of creating a new forum named 'Cyberpunk' with the description 'Welcome to the future' and a sidebar containing 'Games', 'Books', 'Movies', and 'Future'. Having verified that all required fields are populated and the sidebar preview matches the requirements, the agent proceeds to submit the form by clicking the 'Create forum' button to finalize the creation.\n\nThe action triggered a navigation from the 'Create new forum' form page (URL: /create_forum) to the newly created forum's main page (URL: /f/Cyberpunk). The form fields and preview panel disappeared, replaced by the forum header, a sidebar displaying the configured categories ('Games', 'Books', 'Movies', 'Future'), and a 'Toolbox' section with management options, confirming the successful creation of the forum.",
+      "Following the submission of the forum creation form, the agent observes the post-creation state to verify that the new forum 'Cyberpunk' is live and accessible. This step represents the confirmation phase of the workflow, ensuring the forum was created with the correct metadata and sidebar configuration.\n\nThe state transition shows no change in the visible UI elements compared to the immediate post-submission state; the page remains on the 'Cyberpunk' forum view (URL: /f/Cyberpunk). The sidebar correctly lists 'Games', 'Books', 'Movies', and 'Future', and the 'Created' timestamp indicates the forum was just published, confirming the successful completion of the creation task without any new popups or blockers."
+    ],
+    "prompt_tokens": 990,
+    "total_tokens": 990,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "f8c6262e554f42f7906bdbef6488a2ac",
+    "timestamp_epoch": 1792006165.361075,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 8,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.4573330649873242,
+    "input_keys": [
+      "d3701a20c213d0a171ec6893d1cc6179cd0a04a89ef76fec95249d83c188aa4a",
+      "30110dc35f180e5e25ea46062c695370e8f10350264d8781e1d6a7eb549af41b",
+      "08fc779dbee61151eac44c304cd67781a23b6ed41ae4de08fb2a1dd33aa9b4f4",
+      "2aff13ae92ac4dd9a36e06d9c7a0cd356769c04b3ef049644450ab48fa809bfe",
+      "e6b909fc0f4a66d7ed807731d6f1404c58e3ce6de9ff11b7bee04925ff3eaa01",
+      "6411e3d798c88678bec3ccfc9342262dad56c63dfdac9889c50f1f7c335972b6",
+      "853c37c3a4200ed834ddc9eb000cdd6aa182e1e6678cbff6bf92ec8770691861",
+      "32d526e03b0403d9c61c7be699f89f96ee7078d2ca5897a369fa7379fd8d3bca"
+    ]
+  },
+  {
+    "record_id": "7365e5107fe94774839305d0108aab49",
+    "timestamp_epoch": 1792006165.438859,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.07630708799115382,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 649,
+    "input_sha256": [
+      "1d056d2aa81b0ebbf0be94a05c6674f6871553823cb717e4744fd5b38142c59c"
+    ],
+    "input_texts": [
+      "Title: Create New Forum Workflow\nDescription: Steps to create a new forum with specific name, description, and sidebar content.\n- Navigate to the 'Forums' section from the main page.\n- Click the 'Create forum' link to open the creation form.\n- Fill the required 'Name' field with the desired forum name.\n- Fill the required 'Title' field with the desired forum title.\n- Fill the required 'Description' field with the forum description text.\n- Fill the required 'Sidebar' field with a markdown list of items.\n- Click the 'Create forum' button to submit and publish the forum.\n- Verify the new forum appears in the list or redirects to the forum page."
+    ],
+    "prompt_tokens": 142,
+    "total_tokens": 142,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "cef0adbaec5b4029af9bc70a89e64510",
+    "timestamp_epoch": 1792006165.4390843,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.07667832900187932,
+    "input_keys": [
+      "744c55a90a4052b95c1712fbf50f5aafd42c26e5f2e1f84100e409186b6de543"
+    ]
+  },
+  {
+    "record_id": "9520ca93c989465d9d98be6bcafd9de1",
+    "timestamp_epoch": 1792006165.5104969,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.07038641898543574,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 744,
+    "input_sha256": [
+      "e960618a1e29af1ba4b232266f31160ebca118fb6d0f360e4ba3cd35b776d606"
+    ],
+    "input_texts": [
+      "Title: Forum Creation Form Requirements\nDescription: Key fields and constraints observed on the create_forum page.\n- The 'Name' field is required and has a placeholder 'This field is required.'\n- The 'Title' field is required and has a placeholder 'This field is required.'\n- The 'Description' field is required and includes a help description.\n- The 'Sidebar' field is required and supports markdown list formatting.\n- Sidebar items should be entered as a newline-separated list (e.g., '- Item1\\n- Item2').\n- All four fields (Name, Title, Description, Sidebar) must be filled before submission.\n- The form is located at the URL path '/create_forum'.\n- The submission button is labeled 'Create forum' and is located near the bottom of the form."
+    ],
+    "prompt_tokens": 160,
+    "total_tokens": 160,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "9f057952a3984b17a6023dee3714585e",
+    "timestamp_epoch": 1792006165.5107658,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.0707866590237245,
+    "input_keys": [
+      "e20931f489e72db2a3bbedd31765c6c7ad0a273c9024657df42673901da8706c"
+    ]
+  }
+]

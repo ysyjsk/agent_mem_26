@@ -155,6 +155,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--save-memory", action="store_true", help="Persist each completed trajectory and verify the shared memory can be loaded")
     parser.add_argument("--skip-evaluation", action="store_true", help="Build and validate saved memory without querying")
     parser.add_argument("--construction-trajectory-limit", type=int, default=None, help="Construction screening only: first N complete trajectories, requires --skip-evaluation")
+    parser.add_argument("--construction-trajectory-ids", nargs="*", default=None, help="Construction screening only: exact trajectory IDs to retain in every haystack, requires --skip-evaluation")
     parser.add_argument("--event-group-size", type=int, choices=[1, 2], default=1)
     parser.add_argument("--event-output-tokens", type=int, default=None, help="Output ceiling per event; paired extraction receives twice this budget")
     parser.add_argument("--event-max-input-tokens", type=int, default=None, help="Resource-aware preflight; reuse existing bounded-state fallback before oversized single-event requests")
@@ -267,6 +268,7 @@ def write_diagnostic_provenance(
         "event_max_input_tokens": args.event_max_input_tokens,
         "controller_max_retries": args.controller_max_retries,
         "construction_trajectory_limit": args.construction_trajectory_limit,
+        "construction_trajectory_ids": args.construction_trajectory_ids,
         "record_full_requests": args.record_full_requests,
         "reuse_build_embedding": args.reuse_build_embedding,
         "evidence_first": args.evidence_first,
@@ -467,7 +469,19 @@ def main() -> None:
         selected_questions=selected_questions,
         output_path=runtime_dir / "haystack.json",
     )
-    if args.construction_trajectory_limit is not None:
+    if args.construction_trajectory_limit is not None and args.construction_trajectory_ids:
+        raise SystemExit("Use either --construction-trajectory-limit or --construction-trajectory-ids, not both")
+    if args.construction_trajectory_ids is not None:
+        if not args.skip_evaluation or not args.construction_trajectory_ids:
+            raise SystemExit("Construction trajectory IDs require --skip-evaluation and at least one ID")
+        haystack = json.loads((runtime_dir / "haystack.json").read_text())
+        wanted = set(args.construction_trajectory_ids)
+        filtered = {qid: [tid for tid in ids if tid in wanted] for qid, ids in haystack.items()}
+        missing = sorted(wanted - {tid for ids in filtered.values() for tid in ids})
+        if missing:
+            raise SystemExit(f"requested construction trajectory IDs not present in selected haystack: {missing}")
+        write_json(runtime_dir / "haystack.json", filtered)
+    elif args.construction_trajectory_limit is not None:
         haystack = json.loads((runtime_dir / "haystack.json").read_text())
         write_json(runtime_dir / "haystack.json", {qid: ids[:args.construction_trajectory_limit] for qid, ids in haystack.items()})
     memory_config = build_memory_config(args, data_root)

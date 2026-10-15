@@ -1,0 +1,12 @@
+{
+  "trajectory_id": "49f98e9e",
+  "selection_reason": "Previously unused replacement case on the other frozen enterprise trajectory. Correct the explicit sort status count at state5, preserving field choices and neighboring states. Paired with reply confirmation before observing v11 results.",
+  "source_edits": [
+    {"state_index": 5, "field": "text", "old": "New sort order condition added, 1 of 1", "new": "New sort order condition added, 2 of 2"}
+  ],
+  "derived_rules": [
+    {"target": "event_0004_0005", "required": ["2 of 2", "Add Sort|sorting"], "forbidden": ["New sort order condition added, 1 of 1"]},
+    {"target": "event_0005_0006", "required": ["2 of 2", "Acquisition method", "Asset function"], "forbidden": []}
+  ],
+  "manual_checks": ["State5 corrected status is2of2; do not treat it as a newly observed extra action.", "The field chooser opening, options and intended Asset function key are unchanged.", "Do not transfer the revised status into untouched state6."]
+}

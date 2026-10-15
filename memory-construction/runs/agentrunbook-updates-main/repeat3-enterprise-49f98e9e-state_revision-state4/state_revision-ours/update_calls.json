@@ -1,0 +1,169 @@
+[
+  {
+    "record_id": "1a4f589415f640b282611683eb6f0228",
+    "timestamp_epoch": 1792017667.184692,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 12.06489167001564,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 42393,
+      "text_sha256": "5417be04f9d0395877a6440e256a0b2908be5e5573d15db909d2514d2b676a71",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13407,
+    "completion_tokens": 282,
+    "total_tokens": 13689,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "f8538270475a4fcc88fae55fd99f577c",
+    "timestamp_epoch": 1792017667.1849177,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "state_ids": [
+      3,
+      4,
+      5
+    ],
+    "full_input_tokens_preflight": 42526,
+    "prepared_input_tokens": 13407,
+    "state_max_chars": 12000,
+    "request_sha256": "5417be04f9d0395877a6440e256a0b2908be5e5573d15db909d2514d2b676a71",
+    "status": "parsed"
+  },
+  {
+    "record_id": "f4da11202efc4a929c12f70d26948ce4",
+    "timestamp_epoch": 1792017667.1849728,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 14,
+    "reused": 12
+  },
+  {
+    "record_id": "06ba65ee591248fba75cf7fbf98ce2e2",
+    "timestamp_epoch": 1792017667.1897082,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "129c86ac946270b9580182e2c30ece72dee11fa863d703baaceb6c8ff51be494",
+    "stage": "notes"
+  },
+  {
+    "record_id": "aa077ec3d2404a3fb51aaf17f795d881",
+    "timestamp_epoch": 1792017667.3626578,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 0,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.0009711259917821735,
+    "input_keys": [
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "3a57e30ee914797ac2779df2ab4b2afb5a8d6e0dc454b433ebbbe159d29ca213",
+      "60b689182bda9fe37a9f97696e7be9eb6b36ada1d45d6d76ba9a943ef931e869",
+      "3fdb767cad3be15b79f6767d7f77b33d3fd13adef2e59abb3a02b08e986f5508",
+      "1d355df6deee915f49eff0b6475642acbced364888530a67745e4860889d4d97",
+      "9f8d6ae2071c36acd18932652076fe369abc2af8ac37c2451d095ccfc4a84436",
+      "f12550faeb63d14ee8d60b50b9df42960508993d4ae2d178a0b081d88e21a6c7",
+      "1b9a51c692f14d6661f42d5f5518d3e8c605b263c89784e909e7305951dc6bf5",
+      "7aa6e0c5e71d5b98e1ab65d35b6c84987b0e7f9e486b47bfa3e95d2dea2b7c7b",
+      "32a651e3505dab9a3ef24dcca6647d8370d09c6d02141b4a4101ab608ae1cf54",
+      "d94a00d99c315a04df04a78446244b13d932c20f05c7b7c4e2fed5f473ec1903",
+      "39f153a2c0452e4baa76712fcd8e32b905d29b7108f17b9d6865dc0f745b61a1",
+      "94d2c566137c7745304cb8a9c7ab405da8ad1dca75ac9fac89d29c559ecee244",
+      "9fe9223c74cc095bfc42a895b70fe620dc6cc294b16200e353702427e4359cfe"
+    ]
+  },
+  {
+    "record_id": "545e9b9123194d928a7947f0afa263ac",
+    "timestamp_epoch": 1792017667.4636781,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.09852230700198561,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 991,
+    "input_sha256": [
+      "dd4ba930f632fcadb0d37f56b26a7c9c78b04690c5c3f3f2f81ad65e5f0f2862",
+      "87f234924dfcf2ce2fce2678f45f38fce6f49ef057aaa7ab6d8bbbe2f02eb957"
+    ],
+    "input_texts": [
+      "The agent navigates to the Assets list to begin sorting operations as part of the goal to organize assets by function. This step represents the initialization of the filtering interface, which is necessary before applying any sort criteria.\n\nAfter clicking the 'Show / hide filter' button, the filtering toolbar panel became visible. The button state changed from collapsed (expanded=False) to expanded (expanded=True), and a status message appeared confirming the filter area is now active, allowing the agent to access sorting controls.",
+      "With the filter panel now open, the agent proceeds to add a new sorting criterion to the asset list. This action is a key step in the workflow to sort assets by 'Asset function' in ascending order.\n\nClicking the 'Add Sort' button triggered an immediate update to the list status, which now displays 'New sort order condition added, 1 of 1'. This confirms that the sorting mechanism has been activated and is ready to accept the specific field selection."
+    ],
+    "prompt_tokens": 193,
+    "total_tokens": 193,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "b49e794ad7c6468a9e3bb14ba52bed36",
+    "timestamp_epoch": 1792017667.463777,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 14,
+    "actual_vectors": 2,
+    "cache_hits": 12,
+    "elapsed_seconds": 0.09876274401904084,
+    "input_keys": [
+      "ab01848a66637be6470d7b213013c603e7d52517183bf2c3291bb44833b6c62a",
+      "58e2a07f24b57f3c030b6c12f9663c7cae29630d416f21ff28df89a9b5566bc8",
+      "bda557aa1efbeb02dab92a9a6d348e85a328e48d18a84f0d9b05eea87c55500f",
+      "c4464039e9247be84d42ac0fdd723cea8bf5d58daf0ad7e6f5d6f88f3ecf8d98",
+      "5177baccfc069f69f382e89fe445874fa5c18c7aa7b9b5e565b0817236b1a2a6",
+      "8de43ff2e98a3e0fbc440cd2190ac2daa6bde67efff69e221db3626648fe1ac3",
+      "7df7d2c581c728ba42f868c94e226e2992c2ea127c0491e2322954d86012de25",
+      "9f661602c37722909a6b42cf1236598024a5dce8ed0f292ba89f50bc18ad6017",
+      "27a9969b5ab02bbffec49d1f9c58045b2ad4172ce8e3229491ac01d8a4ad5647",
+      "4f0a06fb168d98622175d264a6fefd526325a78c92caefc06a789e0efe774aa5",
+      "919165811ead9daaf8769faf14a4a5e37914727a933ad9f49ab4a73774aea34c",
+      "a3f0e468a20f5e3e9d17eef4c8528d64a228f63c353c53db8862fe8d9741e618",
+      "9fd788fc8dc0a6315ffaa899dd692066c12975b02c44f290fed9b43cd6f4f1f4",
+      "35d55e9f5af5ab658721d0cc48ef6ec266191c18f3cb1598bf49e3a4d14ab591"
+    ]
+  },
+  {
+    "record_id": "697c84427b1043d0a953701b03c79318",
+    "timestamp_epoch": 1792017667.4643517,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.8403999749571085e-05,
+    "input_keys": [
+      "2e5797b16d87690e81b95d262171fc80bf62a8a736e7657eaa44a6872d26b6bc"
+    ]
+  },
+  {
+    "record_id": "cc3032c20fff4a5a9b4aff00ece55916",
+    "timestamp_epoch": 1792017667.4647346,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.0520994439721107e-05,
+    "input_keys": [
+      "756cb8f22fbf96c14bf44d2a9e529622581c7c6a282e494eb8e8f1af75438353"
+    ]
+  }
+]

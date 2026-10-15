@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "update_id": "paper-complete-goal-20261015",
-  "goal": "Complete GOAL.md PAPER01–PAPER06: quality-preserving construction/update cost gains; full local text-only/adapted Small comparisons across web/enterprise, strong B3/Ours updates, ablations, scale, quality, paired repeats, real streaming, paper figures and reproducibility. Development tables are milestones, not completion.",
-  "current_deliverable": "PAPER01 next: parameterize existing update runner and complete eight fixed web/enterprise development update pairs plus post-update quality, then continue PAPER02–PAPER06 without treating this table as the final Goal. Existing construction_pair_v2_full10.csv and agentrunbook_update_b3_ours.csv are retained evidence.",
-  "rules": "GOAL.md and active_plan_task_ids define the current required plan. Mark tasks done only after real runs and stated outputs. Preserve historical records and failed results. Current route is local text-only/adapted; deferred native/visual/Judge tasks do not gate PAPER tasks. Reuse working services, isolate method caches, retain matched B3 optimizations, and let the existing execution session manage actual Goal status. All required PAPER tasks must finish before the total research Goal is complete.",
+  "update_id": "method-first-research-20261015",
+  "goal": "Discover and validate a quality-preserving, cost-effective Agent Memory Construction method against strong B3, then freeze the method and complete all claim-relevant paper experiments and writing. Venue-agnostic. Current priority is causal diagnosis and method development, not full-scale execution.",
+  "current_deliverable": "METHOD01 then METHOD02: use existing evidence for one bounded diagnosis, rebuild only the necessary matched initial snapshots, run credible strong-B3/current-Ours comparisons and implement a narrow old-memory + source-delta update candidate. Save actual input/output/model work, publication costs and derived-memory quality. Do not launch full Small or conclude from incompatible old repeats. These tasks are planned; no experiment was launched by this documentation update.",
+  "rules": "GOAL.md is authoritative. Only METHOD tasks are active now. After METHOD03 succeeds, automatically activate the claim-relevant PAPER tasks without requesting further user approval; if insufficient, iterate METHOD02 using measured bottlenecks. Full experiment coverage remains the final goal, not the next action before method effectiveness. Preserve all old evidence. Generic optimizations belong in strong B3 too. Do not re-key stale outputs as valid new-configuration cache entries. No stage is complete from a script, an old report, or raw persistence alone. No duplicate executor; native Goal state must be verified by the current VS Code session.",
   "latest_r5_audit": "2026-10-14 final audit: adapted web Small ended after 5322.23s with 67/100 trajectories successful and trajectory 3331c568 failed. model_calls has 1490 rows (1398 success, 67 RuntimeError, 15 HTTP 429 RateLimitError, 10 HTTP 400 BadRequestError); the terminal provider response is Aliyun Arrearage. failure_summary.json records the partial state. No per-question, prompt-build summary, aggregate, or complete Small result exists. Do not restart or overwrite this failed directory. Native GPT/Judge remain pending; all Qwen scores are adapted/evaluator-only.",
   "latest_r5_progress": "2026-10-14 local fallback smoke completed in runs/agentrunbook-r-native-small-20261014/local-text-only/smoke-run-enterprise-v3: one official-schema trajectory prefix (4 states), one enterprise question, local Qwen3.5-9B Reader/Controller and local Qwen3-Embedding-8B, prompt image_url=0, build 42.59s, Reader successful, 0/1 development proxy score. The runner now has explicit --text-only, isolated import precedence, and adapter_provenance.json. It is diagnostic text-only/micro and cannot replace native or full adapted Small.",
   "tasks": [
@@ -198,37 +198,61 @@
     {
       "id": "PAPER01",
       "title": "扩展并完成更新主结果",
-      "status": "todo",
-      "depends_on": [],
+      "status": "deferred",
+      "depends_on": [
+        "METHOD03"
+      ],
       "acceptance": "固定两域八个开发修订配对后完成正式更新集；Fresh/B0、强 B3、Ours；新轨迹追加、既有轨迹增长、状态/工作流修订；更新后质量检查与真实调用成本。",
       "expected_outputs": [
-        "results/tables/agentrunbook_update_b3_ours.csv",
-        "reports/agentrunbook_update_b3_ours.md",
-        "冻结的正式更新 manifest 与逐运行记录"
+        "results/tables/agentrunbook_update_main.csv",
+        "reports/agentrunbook_update_main.md",
+        "reports/agentrunbook_update_cumulative.svg",
+        "reports/agentrunbook_update_fresh_comparison.svg",
+        "results/tables/agentrunbook_revision_case_reader.csv"
       ],
-      "evidence": []
+      "evidence": [
+        "Primary/repeat state and workflow revision rows plus same-trajectory growth are in results/tables/agentrunbook_update_main.csv (40 rows) and reports/agentrunbook_update_main.md; all 40 source-grounded/persisted-reload checks pass.",
+        "Same-trajectory growth is measured separately from new-trajectory append: web 149.11/109.92s (B3/Ours) and enterprise 168.99/129.85s in the first order, with reverse-order repeats web 61.01/57.74s and enterprise 132.15/133.84s; exact prior-event reuse is 0 in all growth Ours rows because the global action/step dependency key changes.",
+        "Reader regression on growth snapshots is persisted in results/tables/agentrunbook_growth_reader_regression.csv and reports/agentrunbook_growth_reader_regression.md: 16/16 complete parseable, zero truncation/service/parse failures, B3/Ours 3/4 in each domain; not an official/native quality result.",
+        "Fresh/B0 touched-partition reference is complete for all eight frozen state/workflow revisions in results/tables/agentrunbook_update_main.csv and reports/agentrunbook_update_main.md: Fresh 1249.20s/56 controller calls/589121 known input tokens vs primary B3 227.90s/18 calls/132987 and Ours 206.79s/16 calls/119650; the latest 80/80 persisted rows pass source-grounded checks. Fresh/B0 is explicitly scoped as a no-build-cache touched-partition rebuild, not a full domain rebuild. The fixed eight-case B3/Ours Reader comparison is complete and recorded separately; Fresh Reader coverage remains partial and is not presented as full QA. PAPER01 core adapted update deliverable is complete.",
+        "Native GPT/Judge metadata probe on October 15, 2026 could not connect to api.openai.com (connection refused); no native model or Judge substitution was made.",
+        "Extended fixed-question Reader regression covers all eight revision cases for matched B3/Ours (16 method-case rows, 64 answers): both score 21/32, with 64/64 complete/parseable and zero truncation/service/parse failures. Web B3/Ours 12/16 vs 13/16; enterprise 9/16 vs 8/16. Fresh quality remains partial (state revisions for both domains plus web workflow only), explicitly excluded from the full eight-case matched QA table. Source-grounded update checks remain 48/48; report/table: reports/agentrunbook_revision_case_reader.md and results/tables/agentrunbook_revision_case_reader.csv.",
+        "Four complete B3/Ours update passes now exist in results/tables/agentrunbook_update_repeat_summary.csv and reports/agentrunbook_update_main.md. Every pass has 8/8 quality checks. B3/Ours aggregate update seconds are 227.90/206.79, 208.82/175.02, 662.50/186.42 and 610.64/219.36; r2/r3 expose 66 vs 16 event outputs and ~426k vs ~97k input tokens, while r0/r1 are near-ties. This supports an event-work reduction claim under cache-miss/rebuild-heavy cases, not a universal wall-time speedup."
+      ],
+      "status_before_completion_review_20261015": "done",
+      "remaining_acceptance_20261015": "Eight-case development updates, repeats and Reader checks are retained; formal frozen update-set coverage required by GOAL.md is not yet evidenced. Do not rerun completed development cases.",
+      "status_before_method_first": "in_progress",
+      "deferred_reason": "用户要求先完成 METHOD01–METHOD03 的有效方法探索与确认。达到条件后自动进入论文阶段，已有证据保留，暂不全量重跑。"
     },
     {
       "id": "PAPER02",
-      "title": "收敛冷构建方法与正式配置",
-      "status": "todo",
+      "title": "冻结方法后的冷构建对照与成本边界",
+      "status": "deferred",
       "depends_on": [
-        "PAPER01"
+        "METHOD03"
       ],
-      "acceptance": "复用既有四格；测试 single/joint 相同有界输入准备，按质量约束及构建成本收敛正式配置，保留负结果，不强制重复全部开发运行。",
+      "acceptance": "以 METHOD03 最终方法为准完成必要冷构建参照与成本边界，复用配置完全匹配的有效旧结果；历史四格/候选不等于最终方法冻结。",
       "expected_outputs": [
         "results/tables/construction_pair_v2_full10.csv",
         "新增冷构建候选表",
         "正式方法配置与选择依据"
       ],
-      "evidence": []
+      "evidence": [
+        "Common-preflight joint candidate and fixed enterprise-5 negative expansion are persisted in results/tables/construction_pair_v3_common_preflight.csv, results/tables/construction_pair_v3_full10_enterprise.csv and corresponding reports.",
+        "Two-trajectory screen reduced wall/input/calls, but fixed enterprise-5 increased wall time 502.39→1203.82s despite 39% fewer controller calls and 28% fewer input tokens; retained as negative result, not final configuration.",
+        "Frozen four-cell table and decision report now exist at results/tables/paper02_cold_construction.csv and reports/paper02_cold_construction.md. The combined/common-preflight candidates reduce measured input/calls but regress wall time on fixed-10; final selection and downstream scale/ablation remain in progress.",
+        "New v4 paired screen on the same long enterprise trajectories (31 states/29 transitions): single-event baseline 277.40s, 32 controller calls, 283175 LLM input/5868 output tokens; common-preflight joint 274.71s, 20 calls, 224445 input/6282 output tokens, 64 embedding vectors in both. Joint parsed 13 groups/split 1; all 29 IDs, source actions, state pairs/order and persisted reload checks pass. This is near-tie wall time (-1.0%) with fewer calls (-37.5%) and input (-20.7%), not a material end-to-end speedup. Table/report: results/tables/construction_pair_v4_common_preflight.csv and reports/construction_pair_v4_common_preflight.md. Existing fixed-5 negative expansion is reused, not repeated.",
+        "Frozen decision recorded in reports/paper02_cold_construction.md: use bounded common-preflight/group=2 plus exact-input Embedding reuse for remaining adapted experiments when model work is the objective; split oversized groups to single-event extraction. Keep single-event as the wall-time reference and retain the fixed-10 wall-time regression as a negative result."
+      ],
+      "status_before_method_first": "done",
+      "deferred_reason": "用户要求先完成 METHOD01–METHOD03 的有效方法探索与确认。达到条件后自动进入论文阶段，已有证据保留，暂不全量重跑。"
     },
     {
       "id": "PAPER03",
       "title": "两域完整 Small 基础对照和质量",
-      "status": "todo",
+      "status": "deferred",
       "depends_on": [
-        "PAPER02"
+        "METHOD03"
       ],
       "acceptance": "完成 text-only/adapted 两域完整 Small：AgentRunbook-R、RAG+Notes、Raw RAG、Ours；B3/Ours 同表示同优化；固定开发/正式问题范围、逐题答案、统一评分和构建质量。",
       "expected_outputs": [
@@ -236,13 +260,20 @@
         "同表示 B3/Ours 表",
         "正式逐题质量表和数据范围"
       ],
-      "evidence": []
+      "evidence": [
+        "Adapted two-domain main table is complete at results/tables/paper03_local_adapted_main.csv and reports/paper03_local_adapted_main.md: AgentRunbook-R 1170.71s/124 calls/761072 input tokens/6-8; RAG+Notes 243.53s/11 calls/4-8; Raw RAG 89.06s/5-8; RAG+Notes+backfill 243.53s/8-8; matched Strong B3 537.68s/91 calls/6-8; matched Ours 690.42s/91 calls/6-8. All rows are text-only/adapted development evidence with complete parseable Reader outputs and unified fixed-question scoring. Native multimodal Small/Judge remains separate and pending."
+      ],
+      "status_before_completion_review_20261015": "done",
+      "remaining_acceptance_20261015": "Current table explicitly contains 10 trajectories / 91 states / 8 questions. Full local adapted Small requires the two 100-trajectory haystacks (200 unique trajectories) and the frozen question split derived from 451 questions. Native/Judge availability does not block local construction.",
+      "status_before_method_first": "in_progress",
+      "deferred_reason": "用户要求先完成 METHOD01–METHOD03 的有效方法探索与确认。达到条件后自动进入论文阶段，已有证据保留，暂不全量重跑。"
     },
     {
       "id": "PAPER04",
       "title": "关键消融、规模与更新比例",
-      "status": "todo",
+      "status": "deferred",
       "depends_on": [
+        "PAPER01",
         "PAPER03"
       ],
       "acceptance": "联合构建、事件复用和精确向量复用消融；固定递增轨迹规模及至少三个更新比例；复用可比旧运行，真实实现适用的 B0/B1/B2/B3/Ours 对照。",
@@ -250,38 +281,107 @@
         "组件消融表",
         "规模和更新比例表图"
       ],
-      "evidence": []
+      "evidence": [
+        "Adapted PAPER04 table/report/figure are complete at results/tables/paper04_ablation_scale.csv, reports/paper04_ablation_scale.md and reports/paper04_ablation_scale.svg, covering the four-cell cold matrix, frozen 12/24-window B0/Ours-dev/B3-c2 scale runs and eight fixed update cases.",
+        "Controlled 1/3/6-state enterprise revision screen is complete at results/tables/paper04_update_rate.csv and reports/paper04_update_rate.md; all six source-grounded/persisted checks pass, with paired publish reductions 85.3/73.7/50.2% and LLM-input reductions 85.3/70.5/46.1%. The fixed Reader slice is 3/4 B3 vs 2/4 Ours, both 4/4 complete/parseable; it remains a local quality constraint.",
+        "No unmeasured B0/B1/B2 rows are imputed. The adapted scale/ablation deliverable is complete; native Small and official Judge are not represented by these rows."
+      ],
+      "status_before_completion_review_20261015": "done",
+      "remaining_acceptance_20261015": "Existing four-cell, old-core 12/24-window, and one-trajectory update-rate runs are partial evidence. Complete the frozen current-method scale and key ablations; keep reusable comparable runs.",
+      "status_before_method_first": "todo",
+      "deferred_reason": "用户要求先完成 METHOD01–METHOD03 的有效方法探索与确认。达到条件后自动进入论文阶段，已有证据保留，暂不全量重跑。"
     },
     {
       "id": "PAPER05",
-      "title": "配对重复与真实连续流式",
-      "status": "todo",
+      "title": "按最终主张完成连续增长与流式评测",
+      "status": "deferred",
       "depends_on": [
-        "PAPER03"
+        "METHOD03"
       ],
-      "acceptance": "核心 B3/Ours 至少三次交替顺序配对重复；至少三个到达负载的连续更新，记录发布、累计成本、Freshness P50/P95、Goodput 和质量。",
+      "acceptance": "保留已有增长/流式边界探针；若最终方法主张连续增长或流式优势，完成同一预定到达序列下至少三个负载及所需重复和真实 Freshness/Goodput。若最终聚焦局部修订，说明科学范围并保留边界负结果，不将不适用等同实验通过。",
       "expected_outputs": [
         "重复与波动表",
         "连续更新原始记录",
         "流式性能表图"
       ],
-      "evidence": []
+      "evidence": [
+        "Four alternating-order B3/Ours passes over the fixed eight revision cases are complete and retained in results/tables/agentrunbook_update_repeat_summary.csv; every pass has 8/8 source-grounded/reload checks.",
+        "A real local-model closed-loop source-prefix stream is complete at runs/agentrunbook-stream-v1-enterprise-0ab99e0c. The target enterprise trajectory is absent from independent B3/Ours clones; batches of 1, 2 and 3 newly arrived transitions are materialized only at arrival, each update performs actual AgentRunbook-R extraction and Embedding, saves/reloads, and runs a retrieval probe. All 6/6 arrival quality checks and 6/6 reload/retrieval probes pass.",
+        "Streaming table/report/figure: results/tables/streaming_freshness_goodput.csv, reports/streaming_freshness_goodput.md, reports/streaming_freshness_goodput.svg. B3 publish total 187.30s, Freshness P50/P95 74.46/98.12s, goodput 0.0320 transitions/s, 9 controller calls and 76,918 known input tokens; Ours 190.34s, 79.98/90.97s, 0.0315 transitions/s, 10 calls and 77,369 input tokens. The current full-prefix dependency key yields no streaming-growth reuse, so Ours is not selected for this protocol; the negative result is retained.",
+        "Scope is local text-only/adapted controlled source-prefix streaming, not official LongMemEval native Small; official Judge/native QA remains pending."
+      ],
+      "status_before_completion_review_20261015": "done",
+      "remaining_acceptance_20261015": "Four update passes and one 3-batch closed-loop growth probe are retained. Three batch sizes are not three arrival-load conditions. Complete shared fixed-timestamp arrival workloads at three loads and compatible final-configuration repeats.",
+      "status_before_method_first": "todo",
+      "deferred_reason": "用户要求先完成 METHOD01–METHOD03 的有效方法探索与确认。达到条件后自动进入论文阶段，已有证据保留，暂不全量重跑。",
+      "activation_condition": "METHOD03 冻结最终科学主张后决定正式多负载评测的必要范围；PAPER06 前必须记录决定与依据。"
     },
     {
       "id": "PAPER06",
       "title": "论文与复现交付",
-      "status": "todo",
+      "status": "deferred",
       "depends_on": [
-        "PAPER04",
-        "PAPER05"
+        "PAPER01",
+        "PAPER02",
+        "PAPER03",
+        "PAPER04"
       ],
-      "acceptance": "所有必需实验真实完成；论文主表/消融/扩量/质量/重复/流式图可追溯；方法与实验章节、结论局限、配置环境和运行命令齐全。",
+      "acceptance": "最终方法确认且全部支撑其主张的正式实验完成，包括 PAPER05 适用范围的结论；表图、方法/实验章节、局限和可运行复现说明齐全可追溯。历史开发表不能代替当前方法正式结果。",
       "expected_outputs": [
         "reports/final_research_report.md",
         "论文表图与方法/实验草稿",
         "复现说明"
       ],
-      "evidence": []
+      "evidence": [
+        "Current paper-facing consolidation is in reports/final_research_report.md, with main adapted comparison, cold candidate decision, update cost/quality, scale/ablation, continuous Freshness/Goodput and explicit native/Judge limitations.",
+        "Existing method/experiment drafts remain in reports/construction_cost_paper_draft.md and reports/dev_adapted_paper_draft.md; tables and SVG figures are linked from the consolidated report.",
+        "Reproduction entry points are recorded for tools/run_agentrunbook_updates.py, tools/run_agentrunbook_stream.py and tools/report_streaming_freshness.py. Final report still requires official/native blocked-route disposition and any remaining adapted completeness checks before total Goal completion."
+      ],
+      "status_before_completion_review_20261015": "in_progress",
+      "remaining_acceptance_20261015": "Draft report exists; final delivery awaits outstanding full-size, current-method scale/ablation, formal-update and streaming experiments.",
+      "status_before_method_first": "in_progress",
+      "deferred_reason": "用户要求先完成 METHOD01–METHOD03 的有效方法探索与确认。达到条件后自动进入论文阶段，已有证据保留，暂不全量重跑。"
+    },
+    {
+      "id": "METHOD01",
+      "title": "解释无收益原因并建立同配置可信对照",
+      "status": "done",
+      "depends_on": [],
+      "acceptance": "复用现有日志完成有限成本归因；起始快照、抽取版本/提示词/预算一致，强 B3 保留合法缓存；固定开发案例有真实配对结果，明确下一候选将减少的主要计算。仅补必要测量，不新建框架。",
+      "expected_outputs": [
+        "已有 optimization_log 的本轮原因/决策记录",
+        "新配置起始快照及真实 B3/Ours 配对原始记录"
+      ],
+      "evidence": ["2026-10-15: matched-web-v1 and matched-enterprise-v1 prepared only four selected trajectory partitions; both persisted-cache no-change B3 checks made zero LLM/Embedding calls. Source-bound event keys are saved, legacy outputs are no longer re-keyed. Expanded20 no-request-cache comparison excluded. See reports/optimization_log.md and runs/method-first-20261015."]
+    },
+    {
+      "id": "METHOD02",
+      "title": "实现并迭代能减少主要模型工作的候选",
+      "status": "in_progress",
+      "depends_on": [
+        "METHOD01"
+      ],
+      "acceptance": "优先验证已有记忆＋源变化驱动的增量编辑，沿用原结构与发布路径；每次一至两个因素，最多两个候选；有输入/输出、真实调用/发布成本及派生记忆与固定 Reader 质量。无效则依据原因改机制，不立即扩量。",
+      "expected_outputs": [
+        "候选实现及真实配对结果",
+        "保留/修改/淘汰依据及下轮动作"
+      ],
+      "evidence": ["2026-10-15: v1-v10 failures retained in optimization_log.md; v9 validation bug explicitly invalidated. Current v11 delta_guarded performs literal edits with explicit obsolete/current evidence and local state context, deterministic source append for additions/previously unsummarized narrow literals. Three fresh pairs per two source replacements reduce tokens77.2-78.5% web and91.6-92.3% enterprise; wall means26.79->12.59s and17.66->6.12s. Eight additive cases now zeroLLM with preserved derived content. Two new replacements tested, one JSON fallback cost retained. Fixed Reader regression running, no freeze/full expansion."]
+    },
+    {
+      "id": "METHOD03",
+      "title": "确认稳定收益和质量后冻结最终方法",
+      "status": "in_progress",
+      "depends_on": [
+        "METHOD02"
+      ],
+      "acceptance": "固定两域开发集获得成组成本收益，关键同配置配对三次重复并在少量新案例确认方向，质量无未解释明显退化；收益能归因于方法机制并有关键消融。20%–30% 是开发参考而非硬门槛。通过后自动激活 PAPER 正式阶段；未通过继续 METHOD02。",
+      "expected_outputs": [
+        "冻结的方法/代码/数据/配置标识与匹配起始快照",
+        "成本及质量确认结果",
+        "最终科学主张及所需正式实验范围"
+      ],
+      "evidence": ["v11 paired repeats complete: results/tables/method_v11_repeats.csv; manual generated memory checks in reports/method_literal_quality_review.md. New reply/sort replacements predeclared in configs before running. run_method_v11_followup.sh is executing fixed Reader and one resampling of v5 differences. Method remains unfrozen pending quality interpretation, including inherited prose/causal limitations."]
     }
   ],
   "backlog": [
@@ -322,12 +422,29 @@
     }
   ],
   "active_plan_task_ids": [
+    "METHOD01",
+    "METHOD02",
+    "METHOD03"
+  ],
+  "goal_runtime_note": "2026-10-15 current session get_goal confirmed active research objective. No duplicate Goal/executor created. METHOD03 not complete; full paper work remains.",
+  "completion_review_20261015": {
+    "source": "GOAL.md unchanged full-experiment acceptance, compared with actual reports and official Small manifest",
+    "small_question_mappings": 451,
+    "small_unique_haystacks": 2,
+    "small_trajectories_per_haystack": 100,
+    "small_unique_trajectories": 200,
+    "paper03_current_trajectories": 10,
+    "paper03_current_questions": 8,
+    "paper05_current_scope": "one trajectory, three batches in a closed-loop probe; no three arrival-rate conditions",
+    "preservation": "All measured results and existing evidence entries retained; only premature task completion corrected."
+  },
+  "current_phase": "method_exploration",
+  "next_phase_task_ids": [
     "PAPER01",
     "PAPER02",
     "PAPER03",
     "PAPER04",
     "PAPER05",
     "PAPER06"
-  ],
-  "goal_runtime_note": "No native Goal tool was queried or changed by this documentation update. Previous paused/blocked statements are historical observations; the active VS Code executor must verify current state."
+  ]
 }

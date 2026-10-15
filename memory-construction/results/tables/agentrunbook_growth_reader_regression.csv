@@ -1,0 +1,5 @@
+domain,method,questions,complete_parseable,correct,truncated,service_failure,parse_failure,pending_judge,reader_input_tokens,reader_output_tokens,prompt_build_wall_s,reader_generation_wall_s,memory_query_wall_sum_s,raw_path
+web,b3,4,4,3,0,0,0,0,41526,47,88.03916355100228,14.93221450902638,86.51279533698107,runs/agentrunbook-updates-main/reader-growth-web-b3
+web,ours,4,4,3,0,0,0,0,40964,47,532.522822563973,14.790047477988992,530.8194012560125,runs/agentrunbook-updates-main/reader-growth-web-ours
+enterprise,b3,4,4,3,0,0,0,0,46730,438,283.60570976202143,26.25947123201331,282.2256727349886,runs/agentrunbook-updates-main/reader-growth-enterprise-b3
+enterprise,ours,4,4,3,0,0,0,0,44347,175,137.53294072998688,17.995924651011592,136.34834819403477,runs/agentrunbook-updates-main/reader-growth-enterprise-ours

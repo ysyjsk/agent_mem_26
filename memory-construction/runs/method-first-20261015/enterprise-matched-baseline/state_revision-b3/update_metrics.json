@@ -1,0 +1,49 @@
+{
+  "policy": "b3",
+  "case": "state_revision",
+  "scope": "adapted_AgentRunbookR_local_update",
+  "starting_snapshot": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-adapted-text-v1/results/enterprise-expanded20-agentrunbook-r-officialroot-build-v1/memory_state",
+  "starting_cache": "independent clones; exact requests and vectors preserved equally",
+  "setup_load_and_seed_s_excluded": 2.479921760997968,
+  "update_to_queryable_publish_s": 392.59203526200145,
+  "reextracted_event_outputs": 15,
+  "regenerated_notes": 2,
+  "llm_calls": 10,
+  "llm_input_tokens_known": 114418,
+  "llm_output_tokens_known": 7068,
+  "embedding_calls": 3,
+  "embedding_vectors": 17,
+  "embedding_tokens_known": 2305,
+  "unknown_usage_calls": 0,
+  "api_failed_calls": 0,
+  "exact_request_hits": 0,
+  "dependency_reused_event_ids": [],
+  "embedding_hits": 16,
+  "load_verified": true,
+  "event_count": 142,
+  "note_count": 20,
+  "qa_status": "source_grounded_checks_passed",
+  "quality_checks": {
+    "new_fact_present": true,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": "not_applicable_b3",
+    "dirty_event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "reused_event_count": 0,
+    "unchanged_candidate_event_count": 13,
+    "fixed_reader_regression": "not_run",
+    "quality_scope": "source_grounded_update_checks; fixed Reader regression scheduled separately",
+    "quality_pass": true
+  },
+  "trajectory_id": "0ab99e0c",
+  "state_index": 5,
+  "revision_count": 1,
+  "state_indices": [
+    5
+  ],
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/enterprise-matched-baseline/state_revision-b3"
+}

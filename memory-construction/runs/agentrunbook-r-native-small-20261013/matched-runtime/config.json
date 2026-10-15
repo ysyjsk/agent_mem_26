@@ -22,8 +22,14 @@
     "disable_thinking": false,
     "max_completion_tokens": 8192
   },
+  "embedding": {
+    "model": "Qwen3-Embedding-8B",
+    "base_url": "http://127.0.0.1:8114/v1",
+    "max_input_tokens": 4096
+  },
   "local_model_paths": {
-    "reader_controller": "/data/predator/ly/Mem/models/Qwen3.5-9B"
+    "reader_controller": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+    "embedding": "/data/predator/ly/Mem/models/Qwen3-Embedding-8B"
   },
   "gpu_mapping": {
     "reader_controller_physical_gpu": 0,

@@ -1,0 +1,10 @@
+domain,method,repeat,questions,complete_parseable,correct,truncated,service_failure,parse_failure,reader_input_tokens,reader_output_tokens,prompt_build_wall_s,reader_generation_wall_s,raw_path
+web,fresh,r1,4,4,3,0,0,0,31334,47,15.982396753010107,10.386840138002299,runs/agentrunbook-updates-main/reader-revision-web-fresh-state
+web,b3,r1,4,4,3,0,0,0,41813,138,14.004917790007312,15.986701046989765,runs/agentrunbook-updates-main/reader-revision-web-b3-state
+web,ours,r1,4,4,3,0,0,0,40505,1133,16.097295576008037,43.797335655021016,runs/agentrunbook-updates-main/reader-revision-web-ours-state-r1
+enterprise,fresh,r1,4,4,2,0,0,0,17064,34,16.103278904018225,5.845955258992035,runs/agentrunbook-updates-main/reader-revision-enterprise-fresh-state
+enterprise,fresh,r2,4,4,2,0,0,0,16777,459,15.889772353984881,17.646972673013806,runs/agentrunbook-updates-main/reader-revision-enterprise-fresh-r2
+enterprise,b3,r1,4,4,3,0,0,0,18334,36,16.924791642988566,6.316211914992891,runs/agentrunbook-updates-main/reader-revision-enterprise-b3-state
+enterprise,b3,r2,4,4,3,0,0,0,21199,693,16.855309639999177,25.0506173990143,runs/agentrunbook-updates-main/reader-revision-enterprise-b3-r2
+enterprise,ours,r1,4,4,2,0,0,0,19607,305,16.270660779002355,14.099530114996014,runs/agentrunbook-updates-main/reader-revision-enterprise-ours-state
+enterprise,ours,r2,4,4,2,0,0,0,17291,256,15.527631686010864,12.067343697999604,runs/agentrunbook-updates-main/reader-revision-enterprise-ours-r2

@@ -1,0 +1,264 @@
+[
+  {
+    "record_id": "8c9bf2573dc049adabf90538c3e1913a",
+    "timestamp_epoch": 1792043155.3409474,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 1.3749858980008867,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 2983,
+      "text_sha256": "61a7dff40f3b4db52720c27149ff590de4759355784334f3200ef06a9b7bf8c2",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 633,
+    "completion_tokens": 43,
+    "total_tokens": 676,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "bcd97300945f4950ac7afd4f35f4e4c1",
+    "timestamp_epoch": 1792043155.3411038,
+    "channel": "event_delta",
+    "status": "fallback",
+    "event_ids": [
+      "event_0004_0005"
+    ],
+    "reason": "invalid single-event literal edits or ambiguous anchor"
+  },
+  {
+    "record_id": "0a5ee029273d45a5872c8decce7bc22f",
+    "timestamp_epoch": 1792043155.3782616,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 29335,
+    "prepared_input_tokens": 9424,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "00db7358ab1d460d88c6a7fca5f8350c",
+    "timestamp_epoch": 1792043162.2293737,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 6.850702341005672,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30080,
+      "text_sha256": "1a26183e7503d25ce7da5a36f76d650d6b272d8c0599e75ff703f1f320bd6891",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 9424,
+    "completion_tokens": 145,
+    "total_tokens": 9569,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "aa536f365375462ab4efa9c873b3489d",
+    "timestamp_epoch": 1792043162.229571,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "ae5de1e185074c08bc72054e97f7344c",
+    "timestamp_epoch": 1792043162.2296476,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "absent_literal_source_merge_v11",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0005_0006"
+    ],
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -42,5 +42,5 @@\n \t\t\t\t[a34] region '', live='polite', relevant='additions text'\n \t\t\t\t\tStaticText 'Unfiltered Assets list showing 1 to 20 of 2,915 records'\n-\t\t\t\t\tStaticText 'New sort order condition added, 1 of 1'\n+\t\t\t\t\tStaticText 'New sort order condition added, 2 of 2'\n \t\t\t\t[a35] region '', live='assertive', relevant='additions text'\n \t\t\t\t[a41] region 'Assets, filtering toolbar', visible",
+        "append_only": false,
+        "role": "pre-state"
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent continues configuring the sort order by selecting the specific field to sort the assets by. This step represents choosing the primary sort criterion from the available options.",
+        "state_transition": "Clicking the 'Order results by the following fields. Acquisition method' combobox opens a dropdown list of sortable fields. The list reveals options including 'Acquisition method', 'Asset function', 'Asset tag', and many others, allowing the agent to select 'Asset function' as the sort key."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent continues configuring the sort order by selecting the specific field to sort the assets by. This step represents choosing the primary sort criterion from the available options.",
+        "state_transition": "Clicking the 'Order results by the following fields. Acquisition method' combobox opens a dropdown list of sortable fields. The list reveals options including 'Acquisition method', 'Asset function', 'Asset tag', and many others, allowing the agent to select 'Asset function' as the sort key.\nCurrent pre-state observation (state 5, corrected source): StaticText 'New sort order condition added, 2 of 2'"
+      }
+    ],
+    "absent_old_literals": [
+      "1"
+    ],
+    "scope": "literal numeric/value changes only; paraphrase validity requires review"
+  },
+  {
+    "record_id": "49016680680b456e828c75388e79066c",
+    "timestamp_epoch": 1792043162.2297103,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 14,
+    "reused": 12
+  },
+  {
+    "record_id": "e770c473652041f5a2c7378aa1e5c333",
+    "timestamp_epoch": 1792043162.2345037,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "129c86ac946270b9580182e2c30ece72dee11fa863d703baaceb6c8ff51be494",
+    "stage": "notes"
+  },
+  {
+    "record_id": "2002f51b25ea42beadfe32b56f50d0d1",
+    "timestamp_epoch": 1792043163.3416514,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9763976840185933,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 14266,
+    "input_sha256": [
+      "d52b9dd459d2f5b97a9e0ca579cab86cb252c8fd55798e3bec19ada138b4bb15"
+    ],
+    "input_texts": [
+      "State 5\nRootWebArea 'Assets | ServiceNow'\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[230] region 'There are 0 announcements displayed', visible, live='polite', relevant='additions text'\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, describedby='logo-tooltip'\n\t\t\t[66] image 'ServiceNow Service Management', visible\n\t\t[78] button 'All', clickable, visible, expanded=False\n\t\t[79] button 'Favorites', clickable, visible, expanded=False\n\t\t[80] button 'History', clickable, visible, expanded=False\n\t\t[81] button 'Workspaces', clickable, visible, expanded=False\n\t\t[83] button 'More menus', clickable, visible, expanded=False\n\t\tgeneric, describedby='title-tooltip'\n\t\t\tStaticText 'Assets'\n\t\t\t[96] button 'Create favorite for Assets', clickable, visible, live='polite', relevant='additions text', pressed='false'\n\t\t[108] search '', visible\n\t\t\t[112] combobox 'Search', clickable, visible, autocomplete='both', hasPopup='listbox', expanded=False\n\t\t\t[113] region '', live='polite', relevant='additions text'\n\t\t\t\tStaticText 'No exact match. Press Enter for full results.'\n\t\t\t[114] combobox 'Choose search context', clickable, visible, hasPopup='listbox', expanded=False\n\t\t[125] button 'Scope selectors', clickable, visible, expanded=False\n\t\t[132] button 'Sidebar discussions', clickable, visible, expanded=False\n\t\t[138] button 'Show help', clickable, visible, expanded=False\n\t\t[166] button 'Show notifications', clickable, visible, expanded=False\n\t\t[178] button 'Jill Watts: available', clickable, visible, expanded=False\n\t\t\t[181] image 'Jill Watts is Available', visible\n\t\t\t\tStaticText 'JW'\n\t[195] main '', visible\n\t\t[a] Iframe 'Main Content', visible\n\t\t\tRootWebArea 'Assets | ServiceNow', focused\n\t\t\t\t[a34] region '', live='polite', relevant='additions text'\n\t\t\t\t\tStaticText 'Unfiltered Assets list showing 1 to 20 of 2,915 records'\n\t\t\t\t\tStaticText 'New sort order condition added, 2 of 2'\n\t\t\t\t[a35] region '', live='assertive', relevant='additions text'\n\t\t\t\t[a41] region 'Assets, filtering toolbar', visible\n\t\t\t\t\t[a44] button 'Actions', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b2'\n\t\t\t\t\t\tStaticText 'List controls'\n\t\t\t\t\t[a46] button '\\uf18a Show / hide filter', clickable, visible, expanded=True, controls='alm_assetfilterdiv'\n\t\t\t\t\t\tStaticText '\\uf18a'\n\t\t\t\t\t\tStaticText 'Show / hide filter'\n\t\t\t\t\t[a48] button '\\uf1b8 Show / hide natural language filter', clickable, visible, expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b8'\n\t\t\t\t\t\tStaticText 'Show / hide natural language filter'\n\t\t\t\t\t[a50] heading 'Assets', visible\n\t\t\t\t\t\t[a51] button 'Assets', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\tStaticText 'Assets'\n\t\t\t\t\t[a57] search '', visible\n\t\t\t\t\t\t[a60] listbox 'Search a specific field of the Assets list, 13 items' value='for text', visible, multiselectable=False, orientation='vertical', expanded=False\n\t\t\t\t\t\t\t[a61] option 'for text', selected=True\n\t\t\t\t\t\t\t[a62] option 'Asset tag', selected=False\n\t\t\t\t\t\t\t[a63] option 'Model Display name', selected=False\n\t\t\t\t\t\t\t[a64] option 'Model category', selected=False\n\t\t\t\t\t\t\t[a65] option 'Class', selected=False\n\t\t\t\t\t\t\t[a66] option 'Assigned to', selected=False\n\t\t\t\t\t\t\t[a67] option 'Location', selected=False\n\t\t\t\t\t\t\t[a68] option 'Company', selected=False\n\t\t\t\t\t\t\t[a69] option 'Department', selected=False\n\t\t\t\t\t\t\t[a70] option 'State', selected=False\n\t\t\t\t\t\t\t[a71] option 'Warranty expiration', selected=False\n\t\t\t\t\t\t\t[a72] option 'Comments', selected=False\n\t\t\t\t\t\t\t[a73] option 'PO number', selected=False\n\t\t\t\t\t\tStaticText '\\uf21f'\n\t\t\t\t\t\t[a76] searchbox 'Search', clickable, visible, describedby='5fd716003b8f7a50f55a3e0eb3e45ad5_describedby'\n\t\t\t\t\t[a80] button '\\uf104 Show activity stream in a flyout window', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf104'\n\t\t\t\t\t\tStaticText 'Show activity stream in a flyout window'\n\t\t\t\t\t[a106] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Actions on selected rows'\n\t\t\t\t\t[a107] combobox 'Actions on selected rows' value='Actions on selected rows...', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[a108] option 'Actions on selected rows...', selected=True\n\t\t\t\t\t\t[a109] option 'Delete', selected=False\n\t\t\t\t\t\t[a112] option 'Delete with preview...', selected=False\n\t\t\t\t\t\t[a115] option 'Create Application File', selected=False\n\t\t\t\t\t\t[a119] option 'Assign Tag New tag', disabled=True\n\t\t\t\t\t\t[a120] option 'Assign Tag Android', selected=False\n\t\t\t\t\t\t[a121] option 'Assign Tag JavaScript', selected=False\n\t\t\t\t\t\t[a122] option 'Assign Tag Java', selected=False\n\t\t\t\t\t\t[a123] option 'Assign Tag Development', selected=False\n\t\t\t\t\t\t[a124] option 'Assign Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a125] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a126] option 'Assign Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a127] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a128] option 'Assign Tag More...', disabled=True\n\t\t\t\t\t\t[a130] option 'Remove Tag Android', selected=False\n\t\t\t\t\t\t[a131] option 'Remove Tag JavaScript', selected=False\n\t\t\t\t\t\t[a132] option 'Remove Tag Java', selected=False\n\t\t\t\t\t\t[a133] option 'Remove Tag Development', selected=False\n\t\t\t\t\t\t[a134] option 'Remove Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a135] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a136] option 'Remove Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a137] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a138] option 'Remove Tag More...', disabled=True\n\t\t\t\t\t[a140] button 'New', clickable, visible\n\t\t\t\t[a1088] region 'filter controls', visible\n\t\t\t\t\t[a1089] button 'Run filter', clickable, visible\n\t\t\t\t\t[a1090] button 'Show save-as options', clickable, visible, expanded=False, controls='savelayer'\n\t\t\t\t\t\tStaticText 'Save...'\n\t\t\t\t\t[a1091] image '', visible\n\t\t\t\t\t[a1092] button 'Add a new AND filter condition', visible\n\t\t\t\t\t[a1093] button 'Add OR filter: Add a new section of filter conditions', visible\n\t\t\t\t\t[a1094] button 'Add Sort', clickable, visible, focused, describedby='tooltip913147'\n\t\t\t\t\t[a1095] button '\\uf203 Toggle Pinned Filter', clickable, visible, pressed='false'\n\t\t\t\t\t\tStaticText '\\uf203'\n\t\t\t\t\t\tStaticText 'Toggle Pinned Filter'\n\t\t\t\t[a1099] table '', visible\n\t\t\t\t\t[a1100] rowgroup '', visible\n\t\t\t\t\t\t[a1101] row '', visible\n\t\t\t\t\t\t\t[a1102] gridcell '', visible\n\t\t\t\t\t\t[a1130] row '', visible\n\t\t\t\t\t\t\t[a1131] gridcell '', visible\n\t\t\t\t\t\t\t\t[a1132] table '', visible\n\t\t\t\t\t\t\t\t\t[a1133] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t[a1134] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t[a1135] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t[a1136] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t[a1137] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1145] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1146] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1147] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1148] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1149] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1150] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1151] gridcell '-- choose field -- -- choose field --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1153] combobox 'All of these conditions must be met. -- choose field --', clickable, hasPopup='listbox', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1245] gridcell '-- oper --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1246] combobox 'Operator For Condition 1: -- choose field -- -- oper --' value='-- oper --', visible, disabled=True, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1247] option '-- oper --', disabled=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1248] gridcell '-- value --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1249] textbox 'Input value' value='-- value --', visible, disabled=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '-- value --'\n\t\t\t\t\t\t\t\t\t\t[a1263] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t[a1264] gridcell 'Order results by the following fields Acquisition method Acquisition method a to z Remove condition 2: Acquisition method a to z', visible\n\t\t\t\t\t\t\t\t\t\t\t\t[a1269] separator '', visible, orientation='horizontal'\n\t\t\t\t\t\t\t\t\t\t\t\t[a1270] heading 'Order results by the following fields', visible\n\t\t\t\t\t\t\t\t\t\t\t\t[a1279] combobox 'Order results by the following fields. Acquisition method', clickable, hasPopup='listbox', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t[a1368] combobox 'Operator For Condition 2: Acquisition method a to z' value='a to z', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t[a1369] option 'a to z', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t[a1370] option 'z to a', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t[a1374] button 'Remove condition 2: Acquisition method a to z', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf159'\n\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText \"'Delete'\"\n\t\t\t\t[a173] region 'Filter', visible\n\t\t\t\t\t[a175] list '', clickable, visible\n\t\t\t\t\t\t[a176] link 'All Press enter to remove all subsequent conditions. Right click or press either Shift + Space or Alt + F10 to open menu.', clickable, visible\n\t\t\t\t[a178] main 'Assets', visible\n\t\t\t\t\t[a182] button 'Edit table data inline', controls='alm_asset_table'\n\t\t\t\t\t[a184] grid 'Assets.', clickable, multiselectable=False\n\t\t\t\t\t\t[a185] caption '', live='polite', relevant='additions text'\n\t\t\t\t\t\t\tStaticText 'Assets table. Currently in read mode.'\n\t\t\t\t\t\t[a187] rowgroup '', visible\n\t\t\t\t\t\t\t[a188] row '', visible\n\t\t\t\t\t\t\t\t[a189] columnheader 'Select All', visible\n\t\t\t\t\t\t\t\t\t[a191] checkbox 'Select All', clickable, checked='false'\n\t\t\t\t\t\t\t\t\t[a192] LabelText '', clickable, visible\n\t\t\t\t\t\t\t\t\t\tStaticText 'Select All'\n\t\t\t\t\t\t\t\t[a194] columnheader '\\uf1e4 Show column search row', visible\n\t\t\t\t\t\t\t\t\t[a196] button '\\uf1e4 Show column search row', visible, expanded=False, controls='alm_asset_table_header_search_control'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf1e4'\n\t\t\t\t\t\t\t\t\t\tStaticText 'Show column search row'\n\t\t\t\t\t\t\t\t[a198] columnheader 'Asset tag Asset tag column options', visible\n\t\t\t\t\t\t\t\t\t[a200] button 'Asset tag', visible\n\t\t\t\t\t\t\t\t\t[a204] button 'Asset tag column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a205] columnheader 'Display name Display name column options', visible\n\t\t\t\t\t\t\t\t\t[a207] button 'Display name', visible\n\t\t\t\t\t\t\t\t\t[a211] button 'Display name column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a212] columnheader 'Model category Model category column options', visible\n\t\t\t\t\t\t\t\t\t[a214] button 'Model category', visible\n\t\t\t\t\t\t\t\t\t[a218] button 'Model category column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a219] columnheader 'Class Class column options', visible\n\t\t\t\t\t\t\t\t\t[a221] button 'Class', visible\n\t\t\t\t\t\t\t\t\t[a225] button 'Class column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a226] columnheader 'Assigned to Assigned to column options', visible\n\t\t\t\t\t\t\t\t\t[a228] button 'Assigned to', visible\n\t\t\t\t\t\t\t\t\t[a232] button 'Assigned to column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a233] columnheader 'Location Location column options', visible\n\t\t\t\t\t\t\t\t\t[a235] button 'Location', visible\n\t\t\t\t\t\t\t\t\t[a239] button 'Location column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a240] columnheader 'Company Company column options', visible\n\t\t\t\t\t\t\t\t\t[a242] button 'Company', visible\n\t\t\t\t\t\t\t\t\t[a246] button 'Company column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a247] columnheader 'Department Department column options', visible\n\t\t\t\t\t\t\t\t\t[a249] button 'Department', visible\n\t\t\t\t\t\t\t\t\t[a253] button 'Department column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a254] columnheader 'State State column options', visible\n\t\t\t\t\t\t\t\t\t[a256] button 'State', visible\n\t\t\t\t\t\t\t\t\t[a260] button 'State column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a261] columnheader 'Warranty expiration Warranty expiration column options'\n\t\t\t\t\t\t\t\t\t[a263] button 'Warranty expiration'\n\t\t\t\t\t\t\t\t\t[a267] button 'Warranty expiration column options', hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a268] columnheader 'Comments Comments column options'\n\t\t\t\t\t\t\t\t\t[a270] button 'Comments'\n\t\t\t\t\t\t\t\t\t[a274] button 'Comments column options', hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a275] columnheader 'PO number PO number column options'\n\t\t\t\t\t\t\t\t\t[a277] button 'PO number'\n\t\t\t\t\t\t\t\t\t[a281] button 'PO number column options', hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t[a345] rowgroup '', clickable\n\t\t\t\t\t\t\t[a346] row '', visible\n\t\t\t\t\t\t\t\t[a347] gridcell 'Select record for action: P1000479 - Apple MacBook Pro 15&quot;', visible\n\t\t\t\t\t\t\t\t\t[a349] checkbox 'Select record for action: P1000479 - Apple MacBook Pro 15&quot;', clickable, checked='false'\n\t\t\t\t\t\t\t\t\t[a350] LabelText '', clickable, visible\n\t\t\t\t\t\t\t\t\t\tStaticText 'Select record for action: P1000479 - Apple MacBook Pro 15&quot;'\n\t\t\t\t\t\t\t\t[a352] gridcell 'Preview record: P1000479 - Apple MacBook Pro 15\"', visible\n\t\t\t\t\t\t\t\t\t[a353] button 'Preview record: P1000479 - Apple MacBook Pro 15\"', clickable, visible, hasPopup='dialog', expanded=False\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf19c'\n\t\t\t\t\t\t\t\t[a354] gridcell 'P1000479 - Open record: P1000479 - Apple MacBook Pro 15\"', visible\n\t\t\t\t\t\t\t\t\t[a355] link 'P1000479 - Open record: P1000479 - Apple MacBook Pro 15\"', clickable, visible\n\t\t\t\t\t\t\t\t[a356] gridcell 'Apple MacBook Pro 15\"', visible\n\t\t\t\t\t\t\t\t[a357] gridcell 'Open record: Computer', visible\n\t\t\t\t\t\t\t\t\t[a358] link 'Open record: Computer', clickable, visible\n\t\t\t\t\t\t\t\t[a359] gridcell 'Hardware', visible\n\t\t\t\t\t\t\t\t[a360] gridcell 'Open record: Miranda Hammitt', visible\n\t\t\t\t\t\t\t\t\t[a361] link 'Open record: Miranda Hammitt', clickable, visible\n\t\t\t\t\t\t\t\t[a362] gridcell 'Open record: 2500 West Daming Road, Shanghai', visible\n\t\t\t\t\t\t\t\t"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "dfeffb27698a40bb9d6cf1ac137838c5",
+    "timestamp_epoch": 1792043163.3418095,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 1,
+    "cache_hits": 14,
+    "elapsed_seconds": 0.9775652270182036,
+    "input_keys": [
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "3a57e30ee914797ac2779df2ab4b2afb5a8d6e0dc454b433ebbbe159d29ca213",
+      "60b689182bda9fe37a9f97696e7be9eb6b36ada1d45d6d76ba9a943ef931e869",
+      "3fdb767cad3be15b79f6767d7f77b33d3fd13adef2e59abb3a02b08e986f5508",
+      "1d355df6deee915f49eff0b6475642acbced364888530a67745e4860889d4d97",
+      "40a96418ed4977e8587d13fac78ef1e455e62bd3aac9df8348cd50872a1d2fd6",
+      "f12550faeb63d14ee8d60b50b9df42960508993d4ae2d178a0b081d88e21a6c7",
+      "1b9a51c692f14d6661f42d5f5518d3e8c605b263c89784e909e7305951dc6bf5",
+      "7aa6e0c5e71d5b98e1ab65d35b6c84987b0e7f9e486b47bfa3e95d2dea2b7c7b",
+      "32a651e3505dab9a3ef24dcca6647d8370d09c6d02141b4a4101ab608ae1cf54",
+      "d94a00d99c315a04df04a78446244b13d932c20f05c7b7c4e2fed5f473ec1903",
+      "39f153a2c0452e4baa76712fcd8e32b905d29b7108f17b9d6865dc0f745b61a1",
+      "94d2c566137c7745304cb8a9c7ab405da8ad1dca75ac9fac89d29c559ecee244",
+      "9fe9223c74cc095bfc42a895b70fe620dc6cc294b16200e353702427e4359cfe"
+    ]
+  },
+  {
+    "record_id": "1227bbf4edc444e19bab6c92df20dd15",
+    "timestamp_epoch": 1792043163.4653056,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.12117536398000084,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1313,
+    "input_sha256": [
+      "b54206e4a931c22beddae8290f81c7f383ee665ba438c03d7983f62e15c84280",
+      "63490ee285509e8ba2a47da1f662eb78b137049e1172a08cfe53b24f385e1e5a"
+    ],
+    "input_texts": [
+      "The agent is sorting the Assets list by 'Asset function' in ascending order as part of the broader goal to organize assets by specific criteria. This transition represents the step where the agent adds the sorting condition to the existing filter setup, preparing the list for reordering.\n\nAfter clicking the 'Add Sort' button, the interface remains on the Assets list page but updates to reflect the addition of a sort condition. The status region now displays 'New sort order condition added, 2 of 2', indicating that the sorting criteria has been successfully appended to the active sort configuration. No new page or modal dialog appears; the change is a textual confirmation within the existing filtering toolbar area.",
+      "The agent continues configuring the sort order by selecting the specific field to sort the assets by. This step represents choosing the primary sort criterion from the available options.\n\nClicking the 'Order results by the following fields. Acquisition method' combobox opens a dropdown list of sortable fields. The list reveals options including 'Acquisition method', 'Asset function', 'Asset tag', and many others, allowing the agent to select 'Asset function' as the sort key.\nCurrent pre-state observation (state 5, corrected source): StaticText 'New sort order condition added, 2 of 2'"
+    ],
+    "prompt_tokens": 255,
+    "total_tokens": 255,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "563af1d0b84b4c0bbe514f1493f46727",
+    "timestamp_epoch": 1792043163.4654143,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 14,
+    "actual_vectors": 2,
+    "cache_hits": 12,
+    "elapsed_seconds": 0.12142111800494604,
+    "input_keys": [
+      "ab01848a66637be6470d7b213013c603e7d52517183bf2c3291bb44833b6c62a",
+      "58e2a07f24b57f3c030b6c12f9663c7cae29630d416f21ff28df89a9b5566bc8",
+      "d4d9ce60f62b2abfe0bc3c827112e356cf982c9fba0b119b6e2914c1307e011a",
+      "430cb894ece27dce2dbf8cde7d89454e4ca123eafb59a7e044541014efb29bd2",
+      "5de9b81d088e801c97cc895ae47aa2381cf4b86cdfb2a1bcea0b3ab0b8acb963",
+      "1e53297bbb2291c9347b9b798b9e2db3494fb0f7c3f41fcd183d21020ec7d830",
+      "088783776db56ff619796c7bfb4487e1e56185d45df3f69e0cec448a983c888b",
+      "27eee66d15b58c5d97238f7683b924029ba7d41bf75540aaed86abce471444e4",
+      "1d9b36f9bf2729319ae408c6fe777f9b42404d806d8c08511a2a156bed1c3d0a",
+      "0e66bdc81e0d81e86c89d5c26e4f0ec281457772d69398dbb94c4129092724c9",
+      "524bc1eb7ed3f43bc70725b03789234355eb0b3af35732743f843a7b3bbec9b5",
+      "a4c57171b38a3f2e8ab1b0e23d986bc3fb38ef2fb4751cb5c2349555c3b16772",
+      "9fd788fc8dc0a6315ffaa899dd692066c12975b02c44f290fed9b43cd6f4f1f4",
+      "35d55e9f5af5ab658721d0cc48ef6ec266191c18f3cb1598bf49e3a4d14ab591"
+    ]
+  },
+  {
+    "record_id": "5074a9be16e14ce58d55764f26cf0f07",
+    "timestamp_epoch": 1792043163.4658926,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.2891996195539832e-05,
+    "input_keys": [
+      "2e5797b16d87690e81b95d262171fc80bf62a8a736e7657eaa44a6872d26b6bc"
+    ]
+  },
+  {
+    "record_id": "734b556cf4784ee6afcb17c714327893",
+    "timestamp_epoch": 1792043163.4662309,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.578699448145926e-05,
+    "input_keys": [
+      "756cb8f22fbf96c14bf44d2a9e529622581c7c6a282e494eb8e8f1af75438353"
+    ]
+  }
+]

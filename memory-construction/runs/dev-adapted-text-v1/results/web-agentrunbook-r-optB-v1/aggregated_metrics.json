@@ -96,6 +96,11 @@
     "avg_completion_tokens": 111.75,
     "avg_total_tokens": 10969.5
   },
+  "memory_context": {
+    "avg_original_tokens": 43151.25,
+    "avg_final_tokens": 10650.5,
+    "num_truncated_sequences": 4
+  },
   "memory_query": {
     "avg_seconds": 2.4506770289990527,
     "p50_seconds": 2.5875097009993624,

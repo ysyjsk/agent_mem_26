@@ -1,0 +1,18 @@
+{
+  "trajectory_ids": [
+    "0ab99e0c",
+    "49f98e9e"
+  ],
+  "expected_event_count": 29,
+  "published_event_count": 29,
+  "missing_events": [],
+  "extra_events": [],
+  "duplicate_event_ids": [],
+  "source_transition_pair_match": true,
+  "source_action_match": true,
+  "transition_order_match": true,
+  "event_source_coverage": true,
+  "save_reload_verified": true,
+  "quality_pass": true,
+  "scope": "complete event coverage, source action and state-pair mapping, order, persisted reload; not downstream Reader QA"
+}

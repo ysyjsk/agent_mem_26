@@ -1,0 +1,23 @@
+{
+  "policy": "ours",
+  "trajectory_id": "0ab99e0c",
+  "arrival_count": 3,
+  "completed_arrivals": 3,
+  "failed_arrivals": 0,
+  "stream_wall_s_including_retrieval_probes": 216.902497428,
+  "update_publish_s_total": 190.33627336400002,
+  "freshness_p50_s": 79.982745362,
+  "freshness_p95_s": 90.968479269,
+  "freshness_sample_unit": "each newly arrived transition; same-batch events share publication time",
+  "goodput_new_events_per_publish_s": 0.03152315580186637,
+  "controller_calls": 10,
+  "controller_input_tokens": 77369,
+  "controller_output_tokens": 3017,
+  "embedding_calls": 9,
+  "embedding_vectors": 16,
+  "quality_passes": 3,
+  "retrieval_probe_passes": 3,
+  "scope": "local_text_only_adapted_real_continuous_arrival",
+  "qa_status": "source_grounded_checks_only; official_judge_pending",
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/agentrunbook-stream-v1-enterprise-0ab99e0c/ours"
+}

@@ -1,0 +1,281 @@
+[
+  {
+    "record_id": "624b93323eb34a22b3f21643c3852379",
+    "timestamp_epoch": 1792041961.9649625,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 5.137679103005212,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 4177,
+      "text_sha256": "6f02db7bd53c66ff78c4dfefc2a2da32cf6c96a0392e45198123300fdc57e4e3",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1083,
+    "completion_tokens": 162,
+    "total_tokens": 1245,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "ab87691b693243078a7b52bef335af40",
+    "timestamp_epoch": 1792041961.9651048,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "literal_atomic_explicit_v8",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005"
+    ],
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -41,5 +41,5 @@\n \t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n \t\t\t\t[a35] region '', live='polite', relevant='additions text'\n-\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\n+\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n \t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n \t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n@@ -658,14 +658,14 @@\n \t\t\t\t\t\t\t[a883] row '', visible\n \t\t\t\t\t\t\t\t[a884] gridcell '', visible\n-\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\n+\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\n \t\t\t\t\t\t\t\t\t[a887] button 'First page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a890] button 'Previous page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a893] textbox 'Skip to row' value='1', clickable, visible, describedby='08b0fcd093f0f250f629fd085d03d6d2_description_of_skip_to'\n \t\t\t\t\t\t\t\t\t\tStaticText '1'\n-\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 101'\n+\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 103'\n \t\t\t\t\t\t\t\t\tStaticText 'to'\n \t\t\t\t\t\t\t\t\tStaticText '20'\n \t\t\t\t\t\t\t\t\tStaticText 'of'\n-\t\t\t\t\t\t\t\t\tStaticText '101'\n+\t\t\t\t\t\t\t\t\tStaticText '103'\n \t\t\t\t\t\t\t\t\t[a898] button 'Next page', visible\n \t\t\t\t\t\t\t\t\t[a900] button 'Last page', visible",
+        "append_only": false,
+        "role": "post-state"
+      }
+    ],
+    "input_tokens_preflight": 1083,
+    "edits": [
+      {
+        "field": "state_transition",
+        "old": "The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 101 unfiltered records, and the filter condition for Type has not been applied.",
+        "new": "The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 103 unfiltered records, and the filter condition for Type has not been applied."
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent is configuring a filter on the Change Requests list to find specific entries. This step attempts to set the first condition by clicking the 'Normal' option within the 'Type' field dropdown to restrict the list to normal change requests.",
+        "state_transition": "The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 101 unfiltered records, and the filter condition for Type has not been applied."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is configuring a filter on the Change Requests list to find specific entries. This step attempts to set the first condition by clicking the 'Normal' option within the 'Type' field dropdown to restrict the list to normal change requests.",
+        "state_transition": "The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 103 unfiltered records, and the filter condition for Type has not been applied."
+      }
+    ]
+  },
+  {
+    "record_id": "d83b5bdf2d7f4a488b1bda67b1125b62",
+    "timestamp_epoch": 1792041966.6861498,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 4.719264346989803,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 4241,
+      "text_sha256": "3c3d98907b44e296b23cdd5255cf4953be91ee966d8621aa213aff303e67cf4e",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1097,
+    "completion_tokens": 162,
+    "total_tokens": 1259,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "66b6ee2e6ec44984bc2cb0a80e2221b5",
+    "timestamp_epoch": 1792041966.686284,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "literal_atomic_explicit_v8",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0005_0006"
+    ],
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -41,5 +41,5 @@\n \t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n \t\t\t\t[a35] region '', live='polite', relevant='additions text'\n-\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\n+\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n \t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n \t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n@@ -658,14 +658,14 @@\n \t\t\t\t\t\t\t[a883] row '', visible\n \t\t\t\t\t\t\t\t[a884] gridcell '', visible\n-\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\n+\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\n \t\t\t\t\t\t\t\t\t[a887] button 'First page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a890] button 'Previous page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a893] textbox 'Skip to row' value='1', clickable, visible, describedby='08b0fcd093f0f250f629fd085d03d6d2_description_of_skip_to'\n \t\t\t\t\t\t\t\t\t\tStaticText '1'\n-\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 101'\n+\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 103'\n \t\t\t\t\t\t\t\t\tStaticText 'to'\n \t\t\t\t\t\t\t\t\tStaticText '20'\n \t\t\t\t\t\t\t\t\tStaticText 'of'\n-\t\t\t\t\t\t\t\t\tStaticText '101'\n+\t\t\t\t\t\t\t\t\tStaticText '103'\n \t\t\t\t\t\t\t\t\t[a898] button 'Next page', visible\n \t\t\t\t\t\t\t\t\t[a900] button 'Last page', visible",
+        "append_only": false,
+        "role": "pre-state"
+      }
+    ],
+    "input_tokens_preflight": 1097,
+    "edits": [
+      {
+        "field": "state_transition",
+        "old": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set.",
+        "new": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, showing 103 total records, awaiting the application of the full filter set."
+      }
+    ],
+    "before": [
+      {
+        "overview": "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.",
+        "state_transition": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set."
+      }
+    ],
+    "after": [
+      {
+        "overview": "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.",
+        "state_transition": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, showing 103 total records, awaiting the application of the full filter set."
+      }
+    ]
+  },
+  {
+    "record_id": "3f517b48ca084b519ede11bba735e05c",
+    "timestamp_epoch": 1792041966.6863544,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "e8c83371d6ef4d239afae433f93e473c",
+    "timestamp_epoch": 1792041966.6937828,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "6a7c9ffebf180c5eaac5f05b794243994688ace320215f1c587fe1ecfe88f3e4",
+    "stage": "notes"
+  },
+  {
+    "record_id": "d02ddc4342114e91945f798db168bed5",
+    "timestamp_epoch": 1792041967.8589556,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.970451975998003,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 14441,
+    "input_sha256": [
+      "e4010a9c03fa37ffc23c420fcbb30a55e25f0b34ddd04d09d6ed03cc449b298d"
+    ],
+    "input_texts": [
+      "State 5\nRootWebArea 'Classic | Unified Navigation App | ServiceNow'\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[235] region 'There are 0 announcements displayed', visible, live='polite', relevant='additions text'\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, describedby='logo-tooltip'\n\t\t\t[66] image 'ServiceNow Service Management', visible\n\t\t[78] button 'All', clickable, visible, expanded=False\n\t\t[79] button 'Favorites', clickable, visible, expanded=False\n\t\t[80] button 'History', clickable, visible, expanded=False\n\t\t[82] button 'Admin', clickable, visible, expanded=False\n\t\t[83] button 'More menus', clickable, visible, expanded=False\n\t\tgeneric, describedby='title-tooltip'\n\t\t\tStaticText 'Change Requests'\n\t\t\t[96] button 'Create favorite for Change Requests', clickable, visible, live='polite', relevant='additions text', pressed='false'\n\t\t[108] search '', visible\n\t\t\t[112] combobox 'Search', clickable, visible, autocomplete='both', hasPopup='listbox', expanded=False\n\t\t\t[113] region '', live='polite', relevant='additions text'\n\t\t\t\tStaticText 'No exact match. Press Enter for full results.'\n\t\t\t[114] combobox 'Choose search context', clickable, visible, hasPopup='listbox', expanded=False\n\t\t[125] button 'Scope selectors', clickable, visible, expanded=False\n\t\t[132] button 'Sidebar discussions', clickable, visible, expanded=False\n\t\t[138] button 'Show help', clickable, visible, expanded=False\n\t\t[166] button 'Show notifications', clickable, visible, expanded=False\n\t\t[178] button 'Matthew Williams: available', clickable, visible, expanded=False\n\t\t\t[181] image 'Matthew Williams is Available', visible\n\t\t\t\tStaticText 'MW'\n\t[196] main '', visible\n\t\t[a] Iframe 'Main Content', visible\n\t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n\t\t\t\t[a35] region '', live='polite', relevant='additions text'\n\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n\t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n\t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n\t\t\t\t\t[a45] button 'Actions', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b2'\n\t\t\t\t\t\tStaticText 'List controls'\n\t\t\t\t\t[a47] button '\\uf18a Show / hide filter', clickable, visible, expanded=True, controls='change_requestfilterdiv'\n\t\t\t\t\t\tStaticText '\\uf18a'\n\t\t\t\t\t\tStaticText 'Show / hide filter'\n\t\t\t\t\t[a49] button '\\uf1b8 Show / hide natural language filter', clickable, visible, expanded=False\n\t\t\t\t\t\tStaticText '\\uf1b8'\n\t\t\t\t\t\tStaticText 'Show / hide natural language filter'\n\t\t\t\t\t[a51] heading 'Change Requests', visible\n\t\t\t\t\t\t[a52] button 'Change Requests', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\tStaticText 'Change Requests'\n\t\t\t\t\t[a58] search '', visible\n\t\t\t\t\t\t[a61] listbox 'Search a specific field of the Change Requests list, 11 items' value='Number', visible, multiselectable=False, orientation='vertical', expanded=False\n\t\t\t\t\t\t\t[a62] option 'for text', selected=False\n\t\t\t\t\t\t\t[a63] option 'Number', selected=True\n\t\t\t\t\t\t\t[a64] option 'Short description', selected=False\n\t\t\t\t\t\t\t[a65] option 'Risk', selected=False\n\t\t\t\t\t\t\t[a66] option 'Impact', selected=False\n\t\t\t\t\t\t\t[a67] option 'Priority', selected=False\n\t\t\t\t\t\t\t[a68] option 'Assigned to', selected=False\n\t\t\t\t\t\t\t[a69] option 'Planned start date', selected=False\n\t\t\t\t\t\t\t[a70] option 'Planned end date', selected=False\n\t\t\t\t\t\t\t[a71] option 'Implementation plan', selected=False\n\t\t\t\t\t\t\t[a72] option 'Approval', selected=False\n\t\t\t\t\t\tStaticText '\\uf21f'\n\t\t\t\t\t\t[a75] searchbox 'Search', clickable, visible, describedby='04b0fcd093f0f250f629fd085d03d6d1_describedby'\n\t\t\t\t\t[a79] button '\\uf104 Show activity stream in a flyout window', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\tStaticText '\\uf104'\n\t\t\t\t\t\tStaticText 'Show activity stream in a flyout window'\n\t\t\t\t\t[a81] button '\\uf13e Personalize List', visible\n\t\t\t\t\t\tStaticText '\\uf13e'\n\t\t\t\t\t\tStaticText 'Personalize List'\n\t\t\t\t\t[a107] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Actions on selected rows'\n\t\t\t\t\t[a108] combobox 'Actions on selected rows' value='Actions on selected rows...', clickable, visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[a109] option 'Actions on selected rows...', selected=True\n\t\t\t\t\t\t[a110] option 'Delete', selected=False\n\t\t\t\t\t\t[a113] option 'Delete with preview...', selected=False\n\t\t\t\t\t\t[a116] option 'Follow on Live Feed', selected=False\n\t\t\t\t\t\t[a118] option 'Repair SLAs', selected=False\n\t\t\t\t\t\t[a121] option 'Add to Visual Task Board', selected=False\n\t\t\t\t\t\t[a124] option 'Create Application File', selected=False\n\t\t\t\t\t\t[a128] option 'Assign Tag New tag', disabled=True\n\t\t\t\t\t\t[a129] option 'Assign Tag Android', selected=False\n\t\t\t\t\t\t[a130] option 'Assign Tag JavaScript', selected=False\n\t\t\t\t\t\t[a131] option 'Assign Tag Java', selected=False\n\t\t\t\t\t\t[a132] option 'Assign Tag Development', selected=False\n\t\t\t\t\t\t[a133] option 'Assign Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a134] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a135] option 'Assign Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a136] option 'Assign Tag Includes code', selected=False\n\t\t\t\t\t\t[a137] option 'Assign Tag More...', disabled=True\n\t\t\t\t\t\t[a139] option 'Remove Tag Android', selected=False\n\t\t\t\t\t\t[a140] option 'Remove Tag JavaScript', selected=False\n\t\t\t\t\t\t[a141] option 'Remove Tag Java', selected=False\n\t\t\t\t\t\t[a142] option 'Remove Tag Development', selected=False\n\t\t\t\t\t\t[a143] option 'Remove Tag Security Center Suites', selected=False\n\t\t\t\t\t\t[a144] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a145] option 'Remove Tag Now Intelligence', selected=False\n\t\t\t\t\t\t[a146] option 'Remove Tag Includes code', selected=False\n\t\t\t\t\t\t[a147] option 'Remove Tag More...', disabled=True\n\t\t\t\t\t[a149] button 'New', clickable, visible\n\t\t\t\t[a1116] region 'filter controls', visible\n\t\t\t\t\t[a1117] button 'Run filter', clickable, visible\n\t\t\t\t\t[a1118] button 'Show save-as options', clickable, visible, expanded=False, controls='savelayer'\n\t\t\t\t\t\tStaticText 'Save...'\n\t\t\t\t\t[a1119] image '', visible\n\t\t\t\t\t[a1120] button 'Add a new AND filter condition', visible\n\t\t\t\t\t[a1121] button 'Add OR filter: Add a new section of filter conditions', visible\n\t\t\t\t\t[a1122] button 'Add Sort', visible\n\t\t\t\t\t[a1123] button '\\uf203 Toggle Pinned Filter', clickable, visible, pressed='false'\n\t\t\t\t\t\tStaticText '\\uf203'\n\t\t\t\t\t\tStaticText 'Toggle Pinned Filter'\n\t\t\t\t[a1127] table '', visible\n\t\t\t\t\t[a1128] rowgroup '', visible\n\t\t\t\t\t\t[a1129] row '', visible\n\t\t\t\t\t\t\t[a1130] gridcell '', visible\n\t\t\t\t\t\t[a1158] row '', visible\n\t\t\t\t\t\t\t[a1159] gridcell '', visible\n\t\t\t\t\t\t\t\t[a1160] table '', visible\n\t\t\t\t\t\t\t\t\t[a1161] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t[a1162] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t[a1163] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t[a1164] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t[a1165] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1173] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1174] gridcell '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1175] table '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1176] rowgroup '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1177] row '', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1179] gridcell 'Type Type', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1181] combobox 'All of these conditions must be met. Type', clickable, hasPopup='listbox', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1297] gridcell 'is', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1627] combobox 'Operator For Condition 1: Type is -- None --' value='is', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1628] option 'is', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1629] option 'is not', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1630] option 'is one of', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1631] option 'is not one of', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1632] option 'contains', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1633] option 'starts with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1634] option 'ends with', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1635] option 'does not contain', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1636] option 'is anything', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1637] option 'is same', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1638] option 'is different', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1300] gridcell '-- None --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1640] option '-- None --', selected=True\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1641] option 'Standard', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1642] option 'Normal', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1643] option 'Emergency', selected=False\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1302] gridcell 'Add AND Condition To Condition 1: Type is -- None -- Add OR Condition To Condition 1: Type is -- None --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1303] button 'Add AND Condition To Condition 1: Type is -- None --', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1304] button 'Add OR Condition To Condition 1: Type is -- None --', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1305] gridcell 'Remove condition 1: Type is -- None --', visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1306] button 'Remove condition 1: Type is -- None --', clickable, visible\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf159'\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText \"'Delete'\"\n\t\t\t\t[a182] region 'Filter', visible\n\t\t\t\t\t[a184] list '', clickable, visible\n\t\t\t\t\t\t[a185] link 'All Press enter to remove all subsequent conditions. Right click or press either Shift + Space or Alt + F10 to open menu.', clickable, visible\n\t\t\t\t[a187] main 'Change Requests', visible\n\t\t\t\t\t[a191] button 'Edit table data inline', controls='change_request_table'\n\t\t\t\t\t[a193] grid 'Change Requests.', clickable, multiselectable=False\n\t\t\t\t\t\t[a194] caption '', live='polite', relevant='additions text'\n\t\t\t\t\t\t\tStaticText 'Change Requests table. Currently in read mode.'\n\t\t\t\t\t\t[a196] rowgroup '', visible\n\t\t\t\t\t\t\t[a197] row '', visible\n\t\t\t\t\t\t\t\t[a198] columnheader 'Select All', visible\n\t\t\t\t\t\t\t\t\t[a200] checkbox 'Select All', clickable, checked='false'\n\t\t\t\t\t\t\t\t\t[a201] LabelText '', clickable, visible\n\t\t\t\t\t\t\t\t\t\tStaticText 'Select All'\n\t\t\t\t\t\t\t\t[a203] columnheader '\\uf1e4 Show column search row', visible\n\t\t\t\t\t\t\t\t\t[a205] button '\\uf1e4 Show column search row', visible, expanded=False, controls='change_request_table_header_search_control'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf1e4'\n\t\t\t\t\t\t\t\t\t\tStaticText 'Show column search row'\n\t\t\t\t\t\t\t\t[a207] columnheader 'Number \\uf21f Number column options', visible\n\t\t\t\t\t\t\t\t\t[a209] button 'Number', visible\n\t\t\t\t\t\t\t\t\t[a213] button 'Number column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a214] columnheader 'Short description Short description column options', visible\n\t\t\t\t\t\t\t\t\t[a216] button 'Short description', visible\n\t\t\t\t\t\t\t\t\t[a220] button 'Short description column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a221] columnheader 'Risk Risk column options', visible\n\t\t\t\t\t\t\t\t\t[a223] button 'Risk', visible\n\t\t\t\t\t\t\t\t\t[a227] button 'Risk column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a228] columnheader 'Impact Impact column options', visible\n\t\t\t\t\t\t\t\t\t[a230] button 'Impact', visible\n\t\t\t\t\t\t\t\t\t[a234] button 'Impact column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a235] columnheader 'Priority Priority column options', visible\n\t\t\t\t\t\t\t\t\t[a237] button 'Priority', visible\n\t\t\t\t\t\t\t\t\t[a241] button 'Priority column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a242] columnheader 'Assigned to Assigned to column options', visible\n\t\t\t\t\t\t\t\t\t[a244] button 'Assigned to', visible\n\t\t\t\t\t\t\t\t\t[a248] button 'Assigned to column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a249] columnheader 'Planned start date Planned start date column options', visible\n\t\t\t\t\t\t\t\t\t[a251] button 'Planned start date', visible\n\t\t\t\t\t\t\t\t\t[a255] button 'Planned start date column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a256] columnheader 'Planned end date Planned end date column options', visible\n\t\t\t\t\t\t\t\t\t[a258] button 'Planned end date', visible\n\t\t\t\t\t\t\t\t\t[a262] button 'Planned end date column options', visible, hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a263] columnheader 'Implementation plan Implementation plan column options'\n\t\t\t\t\t\t\t\t\t[a265] button 'Implementation plan'\n\t\t\t\t\t\t\t\t\t[a269] button 'Implementation plan column options', hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t\t\t[a270] columnheader 'Approval Approval column options'\n\t\t\t\t\t\t\t\t\t[a272] button 'Approval'\n\t\t\t\t\t\t\t\t\t[a276] button 'Approval column options', hasPopup='menu'\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf17f'\n\t\t\t\t\t\t[a330] rowgroup '', clickable\n\t\t\t\t\t\t\t[a331] row '', visible\n\t\t\t\t\t\t\t\t[a332] gridcell 'Select record for action: CHG0040007', visible\n\t\t\t\t\t\t\t\t\t[a334] checkbox 'Select record for action: CHG0040007', clickable, checked='false'\n\t\t\t\t\t\t\t\t\t[a335] LabelText '', clickable, visible\n\t\t\t\t\t\t\t\t\t\tStaticText 'Select record for action: CHG0040007'\n\t\t\t\t\t\t\t\t[a337] gridcell 'Preview record: CHG0040007', visible\n\t\t\t\t\t\t\t\t\t[a338] button 'Preview record: CHG0040007', clickable, visible, hasPopup='dialog', expanded=False\n\t\t\t\t\t\t\t\t\t\tStaticText '\\uf19c'\n\t\t\t\t\t\t\t\t[a339] gridcell 'Open record: CHG0040007', visible\n\t\t\t\t\t\t\t\t\t[a340] link 'Open record: CHG0040007', clickable, visible\n\t\t\t\t\t\t\t\t[a341] gridcell 'Please reboot ApplicationServerPeopleSoft', visible\n\t\t\t\t\t\t\t\t[a342] gridcell 'Moderate', visible\n\t\t\t\t\t\t\t\t[a343] gridcell '3 - Low', visible\n\t\t\t\t\t\t\t\t[a344] gridcell '4 - Low', visible\n\t\t\t\t\t\t\t\t[a345] gridcell '(empty)', visible\n\t\t\t\t\t\t\t\t[a346] gridcell '(empty)', visible\n\t\t\t\t\t\t\t\t\tStaticText '(empty)'\n\t\t\t\t\t\t\t\t[a350] gridcell '(empty)', visible\n\t\t\t\t\t\t\t\t\tStaticText '(empty)'\n\t\t\t\t\t\t\t\t[a354"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "5994290c4be94771a3cd4381b4cf9a57",
+    "timestamp_epoch": 1792041967.8591123,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 1,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.9715261649980675,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "31d082b5ddf61c96563ec937c74a3376c55ee393824a6bb0b406b9f0350f4927",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "471e81d3e82f401eb9c0d6918c43e5ed",
+    "timestamp_epoch": 1792041967.9549603,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.09330301900627092,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1168,
+    "input_sha256": [
+      "e6d5d19bb534f0f409f1ea39e3465935c248e5d079fdb03bcbc7aff79b1b561c",
+      "a2940e0b3dfb0bd62b58647d812636a8b2b1f42786857aac76cd867f85b52ab9"
+    ],
+    "input_texts": [
+      "The agent is configuring a filter on the Change Requests list to find specific entries. This step attempts to set the first condition by clicking the 'Normal' option within the 'Type' field dropdown to restrict the list to normal change requests.\n\nThe action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 103 unfiltered records, and the filter condition for Type has not been applied.",
+      "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.\n\nThe selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, showing 103 total records, awaiting the application of the full filter set."
+    ],
+    "prompt_tokens": 235,
+    "total_tokens": 235,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "f98f810a5c524803a74f96aad715590b",
+    "timestamp_epoch": 1792041967.955068,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.09354724097647704,
+    "input_keys": [
+      "9a756f1863bcf45dd6787f1008cef51f9c4a37cfa2c27031ceccbffc7028e9b3",
+      "624340a63b7866febdae09b6a5dfe2ad1b9d76d5c311e845a8c655afee038ffa",
+      "16aa71dd6768afe8606866a1dd4d765b60606e9762315b1f464700c1c22214a2",
+      "3db9155529813c47457941c0b3a9675116be0f7cf245188621419570d5ccf2a7",
+      "4282de38bb1f63a2f120a1628c149c70932c4e3f5763ba0a33d5dc0178428f20",
+      "45a9f8717174c4aa6ab93d2c8617f5c99f94f50802be8716e4883c81c92f3e53",
+      "de80478a7204632f623097b80f6d0abc40cb4076afce13d3d05bbc82db13a0ed",
+      "94b70ab75d8f46b60808fbbd51822d8a909e263166b23f26e61477e2bd8e8ab1",
+      "bcbee332f39229b703d1440045eb9e741295393a7a18706e9f9c78ccdae99a86",
+      "1b55febdb9fd02c04387b81cf823d57e0f9df973c1335221e752f91d4ddabdeb",
+      "93deee367be126fb7f0ec8ed685e9313f9b2cf4809cea186d8dbfc771428bfab",
+      "c2ce6a7af8a9731bc0181f3effc052625469f78f78e845b6698b8f4583569672",
+      "15012222f64f86041d36fc0e3963c50c44a0ef0065f5db873e694917bfc67b2c",
+      "02ed35b503aa986305e6d07b4aaa71d26b414c1ddfe594171baf9046127667c2",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "434d4dcea30a42419339612875ea2b95",
+    "timestamp_epoch": 1792041967.9556167,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.448499435558915e-05,
+    "input_keys": [
+      "e70e0d86c3610a23eb0c3886b368b55ef3cdc5494a3e5fa4290fd2a5081214d5"
+    ]
+  },
+  {
+    "record_id": "cf9cec9476ec4c839d9cfab3fce5a3f2",
+    "timestamp_epoch": 1792041967.9560509,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.0808976842090487e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

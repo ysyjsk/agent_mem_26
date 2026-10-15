@@ -1,0 +1,637 @@
+[
+  {
+    "record_id": "9a7083f0eb664a24956cff1374cad6f1",
+    "timestamp_epoch": 1792033278.7410262,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 16.123767919983948,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43218,
+      "text_sha256": "6a051b8115aa17b1c9ed88e617b35460302aa1adf6cff7819cd1b6ae4c5e069f",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13848,
+    "completion_tokens": 419,
+    "total_tokens": 14267,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "c72276ddab7a4dd096214760b02f9677",
+    "timestamp_epoch": 1792033278.7412891,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "full_input_tokens_preflight": 40130,
+    "single_input_tokens_preflight": [
+      25760,
+      28258
+    ],
+    "prepared_input_tokens": 13848,
+    "state_max_chars": 12000,
+    "request_sha256": "6a051b8115aa17b1c9ed88e617b35460302aa1adf6cff7819cd1b6ae4c5e069f",
+    "status": "parsed"
+  },
+  {
+    "record_id": "e9a9b2cadc114466ac425b1bf681c7b9",
+    "timestamp_epoch": 1792033292.2029662,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.369747264980106,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43141,
+      "text_sha256": "8858257574ace919b673594af280cadd5191beaa5045edc064445d8ee734c502",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13826,
+    "completion_tokens": 323,
+    "total_tokens": 14149,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "587af2e50b29473cb0849839aa52e025",
+    "timestamp_epoch": 1792033292.2032218,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 41801,
+    "single_input_tokens_preflight": [
+      28817,
+      27455
+    ],
+    "prepared_input_tokens": 13826,
+    "state_max_chars": 12000,
+    "request_sha256": "8858257574ace919b673594af280cadd5191beaa5045edc064445d8ee734c502",
+    "status": "parsed"
+  },
+  {
+    "record_id": "380a245b7c9e4117b35c5440bdda7f0c",
+    "timestamp_epoch": 1792033309.0169892,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 16.72168970797793,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43430,
+      "text_sha256": "464ecd667ec579066703bdcf7b9ec35baf3695937eeb77fdc4b2c71e02e71426",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14446,
+    "completion_tokens": 434,
+    "total_tokens": 14880,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "eed7cfeb358e43688e38a646472c4b32",
+    "timestamp_epoch": 1792033309.0173602,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 40356,
+    "single_input_tokens_preflight": [
+      27399,
+      27418
+    ],
+    "prepared_input_tokens": 14446,
+    "state_max_chars": 12000,
+    "request_sha256": "464ecd667ec579066703bdcf7b9ec35baf3695937eeb77fdc4b2c71e02e71426",
+    "status": "parsed"
+  },
+  {
+    "record_id": "59c800a870ce4cc0b30480db589cc0f9",
+    "timestamp_epoch": 1792033323.3963463,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.239266085001873,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43282,
+      "text_sha256": "305b3983c88152821856d7435a238791ba4a0c6ac3d911cceeebc3c97e82b33e",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13865,
+    "completion_tokens": 354,
+    "total_tokens": 14219,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "82d356d303d446be804324c35c8f8e8e",
+    "timestamp_epoch": 1792033323.3967092,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "full_input_tokens_preflight": 42774,
+    "single_input_tokens_preflight": [
+      27664,
+      29855
+    ],
+    "prepared_input_tokens": 13865,
+    "state_max_chars": 12000,
+    "request_sha256": "305b3983c88152821856d7435a238791ba4a0c6ac3d911cceeebc3c97e82b33e",
+    "status": "parsed"
+  },
+  {
+    "record_id": "22a2b70e0e5745b2bc7e4d5cf9aa7842",
+    "timestamp_epoch": 1792033337.7851233,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.291863178979838,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43142,
+      "text_sha256": "ec5568a5c9ec1c045faec93b19189a954e58d455fc7302932617c0249ecea3dd",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13756,
+    "completion_tokens": 358,
+    "total_tokens": 14114,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "05f5961a388a401d97e6f4b1617baf77",
+    "timestamp_epoch": 1792033337.7853448,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "full_input_tokens_preflight": 44069,
+    "single_input_tokens_preflight": [
+      30225,
+      28977
+    ],
+    "prepared_input_tokens": 13756,
+    "state_max_chars": 12000,
+    "request_sha256": "ec5568a5c9ec1c045faec93b19189a954e58d455fc7302932617c0249ecea3dd",
+    "status": "parsed"
+  },
+  {
+    "record_id": "2ce33d99f1844190818c7da5db90c42c",
+    "timestamp_epoch": 1792033351.1693008,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.28267748100916,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43222,
+      "text_sha256": "949c58c9d091387f46da6c093de536371f6a2f2f71f1abdae0a88140db0751f3",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13795,
+    "completion_tokens": 315,
+    "total_tokens": 14110,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "b666bbfea09241e39f26352c7177e213",
+    "timestamp_epoch": 1792033351.1695404,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0010_0011",
+      "event_0011_0012"
+    ],
+    "state_ids": [
+      10,
+      11,
+      12
+    ],
+    "full_input_tokens_preflight": 45158,
+    "single_input_tokens_preflight": [
+      29299,
+      31328
+    ],
+    "prepared_input_tokens": 13795,
+    "state_max_chars": 12000,
+    "request_sha256": "949c58c9d091387f46da6c093de536371f6a2f2f71f1abdae0a88140db0751f3",
+    "status": "parsed"
+  },
+  {
+    "record_id": "34bbd9ff7a6044e291f1c3aacbae0578",
+    "timestamp_epoch": 1792033365.0843961,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.815648524003336,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43339,
+      "text_sha256": "715823f39a2f9326975b3e4680f8d36365509ecb2ab90ab2adb2819eb7542fde",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13853,
+    "completion_tokens": 309,
+    "total_tokens": 14162,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "bb8e2eaa47ba4c638feea3c31f9e61a0",
+    "timestamp_epoch": 1792033365.0846448,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0012_0013",
+      "event_0013_0014"
+    ],
+    "state_ids": [
+      12,
+      13,
+      14
+    ],
+    "full_input_tokens_preflight": 45996,
+    "single_input_tokens_preflight": [
+      31675,
+      30170
+    ],
+    "prepared_input_tokens": 13853,
+    "state_max_chars": 12000,
+    "request_sha256": "715823f39a2f9326975b3e4680f8d36365509ecb2ab90ab2adb2819eb7542fde",
+    "status": "parsed"
+  },
+  {
+    "record_id": "2b3ec3842c074005a7e66f0ce8b2f6ec",
+    "timestamp_epoch": 1792033365.1223726,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 30438,
+    "prepared_input_tokens": 10017,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "90840f8bd1cb4c5a887db69d36db3a3d",
+    "timestamp_epoch": 1792033374.001997,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 8.879232900013449,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 1024,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30699,
+      "text_sha256": "fd5335477d0bcb39b408060f6bfc7b9dbe16db47f7a42d1a0a54b5ecf04f740b",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 10017,
+    "completion_tokens": 203,
+    "total_tokens": 10220,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "ab33611cf3cc4bf99d87daa3a7cc1643",
+    "timestamp_epoch": 1792033374.0022492,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "a504c04d1975447ca3e3bc520fd5f9c4",
+    "timestamp_epoch": 1792033500.1005778,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 126.09296573701431,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": null,
+    "finish_reason": "length",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 10939,
+      "text_sha256": "e762d67d97f9c12c127a406c675be538deefcd9626d8b1792831ac0e2f57db22",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 2831,
+    "completion_tokens": 4096,
+    "total_tokens": 6927,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "fbc3c4482e374ae2b0ac609bea2dc185",
+    "timestamp_epoch": 1792033517.3020802,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 17.200993558974005,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 17701,
+      "text_sha256": "71f2d30ef5250d5ce4852c216c0d4e59846af1c5302eefa99f4ef3acac50be0b",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 4233,
+    "completion_tokens": 430,
+    "total_tokens": 4663,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "fd33d42bff2f413182935a381061936c",
+    "timestamp_epoch": 1792033517.5859742,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.0008913230267353356,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "b5d6bf85eccb40539feb9aba46fea099",
+    "timestamp_epoch": 1792033518.3950558,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.806224542990094,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 15,
+    "input_characters": 10372,
+    "input_sha256": [
+      "c0f39998a5a4e761d31335136d34668d17cd94a9da45916eba5554c66f9c3540",
+      "54e8a124668d6a028f6946289c4dc6b59f12ffb2c16512b3aac90c0c5f279678",
+      "6880bedac9e628da2eeec0b5714dec2b79707dbac44c41acbce6c7563f720df8",
+      "4464e296561700ad79c7d8d6bbe97468a9ab57700f0835694168cbb2acbcb46d",
+      "b641ea7dcea1529fe1161845fed821fafc51ea305a25fa358aa2d6c6b3d08b94",
+      "3c2c74f67d76eb55b79b12b4ffdf5e9ac31067648834ccf238243d5d76fc3c0a",
+      "f53da48164c3be3d15bd04752a27163fe6b6defee23b200d3ba239584660dd7e",
+      "2ad22afe2ba372af1a7bfe5bca78a37a33701bdba7ab53c51bf61807983b5f7a",
+      "2725e7f28db98a393a6d9477e88f34569ef3cc1dfc65b247cac6749a08c07131",
+      "a92ea1df8894592a34fc6d2589cf11399ec02eb1bee48ee3b297824f69391eba",
+      "f613adf9e7aeb386d2eae847e2b7be122004958155cdc1d7fa3cf545a36e1361",
+      "855ee13ed49ccee79e778e3136a10f76db653b3f8e84bad9ea956eaf60be9fbf",
+      "5fc018316013864ba9804b735af912b1f2c2bfe55a94d91f1b414ff02412a5dc",
+      "6e9dd0d92fe8b32ed849ee5abe8b5a45c385a0d6929a7bb034568da480c72180",
+      "4a0694959c992e5f21e0d124c6e3ace6f95432ca048e6b4bc9ddb317fe9a460b"
+    ],
+    "input_texts": [
+      "The agent initiates the process of filtering the Change Requests list by clicking the 'Show / hide filter' button. This action is the first step in a sequence intended to construct a complex AND filter to find specific entries where the Type is Normal, the requester is the System Administrator, the Model is empty, the short description matches a specific network update task, and the state is Scheduled.\n\nClicking the 'Show / hide filter' button (a47) changes the interface by expanding the previously collapsed filter toolbar. In the post-state, the filter panel is now visible and active, indicated by the button's expanded state and the presence of a status message confirming '104 result(s) available'. The UI reveals a combobox (a1181) for selecting the first filter field, allowing the agent to begin defining the filtering conditions.",
+      "With the filter panel now open, the agent proceeds to define the first condition of the filter chain. The goal is to restrict the list to Change Requests where the 'Type' is 'Normal'. This step involves selecting the appropriate field from the dropdown menu to set up the initial AND condition.\n\nClicking the field chooser combobox (a1181) transitions the UI from a static toolbar to an interactive dropdown menu. The post-state reveals a list of available fields (a1191), including options like 'Keywords', 'Type', 'Requested by', and 'Model'. The combobox is now focused and expanded, presenting the 'Type' option (a1583) as a selectable item, enabling the agent to choose it for the first filter condition.",
+      "The agent is building a filter for Change Requests to find specific entries regarding network interface updates. In this step, the agent selects the 'Type' field from the open field chooser dropdown to define the first condition of the filter.\n\nThe action of clicking the 'Type' option (a1583) in the field chooser list changes the UI state by confirming the selection of 'Type' as the filter field. The field chooser dropdown closes, and the interface updates to display the value selection combobox for the 'Type' field, which currently shows '-- None --', indicating the agent must now select the specific value for this condition.",
+      "Continuing the filter construction, the agent now needs to specify the value for the 'Type' field that was just selected. The goal is to filter for change requests where the type is 'Normal'.\n\nClicking the combobox labeled 'Choose option for field: Type' (a1639) expands the value selection menu. The state changes from a collapsed combobox displaying '-- None --' to an expanded popup menu showing available options, allowing the agent to select the 'Normal' value for the Type condition.",
+      "The agent attempts to set the first filter condition for the Change Request list by selecting 'Normal' from the 'Type' dropdown. This step is part of a broader workflow to isolate specific entries where the Type is Normal, Requested by is System Administrator, Model is empty, Short description matches a specific network update task, and State is Scheduled.\n\nIn the pre-state, the 'Type' option chooser is open and displaying available options, but no value has been selected yet. The action targets the 'Normal' option (a1642) within this dropdown. In the post-state, the UI remains visually identical to the pre-state regarding the filter list; the selection of the 'Normal' option did not result in an immediate update of the filter condition or the record list, as the agent subsequently switched to using a programmatic selection method.",
+      "Following the failed direct click on the 'Normal' option, the agent uses a programmatic selection command to set the 'Type' filter value to 'normal'. This action completes the setup of the first condition in a series of filters intended to narrow down Change Requests to those requesting an update to network interfaces.\n\nIn the pre-state, the 'Type' field chooser (combobox a1639) is focused and expanded, showing the list of options, but the field value is still effectively unset or pending. The action performs a selection on this combobox for the value 'normal'. In the post-state, the UI shows no immediate visual change to the filter panel or the record list; the filter condition 'Type is Normal' has been logically applied in the system's state, though the list of 101 records remains unfiltered on screen, indicating the filter logic is queued or requires further steps to activate.",
+      "The agent is constructing a complex filter on the Change Requests list to find specific entries based on multiple criteria including Type, Requested by, Model, Short description, and State. This step represents the addition of the first filter condition, setting the Type to 'Normal' to begin narrowing down the results.\n\nAfter clicking the 'Add AND Condition To Condition 1: Type is Normal' button, the filter interface updates to indicate that a new condition has been successfully added. The status message changes to show 'New AND condition added, 2 of 2', confirming the system is ready to accept the next filter parameter. The field chooser for the second condition becomes the active focus, allowing the agent to proceed with defining the subsequent filter criteria.",
+      "Continuing the construction of the multi-criteria filter for Change Requests, the agent now focuses on defining the second condition. The goal is to further restrict the list by specifying who requested the change, following the initial 'Type is Normal' filter.\n\nClicking the field chooser combobox opens a dropdown list displaying all available fields for filtering. The list includes options such as 'Keywords', 'Active', 'Requested by', 'Model', and many others. The interface is now in a state where the agent can select a specific field to define the second condition in the AND logic chain.",
+      "The agent is building a complex filter to extract specific Change Requests. Having already added conditions for 'Type' being 'Normal', the agent is now configuring the second condition in the AND chain. This step involves selecting the 'Requested by' field from the available list of filter criteria to define who requested the change.\n\nIn the pre-state, the filter field chooser dropdown is open, displaying a long list of available fields. The agent clicks the 'Requested by' option (a1999) from this list. In the post-state, the dropdown closes, and the 'Requested by' field is now selected and active, ready for the agent to input the specific user value for the next step.",
+      "Continuing the filter configuration, the agent has selected 'Requested by' as the field for the second condition. This step involves populating the value for this condition. The agent is setting up the criteria to find change requests requested specifically by the 'System Administrator' role.\n\nIn the pre-state, the 'Requested by' field is selected but empty, with the corresponding input textbox visible and ready for interaction. The agent performs a fill action on this textbox with the value 'System Administrator'. In the post-state, the textbox now contains the text 'System Administrator', successfully defining the second filter condition as 'Requested by is System Administrator'.",
+      "The agent is building a complex filter on the Change Requests list to find specific records. Having just entered 'System Administrator' into the 'Requested by' field for the second condition, the agent now needs to confirm this condition to proceed with adding the third one regarding the 'Model' field.\n\nClicking the 'Add AND Condition To Condition 2' button confirmed the second filter rule ('Requested by is System Administrator'). The interface immediately updated the status message to show 'New AND condition added, 2 of 2' and revealed a new, focused field chooser combobox for the third condition, preparing the UI for the next field selection.",
+      "Continuing the filter construction workflow, the agent has confirmed two conditions and is now preparing to define the third. The agent clicks the newly revealed field chooser to select the 'Model' attribute, which is required to filter for empty string values.\n\nClicking the focused field chooser combobox opened an expanded dropdown list of available fields. The list populated with options such as 'Keywords', 'Active', and 'Model', allowing the agent to select the specific field needed for the third condition.",
+      "The agent is building a filter to find specific Change Requests. Having already added conditions for 'Type' and 'Requested by', the agent now focuses on the third condition. This step involves selecting the 'Model' field from the available field list to define whether the model should be empty.\n\nAfter clicking the 'Model' option in the field chooser dropdown, the combobox labeled 'Choose option for field: Model' becomes the active input. The interface updates to show 'Model' as the selected field for the current condition slot, replacing the previous placeholder state where the agent was choosing a field.",
+      "Continuing the construction of the filter criteria, the agent has selected the 'Model' field for the third condition. The current task is to specify the operator for this condition, aiming to find entries where the Model field is empty.\n\nFollowing the selection of the 'is empty string' operator, the filter configuration for Condition 3 is finalized. The UI reflects that the 'Model' field is set with the operator 'is empty string', completing the definition of the third AND condition in the filter chain.",
+      "The agent is building a complex filter on the Change Requests list to isolate specific records based on multiple criteria, including Type, Requested by, Model, Short description, and State. This specific transition represents the step where the agent finalizes the third condition in the filter chain by confirming that the 'Model' field must be an empty string, preparing the interface to accept the subsequent 'Short description' and 'State' conditions.\n\nThe agent clicked the 'Add AND Condition To Condition 3: Model is empty string' button. The post-state shows that the filter toolbar has successfully registered this condition, as indicated by the status message 'New AND condition added, 3 of 3' in the live region, replacing the previous count of '2 of 2'. The UI remains on the Change Requests list page with the filter panel expanded, ready for the agent to select the next field ('Short description') to add to the filter chain."
+    ],
+    "prompt_tokens": 2088,
+    "total_tokens": 2088,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "22c296a621b240a18d4f08587a164d95",
+    "timestamp_epoch": 1792033518.3952653,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 15,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.8066113569948357,
+    "input_keys": [
+      "c06324932a5bacc076779ec7b905cf8331c17dfdea61445c4ba7fc2cfced78a7",
+      "978a1c0581fe36b96a82041fe18e9f83ff675f7cab904ca71ee2a6f33aae7270",
+      "4e6655eafbd000f35b6882225b365b7acc6826414aff247153f9cd115dc8b601",
+      "c2c88798643f0e1f868a1e8f04cc169aa4b3fddac60f9c49706849ad05c6cb72",
+      "586797a1b1fc66914ec2484c967ae144e3a4a188a6aa544ee5c12c52bed8eea7",
+      "39554cfdc736e10da471384b4bc27bfad9ae2bdca7b408a850721aca73c7c833",
+      "5d0f4268cd1ee3d083cc89e78f0e1a3c9434708324221e606ad837f6f0dc25e0",
+      "dfd0bc7b7f9e69b1f32c3d24b7de8c0a62a6c58363ec689ef9f1133077a4b99f",
+      "7e1e91796666b2ba5a70a0858f5e45f5f1367b2e23ce32772cb823d235095889",
+      "9c518166a98e47465208a5138138651f47fe1ae782ecd17ffd880dce2d3f725b",
+      "f65b271a4dbf6ecef4f57092ac93e48dc674e1bbdd8d1530737f00e3de7c76d3",
+      "e0549e7ecb8ef6d20c37f9a35964ac76ed67e301661e41a601571df9441a4db8",
+      "64da9d5bc46444b2bd33cc056d11101a7de4efc6767d5c1519b0a9b45b38d316",
+      "c9bb07168228d000b266eeeea94d074f3fdb8da699481dfb4fbc00988bea595b",
+      "0259ed632c75ff375b11f6bc24e019d0ac085861fbb5b27c2147ab99555336c5"
+    ]
+  },
+  {
+    "record_id": "4c984c2c7b2f482f99e2750f2556ad2b",
+    "timestamp_epoch": 1792033518.461632,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.0656430319941137,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 688,
+    "input_sha256": [
+      "325dcafd2f24edfa575eba636c5df06ed0ee0f91bcd4c872ed663deb8ff5a088"
+    ],
+    "input_texts": [
+      "Title: Create AND Filter on Change Request List\nDescription: Step-by-step workflow to add multiple AND filter conditions on the Change Request list.\n- Open the filter panel by clicking the \"Show / hide filter\" button.\n- Select the \"Type\" field from the condition 1 field chooser combobox.\n- Set the \"Type\" value to \"Normal\" using the value chooser.\n- Click the \"Add AND Condition\" button to append the next filter requirement.\n- Select \"Requested by\" field and fill the value with \"System Administrator\".\n- Add a new condition and select \"Model\" field.\n- Set the \"Model\" operator to \"is empty string\".\n- Add subsequent conditions for \"Short description\" and \"State\" to complete the logic."
+    ],
+    "prompt_tokens": 153,
+    "total_tokens": 153,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "dbf6c4b6497e420f9972165267ba90a0",
+    "timestamp_epoch": 1792033518.4617975,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.0658829050080385,
+    "input_keys": [
+      "30a71d7cc2713d18e8b062d5b783b4cc4beb40d9f052870876679750bedc5b3d"
+    ]
+  },
+  {
+    "record_id": "77dece74eef74acaba02654f6b3122f5",
+    "timestamp_epoch": 1792033518.5579302,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.0950859269942157,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1153,
+    "input_sha256": [
+      "3009b0304ce9e6e29c748a738f7de04012445b35595c60b13ed8cc22b9f45203"
+    ],
+    "input_texts": [
+      "Title: Change Request List Filter UI Behaviors\nDescription: Key UI interactions and element types observed when building complex filters.\n- Filter panel is revealed by clicking the \"Show / hide filter\" button.\n- Field selection uses a combobox labeled \"All of these conditions must be met. -- choose field --\".\n- Value selection for dropdown fields may require select_option if clicking fails.\n- Adding conditions uses a button labeled \"Add AND Condition To Condition X: [Field] is [Value]\".\n- Text input fields for values are standard textboxes (e.g., \"Requested by\" textbox).\n- Operators are selected via a combobox (e.g., \"Operator For Condition 3: Model is\").\n- Empty string conditions are configured by selecting the \"is empty string\" operator option.\n- The filter list is located at change_request_list.do.\n- Conditions accumulate in an AND group (\"All of these conditions must be met\").\n- The workflow stopped after adding the third condition (Model), leaving Short description and State pending.\n- Condition IDs and Bids change per state but the labels remain consistent.\n- The \"Model\" field was successfully selected for the empty string check."
+    ],
+    "prompt_tokens": 236,
+    "total_tokens": 236,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "bef22eb4759b4d0cb49149bf4f67666a",
+    "timestamp_epoch": 1792033518.5581703,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.09542259899899364,
+    "input_keys": [
+      "8d042702e36ddfa828941afec5fad7a18670e626d982e78e35f25f7d550542b0"
+    ]
+  }
+]

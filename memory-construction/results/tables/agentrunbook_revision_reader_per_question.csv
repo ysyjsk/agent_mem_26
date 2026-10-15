@@ -1,0 +1,37 @@
+domain,method,repeat,question_id,gold,answer,correct,reader_status,truncated,parse_status
+web,fresh,r1,11dac74b,View all comments,UNKNOWN,False,ok,False,boxed
+web,fresh,r1,631667c9,Edit forum,Edit forum,True,ok,False,boxed
+web,fresh,r1,8c55d6bc,top 5 most viewed products,The report displays the top 5 most viewed products for each interval.,True,ok,False,boxed
+web,fresh,r1,99ae54d1,Edit biography,Edit biography,True,ok,False,boxed
+web,b3,r1,11dac74b,View all comments,UNKNOWN,False,ok,False,boxed
+web,b3,r1,631667c9,Edit forum,Edit forum,True,ok,False,boxed
+web,b3,r1,8c55d6bc,top 5 most viewed products,The report displays the top 5 most viewed products for each interval.,True,ok,False,boxed
+web,b3,r1,99ae54d1,Edit biography,Edit biography,True,ok,False,boxed
+web,ours,r1,11dac74b,View all comments,UNKNOWN,False,ok,False,boxed
+web,ours,r1,631667c9,Edit forum,Edit forum,True,ok,False,boxed
+web,ours,r1,8c55d6bc,top 5 most viewed products,The report displays the top 5 most viewed products for each interval.,True,ok,False,boxed
+web,ours,r1,99ae54d1,Edit biography,Edit biography,True,ok,False,boxed
+enterprise,fresh,r1,0d07143c,Acquisition method,UNKNOWN,False,ok,False,boxed
+enterprise,fresh,r1,25b00876,short description,Short description,True,ok,False,boxed
+enterprise,fresh,r1,87711b62,task type,Type,False,ok,False,boxed
+enterprise,fresh,r1,ad903be2,2 days,2 Days,True,ok,False,boxed
+enterprise,fresh,r2,0d07143c,Acquisition method,Acquisition method,True,ok,False,boxed
+enterprise,fresh,r2,25b00876,short description,UNKNOWN,False,ok,False,boxed
+enterprise,fresh,r2,87711b62,task type,Type,False,ok,False,boxed
+enterprise,fresh,r2,ad903be2,2 days,2 Days,True,ok,False,boxed
+enterprise,b3,r1,0d07143c,Acquisition method,Acquisition method,True,ok,False,boxed
+enterprise,b3,r1,25b00876,short description,Short description,True,ok,False,boxed
+enterprise,b3,r1,87711b62,task type,Type,False,ok,False,boxed
+enterprise,b3,r1,ad903be2,2 days,2 Days,True,ok,False,boxed
+enterprise,b3,r2,0d07143c,Acquisition method,Acquisition method,True,ok,False,boxed
+enterprise,b3,r2,25b00876,short description,Short description,True,ok,False,boxed
+enterprise,b3,r2,87711b62,task type,Type of change,False,ok,False,boxed
+enterprise,b3,r2,ad903be2,2 days,2 Days,True,ok,False,boxed
+enterprise,ours,r1,0d07143c,Acquisition method,Created,False,ok,False,boxed
+enterprise,ours,r1,25b00876,short description,Short description,True,ok,False,boxed
+enterprise,ours,r1,87711b62,task type,The question is flawed because there is only one field containing 'type' (Type) in the alphabetical list.,False,ok,False,boxed
+enterprise,ours,r1,ad903be2,2 days,2 days,True,ok,False,boxed
+enterprise,ours,r2,0d07143c,Acquisition method,UNKNOWN,False,ok,False,boxed
+enterprise,ours,r2,25b00876,short description,Short description,True,ok,False,boxed
+enterprise,ours,r2,87711b62,task type,Type,False,ok,False,boxed
+enterprise,ours,r2,ad903be2,2 days,2 Days,True,ok,False,boxed

@@ -1,0 +1,95 @@
+{
+  "policy": "b3",
+  "case": "literal_revision",
+  "scope": "adapted_AgentRunbookR_local_update",
+  "starting_snapshot": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/matched-enterprise-v1/memory_state",
+  "starting_cache": "independent clones; exact requests and vectors preserved equally",
+  "setup_load_and_seed_s_excluded": 0.8699014850135427,
+  "update_to_queryable_publish_s": 14.696108782023657,
+  "started_epoch": 1792043164.5965593,
+  "completed_epoch": 1792043179.34354,
+  "artifact_build_s": 14.659256551996805,
+  "publication_and_reload_s": 0.0368526259844657,
+  "runner_sha256": "8d58add830a613c1b7cd13138ab6f3bd8d05f190f6ea715a28934fb66d688963",
+  "delta_version": null,
+  "source_append_comparator": false,
+  "reextracted_event_outputs": 2,
+  "regenerated_notes": 0,
+  "llm_calls": 1,
+  "llm_input_tokens_known": 13268,
+  "llm_output_tokens_known": 306,
+  "event_llm_elapsed_sum_s_not_wall": 12.706331939989468,
+  "note_llm_elapsed_sum_s_not_wall": 0,
+  "embedding_calls": 2,
+  "embedding_vectors": 3,
+  "embedding_tokens_known": 4313,
+  "unknown_usage_calls": 0,
+  "api_failed_calls": 0,
+  "exact_request_hits": 7,
+  "dependency_reused_event_ids": [],
+  "embedding_hits": 28,
+  "load_verified": true,
+  "event_count": 49,
+  "note_count": 10,
+  "edited_event_outputs": 0,
+  "edited_notes": 0,
+  "delta_fallback_groups": 0,
+  "primary_metric": "total_LLM_input_plus_output_tokens",
+  "matched_construction_signature": "7b6e6e7b08fab7ae5355f171df175b783c9314d093dd40c7a6e0157b01892067",
+  "qa_status": "derived_checks_failed",
+  "quality_checks": {
+    "new_fact_present": false,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": "not_applicable_b3",
+    "dirty_event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "reused_event_count": 0,
+    "unchanged_candidate_event_count": 12,
+    "fixed_reader_regression": "not_run",
+    "derived_event_change_hits": {
+      "event_0004_0005": true,
+      "event_0005_0006": false
+    },
+    "derived_notes_change_hit": null,
+    "notes_change_required": false,
+    "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+    "literal_derived_rules": [
+      {
+        "target": "event_0004_0005",
+        "required_hits": {
+          "2 of 2": true,
+          "Add Sort|sorting": true
+        },
+        "forbidden_hits": {
+          "New sort order condition added, 1 of 1": false
+        },
+        "pass": true
+      },
+      {
+        "target": "event_0005_0006",
+        "required_hits": {
+          "2 of 2": false,
+          "Acquisition method": true,
+          "Asset function": true
+        },
+        "forbidden_hits": {},
+        "pass": false
+      }
+    ],
+    "derived_automated_checks_pass": false,
+    "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+    "quality_pass": null,
+    "semantic_review": "pending"
+  },
+  "trajectory_id": "49f98e9e",
+  "state_index": 5,
+  "revision_count": 1,
+  "state_indices": [
+    5
+  ],
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/v11-new-enterprise-49f98e9e-sort-replacement/literal_revision-b3"
+}

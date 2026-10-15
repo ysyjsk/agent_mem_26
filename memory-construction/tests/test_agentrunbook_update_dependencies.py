@@ -1,5 +1,6 @@
 """Read-only validity checks on a persisted real source snapshot; no inference."""
 import importlib.util
+import asyncio
 import json
 import os
 from pathlib import Path
@@ -23,6 +24,14 @@ def updater(monkeypatch):
     memory = module.load_memory(SOURCE)
     memory.__class__ = module.UpdateRunbook
     module.seed_caches(memory)
+    # Unit fixture only: seed synthetic dependency entries to test invalidation
+    # shape. Production now refuses to re-key legacy snapshot event outputs.
+    for tid in memory.inserted_trajectory_ids:
+        trajectory = memory._load_stored_trajectory(tid)
+        for spec in memory._build_event_transition_specs(trajectory):
+            memory.event_outputs[memory.event_dependency_key(trajectory, spec)] = {
+                'overview': 'synthetic overview', 'state_transition': 'synthetic transition'}
+    memory.initial_event_keys = set(memory.event_outputs)
     return module, memory
 
 
@@ -56,3 +65,176 @@ def test_event_output_dependencies_not_whole_group(updater, case, note_changes):
     assert groups_changed == [2, 4]
     note_messages = memory._build_note_generation_messages(trajectory_dir=SOURCE, simplified_trajectory=trajectory)
     assert (memory.request_cache_key(note_messages) not in memory.exact_requests) == note_changes
+
+
+def test_same_trajectory_growth_is_distinct_from_new_trajectory_append(updater):
+    module, memory = updater
+    original = memory._load_stored_trajectory('1ad1af4b')
+    grown, workload = module.changed_trajectory(
+        SOURCE, 'trajectory_growth', '1ad1af4b', len(original['states']) - 1,
+        '[controlled arrival] follow-up observed',
+    )
+    assert workload['kind'] == 'controlled_same_trajectory_growth'
+    assert workload['no_new_trajectory'] is True
+    assert grown['id'] == original['id']
+    assert len(grown['states']) == len(original['states']) + 1
+    assert grown['outcome'] is None
+    specs = memory._build_event_transition_specs(grown)
+    assert len(specs) == len(original['states'])
+    assert specs[-1]['event_id'] == f"event_{original['states'][-1]['state_index']:04d}_{grown['states'][-1]['state_index']:04d}"
+    # The current conservative cache key includes trajectory-global action/
+    # length context; growth therefore does not get mislabeled as exact reuse.
+    assert all(memory.event_dependency_key(grown, spec) not in memory.initial_event_keys for spec in specs)
+
+
+def test_fresh_partition_baseline_clears_only_build_caches(updater):
+    module, memory = updater
+    assert memory.exact_requests
+    assert memory.event_outputs
+    assert memory._construction_embedding_memo
+    original_event_count = len(memory.event_entries)
+    original_ids = list(memory.inserted_trajectory_ids)
+
+    module.clear_build_caches(memory)
+
+    assert memory.exact_requests == {}
+    assert memory.event_outputs == {}
+    assert memory.initial_event_keys == set()
+    assert memory._construction_embedding_memo == {}
+    assert len(memory.event_entries) == original_event_count
+    assert memory.inserted_trajectory_ids == original_ids
+
+
+def test_delta_merge_preserves_unmodified_fields(updater):
+    module, _ = updater
+    old = {'overview': 'Create ticket T123.', 'state_transition': 'Status Open. Owner Alice.'}
+    result = module.merge_event_edits(old, [{'field': 'state_transition', 'old': 'Status Open.', 'new': 'Status Closed.'}])
+    assert result == {'overview': old['overview'], 'state_transition': 'Status Closed. Owner Alice.'}
+    assert old['state_transition'] == 'Status Open. Owner Alice.'
+    appended = module.merge_event_edits(old, [{'field': 'state_transition', 'old': '', 'new': 'Priority High.'}])
+    assert appended['state_transition'] == old['state_transition'] + ' Priority High.'
+
+
+@pytest.mark.parametrize('edit', [
+    {'field': 'raw', 'old': '', 'new': 'invalid'},
+    {'field': 'overview', 'old': 'missing', 'new': 'invalid'},
+    {'field': 'overview', 'old': 'A', 'new': 'invalid'},
+])
+def test_delta_merge_rejects_ambiguous_edits(updater, edit):
+    module, _ = updater
+    with pytest.raises(ValueError):
+        module.merge_event_edits({'overview': 'A A', 'state_transition': 'B'}, [edit])
+
+
+def test_delta_uses_source_difference_and_rejects_growth(updater):
+    module, memory = updater
+    old = memory._load_stored_trajectory('1ad1af4b')
+    changed, _ = module.changed_trajectory(SOURCE, 'state_revision')
+    delta = module.source_delta(old, changed)
+    assert len(delta) == 1 and delta[0]['field'] == 'text'
+    assert "+[correction] status 'Title validation: saved', visible" in delta[0]['diff']
+    grown, _ = module.changed_trajectory(SOURCE, 'trajectory_growth')
+    assert module.source_delta(old, grown) is None
+
+
+def test_additive_delta_cannot_delete_old_details(updater):
+    module, _ = updater
+    record = {'existing_memory': {'overview': 'Task T. Owner Alice.', 'state_transition': 'Empty before; value X after; control 126 focused.'},
+              'changes_for_this_event': [{'state_index': 4, 'field': 'text', 'role': 'pre-state'}]}
+    out = module.merge_additive_observations(record, [{'state_index': 4, 'source_field': 'text', 'fact': 'Status Ready visible.'}])
+    assert out['overview'] == record['existing_memory']['overview']
+    assert out['state_transition'].startswith(record['existing_memory']['state_transition'])
+    assert out['state_transition'].endswith('Revised pre-state observation: Status Ready visible.')
+    with pytest.raises(ValueError):
+        module.merge_additive_observations(record, [])
+
+
+def test_delta_json_recovers_only_redundant_closing_punctuation(updater):
+    module, _ = updater
+    good = '{"events": [{"event_id": "e1", "observations": []}]}'
+    recovered = [json.loads(s) for s in module.delta_json_candidates(good + '}') if s == good]
+    assert recovered and recovered[0]['events'][0]['event_id'] == 'e1'
+    # Missing IDs still rejected by the candidate validator, not hallucinated
+    # by parsing; incomplete JSON must not become a successful empty update.
+    for candidate in module.delta_json_candidates('{"events": ['):
+        with pytest.raises(ValueError):
+            json.loads(candidate)
+
+
+def test_literal_source_replacement_changes_only_exact_anchor(updater):
+    module, memory = updater
+    full_source = ROOT / 'runs/method-first-20261015/matched-web-v1/memory_state'
+    manifest = json.loads((ROOT / 'configs/method_web_title_replacement.json').read_text())
+    new, workload = module.changed_trajectory(full_source, 'literal_revision', revision_spec=manifest)
+    old = json.loads((full_source / 'trajectories/1ad1af4b/trajectory.json').read_text())
+    assert "value='Neon Harbor'" in new['states'][4]['text']
+    assert old['states'][4]['thoughts'] == new['states'][4]['thoughts']
+    assert old['actions'] == new['actions']
+    assert old['states'][5] == new['states'][5]
+    assert workload['state_indices'] == [4]
+    changes = module.source_delta(old, new)
+    assert len(changes) == 1 and not changes[0]['append_only']
+    manifest['source_edits'][0]['count'] = 2
+    with pytest.raises(ValueError, match='anchor mismatch'):
+        module.changed_trajectory(full_source, 'literal_revision', revision_spec=manifest)
+
+
+def test_literal_neighbor_evidence_retains_unchanged_title(updater):
+    module, _ = updater
+    full_source = ROOT / 'runs/method-first-20261015/matched-web-v1/memory_state'
+    old = json.loads((full_source / 'trajectories/1ad1af4b/trajectory.json').read_text())
+    manifest = json.loads((ROOT / 'configs/method_web_title_replacement.json').read_text())
+    new, _ = module.changed_trajectory(full_source, 'literal_revision', revision_spec=manifest)
+    record = {'pre_state_index': 4, 'post_state_index': 5,
+              'changes_for_this_event': module.source_delta(old, new)}
+    context = module.local_unchanged_evidence(new, record)
+    assert len(context) == 1 and context[0]['state_index'] == 5
+    assert "textbox 'Title" in context[0]['unchanged_entity_lines']
+    assert "value='Cyberpunk'" in context[0]['unchanged_entity_lines']
+    assert 'Neon Harbor' not in context[0]['unchanged_entity_lines']
+    assert len(context[0]['unchanged_entity_lines']) < len(new['states'][5]['text'])
+
+
+def test_changed_literals_do_not_treat_arbitrary_text_as_numeric(updater):
+    module, _ = updater
+    revision = {'obsolete_source_lines': ["StaticText 'Showing 101 records'"],
+                'current_source_lines': ["StaticText 'Showing 103 records'"]}
+    assert module.changed_literal_values([revision]) == {'101'}
+    revision['current_source_lines'] = ["StaticText 'Deleted 103 records'"]
+    assert module.changed_literal_values([revision]) is None
+
+
+def test_rejected_delta_parse_cannot_return_a_partially_assigned_result(updater, monkeypatch):
+    module, memory = updater
+    memory.update_policy = 'delta_notes'
+    monkeypatch.setenv('LME_EVENT_MAX_INPUT_TOKENS', '18000')
+    monkeypatch.setattr(memory, '_event_group_input_tokens', lambda messages: 100)
+    old = {'overview': 'Task', 'state_transition': 'Value101 in post-state.'}
+    response = json.dumps({'edits': [{'field': 'state_transition', 'old': 'Value101', 'new': 'Value101'}]})
+    async def call(*args, **kwargs):
+        return response
+    monkeypatch.setattr(memory, '_call_controller_text_async', call)
+    record = {'event_id': 'event_0000_0001', 'pre_state_index': 0, 'post_state_index': 1,
+              'local_action': 'observe', 'existing_memory': old,
+              'changes_for_this_event': [{'state_index': 1, 'role': 'post-state', 'field': 'text',
+                  'diff': '-Value101\n+Value103'}]}
+    trajectory = {'id': 'synthetic', 'goal': 'Read', 'states': [{'text': 'Value101'}, {'text': 'Value103'}]}
+    with pytest.raises(ValueError, match='invalid single-event'):
+        asyncio.run(memory._edit_literal_event(trajectory, record))
+
+
+@pytest.mark.parametrize('case_root', sorted((ROOT / 'runs/method-first-20261015').glob('v11-*-state*/*-delta_guarded')))
+def test_v11_additive_generated_content_is_preserved(case_root):
+    review = json.loads((case_root / 'derived_quality_review.json').read_text())
+    assert review['checks']['derived_automated_checks_pass'] is True
+    old_events = {e['event_id']: e for e in review['old_events']}
+    for event in review['new_events']:
+        old = old_events[event['event_id']]
+        for field in ('overview', 'state_transition'):
+            assert event[field].startswith(old[field])
+        for field in ('pre_state_index', 'post_state_index', 'local_action'):
+            assert event.get(field) == old.get(field)
+    for old, new in zip(review['old_notes'], review['new_notes']):
+        assert new['content'].startswith(old['content'])
+        assert new['title'] == old['title']
+        assert new['description'] == old['description']

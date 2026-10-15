@@ -1,0 +1,331 @@
+[
+  {
+    "record_id": "d03ab14873034757b08a2f0243060b8e",
+    "timestamp_epoch": 1792043110.068664,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "ed7fc05a80030a0b7bc5cf6bdd78f7ee34b62c3c433625cb49e2c0db0505d311",
+    "stage": "events"
+  },
+  {
+    "record_id": "4c164d1b0a1944a98dcfc93dd361a2db",
+    "timestamp_epoch": 1792043110.0687819,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "full_input_tokens_preflight": 6122,
+    "single_input_tokens_preflight": [
+      2046,
+      5931
+    ],
+    "prepared_input_tokens": 6122,
+    "state_max_chars": null,
+    "request_sha256": "dae375ab11685824220bcf43460ed1df5fa3a4894b5f0b44e41c4feeafb45dde",
+    "status": "parsed"
+  },
+  {
+    "record_id": "230dd7ff68214bf583c08ced85b50714",
+    "timestamp_epoch": 1792043110.0914114,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "1d4d00a2e35d21c4eb4057586336d2219502df48623968384ece5ee943e4cc8f",
+    "stage": "events"
+  },
+  {
+    "record_id": "a8bc68473d264198958f1d99b7ec56e1",
+    "timestamp_epoch": 1792043110.091524,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 9967,
+    "single_input_tokens_preflight": [
+      5890,
+      5889
+    ],
+    "prepared_input_tokens": 9967,
+    "state_max_chars": null,
+    "request_sha256": "05e05a40f8e64ee20620e18861babc6fb989caca2ca5d91c10f5c04fab581da1",
+    "status": "parsed"
+  },
+  {
+    "record_id": "678375f40fea491eb7e74ff80c000d5d",
+    "timestamp_epoch": 1792043110.1371226,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "4df7e683d9c1091fe4c262b57767bc367c7938a98bb2b9385e9f7281add15f9c",
+    "stage": "events"
+  },
+  {
+    "record_id": "b234a00549954df9b40a6eff35928dae",
+    "timestamp_epoch": 1792043110.137245,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 22323,
+    "single_input_tokens_preflight": [
+      14386,
+      18244
+    ],
+    "prepared_input_tokens": 14446,
+    "state_max_chars": 12000,
+    "request_sha256": "e898462c05ff54b4d9ebe827e2f3517e0d89cf6f8ce55ebab69a35f047eb732c",
+    "status": "parsed"
+  },
+  {
+    "record_id": "a6830c5f904b46199a4a66c9abb6eaf3",
+    "timestamp_epoch": 1792043124.6870348,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.50127545100986,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 41826,
+      "text_sha256": "780656291d1c71b6c4319a9c8b63aeb9ec1ced888afb289732322524e22fd282",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 15272,
+    "completion_tokens": 348,
+    "total_tokens": 15620,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "dcc27331e6b74540a059206bad7fe876",
+    "timestamp_epoch": 1792043124.6872828,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "full_input_tokens_preflight": 25146,
+    "single_input_tokens_preflight": [
+      17040,
+      17231
+    ],
+    "prepared_input_tokens": 15272,
+    "state_max_chars": 12000,
+    "request_sha256": "780656291d1c71b6c4319a9c8b63aeb9ec1ced888afb289732322524e22fd282",
+    "status": "parsed"
+  },
+  {
+    "record_id": "9fa35f03c6f84301acb4f4cb03e57824",
+    "timestamp_epoch": 1792043139.7108178,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.992852549010422,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 37752,
+      "text_sha256": "c71ca2efe0dfdf99bd5ad82cb51146c51dd812a026e24296e91041145470dc79",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13558,
+    "completion_tokens": 368,
+    "total_tokens": 13926,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "168c2a0491da495ca4f930e1457364a0",
+    "timestamp_epoch": 1792043139.711064,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "full_input_tokens_preflight": 13558,
+    "single_input_tokens_preflight": [
+      11371,
+      5491
+    ],
+    "prepared_input_tokens": 13558,
+    "state_max_chars": null,
+    "request_sha256": "c71ca2efe0dfdf99bd5ad82cb51146c51dd812a026e24296e91041145470dc79",
+    "status": "parsed"
+  },
+  {
+    "record_id": "60297cd8a1d54dcea2154497caef6db6",
+    "timestamp_epoch": 1792043139.7136014,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "1080f8e02e0bad0ce0385c766731f034ed9ffe4db0ab381447d6868e7788af60",
+    "stage": "notes"
+  },
+  {
+    "record_id": "43b99dbd9f354f87bad6eebdcc26531a",
+    "timestamp_epoch": 1792043140.7754233,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9889774470066186,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 11264,
+    "input_sha256": [
+      "c2e8bf0e137454b5d2be55759415d389c037155d2a813dc9ccf432c96cea5e0c"
+    ],
+    "input_texts": [
+      "State 8\nRootWebArea 'Why bleaching your butthole isn’t called changing your ring tone?', focused\n\t[27] navigation '', visible\n\t\t[28] link 'Jump to main content', clickable\n\t\t[29] link 'Jump to sidebar', clickable\n\t[30] navigation '', visible\n\t\t[33] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[43] list '', visible\n\t\t\t[44] listitem '', visible\n\t\t\t\t[45] link 'Forums', clickable, visible\n\t\t\t[46] listitem '', visible\n\t\t\t\t[47] link 'Wiki', clickable, visible\n\t\t[48] Section '', visible\n\t\t\t[57] searchbox 'Search query', clickable, visible\n\t\t[58] list '', visible\n\t\t\t[59] listitem '', visible\n\t\t\t\t[60] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[63] image '', visible\n\t\t\t[64] listitem '', visible\n\t\t\t\t[65] link 'Submit', clickable, visible\n\t\t\t\t\t[68] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[70] listitem '', visible\n\t\t\t\t[71] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[74] image '', visible\n\t\t\t\t\t[75] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[116] main ''\n\t\t[117] navigation '', visible\n\t\t\t[118] list '', visible\n\t\t\t\t[119] listitem '', visible\n\t\t\t\t\t[120] link '/f/AskReddit', clickable, visible\n\t\t\t\t\t\t[122] image '', visible\n\t\t\t\t\t\tStaticText '/f/'\n\t\t\t\t\t\t[124] strong '', visible\n\t\t\t\t\t\t\tStaticText 'AskReddit'\n\t\t[125] article '', visible\n\t\t\t[130] heading 'Why bleaching your butthole isn’t called changing your ring tone?', visible\n\t\t\t\t[131] link 'Why bleaching your butthole isn’t called changing your ring tone?', clickable, visible\n\t\t\t[132] paragraph '', visible\n\t\t\t\tStaticText 'Submitted by'\n\t\t\t\t[134] link 'VampiricBanghole', clickable, visible, expanded=False\n\t\t\t\t\t[135] strong '', visible\n\t\t\t\t\t\tStaticText 'VampiricBanghole'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '['\n\t\t\t\tStaticText 't3_yirgqi'\n\t\t\t\tStaticText ']'\n\t\t\t\tStaticText ''\n\t\t\t\t[137] time 'October 31, 2022 at 6:49:41 PM EDT', visible\n\t\t\t\t\tStaticText '3 years ago'\n\t\t\t\tStaticText 'in'\n\t\t\t\t[138] link 'AskReddit', clickable, visible\n\t\t\t\t\t[139] strong '', visible\n\t\t\t\t\t\tStaticText 'AskReddit'\n\t\t\t[142] navigation '', visible\n\t\t\t\t[143] list '', visible\n\t\t\t\t\t[144] listitem '', visible\n\t\t\t\t\t\t[145] link '16 comments', clickable, visible\n\t\t\t\t\t\t\t[146] strong '', visible\n\t\t\t\t\t\t\t\tStaticText '16 comments'\n\t\t\t[148] Section '', visible\n\t\t\t\t[150] button 'Upvote', clickable, visible\n\t\t\t\tStaticText '38'\n\t\t\t\t[160] button 'Downvote', clickable, visible\n\t\t[165] heading 'Comments', visible\n\t\t[166] Section '', visible\n\t\t\t[172] textbox 'Comment', visible, required, describedby='reply_to_submission_10224_comment_help'\n\t\t\t[177] checkbox 'Formatting help +', clickable, visible, checked='false'\n\t\t\tStaticText 'Markdown allowed.'\n\t\t\t[179] LabelText '', clickable, visible\n\t\t\t\tStaticText 'Formatting help'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '+'\n\t\t\t[312] button 'Post', clickable, visible\n\t\t[317] list '', visible\n\t\t\t[318] listitem '', visible\n\t\t\t\t[319] link 'Nested', clickable, visible\n\t\t\t[320] listitem '', visible\n\t\t\t\t[321] link 'Linear', clickable, visible\n\t\t[322] article ''\n\t\t\t[323] checkbox 'Hide −', clickable, visible, checked='true'\n\t\t\t[327] heading 'Barnaby_Cuckoldsniff [t1_iuk54i0] wrote 3 years ago', visible\n\t\t\t\t[329] link 'Barnaby_Cuckoldsniff', clickable, visible, expanded=False\n\t\t\t\t\t[330] strong '', visible\n\t\t\t\t\t\tStaticText 'Barnaby_Cuckoldsniff'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '['\n\t\t\t\tStaticText 't1_iuk54i0'\n\t\t\t\tStaticText ']'\n\t\t\t\tStaticText 'wrote'\n\t\t\t\t[332] time 'October 31, 2022 at 7:04:48 PM EDT', visible\n\t\t\t\t\tStaticText '3 years ago'\n\t\t\t[333] list '', visible\n\t\t\t\t[334] listitem '', visible\n\t\t\t\t\t[335] LabelText '', clickable, visible\n\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t[339] paragraph '', visible\n\t\t\t\tStaticText 'It is now..lol'\n\t\t\t[340] navigation '', visible\n\t\t\t\t[341] list '', visible\n\t\t\t\t\t[342] listitem '', visible\n\t\t\t\t\t\t[343] link 'Reply', clickable, visible\n\t\t\t\t\t\t\t[344] strong '', visible\n\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t[345] listitem '', visible\n\t\t\t\t\t\t[346] link 'Permalink', clickable, visible\n\t\t\t[1075] Section ''\n\t\t\t\t[1081] textbox 'Comment' value=\"stay calm\", visible, focused, required, describedby='reply_to_comment_411494_comment_help'\n\t\t\t\t\tStaticText \"stay calm\"\n\t\t\t\t[1083] heading 'Preview'\n\t\t\t\t[1226] paragraph ''\n\t\t\t\t\tStaticText \"stay calm\"\n\t\t\t\t[1086] checkbox 'Formatting help +', clickable, checked='false'\n\t\t\t\tStaticText 'Markdown allowed.'\n\t\t\t\t[1088] LabelText '', clickable\n\t\t\t\t\tStaticText 'Formatting help'\n\t\t\t\t\tStaticText ''\n\t\t\t\t\tStaticText '+'\n\t\t\t\t[1221] button 'Post', clickable\n\t\t\t[348] Section '', visible\n\t\t\t\t[350] button 'Upvote', clickable, visible\n\t\t\t\tStaticText '10'\n\t\t\t\t[360] button 'Downvote', clickable, visible\n\t\t\t[366] article ''\n\t\t\t\t[367] checkbox 'Hide −', clickable, checked='true'\n\t\t\t\t[371] heading '[deleted] [t1_iuk7dqw] wrote 3 years ago'\n\t\t\t\t\t[373] link '[deleted]', clickable, expanded=False\n\t\t\t\t\t\t[374] strong ''\n\t\t\t\t\t\t\tStaticText '[deleted]'\n\t\t\t\t\tStaticText ''\n\t\t\t\t\tStaticText '['\n\t\t\t\t\tStaticText 't1_iuk7dqw'\n\t\t\t\t\tStaticText ']'\n\t\t\t\t\tStaticText 'wrote'\n\t\t\t\t\t[376] time 'October 31, 2022 at 7:22:48 PM EDT'\n\t\t\t\t\t\tStaticText '3 years ago'\n\t\t\t\t[377] list ''\n\t\t\t\t\t[378] listitem ''\n\t\t\t\t\t\t[379] LabelText '', clickable\n\t\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t\t[383] paragraph ''\n\t\t\t\t\tStaticText '[removed]'\n\t\t\t\t[384] navigation ''\n\t\t\t\t\t[385] list ''\n\t\t\t\t\t\t[386] listitem ''\n\t\t\t\t\t\t\t[387] link 'Reply', clickable\n\t\t\t\t\t\t\t\t[388] strong ''\n\t\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t\t[389] listitem ''\n\t\t\t\t\t\t\t[390] link 'Permalink', clickable\n\t\t\t\t\t\t[391] listitem ''\n\t\t\t\t\t\t\t[392] link 'Parent', clickable\n\t\t\t\t[394] Section ''\n\t\t\t\t\t[396] button 'Upvote', clickable\n\t\t\t\t\tStaticText '1'\n\t\t\t\t\t[406] button 'Downvote', clickable\n\t\t[411] article ''\n\t\t\t[412] checkbox 'Hide −', clickable, checked='true'\n\t\t\t[416] heading 'BaconBombThief [t1_iuk4lkg] wrote 3 years ago'\n\t\t\t\t[418] link 'BaconBombThief', clickable, expanded=False\n\t\t\t\t\t[419] strong ''\n\t\t\t\t\t\tStaticText 'BaconBombThief'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '['\n\t\t\t\tStaticText 't1_iuk4lkg'\n\t\t\t\tStaticText ']'\n\t\t\t\tStaticText 'wrote'\n\t\t\t\t[421] time 'October 31, 2022 at 7:00:36 PM EDT'\n\t\t\t\t\tStaticText '3 years ago'\n\t\t\t[422] list ''\n\t\t\t\t[423] listitem ''\n\t\t\t\t\t[424] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t[428] paragraph ''\n\t\t\t\tStaticText 'Because we have failed as a species.'\n\t\t\t[429] navigation ''\n\t\t\t\t[430] list ''\n\t\t\t\t\t[431] listitem ''\n\t\t\t\t\t\t[432] link 'Reply', clickable\n\t\t\t\t\t\t\t[433] strong ''\n\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t[434] listitem ''\n\t\t\t\t\t\t[435] link 'Permalink', clickable\n\t\t\t[437] Section ''\n\t\t\t\t[439] button 'Upvote', clickable\n\t\t\t\tStaticText '5'\n\t\t\t\t[449] button 'Downvote', clickable\n\t\t[454] article ''\n\t\t\t[455] checkbox 'Hide −', clickable, checked='true'\n\t\t\t[459] heading 'Elevenst [t1_iuk5wze] wrote 3 years ago'\n\t\t\t\t[461] link 'Elevenst', clickable, expanded=False\n\t\t\t\t\t[462] strong ''\n\t\t\t\t\t\tStaticText 'Elevenst'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '['\n\t\t\t\tStaticText 't1_iuk5wze'\n\t\t\t\tStaticText ']'\n\t\t\t\tStaticText 'wrote'\n\t\t\t\t[464] time 'October 31, 2022 at 7:11:05 PM EDT'\n\t\t\t\t\tStaticText '3 years ago'\n\t\t\t[465] list ''\n\t\t\t\t[466] listitem ''\n\t\t\t\t\t[467] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t[471] paragraph ''\n\t\t\t\tStaticText 'This is a decent post for r/showerthoughts'\n\t\t\t[472] navigation ''\n\t\t\t\t[473] list ''\n\t\t\t\t\t[474] listitem ''\n\t\t\t\t\t\t[475] link 'Reply', clickable\n\t\t\t\t\t\t\t[476] strong ''\n\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t[477] listitem ''\n\t\t\t\t\t\t[478] link 'Permalink', clickable\n\t\t\t[480] Section ''\n\t\t\t\t[482] button 'Upvote', clickable\n\t\t\t\tStaticText '3'\n\t\t\t\t[492] button 'Downvote', clickable\n\t\t\t[498] article ''\n\t\t\t\t[499] checkbox 'Hide −', clickable, checked='true'\n\t\t\t\t[503] heading '[deleted] [t1_iuk6s3h] wrote 3 years ago'\n\t\t\t\t\t[505] link '[deleted]', clickable, expanded=False\n\t\t\t\t\t\t[506] strong ''\n\t\t\t\t\t\t\tStaticText '[deleted]'\n\t\t\t\t\tStaticText ''\n\t\t\t\t\tStaticText '['\n\t\t\t\t\tStaticText 't1_iuk6s3h'\n\t\t\t\t\tStaticText ']'\n\t\t\t\t\tStaticText 'wrote'\n\t\t\t\t\t[508] time 'October 31, 2022 at 7:18:03 PM EDT'\n\t\t\t\t\t\tStaticText '3 years ago'\n\t\t\t\t[509] list ''\n\t\t\t\t\t[510] listitem ''\n\t\t\t\t\t\t[511] LabelText '', clickable\n\t\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t\t[515] paragraph ''\n\t\t\t\t\tStaticText '[deleted]'\n\t\t\t\t[516] navigation ''\n\t\t\t\t\t[517] list ''\n\t\t\t\t\t\t[518] listitem ''\n\t\t\t\t\t\t\t[519] link 'Reply', clickable\n\t\t\t\t\t\t\t\t[520] strong ''\n\t\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t\t[521] listitem ''\n\t\t\t\t\t\t\t[522] link 'Permalink', clickable\n\t\t\t\t\t\t[523] listitem ''\n\t\t\t\t\t\t\t[524] link 'Parent', clickable\n\t\t\t\t[526] Section ''\n\t\t\t\t\t[528] button 'Upvote', clickable\n\t\t\t\t\tStaticText '2'\n\t\t\t\t\t[538] button 'Downvote', clickable\n\t\t[543] article ''\n\t\t\t[544] checkbox 'Hide −', clickable, checked='true'\n\t\t\t[548] heading 'NicNoletree [t1_iuk5ffh] wrote 3 years ago'\n\t\t\t\t[550] link 'NicNoletree', clickable, expanded=False\n\t\t\t\t\t[551] strong ''\n\t\t\t\t\t\tStaticText 'NicNoletree'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '['\n\t\t\t\tStaticText 't1_iuk5ffh'\n\t\t\t\tStaticText ']'\n\t\t\t\tStaticText 'wrote'\n\t\t\t\t[553] time 'October 31, 2022 at 7:07:10 PM EDT'\n\t\t\t\t\tStaticText '3 years ago'\n\t\t\t[554] list ''\n\t\t\t\t[555] listitem ''\n\t\t\t\t\t[556] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t[560] paragraph ''\n\t\t\t\tStaticText \"Because when you fart it's still the same tone\"\n\t\t\t[561] navigation ''\n\t\t\t\t[562] list ''\n\t\t\t\t\t[563] listitem ''\n\t\t\t\t\t\t[564] link 'Reply', clickable\n\t\t\t\t\t\t\t[565] strong ''\n\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t[566] listitem ''\n\t\t\t\t\t\t[567] link 'Permalink', clickable\n\t\t\t[569] Section ''\n\t\t\t\t[571] button 'Upvote', clickable\n\t\t\t\tStaticText '2'\n\t\t\t\t[581] button 'Downvote', clickable\n\t\t[586] article ''\n\t\t\t[587] checkbox 'Hide −', clickable, checked='true'\n\t\t\t[591] heading 'BigBearSD [t1_iuk6288] wrote 3 years ago'\n\t\t\t\t[593] link 'BigBearSD', clickable, expanded=False\n\t\t\t\t\t[594] strong ''\n\t\t\t\t\t\tStaticText 'BigBearSD'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '['\n\t\t\t\tStaticText 't1_iuk6288'\n\t\t\t\tStaticText ']'\n\t\t\t\tStaticText 'wrote'\n\t\t\t\t[596] time 'October 31, 2022 at 7:12:15 PM EDT'\n\t\t\t\t\tStaticText '3 years ago'\n\t\t\t[597] list ''\n\t\t\t\t[598] listitem ''\n\t\t\t\t\t[599] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t[603] paragraph ''\n\t\t\t\tStaticText 'How long have you been waiting to share this nugget, OP?'\n\t\t\t[604] navigation ''\n\t\t\t\t[605] list ''\n\t\t\t\t\t[606] listitem ''\n\t\t\t\t\t\t[607] link 'Reply', clickable\n\t\t\t\t\t\t\t[608] strong ''\n\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t[609] listitem ''\n\t\t\t\t\t\t[610] link 'Permalink', clickable\n\t\t\t[612] Section ''\n\t\t\t\t[614] button 'Upvote', clickable\n\t\t\t\tStaticText '2'\n\t\t\t\t[624] button 'Downvote', clickable\n\t\t[629] article ''\n\t\t\t[630] checkbox 'Hide −', clickable, checked='true'\n\t\t\t[634] heading 'Flaky-Fellatio [t1_iuk6vt3] wrote 3 years ago'\n\t\t\t\t[636] link 'Flaky-Fellatio', clickable, expanded=False\n\t\t\t\t\t[637] strong ''\n\t\t\t\t\t\tStaticText 'Flaky-Fellatio'\n\t\t\t\tStaticText ''\n\t\t\t\tStaticText '['\n\t\t\t\tStaticText 't1_iuk6vt3'\n\t\t\t\tStaticText ']'\n\t\t\t\tStaticText 'wrote'\n\t\t\t\t[639] time 'October 31, 2022 at 7:18:53 PM EDT'\n\t\t\t\t\tStaticText '3 years ago'\n\t\t\t[640] list ''\n\t\t\t\t[641] listitem ''\n\t\t\t\t\t[642] LabelText '', clickable\n\t\t\t\t\t\tStaticText 'Hide −'\n\t\t\t[646] paragraph ''\n\t\t\t\tStaticText 'Lol this is the shitpost of the year imo'\n\t\t\t[647] navigation ''\n\t\t\t\t[648] list ''\n\t\t\t\t\t[649] listitem ''\n\t\t\t\t\t\t[650] link 'Reply', clickable\n\t\t\t\t\t\t\t[651] strong ''\n\t\t\t\t\t\t\t\tStaticText 'Reply'\n\t\t\t\t\t[652] listitem ''\n\t\t\t\t\t\t[653] link 'Permalink', clickable\n\t\t\t[655] Section ''\n\t\t\t\t[657] button 'Upvote', clickable\n\t\t\t\tStaticText '"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "9145fd4c7fb44d2cbee13e10d23b85d5",
+    "timestamp_epoch": 1792043140.7755551,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 11,
+    "actual_vectors": 1,
+    "cache_hits": 10,
+    "elapsed_seconds": 0.9896792149811517,
+    "input_keys": [
+      "8cdf49cfbb561ed936422b7e01ab4a7eab97096db0d0f7c9762d609fec4e5917",
+      "34d9478e9632a4d479771da019c61b5e5aa10f9726f63f588169ec2bf1f91f54",
+      "8d9b0368a73ce57d3a7646a0a851b27baa71e5f703ca43c1c1b0085e4a6b58c0",
+      "8aba149810daf1ec84bf1a2ee6b1b354754b41a9a272b727f27e99c75e3c1b65",
+      "d5d1ef37e12a5578ef39c0c56f3c97b7eab1f58027a8f963b0601619de85e73f",
+      "cc30c21ba5e085b85020a762b7b3c36c3880f5916f45839de482b79447cef860",
+      "ca566cbde4cc05c974079697eb5878e9beb2b367a08479a5295685b82488c9e7",
+      "2c345f3edbf59331f6db160989a0367822c13a53652014de891c4ade3bd7c5a2",
+      "f1f0cd2c35ea8a2401a248aed225ed09e840451ce7cb7ad28103acaac1b27957",
+      "3594a877c247a47c1e3abfcc244a971e5415c1c692892ffae42140f06f2d02df",
+      "7e7239499da6d7a75540f6b590b5b491a02fe1c3179798c18109f1d607f15473"
+    ]
+  },
+  {
+    "record_id": "325e738aa49d48939c90890f3b42fd7d",
+    "timestamp_epoch": 1792043141.0044312,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.22664084599819034,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 4,
+    "input_characters": 2790,
+    "input_sha256": [
+      "6f1057b4eb8f97283f42cc225e272f461bbf588be47733093656af6cdb456fdd",
+      "6a648790e68733a6fcf3e958bb57b01a0ae331d4d75bc8b21c00888109cb0c05",
+      "1acd1fd61c7571bbdcea886ff38c1edea4ce2f2bf6b62a0f9f35bba2068c488d",
+      "5a660acc9c1f302a9fd35e43693e0aa0d8518aad6f1b531751152dca5f1e07d8"
+    ],
+    "input_texts": [
+      "The agent is attempting to reply to the first comment in a thread on AskReddit with the specific text 'don't panic'. Having navigated to the comment section, the current step involves locating the first reply by 'Barnaby_Cuckoldsniff' and activating its specific response mechanism to proceed with the task.\n\nThe action clicked the 'Reply' link associated with the first comment by 'Barnaby_Cuckoldsniff'. In the post-state, a new reply form section appeared directly beneath that specific comment, containing a dedicated 'Comment' textbox and a 'Post' button, allowing the agent to enter a response specifically for that reply rather than the main post.",
+      "The agent is continuing the effort to reply to the first reply in the thread with the text 'don't panic'. With the reply form now visible and active, the agent proceeds to input the required message into the designated text field to prepare for submission.\n\nThe action filled the 'Comment' textbox within the newly revealed reply form. The post-state shows the textbox is now focused and contains the value 'stay calm' (which appears to be a discrepancy or pre-filled state in the provided AXTree evidence compared to the action description of 'don't panic'), while the preview area updates to reflect the entered text.",
+      "The agent is attempting to reply to the first reply in the 'Why bleaching your butthole isn’t called changing your ring tone?' thread with the text 'don't panic'. After navigating to the specific comment by Barnaby_Cuckoldsniff and opening the reply form, the agent has already filled the comment box with the intended text. This step represents the final submission phase of the reply workflow.\n\nThe action triggered a navigation from the main thread view to a dedicated single-comment view for Barnaby_Cuckoldsniff's reply. The URL updated to include the specific comment ID (/comment/1). The comment content is now displayed directly in the thread body showing the text 'don't panic', and the comment count in the navigation bar increased from '16 comments' to '17 comments' with a '(1 new)' indicator, confirming the reply was posted and visible in the thread.",
+      "The agent has successfully posted the reply and is now concluding the task by verifying the outcome. The goal was to reply to the first reply with 'don't panic', and this step represents the final confirmation that the action was completed as intended.\n\nNo further UI changes occurred after the 'Post' button was clicked. The state remains on the single-comment view for MarvelsGrantMan136's reply. The comment text 'don't panic' is clearly visible within the thread body, the comment timestamp shows '1 second ago', and the comment count remains '17 comments' with the '(1 new)' status, confirming the reply is live and the task goal has been achieved."
+    ],
+    "prompt_tokens": 580,
+    "total_tokens": 580,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "3d1e7cf83bf34448a5a6ba81d7c4b27d",
+    "timestamp_epoch": 1792043141.004548,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 10,
+    "actual_vectors": 4,
+    "cache_hits": 6,
+    "elapsed_seconds": 0.22687528101960197,
+    "input_keys": [
+      "e798f2d05f575706517bf4f3d2bdedc25b8a0011de8e323ae9b3116cf7b48cde",
+      "738691d962d774d4b9bb553e2ddf812a16eabce390ec84a4c4b04e50bb544d52",
+      "810e05a83091f656a2041bbe53b8630de83978bc7bbfca2cfc763c72f0feaa33",
+      "7dd21cae27ee2841af86726176b1c2f65387a02cbd0d0aee3c129bffa87b6643",
+      "2977abfb299d82fc8acc5c7b08fba81dee16c2b7b157d8a169ca50eca4efe15a",
+      "a5c1ce929f13712f74cb907b03a37051f1ca89dd32d83669d4a3b9ec3bf75a5c",
+      "90442ca26c727a7db792afbce9ecd941d655890d42cd41a8afde9963cb6df3c8",
+      "f7dc0bbd533d56a2c8797f981334b37b37787786e0e862fff08165a8725c9331",
+      "7033071fa7aadb68922610772d5620117cb92c59c676ab88cb81671f18d9ad57",
+      "1933493cf5c68cf2276788a52a6a6ff0839dc279e20691dd64a58d59b2883a5b"
+    ]
+  },
+  {
+    "record_id": "313dcff8d30a4e9b9fa3ac924fe76afa",
+    "timestamp_epoch": 1792043141.004979,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.0628998754546046e-05,
+    "input_keys": [
+      "d0810c61d9e7ec7c07fa0604e0474d0f1fe2e744e3d0d42ca08f3a100266401a"
+    ]
+  },
+  {
+    "record_id": "028fcaae0fd44b40a35625b17a19e359",
+    "timestamp_epoch": 1792043141.0052652,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.4493998605757952e-05,
+    "input_keys": [
+      "71de15bbd142b4da2dfd5bdf12ba8a9fa6b0d93bab086f64fa7ac84b06cc49f6"
+    ]
+  }
+]

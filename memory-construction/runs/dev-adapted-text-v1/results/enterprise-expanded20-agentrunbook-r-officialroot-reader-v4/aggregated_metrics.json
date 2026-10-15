@@ -1,0 +1,138 @@
+{
+  "overall": {
+    "overall_full_set": null,
+    "overall_non_abstention_only": null,
+    "overall_abstention_only": null,
+    "count_all_questions": 4,
+    "count_non_abstention": 4,
+    "count_abstention": 0
+  },
+  "non_abstention_by_category": {
+    "static": {
+      "count": 1,
+      "pct_correct": 1.0,
+      "pct_answered_wrong": 0.0,
+      "pct_unknown": 0.0
+    },
+    "dynamic": {
+      "count": 2,
+      "pct_correct": null,
+      "pct_answered_wrong": 0.5,
+      "pct_unknown": 0.5
+    },
+    "procedure": {
+      "count": 1,
+      "pct_correct": 1.0,
+      "pct_answered_wrong": 0.0,
+      "pct_unknown": 0.0
+    },
+    "gotchas": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    }
+  },
+  "abstention_by_category": {
+    "static-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "dynamic-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "procedure-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    }
+  },
+  "combined_abstention_by_category": {
+    "static": {
+      "count": 1,
+      "pct_correct": 1.0,
+      "pct_answered_wrong": 0.0,
+      "pct_unknown": 0.0
+    },
+    "dynamic": {
+      "count": 2,
+      "pct_correct": null,
+      "pct_answered_wrong": 0.5,
+      "pct_unknown": 0.5
+    },
+    "procedure": {
+      "count": 1,
+      "pct_correct": 1.0,
+      "pct_answered_wrong": 0.0,
+      "pct_unknown": 0.0
+    }
+  },
+  "abstention_overall": {
+    "count": 0,
+    "pct_correct": null,
+    "pct_answered_wrong": null,
+    "pct_unknown": null
+  },
+  "answer_status": {
+    "complete_parseable": 3,
+    "truncated": 0,
+    "service_failure": 1,
+    "parse_failure": 0,
+    "pending_judge": 0,
+    "scored": 3,
+    "correct": 2
+  },
+  "tokens": {
+    "prompt_tokens": 52085,
+    "completion_tokens": 4389,
+    "total_tokens": 56474,
+    "avg_prompt_tokens": 13021.25,
+    "avg_completion_tokens": 1097.25,
+    "avg_total_tokens": 14118.5
+  },
+  "memory_context": {
+    "avg_original_tokens": 148730.5,
+    "avg_final_tokens": 18072.0,
+    "num_truncated_sequences": 4
+  },
+  "memory_query": {
+    "avg_seconds": 124.39982574825262,
+    "p50_seconds": 192.27380256698234,
+    "p95_seconds": 254.54766551801004,
+    "max_seconds": 254.54766551801004,
+    "total_seconds": 497.5993029930105
+  },
+  "memory_post_query": {
+    "avg_seconds": 2.7839996619150043e-06,
+    "p50_seconds": 2.921995474025607e-06,
+    "p95_seconds": 3.102002665400505e-06,
+    "max_seconds": 3.102002665400505e-06,
+    "total_seconds": 1.1135998647660017e-05
+  },
+  "completed_at_utc": "2026-10-15T02:03:35.485375+00:00",
+  "timing": {
+    "prompt_build_wall_seconds": 521.1835121400072,
+    "reader_generation_wall_seconds": 374.3145165980095,
+    "reader_request_seconds_sum": 374.25764861001517,
+    "reader_queue_seconds_sum": 507.39868827696773
+  },
+  "shared_haystack": true,
+  "shared_haystack_ids": [
+    "13083bae",
+    "0ab99e0c",
+    "247282e9",
+    "16143664",
+    "12c22166",
+    "1c29cf20",
+    "89cf6e06",
+    "276f9dff",
+    "49f98e9e",
+    "0c80a9e1"
+  ]
+}

@@ -1,0 +1,188 @@
+[
+  {
+    "record_id": "b1f86d28aca44f6db0fbc52b162bcfdb",
+    "timestamp_epoch": 1792040053.1719658,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 31.714192774001276,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 29135,
+      "text_sha256": "9f019ec6098387e9493b18aa0c857203f4b518414d967578e762d7a4963dadf8",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 9980,
+    "completion_tokens": 473,
+    "total_tokens": 10453,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "0cb33b2cdd204b5da9282aebe2c034d7",
+    "timestamp_epoch": 1792040053.172496,
+    "channel": "event_group",
+    "trajectory_id": "2e8f6477",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 9980,
+    "single_input_tokens_preflight": [
+      5903,
+      5902
+    ],
+    "prepared_input_tokens": 9980,
+    "state_max_chars": null,
+    "request_sha256": "9f019ec6098387e9493b18aa0c857203f4b518414d967578e762d7a4963dadf8",
+    "status": "parsed"
+  },
+  {
+    "record_id": "1e0992f9bd0e4494b9b8a7f2f1b8e37d",
+    "timestamp_epoch": 1792040053.1726384,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 10,
+    "reused": 8
+  },
+  {
+    "record_id": "41b33500a1214eb3b780bfd1b43dd659",
+    "timestamp_epoch": 1792040053.1770985,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "1080f8e02e0bad0ce0385c766731f034ed9ffe4db0ab381447d6868e7788af60",
+    "stage": "notes"
+  },
+  {
+    "record_id": "8082be4deda449d59b6eeb046ed79e9c",
+    "timestamp_epoch": 1792040054.3582435,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9991401729930658,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 12031,
+    "input_sha256": [
+      "0ff0f3e7187e4531f2c8f0da92c09d241e2589ce854fa520f99d1b512b3b9d34"
+    ],
+    "input_texts": [
+      "State 3\nRootWebArea 'Postmill', focused\n\t[24] navigation '', visible\n\t\t[25] link 'Jump to main content', clickable\n\t\t[26] link 'Jump to sidebar', clickable\n\t[27] navigation '', visible\n\t\t[30] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[40] list '', visible\n\t\t\t[41] listitem '', visible\n\t\t\t\t[42] link 'Forums', clickable, visible\n\t\t\t[43] listitem '', visible\n\t\t\t\t[44] link 'Wiki', clickable, visible\n\t\t[45] Section '', visible\n\t\t\t[54] searchbox 'Search query', clickable, visible\n\t\t[55] list '', visible\n\t\t\t[56] listitem '', visible\n\t\t\t\t[57] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[60] image '', visible\n\t\t\t[61] listitem '', visible\n\t\t\t\t[62] link 'Submit', clickable, visible\n\t\t\t\t\t[65] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[67] listitem '', visible\n\t\t\t\t[68] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[71] image '', visible\n\t\t\t\t\t[72] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[113] main '', visible\n\t\t[114] navigation '', visible\n\t\t\t[115] list '', visible\n\t\t\t\t[116] listitem '', visible\n\t\t\t\t\t[117] link 'Submissions', clickable, visible\n\t\t\t\t[118] listitem '', visible\n\t\t\t\t\t[119] link 'Comments', clickable, visible\n\t\t\t[120] list '', visible\n\t\t\t\t[121] listitem '', visible\n\t\t\t\t\t[122] button 'Filter on: Featured', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[124] image '', visible\n\t\t\t\t\t\tStaticText 'Featured'\n\t\t\t\t[134] listitem '', visible\n\t\t\t\t\t[135] button 'Sort by: Hot', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[137] image '', visible\n\t\t\t\t\t\tStaticText 'Hot'\n\t\t[158] paragraph '', visible\n\t\t\tStaticText 'You are not subscribed to any forum. Showing featured forums instead.'\n\t[159] complementary '', visible\n\t\t[160] Section '', visible\n\t\t\t[161] heading 'Featured forums', visible\n\t\t\t[162] paragraph '', visible\n\t\t\t\tStaticText 'There are no featured forums to display.'\n\t[164] contentinfo '', visible\n\t\t[165] paragraph '', visible\n\t\t\tStaticText 'Running'\n\t\t\t[167] link 'Postmill', clickable, visible\n[correction] status 'Title validation: saved', visible\n\nState 4\nRootWebArea 'List of forums', focused\n\t[20] navigation '', visible\n\t\t[21] link 'Jump to main content', clickable\n\t\t[22] link 'Jump to sidebar', clickable\n\t[23] navigation '', visible\n\t\t[26] link 'Home', clickable, visible\n\t\t\tStaticText 'Postmill'\n\t\t[36] list '', visible\n\t\t\t[37] listitem '', visible\n\t\t\t\t[38] link 'Forums', clickable, visible\n\t\t\t[39] listitem '', visible\n\t\t\t\t[40] link 'Wiki', clickable, visible\n\t\t[41] Section '', visible\n\t\t\t[50] searchbox 'Search query', clickable, visible\n\t\t[51] list '', visible\n\t\t\t[52] listitem '', visible\n\t\t\t\t[53] link 'Notifications (0)', clickable, visible\n\t\t\t\t\t[56] image '', visible\n\t\t\t[57] listitem '', visible\n\t\t\t\t[58] link 'Submit', clickable, visible\n\t\t\t\t\t[61] image '', visible\n\t\t\t\t\tStaticText 'Submit'\n\t\t\t[63] listitem '', visible\n\t\t\t\t[64] button 'MarvelsGrantMan136', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t[67] image '', visible\n\t\t\t\t\t[68] strong '', visible\n\t\t\t\t\t\tStaticText 'MarvelsGrantMan136'\n\t[109] main ''\n\t\t[110] navigation '', visible\n\t\t\t[111] list '', visible\n\t\t\t\t[112] listitem '', visible\n\t\t\t\t\t[113] link 'Forums', clickable, visible\n\t\t\t\t[114] listitem '', visible\n\t\t\t\t\t[115] link 'Tags', clickable, visible\n\t\t\t\t[116] listitem '', visible\n\t\t\t\t\t[117] link 'Alphabetical', clickable, visible\n\t\t\t[118] list '', visible\n\t\t\t\t[119] listitem '', visible\n\t\t\t\t\t[120] button 'Sort by: Submissions', visible, hasPopup='menu', expanded=False\n\t\t\t\t\t\t[122] image '', visible\n\t\t\t\t\t\tStaticText 'Submissions'\n\t\t[137] heading 'List of forums', visible\n\t\t[139] link 'Create forum', clickable, visible\n\t\t[141] article '', visible\n\t\t\t[143] heading 'AskReddit — AskReddit', visible\n\t\t\t\t[144] link 'AskReddit — AskReddit', clickable, visible\n\t\t\t[149] paragraph '', visible\n\t\t\t\tStaticText 'AskReddit'\n\t\t\t[152] Section '', visible\n\t\t\t\t[154] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[160] paragraph '', visible\n\t\t\t\tStaticText '10,041 submissions'\n\t\t[161] article '', visible\n\t\t\t[163] heading 'relationship_advice — relationship_advice', visible\n\t\t\t\t[164] link 'relationship_advice — relationship_advice', clickable, visible\n\t\t\t[169] paragraph '', visible\n\t\t\t\tStaticText 'relationship_advice'\n\t\t\t[172] Section '', visible\n\t\t\t\t[174] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[180] paragraph '', visible\n\t\t\t\tStaticText '5,718 submissions'\n\t\t[181] article '', visible\n\t\t\t[183] heading 'worldnews — worldnews', visible\n\t\t\t\t[184] link 'worldnews — worldnews', clickable, visible\n\t\t\t[189] paragraph '', visible\n\t\t\t\tStaticText 'worldnews'\n\t\t\t[192] Section '', visible\n\t\t\t\t[194] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[200] paragraph '', visible\n\t\t\t\tStaticText '3,464 submissions'\n\t\t[201] article '', visible\n\t\t\t[203] heading 'news — news', visible\n\t\t\t\t[204] link 'news — news', clickable, visible\n\t\t\t[209] paragraph '', visible\n\t\t\t\tStaticText 'news'\n\t\t\t[212] Section '', visible\n\t\t\t\t[214] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[220] paragraph '', visible\n\t\t\t\tStaticText '3,322 submissions'\n\t\t[221] article '', visible\n\t\t\t[223] heading 'movies — movies', visible\n\t\t\t\t[224] link 'movies — movies', clickable, visible\n\t\t\t[229] paragraph '', visible\n\t\t\t\tStaticText 'movies'\n\t\t\t[232] Section '', visible\n\t\t\t\t[234] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[240] paragraph '', visible\n\t\t\t\tStaticText '3,261 submissions'\n\t\t[241] article ''\n\t\t\t[243] heading 'memes — memes', visible\n\t\t\t\t[244] link 'memes — memes', clickable, visible\n\t\t\t[249] paragraph ''\n\t\t\t\tStaticText 'memes'\n\t\t\t[252] Section '', visible\n\t\t\t\t[254] button 'Subscribe No subscribers', clickable, visible\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[260] paragraph ''\n\t\t\t\tStaticText '3,129 submissions'\n\t\t[261] article ''\n\t\t\t[263] heading 'wallstreetbets — wallstreetbets'\n\t\t\t\t[264] link 'wallstreetbets — wallstreetbets', clickable\n\t\t\t[269] paragraph ''\n\t\t\t\tStaticText 'wallstreetbets'\n\t\t\t[272] Section ''\n\t\t\t\t[274] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[280] paragraph ''\n\t\t\t\tStaticText '3,089 submissions'\n\t\t[281] article ''\n\t\t\t[283] heading 'gaming — gaming'\n\t\t\t\t[284] link 'gaming — gaming', clickable\n\t\t\t[289] paragraph ''\n\t\t\t\tStaticText 'gaming'\n\t\t\t[292] Section ''\n\t\t\t\t[294] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[300] paragraph ''\n\t\t\t\tStaticText '2,572 submissions'\n\t\t[301] article ''\n\t\t\t[303] heading 'technology — technology'\n\t\t\t\t[304] link 'technology — technology', clickable\n\t\t\t[309] paragraph ''\n\t\t\t\tStaticText 'technology'\n\t\t\t[312] Section ''\n\t\t\t\t[314] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[320] paragraph ''\n\t\t\t\tStaticText '2,472 submissions'\n\t\t[321] article ''\n\t\t\t[323] heading 'pics — pics'\n\t\t\t\t[324] link 'pics — pics', clickable\n\t\t\t[329] paragraph ''\n\t\t\t\tStaticText 'pics'\n\t\t\t[332] Section ''\n\t\t\t\t[334] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[340] paragraph ''\n\t\t\t\tStaticText '2,450 submissions'\n\t\t[341] article ''\n\t\t\t[343] heading 'funny — funny'\n\t\t\t\t[344] link 'funny — funny', clickable\n\t\t\t[349] paragraph ''\n\t\t\t\tStaticText 'funny'\n\t\t\t[352] Section ''\n\t\t\t\t[354] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[360] paragraph ''\n\t\t\t\tStaticText '2,407 submissions'\n\t\t[361] article ''\n\t\t\t[363] heading 'television — television'\n\t\t\t\t[364] link 'television — television', clickable\n\t\t\t[369] paragraph ''\n\t\t\t\tStaticText 'television'\n\t\t\t[372] Section ''\n\t\t\t\t[374] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[380] paragraph ''\n\t\t\t\tStaticText '2,389 submissions'\n\t\t[381] article ''\n\t\t\t[383] heading 'mildlyinteresting — mildlyinteresting'\n\t\t\t\t[384] link 'mildlyinteresting — mildlyinteresting', clickable\n\t\t\t[389] paragraph ''\n\t\t\t\tStaticText 'mildlyinteresting'\n\t\t\t[392] Section ''\n\t\t\t\t[394] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[400] paragraph ''\n\t\t\t\tStaticText '2,211 submissions'\n\t\t[401] article ''\n\t\t\t[403] heading 'Showerthoughts — Showerthoughts'\n\t\t\t\t[404] link 'Showerthoughts — Showerthoughts', clickable\n\t\t\t[409] paragraph ''\n\t\t\t\tStaticText 'Showerthoughts'\n\t\t\t[412] Section ''\n\t\t\t\t[414] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[420] paragraph ''\n\t\t\t\tStaticText '2,175 submissions'\n\t\t[421] article ''\n\t\t\t[423] heading 'todayilearned — todayilearned'\n\t\t\t\t[424] link 'todayilearned — todayilearned', clickable\n\t\t\t[429] paragraph ''\n\t\t\t\tStaticText 'todayilearned'\n\t\t\t[432] Section ''\n\t\t\t\t[434] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[440] paragraph ''\n\t\t\t\tStaticText '2,111 submissions'\n\t\t[441] article ''\n\t\t\t[443] heading 'personalfinance — personalfinance'\n\t\t\t\t[444] link 'personalfinance — personalfinance', clickable\n\t\t\t[449] paragraph ''\n\t\t\t\tStaticText 'personalfinance'\n\t\t\t[452] Section ''\n\t\t\t\t[454] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[460] paragraph ''\n\t\t\t\tStaticText '1,957 submissions'\n\t\t[461] article ''\n\t\t\t[463] heading 'LifeProTips — LifeProTips'\n\t\t\t\t[464] link 'LifeProTips — LifeProTips', clickable\n\t\t\t[469] paragraph ''\n\t\t\t\tStaticText 'LifeProTips'\n\t\t\t[472] Section ''\n\t\t\t\t[474] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[480] paragraph ''\n\t\t\t\tStaticText '1,953 submissions'\n\t\t[481] article ''\n\t\t\t[483] heading 'Futurology — Futurology'\n\t\t\t\t[484] link 'Futurology — Futurology', clickable\n\t\t\t[489] paragraph ''\n\t\t\t\tStaticText 'Futurology'\n\t\t\t[492] Section ''\n\t\t\t\t[494] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[500] paragraph ''\n\t\t\t\tStaticText '1,902 submissions'\n\t\t[501] article ''\n\t\t\t[503] heading 'Music — Music'\n\t\t\t\t[504] link 'Music — Music', clickable\n\t\t\t[509] paragraph ''\n\t\t\t\tStaticText 'Music'\n\t\t\t[512] Section ''\n\t\t\t\t[514] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[520] paragraph ''\n\t\t\t\tStaticText '1,869 submissions'\n\t\t[521] article ''\n\t\t\t[523] heading 'explainlikeimfive — explainlikeimfive'\n\t\t\t\t[524] link 'explainlikeimfive — explainlikeimfive', clickable\n\t\t\t[529] paragraph ''\n\t\t\t\tStaticText 'explainlikeimfive'\n\t\t\t[532] Section ''\n\t\t\t\t[534] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[540] paragraph ''\n\t\t\t\tStaticText '1,818 submissions'\n\t\t[541] article ''\n\t\t\t[543] heading 'books — books'\n\t\t\t\t[544] link 'books — books', clickable\n\t\t\t[549] paragraph ''\n\t\t\t\tStaticText 'books'\n\t\t\t[552] Section ''\n\t\t\t\t[554] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[560] paragraph ''\n\t\t\t\tStaticText '1,796 submissions'\n\t\t[561] article ''\n\t\t\t[563] heading 'science — science'\n\t\t\t\t[564] link 'science — science', clickable\n\t\t\t[569] paragraph ''\n\t\t\t\tStaticText 'science'\n\t\t\t[572] Section ''\n\t\t\t\t[574] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[580] paragraph ''\n\t\t\t\tStaticText '1,792 submissions'\n\t\t[581] article ''\n\t\t\t[583] heading 'Jokes — Jokes'\n\t\t\t\t[584] link 'Jokes — Jokes', clickable\n\t\t\t[589] paragraph ''\n\t\t\t\tStaticText 'Jokes'\n\t\t\t[592] Section ''\n\t\t\t\t[594] button 'Subscribe No subscribers', clickable\n\t\t\t\t\tStaticText 'Subscribe'\n\t\t\t\t\tStaticText '0'\n\t\t\t[600] paragraph ''\n\t\t\t\tStaticText '1,758 submissions'\n\t\t[601] article ''\n\t\t\t[603] heading 'tifu — tifu'\n\t\t\t\t[604] link 'tifu — tifu', clickable\n\t\t\t[609] paragraph ''\n\t\t\t\tStaticText 'tifu'\n\t\t\t[612] Section ''\n\t\t\t\t[614] button 'Subscribe No subscribers', clickable"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "9f38a9c626a24b59a3aa1c4c6bdf35a2",
+    "timestamp_epoch": 1792040054.3586612,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 11,
+    "actual_vectors": 1,
+    "cache_hits": 10,
+    "elapsed_seconds": 1.0007365960045718,
+    "input_keys": [
+      "8cdf49cfbb561ed936422b7e01ab4a7eab97096db0d0f7c9762d609fec4e5917",
+      "34d9478e9632a4d479771da019c61b5e5aa10f9726f63f588169ec2bf1f91f54",
+      "8d9b0368a73ce57d3a7646a0a851b27baa71e5f703ca43c1c1b0085e4a6b58c0",
+      "8aba149810daf1ec84bf1a2ee6b1b354754b41a9a272b727f27e99c75e3c1b65",
+      "907d430d477f966877fc9121f6f0a41d847af99d37039841bbf5f7b8cf550762",
+      "cc30c21ba5e085b85020a762b7b3c36c3880f5916f45839de482b79447cef860",
+      "ca566cbde4cc05c974079697eb5878e9beb2b367a08479a5295685b82488c9e7",
+      "2c345f3edbf59331f6db160989a0367822c13a53652014de891c4ade3bd7c5a2",
+      "f1f0cd2c35ea8a2401a248aed225ed09e840451ce7cb7ad28103acaac1b27957",
+      "2342a4fe95ff35e6d8f06440803c5a66f02bda99e0bc4919bac5e9058c21683c",
+      "7e7239499da6d7a75540f6b590b5b491a02fe1c3179798c18109f1d607f15473"
+    ]
+  },
+  {
+    "record_id": "da03d469f0664a9a99e001384605ffe3",
+    "timestamp_epoch": 1792040054.516755,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.15304899599868804,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1796,
+    "input_sha256": [
+      "8030928800d14f983174cece369e13f5b847c760b10ac03686581edd45ed9a1e",
+      "4fda314c7e28a9f93d77932dc2c93e3887b8eb05d1173cbf49058ebbe4c476ae"
+    ],
+    "input_texts": [
+      "The agent is attempting to reply to the first reply in a specific post but has navigated away from the target thread to the Forums index page. This step represents a correction in navigation, where the agent executes a 'go back' action to return to the previously visited page, expecting it to be the post thread containing the target reply.\n\nThe transition moves from the 'List of forums' page (URL: http://localhost:9080/forums) to the Postmill home page (URL: http://localhost:9080/). The 'List of forums' page, which displayed a grid of forum categories like 'AskReddit' and 'relationship_advice', is replaced by the home page, which shows a message stating 'You are not subscribed to any forum. Showing featured forums instead.' and lists 'Submissions' and 'Comments' navigation items. The navigation structure changes from a category list to a feed layout, indicating the browser history stack was traversed backward to the home page rather than the intended post thread.",
+      "Following the failed return to the post thread, the agent realizes the navigation history led to the home page instead. This step represents a 'go forward' action intended to reverse the previous 'go back' move, aiming to restore the view of the Forums index page so the agent can proceed to locate the target post.\n\nThe transition moves from the Postmill home page (URL: http://localhost:9080/) back to the 'List of forums' page (URL: http://localhost:9080/forums). The home page, which displayed 'Featured forums' and submission filters, is replaced by the forums index page listing various categories such as 'AskReddit', 'worldnews', and 'gaming'. The content is identical to the initial state of this sequence, confirming that the forward navigation successfully restored the previous view in the browsing history."
+    ],
+    "prompt_tokens": 384,
+    "total_tokens": 384,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "44a943f9607940e88c1dae771daa0c26",
+    "timestamp_epoch": 1792040054.517041,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 10,
+    "actual_vectors": 2,
+    "cache_hits": 8,
+    "elapsed_seconds": 0.1536360330064781,
+    "input_keys": [
+      "e798f2d05f575706517bf4f3d2bdedc25b8a0011de8e323ae9b3116cf7b48cde",
+      "738691d962d774d4b9bb553e2ddf812a16eabce390ec84a4c4b04e50bb544d52",
+      "e12c6971a3c806a6bd2073a32cadbe968459ba895324e3b34023aeb29a61beca",
+      "1c06b0fb43c6e15e0d07b5bb9650901482fa537b46acd4e9741d83ed351721ba",
+      "2977abfb299d82fc8acc5c7b08fba81dee16c2b7b157d8a169ca50eca4efe15a",
+      "a5c1ce929f13712f74cb907b03a37051f1ca89dd32d83669d4a3b9ec3bf75a5c",
+      "7eb3439657e1ec0aaa58bcc5b86d82d73cd8a0e889f6e4ef9c042cdfe996aaea",
+      "39073e0b35cf4928acd954f89d8e09c8342df51ff7f91e0f47f55f8acbc4d169",
+      "8f4c9e67d2e67dbd293eba2d612a52b4e5648304d4556a2d5f0d941ecdfd95fa",
+      "16df7a84d22ba90b6d4319cccd06a4d748e0cf362e58ef1d8615db1e5882fff8"
+    ]
+  },
+  {
+    "record_id": "42406b497d744c09b2688c1f7ee6bc36",
+    "timestamp_epoch": 1792040054.518055,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 4.917298792861402e-05,
+    "input_keys": [
+      "d0810c61d9e7ec7c07fa0604e0474d0f1fe2e744e3d0d42ca08f3a100266401a"
+    ]
+  },
+  {
+    "record_id": "ab15717fedbe4fe6b556d2251e9107ab",
+    "timestamp_epoch": 1792040054.5187736,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 3.338998067192733e-05,
+    "input_keys": [
+      "71de15bbd142b4da2dfd5bdf12ba8a9fa6b0d93bab086f64fa7ac84b06cc49f6"
+    ]
+  }
+]
