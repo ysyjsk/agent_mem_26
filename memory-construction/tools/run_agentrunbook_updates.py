@@ -819,7 +819,7 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
     # Validate only events that the dependency cache actually reused. During
     # trajectory growth the conservative key includes global action/length
     # context, so unchanged-looking transitions may correctly be recomputed.
-    reused_ids = sorted(set(reused_event_ids or ())) if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded') else []
+    reused_ids = sorted(set(reused_event_ids or ())) if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay') else []
     reused_equal = all(_entry_digest(event_before[eid]) == _entry_digest(event_after.get(eid, {})) for eid in reused_ids)
     touched_positions = workload.get('state_indices') or [state_index]
     old_texts = [source_states.get(index, {}).get('text', '') for index in touched_positions]
@@ -836,7 +836,7 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
     untouched_retained = sorted(raw_other_before) == sorted(raw_other_after)
     expected_event_count = len(changed.get('states', [])) - 1
     event_coverage = (set(event_before).issubset(set(event_after)) and len(event_after) == expected_event_count)
-    reuse_check = reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded') else True
+    reuse_check = reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay') else True
     # Exclude copied source metadata (raw, pre/post_thoughts) from the derived
     # check. Persisted source evidence alone cannot certify generated memory.
     derived_events = {e['event_id']: '\n'.join(e.get(k, '') for k in ('overview', 'state_transition')) for e in target_events}
@@ -879,7 +879,7 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
         'old_fact_retained': old_fact_retained,
         'untouched_facts_retained': untouched_retained,
         'event_source_coverage': event_coverage,
-        'reused_joint_events_complete': reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded') else f'not_applicable_{policy}',
+        'reused_joint_events_complete': reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay') else f'not_applicable_{policy}',
         'dirty_event_ids': sorted(dirty_ids),
         'reused_event_count': len(reused_ids),
         'unchanged_candidate_event_count': len(set(event_before) - dirty_ids),
@@ -943,7 +943,7 @@ def run_one(args, case, policy):
     publication_elapsed = time.perf_counter() - publish_started
     effective_state_index = int(workload.get('state_index', args.state_index))
     reused_event_ids = set()
-    if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded'):
+    if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay'):
         for spec in memory._build_event_transition_specs(trajectory):
             key = memory.event_dependency_key(trajectory, spec)
             if key in memory.initial_event_keys:
@@ -962,7 +962,7 @@ def run_one(args, case, policy):
         'started_epoch': started_epoch, 'completed_epoch': time.time(),
         'artifact_build_s': build_elapsed, 'publication_and_reload_s': publication_elapsed,
         'runner_sha256': RUNNER_SHA256,
-        'delta_version': ('source-guarded-v11' if policy == 'delta_guarded' else 'source-retract-v10' if policy == 'delta_retract' else
+        'delta_version': ('source-overlay-v12' if policy == 'source_overlay' else 'source-guarded-v11' if policy == 'delta_guarded' else 'source-retract-v10' if policy == 'delta_retract' else
                           'source-edit-v8' if policy in ('delta', 'delta_notes') else None),
         'source_append_comparator': policy == 'source_append',
         'current_state_evidence': args.current_state_evidence,

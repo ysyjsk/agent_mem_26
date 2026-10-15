@@ -1,0 +1,12 @@
+[
+  {"run":"v12-new-web-1ad1af4b-description-rejection", "domain":"web", "questions":[
+    {"id":"description_rejected", "text":"In trajectory1ad1af4b at state5 immediately after the attempted Description fill, what validation outcome is explicitly shown? Answer accepted or rejected.", "answer":"rejected"},
+    {"id":"description_empty", "text":"In trajectory1ad1af4b at state5, is the Description textbox populated or empty according to the observed field, not the requested fill action? Answer populated or empty.", "answer":"empty"},
+    {"id":"description_next", "text":"In trajectory1ad1af4b at state6 after the next Sidebar fill, what text is visible in the Description textbox? Give the field text at state6, not state5.", "answer":"Welcome to the future"}
+  ]},
+  {"run":"v12-new-enterprise-0ab99e0c-selection-mismatch", "domain":"enterprise", "questions":[
+    {"id":"selected_actual", "text":"In trajectory0ab99e0c at state6 after select_option was attempted, what value is actually selected in the Type combobox? Give the observed value, not the requested action value.", "answer":"Emergency"},
+    {"id":"selected_before", "text":"In trajectory0ab99e0c at state5 BEFORE select_option is attempted, what value is in the Type combobox? Give only the value without placeholder punctuation.", "answer":"None"},
+    {"id":"selected_after", "text":"In trajectory0ab99e0c at state7 after Add AND Condition is clicked, what Type value is actually shown? Use state7, not state6.", "answer":"Normal"}
+  ]}
+]

@@ -226,7 +226,7 @@ def _trajectory_to_turns(
     record: Mapping[str, Any],
     *,
     max_states: int | None = None,
-    max_chars_per_state: int = 12000,
+    max_chars_per_state: int | None = 12000,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Convert one public V2 trajectory to text-only MemForest turns.
 
@@ -257,7 +257,7 @@ def _trajectory_to_turns(
         thought = str(state.get("thought") or "").strip()
         url = str(state.get("url") or "").strip()
         tree = str(state.get("accessibility_tree") or "").strip()
-        if len(tree) > max_chars_per_state:
+        if max_chars_per_state is not None and len(tree) > max_chars_per_state:
             tree = tree[:max_chars_per_state] + "\n...[accessibility tree truncated by text-only adapter]"
         header = ""
         if idx == 0:

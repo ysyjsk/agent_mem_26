@@ -1,0 +1,17 @@
+{
+  "trajectory_id": "1ad1af4b",
+  "selection_reason": "Predeclared before execution: new field/state on the complete forum-form trajectory. Explicitly reject a fill operation while preserving its attempted action and all neighboring states. Tests invalidated success inference, not another spelling/value-only change. Controlled counterfactual source correction, not natural official QA.",
+  "source_edits": [
+    {"state_index": 5, "field": "text", "old": "[126] textbox 'Description This field is required.' value='Welcome to the future', visible, focused, required", "new": "[126] textbox 'Description This field is required.' value='', visible, focused, required"},
+    {"state_index": 5, "field": "text", "old": "StaticText 'Welcome to the future'", "new": "[127] status 'Description validation: input was rejected; field remains empty', visible"}
+  ],
+  "derived_rules": [
+    {"target": "event_0004_0005", "required": ["reject", "empty", "Description"], "forbidden": []},
+    {"target": "event_0005_0006", "required": ["reject", "empty", "Sidebar|sidebar"], "forbidden": []}
+  ],
+  "manual_checks": [
+    "At state5 the description is empty and the explicit status says the input was rejected; attempted fill does not establish success.",
+    "State4 and state6 observations and actions are unchanged; do not propagate empty/rejected into state6.",
+    "Check generated events AND notes; generic procedural instructions remain valid, but any claim of completed filling at state5 must be superseded or repaired."
+  ]
+}

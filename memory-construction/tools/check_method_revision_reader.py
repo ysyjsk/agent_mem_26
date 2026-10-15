@@ -24,13 +24,23 @@ def main():
     os.environ['LME_TEXT_ONLY'] = '1'
     run_root = ROOT / 'runs/method-first-20261015'
     probes = json.loads((ROOT / 'configs/method_revision_probes.json').read_text())
+    if len(sys.argv) > 1:
+        requested = set(sys.argv[1:])
+        probes = [p for p in probes if p['run'] in requested]
+        if len(probes) != len(requested):
+            raise ValueError('unknown requested probe run')
     for case in probes:
-        for policy in ('b3', 'delta_guarded'):
+        for policy in ('b3', 'delta_guarded', 'source_overlay'):
             folder = run_root / case['run'] / f'literal_revision-{policy}'
+            if not folder.exists():
+                continue
             output = folder / 'derived_reader_probe.json'
             if output.exists():
                 raise FileExistsError(output)
-            args = argparse.Namespace(**json.loads((folder / 'reader/run_args.json').read_text()))
+            prior = folder / 'reader/run_args.json'
+            if not prior.exists():
+                prior = ROOT / 'runs/method-first-20261015/v11-new-web-2e8f6477-reply-replacement/literal_revision-delta_guarded/reader/run_args.json'
+            args = argparse.Namespace(**json.loads(prior.read_text()))
             review = json.loads((folder / 'derived_quality_review.json').read_text())
             # Exclude raw and pre/post_thoughts; source IDs and actions preserve
             # the event interpretation, but cannot answer a changed-value QA.

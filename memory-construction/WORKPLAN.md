@@ -1,27 +1,17 @@
-# 当前 Workplan：方法探索 → 小规模确认 → 完整论文实验
+# 当前执行：分支取舍＋外部开发首表
 
-本计划依据 2026-10-15 用户最新要求；总目标与验收以 GOAL.md 为准。不限定投稿会议。
+2026-10-15；GOAL.md为总目标。旧完整计划见 reports/goal-history/external-method-selection-20261015/。
 
-| 阶段 | 当前动作 | 阶段交付 |
+| 任务 | 状态 | 下一实际动作与决策 |
 |---|---|---|
-| METHOD01 | 用已有日志解释主要无收益原因，消除提示词/分组/预算与旧起始快照的已知错配；补必要的同配置 B3/Ours 对照 | 简短成本归因、可信配对数据、下一候选的计算节省预期 |
-| METHOD02 | 优先验证已有事件记忆＋源变化＋局部上下文驱动的增量编辑；必要时改一个由瓶颈支持的候选 | 实际调用与 tokens/发布耗时、派生记忆及固定 Reader 质量、保留/修改/淘汰结论 |
-| METHOD03 | 确认固定两域开发集收益，关键配对三次重复及少量新案例；冻结有效组合 | 当前版本和起始快照的可追溯配置、有效收益及边界、正式实验范围 |
-| PAPER01–PAPER06 | METHOD03 完成后自动接续完整主实验、相关消融扩量、质量与重复及论文交付 | 足以支撑最终方法主张的真实表图、章节和复现命令 |
+| METHOD01可信起点 | 完成，复用 | matched两域快照及合法缓存，不重做 |
+| METHOD02分支比较 | 执行中 | 先跑已有v12 reply/count三方正常检索→Reader，再补Title/sort及预选新修订；依据事件/notes和Reader决定overlay/edit取舍 |
+| EXTERNAL01开发首表 | 执行中 | MemForest共享每域5完整轨迹/4题，现有HTTP服务，保留原算法；统一Reader预算与评分，纳入Raw RAG、RAG+Notes、AgentRunbook-R及当前方法 |
+| METHOD03新样本/累计维护 | 待首表 | 预选未调参问题；同库多轮更新/查询，核算初始+维护+查询，不以独立快照冒充流 |
+| FREEZE | 未满足 | 外部强对照、正常质量、关键三次配对、新样本、累计成本、关键消融均支持后冻结 |
+| PAPER | 待冻结自动接续 | 正式主表/消融/扩量/质量稳定性、论文表图章节和复现；出现实质退化回方法改进 |
 
-METHOD01 一次有限核对完成就开始候选，不扩建诊断、恢复或调度系统。METHOD02 无收益继续按原因改机制，不跳到全量。METHOD03 的 20%–30% 仅为开发参考，不机械卡进度或事后挑指标；具体标准见 GOAL.md。
+当前主要成本指标：更新总LLM tokens；发布墙钟、Embedding、失败与查询增量全部并列。候选最多两个，不扫查询参数。冷构建复用历史必须标注，不把旧Ours当当前版本。
+当前开发最佳参照v11 delta_guarded未冻结；候选v12 source_overlay未过正常检索与连续更新验证。相同质量下优先无模型覆盖，仅必要语义修复才保留编辑。
 
-现有四条两域轨迹、八个修订案例继续作为开发集。不同版本的历史重复分开保留；当前实现的正式扩量不能由旧 core 的窗口表替代。尚未到正式阶段时，不重跑全部基础对照，不为最终排版占用研究时间。
-
-## 当前代码与证据入口
-
-- tools/run_agentrunbook_updates.py：策略、起始快照/缓存、修订和质量检查；当前检查需关注派生记忆，不只 raw。
-- runs/agentrunbook-r-native-small-20261014/local-text-only/memory_modules/agentrunbook_r.py：单事件/联合抽取、提示词及 Embedding；在现有调用链上最小实现候选。
-- results/tables/agentrunbook_update_repeat_summary.csv：前后轮缓存/请求变化，不直接合为同配置重复。
-- reports/paper02_cold_construction.md：历史联合候选和负结果，其中旧 Frozen configuration 已被当前探索阶段取代。
-- results/tables/agentrunbook_revision_case_reader.csv：已有固定 Reader 检查，查询参数保持不变。
-- reports/optimization_log.md：沿用已有记录方式追加假设、成本、质量与决策，无需新建平台。
-
-每轮保存实际数据范围、配置/代码标识、原始运行路径、输入/输出 tokens、模型调用、Embedding、发布耗时、失败和质量。成本归因优先读现成日志，只有决定不清时才补最小测量。
-
-正式实验仍是总 Goal 的必需部分：方法确认后完成完整规模两域基础对照和强 B3/Ours、正式更新、关键消融、扩量、质量与重复。流式负载按最终方法主张确定；小探针结果保留，不将其冒充多负载评测。native/视觉/Judge 和会议选择不作当前前置依赖。
+运行入口：tools/run_agentrunbook_updates.py、tools/run_method_v12_normal_readers.sh、tools/run_memforest_local_smoke.py及最小共享库适配；原始产物沿用runs，决策追加reports/optimization_log.md。无新框架或执行器，GPU串行。原生Goal实际blocked，接口无resume；文档不假称active。

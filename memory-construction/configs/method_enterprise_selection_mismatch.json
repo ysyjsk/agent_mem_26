@@ -1,0 +1,20 @@
+{
+  "trajectory_id": "0ab99e0c",
+  "selection_reason": "Predeclared before execution: selected option/condition mismatch after the explicit select_option Normal action. Correct all state6 selection indicators consistently, keeping intended action and neighboring states unchanged. Tests whether prior successful-Normal-selection inference is invalidated. Controlled correction, not an official QA label.",
+  "source_edits": [
+    {"state_index": 6, "field": "text", "old": "Type is Normal", "new": "Type is Emergency", "count": 7},
+    {"state_index": 6, "field": "text", "old": "[a1300] gridcell 'Normal'", "new": "[a1300] gridcell 'Emergency'"},
+    {"state_index": 6, "field": "text", "old": "[a1639] combobox 'Choose option for field: Type' value='Normal'", "new": "[a1639] combobox 'Choose option for field: Type' value='Emergency'"},
+    {"state_index": 6, "field": "text", "old": "[a1642] option 'Normal', selected=True", "new": "[a1642] option 'Normal', selected=False"},
+    {"state_index": 6, "field": "text", "old": "[a1643] option 'Emergency', selected=False", "new": "[a1643] option 'Emergency', selected=True"}
+  ],
+  "derived_rules": [
+    {"target": "event_0005_0006", "required": ["Emergency", "Normal", "None"], "forbidden": []},
+    {"target": "event_0006_0007", "required": ["Emergency", "Normal", "AND"], "forbidden": []}
+  ],
+  "manual_checks": [
+    "The observed selected field at state6 is Emergency despite the attempted Normal action; do not claim the intended selection succeeded.",
+    "Pre-state5 remains None and post-state7 remains Normal; state6 correction does not rewrite them.",
+    "Notes describe a desired filter recipe; distinguish that intent from evidence of successful execution. Verify generated notes as well as events."
+  ]
+}

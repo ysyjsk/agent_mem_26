@@ -1,0 +1,33 @@
+{
+  "scope": "text-only/adapted development, not native/official Small",
+  "method": "MemForest",
+  "commit": "2b5af6d9f92618b30f3e8b7eb99412c1d5eddd6d",
+  "domain": "web",
+  "trajectory_ids": [
+    "1ad1af4b",
+    "4ba5e9cb",
+    "2e8f6477",
+    "2a99f536",
+    "3331c568"
+  ],
+  "question_ids": [
+    "11dac74b",
+    "631667c9",
+    "8c55d6bc",
+    "99ae54d1"
+  ],
+  "state_count": 37,
+  "data_sha256": {
+    "trajectories.jsonl": "c59d19b0a4c48728ea938b86360895b26c6bc002c3a5c5e12c9ffcf2ea0975c1",
+    "questions.jsonl": "ee8bc5faac5238a9dc7bf589efbc0e904406d8d8b6e0be45f3b2535bc891c188"
+  },
+  "config_sha256": "f25f584958000c095ae73abe536a3dbcbe15434afd61503ae37093d7d5f59adc",
+  "adaptations": [
+    "one shared user per domain, one session per complete trajectory",
+    "no state text truncation; native memcell chunker",
+    "existing 9B chat/8B embedding services; thinking off; concurrency1",
+    "upstream4B topology/prompts/sampling/output budgets; embedding dimension4096",
+    "same frozen Reader/12000 context/2048 output; native agentic retrieval unchanged"
+  ],
+  "initial_build_reused": false
+}

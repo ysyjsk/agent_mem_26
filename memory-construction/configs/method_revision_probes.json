@@ -11,6 +11,14 @@
     {"id":"reply_current", "text":"In trajectory2e8f6477, what reply text is actually visible in the textbox and preview at state8 before Post is clicked? Give the observed text, not the task target.", "answer":"stay calm"},
     {"id":"reply_neighbor", "text":"In trajectory2e8f6477, what reply text is visible in the preview at state9 AFTER Post is clicked? Give the text at state9, not the preceding state8.", "answer":"don't panic"}
   ]},
+  {"run":"v12-web-2e8f6477-reply-replacement", "domain":"web", "questions":[
+    {"id":"reply_current", "text":"In trajectory2e8f6477, what reply text is actually visible in the textbox and preview at state8 before Post is clicked? Give the observed text, not the task target.", "answer":"stay calm"},
+    {"id":"reply_neighbor", "text":"In trajectory2e8f6477, what reply text is visible in the preview at state9 AFTER Post is clicked? Give the text at state9, not the preceding state8.", "answer":"don't panic"}
+  ]},
+  {"run":"v12-enterprise-0ab99e0c-count-replacement", "domain":"enterprise", "questions":[
+    {"id":"count_current", "text":"In trajectory0ab99e0c, at state5 after the failed click on Normal, how many total unfiltered Change Requests records are shown? Give only the number.", "answer":"103"},
+    {"id":"selection_preserved", "text":"In trajectory0ab99e0c, immediately at state5 BEFORE the subsequent select_option action, what value remains in the Type field combobox after the failed click?", "answer":"None"}
+  ]},
   {"run":"v11-new-enterprise-49f98e9e-sort-replacement", "domain":"enterprise", "questions":[
     {"id":"sort_status", "text":"In trajectory49f98e9e at state5, what count phrase follows 'New sort order condition added' in the status message?", "answer":"2 of 2"},
     {"id":"sort_field", "text":"In trajectory49f98e9e, when the field chooser is opened in event0005_0006, which field is the agent trying to select as the sort key?", "answer":"Asset function"}

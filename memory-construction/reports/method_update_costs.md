@@ -37,6 +37,9 @@ Primary metric: total LLM input + output tokens. Independent clones with equal l
 | v11-web-1ad1af4b-workflow_revision-state3 | delta_guarded | 0/0 | 0 | 3/451 | 0.54 | 2/0 | 2/2 | True |
 | v11-web-2e8f6477-state_revision-state3 | delta_guarded | 0/0 | 0 | 3/4488 | 1.48 | 2/0 | 2/2 | None |
 | v11-web-2e8f6477-workflow_revision-state4 | delta_guarded | 0/0 | 0 | 3/559 | 0.58 | 2/0 | 2/2 | True |
+| v12-web-2e8f6477-reply-replacement | b3 | 28830/621 | 2 | 5/4930 | 27.97 | 0/4 | 1/2 | None |
+| v12-web-2e8f6477-reply-replacement | delta_guarded | 1634/227 | 2 | 3/4800 | 8.42 | 2/0 | 2/2 | None |
+| v12-web-2e8f6477-reply-replacement | source_overlay | 0/0 | 0 | 3/4909 | 1.39 | 2/0 | 2/2 | None |
 | v2-enterprise-0ab99e0c-state5 | b3 | 14409/386 | 1 | 2/297 | 31.42 | 0/2 | 0/2 | None |
 | v2-enterprise-0ab99e0c-state5 | delta | 1583/464 | 1 | 2/255 | 30.00 | 2/0 | 2/2 | None |
 | v2-enterprise-0ab99e0c-state5 | ours | 14409/290 | 1 | 2/201 | 21.01 | 0/2 | 0/2 | None |
