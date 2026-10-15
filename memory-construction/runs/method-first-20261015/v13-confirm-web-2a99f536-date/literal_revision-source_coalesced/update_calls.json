@@ -1,0 +1,182 @@
+[
+  {
+    "record_id": "f38127e76fd14af5b9b2181f18947072",
+    "timestamp_epoch": 1792056092.1102865,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "2a99f536",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "source_delta": [
+      {
+        "state_index": 3,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -84,6 +84,6 @@\n \t\t\t\t\tStaticText 'From'\n \t\t\t\t\tStaticText '*'\n-\t\t\t\t[768] textbox 'From *' value='07/05/2021', clickable, visible, focused, required\n-\t\t\t\t\tStaticText '07/05/2021'\n+\t\t\t\t[768] textbox 'From *' value='07/06/2021', clickable, visible, focused, required\n+\t\t\t\t\tStaticText '07/06/2021'\n \t\t\t\t[769] button 'undefined \\ue627', clickable, visible\n \t\t\t\t\tStaticText 'undefined'",
+        "append_only": false
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent is generating a Product Views Report for the date range 07/05/2021 to 05/31/2023. Having navigated to the correct report page and selected the 'Views' filter type, this step involves populating the start date of the requested range.",
+        "state_transition": "The action fills the 'From *' textbox (bid 768) with the date '07/05/2021'. The post-state shows this value populated in the field, which was previously empty, while the 'To *' field remains empty and the page layout otherwise remains unchanged."
+      },
+      {
+        "overview": "Continuing the setup for the Product Views Report spanning 07/05/2021 to 05/31/2023, the agent now needs to define the end date of the period to complete the filter criteria before generating the report.",
+        "state_transition": "The action fills the 'To *' textbox (bid 775) with the date '05/31/2023'. In the post-state, this field contains the specified end date, completing the date range configuration alongside the previously entered start date, while the rest of the interface remains static."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is generating a Product Views Report for the date range 07/05/2021 to 05/31/2023. Having navigated to the correct report page and selected the 'Views' filter type, this step involves populating the start date of the requested range.",
+        "state_transition": "The action fills the 'From *' textbox (bid 768) with the date '07/05/2021'. The post-state shows this value populated in the field, which was previously empty, while the 'To *' field remains empty and the page layout otherwise remains unchanged."
+      },
+      {
+        "overview": "Continuing the setup for the Product Views Report spanning 07/05/2021 to 05/31/2023, the agent now needs to define the end date of the period to complete the filter criteria before generating the report.",
+        "state_transition": "The action fills the 'To *' textbox (bid 775) with the date '05/31/2023'. In the post-state, this field contains the specified end date, completing the date range configuration alongside the previously entered start date, while the rest of the interface remains static."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "0df2ea2532804d9897f2f44dd9d180b9",
+    "timestamp_epoch": 1792056092.1103709,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 5,
+    "reused": 3
+  },
+  {
+    "record_id": "0913642a701c412d96b3b820588a74b2",
+    "timestamp_epoch": 1792056092.111218,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0002_0003",
+    "before_chars": 487,
+    "after_chars": 1189,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "652d271b155a4d62b4a498379247c028",
+    "timestamp_epoch": 1792056092.1116176,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0003_0004",
+    "before_chars": 472,
+    "after_chars": 1164,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "1b31691c947045f19fd72c3786d5c4c6",
+    "timestamp_epoch": 1792056092.1121464,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "aaa8a08f1dc341495890a1d5e6c02eb5b82a2f79daad59f6723d28da88db7427",
+    "stage": "notes"
+  },
+  {
+    "record_id": "0b9d2c22e3464e9a9e27c58557dfd1fe",
+    "timestamp_epoch": 1792056094.0307622,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 1.889681197993923,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 23682,
+    "input_sha256": [
+      "f1e1065f5f9ae056b8eb3da903c81f0193781f7192cae6bc2617b78925e1c416",
+      "c46bf47aec228926ba9a0faebb70676d5ae2ece638c0d464d56074082efdee40"
+    ],
+    "prompt_tokens": 8192,
+    "total_tokens": 8192,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "ff797c7332824b5dae8d52b05972588f",
+    "timestamp_epoch": 1792056094.030935,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 6,
+    "actual_vectors": 2,
+    "cache_hits": 4,
+    "elapsed_seconds": 1.8902158580021933,
+    "input_keys": [
+      "1f8f7c49f4180b2b5af6eb40526af9a125d310a4755d40f72d584065da1ce642",
+      "1f8f7c49f4180b2b5af6eb40526af9a125d310a4755d40f72d584065da1ce642",
+      "ec63c17119e91d7ecb935e63adae531505a7d20be7d8c2930f3476ed8a2930dc",
+      "889d638479eb91842af9cda371bcbd4040bf4762d082888c382ed55701f7fdf0",
+      "a3e939f7857a33b7b26ae4623890709ac07c162ae07f47c8851bbc910eb3cb88",
+      "555cf2abc16e5ece177fdb5e7eb8e699518394dce193d0da097589faf96e7d07"
+    ]
+  },
+  {
+    "record_id": "836f3b991a9c4eea8e789ce2daca5536",
+    "timestamp_epoch": 1792056094.2490113,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.21657081399462186,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 2357,
+    "input_sha256": [
+      "dfb39fdc7e5634129612c6375578212f4f9af855f84964accdff7e8721edee17",
+      "b9f2a4ca07e06e49e245b7245bc40b3b53176c1bd038acacc105ac1ab67c84e0"
+    ],
+    "prompt_tokens": 686,
+    "total_tokens": 686,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "932827f95be548128eb3c45c2353931a",
+    "timestamp_epoch": 1792056094.2491107,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 5,
+    "actual_vectors": 2,
+    "cache_hits": 3,
+    "elapsed_seconds": 0.21676352998474613,
+    "input_keys": [
+      "c0fc96f29d33f0d4b5803c47d3c82f6490b75d1e3c86e15668e0dc5befa5a004",
+      "7b59c29baf0d890940bd41be64f6881d3433b5fd04c517c188f3d84dde19ca44",
+      "767de433c028d1764c77f8d37be02d1ccc17d1d85b60271df90f64a2f3fe2d88",
+      "08491b44a085319a983464165865e737452789e75b8a2814af3d3e2cdf679a7d",
+      "b9947f8fbbe122b9af0cc170f9bf8a2cc4af0861bf36cfb6c847547babb85c03"
+    ]
+  },
+  {
+    "record_id": "665b3edfacc24fbdb1389880eb050347",
+    "timestamp_epoch": 1792056094.2495432,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.7812999431043863e-05,
+    "input_keys": [
+      "7ef34cd3a83c975c44e026ceed1be231970ef3688558a65e08f3f12828a18bc3"
+    ]
+  },
+  {
+    "record_id": "d4882cf324654939930b19468e526ecc",
+    "timestamp_epoch": 1792056094.2498362,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.6031000996008515e-05,
+    "input_keys": [
+      "7bb92c5b1c680925a3e8c705f44d70f8ea704e355e92104acf9a687afc7c8adb"
+    ]
+  }
+]

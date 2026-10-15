@@ -1,0 +1,10 @@
+{
+  "reprepared_trajectories": [
+    "12c22166"
+  ],
+  "historical_base": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/method-first-20261015/matched-enterprise-v1/memory_state",
+  "elapsed_s_including_no_change_check": 1.4833996800007299,
+  "no_change_real_calls": 0,
+  "signature": "7b6e6e7b08fab7ae5355f171df175b783c9314d093dd40c7a6e0157b01892067",
+  "scope": "matched partition preparation, NOT full cold construction"
+}

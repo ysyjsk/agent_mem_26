@@ -171,7 +171,7 @@ def explicit_source_revisions(record):
                 old_lines.append(line[1:].strip())
             elif line.startswith('+') and not line.startswith('+++'):
                 current_lines.append(line[1:].strip())
-        rows.append({'state_index': change['state_index'], 'role': change['role'],
+        rows.append({'state_index': change['state_index'], 'role': change.get('role', 'source-state'),
                      'field': change['field'], 'obsolete_source_lines': old_lines,
                      'current_source_lines': current_lines})
     return rows
@@ -183,6 +183,59 @@ def append_current_observations(fields, revisions):
         field = 'overview' if revision['field'] == 'thoughts' else 'state_transition'
         label = 'recorded intent' if revision['field'] == 'thoughts' else 'observation'
         out[field] += f"\nCurrent {revision['role']} {label} (state {revision['state_index']}, corrected source): " + '\n'.join(revision['current_source_lines'])
+    return out
+
+
+CURRENT_OBSERVATIONS = ('\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; '
+    'pre-state and post-state are independent, not a claim that values persist):\n')
+
+
+def coalesce_current_evidence(fields, observations, trajectory, prior_version, revisions=()):
+    """One current evidence view, not an ever-growing stack of source patches.
+
+    Old observation lines survive only if they still occur exactly in that
+    state's current source. Newly changed lines and neighboring source evidence
+    are then unioned. No similarity validity, generated compression or edits to
+    the unchanged historical interpretation. Each state keeps its own scope.
+    """
+    out = copy.deepcopy(fields)
+    prior_observations = []
+    parts = out['state_transition'].split(CURRENT_OBSERVATIONS)
+    out['state_transition'] = parts[0]
+    for block in parts[1:]:
+        rows, end = json.JSONDecoder().raw_decode(block)
+        if block[end:].strip() or not isinstance(rows, list):
+            raise ValueError('Malformed stored current evidence; do not silently discard it')
+        prior_observations.extend(rows)
+    prefix = re.compile(r'^Prior-source interpretation \([a-f0-9]+\); '
+                        r'(?:superseded ONLY for the corrected observations below|not authoritative for corrected field observations): ')
+    for field in ('overview', 'state_transition'):
+        while prefix.match(out[field]):
+            out[field] = prefix.sub('', out[field], count=1)
+    obsolete = {}
+    for revision in revisions:
+        obsolete.setdefault(revision['state_index'], set()).update(revision['obsolete_source_lines'])
+    selected = {}
+    for is_prior, obs in [(True, r) for r in prior_observations] + [(False, r) for r in observations]:
+        idx, role = obs['state_index'], obs['role']
+        current_lines = [line.strip() for line in trajectory['states'][idx]['text'].splitlines()]
+        current_set = set(current_lines)
+        kept = selected.setdefault((idx, role), set())
+        kept.update(line.strip() for line in obs['current_evidence'].splitlines()
+                    if line.strip() and line.strip() in current_set and
+                    not (is_prior and line.strip() in obsolete.get(idx, set())))
+    merged = []
+    for (idx, role), selected_lines in sorted(selected.items()):
+        # Current source order, exact duplicates once; node IDs/values retained.
+        lines = list(dict.fromkeys(line.strip() for line in trajectory['states'][idx]['text'].splitlines()
+                                  if line.strip() in selected_lines))
+        if lines:
+            merged.append({'state_index': idx, 'role': role, 'current_evidence': '\n'.join(lines)})
+    version_match = re.search(r'^Prior-source interpretation \(([a-f0-9]+)\)', fields['overview'])
+    version = version_match.group(1) if version_match else prior_version
+    out['overview'] = f'Prior-source interpretation ({version}); superseded ONLY for the corrected observations below: ' + out['overview']
+    out['state_transition'] = (f'Prior-source interpretation ({version}); not authoritative for corrected field observations: '
+                               + out['state_transition'] + CURRENT_OBSERVATIONS + json.dumps(merged, ensure_ascii=False))
     return out
 
 
@@ -270,6 +323,31 @@ class UpdateRunbook(AgentRunbookR):
                     'source_state_indexes': [d['state_index'] for d in thought_changes],
                     'mode': 'additive_workflow_only; reuse_generated_source_observation'})
                 return procedure, hint
+        if self.update_policy == 'source_coalesced':
+            old = self._load_stored_trajectory(simplified_trajectory['id'])
+            changes = source_delta(old, simplified_trajectory)
+            # Text-only state corrections do not change the reusable procedure
+            # unless the exact source line was already copied into a note. The
+            # notes are action/workflow summaries, not a second current-state
+            # event store. Reuse is deliberately conservative: if an entire
+            # obsolete/current source line occurs in either note, fall back to
+            # the ordinary note request rather than infer semantic irrelevance.
+            if changes and all(d['field'] == 'text' for d in changes):
+                existing = [e for e in self.procedure_note_entries + self.hint_note_entries
+                            if e.get('trajectory_id') == simplified_trajectory['id']]
+                note_blob = '\n'.join(e.get('note_text', '') for e in existing)
+                revisions = explicit_source_revisions({'changes_for_this_event': changes})
+                source_lines = [line.strip() for revision in revisions
+                                for line in revision['obsolete_source_lines'] + revision['current_source_lines']
+                                if line.strip()]
+                if existing and not any(line in note_blob for line in source_lines):
+                    procedure = copy.deepcopy(next(e for e in existing if e['note_type'] == 'procedure'))
+                    hint = copy.deepcopy(next(e for e in existing if e['note_type'] == 'hint'))
+                    self._append_model_call_metric({'channel': 'note_delta', 'status': 'reused',
+                        'trajectory_id': simplified_trajectory['id'], 'modified_notes': 0,
+                        'unchanged_notes': 2, 'source_state_indexes': sorted({d['state_index'] for d in changes}),
+                        'mode': 'text_only_exact_source_line_absence'})
+                    return procedure, hint
         return super()._build_note_entries(trajectory_dir=trajectory_dir, simplified_trajectory=simplified_trajectory)
 
     async def _edit_event_group(self, trajectory, specs):
@@ -288,11 +366,11 @@ class UpdateRunbook(AgentRunbookR):
             records[-1]['changes_for_this_event'] = [
                 {**d, 'role': 'pre-state' if d['state_index'] == spec['pre_state_index'] else 'post-state'}
                 for d in relevant if d['state_index'] in (spec['pre_state_index'], spec['post_state_index'])]
-        if self.update_policy == 'source_overlay':
+        if self.update_policy in ('source_overlay', 'source_coalesced'):
             if not self.current_state_evidence or any(d['field'] != 'text' for d in relevant):
                 raise ValueError('source_overlay requires current-state evidence and text-only revision')
             self._append_model_call_metric({'channel': 'event_delta', 'status': 'merged',
-                'mode': 'versioned_source_overlay_v12', 'trajectory_id': trajectory['id'],
+                'mode': 'versioned_source_overlay_v12' if self.update_policy == 'source_overlay' else 'current_source_coalesced_v13', 'trajectory_id': trajectory['id'],
                 'event_ids': [r['event_id'] for r in records], 'source_delta': relevant,
                 'before': [r['existing_memory'] for r in records],
                 'after': [r['existing_memory'] for r in records],
@@ -526,12 +604,21 @@ class UpdateRunbook(AgentRunbookR):
                                  'current_evidence': d['unchanged_entity_lines']}
                                 for d in local_unchanged_evidence(simplified_trajectory, record))
             observations.sort(key=lambda d: d['state_index'])
+            if self.update_policy == 'source_coalesced':
+                merged = coalesce_current_evidence(row, observations, simplified_trajectory, digest(prior)[:16],
+                                                   explicit_source_revisions(record))
+                self._append_model_call_metric({'channel': 'current_evidence_merge', 'status': 'success',
+                    'event_id': spec['event_id'], 'before_chars': sum(len(v) for v in row.values()),
+                    'after_chars': sum(len(v) for v in merged.values()),
+                    'mode': 'retain_only_exact_current_source_lines; union_by_state; no_model'})
+                row.clear()
+                row.update(merged)
+                continue
             if self.update_policy == 'source_overlay':
                 version = digest(prior)[:16]
                 row['overview'] = f'Prior-source interpretation ({version}); superseded ONLY for the corrected observations below: ' + row['overview']
                 row['state_transition'] = f'Prior-source interpretation ({version}); not authoritative for corrected field observations: ' + row['state_transition']
-            row['state_transition'] += ('\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; '
-                'pre-state and post-state are independent, not a claim that values persist):\n' +
+            row['state_transition'] += (CURRENT_OBSERVATIONS +
                 json.dumps(observations, ensure_ascii=False))
         return rows
 
@@ -540,7 +627,7 @@ class UpdateRunbook(AgentRunbookR):
             return await super()._extract_event_fields_batch_async(trajectory_dir=trajectory_dir,
                 simplified_trajectory=simplified_trajectory, transition_specs=transition_specs)
         keys = [self.event_dependency_key(simplified_trajectory, spec) for spec in transition_specs]
-        rows = [self.event_outputs.get(key) for key in keys]
+        rows = [copy.deepcopy(self.event_outputs.get(key)) for key in keys]
         # Only adjacent dirty transitions share a request; isolated dirty events
         # execute immediately, without waiting for any future arrival.
         for start in range(len(rows)):
@@ -548,7 +635,7 @@ class UpdateRunbook(AgentRunbookR):
             end = start + 1
             if end < len(rows) and rows[end] is None: end += 1
             fields = None
-            if self.update_policy in ('delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay'):
+            if self.update_policy in ('delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced'):
                 try:
                     fields = await self._edit_event_group(simplified_trajectory, transition_specs[start:end])
                 except Exception as exc:
@@ -579,6 +666,9 @@ def seed_caches(memory):
         saved = json.loads(provenance.read_text())
         if saved['signature'] != matched_signature(memory):
             raise ValueError('Source construction semantics differ: prepare a matched snapshot; never re-key old outputs')
+        saved_policy = saved.get('output_policy')
+        if saved_policy and saved_policy != getattr(memory, 'update_policy', None) and getattr(memory, 'update_policy', None) not in ('b3', 'fresh'):
+            raise ValueError('Update-derived event cache belongs to another policy; do not reuse across candidate branches')
         memory.event_outputs = saved['event_outputs']
     # Legacy snapshots lack construction-bound event keys. Their recorded exact
     # requests remain legal, but old output fields must not be re-keyed here.
@@ -659,6 +749,27 @@ def clear_build_caches(memory):
     memory._construction_embedding_memo = {}
     memory.update_event_outputs = 0
     memory.update_notes_regenerated = 0
+
+
+def persist_update_provenance(memory, trajectory, bundle, prior_provenance):
+    """Bind this run's actual published outputs to this run's source, once.
+
+    Historical cache entries keep their original keys. We never relabel an old
+    snapshot as if it had been built for a new source or request configuration.
+    Exact request/vector persistence remains identical for all policies.
+    """
+    saved = copy.deepcopy(prior_provenance)
+    for spec, entry in zip(memory._build_event_transition_specs(trajectory), bundle['event_entries']):
+        memory.event_outputs[memory.event_dependency_key(trajectory, spec)] = {
+            k: copy.deepcopy(entry[k]) for k in ('overview', 'state_transition')}
+    saved['event_outputs'] = memory.event_outputs
+    saved['source_trajectories'][trajectory['id']] = digest(trajectory)
+    if trajectory['id'] not in saved['trajectory_ids']:
+        saved['trajectory_ids'].append(trajectory['id'])
+    saved['output_policy'] = memory.update_policy
+    saved['current_state_evidence'] = memory.current_state_evidence
+    saved['update_runner_sha256'] = RUNNER_SHA256
+    save_json(memory.workspace_dir / 'matched_update_cache.json', saved)
 
 
 def replace_partition(memory, trajectory, bundle):
@@ -819,7 +930,7 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
     # Validate only events that the dependency cache actually reused. During
     # trajectory growth the conservative key includes global action/length
     # context, so unchanged-looking transitions may correctly be recomputed.
-    reused_ids = sorted(set(reused_event_ids or ())) if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay') else []
+    reused_ids = sorted(set(reused_event_ids or ())) if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced') else []
     reused_equal = all(_entry_digest(event_before[eid]) == _entry_digest(event_after.get(eid, {})) for eid in reused_ids)
     touched_positions = workload.get('state_indices') or [state_index]
     old_texts = [source_states.get(index, {}).get('text', '') for index in touched_positions]
@@ -836,7 +947,7 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
     untouched_retained = sorted(raw_other_before) == sorted(raw_other_after)
     expected_event_count = len(changed.get('states', [])) - 1
     event_coverage = (set(event_before).issubset(set(event_after)) and len(event_after) == expected_event_count)
-    reuse_check = reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay') else True
+    reuse_check = reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced') else True
     # Exclude copied source metadata (raw, pre/post_thoughts) from the derived
     # check. Persisted source evidence alone cannot certify generated memory.
     derived_events = {e['event_id']: '\n'.join(e.get(k, '') for k in ('overview', 'state_transition')) for e in target_events}
@@ -879,7 +990,7 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
         'old_fact_retained': old_fact_retained,
         'untouched_facts_retained': untouched_retained,
         'event_source_coverage': event_coverage,
-        'reused_joint_events_complete': reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay') else f'not_applicable_{policy}',
+        'reused_joint_events_complete': reused_equal if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced') else f'not_applicable_{policy}',
         'dirty_event_ids': sorted(dirty_ids),
         'reused_event_count': len(reused_ids),
         'unchanged_candidate_event_count': len(set(event_before) - dirty_ids),
@@ -934,6 +1045,7 @@ def run_one(args, case, policy):
     publish_started = time.perf_counter()
     replace_partition(memory, trajectory, bundle)
     save_memory(memory, memory.workspace_dir)
+    persist_update_provenance(memory, trajectory, bundle, provenance)
     loaded = load_memory(memory.workspace_dir)
     assert loaded.inserted_trajectory_ids == memory.inserted_trajectory_ids
     assert loaded.event_entries == memory.event_entries
@@ -943,7 +1055,7 @@ def run_one(args, case, policy):
     publication_elapsed = time.perf_counter() - publish_started
     effective_state_index = int(workload.get('state_index', args.state_index))
     reused_event_ids = set()
-    if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay'):
+    if policy in ('ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced'):
         for spec in memory._build_event_transition_specs(trajectory):
             key = memory.event_dependency_key(trajectory, spec)
             if key in memory.initial_event_keys:
@@ -962,7 +1074,7 @@ def run_one(args, case, policy):
         'started_epoch': started_epoch, 'completed_epoch': time.time(),
         'artifact_build_s': build_elapsed, 'publication_and_reload_s': publication_elapsed,
         'runner_sha256': RUNNER_SHA256,
-        'delta_version': ('source-overlay-v12' if policy == 'source_overlay' else 'source-guarded-v11' if policy == 'delta_guarded' else 'source-retract-v10' if policy == 'delta_retract' else
+        'delta_version': ('current-source-coalesced-v13' if policy == 'source_coalesced' else 'source-overlay-v12' if policy == 'source_overlay' else 'source-guarded-v11' if policy == 'delta_guarded' else 'source-retract-v10' if policy == 'delta_retract' else
                           'source-edit-v8' if policy in ('delta', 'delta_notes') else None),
         'source_append_comparator': policy == 'source_append',
         'current_state_evidence': args.current_state_evidence,
@@ -980,6 +1092,9 @@ def run_one(args, case, policy):
         'dependency_reused_event_ids': sorted(reused_event_ids),
         'embedding_hits': sum(r.get('cache_hits', 0) for r in calls if r['channel'] == 'build_embedding_cache'),
         'load_verified': True, 'event_count': len(memory.event_entries), 'note_count': len(memory.procedure_note_entries) + len(memory.hint_note_entries),
+        'published_event_chars': sum(len(e['description']) for e in memory.event_entries),
+        'published_note_chars': sum(len(e['note_text']) for e in memory.procedure_note_entries + memory.hint_note_entries),
+        'current_evidence_blocks': sum(e['state_transition'].count(CURRENT_OBSERVATIONS) for e in memory.event_entries),
         'edited_event_outputs': sum(len(r.get('event_ids', [])) for r in calls if r['channel'] == 'event_delta' and r['status'] == 'merged'),
         'edited_notes': sum(r.get('modified_notes', 0) for r in calls if r['channel'] == 'note_delta'),
         'delta_fallback_groups': sum(r['channel'] == 'event_delta' and r['status'] == 'fallback' for r in calls),
@@ -1015,7 +1130,7 @@ def main():
     parser.add_argument('--revision-file', type=Path, help='Small literal source-edit manifest and predeclared derived checks')
     parser.add_argument('--revision-count', type=int, default=1, help='For state/workflow revision screen, apply this many adjacent state corrections')
     parser.add_argument('--current-state-evidence', action='store_true', help='Shared current pre/post source annotation for B3 and candidates, before Embedding')
-    parser.add_argument('--policy-order', nargs='+', choices=['fresh', 'b3', 'ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay'], default=['b3', 'ours'],
+    parser.add_argument('--policy-order', nargs='+', choices=['fresh', 'b3', 'ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced'], default=['b3', 'ours'],
                         help='Paired update policies; fresh rebuilds the touched partition without build caches')
     parser.add_argument('--cases', nargs='+', default=['append', 'state_revision', 'workflow_revision'])
     args = parser.parse_args()

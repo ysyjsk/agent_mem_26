@@ -1,0 +1,195 @@
+[
+  {
+    "record_id": "28f81497998e4790b0e21ae1d69d7a03",
+    "timestamp_epoch": 1792051166.3535285,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "source_delta": [
+      {
+        "state_index": 4,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -38,6 +38,6 @@\n \t\t\t\tStaticText 'Title'\n \t\t\t\tStaticText '*'\n-\t\t\t[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required\n-\t\t\t\tStaticText 'Neon Harbor'\n+\t\t\t[121] textbox 'Title This field is required.' value='Cedar Point', clickable, visible, focused, required\n+\t\t\t\tStaticText 'Cedar Point'\n \t\t\t[124] LabelText '', visible\n \t\t\t\tStaticText 'Description'",
+        "append_only": false
+      }
+    ],
+    "before": [
+      {
+        "overview": "Prior-source interpretation (e9ccc03aa3eb2316); superseded ONLY for the corrected observations below: Continuing the forum creation workflow for 'Cyberpunk', the agent proceeds to fill the 'Title' field. This step is essential to meet the form's requirement for a title before moving on to the description and sidebar configuration.",
+        "state_transition": "Prior-source interpretation (e9ccc03aa3eb2316); not authoritative for corrected field observations: The action updates the 'Title' textbox from an empty state to contain the value 'Cyberpunk'. The 'Name' field retains its previous value, and the 'Title' textbox becomes focused in the post-state, signaling that the second required field is now complete and the form is ready for the next input.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 3, \"role\": \"pre-state\", \"current_evidence\": \"StaticText '*'\\n[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, focused, required\\nStaticText 'Cyberpunk'\\n[119] LabelText '', clickable, visible\\n[121] textbox 'Title This field is required.', clickable, visible, required\\n[124] LabelText '', visible\"}, {\"state_index\": 4, \"role\": \"post-state\", \"current_evidence\": \"[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required\\nStaticText 'Neon Harbor'\"}]"
+      },
+      {
+        "overview": "Prior-source interpretation (e9ccc03aa3eb2316); superseded ONLY for the corrected observations below: The agent is creating a new forum named 'Cyberpunk' on the Postmill platform. Having already set the name and title, this step focuses on populating the 'Description' field with the required text 'Welcome to the future' to satisfy the task goal before moving to the sidebar configuration.",
+        "state_transition": "Prior-source interpretation (e9ccc03aa3eb2316); not authoritative for corrected field observations: In the pre-state, the 'Description' textbox (ID 126) is visible but empty, while the Name and Title fields are already filled with 'Cyberpunk'. After the agent fills the textbox with 'Welcome to the future', the post-state shows this value populated within the description field, and the field gains a 'focused' state, indicating readiness for the next input step without any page navigation or modal changes.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 4, \"role\": \"pre-state\", \"current_evidence\": \"[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required\\nStaticText 'Neon Harbor'\"}, {\"state_index\": 5, \"role\": \"post-state\", \"current_evidence\": \"StaticText '*'\\n[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required\\nStaticText 'Cyberpunk'\\n[119] LabelText '', clickable, visible\\n[121] textbox 'Title This field is required.' value='Cyberpunk', clickable, visible, required\\n[124] LabelText '', visible\"}]"
+      }
+    ],
+    "after": [
+      {
+        "overview": "Prior-source interpretation (e9ccc03aa3eb2316); superseded ONLY for the corrected observations below: Continuing the forum creation workflow for 'Cyberpunk', the agent proceeds to fill the 'Title' field. This step is essential to meet the form's requirement for a title before moving on to the description and sidebar configuration.",
+        "state_transition": "Prior-source interpretation (e9ccc03aa3eb2316); not authoritative for corrected field observations: The action updates the 'Title' textbox from an empty state to contain the value 'Cyberpunk'. The 'Name' field retains its previous value, and the 'Title' textbox becomes focused in the post-state, signaling that the second required field is now complete and the form is ready for the next input.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 3, \"role\": \"pre-state\", \"current_evidence\": \"StaticText '*'\\n[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, focused, required\\nStaticText 'Cyberpunk'\\n[119] LabelText '', clickable, visible\\n[121] textbox 'Title This field is required.', clickable, visible, required\\n[124] LabelText '', visible\"}, {\"state_index\": 4, \"role\": \"post-state\", \"current_evidence\": \"[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required\\nStaticText 'Neon Harbor'\"}]"
+      },
+      {
+        "overview": "Prior-source interpretation (e9ccc03aa3eb2316); superseded ONLY for the corrected observations below: The agent is creating a new forum named 'Cyberpunk' on the Postmill platform. Having already set the name and title, this step focuses on populating the 'Description' field with the required text 'Welcome to the future' to satisfy the task goal before moving to the sidebar configuration.",
+        "state_transition": "Prior-source interpretation (e9ccc03aa3eb2316); not authoritative for corrected field observations: In the pre-state, the 'Description' textbox (ID 126) is visible but empty, while the Name and Title fields are already filled with 'Cyberpunk'. After the agent fills the textbox with 'Welcome to the future', the post-state shows this value populated within the description field, and the field gains a 'focused' state, indicating readiness for the next input step without any page navigation or modal changes.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 4, \"role\": \"pre-state\", \"current_evidence\": \"[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required\\nStaticText 'Neon Harbor'\"}, {\"state_index\": 5, \"role\": \"post-state\", \"current_evidence\": \"StaticText '*'\\n[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required\\nStaticText 'Cyberpunk'\\n[119] LabelText '', clickable, visible\\n[121] textbox 'Title This field is required.' value='Cyberpunk', clickable, visible, required\\n[124] LabelText '', visible\"}]"
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "c41744ad3ae543cc96a20f9154416bea",
+    "timestamp_epoch": 1792051166.3537424,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 7,
+    "reused": 5
+  },
+  {
+    "record_id": "038fb014591847b4b88155755f645634",
+    "timestamp_epoch": 1792051166.3554394,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0003_0004",
+    "before_chars": 1417,
+    "after_chars": 1417,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "8217fcc8c97c452a859f3f3947e361c5",
+    "timestamp_epoch": 1792051166.3562245,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0004_0005",
+    "before_chars": 1598,
+    "after_chars": 1598,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "7a0486d5fb464f419fe2d4d07411451a",
+    "timestamp_epoch": 1792051166.3578224,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b4efb604b647dcc6248f65491b2b3af575e9f80422686b204c31389c8c479996",
+    "stage": "notes"
+  },
+  {
+    "record_id": "b6b08fcf62454964ba99cb882c554b38",
+    "timestamp_epoch": 1792051166.3579886,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9c7b1e9a9af734d93bb5e84b3d6286c500d726d722721fb8312b93d7a5a6f9ca",
+    "stage": "notes"
+  },
+  {
+    "record_id": "4955b56248ec43f8ad5ecb68ac7346af",
+    "timestamp_epoch": 1792051168.4868052,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 2.0351066020084545,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 3,
+    "input_characters": 23700,
+    "input_sha256": [
+      "c888a6e7ac1b935500ccc003be2252e8ce8c2e04c00d190ff1b23e79b19e0d04",
+      "608e5c2c746de9226d3a5f9a534bf975ab49a43f674bccfe409760b5b88db784",
+      "d0dfdd2dbafef8e1dc1b123325a71541474f90a57cdaa40b059713e101196975"
+    ],
+    "prompt_tokens": 7503,
+    "total_tokens": 7503,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "fee7b1efb05746199ed4eb779a993409",
+    "timestamp_epoch": 1792051168.4872034,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 3,
+    "cache_hits": 5,
+    "elapsed_seconds": 2.036296915001003,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "50f88a9affc52dbca444eb5417857edf349420f1bc49ba1b9cf0d353165f6da1",
+      "1b635376e5a78e5a1d12a389e66cc214cf44cd0368f06d1b368de5053cb25a9f",
+      "adba7807d35c38828a034f807bf6a335d398bf7aa440861e4c9a35e0bff54c49",
+      "90c856f46852ed9e6ce9fc36aef33e1958e133a5450247c623ec764d46b6913e",
+      "f667050e42ad84b464ac7d2ceca4ffdb13d2f09fa498117a3f0b6afb4722930b"
+    ]
+  },
+  {
+    "record_id": "4c36b8db82234637948b1a4f819370b3",
+    "timestamp_epoch": 1792051168.7441077,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.2529339980101213,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 3019,
+    "input_sha256": [
+      "7b19fbfdbd96c8576e90f0aa041a84ebef4acdd6bbbea7798bae0c8b2ece5a49",
+      "4dc308176fe578f537adac569e78e6db4d2a5180b599ff6a6d36973aa823e3ab"
+    ],
+    "prompt_tokens": 731,
+    "total_tokens": 731,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "5162874b93914539a14c6ff197d01b7b",
+    "timestamp_epoch": 1792051168.7444096,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 7,
+    "actual_vectors": 2,
+    "cache_hits": 5,
+    "elapsed_seconds": 0.2535295189882163,
+    "input_keys": [
+      "bb1411d48885c1cbe1dcfe7672cbb55eed3fa850458c95a59e66477b07930fc8",
+      "cf3101b22d14cd86849e9f5ff6abf486b8e57a73a5580000689eef50ab1a20b7",
+      "83cc22633810abc5116fa5f555682a70530e7318b55cfb5c4b76cbb609fe5ef2",
+      "1283f96d13d2967990d8b18a057aa1cd10d25989175446658ccf4568177d70b2",
+      "e308ac88806a76f7636b98c772bc6f29b55539a7b8dd8522681a67a493e501ab",
+      "4e6f2808e4eea6f8ec523213f2f057530815f04110c15bff0358ffd8523967b4",
+      "b56cf745abf59aba02489bd337ba1b2c5b38ba09be0089a3cfe40cbe44c53c6f"
+    ]
+  },
+  {
+    "record_id": "01fce2439e7244339bd7a0bb85214025",
+    "timestamp_epoch": 1792051168.7454238,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 5.4001022363081574e-05,
+    "input_keys": [
+      "219b2686392d6afddc64507c6217c57eca937ea5c4e02817a41eef7e5ab2d864"
+    ]
+  },
+  {
+    "record_id": "6eb046fd7d6b4ba3ace3f899d254ab01",
+    "timestamp_epoch": 1792051168.7460315,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 3.007097984664142e-05,
+    "input_keys": [
+      "0f6e15bf2bf2967749e6151ee073bdc0b96f822d4a63071ea11b65dcb12c56fb"
+    ]
+  }
+]

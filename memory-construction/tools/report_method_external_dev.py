@@ -36,6 +36,7 @@ def main():
                 if p.exists():
                     a=json.loads(p.read_text())
                     row.update({label+'_'+k:v for k,v in a['answer_status'].items()})
+                    row[label+'_questions']=a['overall']['count_all_questions']
                     row[label+'_reader_input_tokens']=a['tokens']['prompt_tokens']
                     row[label+'_reader_output_tokens']=a['tokens']['completion_tokens']
                     row[label+'_prompt_wall_s']=a['timing']['prompt_build_wall_seconds']
@@ -79,10 +80,10 @@ def main():
         'Tables intentionally separate historical cold construction, new maintenance and query. Current Ours is v12 overlay/edit, NOT the old workflow-core Ours. '
         'Matched starting snapshots combine inherited history with refreshed selected partitions: their full cold cost is not newly measured here.','',
         '## Current branch comparison','',
-        '| Case | Policy | Update LLM in/out | Calls | Publish s | Embedding tokens/vectors | Fixed QA | Full-retrieval revision QA | Derived lexical check |',
-        '|---|---|---:|---:|---:|---:|---:|---:|---|']
+        '| Case | Policy | Update LLM in/out | Calls | Publish s | Embedding tokens/vectors | Fixed correct/all | Revision correct/all (truncated) | Derived lexical check |',
+        '|---|---|---:|---:|---:|---:|---:|---|---|']
     for r in branch:
-        lines.append(f"| {r['trajectory_id']} | {r['policy']} | {r['llm_input_tokens_known']}/{r['llm_output_tokens_known']} | {r['llm_calls']} | {r['update_to_queryable_publish_s']:.3f} | {r['embedding_tokens_known']}/{r['embedding_vectors']} | {r.get('fixed_correct','pending')}/{r.get('fixed_scored','?')} | {r.get('revision_retrieval_correct','pending')}/{r.get('revision_retrieval_scored','?')} | {r['derived_lexical_checks']} |")
+        lines.append(f"| {r['trajectory_id']} | {r['policy']} | {r['llm_input_tokens_known']}/{r['llm_output_tokens_known']} | {r['llm_calls']} | {r['update_to_queryable_publish_s']:.3f} | {r['embedding_tokens_known']}/{r['embedding_vectors']} | {r.get('fixed_correct','pending')}/{r.get('fixed_questions','?')} | {r.get('revision_retrieval_correct','pending')}/{r.get('revision_retrieval_questions','?')} ({r.get('revision_retrieval_truncated','?')}) | {r['derived_lexical_checks']} |")
     lines += ['', 'Regex failure remains visible; old strings in explicitly superseded interpretations need version-aware semantic review. '
               'Complete response is not correctness. Fixed QA does not by itself validate the corrected value. '
               'All independent snapshots/repeated questions are reported as such, not independent statistical samples.','',
@@ -93,12 +94,14 @@ def main():
         lines.append(f"| {r['method']} / {r['scope']} | {r['measurement']} | {float(r['build_publish_s']):.2f} | {r['input_tokens']}/{r['output_tokens']} | {r['llm_calls']} ({r['failed_calls']}) | {r['correct']}/{r['questions']} | {r['query_wall_s']} / {r['reader_wall_s']} |")
     lines += ['', 'Raw paths, usage gaps and configuration caveats are in the companion CSV files. '
               'Raw RAG/RAG+Notes historical results already make low cold cost a relevant constraint; no claim of current-method cold-build superiority. '
-              'MemForest is not removed if incomplete: inspect its model_calls/build_progress and finish the shared library.','',
+              'MemForest partial artifacts are preserved but its adaptation/expansion is deferred by focused-method-v3, not a selection or freezing prerequisite.','',
               '## Decision (provisional)','',
-              'Retain source_overlay as the cheap candidate and delta_guarded as the semantic-edit comparator. '
-              'The first two normal-regression cases tie all three branches (7/8 each, 24/24 complete). '
-              'Do not freeze from these: complete other two corrections, full-retrieval changed-value probes, preselected invalidated-conclusion cases, '
-              'external shared-library quality and actual sequential maintenance before selecting. No query parameter sweep.']
+              'Source_overlay is the provisional cheap default for four measured literal-correction cases; '
+              'delta_guarded remains only the semantic-edit comparator, not a mandatory default step. '
+              'Completed normal regression: B3/overlay14/16, edit13/16. Modified-fact QA: overlay/edit8/8; B3 seven correct and one truncated/unscored, not full-scored accuracy. '
+              'Four updates: B366476tokens/112.050s, edit5773/44.369s, overlay0/7.124s. '
+              'Do not freeze from these: v13 actual sequential maintenance tests current-evidence coalescing, followed by preselected invalidated-conclusion cases. '
+              'No new external adapters and no query parameter sweep.']
     (ROOT/'reports/method_external_dev.md').write_text('\n'.join(lines)+'\n')
     print(f'{len(branch)} branch rows; {len(external)} external rows')
 

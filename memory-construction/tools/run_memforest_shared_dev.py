@@ -31,6 +31,48 @@ from run_memforest_local_smoke import _trajectory_to_turns, _sha256_file
 from src.api.client import _parse_json_object
 
 LEDGER = None
+CHAT_CACHE = {}
+BOUND_SUMMARIES = False
+
+
+def request_key(request):
+    return hashlib.sha256(json.dumps(request,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+
+
+def restore_configured_fanout():
+    """Fix native API losing configured fanout when a tree starts with one fact.
+
+    Initial small-tree layout is unchanged. Persistent insertion capacity must
+    be configured k, not the temporary effective fanout of that initial batch.
+    This is a labeled adapter bugfix, not a new tree/retrieval algorithm.
+    """
+    import src.build.tree_builder as builder
+    for name in ('build_tree_from_facts','build_tree_from_cells'):
+        original = getattr(builder,name)
+        def build(*args, _original=original, **kwargs):
+            tree, requests = _original(*args, **kwargs)
+            tree.k = max(2,int(kwargs['k']))
+            return tree, requests
+        setattr(builder,name,build)
+
+
+def bounded_segments(text, tokenizer, budget=8000):
+    """Lossless contiguous character segments; no source is discarded."""
+    result=[]
+    while text:
+        lo,hi=1,len(text)
+        while lo<hi:
+            mid=(lo+hi+1)//2
+            if len(tokenizer.encode(text[:mid],add_special_tokens=False))<=budget:
+                lo=mid
+            else:
+                hi=mid-1
+        end=lo
+        if end<len(text):
+            newline=text.rfind('\n',0,end)
+            if newline>max(1,end//2):end=newline+1
+        result.append(text[:end]);text=text[end:]
+    return result
 
 
 def write_json(path, value):
@@ -66,6 +108,10 @@ class Ledger:
             out[kind + '_output_tokens_known'] = sum(r.get('output_tokens') or 0 for r in rr)
             out[kind + '_elapsed_sum_s_not_wall'] = sum(r['elapsed_s'] for r in rr)
         out['embedding_vectors'] = sum(r.get('vectors', 0) for r in rows)
+        reused=[r for r in rows if r['kind']=='llm_cache']
+        out['historical_chat_requests_reused']=len(reused)
+        out['historical_input_tokens_reused']=sum(r.get('historical_input_tokens') or 0 for r in reused)
+        out['historical_output_tokens_reused']=sum(r.get('historical_output_tokens') or 0 for r in reused)
         return out
 
 
@@ -73,6 +119,7 @@ class ServiceChat:
     def __init__(self, config, *, client=None, api_logger=None):
         self.config = config
         self.client = client or OpenAI(base_url=config.url, api_key='EMPTY', max_retries=0, timeout=600)
+        self.tokenizer = None
 
     def generate_json(self, *, system_prompt, user_prompt, model_name=None,
                       temperature=None, max_tokens=None, top_p=None, timeout=None,
@@ -84,6 +131,40 @@ class ServiceChat:
             top_p=self.config.top_p if top_p is None else top_p,
             response_format={'type':'json_object'},
             extra_body={'top_k': self.config.topk, 'chat_template_kwargs': {'enable_thinking': False}})
+        if BOUND_SUMMARIES and step_label=='tree_summary':
+            if self.tokenizer is None:
+                from transformers import AutoTokenizer
+                self.tokenizer=AutoTokenizer.from_pretrained('/data/predator/ly/Mem/models/Qwen3.5-9B')
+            rendered=self.tokenizer.apply_chat_template(request['messages'],tokenize=False,
+                         add_generation_prompt=True,enable_thinking=False)
+            if len(self.tokenizer.encode(rendered,add_special_tokens=False))>18000:
+                # Only overflowing summary requests: same model/prompt contract,
+                # contiguous segments then one native-format parent summary.
+                # The raw cells/facts and original tree topology remain intact.
+                segments=bounded_segments(user_prompt,self.tokenizer)
+                assert ''.join(segments)==user_prompt
+                partials=[]
+                for i,segment in enumerate(segments):
+                    result=self.generate_json(system_prompt=system_prompt,
+                        user_prompt=f'Contiguous evidence segment {i+1}/{len(segments)} for the requested node. Preserve exact fields, values, outcomes and source/state distinctions.\n'+segment,
+                        model_name=model_name,temperature=temperature,max_tokens=max_tokens,top_p=top_p,
+                        timeout=timeout,step_label='tree_summary_segment',trace={**(trace or {}),'segment':i})
+                    summary=str(result.get('summary') or '').strip()
+                    if not summary:raise ValueError('resource split produced empty summary')
+                    partials.append(summary)
+                return self.generate_json(system_prompt=system_prompt,
+                    user_prompt='Summarize the same tree node from these ordered contiguous-segment summaries. '
+                                'Preserve state/source distinctions and do not invent persistence across states.\n'+
+                                '\n\n'.join(f'Segment {i+1}: {s}' for i,s in enumerate(partials)),
+                    model_name=model_name,temperature=temperature,max_tokens=max_tokens,top_p=top_p,
+                    timeout=timeout,step_label='tree_summary_merge',trace={**(trace or {}),'resource_split_segments':len(segments)})
+        key=request_key(request)
+        cached=CHAT_CACHE.get(key)
+        if cached is not None:
+            LEDGER.add(dict(kind='llm_cache',step=step_label,status='ok',input_tokens=0,output_tokens=0,
+                elapsed_s=0,request_sha256=key,source=cached['source'],
+                historical_input_tokens=cached['input_tokens'],historical_output_tokens=cached['output_tokens']))
+            return _parse_json_object(cached['response'])
         started = time.perf_counter()
         row = dict(kind='llm',step=step_label,request=request,trace=trace,
                    status='error',input_tokens=None,output_tokens=None)
@@ -157,17 +238,28 @@ def config_for(output):
 
 
 def main():
-    global LEDGER
+    global LEDGER, BOUND_SUMMARIES, CHAT_CACHE
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--domain', choices=['web','enterprise'], required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--query-only', action='store_true', help='Reuse a fully saved shared forest; never rebuild')
+    parser.add_argument('--restore-configured-fanout',action='store_true',help='Preserve configured insertion capacity after small-tree initialization')
+    parser.add_argument('--bound-summary-input',action='store_true',help='Overflow-only lossless evidence segmentation at the shared18000-token safe input limit; every extra call counted')
+    parser.add_argument('--reuse-exact-chat-from',type=Path,help='Repair run only: reuse exact successful prior request/response records; NOT a fresh cold measurement')
     args = parser.parse_args()
     output = args.output.resolve()
     if output.exists() and not args.query_only:
         raise FileExistsError(output)
     output.mkdir(parents=True, exist_ok=True)
     LEDGER = Ledger(output / ('query_model_calls.jsonl' if args.query_only else 'model_calls.jsonl'))
+    BOUND_SUMMARIES=args.bound_summary_input
+    if args.reuse_exact_chat_from:
+        for number,line in enumerate(args.reuse_exact_chat_from.read_text().splitlines(),1):
+            row=json.loads(line)
+            if row.get('kind')=='llm' and row.get('status')=='ok' and row.get('finish_reason')=='stop' and row.get('valid_json'):
+                CHAT_CACHE[request_key(row['request'])]={**row,'source':f'{args.reuse_exact_chat_from}:{number}'}
+    if args.restore_configured_fanout:
+        restore_configured_fanout()
     import src.api.client as api_client
     api_client.OpenAIChatClient = ServiceChat
     api_client.OpenAIEmbeddingClient = ServiceEmbedding
@@ -190,7 +282,10 @@ def main():
             'existing 9B chat/8B embedding services; thinking off; concurrency1',
             'upstream4B topology/prompts/sampling/output budgets; embedding dimension4096',
             'same frozen Reader/12000 context/2048 output; native agentic retrieval unchanged'],
-        initial_build_reused=args.query_only)
+        initial_build_reused=args.query_only,configured_fanout_fix=args.restore_configured_fanout,
+        overflow_summary_segments=args.bound_summary_input,
+        exact_chat_reuse_source=str(args.reuse_exact_chat_from) if args.reuse_exact_chat_from else None,
+        cost_scope='repair_with_exact_historical_request_reuse_NOT_cold' if args.reuse_exact_chat_from else 'fresh')
     if not args.query_only:
         write_json(output/'manifest.json',manifest)
     user = 'shared-' + args.domain
@@ -217,8 +312,12 @@ def main():
         forest.register_user(user,load_existing=True)
         uf = forest._get_user(user)
         assert {t['id'] for t in trajectories}.issubset(uf._registry.list_active_sessions())
+        nodes=[n for tree in uf._tree_builder.trees.values() for n in tree.nodes.values()]
         write_json(output/'build_metrics.json',dict(build_publish_s=time.perf_counter()-build_started,
-            load_verified=True,trajectories=per_trajectory,**LEDGER.totals('build')))
+            load_verified=True,trajectories=per_trajectory,cost_scope=manifest['cost_scope'],
+            dirty_internal_nodes=sum(n.summary_dirty for n in nodes if n.level>0),
+            facts=len(list(uf._fact_manager.iter_facts())),trees=len(uf._tree_builder.trees),
+            **LEDGER.totals('build')))
     os.environ.update(LME_TEXT_ONLY='1',LME_CHUNK_MEMORY_CONTEXT='1',LME_CACHE_CONTEXT_TOKENIZER='1')
     from evaluation.harness import (build_messages, get_system_prompt, truncate_memory_context,
         generate_all_reader_outputs, eval_from_spec, score_to_bool)

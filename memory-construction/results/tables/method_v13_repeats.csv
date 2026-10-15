@@ -1,0 +1,9 @@
+run,trajectory_id,policy,update_llm_tokens,llm_calls,publish_s,embedding_tokens,embedding_vectors,derived_checks,raw_path
+method-first-20261015,0ab99e0c,b3,14803,1,17.38809328599018,5148,3,True,runs/method-first-20261015/v13-repeat2-enterprise-0ab99e0c-count/literal_revision-b3
+method-first-20261015,0ab99e0c,source_coalesced,0,0,1.5896010819997173,5073,3,False,runs/method-first-20261015/v13-repeat2-enterprise-0ab99e0c-count/literal_revision-source_coalesced
+method-first-20261015,1ad1af4b,b3,8697,2,24.491076460981276,8463,7,True,runs/method-first-20261015/v13-repeat2-web-1ad1af4b-title/literal_revision-b3
+method-first-20261015,1ad1af4b,source_coalesced,0,0,2.2712629869929515,8234,5,False,runs/method-first-20261015/v13-repeat2-web-1ad1af4b-title/literal_revision-source_coalesced
+method-first-20261015,0ab99e0c,b3,14795,1,17.04957279600785,5141,3,False,runs/method-first-20261015/v13-repeat3-enterprise-0ab99e0c-count/literal_revision-b3
+method-first-20261015,0ab99e0c,source_coalesced,0,0,1.5567087029921822,5073,3,False,runs/method-first-20261015/v13-repeat3-enterprise-0ab99e0c-count/literal_revision-source_coalesced
+method-first-20261015,1ad1af4b,b3,8679,2,24.012228144012624,8447,7,True,runs/method-first-20261015/v13-repeat3-web-1ad1af4b-title/literal_revision-b3
+method-first-20261015,1ad1af4b,source_coalesced,0,0,2.2554696289880667,8234,5,False,runs/method-first-20261015/v13-repeat3-web-1ad1af4b-title/literal_revision-source_coalesced

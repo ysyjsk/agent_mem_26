@@ -1,0 +1,182 @@
+[
+  {
+    "record_id": "a4d511aae20a47e4984b0c69d0c2e131",
+    "timestamp_epoch": 1792056234.622402,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "12c22166",
+    "event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "source_delta": [
+      {
+        "state_index": 4,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -117,11 +117,11 @@\n \t\t\t\t\t\t\t[a188] LabelText '', visible\n \t\t\t\t\t\t\t\tStaticText 'Quantity'\n-\t\t\t\t\t\t[a191] combobox 'Quantity' value='6', visible, hasPopup='menu', expanded=False, controls='quantity_label_span'\n+\t\t\t\t\t\t[a191] combobox 'Quantity' value='4', visible, hasPopup='menu', expanded=False, controls='quantity_label_span'\n \t\t\t\t\t\t\t[a192] option '1', selected=False\n \t\t\t\t\t\t\t[a193] option '2', selected=False\n \t\t\t\t\t\t\t[a194] option '3', selected=False\n-\t\t\t\t\t\t\t[a195] option '4', selected=False\n+\t\t\t\t\t\t\t[a195] option '4', selected=True\n \t\t\t\t\t\t\t[a196] option '5', selected=False\n-\t\t\t\t\t\t\t[a197] option '6', selected=True\n+\t\t\t\t\t\t\t[a197] option '6', selected=False\n \t\t\t\t\t\t\t[a198] option '7', selected=False\n \t\t\t\t\t\t\t[a199] option '8', selected=False\n@@ -131,5 +131,5 @@\n \t\t\t\t\t\t[a208] strong '', visible\n \t\t\t\t\t\t\tStaticText 'Subtotal'\n-\t\t\t\t\t\tStaticText '$2,099.94'\n+\t\t\t\t\t\tStaticText '$1,399.96'\n \t\t\t\t\t\t[a227] strong '', visible\n \t\t\t\t\t\t\tStaticText 'Delivery time'",
+        "append_only": false
+      }
+    ],
+    "before": [
+      {
+        "overview": "Continuing the workflow to order 6 Apple Watches, the agent modifies the quantity setting on the product detail page. This step adjusts the purchase amount from the default single unit to the required quantity of six, updating the financial summary accordingly.",
+        "state_transition": "The action selected the option '6' from the 'Quantity' combobox. As a result, the combobox value changed from '1' to '6', and the 'Subtotal' amount in the 'Order this Item' section updated from '$349.99' to '$2,099.94', reflecting the cost of six units."
+      },
+      {
+        "overview": "The agent is completing the final step of a workflow to order 6 Apple Watches from the ServiceNow catalog. Having already selected the item and adjusted the quantity to 6, the agent now initiates the submission of the order by clicking the primary action button.",
+        "state_transition": "The action clicked the 'Order Now' button on the Apple Watch item detail page. This navigation replaced the item detail view with a confirmation page titled 'Order Status: REQ0010155'. The new page displays a success message ('Thank you, your request has been submitted'), lists the order details (Apple Watch, quantity 6, total $2,099.94), and provides the generated Request Number (REQ0010155) along with an estimated delivery date."
+      }
+    ],
+    "after": [
+      {
+        "overview": "Continuing the workflow to order 6 Apple Watches, the agent modifies the quantity setting on the product detail page. This step adjusts the purchase amount from the default single unit to the required quantity of six, updating the financial summary accordingly.",
+        "state_transition": "The action selected the option '6' from the 'Quantity' combobox. As a result, the combobox value changed from '1' to '6', and the 'Subtotal' amount in the 'Order this Item' section updated from '$349.99' to '$2,099.94', reflecting the cost of six units."
+      },
+      {
+        "overview": "The agent is completing the final step of a workflow to order 6 Apple Watches from the ServiceNow catalog. Having already selected the item and adjusted the quantity to 6, the agent now initiates the submission of the order by clicking the primary action button.",
+        "state_transition": "The action clicked the 'Order Now' button on the Apple Watch item detail page. This navigation replaced the item detail view with a confirmation page titled 'Order Status: REQ0010155'. The new page displays a success message ('Thank you, your request has been submitted'), lists the order details (Apple Watch, quantity 6, total $2,099.94), and provides the generated Request Number (REQ0010155) along with an estimated delivery date."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "c4a39b90612746c29c1df4b611752267",
+    "timestamp_epoch": 1792056234.622527,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 5,
+    "reused": 3
+  },
+  {
+    "record_id": "ca1b4cf7a60c4c52a29be4a48aa590ef",
+    "timestamp_epoch": 1792056234.6239908,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0003_0004",
+    "before_chars": 514,
+    "after_chars": 1534,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "fba5ad954b8240be87ef807fe82cd13a",
+    "timestamp_epoch": 1792056234.6247346,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0004_0005",
+    "before_chars": 696,
+    "after_chars": 1308,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "42881a60ab894ecfad47baa9890cb693",
+    "timestamp_epoch": 1792056234.625596,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "631452bcfba5d1db3d82a387a27788c6cd63cb1eae85dd9f60e2b4a6389a768b",
+    "stage": "notes"
+  },
+  {
+    "record_id": "9fd87c362fd742f397692c8690279a47",
+    "timestamp_epoch": 1792056236.5270343,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 1.8528439560031984,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 28613,
+    "input_sha256": [
+      "2e7ced705c743e562c7313f68675c832965c62cb2512514c12e96c8a87568a38",
+      "01ffa7aaea8499d8140ec5c886cae628e799b7a23233e892e2c8914c7aa212db"
+    ],
+    "prompt_tokens": 8192,
+    "total_tokens": 8192,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "f018e97fd15a46648e5b3b15badf9120",
+    "timestamp_epoch": 1792056236.5272548,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 6,
+    "actual_vectors": 2,
+    "cache_hits": 4,
+    "elapsed_seconds": 1.8536258050007746,
+    "input_keys": [
+      "3d54d16d359d9de6167ace7f471a36765bfcbc52a369d0b4ade7d533b4961e7d",
+      "3d54d16d359d9de6167ace7f471a36765bfcbc52a369d0b4ade7d533b4961e7d",
+      "7c083bdc7fb2c9bf676e2af7cb3d73e80f456be15fae1f0b9fccbc8379025b08",
+      "8ed0460ae1998d42cf1a5c87885cfe5f78c5708df75fd44f791e01dbc1e3384e",
+      "384f368140971b6193fbc532c203db73115e2a2e023de75bed24c54ff05e5571",
+      "fc31e86e1b89240c98a939fc4b9003e63b3a7f6074ca995a007e07f9129fb2d9"
+    ]
+  },
+  {
+    "record_id": "accbe0027ee9422d9c04ea1941b8b3e7",
+    "timestamp_epoch": 1792056236.7676675,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.23870110500138253,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 2846,
+    "input_sha256": [
+      "97bf3015204c56dd833583239b502c201320bd35c0bf836fd762a4f2bf1321e9",
+      "2ff9068f0dcf688b7f7df3f12068b08677a36a1dde455828cc03f71ba2afe054"
+    ],
+    "prompt_tokens": 758,
+    "total_tokens": 758,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "cfdb884bebe944e0b9c0a6b12f83cb71",
+    "timestamp_epoch": 1792056236.7678342,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 5,
+    "actual_vectors": 2,
+    "cache_hits": 3,
+    "elapsed_seconds": 0.2389994320110418,
+    "input_keys": [
+      "ff2b358f50c82c85584159751e918fd762eb3f7c8307497f17aa7e07472e91df",
+      "1ba4a887876f37c09f29c1189608e2c94363345e5337e0ddd5ae174d092abf46",
+      "ce7acb1b9a5f9a5715d3bbe02c860dc7513b894f42a2a6886c8d365afd2b032f",
+      "806d79bcab880d8f4742b7d5219ec2ba589f1728496b6a8a21b1454c97ed078f",
+      "4b218558c965ece0bbffbc5b3aabf622c24427aac419887c8248db0e461676c4"
+    ]
+  },
+  {
+    "record_id": "e3cffb8091194328a8bc0282e2e6f13b",
+    "timestamp_epoch": 1792056236.7683728,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.9001006623730063e-05,
+    "input_keys": [
+      "43227c3b24888caa0b9c5732504b4df96ca2306c46604960558b8686da820560"
+    ]
+  },
+  {
+    "record_id": "e60c51d6836b42d6af24d652c14201a2",
+    "timestamp_epoch": 1792056236.7689805,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 3.2114010537043214e-05,
+    "input_keys": [
+      "f96b3fd570c9f58d4d563a340434e16b4f0d283724200ac9d0bad02958b189b7"
+    ]
+  }
+]

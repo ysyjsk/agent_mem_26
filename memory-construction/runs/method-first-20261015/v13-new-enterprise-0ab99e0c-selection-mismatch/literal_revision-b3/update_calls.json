@@ -1,0 +1,607 @@
+[
+  {
+    "record_id": "b96a0fb0926c4880ab406f17f1e3e011",
+    "timestamp_epoch": 1792056814.6814866,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 13.463179629005026,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43221,
+      "text_sha256": "8362da4e5b5da3fc9eed37c34119e6da3eeada0ef2c8a1f6fd56666c0305212f",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13848,
+    "completion_tokens": 329,
+    "total_tokens": 14177,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "c9f1f5df8daf4fc688bf3985163254d4",
+    "timestamp_epoch": 1792056814.6817117,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "full_input_tokens_preflight": 40130,
+    "single_input_tokens_preflight": [
+      25760,
+      28258
+    ],
+    "prepared_input_tokens": 13848,
+    "state_max_chars": 12000,
+    "request_sha256": "8362da4e5b5da3fc9eed37c34119e6da3eeada0ef2c8a1f6fd56666c0305212f",
+    "status": "parsed"
+  },
+  {
+    "record_id": "3072bc4a78224940840d351db5a14e08",
+    "timestamp_epoch": 1792056827.529382,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 12.763268937997054,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43144,
+      "text_sha256": "a48c8117b2b9e219e658e0b634619704a2b886c69d520ed0a8e60489b585254f",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13826,
+    "completion_tokens": 306,
+    "total_tokens": 14132,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "927cd83d847b41229c6de5c02ffa1470",
+    "timestamp_epoch": 1792056827.5296228,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "full_input_tokens_preflight": 41801,
+    "single_input_tokens_preflight": [
+      28817,
+      27455
+    ],
+    "prepared_input_tokens": 13826,
+    "state_max_chars": 12000,
+    "request_sha256": "a48c8117b2b9e219e658e0b634619704a2b886c69d520ed0a8e60489b585254f",
+    "status": "parsed"
+  },
+  {
+    "record_id": "7f91be3f87b44d1693c278b956ef5aba",
+    "timestamp_epoch": 1792056843.854688,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 16.24514152901247,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43341,
+      "text_sha256": "610e53a41c33be6e143a2dc03797cc69fffa3d3753ff7b7af9bc6623010be394",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 14431,
+    "completion_tokens": 421,
+    "total_tokens": 14852,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "01d292686bc1423f815e253405486c62",
+    "timestamp_epoch": 1792056843.8549142,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "full_input_tokens_preflight": 40341,
+    "single_input_tokens_preflight": [
+      27384,
+      27403
+    ],
+    "prepared_input_tokens": 14431,
+    "state_max_chars": 12000,
+    "request_sha256": "610e53a41c33be6e143a2dc03797cc69fffa3d3753ff7b7af9bc6623010be394",
+    "status": "parsed"
+  },
+  {
+    "record_id": "45d6ba9a724c4dffb0b284f0a765bf9c",
+    "timestamp_epoch": 1792056858.7316654,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 14.791964941978222,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43291,
+      "text_sha256": "cfb07dd27515d38c71a9c28f00be5be8778a24d8e56747ec916aa0f47126ad3d",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13865,
+    "completion_tokens": 375,
+    "total_tokens": 14240,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "312b0c8cb485446e9fb9197a4ade1983",
+    "timestamp_epoch": 1792056858.7318826,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "full_input_tokens_preflight": 42774,
+    "single_input_tokens_preflight": [
+      27664,
+      29855
+    ],
+    "prepared_input_tokens": 13865,
+    "state_max_chars": 12000,
+    "request_sha256": "cfb07dd27515d38c71a9c28f00be5be8778a24d8e56747ec916aa0f47126ad3d",
+    "status": "parsed"
+  },
+  {
+    "record_id": "dc91fd1da9f14024a124e80f624a3221",
+    "timestamp_epoch": 1792056873.9762664,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 15.15933915800997,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43145,
+      "text_sha256": "c00a3a339fcece38dc7a17ca3066b10c7d4c7cde06dc494af4f98b966b79957c",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13756,
+    "completion_tokens": 391,
+    "total_tokens": 14147,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "f91ca57c06b8446981402b22119fb611",
+    "timestamp_epoch": 1792056873.9764886,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "full_input_tokens_preflight": 44069,
+    "single_input_tokens_preflight": [
+      30225,
+      28977
+    ],
+    "prepared_input_tokens": 13756,
+    "state_max_chars": 12000,
+    "request_sha256": "c00a3a339fcece38dc7a17ca3066b10c7d4c7cde06dc494af4f98b966b79957c",
+    "status": "parsed"
+  },
+  {
+    "record_id": "035bb840c1914ac3945074349189db1c",
+    "timestamp_epoch": 1792056889.197811,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 15.131868127995403,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43225,
+      "text_sha256": "50f44fb54500f131fb2a689c14f18376374fe0735d5e6960fbc220030f55690c",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13795,
+    "completion_tokens": 386,
+    "total_tokens": 14181,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "8165601a20b64e4ca30b2909e2754a61",
+    "timestamp_epoch": 1792056889.1980255,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0010_0011",
+      "event_0011_0012"
+    ],
+    "state_ids": [
+      10,
+      11,
+      12
+    ],
+    "full_input_tokens_preflight": 45158,
+    "single_input_tokens_preflight": [
+      29299,
+      31328
+    ],
+    "prepared_input_tokens": 13795,
+    "state_max_chars": 12000,
+    "request_sha256": "50f44fb54500f131fb2a689c14f18376374fe0735d5e6960fbc220030f55690c",
+    "status": "parsed"
+  },
+  {
+    "record_id": "8e1c3eba96b94c1c813b63218476bc5b",
+    "timestamp_epoch": 1792056901.1530018,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 11.866063877008855,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 43342,
+      "text_sha256": "2785c257e01978155533ec03defa6a9531955177a6dd90f40b094f195c43c976",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 13853,
+    "completion_tokens": 271,
+    "total_tokens": 14124,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "c0226938b97749588b65998ed22bbce7",
+    "timestamp_epoch": 1792056901.1532774,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0012_0013",
+      "event_0013_0014"
+    ],
+    "state_ids": [
+      12,
+      13,
+      14
+    ],
+    "full_input_tokens_preflight": 45996,
+    "single_input_tokens_preflight": [
+      31675,
+      30170
+    ],
+    "prepared_input_tokens": 13853,
+    "state_max_chars": 12000,
+    "request_sha256": "2785c257e01978155533ec03defa6a9531955177a6dd90f40b094f195c43c976",
+    "status": "parsed"
+  },
+  {
+    "record_id": "6319153f2cac4aecb89dfb8990f83e2c",
+    "timestamp_epoch": 1792056901.1855116,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 30438,
+    "prepared_input_tokens": 10017,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "34d3028d0e3a41b7bb7acf562c94e2fb",
+    "timestamp_epoch": 1792056908.991828,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 7.806012286979239,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30702,
+      "text_sha256": "c5730d3e5405c491aa6cf0c84b95d9ae52e3ca5d0f22ab1293f26b2aef669a15",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 10017,
+    "completion_tokens": 174,
+    "total_tokens": 10191,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "bbded94fed344adfbcf90f1c60c06a6d",
+    "timestamp_epoch": 1792056908.992036,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "42b474104331415bbdc1346a0c56ecb3",
+    "timestamp_epoch": 1792056925.6195457,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 16.616687351022847,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 10850,
+      "text_sha256": "f6ca9f79322f94c65e1f59697e5ec80a85d0b5862afbe5041f781f0f6b1ad516",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 2818,
+    "completion_tokens": 575,
+    "total_tokens": 3393,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "dde311f8df164bc99b11463f0714554d",
+    "timestamp_epoch": 1792056926.7572365,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9888083949917927,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 14487,
+    "input_sha256": [
+      "6a93ab101cd24355f041e2d3ea5da58defd93c530e4e024f7f4197fbba8bf427"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "2d97b04f180c491f8b82ef4aafe56156",
+    "timestamp_epoch": 1792056926.7573776,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 1,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.9898721280042082,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "0bff5d17f5762122a7cbc43aed7af8616b6a62bf981d40b464b56182da1a40fd",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "b0d909689273477dbcfb7d3ce376ee90",
+    "timestamp_epoch": 1792056928.4846811,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 1.7230199410114437,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 15,
+    "input_characters": 16368,
+    "input_sha256": [
+      "5e82dc29d728c7c54b7ffb8b71b504f4e7ef09e910365c1d425d5e24c66ed6b7",
+      "e296dfcfc5123233e1628e1b561d25362054cfca86af7b23fe414a899ed32e03",
+      "626907ab85c7ae174dcc4c4db32df1334c9ffb5b4b3c54584aae1e869ec72524",
+      "9efa447bcc7923b48ab7f6f126e7845310962a41ca7912ae2e402e3f01621b54",
+      "5e473a3fda6264341e22bc911e357337ba5c9e6e0feec80bb726f919210a1876",
+      "0ba700ad588f24e50418de8e436693bcda3e06a0ba67bc971fd73eea4e627f77",
+      "5e3ed47f9051153aaa23d3463043ac17f23b60fad73f4ad587edda1626226c57",
+      "025a0d69e5fd1c5a666e9c70b4a41c760a2af453da8e85b2bb065813f7891f8c",
+      "e5f70e5cb3eba1146ce69eac9871755329a827902287455e0c61e8ac415e4216",
+      "0f4d7049250bba0c83a99f56a7d041df716b4296bbfd7998ee9259a8fa09e0d2",
+      "8cab5f656e33511788a95f86535e48a522a3eecb1a1a3b1b468b40af2c8ed0ab",
+      "1ca0d3d5a6a9fe6d71cfa684e148a1b61c53d8dbb11d9385f1475e1d78dd731e",
+      "c8d33d7922152aee9db7768b795f3345ee46b8b89aac1de4c1f062a9fcaeb94d",
+      "a65a67cc78d38ec53a3a9fe1c7824556d49f9e385d691c5db14cbda26b26356d",
+      "afdcad1c02e7e7b9f045c04b35b4e662762acde5f8326352c64353076fe17d6c"
+    ],
+    "prompt_tokens": 4121,
+    "total_tokens": 4121,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "8c90955b691242a1bec2149d414fae69",
+    "timestamp_epoch": 1792056928.4848585,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 15,
+    "cache_hits": 0,
+    "elapsed_seconds": 1.7233809800236486,
+    "input_keys": [
+      "12689f5d9e15111c73c3505684cea2800737e49364214b0e1d99a8e89584a078",
+      "bc2c00f8773619e99f7bb9f8e36d7e0a582cd8ec835333a63428651092a64b42",
+      "947ddb6494fbb065376e275a53475e8e27d6f4e4655c4b0f3616ff5c67d05af7",
+      "7d87d090a56fec0a241db822df22620b8fe68e12c5aa8ca56d290a6ca8e240ee",
+      "a48ab76bace1e198213f870f19387f1354b28f8b08dcdfc4f7975fde7f67084f",
+      "c69c571faff5c4d8544a7ae5b8933d1e9b1c79bd1271af0ae75fe2c8ad082522",
+      "641397db7f187473bc986f6971f2e2c3bc92dde07e7f2832e65b38828323d92f",
+      "86192f53e3b7320a7f5e82a88b0f2b23c4202f9ea6f03075bb0573951c4b4b05",
+      "0e8ac8da06111e58a5d31a2ebcdfd2a3832ee23f2c65574207345883f470e6a3",
+      "c46d405e49ba676ee93def6fcac4e774b961d0e902908d1c9032828b8043220f",
+      "c7742e98195c8ccb6a9460aee17f23077d9bcdcdce6066478d923c99a09df7cd",
+      "214911ac6e2c205559956c2d44e9ab4a0b1bde925463601974a1b5d7bef050b0",
+      "3bd5d976d67b28b17cfc6251200b12cdf47bb50f71ed40618ffc0161cce7b3db",
+      "5ca48b73548a49e149d8a1cbf8a2a3a6ef3e6b46b75d4e406e4cee0565af3d29",
+      "8327c23a62d5d17d1ca2bb6a6e1e9bea556eef0072338a78467b4160fd4a6f4d"
+    ]
+  },
+  {
+    "record_id": "658a5759057d4f6eab1a62cf1d7dc59c",
+    "timestamp_epoch": 1792056928.5725338,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.08686571402358823,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1106,
+    "input_sha256": [
+      "56e1ea8beea58f8c701848e6bdcef49fc695bd0fa44c12fbc8cf03811acc534a"
+    ],
+    "prompt_tokens": 239,
+    "total_tokens": 239,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "c7ef99351de34a9db842a8bf04fd0211",
+    "timestamp_epoch": 1792056928.5726154,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.08699288198840804,
+    "input_keys": [
+      "8da7f2c5da4272e84ea51d090f98c544f615d9bd9f7605e95900a22716001745"
+    ]
+  },
+  {
+    "record_id": "b6545c3c47f048b698be6ddd428cb974",
+    "timestamp_epoch": 1792056928.6610458,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.08787014498375356,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 1143,
+    "input_sha256": [
+      "2431a3f7de2dd3b122d3d9efc7b1b1f078647769ece66173b37126d557687ba0"
+    ],
+    "prompt_tokens": 237,
+    "total_tokens": 237,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "c60bc88ed0cc4399b145a2b1317a9375",
+    "timestamp_epoch": 1792056928.6611514,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.08802926298812963,
+    "input_keys": [
+      "db0df0bcfd6a2fc89e58fe0612c264550dbd1744653f90ee2c5959c532a59fe4"
+    ]
+  }
+]

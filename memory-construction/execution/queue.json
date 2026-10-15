@@ -1,68 +1,55 @@
 {
   "schema_version": 2,
-  "update_id": "external-method-selection-20261015",
-  "goal": "持续探索、实现和改进记忆构建与维护方法，在保持派生记忆质量及正常检索下游可用性的前提下，降低实际 LLM tokens、模型计算及更新到可查询发布的耗时。当前 Ours、DAG、覆盖或编辑都不是指定赢家。相关外部强基线提前参与选择；收益成立后冻结方法，完成支撑主张的正式比较、消融、扩量、质量/稳定性、论文表图章节与复现入口。跑完脚本或整理负结果不等于完成。",
+  "update_id": "focused-method-v3",
+  "goal": "以记忆质量和下游可用性为约束改进或替换方法，获得相对相关强对照可重复的主要成本收益，再完成必要论文证据与复现。当前未完成。",
   "current_phase": "method_exploration",
-  "history_archive": "reports/goal-history/external-method-selection-20261015/execution/queue.json",
   "native_goal": {
-    "status": "blocked",
+    "status": "null_on_latest_query",
     "verified": "2026-10-15",
-    "note": "No resume/objective-update API; continue same session, no new executor; unfinished."
+    "previous": "blocked/unfinished",
+    "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
   },
-  "best_available": "v11 delta_guarded: development reference only; known semantic/state quality limitations; not frozen",
-  "next_candidate": "v12 source_overlay: normal retrieval and invalidated conclusions not yet validated",
-  "primary_metric": "total update LLM input+output tokens; wall/embedding/query/quality reported separately",
+  "best_available": "v12 source_overlay provisional cheap correction branch; quality not certified",
+  "next_candidate": "v13 source_coalesced: consolidate current source evidence; preselected semantic and unused-trajectory confirmation follow if supported",
+  "primary_metric": "total LLM input+output tokens; wall/embedding/failures/query cost separately",
   "tasks": [
     {
       "id": "METHOD01",
       "status": "done",
-      "evidence": "matched-web-v1 and matched-enterprise-v1; lawful exact caches; unchanged B3 zero calls"
+      "evidence": "matched snapshots and lawful caches reused"
     },
     {
-      "id": "METHOD02",
+      "id": "NORMAL_QA",
+      "status": "done",
+      "evidence": "Four v12 cases: fixed B3/overlay14/16 edit13/16; revised overlay/edit8/8 B3 seven correct + one truncated; derived note/event review saved."
+    },
+    {
+      "id": "CURRENT_EVIDENCE",
+      "status": "done",
+      "evidence": "V13 two-domain x three-round sequence: coalesced 0 update LLM tokens, 12.841s publish, 12/12 QA; B3 70,580 tokens, 206.049s, 11/12 QA. Current evidence blocks remain 2; overlay grows 2/4/6."
+    },
+    {
+      "id": "CONFIRM",
+      "status": "done",
+      "evidence": "Held-out date and quantity cases both B3/coalesced 3/3; rejected-fill and selection-mismatch both 3/3. Four cost repeats saved; note-reuse enterprise confirmation 0 update LLM/3/3."
+    },
+    {
+      "id": "FREEZE_PAPER",
       "status": "in_progress",
-      "action": "Four replacement cases x B3/delta_guarded/source_overlay: normal retrieval + generated memory checks; then preselected new cases",
-      "running": "tools/run_method_v12_normal_readers.sh"
-    },
-    {
-      "id": "EXTERNAL01",
-      "status": "in_progress",
-      "action": "Shared-domain MemForest local service adaptation and multi-question actual run; compare current Ours, Raw RAG, RAG+Notes, AgentRunbook-R; historical measurements labeled"
-    },
-    {
-      "id": "METHOD03",
-      "status": "pending",
-      "action": "New held-out development questions, actual sequential updates+queries, initial/update/query/cumulative costs"
-    },
-    {
-      "id": "FREEZE",
-      "status": "pending",
-      "requires": "Relevant external strong baseline, normal retrieval quality, 3 key paired repeats, new cases, cumulative costs and attribution"
-    },
-    {
-      "id": "PAPER",
-      "status": "pending",
-      "action": "After supported freeze complete claim-relevant formal comparisons, ablations, scale, quality/stability, paper figures/sections and reproduction; return to exploration on material degradation"
+      "action": "Freeze source_coalesced + safe note reuse; ablation report is saved from B3/overlay/coalesced and semantic-edit comparator. Finalize focused tables/figure/method/experiment/limitations/reproduction; keep total Goal unfinished until these are delivered."
     }
   ],
-  "active_plan_task_ids": [
-    "METHOD02",
-    "EXTERNAL01"
-  ],
+  "active_plan_task_ids": ["FREEZE_PAPER"],
   "backlog": [
     {
-      "id": "LIGHTMEM",
-      "action": "Add next relevant external after first shared-corpus table"
+      "id": "EXTERNAL_ADAPTATIONS",
+      "status": "deferred",
+      "action": "Stop new MemForest/LightMem adapters and scale; preserve results. Existing AgentRunbook/B3 main comparison; Raw RAG/Notes historical references."
     },
     {
       "id": "NATIVE_JUDGE",
       "status": "blocked_external",
-      "action": "Cloud billing/Judge availability verification; no repeated billing requests; does not block local work"
-    },
-    {
-      "id": "GENERIC_INFRA",
-      "status": "deferred",
-      "action": "No generic framework/platform expansion"
+      "action": "Does not block local focused work"
     }
   ]
 }

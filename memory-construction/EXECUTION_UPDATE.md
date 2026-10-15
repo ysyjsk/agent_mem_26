@@ -1,15 +1,14 @@
-# 最新实际接续（2026-10-15）
+# 实际续接：focused-method-v3 / 2026-10-15
+已完整读取focused提示及目标并采用新排序。get_goal本次返回null，之前记录blocked/unfinished；不新建Goal或执行器，不伪称active/complete。
 
-最新用户要求：方法探索＋相关外部强基线提前参与，不立即全量。历史文档保存在 reports/goal-history/external-method-selection-20261015/；所有实验原始记录不变。
+当前实际运行：bash tools/run_method_v12_remaining.sh，工具session57438，日志runs/method-first-20261015/v12-remaining.log。Title/sort六次更新已落盘，四例三方普通/修订值Reader仍在有限队列。不能重跑脚本头部构建覆盖已有目录。
 
-原生Goal本次get_goal返回blocked、旧研究objective未完成。没有resume/update文字能力；不重复create或伪造complete。当前会话直接继续执行，无竞争执行器。
+新成本：Title B3 8633tokens/40.140s、edit1993/25.172s、overlay0/2.466s；sort B3 13555/25.709s、edit674/4.244s、overlay0/1.728s。overlay词面质量失败仍保留，等待正常修改事实QA解释。reply/count普通回归三方均7/8，不是修改事实QA。
 
-已完成 bash tools/run_method_v12_normal_readers.sh（session31325退出0），输出 runs/method-first-20261015/v12-normal-readers.log：reply/count三方正常Reader各7/8，24/24完整。更新成本为既有v12测量，非本次重测：overlay总0tokens/2.9297s，delta3106tokens/14.9519s，B344288tokens/46.2007s。不能把固定题回归当作修订值/失效结论验证。
+下一主要候选：当前来源证据合并，避免同状态修订嵌套，正确持久化连续更新来源/缓存归属。先看检索失败，不堆prompt版本。填写拒绝和选择不匹配新案例已事前固定但尚未运行。
 
-当前实际运行：tools/run_memforest_shared_dev.py --domain web --output runs/memforest-shared-dev-20261015/web-v1（session89708）。日志runs/memforest-shared-web-20261015.log。每域一个user，每完整轨迹一个session；原树/去重/增量/agentic查询算法保留，现有HTTP服务，无独有状态截断。每轨迹save，build_progress及所有阶段调用落盘。不要并发启动GPU实验或覆盖目录。
+MemForest自身worker此前已停止，session89708退出130，web-v1保留2条完成轨迹和全部日志。无活动MemForest作业，不继续该适配/扩量；外部框架完成不再是冻结门槛。
 
-已准备未启动的有限接续：web MemForest阶段结束→bash tools/run_method_v12_remaining.sh（剩余Title/sort三方＋四例正常修订值检索）→MemForest enterprise→bash tools/run_method_v12_semantic_cases.sh。两个新反例及问题已事前固定并验证源锚点：Description填写拒绝、Type实际Emergency而动作目标Normal。它们是新修订案例而不是独立新轨迹。27项CPU单测通过。
+v13连续维护已完成：web/enterprise各3轮、B3/overlay/coalesced各自独立快照。B3更新70,580 tokens/206.049s，coalesced 0/12.841s；含查询与Reader总LLM tokens 214,714→140,111，序列QA coalesced12/12、B3 11/12。overlay证据块2/4/6增长，coalesced固定2。两条未调参轨迹日期与数量确认均B3/coalesced3/3；拒绝填写和选择不匹配也3/3。
 
-新表入口tools/report_method_external_dev.py，报告reports/method_external_dev.md。历史外部成本与当前分支维护成本分表标注，未把旧Ours当当前方法。事件/notes审查reports/method_v12_quality_review.md；正常修订值结果待补。query参数未变，方法尚未冻结。
-
-v11旧followup已完成，不再执行。v12此前只有定向生成记忆诊断，不能称正常检索质量保持或最佳冻结。当前外部历史表的Ours为旧实现，不得混称当前方法。
+安全笔记复用已在enterprise选择不匹配新快照验证：旧coalesced3,260更新tokens/14.646s，修订后0/1.779s、Embedding5798tokens、Reader3/3；仅复用完整旧/新源行都未出现在笔记中的文本修订。语义编辑降为消融。当前下一动作只剩核心机制消融、配置冻结与论文表图/章节/复现；不再新增外部框架。

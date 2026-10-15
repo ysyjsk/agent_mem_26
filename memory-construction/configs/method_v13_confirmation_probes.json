@@ -1,0 +1,12 @@
+[
+  {"run":"v13-confirm-web-2a99f536-date", "domain":"web", "questions":[
+    {"id":"date_actual", "text":"In trajectory2a99f536 at state3, what date is actually shown in the From field? Give the observed MM/DD/YYYY value, not the intended action value.", "answer":"07/06/2021"},
+    {"id":"date_neighbor", "text":"In trajectory2a99f536 at state4, what date is shown in the From field? Use state4, not the previous state3, and answer MM/DD/YYYY.", "answer":"07/05/2021"},
+    {"id":"date_to", "text":"In trajectory2a99f536 at state4, what date is shown in the To field? Answer MM/DD/YYYY.", "answer":"05/31/2023"}
+  ]},
+  {"run":"v13-confirm-enterprise-12c22166-quantity", "domain":"enterprise", "questions":[
+    {"id":"quantity_actual", "text":"In trajectory12c22166 at state4 before Order Now is clicked, what quantity is actually selected in the Quantity combobox? Give only the number, not the requested action value.", "answer":"4"},
+    {"id":"quantity_subtotal", "text":"In trajectory12c22166 at state4 before Order Now, what subtotal is visibly displayed? Give the dollar amount without a dollar sign or thousands separator, with two decimal places.", "answer":"1399.96"},
+    {"id":"quantity_final", "text":"In trajectory12c22166 at state5 on the final Order Status page, what quantity is listed for Apple Watch? Use state5, not the preceding selection state4, and give only the number.", "answer":"6"}
+  ]}
+]

@@ -19,6 +19,7 @@ def main():
         ('v12-enterprise-0ab99e0c-count-replacement','v12-enterprise-0ab99e0c-count-replacement'),
     ]
     extra=json.loads((ROOT/'configs/method_semantic_confirmation_probes.json').read_text())
+    extra.extend(json.loads((ROOT/'configs/method_v13_confirmation_probes.json').read_text()))
     probes.extend(extra)
     selected.extend((p['run'],p['run']) for p in extra)
     for run,source in selected:

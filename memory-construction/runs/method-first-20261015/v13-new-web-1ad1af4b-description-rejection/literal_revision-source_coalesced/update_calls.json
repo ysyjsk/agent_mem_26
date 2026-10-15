@@ -1,0 +1,195 @@
+[
+  {
+    "record_id": "548153e561f74043929b5a2dfc9ad853",
+    "timestamp_epoch": 1792056752.0540771,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -43,6 +43,6 @@\n \t\t\t\tStaticText 'Description'\n \t\t\t\tStaticText '*'\n-\t\t\t[126] textbox 'Description This field is required.' value='Welcome to the future', visible, focused, required, describedby='forum_description_help'\n-\t\t\t\tStaticText 'Welcome to the future'\n+\t\t\t[126] textbox 'Description This field is required.' value='', visible, focused, required, describedby='forum_description_help'\n+\t\t\t\t[127] status 'Description validation: input was rejected; field remains empty', visible\n \t\t\t[128] paragraph '', visible\n \t\t\t\tStaticText 'A short description of the forum. Search engines will present this description in their results.'",
+        "append_only": false
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent is creating a new forum named 'Cyberpunk' on the Postmill platform. Having already set the name and title, this step focuses on populating the 'Description' field with the required text 'Welcome to the future' to satisfy the task goal before moving to the sidebar configuration.",
+        "state_transition": "In the pre-state, the 'Description' textbox (ID 126) is visible but empty, while the Name and Title fields are already filled with 'Cyberpunk'. After the agent fills the textbox with 'Welcome to the future', the post-state shows this value populated within the description field, and the field gains a 'focused' state, indicating readiness for the next input step without any page navigation or modal changes."
+      },
+      {
+        "overview": "Continuing the forum creation process, the agent now addresses the 'Sidebar' configuration. The goal requires including specific categories—'Games', 'Books', 'Movies', and 'Future'—in the sidebar, and this action fulfills that requirement by entering a markdown-formatted list into the sidebar input field.",
+        "state_transition": "The pre-state displays an empty 'Sidebar' textbox (ID 134) with the Name, Title, and Description fields already completed. After the agent fills this field with the list '- Games\\n- Books\\n- Movies\\n- Future', the post-state reveals the updated content in the textbox and triggers the appearance of a 'Preview' section below, dynamically rendering the four items as a bulleted list, confirming the successful input of the sidebar content."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is creating a new forum named 'Cyberpunk' on the Postmill platform. Having already set the name and title, this step focuses on populating the 'Description' field with the required text 'Welcome to the future' to satisfy the task goal before moving to the sidebar configuration.",
+        "state_transition": "In the pre-state, the 'Description' textbox (ID 126) is visible but empty, while the Name and Title fields are already filled with 'Cyberpunk'. After the agent fills the textbox with 'Welcome to the future', the post-state shows this value populated within the description field, and the field gains a 'focused' state, indicating readiness for the next input step without any page navigation or modal changes."
+      },
+      {
+        "overview": "Continuing the forum creation process, the agent now addresses the 'Sidebar' configuration. The goal requires including specific categories—'Games', 'Books', 'Movies', and 'Future'—in the sidebar, and this action fulfills that requirement by entering a markdown-formatted list into the sidebar input field.",
+        "state_transition": "The pre-state displays an empty 'Sidebar' textbox (ID 134) with the Name, Title, and Description fields already completed. After the agent fills this field with the list '- Games\\n- Books\\n- Movies\\n- Future', the post-state reveals the updated content in the textbox and triggers the appearance of a 'Preview' section below, dynamically rendering the four items as a bulleted list, confirming the successful input of the sidebar content."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "741e5f478744457fbfe878d617dd3e8a",
+    "timestamp_epoch": 1792056752.0541663,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 7,
+    "reused": 5
+  },
+  {
+    "record_id": "11b906ec8add4b04a5c9c7adce0aa141",
+    "timestamp_epoch": 1792056752.0549574,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0004_0005",
+    "before_chars": 697,
+    "after_chars": 1540,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "ed2cc17d6c754cf4b53d665cba3442bd",
+    "timestamp_epoch": 1792056752.0553954,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0005_0006",
+    "before_chars": 744,
+    "after_chars": 1653,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "991acbeedb76446c847e8ef1b1674929",
+    "timestamp_epoch": 1792056752.0560598,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b4efb604b647dcc6248f65491b2b3af575e9f80422686b204c31389c8c479996",
+    "stage": "notes"
+  },
+  {
+    "record_id": "9fbe17a92755415cbb872712a21f7b48",
+    "timestamp_epoch": 1792056752.0561347,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9c7b1e9a9af734d93bb5e84b3d6286c500d726d722721fb8312b93d7a5a6f9ca",
+    "stage": "notes"
+  },
+  {
+    "record_id": "4b375dc383f741a294d5a19e4c5f0936",
+    "timestamp_epoch": 1792056754.419476,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 2.3316692840016913,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 3,
+    "input_characters": 25573,
+    "input_sha256": [
+      "f927a53aef4c5482dfca5f9bcecf34888d27772fa987557a414805460137e6a5",
+      "c4a335574eb72f632a6b280f8f73275a6f83c849573a08eb559c47e6dc097c2a",
+      "1b04585c49731131630720f89d81adf9c991e7ba9ec2e3f25ec8c4c4be178728"
+    ],
+    "prompt_tokens": 8215,
+    "total_tokens": 8215,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "34ecf283048f476a86af1e494864cdfa",
+    "timestamp_epoch": 1792056754.4196272,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 3,
+    "cache_hits": 5,
+    "elapsed_seconds": 2.3321882750024088,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "ed76c1cbd0a47abeaea77d33e86401bff4cf6bde5f985af76800379213b9540f",
+      "5f0377035970691895fe79e9a70fcf9b812f81094ec5840bead8f3c4cdf33ee2",
+      "666ef58a935802e166da95de36f5962ead9e0375eed1e28b193c680bf962d340",
+      "659e9d580eaae19d3f4d949c931b4403a1b5d630da9a0164060fca6eb5e4ec49",
+      "f667050e42ad84b464ac7d2ceca4ffdb13d2f09fa498117a3f0b6afb4722930b"
+    ]
+  },
+  {
+    "record_id": "947f6b1141c04a4681621efe94075b8b",
+    "timestamp_epoch": 1792056754.6402836,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.21880621300078928,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 3197,
+    "input_sha256": [
+      "6e08373bc020634443aedc7295344bf4123b43026cf18360bbefcc497b682b62",
+      "a3401b20056537bdac6fa153f6d60401b7662bf5d5c11f62862685f1aad188a8"
+    ],
+    "prompt_tokens": 732,
+    "total_tokens": 732,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "9adb716b03d34b77ab3b514bac3cc1af",
+    "timestamp_epoch": 1792056754.6403942,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 7,
+    "actual_vectors": 2,
+    "cache_hits": 5,
+    "elapsed_seconds": 0.21901785299996845,
+    "input_keys": [
+      "bb1411d48885c1cbe1dcfe7672cbb55eed3fa850458c95a59e66477b07930fc8",
+      "cf3101b22d14cd86849e9f5ff6abf486b8e57a73a5580000689eef50ab1a20b7",
+      "83cc22633810abc5116fa5f555682a70530e7318b55cfb5c4b76cbb609fe5ef2",
+      "09a89cc4a9d5917339367f9739a46287b7e62a18c8e03d844c0ad641d93cb44a",
+      "25773e20443cb6e9b592665e79974ff17d26810fa8a0ca7d1d77ee8189f30ee1",
+      "adbae1c6ff28520b348c546e9b08178600b144c14791c39107645fb8a9d87259",
+      "b56cf745abf59aba02489bd337ba1b2c5b38ba09be0089a3cfe40cbe44c53c6f"
+    ]
+  },
+  {
+    "record_id": "004968c29e0c4f4cbef8f0d9b72eb8c2",
+    "timestamp_epoch": 1792056754.6408195,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.9767001504078507e-05,
+    "input_keys": [
+      "219b2686392d6afddc64507c6217c57eca937ea5c4e02817a41eef7e5ab2d864"
+    ]
+  },
+  {
+    "record_id": "b854f985d3e74e01b3096a7abab251c8",
+    "timestamp_epoch": 1792056754.6410575,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.2584991054609418e-05,
+    "input_keys": [
+      "0f6e15bf2bf2967749e6151ee073bdc0b96f822d4a63071ea11b65dcb12c56fb"
+    ]
+  }
+]

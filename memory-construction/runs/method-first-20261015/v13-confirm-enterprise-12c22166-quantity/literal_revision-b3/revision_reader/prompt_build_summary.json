@@ -1,0 +1,16 @@
+{
+  "completed_at_utc": "2026-10-15T09:23:38.256058+00:00",
+  "prompt_row_count": 3,
+  "question_ids": [
+    "quantity_actual",
+    "quantity_subtotal",
+    "quantity_final"
+  ],
+  "original_question_ids": [
+    "quantity_actual",
+    "quantity_subtotal",
+    "quantity_final"
+  ],
+  "shuffle_questions_seed": null,
+  "prompt_build_wall_seconds": 8.996001456980594
+}

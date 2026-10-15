@@ -1,0 +1,14 @@
+{
+  "completed_at_utc": "2026-10-15T07:45:03.921184+00:00",
+  "prompt_row_count": 2,
+  "question_ids": [
+    "sort_status",
+    "sort_field"
+  ],
+  "original_question_ids": [
+    "sort_status",
+    "sort_field"
+  ],
+  "shuffle_questions_seed": null,
+  "prompt_build_wall_seconds": 17.80269314299221
+}

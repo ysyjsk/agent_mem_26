@@ -1,17 +1,14 @@
-# 当前执行：分支取舍＋外部开发首表
+# 当前执行：focused-method-v3
+2026-10-15；总目标见GOAL.md，完整要求见reports/FOCUSED_METHOD_GOAL_20261015.md。历史及失败保留。
 
-2026-10-15；GOAL.md为总目标。旧完整计划见 reports/goal-history/external-method-selection-20261015/。
-
-| 任务 | 状态 | 下一实际动作与决策 |
+| 项目 | 状态 | 当前动作/决策 |
 |---|---|---|
-| METHOD01可信起点 | 完成，复用 | matched两域快照及合法缓存，不重做 |
-| METHOD02分支比较 | 执行中 | 先跑已有v12 reply/count三方正常检索→Reader，再补Title/sort及预选新修订；依据事件/notes和Reader决定overlay/edit取舍 |
-| EXTERNAL01开发首表 | 执行中 | MemForest共享每域5完整轨迹/4题，现有HTTP服务，保留原算法；统一Reader预算与评分，纳入Raw RAG、RAG+Notes、AgentRunbook-R及当前方法 |
-| METHOD03新样本/累计维护 | 待首表 | 预选未调参问题；同库多轮更新/查询，核算初始+维护+查询，不以独立快照冒充流 |
-| FREEZE | 未满足 | 外部强对照、正常质量、关键三次配对、新样本、累计成本、关键消融均支持后冻结 |
-| PAPER | 待冻结自动接续 | 正式主表/消融/扩量/质量稳定性、论文表图章节和复现；出现实质退化回方法改进 |
+| METHOD01 | 完成复用 | matched两域快照与合法缓存，不重做 |
+| 正常检索验证 | 四例完成 | overlay/edit修改事实8/8；B3七正确一截断；普通回归分别14/16、13/16、14/16；已审查生成events/notes |
+| 当前证据候选 | 真实运行中 | v13三轮连续修订：两个域、B3/overlay/coalesced，各自连续快照，固定查询；session69993 |
+| 新案例与取舍 | 待上述结果 | 预选填写拒绝/选择不匹配案例；判断覆盖或必要编辑，不调Reader |
+| 确认/冻结 | 未满足 | 主表、核心消融、未调参案例、三次成本配对；持续机制补真实累计曲线 |
+| 必要论文实验 | 收益确认后直接执行 | 冻结两域范围、表图、章节、局限、复现 |
 
-当前主要成本指标：更新总LLM tokens；发布墙钟、Embedding、失败与查询增量全部并列。候选最多两个，不扫查询参数。冷构建复用历史必须标注，不把旧Ours当当前版本。
-当前开发最佳参照v11 delta_guarded未冻结；候选v12 source_overlay未过正常检索与连续更新验证。相同质量下优先无模型覆盖，仅必要语义修复才保留编辑。
-
-运行入口：tools/run_agentrunbook_updates.py、tools/run_method_v12_normal_readers.sh、tools/run_memforest_local_smoke.py及最小共享库适配；原始产物沿用runs，决策追加reports/optimization_log.md。无新框架或执行器，GPU串行。原生Goal实际blocked，接口无resume；文档不假称active。
+主指标总LLM tokens；墙钟、Embedding、失败与查询成本并列。现成强B3/AgentRunbook-R作主比较，Raw RAG/Notes历史简单参照。暂停MemForest/LightMem新适配及扩量。GPU串行，活动有限Reader队列继续，不另开监督器。
+原生Goal本次null、此前blocked/unfinished；当前会话继续，文件更新不代表激活。

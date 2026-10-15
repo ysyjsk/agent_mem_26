@@ -1,0 +1,496 @@
+[
+  {
+    "record_id": "932b2d0921c0440886648bc4cc3ab42c",
+    "timestamp_epoch": 1792056929.7547975,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "source_delta": [],
+    "before": [
+      {
+        "overview": "The agent aims to filter Change Requests by specific criteria, starting with the 'Type' field. This step represents the initial phase of the workflow, where the filter interface must be revealed before any conditions can be added.",
+        "state_transition": "Clicking the 'Show / hide filter' button changed the interface from a compact toolbar to an expanded filtering panel. The button itself now shows an expanded state, and the previously hidden filter inputs have been revealed, allowing the agent to begin constructing the query conditions."
+      },
+      {
+        "overview": "Continuing the filter construction, the agent needs to define the first condition. This step involves selecting the field for the first filter rule, which is part of setting up the 'Type is Normal' requirement.",
+        "state_transition": "Clicking the field chooser combobox opened a dropdown list of available filter fields. The interface now displays a listbox containing options such as 'Keywords', 'Active', 'Type', and others, with the 'Choose option' combobox focused and expanded to allow selection of the 'Type' field."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent aims to filter Change Requests by specific criteria, starting with the 'Type' field. This step represents the initial phase of the workflow, where the filter interface must be revealed before any conditions can be added.",
+        "state_transition": "Clicking the 'Show / hide filter' button changed the interface from a compact toolbar to an expanded filtering panel. The button itself now shows an expanded state, and the previously hidden filter inputs have been revealed, allowing the agent to begin constructing the query conditions."
+      },
+      {
+        "overview": "Continuing the filter construction, the agent needs to define the first condition. This step involves selecting the field for the first filter rule, which is part of setting up the 'Type is Normal' requirement.",
+        "state_transition": "Clicking the field chooser combobox opened a dropdown list of available filter fields. The interface now displays a listbox containing options such as 'Keywords', 'Active', 'Type', and others, with the 'Choose option' combobox focused and expanded to allow selection of the 'Type' field."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "06d344686b964be4b3ee5d63834cef21",
+    "timestamp_epoch": 1792056929.756302,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "source_delta": [],
+    "before": [
+      {
+        "overview": "The agent is building a complex filter on the Change Requests list to find specific records related to network interface updates. In this step, the agent selects the 'Type' field from the dropdown menu to define the first condition of the filter, marking the beginning of the multi-condition setup process.",
+        "state_transition": "In the pre-state, the field chooser dropdown is open and focused, displaying a long list of available fields. The 'Type' option is visible but not selected. After the action, the 'Type' option is highlighted as selected within the listbox, indicating that the agent has successfully chosen this field to populate the first filter condition slot."
+      },
+      {
+        "overview": "Continuing the filter configuration, the agent now needs to specify the value for the previously selected 'Type' field. This step involves opening the value selection interface to set the condition to 'Normal', which is the first criteria for the requested Change Requests.",
+        "state_transition": "In the pre-state, the 'Type' field has been selected in the filter condition builder. The UI presents a combobox labeled 'Choose option for field: Type' currently showing '-- None --' as the default placeholder. After the action, this combobox is clicked, preparing the interface to accept a specific value selection for the 'Type' condition."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is building a complex filter on the Change Requests list to find specific records related to network interface updates. In this step, the agent selects the 'Type' field from the dropdown menu to define the first condition of the filter, marking the beginning of the multi-condition setup process.",
+        "state_transition": "In the pre-state, the field chooser dropdown is open and focused, displaying a long list of available fields. The 'Type' option is visible but not selected. After the action, the 'Type' option is highlighted as selected within the listbox, indicating that the agent has successfully chosen this field to populate the first filter condition slot."
+      },
+      {
+        "overview": "Continuing the filter configuration, the agent now needs to specify the value for the previously selected 'Type' field. This step involves opening the value selection interface to set the condition to 'Normal', which is the first criteria for the requested Change Requests.",
+        "state_transition": "In the pre-state, the 'Type' field has been selected in the filter condition builder. The UI presents a combobox labeled 'Choose option for field: Type' currently showing '-- None --' as the default placeholder. After the action, this combobox is clicked, preparing the interface to accept a specific value selection for the 'Type' condition."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "9aab6ce11ccb43fba997da949cc8c7c0",
+    "timestamp_epoch": 1792056929.7577548,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "source_delta": [
+      {
+        "state_index": 6,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -138,5 +138,5 @@\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1181] combobox 'All of these conditions must be met. Type', clickable, hasPopup='listbox', expanded=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1297] gridcell 'is', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1627] combobox 'Operator For Condition 1: Type is Normal' value='is', visible, hasPopup='menu', expanded=False\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1627] combobox 'Operator For Condition 1: Type is Emergency' value='is', visible, hasPopup='menu', expanded=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1628] option 'is', selected=True\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1629] option 'is not', selected=False\n@@ -150,15 +150,15 @@\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1637] option 'is same', selected=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1638] option 'is different', selected=False\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1300] gridcell 'Normal', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1639] combobox 'Choose option for field: Type' value='Normal', clickable, visible, focused, hasPopup='menu', expanded=True\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1300] gridcell 'Emergency', visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1639] combobox 'Choose option for field: Type' value='Emergency', clickable, visible, focused, hasPopup='menu', expanded=True\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1640] option '-- None --', selected=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1641] option 'Standard', selected=False\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1642] option 'Normal', selected=True\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1643] option 'Emergency', selected=False\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1302] gridcell 'Add AND Condition To Condition 1: Type is Normal Add OR Condition To Condition 1: Type is Normal', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1303] button 'Add AND Condition To Condition 1: Type is Normal', clickable, visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1304] button 'Add OR Condition To Condition 1: Type is Normal', clickable, visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1305] gridcell 'Remove condition 1: Type is Normal', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1306] button 'Remove condition 1: Type is Normal', clickable, visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1642] option 'Normal', selected=False\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1643] option 'Emergency', selected=True\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1302] gridcell 'Add AND Condition To Condition 1: Type is Emergency Add OR Condition To Condition 1: Type is Emergency', visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1303] button 'Add AND Condition To Condition 1: Type is Emergency', clickable, visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1304] button 'Add OR Condition To Condition 1: Type is Emergency', clickable, visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1305] gridcell 'Remove condition 1: Type is Emergency', visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1306] button 'Remove condition 1: Type is Emergency', clickable, visible\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf159'\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText \"'Delete'\"",
+        "append_only": false
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent is configuring a filter on the Change Requests list to find specific entries. This step attempts to set the first condition by clicking the 'Normal' option within the 'Type' field dropdown to restrict the list to normal change requests.",
+        "state_transition": "The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 101 unfiltered records, and the filter condition for Type has not been applied."
+      },
+      {
+        "overview": "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.",
+        "state_transition": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is configuring a filter on the Change Requests list to find specific entries. This step attempts to set the first condition by clicking the 'Normal' option within the 'Type' field dropdown to restrict the list to normal change requests.",
+        "state_transition": "The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 101 unfiltered records, and the filter condition for Type has not been applied."
+      },
+      {
+        "overview": "Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.",
+        "state_transition": "The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "1a3a6df9050f42ef8efc352f4aa2e940",
+    "timestamp_epoch": 1792056929.7591503,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "source_delta": [
+      {
+        "state_index": 6,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -138,5 +138,5 @@\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1181] combobox 'All of these conditions must be met. Type', clickable, hasPopup='listbox', expanded=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1297] gridcell 'is', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1627] combobox 'Operator For Condition 1: Type is Normal' value='is', visible, hasPopup='menu', expanded=False\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1627] combobox 'Operator For Condition 1: Type is Emergency' value='is', visible, hasPopup='menu', expanded=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1628] option 'is', selected=True\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1629] option 'is not', selected=False\n@@ -150,15 +150,15 @@\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1637] option 'is same', selected=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1638] option 'is different', selected=False\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1300] gridcell 'Normal', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1639] combobox 'Choose option for field: Type' value='Normal', clickable, visible, focused, hasPopup='menu', expanded=True\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1300] gridcell 'Emergency', visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1639] combobox 'Choose option for field: Type' value='Emergency', clickable, visible, focused, hasPopup='menu', expanded=True\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1640] option '-- None --', selected=False\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1641] option 'Standard', selected=False\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1642] option 'Normal', selected=True\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1643] option 'Emergency', selected=False\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1302] gridcell 'Add AND Condition To Condition 1: Type is Normal Add OR Condition To Condition 1: Type is Normal', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1303] button 'Add AND Condition To Condition 1: Type is Normal', clickable, visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1304] button 'Add OR Condition To Condition 1: Type is Normal', clickable, visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1305] gridcell 'Remove condition 1: Type is Normal', visible\n-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1306] button 'Remove condition 1: Type is Normal', clickable, visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1642] option 'Normal', selected=False\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1643] option 'Emergency', selected=True\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1302] gridcell 'Add AND Condition To Condition 1: Type is Emergency Add OR Condition To Condition 1: Type is Emergency', visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1303] button 'Add AND Condition To Condition 1: Type is Emergency', clickable, visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1304] button 'Add OR Condition To Condition 1: Type is Emergency', clickable, visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1305] gridcell 'Remove condition 1: Type is Emergency', visible\n+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t[a1306] button 'Remove condition 1: Type is Emergency', clickable, visible\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText '\\uf159'\n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tStaticText \"'Delete'\"",
+        "append_only": false
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent is constructing a complex filter on the Change Requests list to find specific entries. Having already set the first condition where 'Type' is 'Normal', the agent now attempts to add the second condition in the sequence by clicking the 'Add AND Condition To Condition 1: Type is Normal' button to initiate the setup for the 'Requested by' field.",
+        "state_transition": "The action triggered the addition of a new filter row, changing the status message to 'New AND condition added, 2 of 2'. The interface updated to reveal a new field chooser combobox (a1659) focused and ready for input, allowing the selection of the next field for the second condition."
+      },
+      {
+        "overview": "Continuing the filter construction workflow, the agent needs to specify the field for the second condition. The agent interacts with the newly revealed field chooser to select 'Requested by' from the available list of Change Request attributes.",
+        "state_transition": "The agent clicked the focused field chooser combobox (a1659), which expanded a listbox (a1669) displaying the full list of available fields such as 'Keywords', 'Active', 'Type', and 'Requested by'. The list is now visible and navigable, allowing the agent to proceed with selecting the specific field."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is constructing a complex filter on the Change Requests list to find specific entries. Having already set the first condition where 'Type' is 'Normal', the agent now attempts to add the second condition in the sequence by clicking the 'Add AND Condition To Condition 1: Type is Normal' button to initiate the setup for the 'Requested by' field.",
+        "state_transition": "The action triggered the addition of a new filter row, changing the status message to 'New AND condition added, 2 of 2'. The interface updated to reveal a new field chooser combobox (a1659) focused and ready for input, allowing the selection of the next field for the second condition."
+      },
+      {
+        "overview": "Continuing the filter construction workflow, the agent needs to specify the field for the second condition. The agent interacts with the newly revealed field chooser to select 'Requested by' from the available list of Change Request attributes.",
+        "state_transition": "The agent clicked the focused field chooser combobox (a1659), which expanded a listbox (a1669) displaying the full list of available fields such as 'Keywords', 'Active', 'Type', and 'Requested by'. The list is now visible and navigable, allowing the agent to proceed with selecting the specific field."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "0674ee570c534023804fa303ea0156ac",
+    "timestamp_epoch": 1792056929.760573,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "source_delta": [],
+    "before": [
+      {
+        "overview": "The agent is constructing a complex filter to find specific Change Requests on the ServiceNow platform. This step represents the selection of the field for the second condition in the filter chain. Having already established that the 'Type' must be 'Normal', the agent now needs to define the criteria for who requested the change.",
+        "state_transition": "In the pre-state, the field chooser dropdown for the second condition was open, displaying a list of available fields. The agent clicked the 'Requested by' option within this list. In the post-state, the 'Requested by' field is now selected and highlighted in the filter definition, and the corresponding input textbox for entering the value has appeared, ready for data entry. The list of fields is no longer visible, indicating the selection is complete."
+      },
+      {
+        "overview": "Continuing the filter construction workflow, the agent is now populating the value for the second condition. The goal is to narrow down the results to only those change requests initiated by the 'System Administrator'.",
+        "state_transition": "In the pre-state, the 'Requested by' field was selected in the filter chain, and the associated textbox was visible but empty. The agent performed an action to fill this textbox with the text 'System Administrator'. In the post-state, the textbox labeled 'Requested by' now contains the value 'System Administrator', successfully completing the definition of the second filter condition."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is constructing a complex filter to find specific Change Requests on the ServiceNow platform. This step represents the selection of the field for the second condition in the filter chain. Having already established that the 'Type' must be 'Normal', the agent now needs to define the criteria for who requested the change.",
+        "state_transition": "In the pre-state, the field chooser dropdown for the second condition was open, displaying a list of available fields. The agent clicked the 'Requested by' option within this list. In the post-state, the 'Requested by' field is now selected and highlighted in the filter definition, and the corresponding input textbox for entering the value has appeared, ready for data entry. The list of fields is no longer visible, indicating the selection is complete."
+      },
+      {
+        "overview": "Continuing the filter construction workflow, the agent is now populating the value for the second condition. The goal is to narrow down the results to only those change requests initiated by the 'System Administrator'.",
+        "state_transition": "In the pre-state, the 'Requested by' field was selected in the filter chain, and the associated textbox was visible but empty. The agent performed an action to fill this textbox with the text 'System Administrator'. In the post-state, the textbox labeled 'Requested by' now contains the value 'System Administrator', successfully completing the definition of the second filter condition."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "1db763153f004364b471c0d613582774",
+    "timestamp_epoch": 1792056929.7619634,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0010_0011",
+      "event_0011_0012"
+    ],
+    "source_delta": [],
+    "before": [
+      {
+        "overview": "The agent is building a complex filter to find specific Change Requests. After successfully adding conditions for 'Type is Normal' and 'Requested by is System Administrator', the current step adds the third condition in the chain by confirming the entry for 'Requested by is System Administrator'.",
+        "state_transition": "Clicking the 'Add AND Condition To Condition 2: Requested by is System Administrator' button successfully registers the second filter condition. The status region updates to indicate 'New AND condition added, 2 of 2', and a new field chooser combobox appears and becomes focused, ready for the agent to select the next field, 'Model', for the third condition."
+      },
+      {
+        "overview": "Continuing the filter construction workflow, the agent now needs to define the third condition. Having just added the 'Requested by' constraint, the agent interacts with the newly revealed field selection control to specify which attribute the next condition will apply to.",
+        "state_transition": "Clicking the focused field chooser combobox ('-- choose field --') expands a dropdown list containing available filter attributes. The list is populated with options such as 'Model', 'Short description', and 'State', allowing the agent to proceed with selecting 'Model' to set the requirement that the field must be empty."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is building a complex filter to find specific Change Requests. After successfully adding conditions for 'Type is Normal' and 'Requested by is System Administrator', the current step adds the third condition in the chain by confirming the entry for 'Requested by is System Administrator'.",
+        "state_transition": "Clicking the 'Add AND Condition To Condition 2: Requested by is System Administrator' button successfully registers the second filter condition. The status region updates to indicate 'New AND condition added, 2 of 2', and a new field chooser combobox appears and becomes focused, ready for the agent to select the next field, 'Model', for the third condition."
+      },
+      {
+        "overview": "Continuing the filter construction workflow, the agent now needs to define the third condition. Having just added the 'Requested by' constraint, the agent interacts with the newly revealed field selection control to specify which attribute the next condition will apply to.",
+        "state_transition": "Clicking the focused field chooser combobox ('-- choose field --') expands a dropdown list containing available filter attributes. The list is populated with options such as 'Model', 'Short description', and 'State', allowing the agent to proceed with selecting 'Model' to set the requirement that the field must be empty."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "fa5d5534356d4200a1c24ed777ceb411",
+    "timestamp_epoch": 1792056929.7633293,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0012_0013",
+      "event_0013_0014"
+    ],
+    "source_delta": [],
+    "before": [
+      {
+        "overview": "The agent is building a complex filter on the Change Requests list to find specific records. This step involves selecting the 'Model' field as the third condition in a series of AND logic requirements, following the setup of conditions for 'Type' and 'Requested by'.",
+        "state_transition": "In the pre-state, the field chooser combobox is open and ready for selection. After clicking the 'Model' option, the post-state shows the dropdown list closed with 'Model' now selected as the active field for the third condition. The operator selection interface is not yet visible or populated, indicating the system is waiting for the next input step to define the condition's logic."
+      },
+      {
+        "overview": "Continuing the filter construction, the agent configures the operator for the 'Model' field. This step sets the condition to check if the 'Model' field is empty, which is part of the criteria to extract entries where the model is unspecified.",
+        "state_transition": "In the pre-state, the 'Model' field is selected but no operator has been chosen yet. After selecting 'is empty string' from the operator dropdown, the post-state reflects that the operator for Condition 3 is now set to 'is empty string'. The interface remains on the filter configuration screen, ready for the agent to proceed to the next condition or finalize the filter."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is building a complex filter on the Change Requests list to find specific records. This step involves selecting the 'Model' field as the third condition in a series of AND logic requirements, following the setup of conditions for 'Type' and 'Requested by'.",
+        "state_transition": "In the pre-state, the field chooser combobox is open and ready for selection. After clicking the 'Model' option, the post-state shows the dropdown list closed with 'Model' now selected as the active field for the third condition. The operator selection interface is not yet visible or populated, indicating the system is waiting for the next input step to define the condition's logic."
+      },
+      {
+        "overview": "Continuing the filter construction, the agent configures the operator for the 'Model' field. This step sets the condition to check if the 'Model' field is empty, which is part of the criteria to extract entries where the model is unspecified.",
+        "state_transition": "In the pre-state, the 'Model' field is selected but no operator has been chosen yet. After selecting 'is empty string' from the operator dropdown, the post-state reflects that the operator for Condition 3 is now set to 'is empty string'. The interface remains on the filter configuration screen, ready for the agent to proceed to the next condition or finalize the filter."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "e8c8d49201ab4a75b33ddc561ee00199",
+    "timestamp_epoch": 1792056929.7647324,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0014_0015"
+    ],
+    "source_delta": [],
+    "before": [
+      {
+        "overview": "The agent is building a complex filter on the Change Requests list to isolate specific entries based on multiple criteria including Type, Requested by, Model, Short description, and State. This transition occurs late in the workflow as the agent has already configured conditions for Type, Requested by, and Model, and is now adding the 'Model is empty string' condition to the third filter slot to proceed toward defining the remaining Short description and State conditions.",
+        "state_transition": "Clicking the 'Add AND Condition To Condition 3: Model is empty string' button successfully registers the third filter condition in the toolbar. The live region text updates to include 'New AND condition added, 3 of 3', confirming the addition of the Model condition to the existing set. The filter panel remains open and active, ready for the agent to input the subsequent Short description and State conditions."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is building a complex filter on the Change Requests list to isolate specific entries based on multiple criteria including Type, Requested by, Model, Short description, and State. This transition occurs late in the workflow as the agent has already configured conditions for Type, Requested by, and Model, and is now adding the 'Model is empty string' condition to the third filter slot to proceed toward defining the remaining Short description and State conditions.",
+        "state_transition": "Clicking the 'Add AND Condition To Condition 3: Model is empty string' button successfully registers the third filter condition in the toolbar. The live region text updates to include 'New AND condition added, 3 of 3', confirming the addition of the Model condition to the existing set. The filter panel remains open and active, ready for the agent to input the subsequent Short description and State conditions."
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "07e29a5464a94e7f9cf1057011f9ac50",
+    "timestamp_epoch": 1792056929.764784,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 0
+  },
+  {
+    "record_id": "f247eb7c8eb04a0199e8783b2657f89a",
+    "timestamp_epoch": 1792056929.7696645,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0005_0006",
+    "before_chars": 547,
+    "after_chars": 2898,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "f9e792c6cf05462c95acef890281a73e",
+    "timestamp_epoch": 1792056929.7730575,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0006_0007",
+    "before_chars": 639,
+    "after_chars": 3388,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "80311741a4cb4d2a8d2ab40f071d8ecc",
+    "timestamp_epoch": 1792056942.5552943,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 12.778538454993395,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 10850,
+      "text_sha256": "f6ca9f79322f94c65e1f59697e5ec80a85d0b5862afbe5041f781f0f6b1ad516",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 2818,
+    "completion_tokens": 442,
+    "total_tokens": 3260,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "25ebb2421ccd476393728a32c4f748e8",
+    "timestamp_epoch": 1792056943.6646078,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9658105369890109,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 14487,
+    "input_sha256": [
+      "6a93ab101cd24355f041e2d3ea5da58defd93c530e4e024f7f4197fbba8bf427"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "b05733cbfb8147c3a827c468e917d3d9",
+    "timestamp_epoch": 1792056943.6647356,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 1,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.9668051459884737,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "0bff5d17f5762122a7cbc43aed7af8616b6a62bf981d40b464b56182da1a40fd",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "d723eefc33a8470aaf5c0a4b7abdf97d",
+    "timestamp_epoch": 1792056944.1127436,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.44433296300121583,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 6290,
+    "input_sha256": [
+      "4780c1a996618ed15ad0f8a8c380fc1cf7d961aaf8670531c88472e67348bfb0",
+      "48cf87cad7e92d911b4cbd3a7262ca0a0ed4a295d337853845ff2e26f471f698"
+    ],
+    "prompt_tokens": 1702,
+    "total_tokens": 1702,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "fb7601d38ac244deade3bb285c2643b0",
+    "timestamp_epoch": 1792056944.1128533,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.4446034370048437,
+    "input_keys": [
+      "9a756f1863bcf45dd6787f1008cef51f9c4a37cfa2c27031ceccbffc7028e9b3",
+      "624340a63b7866febdae09b6a5dfe2ad1b9d76d5c311e845a8c655afee038ffa",
+      "16aa71dd6768afe8606866a1dd4d765b60606e9762315b1f464700c1c22214a2",
+      "3db9155529813c47457941c0b3a9675116be0f7cf245188621419570d5ccf2a7",
+      "07548c186f253c5fa222ce3470c5abf510768d39868f3e23aee3b056e0cebfdb",
+      "d7cc6ee424f9a0ae4e03bda578c9822ef80f09e214c9224ee7576ca419a2f01b",
+      "ceffdaa747bb531db7518154671ff4dcae21255a78deb3de7d6928bfe42da2b4",
+      "94b70ab75d8f46b60808fbbd51822d8a909e263166b23f26e61477e2bd8e8ab1",
+      "bcbee332f39229b703d1440045eb9e741295393a7a18706e9f9c78ccdae99a86",
+      "1b55febdb9fd02c04387b81cf823d57e0f9df973c1335221e752f91d4ddabdeb",
+      "93deee367be126fb7f0ec8ed685e9313f9b2cf4809cea186d8dbfc771428bfab",
+      "c2ce6a7af8a9731bc0181f3effc052625469f78f78e845b6698b8f4583569672",
+      "15012222f64f86041d36fc0e3963c50c44a0ef0065f5db873e694917bfc67b2c",
+      "02ed35b503aa986305e6d07b4aaa71d26b414c1ddfe594171baf9046127667c2",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "b3c16cfb5fc7450aa0155df51d52874e",
+    "timestamp_epoch": 1792056944.1721373,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.05869839098886587,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 814,
+    "input_sha256": [
+      "bfdf4a829ce6630383e366ad1376fda6935ede85b6106b554b3a151050c46bfc"
+    ],
+    "prompt_tokens": 171,
+    "total_tokens": 171,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "cf7c35476c4b4cd6b259449f2c068456",
+    "timestamp_epoch": 1792056944.1722124,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.058814909018110484,
+    "input_keys": [
+      "0b21d6f477252ffb7d66dec522abc3a15d8ba9da5c080b839796aca35fab0225"
+    ]
+  },
+  {
+    "record_id": "2230fa1f8ce94e8cb083dcfe63716cb1",
+    "timestamp_epoch": 1792056944.2310684,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.058366756013128906,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 888,
+    "input_sha256": [
+      "d940219e56a921cfff64961d3e44d359fb003c2e471b0fa4a22b242b9249392e"
+    ],
+    "prompt_tokens": 184,
+    "total_tokens": 184,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "655355e5a2ce4ba4b95ed3a3f2022d77",
+    "timestamp_epoch": 1792056944.2311544,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.05849419999867678,
+    "input_keys": [
+      "e008a9a292bdac6712c1acd511adac6fc676a9ca8650feb053ca1d213436824e"
+    ]
+  }
+]

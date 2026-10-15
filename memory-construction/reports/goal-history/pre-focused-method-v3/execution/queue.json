@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "update_id": "external-method-selection-20261015",
+  "goal": "持续探索、实现和改进记忆构建与维护方法，在保持派生记忆质量及正常检索下游可用性的前提下，降低实际 LLM tokens、模型计算及更新到可查询发布的耗时。当前 Ours、DAG、覆盖或编辑都不是指定赢家。相关外部强基线提前参与选择；收益成立后冻结方法，完成支撑主张的正式比较、消融、扩量、质量/稳定性、论文表图章节与复现入口。跑完脚本或整理负结果不等于完成。",
+  "current_phase": "method_exploration",
+  "history_archive": "reports/goal-history/external-method-selection-20261015/execution/queue.json",
+  "native_goal": {
+    "status": "blocked",
+    "verified": "2026-10-15",
+    "note": "No resume/objective-update API; continue same session, no new executor; unfinished."
+  },
+  "best_available": "v12 source_overlay provisional for two measured literal-correction cases: zero update LLM; fixed normal QA7/8 matches B3/edit. Not frozen; changed-value full retrieval, semantics and cumulative costs pending.",
+  "next_candidate": "delta_guarded retained only as semantic-repair comparator on predeclared rejected-fill / selected-value-mismatch cases; complete remaining two v12 cases and MemForest external comparison first",
+  "primary_metric": "total update LLM input+output tokens; wall/embedding/query/quality reported separately",
+  "tasks": [
+    {
+      "id": "METHOD01",
+      "status": "done",
+      "evidence": "matched-web-v1 and matched-enterprise-v1; lawful exact caches; unchanged B3 zero calls"
+    },
+    {
+      "id": "METHOD02",
+      "status": "in_progress",
+      "action": "Four replacement cases x B3/delta_guarded/source_overlay: normal retrieval + generated memory checks; then preselected new cases",
+      "running": "tools/run_method_v12_normal_readers.sh"
+    },
+    {
+      "id": "EXTERNAL01",
+      "status": "in_progress",
+      "action": "Shared-domain MemForest local service adaptation and multi-question actual run; compare current Ours, Raw RAG, RAG+Notes, AgentRunbook-R; historical measurements labeled"
+    },
+    {
+      "id": "METHOD03",
+      "status": "pending",
+      "action": "New held-out development questions, actual sequential updates+queries, initial/update/query/cumulative costs"
+    },
+    {
+      "id": "FREEZE",
+      "status": "pending",
+      "requires": "Relevant external strong baseline, normal retrieval quality, 3 key paired repeats, new cases, cumulative costs and attribution"
+    },
+    {
+      "id": "PAPER",
+      "status": "pending",
+      "action": "After supported freeze complete claim-relevant formal comparisons, ablations, scale, quality/stability, paper figures/sections and reproduction; return to exploration on material degradation"
+    }
+  ],
+  "active_plan_task_ids": [
+    "METHOD02",
+    "EXTERNAL01"
+  ],
+  "backlog": [
+    {
+      "id": "LIGHTMEM",
+      "action": "Add next relevant external after first shared-corpus table"
+    },
+    {
+      "id": "NATIVE_JUDGE",
+      "status": "blocked_external",
+      "action": "Cloud billing/Judge availability verification; no repeated billing requests; does not block local work"
+    },
+    {
+      "id": "GENERIC_INFRA",
+      "status": "deferred",
+      "action": "No generic framework/platform expansion"
+    }
+  ]
+}

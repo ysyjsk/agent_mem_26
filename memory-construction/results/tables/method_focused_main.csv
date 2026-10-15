@@ -1,0 +1,21 @@
+scope,case,method,update_llm_tokens,update_calls,publish_s,embedding_tokens,embedding_vectors,fixed_correct,fixed_scored,revision_correct,revision_scored,revision_truncated,raw_path,query_total_llm_tokens,reader_total_tokens
+four current replacement cases,v12-enterprise-0ab99e0c-count-replacement,b3,14837,1,18.226003846008098,5183,3,4,4,2,2,0,runs/method-first-20261015/v12-enterprise-0ab99e0c-count-replacement/literal_revision-b3,,
+four current replacement cases,v12-enterprise-0ab99e0c-count-replacement,delta_guarded,1245,1,6.53041644001496,5194,3,4,4,2,2,0,runs/method-first-20261015/v12-enterprise-0ab99e0c-count-replacement/literal_revision-delta_guarded,,
+four current replacement cases,v12-enterprise-0ab99e0c-count-replacement,source_overlay,0,0,1.535723647015402,5205,3,4,4,2,2,0,runs/method-first-20261015/v12-enterprise-0ab99e0c-count-replacement/literal_revision-source_overlay,,
+four current replacement cases,v12-enterprise-49f98e9e-sort-replacement,b3,13555,1,25.7087114029855,4539,3,4,4,2,2,0,runs/method-first-20261015/v12-enterprise-49f98e9e-sort-replacement/literal_revision-b3,,
+four current replacement cases,v12-enterprise-49f98e9e-sort-replacement,delta_guarded,674,1,4.244334358983906,4556,3,3,4,2,2,0,runs/method-first-20261015/v12-enterprise-49f98e9e-sort-replacement/literal_revision-delta_guarded,,
+four current replacement cases,v12-enterprise-49f98e9e-sort-replacement,source_overlay,0,0,1.7284358849865384,4637,3,4,4,2,2,0,runs/method-first-20261015/v12-enterprise-49f98e9e-sort-replacement/literal_revision-source_overlay,,
+four current replacement cases,v12-web-1ad1af4b-title-replacement,b3,8633,2,40.14017239399254,8399,7,3,4,2,2,0,runs/method-first-20261015/v12-web-1ad1af4b-title-replacement/literal_revision-b3,,
+four current replacement cases,v12-web-1ad1af4b-title-replacement,delta_guarded,1993,2,25.172449848003453,8215,5,3,4,2,2,0,runs/method-first-20261015/v12-web-1ad1af4b-title-replacement/literal_revision-delta_guarded,,
+four current replacement cases,v12-web-1ad1af4b-title-replacement,source_overlay,0,0,2.4657407300255727,8290,5,3,4,2,2,0,runs/method-first-20261015/v12-web-1ad1af4b-title-replacement/literal_revision-source_overlay,,
+four current replacement cases,v12-web-2e8f6477-reply-replacement,b3,29451,2,27.97469712101156,4930,5,3,4,1,1,1,runs/method-first-20261015/v12-web-2e8f6477-reply-replacement/literal_revision-b3,,
+four current replacement cases,v12-web-2e8f6477-reply-replacement,delta_guarded,1861,2,8.421501411998179,4800,3,3,4,2,2,0,runs/method-first-20261015/v12-web-2e8f6477-reply-replacement/literal_revision-delta_guarded,,
+four current replacement cases,v12-web-2e8f6477-reply-replacement,source_overlay,0,0,1.3940093700075522,4909,3,3,4,2,2,0,runs/method-first-20261015/v12-web-2e8f6477-reply-replacement/literal_revision-source_overlay,,
+two domains × three sequential rounds,aggregate,b3,70580,9,206.04942609500722,40666,30,,,11,12,0,results/tables/method_v13_sequence.csv,214714,
+two domains × three sequential rounds,aggregate,source_overlay,0,0,13.787886868958594,44336,24,,,11,12,0,results/tables/method_v13_sequence.csv,147865,
+two domains × three sequential rounds,aggregate,source_coalesced,0,0,12.841122219950194,39911,24,,,12,12,0,results/tables/method_v13_sequence.csv,140111,
+two held-out confirmation cases,v13-confirm-enterprise-12c22166-quantity,b3,16224,2,25.57668061100412,9085,5,,,3,3,0,runs/method-first-20261015/v13-confirm-enterprise-12c22166-quantity/literal_revision-b3,,29263
+two held-out confirmation cases,v13-confirm-enterprise-12c22166-quantity,source_coalesced,0,0,2.209173039009329,8950,4,,,3,3,0,runs/method-first-20261015/v13-confirm-enterprise-12c22166-quantity/literal_revision-source_coalesced,,29135
+two held-out confirmation cases,v13-confirm-web-2a99f536-date,b3,7397,1,16.461319055000786,8857,4,,,3,3,0,runs/method-first-20261015/v13-confirm-web-2a99f536-date/literal_revision-b3,,31992
+two held-out confirmation cases,v13-confirm-web-2a99f536-date,source_coalesced,0,0,2.160079068999039,8878,4,,,3,3,0,runs/method-first-20261015/v13-confirm-web-2a99f536-date/literal_revision-source_coalesced,,32563
+two held-out confirmation cases,v13-note-reuse-enterprise-selection,source_coalesced,0,0,1.779165562998969,5798,3,,,3,3,0,runs/method-first-20261015/v13-note-reuse-enterprise-selection/literal_revision-source_coalesced,,32989

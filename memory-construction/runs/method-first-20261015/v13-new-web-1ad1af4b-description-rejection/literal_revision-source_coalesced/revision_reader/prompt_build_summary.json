@@ -1,0 +1,16 @@
+{
+  "completed_at_utc": "2026-10-15T09:33:06.358922+00:00",
+  "prompt_row_count": 3,
+  "question_ids": [
+    "description_rejected",
+    "description_empty",
+    "description_next"
+  ],
+  "original_question_ids": [
+    "description_rejected",
+    "description_empty",
+    "description_next"
+  ],
+  "shuffle_questions_seed": null,
+  "prompt_build_wall_seconds": 7.211135355988517
+}

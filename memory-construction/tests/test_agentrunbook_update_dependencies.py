@@ -115,6 +115,62 @@ def test_delta_merge_preserves_unmodified_fields(updater):
     assert appended['state_transition'] == old['state_transition'] + ' Priority High.'
 
 
+def test_current_source_coalescing_retires_old_patch_and_keeps_other_state(updater):
+    module, _ = updater
+    fields = {'overview': 'Attempted action A. Owner Alice.', 'state_transition': 'Old interpretation.'}
+    tr = {'states': [{'text': "[1] Name='Alice'\n[2] Title='B'"}, {'text': "[2] Title='A'"}]}
+    observations = [{'state_index': 0, 'role': 'pre-state', 'current_evidence': "[1] Name='Alice'\n[2] Title='B'"},
+                    {'state_index': 1, 'role': 'post-state', 'current_evidence': "[2] Title='A'"}]
+    once = module.coalesce_current_evidence(fields, observations, tr, '012345')
+    tr['states'][0]['text'] = "[1] Name='Alice'\n[2] Title='C'"
+    twice = module.coalesce_current_evidence(once,
+        [{'state_index': 0, 'role': 'pre-state', 'current_evidence': "[2] Title='C'"}], tr, 'abcdef')
+    assert twice['overview'] == once['overview']
+    assert twice['state_transition'].count(module.CURRENT_OBSERVATIONS) == 1
+    assert twice['state_transition'].count('Prior-source interpretation') == 1
+    assert "Title='B'" not in twice['state_transition']
+    assert "Title='C'" in twice['state_transition']
+    assert "Title='A'" in twice['state_transition']  # Other state is NOT revised.
+    assert "Name='Alice'" in twice['state_transition']  # Different field retained.
+    assert 'Old interpretation.' in twice['state_transition']
+
+
+def test_current_source_coalescing_rejects_malformed_persisted_evidence(updater):
+    module, _ = updater
+    with pytest.raises(ValueError):
+        module.coalesce_current_evidence({'overview': 'task',
+            'state_transition': 'transition'+module.CURRENT_OBSERVATIONS+'[bad]'}, [], {'states': []}, 'abc')
+
+
+def test_current_source_merge_does_not_promote_duplicate_obsolete_line(updater):
+    module, _ = updater
+    tr = {'states': [{'text': "[1] Name='A'\nStaticText 'A'\n[2] Title='B'\nStaticText 'B'"}]}
+    fields = {'overview': 'task', 'state_transition': 'transition'+module.CURRENT_OBSERVATIONS+json.dumps([
+        {'state_index': 0, 'role': 'post-state', 'current_evidence': "[2] Title='A'\nStaticText 'A'"}])}
+    out = module.coalesce_current_evidence(fields,
+        [{'state_index': 0, 'role': 'post-state', 'current_evidence': "[2] Title='B'\nStaticText 'B'"}],
+        tr, 'abc', [{'state_index': 0, 'obsolete_source_lines': ["[2] Title='A'", "StaticText 'A'"]}])
+    current = out['state_transition'].split(module.CURRENT_OBSERVATIONS)[1]
+    assert "StaticText 'A'" not in current
+    assert "Title='B'" in current
+
+
+def test_text_only_coalesced_revision_reuses_generic_notes_when_source_lines_absent(updater):
+    module, memory = updater
+    memory.update_policy = 'source_coalesced'
+    tid = next(iter(memory.inserted_trajectory_ids))
+    old = memory._load_stored_trajectory(tid)
+    changed = json.loads(json.dumps(old))
+    changed['states'][0]['text'] = changed['states'][0].get('text', '') + "\nStaticText 'new validation marker'"
+    procedure = next(e for e in memory.procedure_note_entries if e['trajectory_id'] == tid)
+    hint = next(e for e in memory.hint_note_entries if e['trajectory_id'] == tid)
+    procedure['note_text'] = 'Generic workflow note without the exact source line.'
+    hint['note_text'] = 'Generic hint without the exact source line.'
+    result = memory._build_note_entries(trajectory_dir=memory.workspace_dir, simplified_trajectory=changed)
+    assert result[0]['note_text'] == procedure['note_text']
+    assert result[1]['note_text'] == hint['note_text']
+
+
 @pytest.mark.parametrize('edit', [
     {'field': 'raw', 'old': '', 'new': 'invalid'},
     {'field': 'overview', 'old': 'missing', 'new': 'invalid'},
