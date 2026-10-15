@@ -1,0 +1,32 @@
+% Text-only adapted development; query-only rows reuse the recorded cold construction.
+\begin{tabular}{lrrrr}
+\hline
+Method & Trajectories & Build (s) & Complete & Correct \\
+\hline
+AgentRunbook-R (original packing) & 10 & 1170.71 & 8/8 & 6/8 \\
+RAG+Notes (original packing) & 10 & 243.53 & 8/8 & 4/8 \\
+Raw RAG (original packing) & 10 & 89.06 & 8/8 & 5/8 \\
+AgentRunbook-R + chunks & 10 & 1170.71 & 8/8 & 6/8 \\
+Raw RAG + chunks (J) & 10 & 89.06 & 8/8 & 6/8 \\
+Raw RAG + chunks + tokenizer reuse (L) & 10 & 89.06 & 8/8 & 6/8 \\
+L + lexical source backfill (M) & 10 & 89.06 & 8/8 & 7, 7, 6/8 (repeats) \\
+M + adjacent source lines (N) & 10 & 89.06 & 8/8 & 6/8 \\
+M minus chunk packing & 10 & 89.06 & 8/8 & 5/8 \\
+M, expanded corpus & 20 & 283.06 & 8/8 & 7/8 \\
+RAG+Notes + common fixes + backfill & 10 & 243.53 & 8/8 & 8, 7, 7/8 (repeats) \\
+Notes+M + exact query embedding reuse (O) & 10 & 243.53 & 8/8 & 7/8 \\
+Notes+M minus chunks & 10 & 243.53 & 8/8 & 5/8 \\
+O, expanded corpus & 20 & 772.47 & 8/8 & 6/8 \\
+AgentRunbook-R + common fixes + backfill & 10 & 1170.71 & 8/8 & 7/8 \\
+Strong B3-c1 + backfill & 10 & 537.68 & 8/8 & 6/8 \\
+Ours-dev + backfill & 10 & 690.42 & 8/8 & 6/8 \\
+RAG+Notes + common fixes & 10 & 243.53 & 8/8 & 6/8 \\
+L minus chunk packing & 10 & 89.06 & 8/8 & 5/8 \\
+AgentRunbook-R + common fixes & 10 & 1170.71 & 8/8 & 6/8 \\
+Strong B3-c1 / structured-source adapted & 10 & 537.68 & 8/8 & 4/8 \\
+Ours-dev / structured-source adapted & 10 & 690.42 & 8/8 & 5/8 \\
+L, expanded corpus & 20 & 283.06 & 8/8 & 6/8 \\
+L minus chunks, expanded corpus & 20 & 283.06 & 8/8 & 5/8 \\
+RAG+Notes + backfill, expanded corpus & 20 & 772.47 & 8/8 & 6/8 \\
+\hline
+\end{tabular}

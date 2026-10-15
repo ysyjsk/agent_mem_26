@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-10-12T14:35:23.034691Z",
+  "git": {
+    "dirty": true,
+    "head": "cb75d3be3f5729aa80aee0107cfde797c3878a8a",
+    "root": "/data/predator/ly"
+  },
+  "manifest_schema_version": "workflow-memory-versions/1",
+  "models": {
+    "construction": {
+      "api_key_env": "CONSTRUCTION_API_KEY",
+      "backend": "transformers",
+      "base_url_env": "CONSTRUCTION_BASE_URL",
+      "checkpoint_revision": null,
+      "context_limit": null,
+      "device": "cuda:0",
+      "id": "Qwen/Qwen3.5-9B",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+      "precision": null,
+      "prompt_version": null,
+      "retry_policy": null,
+      "temperature": 0,
+      "vision_preprocessing": null
+    },
+    "embedding": {
+      "api_key_env": "EMBEDDING_API_KEY",
+      "backend": "transformers",
+      "base_url_env": "EMBEDDING_BASE_URL",
+      "checkpoint_revision": null,
+      "device": "cuda:1",
+      "id": "Qwen/Qwen3-Embedding-8B",
+      "input_limit": null,
+      "local_path": "/data/predator/ly/Mem/models/Qwen3-Embedding-8B",
+      "query_instruction": "inherit_and_pin_frozen_official_protocol"
+    },
+    "judge": {
+      "api_key_env": "JUDGE_API_KEY",
+      "backend": "openai_compatible",
+      "base_url_env": "JUDGE_BASE_URL",
+      "id": "gpt-5.2",
+      "prompt": "inherit_and_pin_frozen_official_evaluator",
+      "reasoning_effort": "medium",
+      "record_returned_model_id": true
+    },
+    "native_v2_codex": {
+      "id": "gpt-5.4-mini",
+      "reasoning_effort": "xhigh",
+      "verify_against_frozen_baseline": true
+    },
+    "reader": {
+      "api_key_env": "READER_API_KEY",
+      "backend": "transformers",
+      "base_url_env": "READER_BASE_URL",
+      "checkpoint_revision": null,
+      "device": "cuda:0",
+      "id": "Qwen/Qwen3.5-9B",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+      "parameters": "inherit_and_pin_frozen_official_protocol"
+    }
+  },
+  "packages": {
+    "datasets": {
+      "importable": false
+    },
+    "openai": {
+      "importable": false
+    },
+    "pillow": {
+      "importable": true
+    },
+    "torch": {
+      "importable": false
+    },
+    "vllm": {
+      "importable": false
+    }
+  },
+  "plan": {
+    "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/configs/local-experiment-plan.json",
+    "schema_version": "workplan-spec/2.0",
+    "sha256": "da0f3ff0fc7b5423762999205ab62db95a7f613ea063b44c50d3681aa2c2fc0e"
+  },
+  "python": {
+    "executable": "/usr/bin/python",
+    "implementation": "CPython",
+    "version": "3.12.3"
+  },
+  "status": "environment_discovered_not_experiment_result"
+}

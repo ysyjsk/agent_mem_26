@@ -1,0 +1,76 @@
+{
+  "code_sha256": {
+    "prompts/extract_evidence_v2.txt": "381b2469f8326b7bae2d81f240ad6b0a7ef8c150d317b63f6278c7d36b6d327c",
+    "src/workflow_memory/backends.py": "ada2a517defcfb538ecd62148a6addacc06e8a8bba7ddbe0e623eb0c13e1ba69",
+    "src/workflow_memory/batched_extraction.py": "295063ef47c155639396f6ba110183e482ec6be7bc8bb6feff7b77a5fe071c8f",
+    "src/workflow_memory/cache.py": "7bbae0bd6396fcf32aa01f78482198e6d3033c918832991482a52ab155fb30fa",
+    "src/workflow_memory/construction.py": "575f1a2317dbc08e4d99cbc9a4c7340cb6ab9c7d9dc86f07e19e917c309a7f6d",
+    "src/workflow_memory/dependency.py": "2eff63e92150ed41c99f59cbc2f488c7e733c7297f87bf7e83c012d436534547",
+    "src/workflow_memory/event_store.py": "e1bc97cde77e7dcfd4fde2661c60804f9c00f632e99211feda7b9c9fe03c6d52",
+    "src/workflow_memory/ir.py": "83d68d79d839689c06811f4020ebc04f68e50c8661585c449df6832cd6921537",
+    "src/workflow_memory/local_backends.py": "d716417071e8e7987c2c4dc6307cfe2727341f344c8795e9a8eeabbb03f580d8",
+    "src/workflow_memory/source_literals.py": "085333ca15fa53ca4ab5229e1e0817463ee078e6d87510325d285dc40dde74ce",
+    "src/workflow_memory/strong_baseline.py": "7ec7cd3804be9819f21f6f605edbe38b77297626908d3fb5712e7f729c1887ab",
+    "tools/run_mechanism_stress.py": "065ac48662d816f6c1ef7e28dbf19ecaeb2f5b501117009fd74eecb6c587cd35"
+  },
+  "config_hash": "460dfdaa2016a0bbf05cf150324faf951f6304978f4cbeb2bb7f096ffc3bb4fb",
+  "created_at": "2026-10-13T11:51:57.871744Z",
+  "derived_protocol": "controlled stress; no gold/raw-source reads beyond fixed manifest prefixes",
+  "embedding_status": "excluded_from_construction_kernel; no embedding calls in this runner",
+  "methods": [
+    "Ours-dev",
+    "B3-c2"
+  ],
+  "model_timing_policy": "resident local model load plus common serial/batch warmup excluded from checkpoint rows",
+  "positions": [
+    "early",
+    "mid",
+    "late"
+  ],
+  "qa_status": "not_evaluated",
+  "scenario": "revision_stress",
+  "schema_version": "mechanism-stress/1",
+  "scope": "construction_kernel",
+  "scope_excludes": [
+    "model load",
+    "common warmup",
+    "Embedding/dense publication",
+    "Reader",
+    "Judge",
+    "post-publication checks and snapshot file export"
+  ],
+  "scope_includes": [
+    "real extraction/preparation",
+    "method-owned cache",
+    "canonical graph/state/workflow/index",
+    "SQLite publication"
+  ],
+  "settings": {
+    "concurrency": 1,
+    "construction_model": "Qwen/Qwen3.5-9B",
+    "embedding_batch_size": 2,
+    "embedding_max_length": 1024,
+    "experiment_variant": "H4b_source_literals_salient_v3",
+    "extract_operator_version": "qwen-quality-v3",
+    "extraction_concurrency": 2,
+    "extraction_output_tokens": 256,
+    "extraction_prompt": "Extract compact, source-grounded facts from the CURRENT event for workflow memory.\n\nReturn exactly one JSON object, no prose or Markdown:\n{\"evidence\":[{\"source_refs\":[\"CURRENT_EVENT_ID\"],\"subject_ref\":\"agent\",\"predicate\":\"action\",\"value\":\"short action description\",\"event_kind\":\"attempt\"}]}\n\nThe entire response must fit within 220 output tokens. Return at most TWO\nconcise items. Only the five fields in the example are required; omit all\noptional bookkeeping fields (IDs, source_versions, revision, modality,\ncertainty and source_spans). The builder supplies those fields. Keep each\nvalue short, preferably below 80 characters. Do not copy complete actions,\nmessages, URLs or accessibility trees if they are long; describe the fact\nconcisely, preserving important names, numbers and dates. Close all JSON.\n\nRecord the current action as an `attempt`, even when no success was observed.\nIf pre_state or post_state supports a useful visible fact, add one\n`observation` (for example page title, selected field, address or date).\nAn explicit observed_outcome may be a `confirmation` or `failure`. Actions,\ngoals, plans and messages alone do NOT establish successful state changes.\nAn answer sent to a user is a reported claim, not verified UI state.\n\nUse prefix context only to resolve references; extract facts of the current\nevent, not previous events again. Every source_refs must contain only the\ncurrent event_id from the input. Keep subjects local to its scope. Valid\nevent_kind values: intent, attempt, observation, confirmation, failure.\nReturn an empty evidence list only when the current event contains no action,\ngoal, pre_state, post_state or observed_outcome. Never invent missing facts.",
+    "model_input_char_budget": 6000,
+    "model_input_projection": "salient-v3",
+    "source_context_window_events_default": 2,
+    "source_literal_evidence": true,
+    "source_literal_version": "source-literals-v1",
+    "strict_model_output": true,
+    "temperature": 0.0
+  },
+  "source_sha256": "0d839a1a9ab03b62c1862881de70f83140c83857dc0ebff6a99d4715b4129a3c",
+  "source_verified": true,
+  "work_metric_definitions": {
+    "affected_nodes": "method's graph/scope invalidation decision (policy-specific)",
+    "cache_hits/cache_misses": "logical prefix extraction requests before preparation; does not double-count build_fresh cache reads after preparation",
+    "deterministic_views_rebuilt": "all methods currently rebuild state/workflow/lexical views",
+    "node_value_visits": "all _make_nodes visits; value projection still runs for reused nodes",
+    "recomputed_nodes": "actual ComputeNode instances recreated, including hashes; identified by preserved object identity, not invalidation count"
+  },
+  "workload_hash": "d8a8ed49ddb813d487534108fb8e1529b26773cbe9fb561937d98596ddcce388"
+}

@@ -1,0 +1,88 @@
+{
+  "update_id": "memory-fast-results-v4",
+  "installed_at_utc": "2026-10-13T03:42:30.561060+00:00",
+  "backup": "/data/predator/ly/agent-memory-construction-2026-10-12/.workplan-v4-backup-20261013T034230Z",
+  "changed_files": [
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/WORKPLAN_REFERENCE_V2.md",
+      "sha256": "979d962cbae0defa6452d50901398e15c0b92c815e24879369142fc4b5b9a523"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/WORKPLAN.md",
+      "sha256": "be13e15e598b36aa33cdd81018fc54a7789254c150a44a30a834c5937204b013"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/AGENTS.md",
+      "sha256": "b148163f978425ea5b3ae208138bd3c97719d59c7941b72c4f37a30d3a814a57"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/GOAL.md",
+      "sha256": "1a2e441a331c8883458bc3200c67c14620177000813613a6f4fda526c72077a6"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/START_HERE.md",
+      "sha256": "73c37ae955503aa20b56b2b2169f814611d1464d72eca8f86bcbbdae9c4fbe92"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/EXECUTION_UPDATE.md",
+      "sha256": "e3582fd4ba315194a20cfba0e35eeee3b5152ba2c2ea23a4570a272278561241"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/WORKPLAN_REFERENCE_V2.md",
+      "sha256": "979d962cbae0defa6452d50901398e15c0b92c815e24879369142fc4b5b9a523"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/WORKPLAN.md",
+      "sha256": "be13e15e598b36aa33cdd81018fc54a7789254c150a44a30a834c5937204b013"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/AGENTS.md",
+      "sha256": "b148163f978425ea5b3ae208138bd3c97719d59c7941b72c4f37a30d3a814a57"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/GOAL.md",
+      "sha256": "1a2e441a331c8883458bc3200c67c14620177000813613a6f4fda526c72077a6"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/START_HERE.md",
+      "sha256": "73c37ae955503aa20b56b2b2169f814611d1464d72eca8f86bcbbdae9c4fbe92"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/EXECUTION_UPDATE.md",
+      "sha256": "e3582fd4ba315194a20cfba0e35eeee3b5152ba2c2ea23a4570a272278561241"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/execution/queue.json",
+      "sha256": "f172245d4e8629d1660ee9b886f1b208393f8747ba5b2b4db8dab0554aa25bbe"
+    },
+    {
+      "path": "/home/ly/.codex/skills/memory-research-loop/SKILL.md",
+      "sha256": "0684a9400d1ebc57132e7ed00edd32c0a611b7f9035d71c4a16fd7365e3b64fb"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/execution/skill/memory-research-loop/SKILL.md",
+      "sha256": "0684a9400d1ebc57132e7ed00edd32c0a611b7f9035d71c4a16fd7365e3b64fb"
+    },
+    {
+      "path": "/home/ly/.codex/skills/memory-research-loop/references/project-context.md",
+      "sha256": "9b1b92d19122a155e263daad42f43dabfb9b2d78501679790d51e476edc384cd"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/execution/skill/memory-research-loop/references/project-context.md",
+      "sha256": "9b1b92d19122a155e263daad42f43dabfb9b2d78501679790d51e476edc384cd"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/STATUS.md",
+      "sha256": "956c03401702fd0254f1f1fc6a0b65eb8698c04667bac65c62c2dd5369e79b92"
+    },
+    {
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/STATUS.md",
+      "sha256": "956c03401702fd0254f1f1fc6a0b65eb8698c04667bac65c62c2dd5369e79b92"
+    }
+  ],
+  "core_research_source_modified": false,
+  "runtime_configs_modified": false,
+  "receipt_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/execution/ack-memory-fast-results-v4.json",
+  "receipt_present_at_install": false,
+  "current_deliverable": "results/tables/first_compare.csv"
+}

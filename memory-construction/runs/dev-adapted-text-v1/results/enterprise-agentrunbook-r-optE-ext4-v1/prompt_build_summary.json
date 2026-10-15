@@ -1,0 +1,18 @@
+{
+  "completed_at_utc": "2026-10-14T09:12:26.478178+00:00",
+  "prompt_row_count": 4,
+  "question_ids": [
+    "057a2d4d",
+    "080b0218",
+    "0f8c85a6",
+    "0f970f01"
+  ],
+  "original_question_ids": [
+    "057a2d4d",
+    "080b0218",
+    "0f8c85a6",
+    "0f970f01"
+  ],
+  "shuffle_questions_seed": null,
+  "prompt_build_wall_seconds": 27.650342409004224
+}

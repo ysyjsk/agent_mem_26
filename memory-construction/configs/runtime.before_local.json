@@ -1,0 +1,609 @@
+{
+  "code_root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+  "discovery": {
+    "bootstrap_documents": {
+      "copied": [],
+      "existing": [
+        "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/WORKPLAN.md",
+        "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/STATUS.md",
+        "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/START_HERE.md",
+        "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/REFERENCE_V1.txt",
+        "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/configs/experiment-plan.json"
+      ],
+      "source_root": "/data/predator/ly/agent-memory-construction-2026-10-12"
+    },
+    "code_root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+    "credentials_recorded": false,
+    "discovered_at": "2026-10-12T12:05:21.241164Z",
+    "disk": {
+      "free_bytes": 414085582848,
+      "total_bytes": 4031331647488,
+      "used_bytes": 3617229287424
+    },
+    "git": {
+      "available": true,
+      "dirty": true,
+      "head": "cb75d3be3f5729aa80aee0107cfde797c3878a8a",
+      "root": "/data/predator/ly",
+      "tracked_patch_status": "?? Mem/\n?? MemBind/\n?? PrefixMem/\n?? agent-memory-construction-2026-10-12/\n?? tests/day1/\n?? tests/integration/\n?? tests/statistics/\n?? third_party/",
+      "untracked": true
+    },
+    "gpu": {
+      "nvidia_smi": {
+        "available": false,
+        "returncode": 9,
+        "stderr": "",
+        "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running."
+      },
+      "torch": {
+        "error": "ModuleNotFoundError",
+        "importable": false
+      }
+    },
+    "hostname": "aces-System-Product-Name",
+    "model_endpoints": [
+      {
+        "api_key_configured": false,
+        "api_key_env": "CONSTRUCTION_API_KEY",
+        "base_url_configured": false,
+        "base_url_env": "CONSTRUCTION_BASE_URL",
+        "model_id": "Qwen/Qwen3.5-9B",
+        "role": "construction"
+      },
+      {
+        "api_key_configured": false,
+        "api_key_env": "EMBEDDING_API_KEY",
+        "base_url_configured": false,
+        "base_url_env": "EMBEDDING_BASE_URL",
+        "model_id": "Qwen/Qwen3-Embedding-8B",
+        "role": "embedding"
+      },
+      {
+        "api_key_configured": false,
+        "api_key_env": "READER_API_KEY",
+        "base_url_configured": false,
+        "base_url_env": "READER_BASE_URL",
+        "model_id": "Qwen/Qwen3.5-9B",
+        "role": "reader"
+      },
+      {
+        "api_key_configured": false,
+        "api_key_env": "JUDGE_API_KEY",
+        "base_url_configured": false,
+        "base_url_env": "JUDGE_BASE_URL",
+        "model_id": "gpt-5.2",
+        "role": "judge"
+      },
+      {
+        "api_key_configured": false,
+        "api_key_env": null,
+        "base_url_configured": false,
+        "base_url_env": null,
+        "model_id": "gpt-5.4-mini",
+        "role": "native_v2_codex"
+      }
+    ],
+    "packages": {
+      "datasets": {
+        "importable": false
+      },
+      "openai": {
+        "importable": false
+      },
+      "pillow": {
+        "importable": true
+      },
+      "torch": {
+        "importable": false
+      },
+      "vllm": {
+        "importable": false
+      }
+    },
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "python": {
+      "executable": "/usr/bin/python",
+      "implementation": "CPython",
+      "version": "3.12.3"
+    }
+  },
+  "generated_at": "2026-10-12T12:05:21.241164Z",
+  "package": "workflow_memory",
+  "paths": {
+    "code_root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+    "configs": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/configs",
+    "data": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data",
+    "manifests": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/manifests",
+    "prompts": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/prompts",
+    "reports": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports",
+    "results": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results",
+    "runs": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs"
+  },
+  "plan": {
+    "algorithm": {
+      "corrections": "versioned_supersession_and_retraction",
+      "entity_keys_require_scope": true,
+      "equality_for_propagation_stop": "exact_normalized_structured_fields",
+      "grouping_must_be_canonical_and_prefix_only": true,
+      "hash_fields_separate": [
+        "content",
+        "provenance",
+        "interpretation"
+      ],
+      "layers": [
+        "evidence",
+        "state_relation",
+        "workflow"
+      ],
+      "llm_work_outside_commit_transaction": true,
+      "max_conflict_retries_default": 2,
+      "output_token_limits_default": {
+        "extraction": 1024,
+        "resolver": 1024,
+        "workflow": 2048
+      },
+      "partition_granularity_candidates": [
+        "transition",
+        "fixed_step_group",
+        "workflow_segment"
+      ],
+      "raw_observations_append_only": true,
+      "reader_snapshot_pinning": true,
+      "required_views_manifest": null,
+      "retrieval_budget": null,
+      "serial_fallback_scope": "affected_component",
+      "source_context_window_events_candidates": [
+        1,
+        2,
+        4
+      ],
+      "source_context_window_events_default": 2,
+      "track_predicate_and_negative_reads": true,
+      "unknown_dependency_policy": "expand_to_bounded_scope_and_log",
+      "version": null
+    },
+    "data": {
+      "action_alignment": "verify_official_code_against_actual_samples",
+      "audit_near_duplicates": true,
+      "audit_small_medium_overlap": true,
+      "cross_trajectory_state_policy": "isolated_unless_environment_instance_continuity_is_verified",
+      "dev_domain_targets": {
+        "enterprise": 12,
+        "web": 12
+      },
+      "dev_trajectory_target": 24,
+      "official_full_evaluation_separate_from_heldout_claims": true,
+      "outcome_available_at": "trajectory_end_event",
+      "prefix_information_only": true,
+      "preserve_images": true,
+      "root": null,
+      "smoke_trajectory_target": 4,
+      "split_manifest": null,
+      "split_seed": 20261012
+    },
+    "document_date": "2026-10-12",
+    "execution": {
+      "actual_runtime_config_generated_in": "P0",
+      "allow_labeled_development_only_fallback": true,
+      "budget_null_means": "discover_and_follow_existing_authorization_not_invent_unlimited_credit",
+      "credentials_in_logs": false,
+      "expensive_run_preflight_estimate_required": true,
+      "forbid_silent_model_substitution": true,
+      "new_resource_purchase": false,
+      "public_leaderboard_submission": false,
+      "resolve_null_required_fields_before_formal_run": true,
+      "user_existing_budget": null
+    },
+    "external_methods": [
+      {
+        "configuration": "native_and_labeled_matched",
+        "id": "agentrunbook_r",
+        "priority": 1
+      },
+      {
+        "configuration": "native_and_labeled_matched",
+        "id": "memforest",
+        "online_implementation_required_for_online_claims": true,
+        "priority": 2
+      },
+      {
+        "configuration": "native",
+        "id": "rag_notes",
+        "priority": 3
+      },
+      {
+        "configuration": "native",
+        "id": "codex_native",
+        "isolate_workspace": true,
+        "priority": 4,
+        "separate_eligibility_wait_from_kernel_time": true
+      },
+      {
+        "configuration": "official",
+        "id": "v2_codex",
+        "primary_table": "official_qa",
+        "priority": 5
+      },
+      {
+        "configuration": "official",
+        "id": "agentrunbook_c",
+        "primary_table": "official_qa",
+        "priority": 5
+      }
+    ],
+    "internal_methods": [
+      {
+        "concurrency": 1,
+        "id": "B0",
+        "name": "Fresh Serial",
+        "recompute": "full_at_declared_checkpoints",
+        "reuse": false
+      },
+      {
+        "concurrency": "selected",
+        "id": "B1",
+        "name": "Fresh Parallel",
+        "recompute": "full_at_declared_checkpoints",
+        "reuse": false
+      },
+      {
+        "concurrency": 1,
+        "id": "B2",
+        "invalidation": "conservative_partition",
+        "name": "Incremental Serial",
+        "reuse": true
+      },
+      {
+        "correctness_required": true,
+        "equal_tuning_budget": true,
+        "id": "B3",
+        "invalidation": "conservative_partition",
+        "name": "Strong Parallel + Incremental",
+        "reuse": true,
+        "scheduler": "bounded_parallel_partition_queue"
+      },
+      {
+        "correctness_required": true,
+        "early_stop": true,
+        "id": "Ours",
+        "invalidation": "precise_actual_dependencies",
+        "name": "Full",
+        "reuse": true,
+        "scheduler": "dependency_ready_queue"
+      }
+    ],
+    "models": {
+      "construction": {
+        "api_key_env": "CONSTRUCTION_API_KEY",
+        "base_url_env": "CONSTRUCTION_BASE_URL",
+        "checkpoint_revision": null,
+        "context_limit": null,
+        "id": "Qwen/Qwen3.5-9B",
+        "precision": null,
+        "prompt_version": null,
+        "retry_policy": null,
+        "temperature": 0,
+        "vision_preprocessing": null
+      },
+      "embedding": {
+        "api_key_env": "EMBEDDING_API_KEY",
+        "base_url_env": "EMBEDDING_BASE_URL",
+        "checkpoint_revision": null,
+        "id": "Qwen/Qwen3-Embedding-8B",
+        "input_limit": null,
+        "query_instruction": "inherit_and_pin_frozen_official_protocol"
+      },
+      "judge": {
+        "api_key_env": "JUDGE_API_KEY",
+        "base_url_env": "JUDGE_BASE_URL",
+        "id": "gpt-5.2",
+        "prompt": "inherit_and_pin_frozen_official_evaluator",
+        "reasoning_effort": "medium",
+        "record_returned_model_id": true
+      },
+      "native_v2_codex": {
+        "id": "gpt-5.4-mini",
+        "reasoning_effort": "xhigh",
+        "verify_against_frozen_baseline": true
+      },
+      "reader": {
+        "api_key_env": "READER_API_KEY",
+        "base_url_env": "READER_BASE_URL",
+        "checkpoint_revision": null,
+        "id": "Qwen/Qwen3.5-9B",
+        "parameters": "inherit_and_pin_frozen_official_protocol"
+      }
+    },
+    "project": {
+      "code_subdirectory_if_no_existing_project": "memory-construction",
+      "package": "workflow_memory",
+      "preferred_python": "3.11",
+      "resume_required": true,
+      "storage": "sqlite_wal_plus_versioned_index_manifests"
+    },
+    "protocols": {
+      "A": {
+        "name": "official_qa",
+        "preserve_official_manifests": true,
+        "tiers": [
+          "small",
+          "medium"
+        ]
+      },
+      "B": {
+        "name": "streaming_construction",
+        "open_loop": true,
+        "prefix_only": true,
+        "report_as_extension": true
+      },
+      "C": {
+        "excluded_from_official_qa": true,
+        "name": "controlled_stress",
+        "report_as_derived_or_synthetic": true
+      }
+    },
+    "required_outputs": [
+      "reports/environment.md",
+      "manifests/versions.json",
+      "manifests/data.json",
+      "manifests/splits.json",
+      "reports/data_audit.md",
+      "reports/baseline_profile.md",
+      "reports/representation_quality.md",
+      "reports/equivalence.json",
+      "reports/correctness.md",
+      "reports/recovery.json",
+      "reports/optimization_log.md",
+      "reports/decision_log.md",
+      "reports/experiment_ledger.csv",
+      "configs/frozen.json",
+      "results/tables/main_internal.csv",
+      "results/tables/native_systems.csv",
+      "results/tables/official_qa.csv",
+      "results/tables/mechanisms.csv",
+      "results/tables/ablations.csv",
+      "results/tables/correctness_recovery.csv",
+      "reports/final_research_report.md",
+      "results/reproduce_manifest.json"
+    ],
+    "schema_version": "workplan-spec/2.0",
+    "sources": {
+      "codex_native": {
+        "commit": null,
+        "resolve_and_pin_before_native_runs": true
+      },
+      "codex_v2_official_binary": {
+        "verify_against_frozen_baseline": true,
+        "version": "0.117.0"
+      },
+      "dataset": {
+        "id": "xiaowu0162/longmemeval-v2",
+        "resolve_and_pin_in": "P0",
+        "revision": null
+      },
+      "longmemeval_v2": {
+        "commit": "2cc8c540bdb87fe6761629b585e727e1c4704520",
+        "url": "https://github.com/xiaowu0162/LongMemEval-V2"
+      },
+      "memforest": {
+        "batch_and_online_results_separate": true,
+        "commit": "2b5af6d9f92618b30f3e8b7eb99412c1d5eddd6d",
+        "online_path": "reproducibility/implementation/async_core",
+        "url": "https://github.com/Concyclics/MemForest"
+      }
+    },
+    "statistics": {
+      "confidence_level": 0.95,
+      "do_not_treat_qa_count_as_build_workload_count": true,
+      "formal_performance_paired_repeats": 5,
+      "main_quality_independent_build_answer_repeats": 3,
+      "report_censored_updates_and_completion_rate": true,
+      "report_low_independent_history_count": true,
+      "resampling_seed": 20261013,
+      "resampling_unit": "paired_run_and_trajectory_or_time_block_as_appropriate"
+    },
+    "status": "specification_only_not_experiment_results",
+    "suites": {
+      "ablations": {
+        "phase": "P6",
+        "representation_comparison_is_separate": true,
+        "requires_frozen_config": true,
+        "variants": [
+          "full",
+          "without_precise_invalidation",
+          "without_early_stop",
+          "without_dependency_scheduling",
+          "without_coalescing"
+        ]
+      },
+      "correctness": {
+        "backend": "content_addressed_replay_or_deterministic_test_backend",
+        "compare": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "Ours"
+        ],
+        "faults": [
+          "worker_crash",
+          "pre_commit_crash",
+          "post_commit_crash",
+          "timeout",
+          "duplicate_delivery",
+          "out_of_order_completion",
+          "alias_revision",
+          "negative_read_invalidation"
+        ],
+        "not_performance_evidence": true,
+        "phases": [
+          "P3",
+          "P4"
+        ]
+      },
+      "dev": {
+        "methods": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "Ours"
+        ],
+        "performance_repeats": 3,
+        "phases": [
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "protocols": [
+          "B",
+          "C"
+        ],
+        "requires_live_models": true,
+        "split": "development"
+      },
+      "main": {
+        "external_results_in_separate_tables": true,
+        "methods": [
+          "B0",
+          "B1",
+          "B2",
+          "B3",
+          "Ours"
+        ],
+        "phase": "P6",
+        "protocols": [
+          "A",
+          "B"
+        ],
+        "requires_frozen_config": true,
+        "requires_live_models": true,
+        "tier": "small"
+      },
+      "pilot": {
+        "methods": [
+          "agentrunbook_r",
+          "memforest"
+        ],
+        "phase": "P1",
+        "protocols": [
+          "A",
+          "B"
+        ],
+        "requires_live_models": true,
+        "smoke_first": 4,
+        "split": "development",
+        "target_trajectories": 24
+      },
+      "scale": {
+        "include_fresh_cold_build_reference": true,
+        "methods": [
+          "B3",
+          "Ours",
+          "agentrunbook_r",
+          "memforest"
+        ],
+        "other_external_methods": "complete_official_quality_comparison_when_available",
+        "phase": "P6",
+        "protocols": [
+          "A",
+          "B"
+        ],
+        "requires_frozen_config": true,
+        "tier": "medium"
+      },
+      "stress": {
+        "derived_ground_truth_required": true,
+        "methods": [
+          "B3",
+          "Ours",
+          "memforest"
+        ],
+        "phase": "P6",
+        "protocols": [
+          "C"
+        ],
+        "requires_frozen_config": true
+      }
+    },
+    "targets_not_results": {
+      "p95_reduction_vs_B3": 0.2,
+      "qa_noninferiority_margin_vs_same_algorithm_fresh": 0.02,
+      "unresolved_correctness_violations": 0,
+      "update_input_token_reduction_vs_B3": 0.3
+    },
+    "timezone": "Asia/Shanghai",
+    "tuning": {
+      "continue_when_target_missed": "diagnose_and_improve_then_complete_frozen_evaluation",
+      "dataset": "development_only",
+      "equal_B3_Ours_search_budget": true,
+      "keep_all_trials": true,
+      "max_candidates_per_round_per_compared_method": 12,
+      "max_mechanism_rounds_initial": 3,
+      "no_final_test_adaptive_selection": true
+    },
+    "workloads": {
+      "append_and_revision_separate": true,
+      "application_cache_and_provider_prompt_cache_separate": true,
+      "arrival_processes": [
+        "fixed_interval",
+        "seeded_bursts"
+      ],
+      "batch_window_ms_candidates": [
+        0,
+        50,
+        200
+      ],
+      "cold_build_and_streaming_update_separate": true,
+      "concurrency": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "conflict_definition": "candidate_updates_with_overlapping_write_write_or_read_write_sets_per_batch",
+      "conflict_targets": [
+        0,
+        0.1,
+        0.3,
+        0.5,
+        0.8
+      ],
+      "freeze_absolute_arrival_traces": true,
+      "fresh_checkpoints": [
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "no_full_cartesian_grid_by_default": true,
+      "primary_relative_arrival_rate": 0.75,
+      "record_actual_conflicts": true,
+      "reference_capacity": "B3_sustainable_capacity_on_development_data",
+      "relative_arrival_rates": [
+        0.25,
+        0.5,
+        0.75,
+        0.9,
+        1.1
+      ],
+      "update_ratio_denominator": "source_event_count_in_fixed_prefix",
+      "update_ratios": [
+        0.01,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ]
+    }
+  },
+  "plan_sha256": "13c42f8118316a005566dcdd0a9df1d5b3e376bf8739d3ba5636b43323ba59b7",
+  "plan_source": "/data/predator/ly/agent-memory-construction-2026-10-12/configs/experiment-plan.json",
+  "runtime_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/configs/runtime.json",
+  "runtime_schema_version": "workflow-memory-runtime/1",
+  "runtime_sha256": "732bc957c1d69a6c6a0343b02d05d424763cb5fd53c1e971ad7f8c4181598a44"
+}

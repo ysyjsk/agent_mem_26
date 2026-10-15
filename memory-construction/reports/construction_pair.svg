@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="430" viewBox="0 0 1140 430">
+<rect width="1140" height="430" fill="white"/>
+<g font-family="sans-serif" fill="#172b4d">
+<text x="30" y="32" font-size="20">Construction costs: matched five complete web trajectories</text>
+<text x="30" y="57" font-size="13">Text-only/adapted; full events, notes, sources and indexes retained. Lower is better.</text>
+<text x="30" y="95" font-size="15">Queryable publication (s)</text>
+<text x="30" y="124" font-size="12">baseline</text>
+<rect x="30" y="131" width="240.0" height="20" fill="#687787"/>
+<text x="277.0" y="146" font-size="12">558.1</text>
+<text x="30" y="186" font-size="12">joint</text>
+<rect x="30" y="193" width="223.7" height="20" fill="#167fac"/>
+<text x="260.7" y="208" font-size="12">520.2</text>
+<text x="400" y="95" font-size="15">Known LLM input tokens</text>
+<text x="400" y="124" font-size="12">baseline</text>
+<rect x="400" y="131" width="240.0" height="20" fill="#687787"/>
+<text x="647.0" y="146" font-size="12">252,945.0</text>
+<text x="400" y="186" font-size="12">joint</text>
+<rect x="400" y="193" width="200.6" height="20" fill="#167fac"/>
+<text x="607.6" y="208" font-size="12">211,444.0</text>
+<text x="770" y="95" font-size="15">Known LLM output tokens</text>
+<text x="770" y="124" font-size="12">baseline</text>
+<rect x="770" y="131" width="222.3" height="20" fill="#687787"/>
+<text x="999.3" y="146" font-size="12">8,216.0</text>
+<text x="770" y="186" font-size="12">joint</text>
+<rect x="770" y="193" width="240.0" height="20" fill="#167fac"/>
+<text x="1017.0" y="208" font-size="12">8,870.0</text>
+<text x="30" y="398" font-size="12">QA is a constraint, not the ranking objective. Failed-call usage is unknown; retries are reported separately.</text>
+</g></svg>

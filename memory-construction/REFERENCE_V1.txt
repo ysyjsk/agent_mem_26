@@ -1,0 +1,435 @@
+# Agent Memory Construction — Research Workplan v1.0
+
+目标会议：WWW（The Web Conference）｜阶段：Baseline 复现 → 性能分析 → 方法实现 → 论文实验
+
+## 1. 总体方案
+
+研究主题暂定为：
+
+Workflow-Aware Concurrent and Incremental Memory Construction for LLM Agents
+
+核心研究问题：
+
+> 对持续运行的 Agent，能否利用 LLM Output、Tool Call、Tool Result 等执行事件之间的依赖关系，实现记忆的并发构建和增量维护，在保持记忆质量与一致性的前提下，降低 Memory Construction 和 Memory Freshness Latency？
+
+我建议先固定以下配置。
+
+| 项目                      | 方案                                                            |
+| ----------------------- | ------------------------------------------------------------- |
+| 主数据集                    | LongMemEval-V2                                                |
+| 开发与复现                   | Small Tier                                                    |
+| 正式规模扩展                  | Medium Tier                                                   |
+| 官方 Baseline             | RAG+Notes、AgentRunbook-R、Codex、AgentRunbook-C                 |
+| 重点技术竞争对手                | Codex Native Memories、MemForest                               |
+| 主 Construction Backbone | Qwen3.5-9B                                                    |
+| 主 Embedding Backbone    | Qwen3-Embedding-8B                                            |
+| 统一 Reader               | Qwen3.5-9B                                                    |
+| 统一 Judge                | GPT-5.2                                                       |
+| 我们的方法                   | Dependency-Aware Parallelism + Incremental Memory Maintenance |
+| 主要优化指标                  | P95 Memory Freshness Latency、Construction Makespan、Goodput    |
+| 质量约束                    | 官方 QA Accuracy、状态一致性、增量构建正确性                                  |
+
+这套配置不代表所有原生 Baseline 都强制使用同一模型。官方复现保留原始模型配置，方法消融使用统一模型配置，两类实验分别汇报，避免模型差异干扰性能结论。
+
+## 2. Dataset：只使用 LongMemEval-V2
+
+选择这个数据集，是因为它不是普通聊天记忆，而是包含 Agent Tool Interaction 的长执行轨迹。
+
+官方共有 451 个问题，涵盖静态状态、动态状态、工作流知识、环境陷阱和前提认知五类能力，并提供 Small 和 Medium 两档评测。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
+
+
+数据划分如下：
+
+| 数据用途                  | 使用范围                | 目的                            |
+| --------------------- | ------------------- | ----------------------------- |
+| Development           | 从 Small 中划分工作流级开发子集 | 调试、确定并发策略与增量参数                |
+| Baseline Reproduction | Small 官方全集          | 复现官方 Accuracy 与 Query Latency |
+| Main Evaluation       | 固定版本的 Small 全集      | 统一方法对比                        |
+| Scale Evaluation      | Medium Tier         | 测试历史规模增加后的性能                  |
+
+需要注意：Small 和 Medium 可能共享问题或历史内容，不能默认把 Medium 当作完全独立的 Held-out 测试集。我们将单独按 Haystack/环境划分未暴露数据，并在完成参数选择后才执行正式结果统计。
+
+### 一个数据集，两套运行协议
+
+Protocol A：官方协议
+
+使用官方 `insert(trajectory)` / `query(question)` 接口，保持问答评测一致。主要用于 Accuracy 和 Query Latency。
+
+Protocol B：Streaming Construction
+
+仍使用相同的 LongMemEval-V2 轨迹，但按照真实事件顺序逐步输入：
+
+```
+Trajectory
+  ├── LLM Output
+  ├── Tool Call
+  ├── Tool Result
+  ├── LLM Output
+  ├── Tool Call
+  └── Tool Result
+         ↓
+   Incremental Memory Update
+```
+
+主要测试增量构建、并发、状态依赖和记忆新鲜度。它属于我们对官方数据集的系统实验扩展，必须单独标注，不冒充原 Benchmark 的标准评测协议。
+
+taamaal## 3. Baseline：六个外部系统 + 五个内部实验组
+
+### 3.1 外部 Baseline
+
+| Baseline              | 作用                                      | 是否必须复现   |
+| --------------------- | --------------------------------------- | -------- |
+| RAG + Notes           | 轻量化记忆构建与检索对照                            | 是        |
+| AgentRunbook-R        | 事件抽取、策略笔记和结构化记忆                         | 是        |
+| Codex（V2 官方）          | 文件式轨迹存储与 Coding Agent 检索                | 是        |
+| AgentRunbook-C        | 强检索质量对照                                 | 是        |
+| Codex Native Memories | 并发 Extraction + 增量 Global Consolidation | 是，核心竞争对手 |
+| MemForest             | 并行抽取 + 局部树更新                            | 是，核心竞争对手 |
+
+前四个由 LongMemEval-V2 官方提供，后两个需要分别实现数据集 Adapter。
+
+这里尤其要强调：
+
+- V2 官方 Codex：`insert()` 主要保存原始轨迹和索引，核心模型工作发生在检索阶段。
+
+- Codex Native Memories：真实的两阶段记忆构建流程，其中 Phase 1 并发提取，Phase 2 使用全局锁和 Workspace Diff 维护记忆。
+
+  [image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+  GitHub
+
+  +1
+
+- MemForest：具有并发抽取、时间层次索引和局部 Dirty-Path Refresh，属于必须超过的近期技术 Baseline。
+
+  [image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+  GitHub
+
+
+
+所以不能把 V2 的 Codex 检索成绩当成原生 Codex Memory Construction 的成绩。
+
+### 3.2 我们自己的消融 Baseline
+
+这些必须采用相同的记忆构建语义和模型栈。
+
+| ID   | 方法                                      | 并发   | 增量   |
+| ---- | --------------------------------------- | ---- | ---- |
+| B0   | Fresh Serial                            | 无    | 无    |
+| B1   | Fresh Parallel                          | 有    | 无    |
+| B2   | Incremental Serial                      | 无    | 有    |
+| B3   | Naive Parallel + Incremental            | 粗粒度  | 有    |
+| Ours | Dependency-Aware Parallel + Incremental | 依赖感知 | 依赖感知 |
+
+B3 是最重要的内部对照。
+
+论文最终必须证明 Ours 不仅快于 B0，还快于已经同时使用并发和增量的 B3。
+
+B0～Ours 使用我们冻结的新记忆构建算法；它们不能直接视为与某个原生系统完全同语义。这样能够把算法设计带来的质量变化与运行优化带来的性能变化分开。
+
+## 4. Backbone 与 API 配置
+
+这里分两条实验协议。
+
+### 4.1 官方复现协议
+
+严格遵守 LongMemEval-V2 公开配置：
+
+| 组件                           | Backbone / 版本                           |
+| ---------------------------- | --------------------------------------- |
+| AgentRunbook-R Controller    | Qwen3.5-9B                              |
+| Reader                       | Qwen3.5-9B                              |
+| Embedding                    | Qwen3-Embedding-8B                      |
+| Codex CLI                    | v0.117.0                                |
+| Codex / AgentRunbook-C Model | `gpt-5.4-mini`，reasoning effort `xhigh` |
+| Judge                        | `gpt-5.2`，reasoning effort `medium`     |
+
+这些是官方仓库目前给出的推荐复现配置。
+
+[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
+
+GitHub
+
+
+
+原生 Codex Memories、MemForest 则先分别按其冻结版本的官方配置复现，不强行更改模型来追求参数统一。
+
+### 4.2 统一性能对照协议
+
+用于比较我们的方法与同一算法的内部消融：
+
+| 组件                   | 选择                           |
+| -------------------- | ---------------------------- |
+| Memory Extraction    | Qwen3.5-9B                   |
+| Memory Consolidation | Qwen3.5-9B                   |
+| Embedding            | Qwen3-Embedding-8B           |
+| Reader               | Qwen3.5-9B                   |
+| Judge                | GPT-5.2                      |
+| Serving              | vLLM + OpenAI-compatible API |
+| Backend              | 文件/索引存储，必要时引入 SQLite 或事务型数据库 |
+| Concurrency          | 1 / 2 / 4 / 8 / 16           |
+
+主实验先固定 Qwen3.5-9B。若性能机制成立，再用更大的 Construction Model 做泛化测试，例如 Qwen3-30B-A3B-Instruct-2507。
+
+模型固定不仅包括名称，还包括具体 Checkpoint、Prompt、上下文长度、采样参数、输出 Token 限制、Retry Policy 和服务端配置。
+
+商业模型可以用于原生系统复现和独立验证，但不能在 Ours 中使用更强模型、在 Baseline 中使用更弱模型，然后把提升归因于系统设计。
+
+经费不限的好处是我们可以在同等配置下增加重复实验、模型规模和工作负载，而不是牺牲公平性。
+
+## 5. 我们的方法：具体实现什么？
+
+方法暂定为三个组成部分，其中两个是主要创新机制。
+
+Agent Workflow Events
+
+LLM Output / Tool Call / Tool Result / State Transition
+
+Memory Evidence IR
+
+Evidence ID · Source Version · Dependency · Provenance
+
+Mechanism 1
+
+Concurrent Execution
+
+根据依赖关系调度可独立处理的记忆操作
+
+Mechanism 2
+
+Incremental Maintenance
+
+复用有效中间结果，仅重新处理受影响部分
+
+Version Validation + Consistent Publication
+
+Queryable Long-Term Memory
+
+### 5.1 Memory Evidence IR
+
+不直接把整个历史拼接成一个 Prompt，而是将执行事件转换为有来源和版本信息的语义单元。
+
+例如：
+
+```
+{
+  "evidence_id": "event_102",
+  "source": "tool_result",
+  "operation": "pytest",
+  "version": 3,
+  "dependencies": ["event_98", "event_101"],
+  "memory_keys": ["test_status:api.py"],
+  "status": "valid"
+}
+```
+
+`memory_keys` 是需要由 Extraction / Reconciliation 过程确定并验证的候选依赖，不能只根据 LLM 猜测就当作完备的依赖证明。
+
+IR 至少记录来源、发生顺序、事件依赖、内容哈希、状态版本和语义读写集合，并保留原始文本及截图引用。对于无法确认依赖的事件，采用保守的 Unknown 状态。
+
+它的目的不是换一种格式存储记忆，而是让后续并发和增量更新能够共享一套统一的依赖信息。
+
+### 5.2 创新点 1：Dependency-Aware Parallel Construction
+
+例如：
+
+```
+Event 1: 查询项目 A 的状态
+Event 2: 查询项目 B 的状态
+Event 3: 修改项目 A 的配置
+Event 4: 验证项目 A 的配置
+```
+
+理想情况下：
+
+- Event 1 和 Event 2 可以并发 Extraction。
+- Event 3、4 之间存在因果依赖。
+- 项目 A 和 B 的记忆更新可能分别准备。
+- 发布之前必须验证状态版本和读写冲突。
+
+实现上采用 Dependency DAG + Bounded Task Scheduler + Version Validation。
+
+允许独立的语义提取提前运行；对共享状态相关的合并操作，先读取一致的状态版本、生成候选更新，提交前检查版本。如果依赖被前序提交破坏，则重新计算或回退串行执行。
+
+这里不默认“不同 Entity 一定独立”，因为两个 Entity 之间可能存在关系、别名或跨事件语义依赖。
+
+### 5.3 创新点 2：Incremental Memory Maintenance
+
+正常全量构建：
+
+\\[ M\_{t+1}=\operatorname{Build}(H_t\cup\Delta H) \\]
+
+其中 \\(H_t\\) 表示历史，\\(\Delta H\\) 是新增或修正的执行事件。
+
+我们希望：
+
+\\[ M\_{t+1}=\operatorname{Update}(M_t,\Delta H,D_t) \\]
+
+其中 \\(D_t\\) 是维护的依赖索引。
+
+具体实现：
+
+- 对未变化、输入和环境版本相同的 Source-local Extraction 结果直接复用。
+- 根据依赖索引找到需要更新的 Memory Units。
+- 只重新执行受影响区域的去重、关系更新和摘要合并。
+- 当依赖不明确、影响区域过大或者版本验证失败时，回退完整构建。
+- 必要时重新计算关联的 Embedding 和检索索引，而不是默认全部更新。
+
+这个设计尤其需要吸取你之前 MemBind V7 的经验：不能在原始 Graphiti Trace 上假设存在大量稳定的增量复用机会。 应先验证新的语义分层能否产生可测量的稳定性，再逐步实现局部更新。
+
+### 5.4 实现顺序
+
+不直接把三部分一次性写完，而是遵循：
+
+```
+Fresh Memory Construction
+          ↓
+Stable Evidence IR
+          ↓
+Parallel Construction
+          ↓
+Incremental Maintenance
+          ↓
+Dependency-Aware Scheduling
+          ↓
+Version Validation + Publication
+```
+
+建议优先以 Codex Native 的两阶段 Memory Write Pipeline 作为可改造候选，因为它与目标最接近。
+
+不过最终的开发母体要在 Baseline Profiling 后确定：如果 Codex Native 无法可靠适配 LongMemEval-V2 的多模态轨迹或难以控制模型执行，则先在 AgentRunbook-R 的提取流水线上建立同算法 Fresh/Incremental 对照，再把方法移植回 Codex 风格的 Consolidation。
+
+这一步不能为了方法方便而忽略原生系统实际的语义区别。
+
+## 6. 测试指标：论文最终需要什么结果？
+
+我们研究的是记忆构建效率，因此主指标必须围绕 Write Path。
+
+### 6.1 Performance Metrics
+
+| 指标                           | 定义                                          | 重要性     |
+| ---------------------------- | ------------------------------------------- | ------- |
+| P95 Memory Freshness Latency | 新证据到达至相应记忆可被一致读取的耗时                         | Primary |
+| Construction Makespan        | 完成整个 History 的记忆构建和持久化所需时间                  | Primary |
+| Construction Goodput         | 单位时间内成功且符合正确性要求的记忆更新数量                      | Primary |
+| P50 / P99 Freshness          | 延迟分布                                        | 重要      |
+| LLM Calls / Tokens           | Extraction 和 Consolidation 的实际调用与 Token 使用量 | 重要      |
+| Compute Cost                 | 完成一次构建的 GPU 时间、API 费用和资源占用                  | 重要      |
+| Critical Path Breakdown      | Extraction、等待、Merge、Embedding、Commit 各阶段耗时  | 重要      |
+| Query Latency                | 从记忆查询得到可供 Reader 使用的证据所需时间                  | 质量辅助指标  |
+
+Memory Freshness 必须测量到可读取的最新权威版本，而不是写入接口返回 `202 Accepted` 或任务入队的时刻。
+
+对于官方提供的离线历史，其 Arrival Time 按固定的回放协议定义，不使用原始记录里可能相隔数天的业务时间直接计算运行时延迟。
+
+### 6.2 Quality / Correctness Metrics
+
+| 指标                            | 要测什么                     |
+| ----------------------------- | ------------------------ |
+| Official QA Accuracy          | LongMemEval-V2 总准确率      |
+| Per-category Accuracy         | 五类记忆能力的准确率               |
+| Current-state Accuracy        | 更新以后能否正确识别最新状态           |
+| History Preservation          | 历史有效信息是否被错误删除            |
+| Provenance Correctness        | 输出的知识是否具有正确来源            |
+| Incremental/Fresh Equivalence | 增量维护是否与同一新算法的 Fresh 构建一致 |
+| Consistency Violations        | 是否出现丢失更新、陈旧发布、重复更新或错误状态  |
+| Failure Recovery              | 崩溃重试、事件重复投递、乱序完成后的正确性    |
+
+其中 Incremental/Fresh Equivalence 需要两种验证：
+
+1. 使用固定的模型响应 Replay，执行确定性的逐步差分对照，检查规范化的记忆状态是否一致。
+2. 使用真实在线模型调用，评价质量是否下降；不能把 LLM 随机性造成的文字差异一律判为正确性错误。
+
+主实验必须报告质量差异及其置信区间，而不是只凭 Accuracy 数字接近就宣称没有质量损失。
+
+### 6.3 Mechanism Experiments
+
+这部分专门解释为什么能加速。
+
+| 变量                | 测试取值                       | 目的           |
+| ----------------- | -------------------------- | ------------ |
+| Concurrency Limit | 1、2、4、8、16                 | 并行扩展能力       |
+| Update Ratio      | 1%、5%、10%、25%、50%、100%     | 增量收益随更新量变化   |
+| Conflict Ratio    | 0%、10%、30%、50%、80%         | 状态依赖对收益的影响   |
+| History Scale     | Small → Medium，及不同历史前缀     | 数据规模扩展能力     |
+| Memory Size       | 不同累计记忆量                    | 增量维护随存储增长的表现 |
+| Failure Injection | Worker Crash、Timeout、重复事件等 | 恢复正确性        |
+
+Update Ratio 和 Conflict Ratio 采用 LongMemEval-V2 原始轨迹的受控重放、事件选择与变更注入构建，明确标记为 System Stress Test；不能把这些人为负载改写后的 QA 数字混入官方榜单。
+
+除了这些常规变量，还必须记录有效增量复用率、实际失效区域比例、回退率、依赖分析开销，以及真正节省的关键路径时间。否则即便系统更快，也难以解释是否来自提出的机制。
+
+## 7. 实验执行 Workplan
+
+我建议按下面六个阶段推进，只有当前阶段通过 Gate 才进入下一阶段。
+
+1. P0：固定数据集与实验环境
+
+   锁定 LongMemEval-V2 Commit、Small/Medium Manifest、模型版本、推理服务、Judge 和统一日志格式。
+
+   验收：数据完整性检查通过，模型服务 Smoke Test 通过，评测脚本可执行。
+2. P1：官方 Baseline Reproduction
+
+   顺序运行 RAG+Notes、AgentRunbook-R、Codex、AgentRunbook-C；然后复现 Codex Native Memories 与 MemForest 的写入流水线。
+
+   验收：复现官方质量协议，记录差异原因；六个系统的能力边界和实验配置都有独立报告。
+3. P2：Memory Write Path Characterization
+
+   先不做优化，给 Baseline 加 Observer-only Instrumentation，测量每个阶段的耗时、依赖、LLM Calls、Tokens 和临界路径。
+
+   验收：明确主要瓶颈在哪里，以及是否存在足够的并发和增量复用空间。若机会不足，允许得到负结论，不强行进入方法开发。
+4. P3：实现基础 Memory Construction Algorithm
+
+   构建 Evidence IR 和 Fresh Construction，先验证记忆质量，然后实现串行 Fresh 基线和并发 Fresh 基线。
+
+   验收：新算法达到预先规定的质量要求，且并发版本不破坏状态语义。
+5. P4：实现增量和依赖感知调度
+
+   依次完成 Incremental Serial、Naive Parallel+Incremental，最后实现 Ours。每一步使用相同算法和模型做差分实验。
+
+   验收：增量/Fresh 一致性测试通过；没有未经解释的状态错误；收益超过额外依赖分析和调度开销。
+6. P5：论文级正式实验
+
+   冻结全部配置，在 Small/Medium 和受控更新负载上进行配对重复测试，完成质量、性能、消融、扩展性、故障恢复实验。
+
+   验收：生成主实验表、质量对比、阶段耗时分解、统计置信区间和完整复现日志。
+
+### 最终主实验表应该是这样
+
+| Method                       | QA Acc. ↑ | Freshness P95 ↓ | Build Time ↓ | Goodput ↑ | Tokens ↓ |
+| ---------------------------- | --------- | --------------- | ------------ | --------- | -------- |
+| RAG + Notes                  | 待测        | 待测              | 待测           | 待测        | 待测       |
+| AgentRunbook-R               | 待测        | 待测              | 待测           | 待测        | 待测       |
+| Codex Native                 | 待测        | 待测              | 待测           | 待测        | 待测       |
+| MemForest                    | 待测        | 待测              | 待测           | 待测        | 待测       |
+| Fresh Serial                 | 待测        | 待测              | 待测           | 待测        | 待测       |
+| Fresh Parallel               | 待测        | 待测              | 待测           | 待测        | 待测       |
+| Incremental Serial           | 待测        | 待测              | 待测           | 待测        | 待测       |
+| Naive Parallel + Incremental | 待测        | 待测              | 待测           | 待测        | 待测       |
+| Ours                         | 待测        | 待测              | 待测           | 待测        | 待测       |
+
+Codex（V2 官方）和 AgentRunbook-C 的主要结果另放一张官方 QA/Query Latency 对比表，因为它们的写入机制与我们研究的压缩构建不同。主表中的外部系统性能也要标明是 Native Configuration 还是 Matched Configuration，不能直接把不同资源条件下的速度排成一张公平的排行榜。
+
+## 8. 三个最重要的实验判断
+
+最终能否形成较有说服力的 WWW 投稿，主要取决于这三个问题。
+
+第一，Baseline 中是否真的存在值得优化的耗时？
+
+如果 LLM Extraction 已完全并发，而 Consolidation 开销很小，则新增调度机制未必有意义。P2 必须先证明瓶颈。
+
+第二，新的 IR 能否让增量维护真正减少计算？
+
+这里需要避免此前 Graphiti 增量实验遇到的依赖放大问题。必须报告真实省掉的 LLM 工作量、失效范围、Fallback 比例和净 Critical Path 收益。
+
+第三，相较强基线是否仍有显著收益？
+
+我建议把研究目标设为：在相同资源预算和质量约束下，争取让 Ours 相对 Naive Parallel+Incremental 和 Codex Native，在 P95 Freshness、Build Time 或 Goodput 上产生明确且可重复的改进。可以将约 20% 的 P95 降低作为内部目标，但不能将其预设为实验结果。
+
+最终建议：先正式冻结这份 v1.0 方案，执行到 P2 为止。 在六个 Baseline 的真实写入耗时和可并行性数据到手后，再决定以 Codex Native 还是 AgentRunbook-R 为方法实现的主代码基底。这样更可能形成一项有真实系统瓶颈支撑的研究，而不是先开发两个优化模块，再寻找能够展示加速的数据。

@@ -1,0 +1,5 @@
+version: resolve_state_v1
+
+Resolve identities only using explicitly supplied scope-local evidence and
+record every source reference. Keep trajectory/episode scopes isolated unless
+continuity is explicitly verified.

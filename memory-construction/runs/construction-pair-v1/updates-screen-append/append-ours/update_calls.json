@@ -1,0 +1,235 @@
+[
+  {
+    "record_id": "7450a23156aa4d10997b7251f0ed1073",
+    "timestamp_epoch": 1791991238.8282206,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 8.508677966005052,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 3945,
+      "text_sha256": "4fb7c6949b748503ee94b3ad75a5b27f951b791433cb4bc792633fa0df24806e",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 947,
+    "completion_tokens": 307,
+    "total_tokens": 1254,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "6272c4911db242debf5128bd07056f18",
+    "timestamp_epoch": 1791991238.8283546,
+    "channel": "event_group",
+    "trajectory_id": "4ba5e9cb",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "input_tokens_preflight": 947,
+    "request_sha256": "4fb7c6949b748503ee94b3ad75a5b27f951b791433cb4bc792633fa0df24806e",
+    "status": "parsed"
+  },
+  {
+    "record_id": "55a2ac4a25b84f5bb401c5af8d20c686",
+    "timestamp_epoch": 1791991238.8284023,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 2,
+    "reused": 0
+  },
+  {
+    "record_id": "3f0de5506e594ff3b1ae042de3a67497",
+    "timestamp_epoch": 1791991247.9377193,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 9.10870137999882,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 3427,
+      "text_sha256": "73c955e433fe6296163bef68ded4405cb2e38e53510e338539869121c47d845a",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 814,
+    "completion_tokens": 332,
+    "total_tokens": 1146,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "da3a98f94b5044fc940ccdd4e1706b6f",
+    "timestamp_epoch": 1791991248.0068698,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.06882358499569818,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 3,
+    "input_characters": 61,
+    "input_sha256": [
+      "ff2cda631e5be288911d31191a013e9cc0b2ad2b7ac80cc8d41cee7d4ab0d7ae",
+      "6e9ab6bbd5f12dd8b627c97ce822a94e49c5c28f2ba5d53e2c4442e47f5056be",
+      "2fe9ccf38ccae17ebb1272555ebe746f825cddd6723ed42712fa0db0cc1e1867"
+    ],
+    "input_texts": [
+      "State 0\n\n\nState 1",
+      "State 0\n\n\nState 1\n\n\nState 2",
+      "State 1\n\n\nState 2"
+    ],
+    "prompt_tokens": 28,
+    "total_tokens": 28,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "2df6ef67f570453398d7dc875932e87e",
+    "timestamp_epoch": 1791991248.0069594,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 3,
+    "actual_vectors": 3,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.06895395999890752,
+    "input_keys": [
+      "7c414252cd46f4f637411a97a01f8b368e69ce2ddcdadb3484d77c746c6c4fd9",
+      "b283e4a6497545655679fc46cf687dc3f974177509d2bdbe3f23e7ca90497e91",
+      "ec0342a67bab3c01023140225600fa905ce4cf7d55230fee266d3726b49b3d6c"
+    ]
+  },
+  {
+    "record_id": "bb843d96411943e693be3ebff9e0940c",
+    "timestamp_epoch": 1791991248.1081767,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.10059155100316275,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1102,
+    "input_sha256": [
+      "e2fa7907fbcea6fcccf00dbe27f1bce81622c7e05f3142ef0d7edaa32fcdb2cc",
+      "905fc581cbbd8829eebc125768935ba4070c973a42ae25ba5c66f9457d6831d1"
+    ],
+    "input_texts": [
+      "The agent is navigating a forum platform to find a specific subreddit related to Pittsburgh in order to post a question about driving learning locations. This step represents the initial navigation phase, moving from the global forum listing to the specific city's community page.\n\nThe action clicked on the element with ID '308'. Consequently, the view changed from the general forum listing page (URL: http://localhost:9080/forums/all) to the specific Pittsburgh subreddit page (URL: http://localhost:9080/f/pittsburgh), indicating a successful navigation to the target community context.",
+      "The agent is proceeding to the submission phase within the Pittsburgh subreddit to post the specific question regarding driving schools. This step represents the transition from viewing the community to accessing the post creation interface.\n\nThe action clicked on the element with ID '65'. This resulted in a navigation to the submission page (URL: http://localhost:9080/submit/pittsburgh), replacing the subreddit feed view with a form or input area designed for creating a new post in that specific community."
+    ],
+    "prompt_tokens": 218,
+    "total_tokens": 218,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "293d7c8d63f34130a41ead63f1dd62f6",
+    "timestamp_epoch": 1791991248.1082733,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 2,
+    "actual_vectors": 2,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.10075303999474272,
+    "input_keys": [
+      "1de5a4496631d47fa1aa0d70a9365eb2e574d61be878717938ea98ebe8f292cf",
+      "f6833f531c75143b63a2f622ce02d4cae0410848cb009238700585064f2fcc66"
+    ]
+  },
+  {
+    "record_id": "9d57d91654944924ae138d6b5b1728d2",
+    "timestamp_epoch": 1791991248.1770186,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.06833144499978516,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 536,
+    "input_sha256": [
+      "ded4a0ef0141a7c6d3997454cdb13055d77529506058999938bef61ff1d52195"
+    ],
+    "input_texts": [
+      "Title: Navigate to Subreddit and Initiate Post Creation\nDescription: Steps to move from the forums list to the specific subreddit submission page.\n- Start at the forums list page (URL: http://localhost:9080/forums/all).\n- Click the link for the target subreddit (e.g., 'pittsburgh') to navigate to the subreddit page.\n- On the subreddit page, click the 'New Post' button (or equivalent action) to navigate to the submission page.\n- Arrive at the submission form page (URL: http://localhost:9080/submit/pittsburgh) to enter the question."
+    ],
+    "prompt_tokens": 130,
+    "total_tokens": 130,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "a3a431929797497695d033253ca522c4",
+    "timestamp_epoch": 1791991248.1771011,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.06845209099992644,
+    "input_keys": [
+      "72f2d65478d80aa107b21bd6f83f8a42eb983e62071d3619b4141df82964bd8a"
+    ]
+  },
+  {
+    "record_id": "757bf3d291d141be8bcde09a4edf0565",
+    "timestamp_epoch": 1791991248.22485,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.04735881299711764,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 603,
+    "input_sha256": [
+      "356926f14015aaf502b163406f7e15c058aca97d010ab2a6dea3788c3f31f1a6"
+    ],
+    "input_texts": [
+      "Title: Subreddit Navigation and Submission Entry Points\nDescription: Key signals and locations for finding a subreddit and starting a new post.\n- Subreddit pages are accessible via direct URLs formatted as /f/{subreddit_name}.\n- The forums list page (/forums/all) acts as the directory to find specific subreddits.\n- The submission form is located at /submit/{subreddit_name} and is the required page to write a post.\n- Navigation requires clicking the specific subreddit name first, then the post creation button.\n- The trajectory shows the specific path: forums/all -> pittsburgh -> submit/pittsburgh."
+    ],
+    "prompt_tokens": 125,
+    "total_tokens": 125,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "8a85f69840ba4b3cac6cf1a6bcbf00d8",
+    "timestamp_epoch": 1791991248.2249184,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.047458308006753214,
+    "input_keys": [
+      "9a5cc607f91534d5adb9340418d329ab2fa8f917288c17383cdb52bd7c4a4ccf"
+    ]
+  }
+]

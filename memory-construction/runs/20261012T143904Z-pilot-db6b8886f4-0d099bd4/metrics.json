@@ -1,0 +1,23 @@
+{
+  "backend": "transformers_local",
+  "elapsed_ns": 68705163310,
+  "embedding_dimensions": 4096,
+  "embedding_texts": 43,
+  "equivalence_checked_trajectories": 2,
+  "equivalent_trajectories": 2,
+  "events": 13,
+  "judge_probe": {
+    "reason": "not_configured",
+    "status": "blocked"
+  },
+  "live_model_calls": 13,
+  "live_model_input_tokens": 2982,
+  "live_model_output_tokens": 781,
+  "protocol": "B",
+  "qa_rows": 0,
+  "records": 4,
+  "replay_for_paired_methods": true,
+  "status": "completed",
+  "suite": "pilot",
+  "trajectories": 4
+}

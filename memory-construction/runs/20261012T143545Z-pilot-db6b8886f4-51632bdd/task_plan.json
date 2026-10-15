@@ -1,0 +1,92 @@
+{
+  "config_sha256": "db6b8886f47b2bda4ab6a124d3ff576608772d0f226b5c203e6b8949e05c7779",
+  "created_at": "2026-10-12T14:35:45.380302Z",
+  "estimates": {
+    "model_calls": "pending_backend_estimate",
+    "storage_bytes": "pending_backend_estimate",
+    "target_trajectories": 24,
+    "task_count": 4
+  },
+  "run_id": "20261012T143545Z-pilot-db6b8886f4-51632bdd",
+  "status": "planned",
+  "suite": "pilot",
+  "suite_spec": {
+    "methods": [
+      "agentrunbook_r",
+      "memforest"
+    ],
+    "phase": "P1",
+    "protocols": [
+      "A",
+      "B"
+    ],
+    "requires_live_models": true,
+    "smoke_first": 4,
+    "split": "development",
+    "target_trajectories": 24
+  },
+  "task_plan_schema_version": "workflow-memory-task-plan/1",
+  "task_plan_sha256": "c02f1d7d85d2c8eed8e775ec9511f11a167825598b4aa6087a5086a4e8cfaf1f",
+  "tasks": [
+    {
+      "dependencies": [],
+      "method": "agentrunbook_r",
+      "ordinal": 0,
+      "output_dir": "outputs/task-b682f2f6e64764ff",
+      "protocol": "A",
+      "repeat": 1,
+      "requires_frozen_config": false,
+      "requires_live_models": true,
+      "status": "planned",
+      "suite": "pilot",
+      "target_trajectories": 24,
+      "task_id": "task-b682f2f6e64764ff",
+      "variant": null
+    },
+    {
+      "dependencies": [],
+      "method": "agentrunbook_r",
+      "ordinal": 1,
+      "output_dir": "outputs/task-1d48390c2a2326c8",
+      "protocol": "B",
+      "repeat": 1,
+      "requires_frozen_config": false,
+      "requires_live_models": true,
+      "status": "planned",
+      "suite": "pilot",
+      "target_trajectories": 24,
+      "task_id": "task-1d48390c2a2326c8",
+      "variant": null
+    },
+    {
+      "dependencies": [],
+      "method": "memforest",
+      "ordinal": 2,
+      "output_dir": "outputs/task-b078f8f5b7d7b9e5",
+      "protocol": "A",
+      "repeat": 1,
+      "requires_frozen_config": false,
+      "requires_live_models": true,
+      "status": "planned",
+      "suite": "pilot",
+      "target_trajectories": 24,
+      "task_id": "task-b078f8f5b7d7b9e5",
+      "variant": null
+    },
+    {
+      "dependencies": [],
+      "method": "memforest",
+      "ordinal": 3,
+      "output_dir": "outputs/task-2ff45418b6e28e3a",
+      "protocol": "B",
+      "repeat": 1,
+      "requires_frozen_config": false,
+      "requires_live_models": true,
+      "status": "planned",
+      "suite": "pilot",
+      "target_trajectories": 24,
+      "task_id": "task-2ff45418b6e28e3a",
+      "variant": null
+    }
+  ]
+}

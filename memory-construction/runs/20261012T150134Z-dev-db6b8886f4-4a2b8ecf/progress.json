@@ -1,0 +1,9 @@
+{
+  "completed_events": 284,
+  "completed_trajectories": 22,
+  "live_model_calls": 284,
+  "status": "running",
+  "suite": "dev",
+  "total_trajectories": 24,
+  "updated_at": "2026-10-12T15:12:07.344020Z"
+}

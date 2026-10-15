@@ -1,0 +1,24 @@
+{
+  "batch_warmup_s": 0.12829824200161966,
+  "batch_warmup_usage": [
+    {
+      "completion_tokens": 4,
+      "prompt_tokens": 17,
+      "total_tokens": 21
+    },
+    {
+      "completion_tokens": 4,
+      "prompt_tokens": 17,
+      "total_tokens": 21
+    }
+  ],
+  "fingerprint": "transformers-qwen:Qwen3.5-9B:061f4abd834f882d:cuda:0",
+  "load_s": 5.668806959998619,
+  "warmup_policy": "one shared resident checkpoint; all methods start after the same serial and, when enabled, real batch2 warmup",
+  "warmup_s": 0.39623558199673425,
+  "warmup_usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 17,
+    "total_tokens": 21
+  }
+}

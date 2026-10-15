@@ -1,0 +1,58 @@
+{
+  "code_sha256": {
+    "src/workflow_memory/construction.py": "ca0a9c183403ca3624ac05942c9acc6496c6bd09646cc14807831a31d5a53109",
+    "src/workflow_memory/local_backends.py": "d716417071e8e7987c2c4dc6307cfe2727341f344c8795e9a8eeabbb03f580d8",
+    "src/workflow_memory/source_literals.py": "085333ca15fa53ca4ab5229e1e0817463ee078e6d87510325d285dc40dde74ce",
+    "src/workflow_memory/temporal_retrieval.py": "b14ffd791eb3f54fa91312476b282d264dcf5eba960d01f2962e2c59a4827cc9",
+    "tools/run_dev_reader.py": "aff8407c3865e87bc443840b54f6352b7a726763692d9e752dbc21b4281bd49a"
+  },
+  "config_sha256": "6c4cb0cef1de4d23f5d460f9a738369140b2425acb2784d05dbebe50a70579a3",
+  "construction_latency_includes_reader": false,
+  "construction_runs": [
+    {
+      "manifest_sha256": "0ddf8257c689655321f46d25d4f467d60bed4d0a914cc3505a8d43aadd7f029d",
+      "methods": [
+        "Ours-dev",
+        "B3-c2"
+      ],
+      "metrics_sha256": "59aba6e9262dc63d29e17c95c8ed74b4a064228292fc2689db23213db70bb40e",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-quality-v3-request-cache-e2e-20261013"
+    }
+  ],
+  "official_qa_status": "not_evaluated",
+  "quality_scope": "auto_source_development_proxy",
+  "question_manifest_hash": "05c50115f55605236da34873c035045e4729a4fef43510d1e8139407b73a6a5b",
+  "reader_model": {
+    "api_key_env": "READER_API_KEY",
+    "backend": "transformers",
+    "base_url_env": "READER_BASE_URL",
+    "checkpoint_revision": null,
+    "device": "cuda:0",
+    "id": "Qwen/Qwen3.5-9B",
+    "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+    "parameters": "inherit_and_pin_frozen_official_protocol"
+  },
+  "reader_response_cache": false,
+  "reader_settings": {
+    "enable_thinking": false,
+    "include_views": true,
+    "max_input_tokens": 8192,
+    "output_tokens": 256,
+    "retrieval": "public-step-lexical-v2",
+    "retrieval_budget": 8,
+    "temperature": 0.0
+  },
+  "reader_settings_hash": "a7ca0d6ade765b619c6c8e8e9a5e40696b03236e392c27c6f16e5d8aefe33e48",
+  "reader_settings_manifest_original": {
+    "enable_thinking": false,
+    "max_input_tokens": 8192,
+    "output_tokens": 256,
+    "retrieval": "core_lexical_query_v1",
+    "retrieval_budget": 8,
+    "temperature": 0.0
+  },
+  "repeat": 1,
+  "retrieval_mode_override": "public-step-lexical-v2",
+  "schema_version": "development-reader-run/1",
+  "started_at": "2026-10-13T13:58:26.768893Z"
+}

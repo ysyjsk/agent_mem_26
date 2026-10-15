@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "attempt_id": "20261013T071958Z-37c03bbb",
+  "task": "R1",
+  "hypothesis": "H0b: 事件级evidence IDs、完整256-token JSON、冻结prompt/cache与独立磁盘可读检查修复6次失败及丢失证据；同固定4窗口真实B0/Ours重跑，预期93对45模型调用；不回放且保留负结果",
+  "command": [
+    "/usr/bin/env",
+    "PYTHONPATH=src",
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_fast_compare.py",
+    "--config",
+    "configs/runtime.local.json",
+    "--manifest",
+    "manifests/fastloop_dev_v1.json",
+    "--methods",
+    "B0,Ours-dev",
+    "--out",
+    "runs/fast-compare-v4-corrected-20261013"
+  ],
+  "cwd": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+  "resource": "gpu",
+  "started_at": "2026-10-13T07:19:58.683774+00:00",
+  "status": "command_succeeded",
+  "supervisor": {
+    "pid": 756260,
+    "start_ticks": "1576279",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "child": {
+    "pid": 756360,
+    "start_ticks": "1576284",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "timeout_seconds": 7200.0,
+  "exit_code": 0,
+  "heartbeat_means": "supervisor alive, not experiment making progress",
+  "finished_at": "2026-10-13T07:29:46.599162+00:00",
+  "elapsed_seconds": 587.9152142929997,
+  "next_action": "Review semantic artifacts and metrics, update queue, execute next task."
+}

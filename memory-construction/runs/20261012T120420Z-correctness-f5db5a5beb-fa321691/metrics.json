@@ -1,0 +1,12 @@
+{
+  "backend": "deterministic_local",
+  "checks": 6,
+  "duration_ns": 19347957,
+  "events": 4,
+  "fresh_evidence": 9,
+  "incremental_invalidated_nodes": 8,
+  "incremental_reused_nodes": 9,
+  "passed": 6,
+  "protocol": "C",
+  "status": "completed"
+}

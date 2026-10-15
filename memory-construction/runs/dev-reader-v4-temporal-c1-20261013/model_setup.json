@@ -1,0 +1,9 @@
+{
+  "fingerprint": "transformers-qwen:Qwen3.5-9B:061f4abd834f882d:cuda:0",
+  "load_s": 5.6067704199995205,
+  "warmup_usage": {
+    "completion_tokens": 4,
+    "prompt_tokens": 16,
+    "total_tokens": 20
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "completed_at": "2026-10-13T11:25:28.989874Z",
+  "evaluator_only": true,
+  "latency_tokens_policy": "copy source row usage and latency; not counted as a new experiment",
+  "new_embedding_calls": 0,
+  "new_model_calls": 0,
+  "no_new_model_calls": true,
+  "not_a_new_experiment": true,
+  "output_files": [
+    "qa_per_question.jsonl",
+    "dev_quality.csv",
+    "dev_quality_by_type.csv",
+    "dev_quality_by_category.csv",
+    "metrics.json",
+    "manifest.json",
+    "status.json"
+  ],
+  "output_qa_per_question_sha256": "5c67933aa68868d4a3509c277ff20d137766b5aea39597e31a1931410521ed1d",
+  "rescored_rows": 90,
+  "schema_version": "development-reader-rescore/1",
+  "score_corrections": 5,
+  "score_function": "tools/run_dev_reader.py:score_answer",
+  "score_function_sha256": "aff8407c3865e87bc443840b54f6352b7a726763692d9e752dbc21b4281bd49a",
+  "source_manifest_schema_version": "development-reader-run/1",
+  "source_manifest_sha256": "45cd4f7e4e8fae504162d97afc079f5cacc26bcab46d10a93484724c9246793b",
+  "source_metrics_reused": [
+    "reader_calls",
+    "input_tokens",
+    "output_tokens",
+    "elapsed_s",
+    "reader_s",
+    "retrieval_s",
+    "wall_s"
+  ],
+  "source_qa_per_question": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-reader-v4-quality-v3-qa2-20261013/qa_per_question.jsonl",
+  "source_qa_per_question_sha256": "3f5f20a64805879de7a5b438449a5846a96975cf5018202e3f2506f9c51413a6",
+  "source_rows": 90,
+  "source_run": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-reader-v4-quality-v3-qa2-20261013",
+  "source_run_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-reader-v4-quality-v3-qa2-20261013",
+  "source_status": "completed",
+  "source_status_sha256": "5c36bbe75d7e60e8672c6073174bbeb4045414bfd5ec1fad83b903fd30deb618",
+  "started_at": "2026-10-13T11:25:28.989864Z",
+  "status": "completed",
+  "summary_files": {
+    "dev_quality": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-reader-v4-quality-v3-qa2-rescored-20261013/dev_quality.csv",
+    "dev_quality_by_category": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-reader-v4-quality-v3-qa2-rescored-20261013/dev_quality_by_category.csv",
+    "dev_quality_by_type": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-reader-v4-quality-v3-qa2-rescored-20261013/dev_quality_by_type.csv"
+  }
+}

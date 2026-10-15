@@ -1,0 +1,8 @@
+{
+  "trajectory_count": 5,
+  "status": "success",
+  "scope": "build_to_queryable_publish_including_persistence_and_load_validation",
+  "saved_memory_load_verified": true,
+  "elapsed_seconds": 462.24521133399685,
+  "metrics_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-adapted-text-v1/results/enterprise-workflow-ours-v2/memory_build_metrics.jsonl"
+}

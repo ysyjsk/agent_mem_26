@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="sans-serif" font-size="13" fill="#222">
+<text x="15" y="24">Text-only adapted development (8 fixed questions; 10 complete trajectories)</text>
+<text x="295" y="52">Recorded cold build to publication (seconds)</text>
+<text x="800" y="52">Correct / 8 (repeat range)</text>
+<text x="15" y="87">Raw RAG, original packing</text>
+<rect x="295" y="70" width="28.1" height="24" fill="#397ca8"/>
+<text x="333.1" y="87">89.1</text>
+<circle cx="808" cy="82" r="6" fill="#228866"/>
+<circle cx="827" cy="82" r="6" fill="#228866"/>
+<circle cx="846" cy="82" r="6" fill="#228866"/>
+<circle cx="865" cy="82" r="6" fill="#228866"/>
+<circle cx="884" cy="82" r="6" fill="#228866"/>
+<circle cx="903" cy="82" r="6" fill="#dddddd"/>
+<circle cx="922" cy="82" r="6" fill="#dddddd"/>
+<circle cx="941" cy="82" r="6" fill="#dddddd"/>
+<text x="15" y="132">AgentRunbook-R + chunks</text>
+<rect x="295" y="115" width="370.0" height="24" fill="#397ca8"/>
+<text x="675.0" y="132">1170.7</text>
+<circle cx="808" cy="127" r="6" fill="#228866"/>
+<circle cx="827" cy="127" r="6" fill="#228866"/>
+<circle cx="846" cy="127" r="6" fill="#228866"/>
+<circle cx="865" cy="127" r="6" fill="#228866"/>
+<circle cx="884" cy="127" r="6" fill="#228866"/>
+<circle cx="903" cy="127" r="6" fill="#228866"/>
+<circle cx="922" cy="127" r="6" fill="#dddddd"/>
+<circle cx="941" cy="127" r="6" fill="#dddddd"/>
+<text x="15" y="177">J: raw + chunks</text>
+<rect x="295" y="160" width="28.1" height="24" fill="#397ca8"/>
+<text x="333.1" y="177">89.1</text>
+<circle cx="808" cy="172" r="6" fill="#228866"/>
+<circle cx="827" cy="172" r="6" fill="#228866"/>
+<circle cx="846" cy="172" r="6" fill="#228866"/>
+<circle cx="865" cy="172" r="6" fill="#228866"/>
+<circle cx="884" cy="172" r="6" fill="#228866"/>
+<circle cx="903" cy="172" r="6" fill="#228866"/>
+<circle cx="922" cy="172" r="6" fill="#dddddd"/>
+<circle cx="941" cy="172" r="6" fill="#dddddd"/>
+<text x="15" y="222">L: J + tokenizer reuse</text>
+<rect x="295" y="205" width="28.1" height="24" fill="#397ca8"/>
+<text x="333.1" y="222">89.1</text>
+<circle cx="808" cy="217" r="6" fill="#228866"/>
+<circle cx="827" cy="217" r="6" fill="#228866"/>
+<circle cx="846" cy="217" r="6" fill="#228866"/>
+<circle cx="865" cy="217" r="6" fill="#228866"/>
+<circle cx="884" cy="217" r="6" fill="#228866"/>
+<circle cx="903" cy="217" r="6" fill="#228866"/>
+<circle cx="922" cy="217" r="6" fill="#dddddd"/>
+<circle cx="941" cy="217" r="6" fill="#dddddd"/>
+<text x="15" y="267">M: L + source backfill</text>
+<rect x="295" y="250" width="28.1" height="24" fill="#397ca8"/>
+<text x="333.1" y="267">89.1</text>
+<circle cx="808" cy="262" r="6" fill="#228866"/>
+<circle cx="827" cy="262" r="6" fill="#228866"/>
+<circle cx="846" cy="262" r="6" fill="#228866"/>
+<circle cx="865" cy="262" r="6" fill="#228866"/>
+<circle cx="884" cy="262" r="6" fill="#228866"/>
+<circle cx="903" cy="262" r="6" fill="#228866"/>
+<circle cx="922" cy="262" r="6" fill="#e2ae43"/>
+<circle cx="941" cy="262" r="6" fill="#dddddd"/>
+<text x="15" y="312">N: M + local source context</text>
+<rect x="295" y="295" width="28.1" height="24" fill="#397ca8"/>
+<text x="333.1" y="312">89.1</text>
+<circle cx="808" cy="307" r="6" fill="#228866"/>
+<circle cx="827" cy="307" r="6" fill="#228866"/>
+<circle cx="846" cy="307" r="6" fill="#228866"/>
+<circle cx="865" cy="307" r="6" fill="#228866"/>
+<circle cx="884" cy="307" r="6" fill="#228866"/>
+<circle cx="903" cy="307" r="6" fill="#228866"/>
+<circle cx="922" cy="307" r="6" fill="#dddddd"/>
+<circle cx="941" cy="307" r="6" fill="#dddddd"/>
+<text x="15" y="357">RAG+Notes + M (quality candidate)</text>
+<rect x="295" y="340" width="77.0" height="24" fill="#397ca8"/>
+<text x="382.0" y="357">243.5</text>
+<circle cx="808" cy="352" r="6" fill="#228866"/>
+<circle cx="827" cy="352" r="6" fill="#228866"/>
+<circle cx="846" cy="352" r="6" fill="#228866"/>
+<circle cx="865" cy="352" r="6" fill="#228866"/>
+<circle cx="884" cy="352" r="6" fill="#228866"/>
+<circle cx="903" cy="352" r="6" fill="#228866"/>
+<circle cx="922" cy="352" r="6" fill="#228866"/>
+<circle cx="941" cy="352" r="6" fill="#e2ae43"/>
+<text x="15" y="402">O: Notes+M + query reuse</text>
+<rect x="295" y="385" width="77.0" height="24" fill="#397ca8"/>
+<text x="382.0" y="402">243.5</text>
+<circle cx="808" cy="397" r="6" fill="#228866"/>
+<circle cx="827" cy="397" r="6" fill="#228866"/>
+<circle cx="846" cy="397" r="6" fill="#228866"/>
+<circle cx="865" cy="397" r="6" fill="#228866"/>
+<circle cx="884" cy="397" r="6" fill="#228866"/>
+<circle cx="903" cy="397" r="6" fill="#228866"/>
+<circle cx="922" cy="397" r="6" fill="#228866"/>
+<circle cx="941" cy="397" r="6" fill="#dddddd"/>
+<text x="15" y="447">Strong B3-c1 adapted</text>
+<rect x="295" y="430" width="169.9" height="24" fill="#397ca8"/>
+<text x="474.9" y="447">537.7</text>
+<circle cx="808" cy="442" r="6" fill="#228866"/>
+<circle cx="827" cy="442" r="6" fill="#228866"/>
+<circle cx="846" cy="442" r="6" fill="#228866"/>
+<circle cx="865" cy="442" r="6" fill="#228866"/>
+<circle cx="884" cy="442" r="6" fill="#dddddd"/>
+<circle cx="903" cy="442" r="6" fill="#dddddd"/>
+<circle cx="922" cy="442" r="6" fill="#dddddd"/>
+<circle cx="941" cy="442" r="6" fill="#dddddd"/>
+<text x="15" y="492">Ours-dev adapted</text>
+<rect x="295" y="475" width="218.2" height="24" fill="#397ca8"/>
+<text x="523.2" y="492">690.4</text>
+<circle cx="808" cy="487" r="6" fill="#228866"/>
+<circle cx="827" cy="487" r="6" fill="#228866"/>
+<circle cx="846" cy="487" r="6" fill="#228866"/>
+<circle cx="865" cy="487" r="6" fill="#228866"/>
+<circle cx="884" cy="487" r="6" fill="#228866"/>
+<circle cx="903" cy="487" r="6" fill="#dddddd"/>
+<circle cx="922" cy="487" r="6" fill="#dddddd"/>
+<circle cx="941" cy="487" r="6" fill="#dddddd"/>
+<text x="15" y="550">Amber = variation across repeats. Query variants reuse cold builds. No native/Judge or superiority claim.</text>
+</g></svg>

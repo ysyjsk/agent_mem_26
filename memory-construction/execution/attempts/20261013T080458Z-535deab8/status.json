@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "attempt_id": "20261013T080458Z-535deab8",
+  "task": "R3",
+  "hypothesis": "H3:双方同预算batch2上下文2降至0，实测输入耗时和质量风险而非假定改善",
+  "command": [
+    "/usr/bin/env",
+    "PYTHONPATH=src",
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_fast_compare.py",
+    "--config",
+    "configs/runtime.local.json",
+    "--manifest",
+    "manifests/fastloop_dev_v1.json",
+    "--settings",
+    "configs/fastloop_batch2_context0.json",
+    "--methods",
+    "Ours-dev,B3-c2",
+    "--scope",
+    "construction_e2e",
+    "--out",
+    "runs/fast-compare-v4-e2e-batch2-context0-20261013",
+    "--table",
+    "results/tables/dev_strong_compare_batch2_context0.csv",
+    "--report",
+    "reports/dev_strong_compare-batch2-context0.md"
+  ],
+  "cwd": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+  "resource": "gpu",
+  "started_at": "2026-10-13T08:04:58.836913+00:00",
+  "status": "command_succeeded",
+  "supervisor": {
+    "pid": 892397,
+    "start_ticks": "1846291",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "child": {
+    "pid": 892490,
+    "start_ticks": "1846300",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "timeout_seconds": 7200.0,
+  "exit_code": 0,
+  "heartbeat_means": "supervisor alive, not experiment making progress",
+  "finished_at": "2026-10-13T08:08:09.143863+00:00",
+  "elapsed_seconds": 190.30666255399774,
+  "next_action": "Review semantic artifacts and metrics, update queue, execute next task."
+}

@@ -1,0 +1,109 @@
+{
+  "overall": {
+    "overall_full_set": 0.0,
+    "overall_non_abstention_only": 0.0,
+    "overall_abstention_only": null,
+    "count_all_questions": 1,
+    "count_non_abstention": 1,
+    "count_abstention": 0
+  },
+  "non_abstention_by_category": {
+    "static": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "dynamic": {
+      "count": 1,
+      "pct_correct": 0.0,
+      "pct_answered_wrong": 1.0,
+      "pct_unknown": 0.0
+    },
+    "procedure": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "gotchas": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    }
+  },
+  "abstention_by_category": {
+    "static-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "dynamic-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "procedure-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    }
+  },
+  "combined_abstention_by_category": {
+    "static": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "dynamic": {
+      "count": 1,
+      "pct_correct": 0.0,
+      "pct_answered_wrong": 1.0,
+      "pct_unknown": 0.0
+    },
+    "procedure": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    }
+  },
+  "abstention_overall": {
+    "count": 0,
+    "pct_correct": null,
+    "pct_answered_wrong": null,
+    "pct_unknown": null
+  },
+  "tokens": {
+    "prompt_tokens": 666,
+    "completion_tokens": 256,
+    "total_tokens": 922,
+    "avg_prompt_tokens": 666.0,
+    "avg_completion_tokens": 256.0,
+    "avg_total_tokens": 922.0
+  },
+  "memory_query": {
+    "avg_seconds": 1.9347209179977654,
+    "p50_seconds": 1.9347209179977654,
+    "p95_seconds": 1.9347209179977654,
+    "max_seconds": 1.9347209179977654,
+    "total_seconds": 1.9347209179977654
+  },
+  "memory_post_query": {
+    "avg_seconds": 9.849973139353096e-07,
+    "p50_seconds": 9.849973139353096e-07,
+    "p95_seconds": 9.849973139353096e-07,
+    "max_seconds": 9.849973139353096e-07,
+    "total_seconds": 9.849973139353096e-07
+  },
+  "completed_at_utc": "2026-10-13T20:54:50.122249+00:00",
+  "shared_haystack": true,
+  "shared_haystack_ids": [
+    "00332982"
+  ]
+}

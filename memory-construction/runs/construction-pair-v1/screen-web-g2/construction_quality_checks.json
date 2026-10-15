@@ -1,0 +1,58 @@
+{
+  "structural_checks": {
+    "event_source_coverage": true,
+    "event_fields_nonempty": true,
+    "raw_state_coverage": true,
+    "both_notes_preserved": true,
+    "sources_valid": true
+  },
+  "structural_pass": true,
+  "event_count": 7,
+  "raw_state_count": 8,
+  "note_count": 2,
+  "screen_fact_probes": [
+    {
+      "event_id": "event_0002_0003",
+      "literals": [
+        "Name",
+        "Cyberpunk"
+      ],
+      "pass": true
+    },
+    {
+      "event_id": "event_0003_0004",
+      "literals": [
+        "Title",
+        "Cyberpunk"
+      ],
+      "pass": true
+    },
+    {
+      "event_id": "event_0004_0005",
+      "literals": [
+        "Description",
+        "Welcome to the future"
+      ],
+      "pass": true
+    },
+    {
+      "event_id": "event_0005_0006",
+      "literals": [
+        "Sidebar",
+        "Games",
+        "Books",
+        "Movies",
+        "Future"
+      ],
+      "pass": true
+    },
+    {
+      "event_id": "event_0006_0007",
+      "literals": [
+        "Cyberpunk"
+      ],
+      "pass": true
+    }
+  ],
+  "fact_probe_scope": "Five source-backed value/change probes on 1ad1af4b; not a semantic equivalence or official QA claim"
+}

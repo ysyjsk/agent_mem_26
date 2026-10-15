@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "attempt_id": "20261013T082458Z-39d818a9",
+  "task": "R4",
+  "hypothesis": "H4q:预固定12题真实Reader比较Fresh/c1/batch2/context0；自动源代理与官方QA分列且unknown保留",
+  "command": [
+    "/usr/bin/env",
+    "PYTHONPATH=src",
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_dev_reader.py",
+    "--run",
+    "--questions",
+    "manifests/fastloop_dev_qa_v1.json",
+    "--config",
+    "configs/runtime.local.json",
+    "--runs",
+    "runs/fast-compare-v4-e2e-c1-20261013",
+    "runs/fast-compare-v4-e2e-batch2-20261013",
+    "runs/fast-compare-v4-e2e-batch2-context0-20261013",
+    "--methods",
+    "B0,Ours-dev,B3-c1,B3-c2",
+    "--out",
+    "runs/dev-reader-v4-first-20261013"
+  ],
+  "cwd": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+  "resource": "gpu",
+  "started_at": "2026-10-13T08:24:58.002759+00:00",
+  "status": "command_succeeded",
+  "supervisor": {
+    "pid": 951841,
+    "start_ticks": "1966209",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "child": {
+    "pid": 951848,
+    "start_ticks": "1966216",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "timeout_seconds": 7200.0,
+  "exit_code": 0,
+  "heartbeat_means": "supervisor alive, not experiment making progress",
+  "finished_at": "2026-10-13T08:25:38.627697+00:00",
+  "elapsed_seconds": 40.624773686999106,
+  "next_action": "Review semantic artifacts and metrics, update queue, execute next task."
+}

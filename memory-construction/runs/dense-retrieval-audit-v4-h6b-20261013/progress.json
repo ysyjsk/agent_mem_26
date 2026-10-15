@@ -1,0 +1,13 @@
+{
+  "last": {
+    "construction_run_id": "fast-compare-v4-quality-v3-compact-emb-20261013",
+    "method": "B3-c2",
+    "question_id": "ec6c60c2-prefix12-cp8-shipping_checkbox_state",
+    "status": "completed"
+  },
+  "preflight_failures": 0,
+  "questions_attempted": 72,
+  "status": "running",
+  "total": 72,
+  "updated_at": "2026-10-13T13:38:39Z"
+}

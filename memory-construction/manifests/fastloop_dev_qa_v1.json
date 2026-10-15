@@ -1,0 +1,328 @@
+{
+  "cross_check": "source SHA256, normalized event IDs and source-field hashes verified during deterministic preparation",
+  "generator": "tools/run_dev_reader.py:prepare_questions/v1",
+  "generator_sha256": "4c983ba75c321da8b9558b14e2bdd5037f8b692635db1f2b1e04065b9dba5a25",
+  "input_modality": "text-only",
+  "manifest_hash": "21a1daf384f9d6fba8843d67a37b9a0e41dc62d461f9fd4680f1562fd363c709",
+  "purpose": "auto-source development proxy; not official QA or human gold",
+  "questions": [
+    {
+      "answer_format": "exact_scalar",
+      "category": "observed_url",
+      "checkpoint_prefix_length": 4,
+      "question": "At the checkpoint containing 4 source steps, what URL was observed after source step 4? Return only the exact observed URL. Do not infer an action succeeded. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "0db80092-prefix12-cp4-observed_url",
+      "reference": {
+        "expected": "https://empmassimo20.service-now.com/now/nav/ui/classic/params/target/alm_asset_list.do",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "749b2e211228274a5017bf43c1d0b4f378e1723f8f04ba225c19e0fbef2f5f9d",
+        "source_fields": [
+          {
+            "event_id": "0db80092:3",
+            "field": "post_state_ref.url",
+            "field_value_hash": "1968dc573d545775ff2be166b892da6e715f8011404913d361a73d9eceaf38b2",
+            "raw_content_hash": "22c9d019ccc50f534a9bf08da452ba781751efaddf57235815b4e199537c1f39",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "0db80092-prefix12"
+    },
+    {
+      "answer_format": "exact_scalar",
+      "category": "attempt_action",
+      "checkpoint_prefix_length": 8,
+      "question": "At the checkpoint containing 8 source steps, what action command was attempted at source step 8? Return only the exact action command, not an inferred outcome. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "0db80092-prefix12-cp8-attempt_action",
+      "reference": {
+        "expected": "click('a1842')",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "545dee932ce87648c33afcf2257004c09e881eb1dba1702d73f1e7e149e41c36",
+        "source_fields": [
+          {
+            "event_id": "0db80092:7",
+            "field": "action",
+            "field_value_hash": "ee16583f6eb4b7f3919113ad6c7ebf0ccb0050c76926e1e031c6b76af47bd162",
+            "raw_content_hash": "54cc438b2f828b2d4ef2088beaa1c278f78e5b0a18b76ff6d520c45e4a81e45b",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "0db80092-prefix12"
+    },
+    {
+      "answer_format": "ordered_exact_array",
+      "category": "workflow_order",
+      "checkpoint_prefix_length": 12,
+      "question": "At the checkpoint containing 12 source steps, list the action commands attempted at source steps 11 and 12, in that order. Return only a JSON array of two exact command strings. If either is absent from the retrieved evidence, return unknown.",
+      "question_id": "0db80092-prefix12-cp12-workflow_order",
+      "reference": {
+        "expected": [
+          "click('a1859')",
+          "click('a2151')"
+        ],
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "16ea53dc6cb5391bb8f54489201a82adbe39d6f2637f3aab24d34935f7923597",
+        "source_fields": [
+          {
+            "event_id": "0db80092:10",
+            "field": "action",
+            "field_value_hash": "0ae01fe2d36e31d54f96688d283cfbe824a9b5a6bc6589def8a6c3161f17c113",
+            "raw_content_hash": "3a476b1ca4bad7820fd69c566eb799be133d391e542782a4ee53a7fceeaba37e",
+            "source_revision": 0
+          },
+          {
+            "event_id": "0db80092:11",
+            "field": "action",
+            "field_value_hash": "7fb8cab06041312c7f602382959f637ef768a48a4dfd97bd81b73700389f0636",
+            "raw_content_hash": "e993f217b450e846f5fd2b82e7fa69e0ae077126c5aea1821c3c2bfc7fa5c97a",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "0db80092-prefix12"
+    },
+    {
+      "answer_format": "exact_scalar",
+      "category": "observed_url",
+      "checkpoint_prefix_length": 4,
+      "question": "At the checkpoint containing 4 source steps, what URL was observed after source step 4? Return only the exact observed URL. Do not infer an action succeeded. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "170f5570-prefix9-cp4-observed_url",
+      "reference": {
+        "expected": "https://empmassimo20.service-now.com/now/nav/ui/classic/params/target/alm_hardware_list.do%3Fsysparm_userpref_module%3Dbfd7b20c37f3100044e0bfc8bcbe5d49",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "285d03785a12e2a11b476a7844bc007f71c215e65b89944e1640e2455650434b",
+        "source_fields": [
+          {
+            "event_id": "170f5570:3",
+            "field": "post_state_ref.url",
+            "field_value_hash": "239285e9e03e44fc67cb85bc81129d21a0f7345f42a9c7f2319db193970237bd",
+            "raw_content_hash": "88c9fc2aa2b91d220d8aa8a3264bd927075e8b8cc775fe11da68ea5be10b15cf",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "170f5570-prefix9"
+    },
+    {
+      "answer_format": "exact_scalar",
+      "category": "attempt_action",
+      "checkpoint_prefix_length": 8,
+      "question": "At the checkpoint containing 8 source steps, what action command was attempted at source step 8? Return only the exact action command, not an inferred outcome. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "170f5570-prefix9-cp8-attempt_action",
+      "reference": {
+        "expected": "press('a74', 'Enter')",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "533c3d845aaec9bbc15ad308001fd95401bdcabce6d4537b9436e90823faa38c",
+        "source_fields": [
+          {
+            "event_id": "170f5570:7",
+            "field": "action",
+            "field_value_hash": "0fdda83c339da59d0f41d2f1be31e6c6bd1cdb8bebc80896b4d74f9284849b67",
+            "raw_content_hash": "b50d7eea28551161e55649d100b1b33d96bbcf5954c27b0a9b2a18d281482f45",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "170f5570-prefix9"
+    },
+    {
+      "answer_format": "ordered_exact_array",
+      "category": "workflow_order",
+      "checkpoint_prefix_length": 9,
+      "question": "At the checkpoint containing 9 source steps, list the action commands attempted at source steps 8 and 9, in that order. Return only a JSON array of two exact command strings. If either is absent from the retrieved evidence, return unknown.",
+      "question_id": "170f5570-prefix9-cp9-workflow_order",
+      "reference": {
+        "expected": [
+          "press('a74', 'Enter')",
+          "send_msg_to_user(\"Found asset P54356608 (Dell Precision T5500 Workstation) assigned to Kelly‑Ronald Schwartz‑King. Warranty expiration: 2026-01-11. (No laptop record found for that user on the current list.)\")"
+        ],
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "39227fca5534096eaace21bf58e38a1f8ab869b97b2e3545bb1aff111e9bf68c",
+        "source_fields": [
+          {
+            "event_id": "170f5570:7",
+            "field": "action",
+            "field_value_hash": "0fdda83c339da59d0f41d2f1be31e6c6bd1cdb8bebc80896b4d74f9284849b67",
+            "raw_content_hash": "b50d7eea28551161e55649d100b1b33d96bbcf5954c27b0a9b2a18d281482f45",
+            "source_revision": 0
+          },
+          {
+            "event_id": "170f5570:8",
+            "field": "action",
+            "field_value_hash": "7461cf6babc2efe71ca77a6545afed6e43b4c9805fc6970c6e055705eb744f15",
+            "raw_content_hash": "ea3da5f3d2f1cb4188d3634174dbb43a7b6c762d537a4566e64ef2b1a42ba76e",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "170f5570-prefix9"
+    },
+    {
+      "answer_format": "exact_scalar",
+      "category": "observed_url",
+      "checkpoint_prefix_length": 4,
+      "question": "At the checkpoint containing 4 source steps, what URL was observed after source step 4? Return only the exact observed URL. Do not infer an action succeeded. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "4a5f0d7f-prefix12-cp4-observed_url",
+      "reference": {
+        "expected": "http://localhost:9080/submit/washingtondc",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "9ac82d7e11fafc047da73d629441469ca049dee179933dbd64d697fc8df35e31",
+        "source_fields": [
+          {
+            "event_id": "4a5f0d7f:3",
+            "field": "post_state_ref.url",
+            "field_value_hash": "134c0a6b35712ed2e4c1e17638f20561ee19918390dc8f3fa8acfaea8a2425f8",
+            "raw_content_hash": "7aca87bdf0e8d7ae65d02f663885d6f3479553320c5dcbac73d91bf2e20ee42b",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "4a5f0d7f-prefix12"
+    },
+    {
+      "answer_format": "exact_scalar",
+      "category": "attempt_action",
+      "checkpoint_prefix_length": 8,
+      "question": "At the checkpoint containing 8 source steps, what action command was attempted at source step 8? Return only the exact action command, not an inferred outcome. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "4a5f0d7f-prefix12-cp8-attempt_action",
+      "reference": {
+        "expected": "click('36')",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "11abbde00ec2a95f2826764a94b3498b986265f94dca6f2466431f3b78e85db7",
+        "source_fields": [
+          {
+            "event_id": "4a5f0d7f:7",
+            "field": "action",
+            "field_value_hash": "35170abf4e5b2c3ec3d156867790535ea680a59e1fe5ae68aa5a5a800d9a466d",
+            "raw_content_hash": "c7e5619fb3902c618fd1168f860485e153967b7e02a7047d2af820de6fa54b1d",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "4a5f0d7f-prefix12"
+    },
+    {
+      "answer_format": "ordered_exact_array",
+      "category": "workflow_order",
+      "checkpoint_prefix_length": 12,
+      "question": "At the checkpoint containing 12 source steps, list the action commands attempted at source steps 11 and 12, in that order. Return only a JSON array of two exact command strings. If either is absent from the retrieved evidence, return unknown.",
+      "question_id": "4a5f0d7f-prefix12-cp12-workflow_order",
+      "reference": {
+        "expected": [
+          "click('165')",
+          "click('65')"
+        ],
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "784d6f40a44f4edac706acce0022abfe3c7cb6370627344be6bd37ed7ec22520",
+        "source_fields": [
+          {
+            "event_id": "4a5f0d7f:10",
+            "field": "action",
+            "field_value_hash": "79fd829d1c20af492986b149f217a8a441c4384aa8466ce26057a6f5dd357ab4",
+            "raw_content_hash": "b84dab1dc03060aa171c6f6a25bcf59d497399fc77199db99d5b40ef5e9b0c1d",
+            "source_revision": 0
+          },
+          {
+            "event_id": "4a5f0d7f:11",
+            "field": "action",
+            "field_value_hash": "2a38384839d4ed897964be863256a8576258dfb3107764bd453598ffd302b6a2",
+            "raw_content_hash": "181d8b65e4e50516c1599bb0365f48e80b24c6db490d7b3a2f8312d58a1a296b",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "4a5f0d7f-prefix12"
+    },
+    {
+      "answer_format": "exact_scalar",
+      "category": "observed_url",
+      "checkpoint_prefix_length": 4,
+      "question": "At the checkpoint containing 4 source steps, what URL was observed after source step 4? Return only the exact observed URL. Do not infer an action succeeded. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "ec6c60c2-prefix12-cp4-observed_url",
+      "reference": {
+        "expected": "http://localhost:9082/customer/address/new/",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "74a98036ceff15359953e971eac78db96b8be72e868253b8ecc7b2a10430985a",
+        "source_fields": [
+          {
+            "event_id": "ec6c60c2:3",
+            "field": "post_state_ref.url",
+            "field_value_hash": "e21417da29549bd5054aad638fe1b204099f23c7abf550372c02e98045d65e05",
+            "raw_content_hash": "2ae749bc3f54d4a1284912268acb1761ebbd5a2def8d9bf150487a0493b73cfd",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "ec6c60c2-prefix12"
+    },
+    {
+      "answer_format": "exact_scalar",
+      "category": "attempt_action",
+      "checkpoint_prefix_length": 8,
+      "question": "At the checkpoint containing 8 source steps, what action command was attempted at source step 8? Return only the exact action command, not an inferred outcome. If it is absent from the retrieved evidence, return unknown.",
+      "question_id": "ec6c60c2-prefix12-cp8-attempt_action",
+      "reference": {
+        "expected": "fill('1791', '02139', True)",
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "b291e63de4fa343ad3879751a36683b7a0c5accc23ebbc55e057540d581774c4",
+        "source_fields": [
+          {
+            "event_id": "ec6c60c2:7",
+            "field": "action",
+            "field_value_hash": "85d307481b70ba5b3da1274e64b024ee466841bd93e8f18bec7f7167c5f5c1ae",
+            "raw_content_hash": "f073abbaf0970cbe46e0b622517e2aace9fe308aec23dadccda0ffc6020d0c56",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "ec6c60c2-prefix12"
+    },
+    {
+      "answer_format": "ordered_exact_array",
+      "category": "workflow_order",
+      "checkpoint_prefix_length": 12,
+      "question": "At the checkpoint containing 12 source steps, list the action commands attempted at source steps 11 and 12, in that order. Return only a JSON array of two exact command strings. If either is absent from the retrieved evidence, return unknown.",
+      "question_id": "ec6c60c2-prefix12-cp12-workflow_order",
+      "reference": {
+        "expected": [
+          "click('1516')",
+          "click('1426')"
+        ],
+        "generation": "deterministic direct source-field projection, not human gold",
+        "reference_hash": "203cfaf4552da78e2e2444063c30e371a7cf7f949e445e8a235d74bd10e9c5c9",
+        "source_fields": [
+          {
+            "event_id": "ec6c60c2:10",
+            "field": "action",
+            "field_value_hash": "ec7da104892f330568ccbc3f2e29a3c4a968864637690f61bfa2d63483e45348",
+            "raw_content_hash": "011f81e7aa2c2a4bd5e551bcbc61c8dc07149ca62b18acdd6aa718b93081840e",
+            "source_revision": 0
+          },
+          {
+            "event_id": "ec6c60c2:11",
+            "field": "action",
+            "field_value_hash": "bdb779fb9144d288998180468b20181d5251424a80af005e80d273e1397351c2",
+            "raw_content_hash": "ad1d58e96513b25d50b06a9ff27ac4409d3f3792bc5017df8b4a34fd3fec8c99",
+            "source_revision": 0
+          }
+        ]
+      },
+      "window_id": "ec6c60c2-prefix12"
+    }
+  ],
+  "reader_settings": {
+    "enable_thinking": false,
+    "max_input_tokens": 8192,
+    "output_tokens": 256,
+    "retrieval": "core_lexical_query_v1",
+    "retrieval_budget": 8,
+    "temperature": 0.0
+  },
+  "reference_visibility": "evaluator only; no reference fields or oracle source IDs in Reader requests/retrieval",
+  "schema_version": "development-reader/1",
+  "scoring": "normalized exact scalar / ordered JSON array; bag-token F1 secondary; all attempted questions denominator",
+  "source_file": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data/longmemeval_dev.jsonl",
+  "source_sha256": "0d839a1a9ab03b62c1862881de70f83140c83857dc0ebff6a99d4715b4129a3c",
+  "workload_manifest_hash": "843b83cea8d9f6640fd92acaf4f05ad48f6e166cca458f5b26164e6187c00f52"
+}

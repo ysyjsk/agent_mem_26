@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="2140">
+<rect width="100%" height="100%" fill="white"/>
+<text x="12" y="24" font-family="sans-serif" font-size="16">Adapted text-only: build cost versus dev QA (8 questions)</text>
+<text x="10" y="65" font-size="12" font-family="sans-serif">AgentRunbook-R</text>
+<rect x="500" y="48" width="386" height="24" fill="#2789b8"/>
+<text x="896" y="65" font-size="12" font-family="sans-serif">1171s, 6/8, 10 traj</text>
+<text x="10" y="117" font-size="12" font-family="sans-serif">RAG+Notes</text>
+<rect x="500" y="100" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="117" font-size="12" font-family="sans-serif">244s, 4/8, 10 traj</text>
+<text x="10" y="169" font-size="12" font-family="sans-serif">RAG raw</text>
+<rect x="500" y="152" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="169" font-size="12" font-family="sans-serif">89s, 5/8, 10 traj</text>
+<text x="10" y="221" font-size="12" font-family="sans-serif">A: bounded event AXTree</text>
+<rect x="500" y="204" width="390" height="24" fill="#2789b8"/>
+<text x="900" y="221" font-size="12" font-family="sans-serif">1181s, 6/8, 10 traj</text>
+<text x="10" y="273" font-size="12" font-family="sans-serif">B: event concurrency=4</text>
+<rect x="500" y="256" width="344" height="24" fill="#2789b8"/>
+<text x="854" y="273" font-size="12" font-family="sans-serif">1041s, 4/8, 10 traj</text>
+<text x="10" y="325" font-size="12" font-family="sans-serif">C: evidence-first packing</text>
+<rect x="500" y="308" width="386" height="24" fill="#2789b8"/>
+<text x="896" y="325" font-size="12" font-family="sans-serif">1171s, 5/8, 10 traj</text>
+<text x="10" y="377" font-size="12" font-family="sans-serif">D: raw-state index + notes (no generated events)</text>
+<rect x="500" y="360" width="131" height="24" fill="#2789b8"/>
+<text x="641" y="377" font-size="12" font-family="sans-serif">398s, 4/8, 10 traj</text>
+<text x="10" y="429" font-size="12" font-family="sans-serif">E: D + evidence-first query</text>
+<rect x="500" y="412" width="131" height="24" fill="#2789b8"/>
+<text x="641" y="429" font-size="12" font-family="sans-serif">398s, 5/8, 10 traj</text>
+<text x="10" y="481" font-size="12" font-family="sans-serif">F: E + interleaved evidence chunks</text>
+<rect x="500" y="464" width="131" height="24" fill="#2789b8"/>
+<text x="641" y="481" font-size="12" font-family="sans-serif">398s, 5/8, 10 traj</text>
+<text x="10" y="533" font-size="12" font-family="sans-serif">G: E + raw retrieval top-k10/merge8</text>
+<rect x="500" y="516" width="131" height="24" fill="#2789b8"/>
+<text x="641" y="533" font-size="12" font-family="sans-serif">398s, 5/8, 10 traj</text>
+<text x="10" y="585" font-size="12" font-family="sans-serif">H: E + notes after 3 raw items</text>
+<rect x="500" y="568" width="131" height="24" fill="#2789b8"/>
+<text x="641" y="585" font-size="12" font-family="sans-serif">398s, 5/8, 10 traj</text>
+<text x="10" y="637" font-size="12" font-family="sans-serif">I: E + notes after 1 raw item</text>
+<rect x="500" y="620" width="131" height="24" fill="#2789b8"/>
+<text x="641" y="637" font-size="12" font-family="sans-serif">398s, 5/8, 10 traj</text>
+<text x="10" y="689" font-size="12" font-family="sans-serif">J: RAG raw + interleaved evidence chunks</text>
+<rect x="500" y="672" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="689" font-size="12" font-family="sans-serif">89s, 6/8, 10 traj</text>
+<text x="10" y="741" font-size="12" font-family="sans-serif">K ablation: RAG+Notes + interleaved evidence chunks</text>
+<rect x="500" y="724" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="741" font-size="12" font-family="sans-serif">244s, 6/8, 10 traj</text>
+<text x="10" y="793" font-size="12" font-family="sans-serif">AgentRunbook-R + chunks (matched)</text>
+<rect x="500" y="776" width="386" height="24" fill="#2789b8"/>
+<text x="896" y="793" font-size="12" font-family="sans-serif">1171s, 6/8, 10 traj</text>
+<text x="10" y="845" font-size="12" font-family="sans-serif">J matched repeat</text>
+<rect x="500" y="828" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="845" font-size="12" font-family="sans-serif">89s, 6/8, 10 traj</text>
+<text x="10" y="897" font-size="12" font-family="sans-serif">L: J + tokenizer reuse</text>
+<rect x="500" y="880" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="897" font-size="12" font-family="sans-serif">89s, 6/8, 10 traj</text>
+<text x="10" y="949" font-size="12" font-family="sans-serif">M: L + lexical source backfill</text>
+<rect x="500" y="932" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="949" font-size="12" font-family="sans-serif">89s, 7/8, 10 traj</text>
+<text x="10" y="1001" font-size="12" font-family="sans-serif">M repeat 2</text>
+<rect x="500" y="984" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="1001" font-size="12" font-family="sans-serif">89s, 7/8, 10 traj</text>
+<text x="10" y="1053" font-size="12" font-family="sans-serif">M repeat 3</text>
+<rect x="500" y="1036" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="1053" font-size="12" font-family="sans-serif">89s, 6/8, 10 traj</text>
+<text x="10" y="1105" font-size="12" font-family="sans-serif">N: M + adjacent source lines</text>
+<rect x="500" y="1088" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="1105" font-size="12" font-family="sans-serif">89s, 6/8, 10 traj</text>
+<text x="10" y="1157" font-size="12" font-family="sans-serif">M minus chunks</text>
+<rect x="500" y="1140" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="1157" font-size="12" font-family="sans-serif">89s, 5/8, 10 traj</text>
+<text x="10" y="1209" font-size="12" font-family="sans-serif">M expanded20</text>
+<rect x="500" y="1192" width="93" height="24" fill="#2789b8"/>
+<text x="603" y="1209" font-size="12" font-family="sans-serif">283s, 7/8, 20 traj</text>
+<text x="10" y="1261" font-size="12" font-family="sans-serif">RAG+Notes + backfill</text>
+<rect x="500" y="1244" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="1261" font-size="12" font-family="sans-serif">244s, 8/8, 10 traj</text>
+<text x="10" y="1313" font-size="12" font-family="sans-serif">Notes+M repeat 2</text>
+<rect x="500" y="1296" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="1313" font-size="12" font-family="sans-serif">244s, 7/8, 10 traj</text>
+<text x="10" y="1365" font-size="12" font-family="sans-serif">Notes+M repeat 3</text>
+<rect x="500" y="1348" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="1365" font-size="12" font-family="sans-serif">244s, 7/8, 10 traj</text>
+<text x="10" y="1417" font-size="12" font-family="sans-serif">O: Notes+M + query embedding reuse</text>
+<rect x="500" y="1400" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="1417" font-size="12" font-family="sans-serif">244s, 7/8, 10 traj</text>
+<text x="10" y="1469" font-size="12" font-family="sans-serif">Notes+M minus chunks</text>
+<rect x="500" y="1452" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="1469" font-size="12" font-family="sans-serif">244s, 5/8, 10 traj</text>
+<text x="10" y="1521" font-size="12" font-family="sans-serif">O expanded20</text>
+<rect x="500" y="1504" width="255" height="24" fill="#2789b8"/>
+<text x="765" y="1521" font-size="12" font-family="sans-serif">772s, 6/8, 20 traj</text>
+<text x="10" y="1573" font-size="12" font-family="sans-serif">AgentRunbook-R + backfill</text>
+<rect x="500" y="1556" width="386" height="24" fill="#2789b8"/>
+<text x="896" y="1573" font-size="12" font-family="sans-serif">1171s, 7/8, 10 traj</text>
+<text x="10" y="1625" font-size="12" font-family="sans-serif">Strong B3-c1 + backfill</text>
+<rect x="500" y="1608" width="177" height="24" fill="#2789b8"/>
+<text x="687" y="1625" font-size="12" font-family="sans-serif">538s, 6/8, 10 traj</text>
+<text x="10" y="1677" font-size="12" font-family="sans-serif">Ours-dev + backfill</text>
+<rect x="500" y="1660" width="228" height="24" fill="#2789b8"/>
+<text x="738" y="1677" font-size="12" font-family="sans-serif">690s, 6/8, 10 traj</text>
+<text x="10" y="1729" font-size="12" font-family="sans-serif">K matched + tokenizer reuse</text>
+<rect x="500" y="1712" width="80" height="24" fill="#2789b8"/>
+<text x="590" y="1729" font-size="12" font-family="sans-serif">244s, 6/8, 10 traj</text>
+<text x="10" y="1781" font-size="12" font-family="sans-serif">No chunks + tokenizer reuse</text>
+<rect x="500" y="1764" width="29" height="24" fill="#2789b8"/>
+<text x="539" y="1781" font-size="12" font-family="sans-serif">89s, 5/8, 10 traj</text>
+<text x="10" y="1833" font-size="12" font-family="sans-serif">AgentRunbook-R + chunks + tokenizer reuse</text>
+<rect x="500" y="1816" width="386" height="24" fill="#2789b8"/>
+<text x="896" y="1833" font-size="12" font-family="sans-serif">1171s, 6/8, 10 traj</text>
+<text x="10" y="1885" font-size="12" font-family="sans-serif">Strong B3-c1 adapted</text>
+<rect x="500" y="1868" width="177" height="24" fill="#2789b8"/>
+<text x="687" y="1885" font-size="12" font-family="sans-serif">538s, 4/8, 10 traj</text>
+<text x="10" y="1937" font-size="12" font-family="sans-serif">Ours-dev adapted</text>
+<rect x="500" y="1920" width="228" height="24" fill="#2789b8"/>
+<text x="738" y="1937" font-size="12" font-family="sans-serif">690s, 5/8, 10 traj</text>
+<text x="10" y="1989" font-size="12" font-family="sans-serif">L expanded20</text>
+<rect x="500" y="1972" width="93" height="24" fill="#2789b8"/>
+<text x="603" y="1989" font-size="12" font-family="sans-serif">283s, 6/8, 20 traj</text>
+<text x="10" y="2041" font-size="12" font-family="sans-serif">Expanded20 no chunks</text>
+<rect x="500" y="2024" width="93" height="24" fill="#2789b8"/>
+<text x="603" y="2041" font-size="12" font-family="sans-serif">283s, 5/8, 20 traj</text>
+<text x="10" y="2093" font-size="12" font-family="sans-serif">Expanded20 RAG+Notes + backfill</text>
+<rect x="500" y="2076" width="255" height="24" fill="#2789b8"/>
+<text x="765" y="2093" font-size="12" font-family="sans-serif">772s, 6/8, 20 traj</text>
+</svg>

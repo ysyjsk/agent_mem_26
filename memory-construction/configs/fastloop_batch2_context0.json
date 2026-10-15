@@ -1,0 +1,5 @@
+{
+  "extraction_concurrency": 2,
+  "source_context_window_events_default": 0,
+  "experiment_variant": "H3_real_batch2_context0"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory 持续实验"
+  short_description: "持续修复并优化记忆构建实验，保存可恢复状态并推进真实配对证据"
+  default_prompt: "使用 $memory-research-loop 检查项目实际运行状态，修复当前问题并连续推进开发实验和下一项验收。"

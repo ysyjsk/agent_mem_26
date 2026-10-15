@@ -1,0 +1,35 @@
+[
+  {
+    "B0_elapsed_s": 12.45008965,
+    "B0_input_tokens": 7109,
+    "Ours_elapsed_s": 13.824217126,
+    "Ours_input_tokens": 7129,
+    "checkpoint_prefix_length": 4,
+    "latency_reduction": -0.11037089006021739,
+    "repeat": 1,
+    "semantic_exact_match": false,
+    "window_id": "0db80092-prefix12"
+  },
+  {
+    "B0_elapsed_s": 27.355983961,
+    "B0_input_tokens": 15057,
+    "Ours_elapsed_s": 13.583690273,
+    "Ours_input_tokens": 7928,
+    "checkpoint_prefix_length": 8,
+    "latency_reduction": 0.5034472058338111,
+    "repeat": 1,
+    "semantic_exact_match": true,
+    "window_id": "0db80092-prefix12"
+  },
+  {
+    "B0_elapsed_s": 41.66984737,
+    "B0_input_tokens": 23006,
+    "Ours_elapsed_s": 14.252615664,
+    "Ours_input_tokens": 7949,
+    "checkpoint_prefix_length": 12,
+    "latency_reduction": 0.6579633340759222,
+    "repeat": 1,
+    "semantic_exact_match": true,
+    "window_id": "0db80092-prefix12"
+  }
+]

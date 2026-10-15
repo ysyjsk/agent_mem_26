@@ -1,0 +1,4 @@
+{
+  "extraction_concurrency": 2,
+  "experiment_variant": "H2_real_batch2"
+}

@@ -1,0 +1,3 @@
+run,reason,included_in_main_table,build_attempt_s,trajectories_published,controller_api_calls_in_own_store,complete_answers,truncated_answers,raw_path
+enterprise-workflow-b3-v1,"Strict core parse rejected pre-think partial JSON; full responses retained, fixed in v2, not a successful build",False,136.51299027100322,0,16,0,0,/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-adapted-text-v1/results/enterprise-workflow-b3-v1
+enterprise-agentrunbook-r-optE-ext4-v1,Invalid evidence selection by answer substring; not a valid expanded QA set,False,0,0,0,3,1,/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-adapted-text-v1/results/enterprise-agentrunbook-r-optE-ext4-v1

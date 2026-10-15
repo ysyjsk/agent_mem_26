@@ -1,0 +1,5 @@
+{
+  "status": "planned",
+  "faults": ["worker_crash", "pre_commit_crash", "post_commit_crash", "timeout", "duplicate_delivery", "out_of_order_completion"],
+  "note": "Fault injection harness is reserved for P4; no recovery result is claimed."
+}

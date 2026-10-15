@@ -1,0 +1,692 @@
+[
+  {
+    "record_id": "d5b34d860e334a7d91c121c9c1147471",
+    "timestamp_epoch": 1791997092.9810333,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "input_tokens_preflight": 40130,
+    "request_sha256": "acd6dd23854177d20847e3f496fb1ba4edb44120231d56b6344df61d1af36200",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "d05984e7c20c4403913839ac3d7845e6",
+    "timestamp_epoch": 1791997093.0113285,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0000_0001",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 25760,
+    "prepared_input_tokens": 10092,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "bb79a0556deb49ff85eb98f8478122af",
+    "timestamp_epoch": 1791997093.0115905,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "35c48291ef0ff463152e5211f0f6201c8f05e02bf7d57c20a543618fcb4392ac",
+    "stage": "events"
+  },
+  {
+    "record_id": "14898e5c921f4286bcd95aa07e57e977",
+    "timestamp_epoch": 1791997093.011639,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0000_0001",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "6fedf89c3a0046a9b48732ff3177c030",
+    "timestamp_epoch": 1791997093.0436409,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0001_0002",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 28258,
+    "prepared_input_tokens": 9593,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "cc06c7ea78fe4ca49262017b8ecebdb0",
+    "timestamp_epoch": 1791997093.0439107,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "43dc6ea767239205afa9a30644a1a92c1e69fd77aa1af4a52e7377998d0f5d27",
+    "stage": "events"
+  },
+  {
+    "record_id": "95795dafe900472b97701d55697f324f",
+    "timestamp_epoch": 1791997093.0439603,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0001_0002",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "2c6904b1e44d478d8e9465e2101c11f6",
+    "timestamp_epoch": 1791997093.078639,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "input_tokens_preflight": 41801,
+    "request_sha256": "94a275c8db54fb1f942af58a5a7d3467247a4d2648208554d047f2dc3c3ca773",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "9e6194268bc44e38a3339ad98e50205e",
+    "timestamp_epoch": 1791997093.1107306,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0002_0003",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 28817,
+    "prepared_input_tokens": 9523,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "f8508b75d7154b849e574fc62e2ee294",
+    "timestamp_epoch": 1791997093.110989,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "f682ae4693e1f2d9e73213fd17f6d2932e300c2b169d46272e3ecf9cab3abedb",
+    "stage": "events"
+  },
+  {
+    "record_id": "7f5c30717c35449387e1e2329484c249",
+    "timestamp_epoch": 1791997093.1110382,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0002_0003",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "d390e372e94343739cc7a68938ff563d",
+    "timestamp_epoch": 1791997093.151446,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0003_0004",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 27455,
+    "prepared_input_tokens": 10094,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "d28487fc795146b8b540cdaf73ea5f4c",
+    "timestamp_epoch": 1791997093.151722,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b3e991d533d9dc91b1a339794262467728833c38077c00160dcf5c82edfa767d",
+    "stage": "events"
+  },
+  {
+    "record_id": "5d36e542ce4f45e39f770db1862e4084",
+    "timestamp_epoch": 1791997093.1517675,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0003_0004",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "a9419834123a4241870cff4b92c24bc6",
+    "timestamp_epoch": 1791997093.183547,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "input_tokens_preflight": 40357,
+    "request_sha256": "e33a718566bcaa8d8233974bc6dfee05d06f145f52c74dd25d350c87e69e7979",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "1f8b3b681af74fb08764991a35199581",
+    "timestamp_epoch": 1791997093.215475,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 27400,
+    "prepared_input_tokens": 10042,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "251b8f38af534f6d87b319aaad5d753b",
+    "timestamp_epoch": 1791997101.1043515,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 7.888563786982559,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30673,
+      "text_sha256": "b911bcfffae037790823e0c71420f1e914e5f54c25505c09ba5e9d64790de0cf",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 10042,
+    "completion_tokens": 176,
+    "total_tokens": 10218,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "696fee247345486a857bc6d1583c65c2",
+    "timestamp_epoch": 1791997101.1045616,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "28b34ab4f98a4f8eb6dccf1674fef1b4",
+    "timestamp_epoch": 1791997101.141683,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 27419,
+    "prepared_input_tokens": 10136,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "ab510e574d5c4275a57cad3d154ddf7a",
+    "timestamp_epoch": 1791997109.4358504,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 8.293864523002412,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30954,
+      "text_sha256": "03677d114d5be1162875fc3d8af83cb2261702f8ace3f2ea5732e03fdd27c257",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 10136,
+    "completion_tokens": 193,
+    "total_tokens": 10329,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "dac918a0fa4344539231f089604ceb32",
+    "timestamp_epoch": 1791997109.4360335,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "2d9a19e10e044c288480635687d75b0c",
+    "timestamp_epoch": 1791997109.4699159,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "input_tokens_preflight": 42774,
+    "request_sha256": "3c6a45832becb58641b81ea5c2bca0d978ecf2745cc35036ef70a422853aa857",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "a2692afe5c4849519440a01b5b887f09",
+    "timestamp_epoch": 1791997109.5004005,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0006_0007",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 27664,
+    "prepared_input_tokens": 10100,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "528afe0d4f524c7aabf974d448af9672",
+    "timestamp_epoch": 1791997109.50064,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b4f8ea94b78498b8e45011f9501aa6dd6d9f3922a4111fab0922adabcbac0e74",
+    "stage": "events"
+  },
+  {
+    "record_id": "b721f936e7e14bb790ecb9ee9b596592",
+    "timestamp_epoch": 1791997109.500678,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0006_0007",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "a57d2f3b2a58402494f68ec7a1f37a86",
+    "timestamp_epoch": 1791997109.5331805,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0007_0008",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 29855,
+    "prepared_input_tokens": 9552,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "bd4314655464481b918e88579f65c0dc",
+    "timestamp_epoch": 1791997109.5334442,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "3b2103a66bfa0d5ec209d0c39eca6857b4aefbd3490e122345d88570c2874a6c",
+    "stage": "events"
+  },
+  {
+    "record_id": "f109cde6f2664e16a6372ec2dd856016",
+    "timestamp_epoch": 1791997109.5334895,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0007_0008",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "93e30ca2c2df4e1eae897eab0228082c",
+    "timestamp_epoch": 1791997109.56514,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "input_tokens_preflight": 44069,
+    "request_sha256": "84eaabc7e04e18c8fab8d12f756fa1a4ce1be163e583e60a3347e9b3db291359",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "e8eb30b6472c4b4daf52784f744ee834",
+    "timestamp_epoch": 1791997109.5969553,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0008_0009",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 30225,
+    "prepared_input_tokens": 9515,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "46cbb1d0e74241a2877a87dee7641f48",
+    "timestamp_epoch": 1791997109.597207,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "06235bfad9e012009d8d228571acb24c6ca0a89cb8bf92d521d92f635d90c6e0",
+    "stage": "events"
+  },
+  {
+    "record_id": "c051dff2d6454a51819503bfe6fdf346",
+    "timestamp_epoch": 1791997109.5972495,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0008_0009",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "265b17f089ba44ca8937f648cb2489cd",
+    "timestamp_epoch": 1791997109.6283278,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0009_0010",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 28977,
+    "prepared_input_tokens": 10009,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "159c2df3ee234896b6f92d7860cbdae1",
+    "timestamp_epoch": 1791997109.6285832,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "ec84ae55318d057170a0b131fbcfc723b50266dc2f61978a8d8af781f34a1521",
+    "stage": "events"
+  },
+  {
+    "record_id": "0158a5d73d644aff84f601fd9f9978ff",
+    "timestamp_epoch": 1791997109.6286244,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0009_0010",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "bb1964f7c9bc41e79ad072d7a179a6f2",
+    "timestamp_epoch": 1791997109.6608043,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0010_0011",
+      "event_0011_0012"
+    ],
+    "state_ids": [
+      10,
+      11,
+      12
+    ],
+    "input_tokens_preflight": 45158,
+    "request_sha256": "b95049825c2ec72e98648f84f4206e279f642ec791e7ae6adf33ae9ded4af3ae",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "e09dd39c56ca48e18f9b759ac84ed3c0",
+    "timestamp_epoch": 1791997109.6920676,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0010_0011",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 29299,
+    "prepared_input_tokens": 10009,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "122a83edbe574bc2bd65ce93068b2f44",
+    "timestamp_epoch": 1791997109.692316,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "f867f72fe88392426617f66ce2eef2c3cb4510cc1e3a065015e13ca3d6fd9c8c",
+    "stage": "events"
+  },
+  {
+    "record_id": "dcaad63b5972484389d95ecc453c9d86",
+    "timestamp_epoch": 1791997109.692357,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0010_0011",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "c896b3670e1042859133d2c541b8c4a2",
+    "timestamp_epoch": 1791997109.7244337,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0011_0012",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 31328,
+    "prepared_input_tokens": 9568,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "e22b16cf427f40caac227c5ef1f0043c",
+    "timestamp_epoch": 1791997109.7246833,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "f03505f5ae4fd653a7003c9863a4413326a700e8a0ed9d0a04a05b08ce306fc9",
+    "stage": "events"
+  },
+  {
+    "record_id": "935aca5db8b348fab9432d4cd2998055",
+    "timestamp_epoch": 1791997109.7247243,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0011_0012",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "b3669d13b8b2414e9d8b5519fb8b57e2",
+    "timestamp_epoch": 1791997109.7566378,
+    "channel": "event_group",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0012_0013",
+      "event_0013_0014"
+    ],
+    "state_ids": [
+      12,
+      13,
+      14
+    ],
+    "input_tokens_preflight": 45996,
+    "request_sha256": "a801a1eec3d8648f8b46b62574ccc1eced3445d1a9a68de8a1169fb970250445",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "515f132faca74fa0b0a87ac032c3c168",
+    "timestamp_epoch": 1791997109.7890558,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0012_0013",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 31675,
+    "prepared_input_tokens": 9545,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "e900e667f12b4825bb089bd7822b5d4e",
+    "timestamp_epoch": 1791997109.7893038,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9a58886c29609fe65c513ce2e36f90fac611be2b731f030494024a08f19dca1a",
+    "stage": "events"
+  },
+  {
+    "record_id": "4885a4e8b4204c08a0d55edbc13b3f0e",
+    "timestamp_epoch": 1791997109.7893517,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0012_0013",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "cb52b4a046894083ad4fced3e5616237",
+    "timestamp_epoch": 1791997109.8211198,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0013_0014",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 30170,
+    "prepared_input_tokens": 10100,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "8b531e518ecf49d69e706dbecfd836ff",
+    "timestamp_epoch": 1791997109.8213603,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "51954933441d388c7d5753ab2f0e360811e44080584f23809eac99e5027dd5e7",
+    "stage": "events"
+  },
+  {
+    "record_id": "438341ca8256407fbeea23c5ef53ff23",
+    "timestamp_epoch": 1791997109.8213995,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0013_0014",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "6d20f64268b74e76afcc91d96cf94c63",
+    "timestamp_epoch": 1791997109.8533351,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c",
+    "full_input_tokens": 30438,
+    "prepared_input_tokens": 10017,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "249c70daf97540b295c0d647ebcceb02",
+    "timestamp_epoch": 1791997109.8535607,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9f5c41ee8bcd14903a430f7635b77c21d0010f05115bfd7070d31869f3865b9b",
+    "stage": "events"
+  },
+  {
+    "record_id": "2a3574d6b9424fdfabd16504cdb4687c",
+    "timestamp_epoch": 1791997109.8536003,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0014_0015",
+    "trajectory_id": "0ab99e0c"
+  },
+  {
+    "record_id": "3a8e393ea70040cdbd304d6bc9e76ed8",
+    "timestamp_epoch": 1791997109.857932,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "6a7c9ffebf180c5eaac5f05b794243994688ace320215f1c587fe1ecfe88f3e4",
+    "stage": "notes"
+  },
+  {
+    "record_id": "ccd9039d22e5430ba6b3bf932330bad3",
+    "timestamp_epoch": 1791997110.0014865,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 0,
+    "cache_hits": 16,
+    "elapsed_seconds": 0.0008589790086261928,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "290c63e7b8982043c978cb90abd70ca63ebcb0f53eabf02d32d7a877bf44967c",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "cb73119bb54e422bb37cf60550c9c44e",
+    "timestamp_epoch": 1791997110.1530366,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.14865871900110506,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1714,
+    "input_sha256": [
+      "4a9c87823bfaffd821ab6d45432cc14e8a67550a9675c2d6fc2732f2548affb7",
+      "299081d585db11b1a4f83f0e1d1e64f8d3c01aa97f4a9ddaac588b3355811244"
+    ],
+    "input_texts": [
+      "The agent is building a filter on the Change Requests list to isolate entries where the Type is 'Normal', Requested by is 'System Administrator', Model is empty, Short description matches a specific update task, and State is 'Scheduled'. This transition represents the first step in that sequence, attempting to set the 'Type' condition to 'Normal' as the initial filter criterion.\n\nThe agent clicked the 'Normal' option within the 'Type' value chooser to set the first filter condition. Although the action was recorded as a click on the option, the visible UI state did not immediately reflect the selection in this snapshot; the field chooser remained open and the list of change requests stayed unfiltered, showing the original 101 records without any visible indication that the 'Type' constraint had been applied yet.",
+      "The agent is building a complex filter on the Change Requests list to isolate specific records based on multiple criteria, including Type, Requested by, Model, Short description, and State. This transition represents the successful application of the first condition in that chain, setting the 'Type' field to 'Normal' after a previous attempt to click the option directly failed.\n\nIn the pre-state, the filter panel was open with the 'Type' combobox expanded, displaying options but the 'Normal' option was not yet selected. The action select_option('a1639', 'normal') successfully applied the value 'normal' to the 'Type' field. In the post-state, the combobox reflects the selection with 'Type is Normal' established as the active condition, and the interface presents the 'Add AND Condition To Condition 1: Type is Normal' button, signaling readiness to append the next filter criterion."
+    ],
+    "prompt_tokens": 346,
+    "total_tokens": 346,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "286797ca0d434241a334d6e24ffcac9a",
+    "timestamp_epoch": 1791997110.1531458,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.14891594400978647,
+    "input_keys": [
+      "6642f0b8be20400598c0c4bf685cac49ed1ecf4554349ba8cda4d6b74ad13df5",
+      "75c30af81ebb99f1f319efd1d351778cd9c9ace1bb117f9fbe77adef6e7ed049",
+      "621355920362a6b3bc76f93fee877459f1a3daf424dba06a69fe484e7b643040",
+      "e463f07fa0c11cd069e79fb80980ed854591fd616f77306ca2d1869c3ea8558b",
+      "03b2d16fe0ebc3619fed48ad205d6ea008091151c7ee27c2e432db8f09a4e57a",
+      "4df0c02c375a82ae4aec3cf8db73fbeecb6d8c73e577604ff1dc2946aa21d65b",
+      "c17b778dd6c5c0787b8153f6fa87fa098625236540a9a190ac2885046b04be34",
+      "ffc709ed484e05d9ee619fef63315fbdb53f3a8a0b67d5d5cc371f5392aa48b9",
+      "b47096b93284d3e350e9e81890c1a779727cc1eb626261b43aa00d22c0d46705",
+      "ca2b8cf5c545958f75cdc248e53f2b4a09f0ba456498d46bb832a80121e97197",
+      "884deb8f88c9420b3170ab16a4af43f6e51a531d0413a4c0a922b258eaadb6e3",
+      "a4afd42fdf7a86885cfb5e9c91971a0ed8ee057978f5aaacc941fb1fc4a3af8b",
+      "7e1c8d7dda5f21bda4c0c2f3501c6c45144918b5b4327cb52d464753d7cbfa5d",
+      "c5efbfc8b87dddad01943c9383d23fef11bd0aa3cb857f64f57cce80e9ddbcd0",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "4fb2fca172fb4fa0b1cf5db7100e1077",
+    "timestamp_epoch": 1791997110.1537411,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.2238993551582098e-05,
+    "input_keys": [
+      "e70e0d86c3610a23eb0c3886b368b55ef3cdc5494a3e5fa4290fd2a5081214d5"
+    ]
+  },
+  {
+    "record_id": "c68273ef94644476baf9a363dfd35969",
+    "timestamp_epoch": 1791997110.1541479,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.9619008526206017e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

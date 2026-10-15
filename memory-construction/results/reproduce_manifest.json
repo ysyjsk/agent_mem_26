@@ -1,0 +1,22 @@
+{
+  "metrics": [
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T121207Z-correctness-732bc957c1-4edc7764/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T120952Z-correctness-3131077a3f-f0736e7a/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T130536Z-correctness-732bc957c1-7ff66d7c/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T121848Z-correctness-732bc957c1-335b0390/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T122050Z-pilot-c1999b26db-6fb92032/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T122122Z-correctness-c1999b26db-74917e9a/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T125740Z-correctness-732bc957c1-9e49e806/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T122006Z-correctness-732bc957c1-7c740c59/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T121416Z-correctness-c1999b26db-bf6a7fc6/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T123606Z-correctness-a2e40ba88a-50369fce/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T120353Z-correctness-f5db5a5beb-1fa683ea/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T120952Z-correctness-3131077a3f-5f4fea6e/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T120420Z-correctness-f5db5a5beb-fa321691/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T132055Z-correctness-732bc957c1-90b3ff36/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T121439Z-correctness-c1999b26db-0277e9e2/metrics.json",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/20261012T121946Z-pilot-732bc957c1-93f64739/metrics.json"
+  ],
+  "runs_root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs",
+  "schema_version": "workflow-memory-reproduce/1"
+}

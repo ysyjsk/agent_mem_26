@@ -1,0 +1,4 @@
+run_id,method,domain,tier,input_modality,official_small_claim,n_trajectories,n_questions,state_prefix,build_s,query_s,reader_s,model_calls,successful_calls,embedding_calls,controller_calls,input_tokens,output_tokens,proxy_score,raw_run
+smoke-run-enterprise-v3,agentrunbook_r,enterprise,small,text-only,false,1,1,4,42.585466,1.934721,7.031429,13,13,8,5,666,256,0.0,runs/agentrunbook-r-native-small-20261014/local-text-only/smoke-run-enterprise-v3
+smoke-rag-notes-v3,rag_query_to_slice_notes,enterprise,small,text-only,false,1,1,4,17.682714,0.132252,7.038210,7,7,6,1,752,256,0.0,runs/agentrunbook-r-native-small-20261014/local-text-only/smoke-rag-notes-v3
+smoke-rag-v1,rag_query_to_slice,enterprise,small,text-only,false,1,1,4,3.630107,0.045996,6.875765,2,2,2,0,185,256,0.0,runs/agentrunbook-r-native-small-20261014/local-text-only/smoke-rag-v1

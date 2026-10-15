@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-10-13T04:39:28.120144+00:00",
+  "elapsed_seconds": 660.4935837089997,
+  "supervisor": {
+    "pid": 218341,
+    "start_ticks": "547176",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "child": {
+    "pid": 218345,
+    "start_ticks": "547178",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "stdout_bytes": 4641,
+  "stderr_bytes": 2333,
+  "meaning": "supervisor alive; inspect run progress separately"
+}

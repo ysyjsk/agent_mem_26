@@ -1,0 +1,57 @@
+{
+  "judge_probe": {
+    "reason": "not_configured",
+    "status": "blocked"
+  },
+  "status": "completed",
+  "trajectory_metrics": [
+    {
+      "equivalent": null,
+      "events": 1,
+      "fresh_valid": true,
+      "incremental_status": "not_applicable",
+      "invalidated_nodes": 0,
+      "reused_nodes": 0,
+      "trajectory_id": "42f2e460"
+    },
+    {
+      "comparison": {
+        "events": true,
+        "evidence": true,
+        "state": true,
+        "workflow": true
+      },
+      "equivalent": true,
+      "events": 5,
+      "fresh_valid": true,
+      "incremental_status": "queryable",
+      "invalidated_nodes": 16,
+      "reused_nodes": 11,
+      "trajectory_id": "cfd9c5e9"
+    },
+    {
+      "equivalent": null,
+      "events": 1,
+      "fresh_valid": true,
+      "incremental_status": "not_applicable",
+      "invalidated_nodes": 0,
+      "reused_nodes": 0,
+      "trajectory_id": "00847ee9"
+    },
+    {
+      "comparison": {
+        "events": true,
+        "evidence": true,
+        "state": true,
+        "workflow": true
+      },
+      "equivalent": true,
+      "events": 6,
+      "fresh_valid": true,
+      "incremental_status": "queryable",
+      "invalidated_nodes": 16,
+      "reused_nodes": 16,
+      "trajectory_id": "35747a68"
+    }
+  ]
+}

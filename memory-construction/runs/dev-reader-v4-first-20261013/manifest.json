@@ -1,0 +1,64 @@
+{
+  "code_sha256": {
+    "src/workflow_memory/construction.py": "6e02b970b4a6a4430fd096b19a618ac555101bf553f5cb50557162eba1acca68",
+    "src/workflow_memory/local_backends.py": "74e052220edebd8a0bbc661f8d889d3c5f3b1df968058cfeaabef5564e7d1d99",
+    "tools/run_dev_reader.py": "4be3c4c8a26c42d24d6ed1b4c918fb01e61643786590c4a6ea72b7a8faa7db14"
+  },
+  "config_sha256": "6c4cb0cef1de4d23f5d460f9a738369140b2425acb2784d05dbebe50a70579a3",
+  "construction_latency_includes_reader": false,
+  "construction_runs": [
+    {
+      "manifest_sha256": "f295b8249cdcac30c2b8c690e9e773e1c1c9de4673101db40464b0edb3961f7f",
+      "methods": [
+        "B0",
+        "Ours-dev",
+        "B3-c1"
+      ],
+      "metrics_sha256": "9870572817442f9733ca62c0de4d056f68199aa562f9abe0adf137fca22f11fe",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-e2e-c1-20261013"
+    },
+    {
+      "manifest_sha256": "a6e6a0f5bc6d3254522653953e59f24a1074eb3ac27c935b40d2589cfadc89a8",
+      "methods": [
+        "Ours-dev",
+        "B3-c2"
+      ],
+      "metrics_sha256": "200e60d1f43fb8b09c40e2e8a95cd08540b9e0bb0c9e20f28325fc4b54b43ddb",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-e2e-batch2-20261013"
+    },
+    {
+      "manifest_sha256": "fd5d96a7c12aa190a495079392504b75ab2050c00d3f0bc076f2a4936895bb34",
+      "methods": [
+        "Ours-dev",
+        "B3-c2"
+      ],
+      "metrics_sha256": "f93b36b9a5b328a1c7e92de997cbd504237c199fce93cb8cfb75878f7b4f6a68",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-e2e-batch2-context0-20261013"
+    }
+  ],
+  "official_qa_status": "not_evaluated",
+  "quality_scope": "auto_source_development_proxy",
+  "question_manifest_hash": "21a1daf384f9d6fba8843d67a37b9a0e41dc62d461f9fd4680f1562fd363c709",
+  "reader_model": {
+    "api_key_env": "READER_API_KEY",
+    "backend": "transformers",
+    "base_url_env": "READER_BASE_URL",
+    "checkpoint_revision": null,
+    "device": "cuda:0",
+    "id": "Qwen/Qwen3.5-9B",
+    "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+    "parameters": "inherit_and_pin_frozen_official_protocol"
+  },
+  "reader_response_cache": false,
+  "reader_settings": {
+    "enable_thinking": false,
+    "max_input_tokens": 8192,
+    "output_tokens": 256,
+    "retrieval": "core_lexical_query_v1",
+    "retrieval_budget": 8,
+    "temperature": 0.0
+  },
+  "repeat": 1,
+  "schema_version": "development-reader-run/1",
+  "started_at": "2026-10-13T08:24:58.067291Z"
+}

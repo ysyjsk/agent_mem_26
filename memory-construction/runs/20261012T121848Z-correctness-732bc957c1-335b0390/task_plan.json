@@ -1,0 +1,57 @@
+{
+  "config_sha256": "732bc957c1d69a6c6a0343b02d05d424763cb5fd53c1e971ad7f8c4181598a44",
+  "created_at": "2026-10-12T12:18:48.365093Z",
+  "estimates": {
+    "model_calls": "pending_backend_estimate",
+    "storage_bytes": "pending_backend_estimate",
+    "target_trajectories": 4,
+    "task_count": 1
+  },
+  "run_id": "20261012T121848Z-correctness-732bc957c1-335b0390",
+  "status": "planned",
+  "suite": "correctness",
+  "suite_spec": {
+    "backend": "content_addressed_replay_or_deterministic_test_backend",
+    "compare": [
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "Ours"
+    ],
+    "faults": [
+      "worker_crash",
+      "pre_commit_crash",
+      "post_commit_crash",
+      "timeout",
+      "duplicate_delivery",
+      "out_of_order_completion",
+      "alias_revision",
+      "negative_read_invalidation"
+    ],
+    "not_performance_evidence": true,
+    "phases": [
+      "P3",
+      "P4"
+    ]
+  },
+  "task_plan_schema_version": "workflow-memory-task-plan/1",
+  "task_plan_sha256": "65967f1dcde473fef01550ef23298c6c2a195b4f2cd54d2f2001ad6bac82da09",
+  "tasks": [
+    {
+      "dependencies": [],
+      "method": "default",
+      "ordinal": 0,
+      "output_dir": "outputs/task-d8eda53758e96e53",
+      "protocol": "C",
+      "repeat": 1,
+      "requires_frozen_config": false,
+      "requires_live_models": false,
+      "status": "planned",
+      "suite": "correctness",
+      "target_trajectories": 4,
+      "task_id": "task-d8eda53758e96e53",
+      "variant": null
+    }
+  ]
+}

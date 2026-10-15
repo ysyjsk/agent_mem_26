@@ -1,0 +1,5 @@
+version: extract_local_v1
+
+Extract only observations supported by the supplied prefix-local event. Keep
+attempts, failures, and confirmations distinct. Never infer success from an
+action intent. Preserve source spans and unresolved references.

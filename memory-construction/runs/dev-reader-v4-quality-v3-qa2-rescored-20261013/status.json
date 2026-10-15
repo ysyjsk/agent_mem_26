@@ -1,0 +1,10 @@
+{
+  "evaluator_only": true,
+  "new_model_calls": 0,
+  "no_new_model_calls": true,
+  "not_a_new_experiment": true,
+  "score_corrections": 5,
+  "source_run": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-reader-v4-quality-v3-qa2-20261013",
+  "status": "completed",
+  "updated_at": "2026-10-13T11:25:28.989874Z"
+}

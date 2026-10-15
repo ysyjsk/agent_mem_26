@@ -1,0 +1,13 @@
+[
+  {
+    "B0_elapsed_s": 12.3567951,
+    "B0_input_tokens": 15142,
+    "Ours_elapsed_s": 6.675734879,
+    "Ours_input_tokens": 1855,
+    "checkpoint_prefix_length": 9,
+    "latency_reduction": 0.45975191585073705,
+    "repeat": 1,
+    "semantic_exact_match": true,
+    "window_id": "170f5570-prefix9"
+  }
+]

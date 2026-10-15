@@ -1,0 +1,13 @@
+{
+  "update_id": "memory-fast-results-v4",
+  "received_at": "2026-10-14T01:32:00Z",
+  "previous_received_at": "2026-10-13T14:50:05Z",
+  "executor": "Codex /root continuing the same user-authorized v4 research objective",
+  "current_run": "official Small inputs and both screenshot archives are restored and independently validated; adapted-matched Aliyun web ended partial/failed at 67 of 100 trajectories with HTTP 400 Arrearage; native result remains unavailable; isolated local text-only runner and one micro smoke are complete for diagnosis only",
+  "adopted_priority": "preserve v4 internal results; complete native AgentRunbook-R LongMemEval-V2 Small web+enterprise with full trajectories/screenshots/questions and official harness, then RAG+Notes; MemForest remains deferred",
+  "next_actual_command": "preserve adapted-aliyun-vl/web failure evidence; use local-text-only runner only for explicitly marked diagnostics and continue narrow RAG+Notes/internal work without claiming official Small; restart a full adapted web only in a new directory after a confirmed usable visual endpoint",
+  "goal_status": "native existing Goal reports blocked/unfinished; create_goal refused a duplicate; current user continue is executing, not waiting for Goal-file activation",
+  "gpu_check": "2026-10-14T04:52:00+08:00: existing local chat on 127.0.0.1:8023 and embedding on 127.0.0.1:8114 remain active; no additional GPU process started and no process killed.",
+  "scope": "official native AgentRunbook-R Small first; internal B0/B1/B2/strong B3/Ours and streaming Freshness/Goodput follow",
+  "skill": "memory-research-loop v4 read in full"
+}

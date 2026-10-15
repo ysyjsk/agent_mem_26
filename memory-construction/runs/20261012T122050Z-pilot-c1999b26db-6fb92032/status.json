@@ -1,0 +1,10 @@
+{
+  "failure": {
+    "message": "suite 'pilot' requires live construction/reader services; configured endpoints=0. Inject a workflow_memory suite backend and model adapters before running live experiments.",
+    "type": "BackendUnavailable"
+  },
+  "run_id": "20261012T122050Z-pilot-c1999b26db-6fb92032",
+  "status": "blocked",
+  "suite": "pilot",
+  "updated_at": "2026-10-12T12:20:50.920473Z"
+}

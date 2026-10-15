@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "attempt_id": "20261013T041433Z-b9d0d1f9",
+  "task": "R1",
+  "hypothesis": "固定4窗口上，真实Ours-dev通过自身增量状态减少重复抽取，相对独立cache的B0 Fresh降低checkpoint construction kernel成本；保留失败和负结果",
+  "command": [
+    "/usr/bin/env",
+    "PYTHONPATH=src",
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_fast_compare.py",
+    "--config",
+    "configs/runtime.local.json",
+    "--manifest",
+    "manifests/fastloop_dev_v1.json",
+    "--methods",
+    "B0,Ours-dev",
+    "--out",
+    "runs/fast-compare-v4-initial-20261013"
+  ],
+  "cwd": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+  "resource": "gpu",
+  "started_at": "2026-10-13T04:14:33.906441+00:00",
+  "status": "failed",
+  "supervisor": {
+    "pid": 154927,
+    "start_ticks": "463804",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "child": {
+    "pid": 154931,
+    "start_ticks": "463806",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "timeout_seconds": 7200.0,
+  "exit_code": 1,
+  "heartbeat_means": "supervisor alive, not experiment making progress",
+  "finished_at": "2026-10-13T04:16:50.189508+00:00",
+  "elapsed_seconds": 136.28291258399986,
+  "next_action": "Read stderr/stdout, record root-cause hypothesis, repair and retry or execute an independent task."
+}

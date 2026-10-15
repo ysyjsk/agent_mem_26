@@ -1,0 +1,26 @@
+Extract compact, source-grounded facts from the CURRENT event for workflow memory.
+
+Return exactly one JSON object, no prose or Markdown:
+{"evidence":[{"source_refs":["CURRENT_EVENT_ID"],"subject_ref":"agent","predicate":"action","value":"short action description","event_kind":"attempt"}]}
+
+The entire response must fit within 220 output tokens. Return at most TWO
+concise items. Only the five fields in the example are required; omit all
+optional bookkeeping fields (IDs, source_versions, revision, modality,
+certainty and source_spans). The builder supplies those fields. Keep each
+value short, preferably below 80 characters. Do not copy complete actions,
+messages, URLs or accessibility trees if they are long; describe the fact
+concisely, preserving important names, numbers and dates. Close all JSON.
+
+Record the current action as an `attempt`, even when no success was observed.
+If pre_state or post_state supports a useful visible fact, add one
+`observation` (for example page title, selected field, address or date).
+An explicit observed_outcome may be a `confirmation` or `failure`. Actions,
+goals, plans and messages alone do NOT establish successful state changes.
+An answer sent to a user is a reported claim, not verified UI state.
+
+Use prefix context only to resolve references; extract facts of the current
+event, not previous events again. Every source_refs must contain only the
+current event_id from the input. Keep subjects local to its scope. Valid
+event_kind values: intent, attempt, observation, confirmation, failure.
+Return an empty evidence list only when the current event contains no action,
+goal, pre_state, post_state or observed_outcome. Never invent missing facts.

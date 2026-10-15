@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="430" viewBox="0 0 1140 430">
+<rect width="1140" height="430" fill="white"/>
+<g font-family="sans-serif" fill="#172b4d">
+<text x="30" y="32" font-size="20">Construction costs: fixed 10 trajectories</text>
+<text x="30" y="57" font-size="13">Text-only/adapted; full events, notes, sources and indexes retained. Lower is better.</text>
+<text x="30" y="95" font-size="15">Queryable publication (s)</text>
+<text x="30" y="124" font-size="12">baseline</text>
+<rect x="30" y="131" width="194.2" height="20" fill="#687787"/>
+<text x="231.2" y="146" font-size="12">830.0</text>
+<text x="30" y="186" font-size="12">joint</text>
+<rect x="30" y="193" width="240.0" height="20" fill="#167fac"/>
+<text x="277.0" y="208" font-size="12">1,025.8</text>
+<text x="30" y="248" font-size="12">embed</text>
+<rect x="30" y="255" width="206.6" height="20" fill="#b16d35"/>
+<text x="243.6" y="270" font-size="12">883.0</text>
+<text x="30" y="310" font-size="12">combined</text>
+<rect x="30" y="317" width="231.6" height="20" fill="#16876c"/>
+<text x="268.6" y="332" font-size="12">989.9</text>
+<text x="400" y="95" font-size="15">Known LLM input tokens</text>
+<text x="400" y="124" font-size="12">baseline</text>
+<rect x="400" y="131" width="239.5" height="20" fill="#687787"/>
+<text x="646.5" y="146" font-size="12">735,023.0</text>
+<text x="400" y="186" font-size="12">joint</text>
+<rect x="400" y="193" width="223.8" height="20" fill="#167fac"/>
+<text x="630.8" y="208" font-size="12">686,954.0</text>
+<text x="400" y="248" font-size="12">embed</text>
+<rect x="400" y="255" width="240.0" height="20" fill="#b16d35"/>
+<text x="647.0" y="270" font-size="12">736,591.0</text>
+<text x="400" y="310" font-size="12">combined</text>
+<rect x="400" y="317" width="217.2" height="20" fill="#16876c"/>
+<text x="624.2" y="332" font-size="12">666,712.0</text>
+<text x="770" y="95" font-size="15">Known LLM output tokens</text>
+<text x="770" y="124" font-size="12">baseline</text>
+<rect x="770" y="131" width="225.0" height="20" fill="#687787"/>
+<text x="1002.0" y="146" font-size="12">18,603.0</text>
+<text x="770" y="186" font-size="12">joint</text>
+<rect x="770" y="193" width="230.1" height="20" fill="#167fac"/>
+<text x="1007.1" y="208" font-size="12">19,030.0</text>
+<text x="770" y="248" font-size="12">embed</text>
+<rect x="770" y="255" width="240.0" height="20" fill="#b16d35"/>
+<text x="1017.0" y="270" font-size="12">19,845.0</text>
+<text x="770" y="310" font-size="12">combined</text>
+<rect x="770" y="317" width="232.9" height="20" fill="#16876c"/>
+<text x="1009.9" y="332" font-size="12">19,254.0</text>
+<text x="30" y="398" font-size="12">QA is a constraint, not the ranking objective. Failed-call usage is unknown; retries are reported separately.</text>
+</g></svg>

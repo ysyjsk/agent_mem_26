@@ -1,0 +1,333 @@
+{
+  "schema_version": 2,
+  "update_id": "paper-complete-goal-20261015",
+  "goal": "Complete GOAL.md PAPER01–PAPER06: quality-preserving construction/update cost gains; full local text-only/adapted Small comparisons across web/enterprise, strong B3/Ours updates, ablations, scale, quality, paired repeats, real streaming, paper figures and reproducibility. Development tables are milestones, not completion.",
+  "current_deliverable": "PAPER01 next: parameterize existing update runner and complete eight fixed web/enterprise development update pairs plus post-update quality, then continue PAPER02–PAPER06 without treating this table as the final Goal. Existing construction_pair_v2_full10.csv and agentrunbook_update_b3_ours.csv are retained evidence.",
+  "rules": "GOAL.md and active_plan_task_ids define the current required plan. Mark tasks done only after real runs and stated outputs. Preserve historical records and failed results. Current route is local text-only/adapted; deferred native/visual/Judge tasks do not gate PAPER tasks. Reuse working services, isolate method caches, retain matched B3 optimizations, and let the existing execution session manage actual Goal status. All required PAPER tasks must finish before the total research Goal is complete.",
+  "latest_r5_audit": "2026-10-14 final audit: adapted web Small ended after 5322.23s with 67/100 trajectories successful and trajectory 3331c568 failed. model_calls has 1490 rows (1398 success, 67 RuntimeError, 15 HTTP 429 RateLimitError, 10 HTTP 400 BadRequestError); the terminal provider response is Aliyun Arrearage. failure_summary.json records the partial state. No per-question, prompt-build summary, aggregate, or complete Small result exists. Do not restart or overwrite this failed directory. Native GPT/Judge remain pending; all Qwen scores are adapted/evaluator-only.",
+  "latest_r5_progress": "2026-10-14 local fallback smoke completed in runs/agentrunbook-r-native-small-20261014/local-text-only/smoke-run-enterprise-v3: one official-schema trajectory prefix (4 states), one enterprise question, local Qwen3.5-9B Reader/Controller and local Qwen3-Embedding-8B, prompt image_url=0, build 42.59s, Reader successful, 0/1 development proxy score. The runner now has explicit --text-only, isolated import precedence, and adapter_provenance.json. It is diagnostic text-only/micro and cannot replace native or full adapted Small.",
+  "tasks": [
+    {
+      "id": "R0",
+      "title": "复用已有资源，固定最小工作负载和两方法入口",
+      "status": "done",
+      "depends_on": [],
+      "acceptance": "一次 GPU 所有权/服务检查；固定 4 个最多 12 事件的开发前缀、相同 checkpoint、模态和预算；窄入口真实调用 B0 与 Ours-dev，共享构建规范但独立方法缓存。不要重做 P0 或先补 tune。",
+      "expected_outputs": [
+        "manifests/fastloop_dev_v1.json",
+        "tools/run_fast_compare.py 或已有等价入口"
+      ],
+      "evidence": [
+        "manifests/fastloop_dev_v1.json — source SHA256 verified, 4 windows/45 events/12 checkpoints fixed",
+        "tools/run_fast_compare.py — independent real B0 stores and Ours apply_delta; 138 real calls recorded in runs/fast-compare-v4-full-20261013; no GPU jobs observed on 2026-10-13T06:58:55Z; no process killed"
+      ]
+    },
+    {
+      "id": "R1",
+      "title": "现在就跑首张 B0/Ours-dev 指标表",
+      "status": "done",
+      "depends_on": [
+        "R0"
+      ],
+      "acceptance": "两方法独立真实运行，有逐 checkpoint 耗时/调用/tokens、快照检查和失败留档，表内数字可追溯；允许一致的 construction_kernel 范围但不能冒充端到端 Freshness；QA 未评如实标记。",
+      "expected_outputs": [
+        "results/tables/first_compare.csv",
+        "reports/first_compare.md",
+        "runs/<id>/manifest.json",
+        "runs/<id>/checkpoint_metrics.jsonl"
+      ],
+      "evidence": [
+        "results/tables/first_compare.csv and reports/first_compare.md — corrected full run runs/fast-compare-v4-corrected-20261013: B0 386.813572443s/93 calls/183591 input/7943 output; Ours-dev 193.688754320s/45 calls/90640 input/3842 output",
+        "12 checkpoints each, zero failures, 12/12 paired exact semantic matches, 100% source-event evidence coverage at each checkpoint; raw token totals and frozen-code SHA256 independently checked",
+        "Earlier initial/full/single-window attempts preserved with errors and negative evidence in reports/optimization_log.md; first table is text-only development construction_kernel, QA not_evaluated; not a strong-B3 or paper accuracy claim"
+      ]
+    },
+    {
+      "id": "R2",
+      "title": "同窗口补完整计时与强 B3",
+      "status": "done",
+      "depends_on": [
+        "R1"
+      ],
+      "acceptance": "相同 Embedding/索引/可读发布边界的端到端表；强 B3 合法缓存、保守分区失效、正确提交，真实 backend；c=1 后按实际资源尝试 c=2，记录有效并发；不能把传参数或 replay 叫并发实测。",
+      "expected_outputs": [
+        "results/tables/first_compare_e2e.csv",
+        "results/tables/dev_strong_compare.csv"
+      ],
+      "evidence": [
+        "runs/fast-compare-v4-e2e-c1-20261013 and reports/e2e_c1_audit.md — B0 286.444s/Ours-dev 139.112s/B3-c1 138.512s; 36/36 complete, zero failures, true independent construction+Embedding/index publication; 12/12 structured pairs equal; 183 calls and 93 embedding calls raw totals audited",
+        "runs/fast-compare-v4-e2e-batch2-20261013 — Ours-dev 100.288225884s vs B3-c2 100.270336674s; 24/24 complete, 0 failures, 90 real extraction calls, 46 actual batch groups (44 width2/2 width1), same input90640/output3852 per method and 12/12 within-run semantic matches",
+        "Results retain near-ties and regressions vs strong B3; c1 to c2 only 2/12 bitwise structured matches despite identical requests, due to observed live response differences requiring quality checks; no replay or official QA claim; all frozen-source hashes verified"
+      ]
+    },
+    {
+      "id": "R3",
+      "title": "按瓶颈持续优化，形成开发曲线",
+      "status": "done",
+      "depends_on": [
+        "R2"
+      ],
+      "acceptance": "至少两轮新假设的配对优化或有证据的提前收敛，每轮 1–3 个候选，记录初版/强 B3/优化版耗时与 tokens、正确性/质量状态及保留理由；负结果保留，效果不足继续有效改进，不等 tune。",
+      "expected_outputs": [
+        "results/tables/dev_iterations.csv",
+        "reports/optimization_log.md"
+      ],
+      "evidence": [
+        "results/tables/dev_iterations.csv — H2 paired Ours c1→batch2 latency -27.908%, B3 -27.609%; Ours vs B3-c2 -0.01784% (regression/tie), 0 failed pairs",
+        "H3 runs/fast-compare-v4-e2e-batch2-context0-20261013 — Ours89.008189939s/B3-c2 88.650322447s, 24/24 complete, 0 failed, both45 real calls/64335 input/3810 output; versus H2 Ours -11.248% latency and -29.021% input; within-run semantic12/12, cross-config0/12 exact",
+        "reports/optimization_log.md records both new hypotheses, changes, negatives and next steps. QA remains not_evaluated; context0 is performance-only candidate pending fixed Reader proxy, not a selected formal quality-equivalent configuration."
+      ]
+    },
+    {
+      "id": "R4",
+      "title": "扩为 12/24 开发窗口并补质量证据",
+      "status": "done",
+      "depends_on": [
+        "R3"
+      ],
+      "acceptance": "预先固定新增窗口，两方法/强 B3 同预算配对；真实 Reader 与有证据范围的开发题，明确 proxy 与官方评分区别；指定 Judge 可用即正式评，无资源只局部待评。",
+      "expected_outputs": [
+        "results/tables/dev_scale.csv",
+        "results/tables/dev_quality.csv"
+      ],
+      "evidence": [
+        "manifests/fastloop_dev12_v1.json and fastloop_dev24_v1.json fixed before new measurements: 132/205 source events, 36/60 checkpoints; source hash verified",
+        "runs/fast-compare-v4-dev24-batch2-20261013 completed 180/180 checkpoints for B0/Ours-dev/B3-c2 with 0 failures; dev_scale24.csv and reports/dev_scale24.md retain the real numbers",
+        "runs/dev-reader-v4-first-20261013 completed 84 real Reader calls but low exact recovery; negative quality evidence is retained and official QA remains not_evaluated",
+        "runs/dev-reader-v4-quality-v3-qa2-20261013 completed 90 additional source-run Reader calls (18 questions x 5 method/configuration rows), all successful; evaluator-only rescore is recorded separately and adds no new calls"
+      ]
+    },
+    {
+      "id": "R4Q",
+      "title": "质量修复：时序检索、证据保真与 Reader 视图",
+      "status": "done",
+      "depends_on": [
+        "R3"
+      ],
+      "acceptance": "在不读 gold/raw source 的既有快照上真实复测公开步骤检索；修复候选保留失败/告警 span、控件状态和原字面事实并带 source refs/version/cache hash；Reader 受预算地看到 state/workflow/index；原题不变并补冻结成功/失败、状态、语义题；B0/Ours/B3 共享修复并配对测量，精确字段与语义回答分列，负结果保留。",
+      "expected_outputs": [
+        "results/tables/dev_quality.csv",
+        "reports/quality_repair_log.md",
+        "runs/dev-reader-v4-temporal-<date>",
+        "runs/dev-reader-v4-fidelity-<date>"
+      ],
+      "evidence": [
+        "首轮 Reader 负结果已落盘：URL 概括、步骤错位、失败中间 span 丢失、combobox selected 状态缺失；当前无活动 GPU 作业，先验收 CPU 修改和测试",
+        "runs/dev-reader-v4-temporal-c1-20261013 (H4a) raises source recall to 1.0 but remains 0/12 exact; runs/dev-reader-v4-quality-v3-20261013 (H4b) reaches 12/12 exact for all three methods",
+        "runs/dev-reader-v4-quality-v3-qa2-rescored-20261013 is evaluator-only: 90/90 rows aligned, 5 boolean/string score corrections only, zero new model/embedding calls; results/tables/dev_quality.csv stores 10 disjoint exact_field/semantic rows with provenance"
+      ]
+    },
+    {
+      "id": "R5",
+      "title": "原生 AgentRunbook-R 官方 Small 完整复现",
+      "status": "deferred",
+      "depends_on": [
+        "R4",
+        "R4Q"
+      ],
+      "acceptance": "官方 LongMemEval-V2 Small web+enterprise 的完整 haystack、轨迹、截图、问题、Reader、采样/思考/预算、原生 AgentRunbook-R 代码和评分入口均使用；两个截图归档分别通过大小、SHA256、gzip -t、prepare_data.py 和 validate_data.py；逐题答案、构建/query 阶段耗时、调用/tokens、失败/重试、配置/代码/数据哈希和评分状态可追溯。Judge 缺失时保留 pending_judge，不填开发 proxy；native 与 adapted-matched 分目录、分配置、分表。",
+      "expected_outputs": [
+        "runs/agentrunbook-r-native-small-20261014/adapted-aliyun-vl/{web,enterprise}/",
+        "results/tables/agentrunbook_r_adapted_small.csv",
+        "reports/agentrunbook_r_adapted_small.md",
+        "native GPT/Judge remains pending"
+      ],
+      "evidence": [
+        "旧 lme-v2-agentrunbook-r-one-prefix6、runs/agentrunbook-r-native-small-20261013/{web,enterprise}、matched-qwenplus-v2 失败/诊断均保留，不计完成结果；",
+        "2026-10-14 已恢复并校验截图归档：web 2562302847 bytes/SHA256 68699c6842412e09a6f89d3c05c5ae8813275918002b52d82dec43ab24dd01fb/gzip -t pass；enterprise 3354163660 bytes/SHA256 5c4a67ae0856aa1ede9b040e7da7c7a2d0b76fdd6344ef87380bcdf9f4b6d7a3/gzip -t pass；prepare_data 与 validate_data 通过（451 questions, 1870 trajectories, 200 Small unique trajectories, 5095 states; web 240 / enterprise 211）。",
+        "LabForge GPT 请求不可用；DashScope adapted-matched web 运行真实结束但因 Aliyun HTTP 400 Arrearage 中止，完整证据见 adapted-aliyun-vl/web/failure_summary.json，不能记为 R5 完成。",
+        "隔离 local-text-only 适配已合并 Controller 图片剥离、AsyncOpenAI 生命周期修复和本地 Embedding tokenizer 路径；smoke-run-enterprise-v2 完成 1 trajectory/1 question 的真实本地调用，但明确为 text-only/micro 诊断，不替代视觉 Small 或官方 QA。native GPT/Judge 保持 pending；不覆盖失败目录。"
+      ],
+      "status_before_20261015_override": "in_progress",
+      "deferred_reason": "2026-10-15 user objective: complete local adapted PAPER01–PAPER06 first; old native-first dependency is superseded, evidence preserved."
+    },
+    {
+      "id": "R6",
+      "title": "紧接原生 Small 运行 RAG+Notes",
+      "status": "deferred",
+      "depends_on": [
+        "R5"
+      ],
+      "acceptance": "在同一官方 LongMemEval-V2 Small web+enterprise 数据、问题、资源和评分协议下运行冻结 RAG+Notes；保留 native/adapted-matched 配置差异、逐题答案、调用/tokens、构建/query 阶段耗时、失败/重试、配置/代码/数据哈希和评分状态，不把开发 proxy 混入官方 QA。",
+      "expected_outputs": [
+        "runs/rag-notes-longmemeval-small-20261014/",
+        "results/tables/rag_notes_official.csv",
+        "reports/rag_notes_small.md"
+      ],
+      "evidence": [
+        "Diagnostic only, not R6 completion: results/tables/local_text_smoke_compare.csv and reports/local_text_smoke_compare.md compare real local AgentRunbook-R, RAG+Notes, and RAG-without-Notes calls on the same four-state text-only fixture; all proxy scores 0/1, official Small/QA not evaluated. RAG-without-Notes uses 2 calls and 3.630s build versus RAG+Notes 7 calls and 17.683s, a retained cost/quality negative result."
+      ],
+      "status_before_20261015_override": "todo",
+      "deferred_reason": "2026-10-15 user objective: complete local adapted PAPER01–PAPER06 first; old native-first dependency is superseded, evidence preserved."
+    },
+    {
+      "id": "R7",
+      "title": "原生阶段计时、依赖机制与 B0/B1/B2/强 B3/Ours 分表",
+      "status": "deferred",
+      "depends_on": [
+        "R6"
+      ],
+      "acceptance": "沿 native AgentRunbook-R 真实写入/查询路径只增加阶段计时并定位抽取/note/Embedding/等待/重算/发布/query；共享模型、输入、Reader、资源、batch/request/index 配置下完成 B0/B1/B2/强 B3/Ours 分表，并真实接入依赖感知调度、细粒度失效、合法复用和一致发布；机制变更与质量消融分离。",
+      "expected_outputs": [
+        "results/tables/agentrunbook_r_stages.csv",
+        "results/tables/internal_b0_b1_b2_b3_ours.csv",
+        "reports/agentrunbook_r_mechanism.md"
+      ],
+      "evidence": [],
+      "status_before_20261015_override": "todo",
+      "deferred_reason": "2026-10-15 user objective: complete local adapted PAPER01–PAPER06 first; old native-first dependency is superseded, evidence preserved."
+    },
+    {
+      "id": "R8",
+      "title": "冻结论文评测、官方质量与流式 Freshness/Goodput",
+      "status": "deferred",
+      "depends_on": [
+        "R7"
+      ],
+      "acceptance": "native/matched 外部对照和内部消融冻结后，在独立 Small/Medium 与至少 3 次配对重复中保存逐题输出、官方评分、原始调用/配置；同一到达协议单独报告 Freshness P95、Goodput、质量与阶段成本，冲突/修订负载分列；checkpoint latency 不得代替 Freshness。",
+      "expected_outputs": [
+        "configs/frozen.json",
+        "results/tables/official_quality_repeats.csv",
+        "results/tables/streaming_freshness_goodput.csv",
+        "reports/final_research_report.md"
+      ],
+      "evidence": [],
+      "status_before_20261015_override": "todo",
+      "deferred_reason": "2026-10-15 user objective: complete local adapted PAPER01–PAPER06 first; old native-first dependency is superseded, evidence preserved."
+    },
+    {
+      "id": "PAPER01",
+      "title": "扩展并完成更新主结果",
+      "status": "todo",
+      "depends_on": [],
+      "acceptance": "固定两域八个开发修订配对后完成正式更新集；Fresh/B0、强 B3、Ours；新轨迹追加、既有轨迹增长、状态/工作流修订；更新后质量检查与真实调用成本。",
+      "expected_outputs": [
+        "results/tables/agentrunbook_update_b3_ours.csv",
+        "reports/agentrunbook_update_b3_ours.md",
+        "冻结的正式更新 manifest 与逐运行记录"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "PAPER02",
+      "title": "收敛冷构建方法与正式配置",
+      "status": "todo",
+      "depends_on": [
+        "PAPER01"
+      ],
+      "acceptance": "复用既有四格；测试 single/joint 相同有界输入准备，按质量约束及构建成本收敛正式配置，保留负结果，不强制重复全部开发运行。",
+      "expected_outputs": [
+        "results/tables/construction_pair_v2_full10.csv",
+        "新增冷构建候选表",
+        "正式方法配置与选择依据"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "PAPER03",
+      "title": "两域完整 Small 基础对照和质量",
+      "status": "todo",
+      "depends_on": [
+        "PAPER02"
+      ],
+      "acceptance": "完成 text-only/adapted 两域完整 Small：AgentRunbook-R、RAG+Notes、Raw RAG、Ours；B3/Ours 同表示同优化；固定开发/正式问题范围、逐题答案、统一评分和构建质量。",
+      "expected_outputs": [
+        "完整规模基础对照表",
+        "同表示 B3/Ours 表",
+        "正式逐题质量表和数据范围"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "PAPER04",
+      "title": "关键消融、规模与更新比例",
+      "status": "todo",
+      "depends_on": [
+        "PAPER03"
+      ],
+      "acceptance": "联合构建、事件复用和精确向量复用消融；固定递增轨迹规模及至少三个更新比例；复用可比旧运行，真实实现适用的 B0/B1/B2/B3/Ours 对照。",
+      "expected_outputs": [
+        "组件消融表",
+        "规模和更新比例表图"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "PAPER05",
+      "title": "配对重复与真实连续流式",
+      "status": "todo",
+      "depends_on": [
+        "PAPER03"
+      ],
+      "acceptance": "核心 B3/Ours 至少三次交替顺序配对重复；至少三个到达负载的连续更新，记录发布、累计成本、Freshness P50/P95、Goodput 和质量。",
+      "expected_outputs": [
+        "重复与波动表",
+        "连续更新原始记录",
+        "流式性能表图"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "PAPER06",
+      "title": "论文与复现交付",
+      "status": "todo",
+      "depends_on": [
+        "PAPER04",
+        "PAPER05"
+      ],
+      "acceptance": "所有必需实验真实完成；论文主表/消融/扩量/质量/重复/流式图可追溯；方法与实验章节、结论局限、配置环境和运行命令齐全。",
+      "expected_outputs": [
+        "reports/final_research_report.md",
+        "论文表图与方法/实验草稿",
+        "复现说明"
+      ],
+      "evidence": []
+    }
+  ],
+  "backlog": [
+    {
+      "id": "L01",
+      "title": "MemForest 完整复现与异步路径",
+      "status": "deferred",
+      "revisit_after": "PAPER06",
+      "reason": "用户最新目标：不阻塞 PAPER01–PAPER06 完整本地论文实验；保留已有工作，后续按论文实际需求补充。"
+    },
+    {
+      "id": "L03",
+      "title": "通用 tune 搜索器",
+      "status": "deferred",
+      "revisit_after": "PAPER06",
+      "reason": "用户最新目标：不阻塞 PAPER01–PAPER06 完整本地论文实验；保留已有工作，后续按论文实际需求补充。"
+    },
+    {
+      "id": "L04",
+      "title": "完整幂等恢复和故障矩阵",
+      "status": "deferred",
+      "revisit_after": "PAPER06",
+      "reason": "用户最新目标：不阻塞 PAPER01–PAPER06 完整本地论文实验；保留已有工作，后续按论文实际需求补充。"
+    },
+    {
+      "id": "L05",
+      "title": "通用 report/reproduce 平台（论文必需表图已移入 PAPER06）",
+      "status": "deferred",
+      "revisit_after": "PAPER06",
+      "reason": "PAPER06 必须直接完成论文所需图表与复现说明；通用平台不作前置条件。"
+    },
+    {
+      "id": "L06",
+      "title": "Codex Native 等其他外部系统",
+      "status": "deferred",
+      "revisit_after": "PAPER06",
+      "reason": "用户最新目标：不阻塞 PAPER01–PAPER06 完整本地论文实验；保留已有工作，后续按论文实际需求补充。"
+    }
+  ],
+  "active_plan_task_ids": [
+    "PAPER01",
+    "PAPER02",
+    "PAPER03",
+    "PAPER04",
+    "PAPER05",
+    "PAPER06"
+  ],
+  "goal_runtime_note": "No native Goal tool was queried or changed by this documentation update. Previous paused/blocked statements are historical observations; the active VS Code executor must verify current state."
+}

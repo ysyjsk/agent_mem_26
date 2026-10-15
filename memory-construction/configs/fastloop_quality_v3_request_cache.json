@@ -1,0 +1,12 @@
+{
+  "experiment_variant": "H6a_extraction_request_cache_v1",
+  "model_input_projection": "salient-v3",
+  "source_literal_evidence": true,
+  "source_literal_version": "source-literals-v1",
+  "extraction_concurrency": 2,
+  "extraction_request_cache": true,
+  "extraction_request_cache_max_entries": 512,
+  "embedding_max_length": 1024,
+  "embedding_batch_size": 2,
+  "embedding_render_version": "full-v1"
+}

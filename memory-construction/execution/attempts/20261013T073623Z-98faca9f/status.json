@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "attempt_id": "20261013T073623Z-98faca9f",
+  "task": "R2",
+  "hypothesis": "H1:同固定4窗口真实Embedding/index可读发布与合法缓存强B3-c1比较；预期B3也45真实抽取calls，分析Ours是否仅等同基础缓存；不回放且保留负结果",
+  "command": [
+    "/usr/bin/env",
+    "PYTHONPATH=src",
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_fast_compare.py",
+    "--config",
+    "configs/runtime.local.json",
+    "--manifest",
+    "manifests/fastloop_dev_v1.json",
+    "--methods",
+    "B0,Ours-dev,B3-c1",
+    "--scope",
+    "construction_e2e",
+    "--out",
+    "runs/fast-compare-v4-e2e-c1-20261013",
+    "--table",
+    "results/tables/dev_strong_compare.csv",
+    "--report",
+    "reports/dev_strong_compare.md"
+  ],
+  "cwd": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+  "resource": "gpu",
+  "started_at": "2026-10-13T07:36:23.433559+00:00",
+  "status": "command_succeeded",
+  "supervisor": {
+    "pid": 806029,
+    "start_ticks": "1674756",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "child": {
+    "pid": 806033,
+    "start_ticks": "1674759",
+    "boot_id": "633c8ec7-b2c1-4aa4-a2dd-37f1f6bf9cf1",
+    "host": "aces-System-Product-Name"
+  },
+  "timeout_seconds": 7200.0,
+  "exit_code": 0,
+  "heartbeat_means": "supervisor alive, not experiment making progress",
+  "finished_at": "2026-10-13T07:46:09.483210+00:00",
+  "elapsed_seconds": 586.0494953369998,
+  "next_action": "Review semantic artifacts and metrics, update queue, execute next task."
+}

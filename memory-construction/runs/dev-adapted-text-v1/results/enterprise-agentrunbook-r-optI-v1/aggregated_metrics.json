@@ -1,0 +1,223 @@
+{
+  "overall": {
+    "overall_full_set": 0.5,
+    "overall_non_abstention_only": 0.5,
+    "overall_abstention_only": null,
+    "count_all_questions": 4,
+    "count_non_abstention": 4,
+    "count_abstention": 0
+  },
+  "non_abstention_by_category": {
+    "static": {
+      "count": 1,
+      "pct_correct": 0.0,
+      "pct_answered_wrong": 1.0,
+      "pct_unknown": 0.0
+    },
+    "dynamic": {
+      "count": 2,
+      "pct_correct": 0.5,
+      "pct_answered_wrong": 0.5,
+      "pct_unknown": 0.0
+    },
+    "procedure": {
+      "count": 1,
+      "pct_correct": 1.0,
+      "pct_answered_wrong": 0.0,
+      "pct_unknown": 0.0
+    },
+    "gotchas": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    }
+  },
+  "abstention_by_category": {
+    "static-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "dynamic-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    },
+    "procedure-abs": {
+      "count": 0,
+      "pct_correct": null,
+      "pct_answered_wrong": null,
+      "pct_unknown": null
+    }
+  },
+  "combined_abstention_by_category": {
+    "static": {
+      "count": 1,
+      "pct_correct": 0.0,
+      "pct_answered_wrong": 1.0,
+      "pct_unknown": 0.0
+    },
+    "dynamic": {
+      "count": 2,
+      "pct_correct": 0.5,
+      "pct_answered_wrong": 0.5,
+      "pct_unknown": 0.0
+    },
+    "procedure": {
+      "count": 1,
+      "pct_correct": 1.0,
+      "pct_answered_wrong": 0.0,
+      "pct_unknown": 0.0
+    }
+  },
+  "abstention_overall": {
+    "count": 0,
+    "pct_correct": null,
+    "pct_answered_wrong": null,
+    "pct_unknown": null
+  },
+  "answer_status": {
+    "complete_parseable": 4,
+    "truncated": 0,
+    "service_failure": 0,
+    "parse_failure": 0,
+    "pending_judge": 0,
+    "scored": 4,
+    "correct": 2
+  },
+  "tokens": {
+    "prompt_tokens": 41628,
+    "completion_tokens": 387,
+    "total_tokens": 42015,
+    "avg_prompt_tokens": 10407.0,
+    "avg_completion_tokens": 96.75,
+    "avg_total_tokens": 10503.75
+  },
+  "memory_query": {
+    "avg_seconds": 4.795007906497631,
+    "p50_seconds": 5.003526510990923,
+    "p95_seconds": 5.15845298700151,
+    "max_seconds": 5.15845298700151,
+    "total_seconds": 19.180031625990523
+  },
+  "memory_post_query": {
+    "avg_seconds": 3.610999556258321e-06,
+    "p50_seconds": 3.7849968066439033e-06,
+    "p95_seconds": 4.183006240054965e-06,
+    "max_seconds": 4.183006240054965e-06,
+    "total_seconds": 1.4443998225033283e-05
+  },
+  "completed_at_utc": "2026-10-14T09:09:08.175577+00:00",
+  "timing": {
+    "prompt_build_wall_seconds": 40.08558226500463,
+    "reader_generation_wall_seconds": 35.72124363099283,
+    "reader_request_seconds_sum": 35.66565524102771,
+    "reader_queue_seconds_sum": 51.57798100798391
+  },
+  "shared_haystack": true,
+  "shared_haystack_ids": [
+    "f224a4eb",
+    "1f2793bd",
+    "96131e7b",
+    "13083bae",
+    "132da65a",
+    "77502b3f",
+    "4b3a3363",
+    "0ab99e0c",
+    "1d03b25f",
+    "9c420e86",
+    "2f191311",
+    "2ae5ac35",
+    "0b072635",
+    "4c9eaae0",
+    "247282e9",
+    "13c89395",
+    "102263ff",
+    "1046053f",
+    "be7dbdb2",
+    "16143664",
+    "352226dd",
+    "1dd9a032",
+    "4919aae9",
+    "110d48d3",
+    "911969c3",
+    "787ceaeb",
+    "c10b0c43",
+    "885de7d3",
+    "14825d3a",
+    "52836f8d",
+    "91870469",
+    "3c588c61",
+    "18deaf75",
+    "054c4ed2",
+    "1485f2f8",
+    "6a84271c",
+    "42b931a1",
+    "6dedfb73",
+    "36041ba0",
+    "afc7df70",
+    "bd6eb5c4",
+    "5c4a3809",
+    "25a8b10b",
+    "e012183c",
+    "55f7abe9",
+    "1a755059",
+    "2083b6e5",
+    "658d12db",
+    "4c36a575",
+    "785aa5fe",
+    "28151f9c",
+    "b1ba591c",
+    "12c22166",
+    "e9f683bd",
+    "fc0e8ec3",
+    "dc083cd0",
+    "22743fb5",
+    "1c29cf20",
+    "4db02b16",
+    "096432bf",
+    "e72dc073",
+    "013696c4",
+    "454485ca",
+    "435237ce",
+    "afa62eac",
+    "8362568d",
+    "2621b470",
+    "2010814f",
+    "140c90d8",
+    "8b74ffaa",
+    "fa42acc1",
+    "683720a4",
+    "3fafa5c3",
+    "933a1321",
+    "89cf6e06",
+    "2ebe08f4",
+    "16eb5333",
+    "6cd3cdc4",
+    "276f9dff",
+    "02dad10c",
+    "6c4a4684",
+    "6022defe",
+    "49f98e9e",
+    "38b757f1",
+    "f2bbf553",
+    "11c0fff6",
+    "cfd9c5e9",
+    "0c80a9e1",
+    "1d56a4d6",
+    "170f5570",
+    "12457787",
+    "45a55aa7",
+    "ee081745",
+    "1d1cac57",
+    "857659bd",
+    "f92c1020",
+    "fd4c97b1",
+    "433cea49",
+    "1cf3ac18",
+    "72e456ca"
+  ]
+}

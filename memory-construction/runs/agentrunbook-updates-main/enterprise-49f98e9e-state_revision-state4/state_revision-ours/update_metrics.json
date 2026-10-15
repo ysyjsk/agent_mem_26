@@ -1,0 +1,43 @@
+{
+  "policy": "ours",
+  "case": "state_revision",
+  "scope": "adapted_AgentRunbookR_local_update",
+  "starting_snapshot": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/construction-pair-v2/full10-enterprise-combined/memory_state",
+  "starting_cache": "independent clones; exact requests and vectors preserved equally",
+  "setup_load_and_seed_s_excluded": 1.1791049109888263,
+  "update_to_queryable_publish_s": 14.638226270995801,
+  "reextracted_event_outputs": 2,
+  "regenerated_notes": 0,
+  "llm_calls": 2,
+  "llm_input_tokens_known": 18835,
+  "llm_output_tokens_known": 242,
+  "embedding_calls": 1,
+  "embedding_vectors": 2,
+  "embedding_tokens_known": 208,
+  "unknown_usage_calls": 0,
+  "api_failed_calls": 0,
+  "exact_request_hits": 1,
+  "embedding_hits": 29,
+  "load_verified": true,
+  "event_count": 49,
+  "note_count": 10,
+  "qa_status": "source_grounded_checks_passed",
+  "quality_checks": {
+    "new_fact_present": true,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": true,
+    "dirty_event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "reused_event_count": 12,
+    "fixed_reader_regression": "not_run",
+    "quality_scope": "source_grounded_update_checks; fixed Reader regression scheduled separately",
+    "quality_pass": true
+  },
+  "trajectory_id": "49f98e9e",
+  "state_index": 4,
+  "raw_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/agentrunbook-updates-main/enterprise-49f98e9e-state_revision-state4/state_revision-ours"
+}

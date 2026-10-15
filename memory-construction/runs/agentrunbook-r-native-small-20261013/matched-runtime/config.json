@@ -1,0 +1,57 @@
+{
+  "runtime_kind": "native-code/matched-runtime",
+  "upstream_method": "agentrunbook_r",
+  "upstream_commit": "2cc8c540",
+  "reader": {
+    "model": "Qwen3.5-9B",
+    "base_url": "http://127.0.0.1:8023/v1",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": true,
+    "max_completion_tokens": 20000,
+    "memory_context_max_tokens": 200000,
+    "max_concurrent_requests": 16
+  },
+  "controller": {
+    "model": "Qwen3.5-9B",
+    "base_url": "http://127.0.0.1:8023/v1",
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "disable_thinking": false,
+    "max_completion_tokens": 8192
+  },
+  "local_model_paths": {
+    "reader_controller": "/data/predator/ly/Mem/models/Qwen3.5-9B"
+  },
+  "gpu_mapping": {
+    "reader_controller_physical_gpu": 0,
+    "embedding_physical_gpu": 1,
+    "embedding_process_logical_device": "cuda:0"
+  },
+  "adaptations": [
+    "OpenAI-compatible local Transformers adapter is used instead of the upstream hosted service.",
+    "The adapter forwards top_p, top_k, and per-request chat_template_kwargs.enable_thinking.",
+    "The adapter serializes generation on each GPU; upstream reader request concurrency remains 16 while effective GPU generation concurrency is 1.",
+    "Official source, memory algorithm, retrieval parameters, and prompt budgets are unchanged.",
+    "The hosted evaluator default gpt-5.2 is unavailable on the configured API; evaluator-only scoring uses the available gpt-5.6-terra model and is labeled matched-runtime."
+  ],
+  "service_code_sha256": {
+    "tools/local_openai_server.py": "8fbdadc5dccf7f552e1b8a8828e7f5f5987141682b4478732a73b4d7762f1ceb",
+    "src/workflow_memory/local_backends.py": "4784b425ad054df12188d317aa6448859c344e418f89c56e3a95439352c02003"
+  },
+  "judge": {
+    "status": "configured_from_process_environment",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": "medium",
+    "api_key": "redacted",
+    "base_url": "not_persisted"
+  },
+  "data_status": "official screenshot archives still downloading; no native Small score claimed",
+  "continuation": {
+    "pid": 2903578,
+    "log": "continuation.log",
+    "behavior": "wait for existing HF-Xet child PID 2568703, verify exact size and SHA256, prepare/validate, then run web and enterprise sequentially"
+  }
+}

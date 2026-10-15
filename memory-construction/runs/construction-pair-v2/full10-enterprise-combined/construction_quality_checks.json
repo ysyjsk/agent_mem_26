@@ -1,0 +1,15 @@
+{
+  "structural_checks": {
+    "event_source_coverage": true,
+    "event_fields_nonempty": true,
+    "raw_state_coverage": true,
+    "both_notes_preserved": true,
+    "sources_valid": true
+  },
+  "structural_pass": true,
+  "event_count": 49,
+  "raw_state_count": 54,
+  "note_count": 10,
+  "screen_fact_probes": [],
+  "fact_probe_scope": "Five source-backed value/change probes on 1ad1af4b; not a semantic equivalence or official QA claim"
+}

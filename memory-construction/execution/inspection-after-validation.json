@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-12T15:39:37.484132+00:00",
+  "root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction",
+  "resources": {
+    "construction": {
+      "backend": "transformers",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+      "local_path_exists": true
+    },
+    "embedding": {
+      "backend": "transformers",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3-Embedding-8B",
+      "local_path_exists": true
+    },
+    "reader": {
+      "backend": "transformers",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+      "local_path_exists": true
+    }
+  },
+  "runs": [
+    {
+      "run_id": "20261012T120353Z-correctness-f5db5a5beb-1fa683ea",
+      "status": "planned",
+      "evidence": "incomplete",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T120420Z-correctness-f5db5a5beb-fa321691",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T120952Z-correctness-3131077a3f-5f4fea6e",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T120952Z-correctness-3131077a3f-f0736e7a",
+      "status": "planned",
+      "evidence": "incomplete",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T121207Z-correctness-732bc957c1-4edc7764",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T121416Z-correctness-c1999b26db-bf6a7fc6",
+      "status": "planned",
+      "evidence": "incomplete",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T121439Z-correctness-c1999b26db-0277e9e2",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T121848Z-correctness-732bc957c1-335b0390",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T121946Z-pilot-732bc957c1-93f64739",
+      "status": "blocked",
+      "evidence": "incomplete",
+      "suite": "pilot",
+      "status_metrics_disagree": true,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": {
+        "message": "suite 'pilot' requires live construction/reader services; configured endpoints=0. Inject a workflow_memory suite backend and model adapters before running live experiments.",
+        "type": "BackendUnavailable"
+      },
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T122006Z-correctness-732bc957c1-7c740c59",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T122050Z-pilot-c1999b26db-6fb92032",
+      "status": "blocked",
+      "evidence": "incomplete",
+      "suite": "pilot",
+      "status_metrics_disagree": true,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": {
+        "message": "suite 'pilot' requires live construction/reader services; configured endpoints=0. Inject a workflow_memory suite backend and model adapters before running live experiments.",
+        "type": "BackendUnavailable"
+      },
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T122122Z-correctness-c1999b26db-74917e9a",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T123606Z-correctness-a2e40ba88a-50369fce",
+      "status": "planned",
+      "evidence": "incomplete",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T125740Z-correctness-732bc957c1-9e49e806",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T130536Z-correctness-732bc957c1-7ff66d7c",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T132055Z-correctness-732bc957c1-90b3ff36",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T143545Z-pilot-db6b8886f4-51632bdd",
+      "status": "failed",
+      "evidence": "incomplete",
+      "suite": "pilot",
+      "status_metrics_disagree": true,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": {
+        "message": "CUDA out of memory. Tried to allocate 362.00 MiB. GPU 0 has a total capacity of 23.55 GiB of which 309.81 MiB is free. Including non-PyTorch memory, this process has 23.03 GiB memory in use. Of the allocated memory 22.51 GiB is allocated by PyTorch, and 206.11 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+        "type": "OutOfMemoryError"
+      },
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T143904Z-pilot-db6b8886f4-0d099bd4",
+      "status": "completed",
+      "evidence": "live_construction_with_replay_pairs",
+      "suite": "pilot",
+      "status_metrics_disagree": false,
+      "live_model_calls": 13,
+      "qa_rows": 0,
+      "replay_for_paired_methods": true,
+      "progress": {},
+      "failure": null,
+      "judge_probe": {
+        "reason": "not_configured",
+        "status": "blocked"
+      }
+    },
+    {
+      "run_id": "20261012T144342Z-dev-db6b8886f4-d7ffd42d",
+      "status": "failed",
+      "evidence": "incomplete",
+      "suite": "dev",
+      "status_metrics_disagree": true,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": {
+        "message": "",
+        "type": "KeyboardInterrupt"
+      },
+      "judge_probe": null
+    },
+    {
+      "run_id": "20261012T145028Z-dev-db6b8886f4-525fda9f",
+      "status": "running",
+      "evidence": "incomplete",
+      "suite": "dev",
+      "status_metrics_disagree": true,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null,
+      "ownership": "legacy_unverified",
+      "action": "Correlate process identity, open files and progress before resuming; never infer completion."
+    },
+    {
+      "run_id": "20261012T150134Z-dev-db6b8886f4-4a2b8ecf",
+      "status": "running",
+      "evidence": "incomplete",
+      "suite": "dev",
+      "status_metrics_disagree": true,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {
+        "completed_events": 284,
+        "completed_trajectories": 22,
+        "live_model_calls": 284,
+        "status": "running",
+        "suite": "dev",
+        "total_trajectories": 24,
+        "updated_at": "2026-10-12T15:12:07.344020Z"
+      },
+      "failure": null,
+      "judge_probe": null,
+      "ownership": "legacy_unverified",
+      "action": "Correlate process identity, open files and progress before resuming; never infer completion."
+    },
+    {
+      "run_id": "20261012T150237Z-correctness-732bc957c1-b908bbc3",
+      "status": "completed",
+      "evidence": "offline_correctness",
+      "suite": "correctness",
+      "status_metrics_disagree": false,
+      "live_model_calls": 0,
+      "qa_rows": 0,
+      "replay_for_paired_methods": null,
+      "progress": {},
+      "failure": null,
+      "judge_probe": null
+    }
+  ],
+  "managed_attempts": [
+    {
+      "attempt_id": "20261012T153937Z-e72a08a1",
+      "task": "infrastructure-verification",
+      "status": "command_succeeded",
+      "exit_code": 0,
+      "owner": "not_observed",
+      "child": "not_observed",
+      "next_action": "Review semantic artifacts and metrics, update queue, execute next task."
+    }
+  ],
+  "project_python_processes": [],
+  "implementation_tasks": [
+    "tune_stub: implement development optimization; not an external blocker"
+  ],
+  "actionable_tasks": [
+    "S01",
+    "S05",
+    "S07"
+  ],
+  "blocked_tasks": [],
+  "executor_update": {
+    "receipt_present": false,
+    "receipt": {}
+  },
+  "notes": [
+    "Read-only observation unless --write is requested.",
+    "Judge absence does not block construction or performance.",
+    "Success is not inferred from replay, heartbeat, filenames or exit code.",
+    "Process scan covers this code-root cwd; parent-cwd or external jobs need separate inspection."
+  ]
+}

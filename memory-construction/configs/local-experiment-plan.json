@@ -1,0 +1,495 @@
+{
+  "schema_version": "workplan-spec/2.0",
+  "document_date": "2026-10-12",
+  "timezone": "Asia/Shanghai",
+  "status": "specification_only_not_experiment_results",
+  "project": {
+    "package": "workflow_memory",
+    "code_subdirectory_if_no_existing_project": "memory-construction",
+    "preferred_python": "3.11",
+    "storage": "sqlite_wal_plus_versioned_index_manifests",
+    "resume_required": true
+  },
+  "sources": {
+    "longmemeval_v2": {
+      "url": "https://github.com/xiaowu0162/LongMemEval-V2",
+      "commit": "2cc8c540bdb87fe6761629b585e727e1c4704520"
+    },
+    "dataset": {
+      "id": "xiaowu0162/longmemeval-v2",
+      "revision": null,
+      "resolve_and_pin_in": "P0"
+    },
+    "memforest": {
+      "url": "https://github.com/Concyclics/MemForest",
+      "commit": "2b5af6d9f92618b30f3e8b7eb99412c1d5eddd6d",
+      "online_path": "reproducibility/implementation/async_core",
+      "batch_and_online_results_separate": true
+    },
+    "codex_v2_official_binary": {
+      "version": "0.117.0",
+      "verify_against_frozen_baseline": true
+    },
+    "codex_native": {
+      "commit": null,
+      "resolve_and_pin_before_native_runs": true
+    }
+  },
+  "models": {
+    "construction": {
+      "id": "Qwen/Qwen3.5-9B",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+      "device": "cuda:0",
+      "backend": "transformers",
+      "checkpoint_revision": null,
+      "base_url_env": "CONSTRUCTION_BASE_URL",
+      "api_key_env": "CONSTRUCTION_API_KEY",
+      "temperature": 0,
+      "prompt_version": null,
+      "context_limit": null,
+      "vision_preprocessing": null,
+      "precision": null,
+      "retry_policy": null
+    },
+    "embedding": {
+      "id": "Qwen/Qwen3-Embedding-8B",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3-Embedding-8B",
+      "device": "cuda:1",
+      "backend": "transformers",
+      "checkpoint_revision": null,
+      "base_url_env": "EMBEDDING_BASE_URL",
+      "api_key_env": "EMBEDDING_API_KEY",
+      "input_limit": null,
+      "query_instruction": "inherit_and_pin_frozen_official_protocol"
+    },
+    "reader": {
+      "id": "Qwen/Qwen3.5-9B",
+      "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+      "device": "cuda:0",
+      "backend": "transformers",
+      "checkpoint_revision": null,
+      "base_url_env": "READER_BASE_URL",
+      "api_key_env": "READER_API_KEY",
+      "parameters": "inherit_and_pin_frozen_official_protocol"
+    },
+    "judge": {
+      "id": "gpt-5.2",
+      "backend": "openai_compatible",
+      "base_url_env": "JUDGE_BASE_URL",
+      "api_key_env": "JUDGE_API_KEY",
+      "reasoning_effort": "medium",
+      "prompt": "inherit_and_pin_frozen_official_evaluator",
+      "record_returned_model_id": true
+    },
+    "native_v2_codex": {
+      "id": "gpt-5.4-mini",
+      "reasoning_effort": "xhigh",
+      "verify_against_frozen_baseline": true
+    }
+  },
+  "data": {
+    "root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data/longmemeval_dev.jsonl",
+    "smoke_root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data/longmemeval_smoke.jsonl",
+    "source_dataset": "/data/predator/ly/Mem/data/raw/longmemeval/trajectories.jsonl",
+    "source_sha256": "0d839a1a9ab03b62c1862881de70f83140c83857dc0ebff6a99d4715b4129a3c",
+    "preserve_images": true,
+    "prefix_information_only": true,
+    "outcome_available_at": "trajectory_end_event",
+    "action_alignment": "verify_official_code_against_actual_samples",
+    "cross_trajectory_state_policy": "isolated_unless_environment_instance_continuity_is_verified",
+    "dev_trajectory_target": 24,
+    "dev_domain_targets": {
+      "web": 12,
+      "enterprise": 12
+    },
+    "smoke_trajectory_target": 4,
+    "split_seed": 20261012,
+    "split_manifest": null,
+    "audit_small_medium_overlap": true,
+    "audit_near_duplicates": true,
+    "official_full_evaluation_separate_from_heldout_claims": true
+  },
+  "algorithm": {
+    "version": null,
+    "layers": [
+      "evidence",
+      "state_relation",
+      "workflow"
+    ],
+    "source_context_window_events_default": 2,
+    "source_context_window_events_candidates": [
+      1,
+      2,
+      4
+    ],
+    "partition_granularity_candidates": [
+      "transition",
+      "fixed_step_group",
+      "workflow_segment"
+    ],
+    "grouping_must_be_canonical_and_prefix_only": true,
+    "hash_fields_separate": [
+      "content",
+      "provenance",
+      "interpretation"
+    ],
+    "equality_for_propagation_stop": "exact_normalized_structured_fields",
+    "track_predicate_and_negative_reads": true,
+    "entity_keys_require_scope": true,
+    "unknown_dependency_policy": "expand_to_bounded_scope_and_log",
+    "raw_observations_append_only": true,
+    "corrections": "versioned_supersession_and_retraction",
+    "output_token_limits_default": {
+      "extraction": 1024,
+      "resolver": 1024,
+      "workflow": 2048
+    },
+    "retrieval_budget": null,
+    "required_views_manifest": null,
+    "llm_work_outside_commit_transaction": true,
+    "reader_snapshot_pinning": true,
+    "max_conflict_retries_default": 2,
+    "serial_fallback_scope": "affected_component"
+  },
+  "internal_methods": [
+    {
+      "id": "B0",
+      "name": "Fresh Serial",
+      "recompute": "full_at_declared_checkpoints",
+      "reuse": false,
+      "concurrency": 1
+    },
+    {
+      "id": "B1",
+      "name": "Fresh Parallel",
+      "recompute": "full_at_declared_checkpoints",
+      "reuse": false,
+      "concurrency": "selected"
+    },
+    {
+      "id": "B2",
+      "name": "Incremental Serial",
+      "invalidation": "conservative_partition",
+      "reuse": true,
+      "concurrency": 1
+    },
+    {
+      "id": "B3",
+      "name": "Strong Parallel + Incremental",
+      "invalidation": "conservative_partition",
+      "reuse": true,
+      "scheduler": "bounded_parallel_partition_queue",
+      "correctness_required": true,
+      "equal_tuning_budget": true
+    },
+    {
+      "id": "Ours",
+      "name": "Full",
+      "invalidation": "precise_actual_dependencies",
+      "reuse": true,
+      "early_stop": true,
+      "scheduler": "dependency_ready_queue",
+      "correctness_required": true
+    }
+  ],
+  "external_methods": [
+    {
+      "id": "agentrunbook_r",
+      "priority": 1,
+      "configuration": "native_and_labeled_matched"
+    },
+    {
+      "id": "memforest",
+      "priority": 2,
+      "configuration": "native_and_labeled_matched",
+      "online_implementation_required_for_online_claims": true
+    },
+    {
+      "id": "rag_notes",
+      "priority": 3,
+      "configuration": "native"
+    },
+    {
+      "id": "codex_native",
+      "priority": 4,
+      "configuration": "native",
+      "isolate_workspace": true,
+      "separate_eligibility_wait_from_kernel_time": true
+    },
+    {
+      "id": "v2_codex",
+      "priority": 5,
+      "configuration": "official",
+      "primary_table": "official_qa"
+    },
+    {
+      "id": "agentrunbook_c",
+      "priority": 5,
+      "configuration": "official",
+      "primary_table": "official_qa"
+    }
+  ],
+  "protocols": {
+    "A": {
+      "name": "official_qa",
+      "tiers": [
+        "small",
+        "medium"
+      ],
+      "preserve_official_manifests": true
+    },
+    "B": {
+      "name": "streaming_construction",
+      "prefix_only": true,
+      "open_loop": true,
+      "report_as_extension": true
+    },
+    "C": {
+      "name": "controlled_stress",
+      "report_as_derived_or_synthetic": true,
+      "excluded_from_official_qa": true
+    }
+  },
+  "workloads": {
+    "concurrency": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "update_ratios": [
+      0.01,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1
+    ],
+    "update_ratio_denominator": "source_event_count_in_fixed_prefix",
+    "append_and_revision_separate": true,
+    "conflict_targets": [
+      0,
+      0.1,
+      0.3,
+      0.5,
+      0.8
+    ],
+    "conflict_definition": "candidate_updates_with_overlapping_write_write_or_read_write_sets_per_batch",
+    "record_actual_conflicts": true,
+    "relative_arrival_rates": [
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      1.1
+    ],
+    "reference_capacity": "B3_sustainable_capacity_on_development_data",
+    "primary_relative_arrival_rate": 0.75,
+    "freeze_absolute_arrival_traces": true,
+    "arrival_processes": [
+      "fixed_interval",
+      "seeded_bursts"
+    ],
+    "fresh_checkpoints": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "batch_window_ms_candidates": [
+      0,
+      50,
+      200
+    ],
+    "cold_build_and_streaming_update_separate": true,
+    "application_cache_and_provider_prompt_cache_separate": true,
+    "no_full_cartesian_grid_by_default": true
+  },
+  "suites": {
+    "pilot": {
+      "phase": "P1",
+      "protocols": [
+        "A",
+        "B"
+      ],
+      "split": "development",
+      "methods": [
+        "agentrunbook_r",
+        "memforest"
+      ],
+      "target_trajectories": 24,
+      "smoke_first": 4,
+      "requires_live_models": true
+    },
+    "correctness": {
+      "phases": [
+        "P3",
+        "P4"
+      ],
+      "backend": "content_addressed_replay_or_deterministic_test_backend",
+      "not_performance_evidence": true,
+      "compare": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "Ours"
+      ],
+      "faults": [
+        "worker_crash",
+        "pre_commit_crash",
+        "post_commit_crash",
+        "timeout",
+        "duplicate_delivery",
+        "out_of_order_completion",
+        "alias_revision",
+        "negative_read_invalidation"
+      ]
+    },
+    "dev": {
+      "phases": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "protocols": [
+        "B",
+        "C"
+      ],
+      "split": "development",
+      "methods": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "Ours"
+      ],
+      "requires_live_models": true,
+      "performance_repeats": 3
+    },
+    "main": {
+      "phase": "P6",
+      "tier": "small",
+      "protocols": [
+        "A",
+        "B"
+      ],
+      "methods": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "Ours"
+      ],
+      "external_results_in_separate_tables": true,
+      "requires_frozen_config": true,
+      "requires_live_models": true
+    },
+    "scale": {
+      "phase": "P6",
+      "tier": "medium",
+      "protocols": [
+        "A",
+        "B"
+      ],
+      "methods": [
+        "B3",
+        "Ours",
+        "agentrunbook_r",
+        "memforest"
+      ],
+      "include_fresh_cold_build_reference": true,
+      "other_external_methods": "complete_official_quality_comparison_when_available",
+      "requires_frozen_config": true
+    },
+    "ablations": {
+      "phase": "P6",
+      "variants": [
+        "full",
+        "without_precise_invalidation",
+        "without_early_stop",
+        "without_dependency_scheduling",
+        "without_coalescing"
+      ],
+      "representation_comparison_is_separate": true,
+      "requires_frozen_config": true
+    },
+    "stress": {
+      "phase": "P6",
+      "protocols": [
+        "C"
+      ],
+      "methods": [
+        "B3",
+        "Ours",
+        "memforest"
+      ],
+      "derived_ground_truth_required": true,
+      "requires_frozen_config": true
+    }
+  },
+  "tuning": {
+    "dataset": "development_only",
+    "max_mechanism_rounds_initial": 3,
+    "max_candidates_per_round_per_compared_method": 12,
+    "continue_when_target_missed": "diagnose_and_improve_then_complete_frozen_evaluation",
+    "equal_B3_Ours_search_budget": true,
+    "keep_all_trials": true,
+    "no_final_test_adaptive_selection": true
+  },
+  "targets_not_results": {
+    "p95_reduction_vs_B3": 0.2,
+    "update_input_token_reduction_vs_B3": 0.3,
+    "qa_noninferiority_margin_vs_same_algorithm_fresh": 0.02,
+    "unresolved_correctness_violations": 0
+  },
+  "statistics": {
+    "formal_performance_paired_repeats": 5,
+    "main_quality_independent_build_answer_repeats": 3,
+    "confidence_level": 0.95,
+    "resampling_seed": 20261013,
+    "resampling_unit": "paired_run_and_trajectory_or_time_block_as_appropriate",
+    "report_low_independent_history_count": true,
+    "report_censored_updates_and_completion_rate": true,
+    "do_not_treat_qa_count_as_build_workload_count": true
+  },
+  "execution": {
+    "actual_runtime_config_generated_in": "P0",
+    "resolve_null_required_fields_before_formal_run": true,
+    "allow_labeled_development_only_fallback": true,
+    "forbid_silent_model_substitution": true,
+    "credentials_in_logs": false,
+    "public_leaderboard_submission": false,
+    "new_resource_purchase": false,
+    "user_existing_budget": null,
+    "budget_null_means": "discover_and_follow_existing_authorization_not_invent_unlimited_credit",
+    "expensive_run_preflight_estimate_required": true
+  },
+  "required_outputs": [
+    "reports/environment.md",
+    "manifests/versions.json",
+    "manifests/data.json",
+    "manifests/splits.json",
+    "reports/data_audit.md",
+    "reports/baseline_profile.md",
+    "reports/representation_quality.md",
+    "reports/equivalence.json",
+    "reports/correctness.md",
+    "reports/recovery.json",
+    "reports/optimization_log.md",
+    "reports/decision_log.md",
+    "reports/experiment_ledger.csv",
+    "configs/frozen.json",
+    "results/tables/main_internal.csv",
+    "results/tables/native_systems.csv",
+    "results/tables/official_qa.csv",
+    "results/tables/mechanisms.csv",
+    "results/tables/ablations.csv",
+    "results/tables/correctness_recovery.csv",
+    "reports/final_research_report.md",
+    "results/reproduce_manifest.json"
+  ]
+}

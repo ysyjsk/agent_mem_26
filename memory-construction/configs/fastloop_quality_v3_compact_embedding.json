@@ -1,0 +1,10 @@
+{
+  "experiment_variant": "H6b_source_ref_embedding_v1",
+  "model_input_projection": "salient-v3",
+  "source_literal_evidence": true,
+  "source_literal_version": "source-literals-v1",
+  "extraction_concurrency": 2,
+  "embedding_max_length": 1024,
+  "embedding_batch_size": 2,
+  "embedding_render_version": "source-ref-v1"
+}

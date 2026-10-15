@@ -1,0 +1,104 @@
+{
+  "config_sha256": "329be5444822858dac1d9c72314a8a2b237bb03ec16ed57ca185400bd86ac4c4",
+  "created_at": "2026-10-12T11:48:12.003089Z",
+  "estimates": {
+    "model_calls": "pending_backend_estimate",
+    "storage_bytes": "pending_backend_estimate",
+    "target_trajectories": 4,
+    "task_count": 5
+  },
+  "run_id": "20261012T114812Z-ablations-329be54448-c9240d62",
+  "status": "planned",
+  "suite": "ablations",
+  "suite_spec": {
+    "phase": "P6",
+    "representation_comparison_is_separate": true,
+    "requires_frozen_config": true,
+    "variants": [
+      "full",
+      "without_precise_invalidation",
+      "without_early_stop",
+      "without_dependency_scheduling",
+      "without_coalescing"
+    ]
+  },
+  "task_plan_schema_version": "workflow-memory-task-plan/1",
+  "task_plan_sha256": "468b66e37e7ab7d0a030134b07a1597392df4ac38805aeceae391095bed140cc",
+  "tasks": [
+    {
+      "dependencies": [],
+      "method": "default",
+      "ordinal": 0,
+      "output_dir": "outputs/task-33647a6504a8f3d3",
+      "protocol": "A",
+      "repeat": 1,
+      "requires_frozen_config": true,
+      "requires_live_models": false,
+      "status": "planned",
+      "suite": "ablations",
+      "target_trajectories": 4,
+      "task_id": "task-33647a6504a8f3d3",
+      "variant": "full"
+    },
+    {
+      "dependencies": [],
+      "method": "default",
+      "ordinal": 1,
+      "output_dir": "outputs/task-51ad17babd1b6226",
+      "protocol": "A",
+      "repeat": 1,
+      "requires_frozen_config": true,
+      "requires_live_models": false,
+      "status": "planned",
+      "suite": "ablations",
+      "target_trajectories": 4,
+      "task_id": "task-51ad17babd1b6226",
+      "variant": "without_precise_invalidation"
+    },
+    {
+      "dependencies": [],
+      "method": "default",
+      "ordinal": 2,
+      "output_dir": "outputs/task-3dd9012c6963e347",
+      "protocol": "A",
+      "repeat": 1,
+      "requires_frozen_config": true,
+      "requires_live_models": false,
+      "status": "planned",
+      "suite": "ablations",
+      "target_trajectories": 4,
+      "task_id": "task-3dd9012c6963e347",
+      "variant": "without_early_stop"
+    },
+    {
+      "dependencies": [],
+      "method": "default",
+      "ordinal": 3,
+      "output_dir": "outputs/task-7ac8bb76e2c55abe",
+      "protocol": "A",
+      "repeat": 1,
+      "requires_frozen_config": true,
+      "requires_live_models": false,
+      "status": "planned",
+      "suite": "ablations",
+      "target_trajectories": 4,
+      "task_id": "task-7ac8bb76e2c55abe",
+      "variant": "without_dependency_scheduling"
+    },
+    {
+      "dependencies": [],
+      "method": "default",
+      "ordinal": 4,
+      "output_dir": "outputs/task-03e61a138622dc11",
+      "protocol": "A",
+      "repeat": 1,
+      "requires_frozen_config": true,
+      "requires_live_models": false,
+      "status": "planned",
+      "suite": "ablations",
+      "target_trajectories": 4,
+      "task_id": "task-03e61a138622dc11",
+      "variant": "without_coalescing"
+    }
+  ]
+}

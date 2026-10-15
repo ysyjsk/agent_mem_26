@@ -1,0 +1,24 @@
+{
+  "config_sha256": "db6b8886f47b2bda4ab6a124d3ff576608772d0f226b5c203e6b8949e05c7779",
+  "event_count": 375,
+  "manifest_schema_version": "workflow-memory-data/1",
+  "outcome_available_at": "trajectory_end_event",
+  "prefix_information_only": true,
+  "record_count": 28,
+  "root": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data",
+  "sources": [
+    {
+      "events": 362,
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data/longmemeval_dev.jsonl",
+      "records": 24,
+      "sha256": "0d839a1a9ab03b62c1862881de70f83140c83857dc0ebff6a99d4715b4129a3c"
+    },
+    {
+      "events": 13,
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data/longmemeval_smoke.jsonl",
+      "records": 4,
+      "sha256": "6450ee53c8e19a94f3005693f78b1e3b07ef5ea1d9147d3ea351ab2b9f5b8b64"
+    }
+  ],
+  "status": "prepared"
+}

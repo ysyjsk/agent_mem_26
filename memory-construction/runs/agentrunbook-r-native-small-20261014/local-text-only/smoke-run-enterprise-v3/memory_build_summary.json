@@ -1,0 +1,6 @@
+{
+  "trajectory_count": 1,
+  "status": "success",
+  "elapsed_seconds": 42.585465898999246,
+  "metrics_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/agentrunbook-r-native-small-20261014/local-text-only/smoke-run-enterprise-v3/memory_build_metrics.jsonl"
+}

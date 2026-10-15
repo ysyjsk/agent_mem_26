@@ -1,0 +1,34 @@
+{
+  "status": "failed_partial_adapted",
+  "run_kind": "adapted-matched",
+  "domain": "web",
+  "tier": "small",
+  "completed_trajectories": 67,
+  "failed_trajectories": 1,
+  "expected_trajectories": 100,
+  "wall_seconds": 5322.23,
+  "memory_build_metrics_rows": 68,
+  "model_calls_rows": 1490,
+  "model_call_status_counts": {
+    "success": 1398,
+    "RuntimeError": 67,
+    "RateLimitError_429": 15,
+    "BadRequestError_400": 10
+  },
+  "terminal_error": {
+    "type": "BadRequestError",
+    "http_status": 400,
+    "provider_code": "Arrearage",
+    "message_recorded": "Access denied / overdue payment response from the Aliyun compatible endpoint"
+  },
+  "missing_outputs": [
+    "memory_build_summary.json",
+    "prompt_build_summary.json",
+    "per_question.jsonl",
+    "aggregated_metrics.json"
+  ],
+  "raw_metrics_path": "memory_build_metrics.jsonl",
+  "raw_calls_path": "memory_workspace/shared/model_calls.jsonl",
+  "secret_persistence": "runtime-only; no API key stored",
+  "note": "Partial evidence is retained and is not a Small completion or quality result."
+}

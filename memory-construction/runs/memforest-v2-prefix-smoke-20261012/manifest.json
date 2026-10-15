@@ -1,0 +1,73 @@
+{
+  "status": "completed",
+  "method": "memforest",
+  "commit": "2b5af6d9f92618b30f3e8b7eb99412c1d5eddd6d",
+  "snapshot_dir": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/memforest-v2-prefix-smoke-20261012",
+  "config_sha256": "66070632ae1e1f50a8b6bb17b282ad6e78a9fffd732b3cab9491fb5af6eaaf7d",
+  "input": {
+    "input_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl",
+    "input_file_sha256": "363cec9a8e87aa8d9101ce4e600aadbf7031d674056ebe4f969e8424abc5f3c6",
+    "selected_trajectory_ids": [
+      "00332982"
+    ],
+    "selected_record_sha256": [
+      "472e416961dcdefa0af5b495992a8a140078f980151bd9ede25959fc3650897b"
+    ]
+  },
+  "run_semantics": {
+    "text_only": true,
+    "vision_omitted": true,
+    "official_QA": false,
+    "query_protocol": "goal_smoke_not_official_QA"
+  },
+  "trajectories": [
+    {
+      "trajectory_id": "00332982",
+      "user_id": "local-smoke-user",
+      "session_id": "session-001",
+      "source": {
+        "trajectory_id": "00332982",
+        "domain": "enterprise",
+        "environment": "workarena",
+        "goal": "Referring to company protocol \"Work Assignment: Assign Incidents to Relevant Agents\" assign work to the agents with the following information:\nIncidents to assign: WAS1315884, WAS1315358, WAS1315961\n\nNetwork agents: Kathryn-Robert Ryan-Robinson, Natasha-Alicia Bradshaw-Sanchez\nSoftware agents: Michael-Elijah Chapman-Sims, Henry-Connor Contreras-Hernandez\n\nDon't forget to mark this task as \"Closed - complete\" once successfully completed.",
+        "outcome": null,
+        "source_state_count": 101,
+        "selected_state_count": 6,
+        "prefix_truncated": true,
+        "text_only": true,
+        "vision_omitted": true,
+        "timestamp_policy": "raw V2 trajectory has no timestamps; MemForest sequence fallback",
+        "record_sha256": "472e416961dcdefa0af5b495992a8a140078f980151bd9ede25959fc3650897b"
+      },
+      "turn_count": 6,
+      "ingest": {
+        "session_id": "session-001",
+        "cells_extracted": 6,
+        "facts_inserted": 3,
+        "facts_merged": 0,
+        "trees_updated": [
+          "tree:scene:it_operations_incident_management_7946d82e",
+          "session:sess_0001",
+          "tree:scene:it_operations_incident_management_1e3a851c"
+        ]
+      },
+      "query": {
+        "question": "What evidence is relevant to this trajectory goal? Goal: Referring to company protocol \"Work Assignment: Assign Incidents to Relevant Agents\" assign work to the agents with the following information:\nIncidents to assign: WAS1315884, WAS1315358, WAS1315961\n\nNetwork agents: Kathryn-Robert Ryan-Robinson, Natasha-Alicia Bradshaw-Sanchez\nSoftware agents: Michael-Elijah Chapman-Sims, Henry-Connor Contreras-Hernandez\n\nDon't forget to mark this task as \"Closed - complete\" once successfully completed.",
+        "protocol": "goal_smoke_not_official_QA",
+        "question_type": "simple",
+        "recalled_trees": 3,
+        "raw_facts": 8,
+        "top_facts": [
+          "[January 01, 1970 (Thursday) at 12:00 AM UTC+00:00] environment: LongMemEval-V2 trajectory 00332982. Domain: enterprise. Environment: workarena. Goal: Referring to company protocol \"Work Assignment: Assign Incidents to Relevant Agents\" assign work to the agents with the following information:\nIncidents to assign: WAS1315884, WAS1315358, WAS1315961\n\nNetwork agents: Kathryn-Robert Ryan-Robinson, Natasha-Alicia Bradshaw-Sanchez\nSoftware agents: Michael-Elijah Chapman-Sims, Henry-Connor Contreras-Hernandez\n\nDon't forget to mark this task as \"Closed - complete\" once successfully completed.\n[state_index=0, step=0]\nURL: https://workarenapublic14.service-now.com/now/nav/ui/classic/params/target/vtb_task.do%3Fsys_id%3D6c41e2692b4f7e50de74f462fe91bf5f\nAction: None\nThought: I will use the global Search field to start locating the first incident (WAS1315884) so I can open it and assign it to the appropriate agent.\nAccessibility tree (text-only observation):\nRootWebArea 'Assign work to relevant agents | Private Task | ServiceNow'\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, described",
+          "[January 01, 1970 (Thursday) at 12:00 AM UTC+00:00] environment: [state_index=5, step=5]\nURL: https://workarenapublic14.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3Dbb11ee292b4f7e50de74f462fe91bfc6%26sysparm_view%3Dtext_search\nAction: tab_focus(0)\nThought: The incident’s Category is set to “Network” and Assignment group is currently blank. The next step toward completing the assignment is to populate the Assignment group field using type-ahead so we can select an appropriate Network-related group.\nAccessibility tree (text-only observation):\nRootWebArea 'WAS1315884 | Incident | ServiceNow'\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[234] region 'There are 0 announcements displayed', visible, live='polite', relevant='additions text'\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, describedby='logo-tooltip'\n\t\t\t[66] image 'ServiceNow Service Management', visible\n\t\t[78] button 'All', clickable, visible, expanded=False\n\t\t[79] button 'Favorites', clickable, visible, expanded=False\n\t\t[80] button 'History', clickable, visible, expanded=False\n\t\t[82] button 'Admin', clickable, visible, expanded=Fals",
+          "The assignment group for incident WAS1315884 is currently set to None.",
+          "Incident WAS1315884 is categorized as a Network issue with a priority of 4 (Low) and is currently in the In Progress state.",
+          "Janice Walker opened incident WAS1315884 on February 13, 2026, at 15:44:21.",
+          "[January 01, 1970 (Thursday) at 12:00 AM UTC+00:00] environment: [state_index=3, step=3]\nURL: https://workarenapublic14.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsys_id%3Dbb11ee292b4f7e50de74f462fe91bfc6%26sysparm_view%3Dtext_search\nAction: click('276')\nThought: The incident record is open and both “Assignment group” and “Assigned to” are currently blank. To move toward assigning this incident to the appropriate agent, the next step is to select an Assignment group using the lookup for that field.\nAccessibility tree (text-only observation):\nRootWebArea 'WAS1315884 | Incident | ServiceNow'\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[234] region 'There are 0 announcements displayed', visible, live='polite', relevant='additions text'\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, describedby='logo-tooltip'\n\t\t\t[66] image 'ServiceNow Service Management', visible\n\t\t[78] button 'All', clickable, visible, expanded=False\n\t\t[79] button 'Favorites', clickable, visible, expanded=False\n\t\t[80] button 'History', clickable, visible, expanded=False\n\t\t[82] button 'Admin', clickable, visible, expanded=False\n\t\t[8",
+          "[January 01, 1970 (Thursday) at 12:00 AM UTC+00:00] environment: [state_index=1, step=1]\nURL: https://workarenapublic14.service-now.com/now/nav/ui/classic/params/target/vtb_task.do%3Fsys_id%3D6c41e2692b4f7e50de74f462fe91bf5f\nAction: fill('112', 'WAS1315884', True)\nThought: The global search field is already filled with incident number WAS1315884 and indicates “No exact match. Press Enter for full results.” The next step to open the incident record is to run the search by pressing Enter.\nAccessibility tree (text-only observation):\nRootWebArea 'Assign work to relevant agents | Private Task | ServiceNow', focused\n\t[46] generic, live='assertive', atomic, relevant='additions text'\n\t[47] generic, live='polite', atomic, relevant='additions text'\n\t[52] generic, live='polite', atomic, relevant='all'\n\t[55] navigation 'Global skip links', visible\n\t\t[56] link 'Skip to main content', clickable\n\t\t[57] link 'Open accessibility preferences', clickable\n\t[234] region 'There are 0 announcements displayed', visible, live='polite', relevant='additions text'\n\t[58] generic, live='polite', atomic, relevant='additions text'\n\t[61] navigation 'Primary', visible\n\t\tnavigation 'Unpinned All menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Favorites menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned History menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Workspaces menu', live='polite', relevant='additions text'\n\t\tnavigation 'Unpinned Admin menu', live='polite', relevant='additions text'\n\t\tnavigation 'More menus', live='polite', relevant='additions text'\n\t\t[65] button 'My ServiceNow landing page', clickable, visible, describedby='logo-tooltip'\n\t\t\t[66] image 'ServiceNow Service Management', visible\n\t\t[78] button 'All', clickable, visible, expanded=False\n\t\t[79] button 'Favorites', clickable, visible, expanded=False\n\t\t[80] button 'History', clickable, visible, expanded=False\n\t\t[81] button 'Workspaces', clickable, visible, expanded=Fals",
+          "[January 01, 1970 (Thursday) at 12:00 AM UTC+00:00] environment: [state_index=4, step=4]\nURL: https://workarenapublic14.service-now.com/sys_user_group_list.do?sysparm_target=incident.assignment_group&sysparm_target_value=&sysparm_reference_value=&sysparm_nameofstack=reflist&sysparm_clear_stack=true&sysparm_element=assignment_group&sysparm_reference=sys_user_group&sysparm_view=sys_ref_list&sysparm_form_view=text_search&sysparm_additional_qual=&sysparm_domain_restore=false\nAction: click('b469')\nThought: I’m currently on the “Groups” lookup list for the Incident’s Assignment group, but I don’t have the incident details visible to determine the correct group to select. The best next step is to switch back to the incident record tab to review its information (e.g., short description/category) before choosing the appropriate assignment group.\nAccessibility tree (text-only observation):\nRootWebArea 'Groups | ServiceNow', focused\n\t[34] region '', live='polite', relevant='additions text'\n\t[35] region '', live='assertive', relevant='additions text'\n\t[42] region 'Groups, filtering toolbar', visible\n\t\t[45] button 'Actions', visible, hasPopup='menu', expanded=False\n\t\t\tStaticText '\\uf1b2'\n\t\t\tStaticText 'List controls'\n\t\t[47] button '\\uf18a Show / hide filter', clickable, visible, expanded=False, controls='sys_user_groupfilterdiv'\n\t\t\tStaticText '\\uf18a'\n\t\t\tStaticText 'Show / hide filter'\n\t\t[49] heading 'Groups', visible\n\t\t\t[50] button 'Groups', visible, hasPopup='menu', expanded=False\n\t\t\t\tStaticText 'Groups'\n\t\t[56] search '', visible\n\t\t\t[59] listbox 'Search a specific field of the Groups list, 2 items' value='Name', visible, multiselectable=False, orientation='vertical', expanded=False\n\t\t\t\t[60] option 'for text', selected=False\n\t\t\t\t[61] option 'Name', selected=True\n\t\t\tStaticText '\\uf21f'\n\t\t\t[64] searchbox 'Search', clickable, visible, focused, describedby='d371ee692b4f7e50de74f462fe91bf76_describedby'\n\t\t[90] button 'New', clickable, visible\n\t[107] region 'Filter', visible\n\t\t[109] "
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "embedding_model_name": "/data/predator/ly/Mem/models/Qwen3-Embedding-8B",
+  "vector_dimension": 4096,
+  "faiss_metric": "ip"
+}

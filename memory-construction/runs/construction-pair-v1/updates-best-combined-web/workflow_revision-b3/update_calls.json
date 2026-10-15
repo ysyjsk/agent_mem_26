@@ -1,0 +1,301 @@
+[
+  {
+    "record_id": "7eaf4e384b8e45ed94bc36d1684342ea",
+    "timestamp_epoch": 1791991980.9791474,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "4260b7a80b10759e8e93830d140ab4b6176c9266b82c3d65e74ea2c7957cca33",
+    "stage": "events"
+  },
+  {
+    "record_id": "19a1716cfc5b47768fca44f38ab82bcf",
+    "timestamp_epoch": 1791991980.9792693,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "input_tokens_preflight": 16605,
+    "request_sha256": "f2566c12c871e9c4dc13102e68f61c6692c90e5eaecb0f8ebfe4aea0062bbd0d",
+    "status": "parsed"
+  },
+  {
+    "record_id": "d908425ca31c4f519fc62cd8ed12b0c4",
+    "timestamp_epoch": 1791991991.6918926,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 10.709291182021843,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 13120,
+      "text_sha256": "7a0b9b7e62c35186a33f05f03407888a8e1bdce2856c61915b61d299b072195f",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 3836,
+    "completion_tokens": 351,
+    "total_tokens": 4187,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "8137a409c32348b1bc5e80d23ea40e92",
+    "timestamp_epoch": 1791991991.6920688,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "input_tokens_preflight": 3836,
+    "request_sha256": "7a0b9b7e62c35186a33f05f03407888a8e1bdce2856c61915b61d299b072195f",
+    "status": "parsed"
+  },
+  {
+    "record_id": "4a700408392547eabe19fa51a8c92aa9",
+    "timestamp_epoch": 1791992003.7294955,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 12.033379780012183,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 14349,
+      "text_sha256": "633ef97fb74b37606c971d9738d83d04fa5a117bfe5c2df682e56843bbf882fc",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 4180,
+    "completion_tokens": 396,
+    "total_tokens": 4576,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "38c8897bd21745a292622117fbbf96a4",
+    "timestamp_epoch": 1791992003.729673,
+    "channel": "event_group",
+    "trajectory_id": "1ad1af4b",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "input_tokens_preflight": 4180,
+    "request_sha256": "633ef97fb74b37606c971d9738d83d04fa5a117bfe5c2df682e56843bbf882fc",
+    "status": "parsed"
+  },
+  {
+    "record_id": "bb23bd916e894d3c994ceeeb415acee9",
+    "timestamp_epoch": 1791992003.7331383,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "d43b48891f9606e8925073d0d321d7f9875149bc4962e47321cc2c68a336d358",
+    "stage": "events"
+  },
+  {
+    "record_id": "db48462f4a214d63abdc277cf8899a18",
+    "timestamp_epoch": 1791992003.7332106,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0006_0007",
+    "trajectory_id": "1ad1af4b"
+  },
+  {
+    "record_id": "43c3bec5433045b6850668432c2dce89",
+    "timestamp_epoch": 1791992014.1312923,
+    "channel": "controller",
+    "call_mode": "sync_text",
+    "status": "success",
+    "elapsed_seconds": 10.396662840008503,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 8192,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 5940,
+      "text_sha256": "fe5a050ed9a3886c57f3e161d2ff6454d617e427be8b9c44118cbedbae7e3d2f",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 1442,
+    "completion_tokens": 371,
+    "total_tokens": 1813,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "640a1b227ec94f7d9b14e8306f82fd73",
+    "timestamp_epoch": 1791992014.1622648,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 0,
+    "cache_hits": 8,
+    "elapsed_seconds": 0.0003425419854465872,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "ed76c1cbd0a47abeaea77d33e86401bff4cf6bde5f985af76800379213b9540f",
+      "2974087fc793c26f7ff034aacd708b882f524f99aba935c7c5ddd4592ccd7e2a",
+      "b4b188e5629e60b0d5f7a56f75f026d05d025b7946c0c1f5be968d79a8bd39a1",
+      "90c856f46852ed9e6ce9fc36aef33e1958e133a5450247c623ec764d46b6913e",
+      "f667050e42ad84b464ac7d2ceca4ffdb13d2f09fa498117a3f0b6afb4722930b"
+    ]
+  },
+  {
+    "record_id": "68290b86c9ce43dda6b55c555d3d1a77",
+    "timestamp_epoch": 1791992014.417396,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.2537977150059305,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 4,
+    "input_characters": 2671,
+    "input_sha256": [
+      "e54607ab32e45165c165f54c3c74376aac910b6dbfcacd9bcb6f0f52cfc6ae51",
+      "a726583715d0f92c31bfeb9099aa624cb8a9971688a0c1334127182f9d2945fb",
+      "7b23fc62892cd3e729e35f497f5554328cb9cdb90186ed0ee99030d1aaad9209",
+      "c752c0f0a1c3f9ea056243ae9bdce55fc9755619f56788d64f7e51ce353b75d8"
+    ],
+    "input_texts": [
+      "In the workflow to create a new forum named 'Cyberpunk' with specific details, the agent is currently on the 'Create new forum' form. This step represents the initial data entry phase where the agent populates the mandatory 'Name' field to establish the forum's identity.\n\nThe transition moves from a form state where the 'Name' field is empty to a state where the 'Name' textbox (element 116) has been successfully filled with the value 'Cyberpunk'. The page remains on the 'Create new forum' form, but the focus shifts as the name field is now populated, leaving the 'Title' field as the next empty required element.",
+      "Continuing the process of defining the new forum, the agent proceeds to fill out the mandatory metadata fields. This step specifically addresses the 'Title' field, which is required to complete the forum header information alongside the already entered name.\n\nThe transition updates the form state by filling the 'Title' textbox (element 121) with the value 'Cyberpunk'. Previously, this field was empty; now it contains the text 'Cyberpunk' and is marked as focused. The 'Name' field retains its previous value, and the form is ready for the next required input, the 'Description'.",
+      "The agent is in the process of creating a new forum named 'Cyberpunk' on the Postmill platform. Having already set the Name and Title fields, the current step involves populating the required Description field with the specified text 'Welcome to the future' to continue the form completion workflow.\n\nIn the pre-state, the Description textbox (element 126) is visible, required, but empty, while the Name and Title fields already contain 'Cyberpunk'. After the fill action, the post-state shows the Description field populated with the value 'Welcome to the future', indicated by the updated StaticText content and the field becoming focused, confirming the input was successfully entered.",
+      "Continuing the forum creation task, the agent now focuses on configuring the sidebar content. With the Name, Title, and Description fields completed, the next objective is to populate the Sidebar field with the requested list of categories: 'Games', 'Books', 'Movies', and 'Future' using markdown formatting.\n\nThe pre-state displays an empty Sidebar textbox (element 134) which is marked as required. Following the fill action, the post-state reveals that the Sidebar textbox now contains the multi-line markdown string '- Games\\n- Books\\n- Movies\\n- Future'. Additionally, a new 'Preview' section (element 136) becomes visible below the sidebar field, rendering the input as a bulleted list with the items 'Games', 'Books', 'Movies', and 'Future', confirming the successful update."
+    ],
+    "prompt_tokens": 565,
+    "total_tokens": 565,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "610da4e4ff124695adeff3f590c39bdf",
+    "timestamp_epoch": 1791992014.417512,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 7,
+    "actual_vectors": 4,
+    "cache_hits": 3,
+    "elapsed_seconds": 0.2540084640204441,
+    "input_keys": [
+      "bb1411d48885c1cbe1dcfe7672cbb55eed3fa850458c95a59e66477b07930fc8",
+      "cf3101b22d14cd86849e9f5ff6abf486b8e57a73a5580000689eef50ab1a20b7",
+      "0a6cd2190a4c2c84f54c86ee9d831bdd072f70841bd5a811a92c7e3915946436",
+      "f925ab441f12562bffa494c4bc31e6fc690c634910647a1feb0b72b25cbe23d3",
+      "4579fe2c2b2f1c7ef53c5913be9acdfed314450edbb4a372441e3720644bfb0d",
+      "2a58a7794ca34ac339fea3bf31c054f52938db154749af224713826fb5bd4367",
+      "b56cf745abf59aba02489bd337ba1b2c5b38ba09be0089a3cfe40cbe44c53c6f"
+    ]
+  },
+  {
+    "record_id": "c5aeea9a75c24818abafbd172a22493b",
+    "timestamp_epoch": 1791992014.47507,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.05706974901841022,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 639,
+    "input_sha256": [
+      "91e893252b81665aaea2986c1b0431d4a38200ac4aaf2f2b58fb4713194ad26c"
+    ],
+    "input_texts": [
+      "Title: Create New Forum Workflow\nDescription: Steps to create a new forum with specific name, title, description, and sidebar content.\n- Navigate to the 'Forums' section via the 'Forums' link.\n- Click the 'Create forum' link to open the creation form.\n- Fill the 'Name' textbox with the desired forum name (e.g., 'Cyberpunk').\n- Fill the 'Title' textbox with the desired forum title.\n- Fill the 'Description' textbox with the required description text.\n- Fill the 'Sidebar' textbox with the list items (e.g., using newline-separated values like '- Games\\n- Books...').\n- Click the 'Create forum' button to submit and finalize the creation."
+    ],
+    "prompt_tokens": 148,
+    "total_tokens": 148,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "248b30200f514d0990d2857e2f248315",
+    "timestamp_epoch": 1791992014.4751544,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.05719941298593767,
+    "input_keys": [
+      "a2dda134612d6303613ce072c3813ee46751f079da9c897cd96bafecfaeeceab"
+    ]
+  },
+  {
+    "record_id": "9651cde1bf874f3b824667271978bc32",
+    "timestamp_epoch": 1791992014.5400167,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.06449425400933251,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 636,
+    "input_sha256": [
+      "f6789ef349334839db5676682d09993991c7c44c2033eb73e72b0a464b07cd00"
+    ],
+    "input_texts": [
+      "Title: Forum Creation Field Requirements\nDescription: Key observations about required fields and input formats for the forum creation page.\n- The 'Name' field is required and marked as such in the textbox label.\n- The 'Title' field is required and must be filled before proceeding to Description.\n- The 'Description' field is required and includes a help text attribute.\n- The 'Sidebar' field is required and accepts text input for list items.\n- Sidebar content should be entered as a newline-separated list (e.g., '- Item1\\n- Item2').\n- All four fields (Name, Title, Description, Sidebar) must be completed to enable the submit button."
+    ],
+    "prompt_tokens": 134,
+    "total_tokens": 134,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "ccc5898853214ed6b3ac96f2d0d59d36",
+    "timestamp_epoch": 1791992014.5401325,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 1,
+    "cache_hits": 0,
+    "elapsed_seconds": 0.06465545599348843,
+    "input_keys": [
+      "40edbc723fa94d14db3cbee4add3723a00fa28c3543e6b80db03e6dac2cdb69e"
+    ]
+  }
+]

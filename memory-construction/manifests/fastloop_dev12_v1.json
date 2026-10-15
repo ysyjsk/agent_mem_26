@@ -1,0 +1,368 @@
+{
+  "base_manifest_hash": "f22e82b50254509df322b9ebee0c35bc0448e100d226b9ba32158b493ab30282",
+  "created_at_utc": "2026-10-12T16:09:49.394909+00:00",
+  "exposure": {
+    "development": "all selected trajectories exposed by definition",
+    "held_out_claim": false,
+    "official_medium": {
+      "mapping_path": "/data/predator/ly/dataset/raw/longmemeval-v2/f152293e235517d504809563c833d7190b8c713b/haystacks/lme_v2_medium.json",
+      "mapping_sha256": "4756d5126347f0d18f045bb6c47b08cb3b23e9db24386cc48a9b2879e7969b59",
+      "n_overlap": 9,
+      "status": "benchmark_exposure_audited_not_held_out",
+      "trajectory_ids": [
+        "07d1d6f4",
+        "0db80092",
+        "170f5570",
+        "26783e8b",
+        "297633cb",
+        "3ddd6f8b",
+        "4a5f0d7f",
+        "7b5fd273",
+        "ec6c60c2"
+      ]
+    },
+    "official_small": {
+      "mapping_path": "/data/predator/ly/dataset/raw/longmemeval-v2/f152293e235517d504809563c833d7190b8c713b/haystacks/lme_v2_small.json",
+      "mapping_sha256": "9b5301defb23a088a5f06e45ff8d5f35e569d78305a66d492046a9fff9b46593",
+      "n_overlap": 2,
+      "status": "benchmark_exposure_audited_not_held_out",
+      "trajectory_ids": [
+        "07d1d6f4",
+        "170f5570"
+      ]
+    }
+  },
+  "independent_method_stores": true,
+  "input_modality": "text-only",
+  "methods": [
+    "B0",
+    "Ours-dev",
+    "B3-c2"
+  ],
+  "note": "Evaluator holds the manifest. Methods see only the arrived prefix; never pass future source contents or terminal labels.",
+  "pairing_keys": [
+    "window_id",
+    "checkpoint_prefix_length",
+    "repeat"
+  ],
+  "protocol": "B-dev-fixed-prefix",
+  "purpose": "preselected nested development scale; not held-out or official QA",
+  "qa_status": "not_evaluated",
+  "runtime_source": "configs/runtime.local.json",
+  "schema_version": "fastloop-dev-scale/1",
+  "scope": "construction_e2e",
+  "scope_exclusions": [
+    "model_load",
+    "embedding_and_vector_index_unless_measured_for_both",
+    "Reader",
+    "Judge"
+  ],
+  "selection": {
+    "max_prefix_events": 12,
+    "no_performance_or_model_answer_selection": true,
+    "order": "retain v1; balance family; prefer >=8 events, then sha256(17:trajectory_id)",
+    "requested_windows": 12,
+    "seed": 17,
+    "short_windows": 0
+  },
+  "shared_initial_settings": {
+    "concurrency": 1,
+    "extraction_output_tokens": 256,
+    "model_input_char_budget": 6000,
+    "source_context_window_events_default": 2,
+    "temperature": 0.0
+  },
+  "source_file": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data/longmemeval_dev.jsonl",
+  "source_sha256": "0d839a1a9ab03b62c1862881de70f83140c83857dc0ebff6a99d4715b4129a3c",
+  "update_id": "memory-fast-results-v4",
+  "windows": [
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "enterprise",
+      "event_count": 12,
+      "event_ids": [
+        "0db80092:0",
+        "0db80092:1",
+        "0db80092:2",
+        "0db80092:3",
+        "0db80092:4",
+        "0db80092:5",
+        "0db80092:6",
+        "0db80092:7",
+        "0db80092:8",
+        "0db80092:9",
+        "0db80092:10",
+        "0db80092:11"
+      ],
+      "trajectory_id": "0db80092",
+      "window_id": "0db80092-prefix12"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        9
+      ],
+      "environment_family": "enterprise",
+      "event_count": 9,
+      "event_ids": [
+        "170f5570:0",
+        "170f5570:1",
+        "170f5570:2",
+        "170f5570:3",
+        "170f5570:4",
+        "170f5570:5",
+        "170f5570:6",
+        "170f5570:7",
+        "170f5570:8"
+      ],
+      "trajectory_id": "170f5570",
+      "window_id": "170f5570-prefix9"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "web",
+      "event_count": 12,
+      "event_ids": [
+        "4a5f0d7f:0",
+        "4a5f0d7f:1",
+        "4a5f0d7f:2",
+        "4a5f0d7f:3",
+        "4a5f0d7f:4",
+        "4a5f0d7f:5",
+        "4a5f0d7f:6",
+        "4a5f0d7f:7",
+        "4a5f0d7f:8",
+        "4a5f0d7f:9",
+        "4a5f0d7f:10",
+        "4a5f0d7f:11"
+      ],
+      "trajectory_id": "4a5f0d7f",
+      "window_id": "4a5f0d7f-prefix12"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "web",
+      "event_count": 12,
+      "event_ids": [
+        "ec6c60c2:0",
+        "ec6c60c2:1",
+        "ec6c60c2:2",
+        "ec6c60c2:3",
+        "ec6c60c2:4",
+        "ec6c60c2:5",
+        "ec6c60c2:6",
+        "ec6c60c2:7",
+        "ec6c60c2:8",
+        "ec6c60c2:9",
+        "ec6c60c2:10",
+        "ec6c60c2:11"
+      ],
+      "trajectory_id": "ec6c60c2",
+      "window_id": "ec6c60c2-prefix12"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        9
+      ],
+      "environment_family": "enterprise",
+      "event_count": 9,
+      "event_ids": [
+        "297633cb:0",
+        "297633cb:1",
+        "297633cb:2",
+        "297633cb:3",
+        "297633cb:4",
+        "297633cb:5",
+        "297633cb:6",
+        "297633cb:7",
+        "297633cb:8"
+      ],
+      "trajectory_id": "297633cb",
+      "window_id": "297633cb-prefix9"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "web",
+      "event_count": 12,
+      "event_ids": [
+        "75c77677:0",
+        "75c77677:1",
+        "75c77677:2",
+        "75c77677:3",
+        "75c77677:4",
+        "75c77677:5",
+        "75c77677:6",
+        "75c77677:7",
+        "75c77677:8",
+        "75c77677:9",
+        "75c77677:10",
+        "75c77677:11"
+      ],
+      "trajectory_id": "75c77677",
+      "window_id": "75c77677-prefix12"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "enterprise",
+      "event_count": 12,
+      "event_ids": [
+        "7b5fd273:0",
+        "7b5fd273:1",
+        "7b5fd273:2",
+        "7b5fd273:3",
+        "7b5fd273:4",
+        "7b5fd273:5",
+        "7b5fd273:6",
+        "7b5fd273:7",
+        "7b5fd273:8",
+        "7b5fd273:9",
+        "7b5fd273:10",
+        "7b5fd273:11"
+      ],
+      "trajectory_id": "7b5fd273",
+      "window_id": "7b5fd273-prefix12"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        9
+      ],
+      "environment_family": "web",
+      "event_count": 9,
+      "event_ids": [
+        "07d1d6f4:0",
+        "07d1d6f4:1",
+        "07d1d6f4:2",
+        "07d1d6f4:3",
+        "07d1d6f4:4",
+        "07d1d6f4:5",
+        "07d1d6f4:6",
+        "07d1d6f4:7",
+        "07d1d6f4:8"
+      ],
+      "trajectory_id": "07d1d6f4",
+      "window_id": "07d1d6f4-prefix9"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "enterprise",
+      "event_count": 12,
+      "event_ids": [
+        "3ddd6f8b:0",
+        "3ddd6f8b:1",
+        "3ddd6f8b:2",
+        "3ddd6f8b:3",
+        "3ddd6f8b:4",
+        "3ddd6f8b:5",
+        "3ddd6f8b:6",
+        "3ddd6f8b:7",
+        "3ddd6f8b:8",
+        "3ddd6f8b:9",
+        "3ddd6f8b:10",
+        "3ddd6f8b:11"
+      ],
+      "trajectory_id": "3ddd6f8b",
+      "window_id": "3ddd6f8b-prefix12"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        9
+      ],
+      "environment_family": "web",
+      "event_count": 9,
+      "event_ids": [
+        "07442c0d:0",
+        "07442c0d:1",
+        "07442c0d:2",
+        "07442c0d:3",
+        "07442c0d:4",
+        "07442c0d:5",
+        "07442c0d:6",
+        "07442c0d:7",
+        "07442c0d:8"
+      ],
+      "trajectory_id": "07442c0d",
+      "window_id": "07442c0d-prefix9"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "enterprise",
+      "event_count": 12,
+      "event_ids": [
+        "26783e8b:0",
+        "26783e8b:1",
+        "26783e8b:2",
+        "26783e8b:3",
+        "26783e8b:4",
+        "26783e8b:5",
+        "26783e8b:6",
+        "26783e8b:7",
+        "26783e8b:8",
+        "26783e8b:9",
+        "26783e8b:10",
+        "26783e8b:11"
+      ],
+      "trajectory_id": "26783e8b",
+      "window_id": "26783e8b-prefix12"
+    },
+    {
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ],
+      "environment_family": "web",
+      "event_count": 12,
+      "event_ids": [
+        "3c27cae4:0",
+        "3c27cae4:1",
+        "3c27cae4:2",
+        "3c27cae4:3",
+        "3c27cae4:4",
+        "3c27cae4:5",
+        "3c27cae4:6",
+        "3c27cae4:7",
+        "3c27cae4:8",
+        "3c27cae4:9",
+        "3c27cae4:10",
+        "3c27cae4:11"
+      ],
+      "trajectory_id": "3c27cae4",
+      "window_id": "3c27cae4-prefix12"
+    }
+  ]
+}

@@ -1,0 +1,569 @@
+[
+  {
+    "record_id": "518bf22ec4494cc389f434a8b9e6a9af",
+    "timestamp_epoch": 1791997207.3245673,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9733ecfc662dc786cdbb6d4f4439266dc5fb6f3a32d49e21980ecde1033b04e8",
+    "stage": "events"
+  },
+  {
+    "record_id": "474bf20c0d8347d284f3ced1f1b8be41",
+    "timestamp_epoch": 1791997207.3246915,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0000_0001",
+      "event_0001_0002"
+    ],
+    "state_ids": [
+      0,
+      1,
+      2
+    ],
+    "input_tokens_preflight": 13629,
+    "request_sha256": "5305905688c37612baf2d4f3e58d6cfba3992dbf2c7e5f5341485387a95746ad",
+    "status": "parsed"
+  },
+  {
+    "record_id": "ff48c3f425d140be8b7ccd4cec5d6152",
+    "timestamp_epoch": 1791997207.3483093,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0002_0003",
+      "event_0003_0004"
+    ],
+    "state_ids": [
+      2,
+      3,
+      4
+    ],
+    "input_tokens_preflight": 32186,
+    "request_sha256": "f818ae2b96dd0862cd75d47fe00f446866ae79b406d2e0c18f8b9364e9d921a8",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "6762ae14feaf448a81c70739a541a592",
+    "timestamp_epoch": 1791997207.3718908,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0002_0003",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 18316,
+    "prepared_input_tokens": 9037,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "16ad37f865be4ff9a7287656c87d7492",
+    "timestamp_epoch": 1791997207.3721502,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9617b15c66fcc7815372e949619ebb3ce3964eb290eb2955dc38ea9e5e6ca4a2",
+    "stage": "events"
+  },
+  {
+    "record_id": "1f08943453464df8ba986cf90f626d62",
+    "timestamp_epoch": 1791997207.372197,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0002_0003",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "e80130627b76427e94db8dc2b492f6ec",
+    "timestamp_epoch": 1791997207.4019496,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0003_0004",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 28472,
+    "prepared_input_tokens": 9426,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "2a4f00ef954d4aa989b1e871533afbaa",
+    "timestamp_epoch": 1791997214.7378922,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 7.335675328999059,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30226,
+      "text_sha256": "e300f98bb0d1cafe8d493e360ee1d03a84f4eedb021425b4f5442b525e8de469",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 9426,
+    "completion_tokens": 162,
+    "total_tokens": 9588,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "34554ef4ad53443481b4aface4b4269e",
+    "timestamp_epoch": 1791997214.7380674,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0003_0004",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "197dd4b7047743f2a77e94ad028cac0c",
+    "timestamp_epoch": 1791997214.7730405,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "state_ids": [
+      4,
+      5,
+      6
+    ],
+    "input_tokens_preflight": 44992,
+    "request_sha256": "df287fcc4fecd02af10811d07f46cf00594f1e90f6fcae9cb2a0502c9819fbb6",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "7c97616869314b08bd726097e652765c",
+    "timestamp_epoch": 1791997214.8028972,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 29350,
+    "prepared_input_tokens": 9409,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "7212ceeb318d4b93928775286e4a5c9b",
+    "timestamp_epoch": 1791997220.9972332,
+    "channel": "controller",
+    "call_mode": "async_text",
+    "status": "success",
+    "elapsed_seconds": 6.194032389990753,
+    "model": "Qwen/Qwen3.5-9B",
+    "base_url": "http://localhost:8023/v1",
+    "max_completion_tokens": 2048,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "enable_thinking": false,
+    "finish_reason": "stop",
+    "request_shape": {
+      "message_count": 2,
+      "text_characters": 30083,
+      "text_sha256": "58ff5c3ba3aa1d211f17523fa423cca1b735782f05e1ec8b5541fd620fe2fd85",
+      "image_count": 0
+    },
+    "query_invocation_id": null,
+    "prompt_tokens": 9409,
+    "completion_tokens": 122,
+    "total_tokens": 9531,
+    "reasoning_tokens": null
+  },
+  {
+    "record_id": "1ab53363e53347609ed16a0a7a033526",
+    "timestamp_epoch": 1791997220.997407,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0004_0005",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "9d62073c91aa4cd298b593f49bd103d3",
+    "timestamp_epoch": 1791997221.0342112,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 31156,
+    "prepared_input_tokens": 9279,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "cba4948ca2c54a878e80b0962f82ab4f",
+    "timestamp_epoch": 1791997221.0344522,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "7d7ad535bb95969d8a66a28db86c28df0ef86a1c923c0c6ba8aeff7764b5dd35",
+    "stage": "events"
+  },
+  {
+    "record_id": "6441e02b98764c0997688c80267b2967",
+    "timestamp_epoch": 1791997221.0344968,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0005_0006",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "0e40c6977e704482b0277e7cc6c854b2",
+    "timestamp_epoch": 1791997221.0678682,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0006_0007",
+      "event_0007_0008"
+    ],
+    "state_ids": [
+      6,
+      7,
+      8
+    ],
+    "input_tokens_preflight": 45935,
+    "request_sha256": "3eeeeea71cab78fbc2bf1e49351133bd9b03ee82dbd7915a45a3cb6b274bdcaf",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "e78a7c7c065145b59503d2569aa2c07e",
+    "timestamp_epoch": 1791997221.1003377,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0006_0007",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 31556,
+    "prepared_input_tokens": 9289,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "6e9a0b95219e43d0a650f8f77741ee28",
+    "timestamp_epoch": 1791997221.1006274,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "e6ba12d1fe2ba8b606d0fb0c69a3fa2eafc8d2bc17b56ec43bb28a933eb564a0",
+    "stage": "events"
+  },
+  {
+    "record_id": "ad1d11e0f55342eabdf78612c8aa4d61",
+    "timestamp_epoch": 1791997221.1006708,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0006_0007",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "cc1ad8ddbfc74958b4159b6ffab6cb10",
+    "timestamp_epoch": 1791997221.1321,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0007_0008",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 30280,
+    "prepared_input_tokens": 9342,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "41b82b95fa39409c9234c6cf3fd2da02",
+    "timestamp_epoch": 1791997221.1323643,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "5d0407f19a3b03226f46ba81ccd953c897b475204eee7541c69729a1bd06ae93",
+    "stage": "events"
+  },
+  {
+    "record_id": "60a4da452ebe4fc686802fc772ff0a57",
+    "timestamp_epoch": 1791997221.1324098,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0007_0008",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "77142e37dfe54ef2bd70977206a89aad",
+    "timestamp_epoch": 1791997221.164677,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0008_0009",
+      "event_0009_0010"
+    ],
+    "state_ids": [
+      8,
+      9,
+      10
+    ],
+    "input_tokens_preflight": 43344,
+    "request_sha256": "ccb0d6c38950e36a8fb9e90e71041b5643ef005bb8899d3d904807e36db22c20",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "d5847d4938da44dea3f558a38043bd55",
+    "timestamp_epoch": 1791997221.1959085,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0008_0009",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 30212,
+    "prepared_input_tokens": 9459,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "962176f901894501b17076bbf570c57e",
+    "timestamp_epoch": 1791997221.196222,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b19e90a3cdd4853901ea7d182ef4aaec7295280e1e8225fb0d5877e30ad844d0",
+    "stage": "events"
+  },
+  {
+    "record_id": "e646c59ce0504d779d47aae705ecfd74",
+    "timestamp_epoch": 1791997221.1962667,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0008_0009",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "af76af3b89a146b9b3a14d080f06a833",
+    "timestamp_epoch": 1791997221.226757,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0009_0010",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 28900,
+    "prepared_input_tokens": 9432,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "5273a50aecd8447f8398c14dca9a30d6",
+    "timestamp_epoch": 1791997221.2271013,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "32548e1aebca8387ab86febddd27fe893a0b32083a5c061cd433279df107b4ad",
+    "stage": "events"
+  },
+  {
+    "record_id": "379a608a4d3f41cc83cce5dae287a547",
+    "timestamp_epoch": 1791997221.2271488,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0009_0010",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "22924c4eb3ec4f4aac50510b21825554",
+    "timestamp_epoch": 1791997221.2515914,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0010_0011",
+      "event_0011_0012"
+    ],
+    "state_ids": [
+      10,
+      11,
+      12
+    ],
+    "input_tokens_preflight": 31422,
+    "request_sha256": "bc85a44c8ee1436fbdc62f20bae9662bbab64dfbecbb2f9a52fe0d7d1f943e69",
+    "status": "split",
+    "reason": "input_context_limit"
+  },
+  {
+    "record_id": "5f7f2845063c474bb39a1d9683028cd0",
+    "timestamp_epoch": 1791997221.283877,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0010_0011",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 28071,
+    "prepared_input_tokens": 9426,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "bdd0c6a701344120b554919350da6d43",
+    "timestamp_epoch": 1791997221.284158,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "c777a1fea3f7fc8484e019a20fa400b7cb853a6e0c8a6d49be929f692bffa4d9",
+    "stage": "events"
+  },
+  {
+    "record_id": "4e8cb2027ac5484c8181f3d49c7cf25e",
+    "timestamp_epoch": 1791997221.2842045,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0010_0011",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "a141752ab4f74a6e874fc9d7643d47c4",
+    "timestamp_epoch": 1791997221.310158,
+    "channel": "event_preflight",
+    "status": "bounded_existing_fallback",
+    "event_id": "event_0011_0012",
+    "trajectory_id": "49f98e9e",
+    "full_input_tokens": 18266,
+    "prepared_input_tokens": 8805,
+    "state_max_chars": 12000
+  },
+  {
+    "record_id": "b9258e4519074eadb0d42c7f04ceb24b",
+    "timestamp_epoch": 1791997221.3104758,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b3cbe99bce627bfa4f349816a06756697831b7fe941577fb333d6ba9ad4eed2e",
+    "stage": "events"
+  },
+  {
+    "record_id": "09aa35b6a9834bdf8a610a9316770a21",
+    "timestamp_epoch": 1791997221.3105311,
+    "channel": "event_extraction",
+    "status": "parsed",
+    "event_id": "event_0011_0012",
+    "trajectory_id": "49f98e9e"
+  },
+  {
+    "record_id": "011db00231bc4cbc90443d03a99e0aa2",
+    "timestamp_epoch": 1791997221.3225114,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "7d86805b289093c0775b39d6cf1148f2ef75a42850834a0de6aa4b137131a92e",
+    "stage": "events"
+  },
+  {
+    "record_id": "d9ff3242c65042bf95ffa87b6b9de6ac",
+    "timestamp_epoch": 1791997221.3226247,
+    "channel": "event_group",
+    "trajectory_id": "49f98e9e",
+    "event_ids": [
+      "event_0012_0013",
+      "event_0013_0014"
+    ],
+    "state_ids": [
+      12,
+      13,
+      14
+    ],
+    "input_tokens_preflight": 11556,
+    "request_sha256": "21131d402aed91ae464c02185a813278ec66bbb4a3cb9f5d5169205a21c77858",
+    "status": "parsed"
+  },
+  {
+    "record_id": "4d0f64e7ca5a477d88a26c91cf465303",
+    "timestamp_epoch": 1791997221.3265495,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "129c86ac946270b9580182e2c30ece72dee11fa863d703baaceb6c8ff51be494",
+    "stage": "notes"
+  },
+  {
+    "record_id": "530716ba2df6401d91f7bf264f682cdc",
+    "timestamp_epoch": 1791997221.460303,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 0,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.0009800080151762813,
+    "input_keys": [
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "5fd56bf3592b5e95e48c2adb5bc018ee15246ca5a10e121914d998c79aa503b0",
+      "3a57e30ee914797ac2779df2ab4b2afb5a8d6e0dc454b433ebbbe159d29ca213",
+      "60b689182bda9fe37a9f97696e7be9eb6b36ada1d45d6d76ba9a943ef931e869",
+      "3fdb767cad3be15b79f6767d7f77b33d3fd13adef2e59abb3a02b08e986f5508",
+      "1d355df6deee915f49eff0b6475642acbced364888530a67745e4860889d4d97",
+      "9f8d6ae2071c36acd18932652076fe369abc2af8ac37c2451d095ccfc4a84436",
+      "f12550faeb63d14ee8d60b50b9df42960508993d4ae2d178a0b081d88e21a6c7",
+      "1b9a51c692f14d6661f42d5f5518d3e8c605b263c89784e909e7305951dc6bf5",
+      "7aa6e0c5e71d5b98e1ab65d35b6c84987b0e7f9e486b47bfa3e95d2dea2b7c7b",
+      "32a651e3505dab9a3ef24dcca6647d8370d09c6d02141b4a4101ab608ae1cf54",
+      "d94a00d99c315a04df04a78446244b13d932c20f05c7b7c4e2fed5f473ec1903",
+      "39f153a2c0452e4baa76712fcd8e32b905d29b7108f17b9d6865dc0f745b61a1",
+      "94d2c566137c7745304cb8a9c7ab405da8ad1dca75ac9fac89d29c559ecee244",
+      "9fe9223c74cc095bfc42a895b70fe620dc6cc294b16200e353702427e4359cfe"
+    ]
+  },
+  {
+    "record_id": "181626fbac00409ca8384e414836eb44",
+    "timestamp_epoch": 1791997221.6080325,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.1451254409912508,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 1327,
+    "input_sha256": [
+      "78fcbe95f8835d2ffd84cd3c6dd9e7ae4772ad8cde96071d2304f524432e0af9",
+      "dcef006caea04ca0c0652ef961a6ff8893bd5390d974cdcff3749b6431274576"
+    ],
+    "input_texts": [
+      "The agent is working to sort the 'assets' list by 'Asset function' in ascending order as part of a broader task to organize asset data. This specific transition occurs in the middle of the workflow, where the agent needs to reveal the filtering controls to access the sorting options. The step represents the preparation phase before applying the sort criteria.\n\nAfter clicking the 'Show / hide filter' button, the filtering toolbar panel becomes visible and expanded. The button itself changes state to 'expanded=True' and gains focus, indicating the panel is now active. The underlying filter controls, including the 'Add Sort' button and search fields, are now accessible for interaction, allowing the agent to proceed with configuring the sort order by 'Asset function'.",
+      "The agent is sorting the 'assets' list by 'Asset function' in ascending order as part of a broader task to organize asset records. This transition represents the initial step of defining the sort criteria by clicking the 'Add Sort' button to open the sort configuration interface.\n\nAfter clicking the 'Add Sort' button, the Assets list page displays a new status message indicating 'New sort order condition added, 1 of 1'. The filter toolbar remains visible, and the UI is ready for the agent to select the sort field and order in the subsequent steps."
+    ],
+    "prompt_tokens": 260,
+    "total_tokens": 260,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "babb143b1806409c9394060ad6220bf7",
+    "timestamp_epoch": 1791997221.6081553,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 14,
+    "actual_vectors": 2,
+    "cache_hits": 12,
+    "elapsed_seconds": 0.1453984989784658,
+    "input_keys": [
+      "ab01848a66637be6470d7b213013c603e7d52517183bf2c3291bb44833b6c62a",
+      "58e2a07f24b57f3c030b6c12f9663c7cae29630d416f21ff28df89a9b5566bc8",
+      "bda557aa1efbeb02dab92a9a6d348e85a328e48d18a84f0d9b05eea87c55500f",
+      "dcb3d42cd41cc5a71a4af2a3d71ceb8b88c5a1c7a545b17646754cf643505310",
+      "28c09d5e40bf691db1c3c03804405e57a08c5b69db089bc683b353e23859bf0e",
+      "8de43ff2e98a3e0fbc440cd2190ac2daa6bde67efff69e221db3626648fe1ac3",
+      "7df7d2c581c728ba42f868c94e226e2992c2ea127c0491e2322954d86012de25",
+      "9f661602c37722909a6b42cf1236598024a5dce8ed0f292ba89f50bc18ad6017",
+      "27a9969b5ab02bbffec49d1f9c58045b2ad4172ce8e3229491ac01d8a4ad5647",
+      "4f0a06fb168d98622175d264a6fefd526325a78c92caefc06a789e0efe774aa5",
+      "919165811ead9daaf8769faf14a4a5e37914727a933ad9f49ab4a73774aea34c",
+      "a3f0e468a20f5e3e9d17eef4c8528d64a228f63c353c53db8862fe8d9741e618",
+      "9fd788fc8dc0a6315ffaa899dd692066c12975b02c44f290fed9b43cd6f4f1f4",
+      "35d55e9f5af5ab658721d0cc48ef6ec266191c18f3cb1598bf49e3a4d14ab591"
+    ]
+  },
+  {
+    "record_id": "9213f42649fc4680a10a0996e646dcaa",
+    "timestamp_epoch": 1791997221.6086428,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.372398739680648e-05,
+    "input_keys": [
+      "2e5797b16d87690e81b95d262171fc80bf62a8a736e7657eaa44a6872d26b6bc"
+    ]
+  },
+  {
+    "record_id": "3f86550d8594415fa02ba170566dfe19",
+    "timestamp_epoch": 1791997221.6089864,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.623100251890719e-05,
+    "input_keys": [
+      "756cb8f22fbf96c14bf44d2a9e529622581c7c6a282e494eb8e8f1af75438353"
+    ]
+  }
+]

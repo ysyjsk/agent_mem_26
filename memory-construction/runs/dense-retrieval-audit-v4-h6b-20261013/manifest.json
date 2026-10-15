@@ -1,0 +1,25 @@
+{
+  "config_sha256": "6c4cb0cef1de4d23f5d460f9a738369140b2425acb2784d05dbebe50a70579a3",
+  "construction_runs": [
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-quality-v3-20261013",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-quality-v3-compact-emb-20261013"
+  ],
+  "evaluator_reference_policy": "source_fields_only_after_retrieval; never in embedding payload",
+  "manifest_hash": "eae8c894c8463536b40ca2996e3bca451f93c4e76eeb035a719874dacc93a1f6",
+  "methods": [
+    "Ours-dev",
+    "B3-c2"
+  ],
+  "protocol": "dense-retrieval-audit/non-official-v1",
+  "question_manifest": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/manifests/fastloop_dev_qa_v2.json",
+  "question_manifest_hash": "05c50115f55605236da34873c035045e4729a4fef43510d1e8139407b73a6a5b",
+  "repeat": 1,
+  "retrieval": {
+    "official_qa_status": "not_evaluated",
+    "reader_called": false,
+    "search": "search_dense",
+    "top_k": 8
+  },
+  "schema_version": "dense-retrieval-audit/1",
+  "started_at": "2026-10-13T13:37:18Z"
+}

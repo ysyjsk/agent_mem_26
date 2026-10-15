@@ -1,0 +1,68 @@
+{
+  "code_sha256": {
+    "src/workflow_memory/construction.py": "575f1a2317dbc08e4d99cbc9a4c7340cb6ab9c7d9dc86f07e19e917c309a7f6d",
+    "src/workflow_memory/local_backends.py": "d716417071e8e7987c2c4dc6307cfe2727341f344c8795e9a8eeabbb03f580d8",
+    "src/workflow_memory/source_literals.py": "085333ca15fa53ca4ab5229e1e0817463ee078e6d87510325d285dc40dde74ce",
+    "src/workflow_memory/temporal_retrieval.py": "b14ffd791eb3f54fa91312476b282d264dcf5eba960d01f2962e2c59a4827cc9",
+    "tools/run_dev_reader.py": "b2ff86dc9ee6830b8e4709b575d34f70c03381ac03767227f17a2588b0cd1062"
+  },
+  "config_sha256": "6c4cb0cef1de4d23f5d460f9a738369140b2425acb2784d05dbebe50a70579a3",
+  "construction_latency_includes_reader": false,
+  "construction_runs": [
+    {
+      "manifest_sha256": "a6e6a0f5bc6d3254522653953e59f24a1074eb3ac27c935b40d2589cfadc89a8",
+      "methods": [
+        "Ours-dev",
+        "B3-c2"
+      ],
+      "metrics_sha256": "200e60d1f43fb8b09c40e2e8a95cd08540b9e0bb0c9e20f28325fc4b54b43ddb",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-e2e-batch2-20261013"
+    },
+    {
+      "manifest_sha256": "9e3bf0b89be3d821984d83350fce8c3e7361d3c6d632f574e660b77587a71290",
+      "methods": [
+        "B0",
+        "Ours-dev",
+        "B3-c2"
+      ],
+      "metrics_sha256": "f9436614ca52aa62469d5b2248eaa5052ce8f722abe3625c890eca2ca14fdb2f",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/fast-compare-v4-quality-v3-20261013"
+    }
+  ],
+  "official_qa_status": "not_evaluated",
+  "quality_scope": "auto_source_development_proxy",
+  "question_manifest_hash": "05c50115f55605236da34873c035045e4729a4fef43510d1e8139407b73a6a5b",
+  "reader_model": {
+    "api_key_env": "READER_API_KEY",
+    "backend": "transformers",
+    "base_url_env": "READER_BASE_URL",
+    "checkpoint_revision": null,
+    "device": "cuda:0",
+    "id": "Qwen/Qwen3.5-9B",
+    "local_path": "/data/predator/ly/Mem/models/Qwen3.5-9B",
+    "parameters": "inherit_and_pin_frozen_official_protocol"
+  },
+  "reader_response_cache": false,
+  "reader_settings": {
+    "enable_thinking": false,
+    "include_views": true,
+    "max_input_tokens": 8192,
+    "output_tokens": 256,
+    "retrieval": "public-step-lexical-v2",
+    "retrieval_budget": 8,
+    "temperature": 0.0
+  },
+  "reader_settings_hash": "a7ca0d6ade765b619c6c8e8e9a5e40696b03236e392c27c6f16e5d8aefe33e48",
+  "reader_settings_manifest_original": {
+    "enable_thinking": false,
+    "max_input_tokens": 8192,
+    "output_tokens": 256,
+    "retrieval": "core_lexical_query_v1",
+    "retrieval_budget": 8,
+    "temperature": 0.0
+  },
+  "repeat": 1,
+  "retrieval_mode_override": "public-step-lexical-v2",
+  "schema_version": "development-reader-run/1",
+  "started_at": "2026-10-13T11:13:30.644217Z"
+}

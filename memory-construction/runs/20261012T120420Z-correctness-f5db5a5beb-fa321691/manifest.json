@@ -1,0 +1,13 @@
+{
+  "config_sha256": "f5db5a5beb483cc275bb17d9ae82340c1cbc07e04f2fee224c0d05233cc90ea3",
+  "created_at": "2026-10-12T12:04:20.607023Z",
+  "credentials_recorded": false,
+  "manifest_schema_version": "workflow-memory-run/1",
+  "model_calls_allowed": false,
+  "plan_sha256": "13c42f8118316a005566dcdd0a9df1d5b3e376bf8739d3ba5636b43323ba59b7",
+  "run_id": "20261012T120420Z-correctness-f5db5a5beb-fa321691",
+  "runtime_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/configs/runtime.json",
+  "status": "completed",
+  "suite": "correctness",
+  "task_plan_sha256": "3321724fd44f7216b7bb3825d6a5601e458a00f3e592b8e85214b58e18729b5e"
+}

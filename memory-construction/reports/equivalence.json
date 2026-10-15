@@ -1,0 +1,15 @@
+{
+  "check": {
+    "details": {
+      "events": true,
+      "evidence": true,
+      "state": true,
+      "workflow": true
+    },
+    "name": "fresh_incremental_equivalence",
+    "passed": true
+  },
+  "note": "Finite deterministic fixture; not a proof of all natural-language dependency completeness.",
+  "run_id": "20261012T150237Z-correctness-732bc957c1-b908bbc3",
+  "status": "completed"
+}

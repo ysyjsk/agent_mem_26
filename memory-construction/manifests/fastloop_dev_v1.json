@@ -1,0 +1,143 @@
+{
+  "schema_version": "fastloop-dev/1",
+  "update_id": "memory-fast-results-v4",
+  "created_at_utc": "2026-10-12T16:09:49.394909+00:00",
+  "purpose": "first internal development comparison; not official Small/Medium QA",
+  "source_file": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/data/longmemeval_dev.jsonl",
+  "source_sha256": "0d839a1a9ab03b62c1862881de70f83140c83857dc0ebff6a99d4715b4129a3c",
+  "selection": {
+    "seed": 17,
+    "eligible_min_events": 8,
+    "order": "sha256(17:trajectory_id), 2 per web/enterprise where available",
+    "requested_windows": 4,
+    "max_prefix_events": 12
+  },
+  "protocol": "B-dev-fixed-prefix",
+  "input_modality": "text-only",
+  "scope": "construction_kernel",
+  "scope_exclusions": [
+    "model_load",
+    "embedding_and_vector_index_unless_measured_for_both",
+    "Reader",
+    "Judge"
+  ],
+  "methods": [
+    "B0",
+    "Ours-dev"
+  ],
+  "qa_status": "not_evaluated",
+  "pairing_keys": [
+    "window_id",
+    "checkpoint_prefix_length",
+    "repeat"
+  ],
+  "runtime_source": "configs/runtime.local.json",
+  "independent_method_stores": true,
+  "shared_initial_settings": {
+    "source_context_window_events_default": 2,
+    "extraction_output_tokens": 256,
+    "model_input_char_budget": 6000,
+    "temperature": 0.0,
+    "concurrency": 1
+  },
+  "note": "Evaluator holds the manifest. Methods see only the arrived prefix; never pass future source contents or terminal labels.",
+  "windows": [
+    {
+      "window_id": "0db80092-prefix12",
+      "trajectory_id": "0db80092",
+      "environment_family": "enterprise",
+      "event_ids": [
+        "0db80092:0",
+        "0db80092:1",
+        "0db80092:2",
+        "0db80092:3",
+        "0db80092:4",
+        "0db80092:5",
+        "0db80092:6",
+        "0db80092:7",
+        "0db80092:8",
+        "0db80092:9",
+        "0db80092:10",
+        "0db80092:11"
+      ],
+      "event_count": 12,
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "window_id": "170f5570-prefix9",
+      "trajectory_id": "170f5570",
+      "environment_family": "enterprise",
+      "event_ids": [
+        "170f5570:0",
+        "170f5570:1",
+        "170f5570:2",
+        "170f5570:3",
+        "170f5570:4",
+        "170f5570:5",
+        "170f5570:6",
+        "170f5570:7",
+        "170f5570:8"
+      ],
+      "event_count": 9,
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        9
+      ]
+    },
+    {
+      "window_id": "4a5f0d7f-prefix12",
+      "trajectory_id": "4a5f0d7f",
+      "environment_family": "web",
+      "event_ids": [
+        "4a5f0d7f:0",
+        "4a5f0d7f:1",
+        "4a5f0d7f:2",
+        "4a5f0d7f:3",
+        "4a5f0d7f:4",
+        "4a5f0d7f:5",
+        "4a5f0d7f:6",
+        "4a5f0d7f:7",
+        "4a5f0d7f:8",
+        "4a5f0d7f:9",
+        "4a5f0d7f:10",
+        "4a5f0d7f:11"
+      ],
+      "event_count": 12,
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "window_id": "ec6c60c2-prefix12",
+      "trajectory_id": "ec6c60c2",
+      "environment_family": "web",
+      "event_ids": [
+        "ec6c60c2:0",
+        "ec6c60c2:1",
+        "ec6c60c2:2",
+        "ec6c60c2:3",
+        "ec6c60c2:4",
+        "ec6c60c2:5",
+        "ec6c60c2:6",
+        "ec6c60c2:7",
+        "ec6c60c2:8",
+        "ec6c60c2:9",
+        "ec6c60c2:10",
+        "ec6c60c2:11"
+      ],
+      "event_count": 12,
+      "checkpoint_prefix_lengths": [
+        4,
+        8,
+        12
+      ]
+    }
+  ]
+}

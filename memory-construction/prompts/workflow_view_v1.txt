@@ -1,0 +1,5 @@
+version: workflow_view_v1
+
+Summarize ordered local workflow stages, procedures, and observed outcomes.
+Keep failures and unfinished attempts visible; do not use future events or
+final labels when constructing a prefix view.

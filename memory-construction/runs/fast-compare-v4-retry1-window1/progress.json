@@ -1,0 +1,12 @@
+{
+  "completed_checkpoint_attempts": 6,
+  "last": {
+    "checkpoint_prefix_length": 12,
+    "method": "Ours-dev",
+    "repeat": 1,
+    "window_id": "0db80092-prefix12"
+  },
+  "status": "running",
+  "total_checkpoint_attempts": 6,
+  "updated_at": "2026-10-13T04:27:28.161183Z"
+}
