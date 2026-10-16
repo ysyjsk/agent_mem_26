@@ -1439,10 +1439,15 @@ class AgentRunbookR(Memory):
         if query_vector.size == 0:
             return []
         scores = embeddings @ query_vector[0]
-        top_indexes = np.argsort(scores)[::-1][:top_k]
+        # Filter invalidated source-only Event entries before applying the
+        # requested top-k cap; otherwise stale entries can consume the whole
+        # candidate budget and hide valid lower-ranked evidence.
+        top_indexes = np.argsort(scores)[::-1]
         results: list[dict[str, Any]] = []
         for rank, idx in enumerate(top_indexes, start=1):
             entry = entries[int(idx)]
+            if entry.get('validity_status') == 'invalidated_source_change':
+                continue
             results.append(
                 {
                     "query": query_text,
@@ -1451,6 +1456,8 @@ class AgentRunbookR(Memory):
                     "entry": entry,
                 }
             )
+            if len(results) >= top_k:
+                break
         return results
 
     def _search_raw_state_queries(self, raw_state_queries: list[str]) -> list[dict[str, Any]]:

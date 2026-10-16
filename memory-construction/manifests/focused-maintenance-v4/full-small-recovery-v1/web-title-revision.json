@@ -1,0 +1,40 @@
+{
+  "trajectory_id": "1ad1af4b",
+  "selection_reason": "Existing complete web form trajectory; both adjacent generated events assert the old Title value. Replace a visible outcome, keeping the attempted action and requested goal unchanged. This is controlled counterfactual source correction, not a new official QA label.",
+  "source_edits": [
+    {
+      "state_index": 4,
+      "field": "text",
+      "old": "[121] textbox 'Title This field is required.' value='Cyberpunk', clickable, visible, focused, required\n\t\t\t\tStaticText 'Cyberpunk'",
+      "new": "[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required\n\t\t\t\tStaticText 'Neon Harbor'"
+    }
+  ],
+  "derived_rules": [
+    {
+      "target": "event_0003_0004",
+      "required": [
+        "Neon Harbor",
+        "Name"
+      ],
+      "forbidden": [
+        "Title.{0,35}contain the value 'Cyberpunk'"
+      ]
+    },
+    {
+      "target": "event_0004_0005",
+      "required": [
+        "Neon Harbor",
+        "Welcome to the future",
+        "Cyberpunk"
+      ],
+      "forbidden": [
+        "Name and Title fields are already filled with 'Cyberpunk'"
+      ]
+    }
+  ],
+  "manual_checks": [
+    "The corrected post-state Title for event3->4 and pre-state Title for event4->5 is Neon Harbor, not the action target Cyberpunk.",
+    "Name remains Cyberpunk; next description action and actual post-state remain intact.",
+    "The next state's unmodified Title observation must not be silently relabeled. Generic notes about task-goal Title are not revoked."
+  ]
+}

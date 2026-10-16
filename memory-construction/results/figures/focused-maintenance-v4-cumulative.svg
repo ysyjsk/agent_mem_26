@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="28" font-size="18">V13 sequential maintenance (initial construction excluded)</text>
+<line x1="70" y1="270" x2="480" y2="270" stroke="#555"/>
+<line x1="70" y1="80" x2="70" y2="270" stroke="#555"/>
+<text x="230" y="295" font-size="12">web</text>
+<polyline fill="none" stroke="#2563eb" stroke-width="2" points="70.0,250.4 275.0,165.5 480.0,80.0"/>
+<polyline fill="none" stroke="#f59e0b" stroke-width="2" points="70.0,270.0 275.0,208.6 480.0,148.3"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2" points="70.0,268.0 275.0,206.9 480.0,138.2"/>
+<text x="78" y="96" font-size="11">cumulative update+query LLM tokens</text>
+<line x1="540" y1="270" x2="950" y2="270" stroke="#555"/>
+<line x1="540" y1="80" x2="540" y2="270" stroke="#555"/>
+<text x="700" y="295" font-size="12">web</text>
+<polyline fill="none" stroke="#2563eb" stroke-width="2" points="540.0,80.0 745.0,162.9 950.0,168.6"/>
+<polyline fill="none" stroke="#f59e0b" stroke-width="2" points="540.0,270.0 745.0,270.0 950.0,270.0"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2" points="540.0,84.2 745.0,84.2 950.0,84.2"/>
+<text x="548" y="96" font-size="11">published event characters</text>
+<line x1="70" y1="560" x2="480" y2="560" stroke="#555"/>
+<line x1="70" y1="370" x2="70" y2="560" stroke="#555"/>
+<text x="230" y="585" font-size="12">enterprise</text>
+<polyline fill="none" stroke="#2563eb" stroke-width="2" points="70.0,523.9 275.0,447.1 480.0,370.0"/>
+<polyline fill="none" stroke="#f59e0b" stroke-width="2" points="70.0,551.7 275.0,501.1 480.0,445.7"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2" points="70.0,560.0 275.0,514.4 480.0,468.3"/>
+<text x="78" y="386" font-size="11">cumulative update+query LLM tokens</text>
+<line x1="540" y1="560" x2="950" y2="560" stroke="#555"/>
+<line x1="540" y1="370" x2="540" y2="560" stroke="#555"/>
+<text x="700" y="585" font-size="12">enterprise</text>
+<polyline fill="none" stroke="#2563eb" stroke-width="2" points="540.0,410.6 745.0,370.0 950.0,386.8"/>
+<polyline fill="none" stroke="#f59e0b" stroke-width="2" points="540.0,560.0 745.0,560.0 950.0,560.0"/>
+<polyline fill="none" stroke="#16a34a" stroke-width="2" points="540.0,399.6 745.0,399.6 950.0,399.6"/>
+<text x="548" y="386" font-size="11">published event characters</text>
+<text x="70" y="690" font-size="11">blue=B3; red=source_overlay; green=source_coalesced; each point is a correction round</text></svg>

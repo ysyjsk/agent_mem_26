@@ -1,0 +1,13 @@
+{
+  "snapshots": 6,
+  "saved_queries": 12,
+  "invalidated_event_retrievals": 0,
+  "all_snapshot_structural_checks": true,
+  "queries_containing_all_changed_lines": 6,
+  "queries_containing_any_changed_line": 9,
+  "scored_correct": 8,
+  "scored_incorrect_with_some_changed_lines": 2,
+  "no_new_model_calls": true,
+  "scope": "real saved same-state3-round sequence; cross-state save/reload separately covered by CPU regression",
+  "semantic_quality_equivalence": false
+}

@@ -1,0 +1,26 @@
+{
+  "trajectory_id": "0ab99e0c",
+  "selection_reason": "Paired workflow-intent revision on the same preselected trajectory and state; no state/action changes.",
+  "source_edits": [
+    {
+      "state_index": 5,
+      "field": "thoughts",
+      "old": "The click on the visible option failed (option element not clickable). The field value chooser is a select/combobox (bid a1639). I'll use select_option on that combobox to choose the \"Normal\" option (value \"normal\").",
+      "new": "The click on the visible option failed (option element not clickable). The field value chooser is a select/combobox (bid a1639). I'll use select_option on that combobox to choose the \"Normal\" option (value \"normal\"). Workflow clarification: verify the required field before proceeding to the next form field."
+    }
+  ],
+  "derived_rules": [
+    {
+      "target": "notes",
+      "required": [
+        "required",
+        "before|prior"
+      ],
+      "forbidden": []
+    }
+  ],
+  "manual_checks": [
+    "Generated notes must preserve the added verification and its ordering. This is recorded intent, not evidence the action was executed.",
+    "Original source state and actions remain unchanged."
+  ]
+}

@@ -2,12 +2,13 @@
 """Measured continuous-history costs, including retrieval and Reader work."""
 import csv
 import json
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RUN = ROOT/'runs/method-first-20261015/v13-sequential'
+RUN = Path(os.environ.get('FOCUSED_RUN', str(ROOT/'runs/method-first-20261015/v13-sequential'))).resolve()
 MARK = '\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n'
-POLICIES = ('b3', 'source_overlay', 'source_coalesced')
+POLICIES = tuple(os.environ.get('FOCUSED_POLICIES', 'b3 source_overlay source_coalesced').split())
 
 
 def read(path):
@@ -75,7 +76,9 @@ def main():
     if not rows:
         return
     fields = list(dict.fromkeys(k for r in rows for k in r))
-    with (ROOT/'results/tables/method_v13_sequence.csv').open('w', newline='') as f:
+    table_path = ROOT / os.environ.get('FOCUSED_TABLE', 'results/tables/method_v13_sequence.csv')
+    table_path.parent.mkdir(parents=True, exist_ok=True)
+    with table_path.open('w', newline='') as f:
         w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
     lines = ['# V13: continuous correction cost and current evidence', '',
         'Text-only/adapted development. Two shared full-domain histories, three controlled corrections per selected state; '
@@ -92,14 +95,16 @@ def main():
               'Cumulative curves include retrieval-controller and Reader tokens plus update tokens. '
               'Cost sums are actual sequential phases, not a sum of concurrent request durations. '
               'Question repeats/controlled source revisions are not independent samples or proof of statistical quality equivalence.']
-    (ROOT/'reports/method_v13_sequence.md').write_text('\n'.join(lines)+'\n')
+    report_path = ROOT / os.environ.get('FOCUSED_REPORT', 'reports/method_v13_sequence.md')
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text('\n'.join(lines)+'\n')
     complete = [r for r in rows if 'qa_correct' in r]
     print(json.dumps({'updates': len(rows), 'query_runs_complete': len(complete)}, ensure_ascii=False))
     if len(complete) < 18:
         return
     # Emit a dependency-free SVG; plotting packages are not part of the
     # resident experiment environment.
-    colors = {'b3':'#2563eb', 'source_overlay':'#dc2626', 'source_coalesced':'#16a34a'}
+    colors = {'b3':'#2563eb', 'source_only':'#f59e0b', 'source_overlay':'#dc2626', 'source_coalesced':'#16a34a'}
     svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720">',
            '<rect width="100%" height="100%" fill="white"/>',
            '<text x="30" y="28" font-size="18">V13 sequential maintenance (initial construction excluded)</text>']
@@ -126,7 +131,9 @@ def main():
             svg.append(f'<text x="{x0+8}" y="{y0+16}" font-size="11">{label}</text>')
     svg.append('<text x="70" y="690" font-size="11">blue=B3; red=source_overlay; green=source_coalesced; each point is a correction round</text></svg>')
     (ROOT/'results/figures').mkdir(exist_ok=True)
-    (ROOT/'results/figures/method_v13_cumulative.svg').write_text('\n'.join(svg))
+    figure_path = ROOT / os.environ.get('FOCUSED_FIGURE', 'results/figures/method_v13_cumulative.svg')
+    figure_path.parent.mkdir(parents=True, exist_ok=True)
+    figure_path.write_text('\n'.join(svg))
 
 
 if __name__=='__main__':

@@ -1,0 +1,34 @@
+{
+  "manifest_version": "focused-maintenance-v4-formal-20261015",
+  "scope": "complete adapted Small history libraries with fixed local maintenance load; not native multimodal or official Judge",
+  "data": {
+    "web": {
+      "frozen_manifest": "runs/dev-adapted-text-v1/data-expanded20/web/frozen_manifest.json",
+      "frozen_manifest_sha256": "0933a24c108e9bb3f9f9ee1540e9de4fdf42692efa964243563722b067ac3c64",
+      "trajectory_ids": ["1ad1af4b","4ba5e9cb","2e8f6477","2a99f536","3331c568","763605f1","53f7b75e","e9a95d4f","49886eee","83fa29f7"],
+      "maintenance_trajectory_id": "1ad1af4b",
+      "revision": "configs/method_web_title_replacement.json",
+      "revision_sha256": "10eafc0ea274c09300aae465f708e7db80ba2283badf9bb73b8f0d91511296cb",
+      "revision_reason": "predeclared visible Title correction; complete source evidence; web form type"
+    },
+    "enterprise": {
+      "frozen_manifest": "runs/dev-adapted-text-v1/data-expanded20/enterprise/frozen_manifest.json",
+      "frozen_manifest_sha256": "850f39ba6b0ea5097a9d4d7b03c94c287b0a4a16e87f67598a9651455af283fb",
+      "trajectory_ids": ["0ab99e0c","12c22166","276f9dff","49f98e9e","0c80a9e1","13083bae","1c29cf20","89cf6e06","247282e9","16143664"],
+      "maintenance_trajectory_id": "0ab99e0c",
+      "revision": "configs/method_enterprise_count_replacement.json",
+      "revision_sha256": "ca7f21d905b8530b12956e857e01eb659df39dd8d60a84f7808185c2610ff24d",
+      "revision_reason": "predeclared visible count correction; complete source evidence; enterprise list type"
+    }
+  },
+  "methods": ["b3", "source_only", "source_coalesced"],
+  "fixed_reader": {"model": "Qwen3.5-9B", "thinking": false, "max_completion_tokens": 2048, "memory_context_max_tokens": 12000},
+  "fixed_retrieval": {"chunk_memory_context": true, "cache_context_tokenizer": true, "lexical_backfill": true, "reuse_query_embedding": true, "event_group_size": 2},
+  "fixed_update": {"event_output_tokens": 2048, "event_max_input_tokens": 18000, "controller_max_retries": 0, "event_concurrency": 1, "current_state_evidence": true},
+  "quality": "Complete/parseable answers, deterministic short-answer scoring, source-grounded invalidation/coverage, save/reload checks; semantic Judge pending where unavailable.",
+  "exposure": "The two maintenance trajectories were used in development and are exposed; full histories are fixed for formal maintenance, not claimed independent of development.",
+  "initial_memory": {
+    "web": {"existing": "runs/dev-adapted-text-v1/results/web-agentrunbook-r-v1/memory_state", "status": "5-trajectory compatible historical snapshot; full-10 build required before formal web maintenance"},
+    "enterprise": {"existing": "runs/dev-adapted-text-v1/results/enterprise-expanded20-agentrunbook-r-officialroot-build-v1/memory_state", "status": "10-trajectory compatible snapshot reused"}
+  }
+}

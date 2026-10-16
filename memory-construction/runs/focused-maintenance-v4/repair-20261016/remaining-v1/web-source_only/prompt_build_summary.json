@@ -1,0 +1,14 @@
+{
+  "completed_at_utc": "2026-10-16T03:30:52.060222+00:00",
+  "prompt_row_count": 2,
+  "question_ids": [
+    "title_current",
+    "name_preserved"
+  ],
+  "original_question_ids": [
+    "title_current",
+    "name_preserved"
+  ],
+  "shuffle_questions_seed": null,
+  "prompt_build_wall_seconds": 6.355884425982367
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 2,
+  "update_id": "focused-maintenance-v4-20261015",
+  "goal": "在既有 AgentRunbook-R 本地 text-only/adapted 局部维护路线内，以更新及固定查询负载下的总 tokens、发布时间为主要目标、所测可用质量为约束，完成有效方法、完整必要论文实验与稿件。先按构建/更新/检索/Reader/评分阶段复用已有合法证据，只补 Source-only、Raw RAG、RAG+Notes 的缺失维护单元；B3/v13/Overlay、初始构建、正常 QA、确认和重复结果优先复用，不重跑整个矩阵。允许依据实测瓶颈自主阅读原始文献并进行当前方法内的小幅改进，每次只验证受影响单元；保留收益、淘汰无效改动，不增加 baseline 或改变确认数据。证据支持后完成完整 Small 历史库的固定维护主实验、匹配核心消融、必要确认/重复、逐题记录和论文表图正文；三类初始记忆合法复用，方法分支独立更新。只有可追溯结果支持明确成本—质量价值且全部必要交付完成，才结束研究目标。",
+  "current_phase": "reuse_audit_then_missing_maintenance",
+  "native_goal": {
+    "status": "unverified_in_executor",
+    "note": "文档部署未查询服务器执行会话的原生 Goal；由该会话实际核实，不伪称已激活。",
+    "previous_record": {
+      "status": "null_on_latest_query",
+      "verified": "2026-10-15",
+      "previous": "blocked/unfinished",
+      "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
+    }
+  },
+  "executor_ack": {
+    "status": "pending",
+    "path": "execution/ack-focused-maintenance-v4.json",
+    "expected_update_revision": "execution-ready-r2"
+  },
+  "best_available": "v13 source_coalesced core before added full-source-line-absence note reuse; final selection pending Source-only and matched public comparison",
+  "next_candidate": "Only missing Source-only/Raw RAG/RAG+Notes maintenance units; no full development rerun",
+  "primary_metric": "update LLM input+output and update+query total LLM tokens; wall, embedding, initial cost, quality and failures separately",
+  "tasks": [
+    {
+      "id": "EVIDENCE",
+      "status": "done",
+      "evidence": [
+        "results/tables/method_v13_sequence.csv",
+        "results/tables/method_v13_repeats.csv",
+        "results/tables/method_v13_confirmation.csv"
+      ],
+      "scope": "existing versioned evidence only; not final public/source-only comparison"
+    },
+    {
+      "id": "ALIGN",
+      "status": "todo",
+      "depends_on": [
+        "EVIDENCE"
+      ],
+      "action": "短检查作业/新产物；按阶段更新复用清单并先输出已有/缺失/新增计算。核对共同 Notes 行为和必要测试，只有必要新增确认才选数据。",
+      "acceptance": "真实接收/理解确认；复用证据与缺口及每个重跑原因明确；共同配置/Notes 规则成立，下一缺失单元可运行，不等待全历史审计。",
+      "outputs": [
+        "execution/reuse_inventory.csv"
+      ]
+    },
+    {
+      "id": "SOURCE_ONLY",
+      "status": "todo",
+      "depends_on": [
+        "ALIGN"
+      ],
+      "action": "实现最小分支和四项准入，只补缺失六轮/查询；优先引用匹配 B3/Ours，第一项真实检查可计入。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/dev/source_only_compare.csv"
+      ],
+      "acceptance": "四项一致性通过且新 Raw State 正常可查；两域三轮 B3/Source-only/Ours 匹配实测或合法复用；连续快照、成本、答案、失败和来源可追溯。"
+    },
+    {
+      "id": "PUBLIC_BASELINES",
+      "status": "todo",
+      "depends_on": [
+        "SOURCE_ONLY"
+      ],
+      "action": "只补 Raw RAG/Notes 缺失维护/查询各六轮，引用合法 B3/Ours 组装四行开发表；初始构建/正常 QA 不重做。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/dev/public_main.csv"
+      ],
+      "acceptance": "四行维护表同负载可比，原始路径/版本与复用依据明确；每个新增或重跑有具体缺口原因，不要求四方法新跑。"
+    },
+    {
+      "id": "SELECT",
+      "status": "todo",
+      "depends_on": [
+        "SOURCE_ONLY",
+        "PUBLIC_BASELINES"
+      ],
+      "action": "依据实测瓶颈自主读原始资料并局部优化/简化，一次一个候选；只补受影响阶段及必要回归，已有收益充分则固定。",
+      "acceptance": "明确相对强 B3 及低成本对照的收益/取舍；不得把无收益组件写为创新或只因文档齐全宣布完成。"
+    },
+    {
+      "id": "CONFIRM",
+      "status": "todo",
+      "depends_on": [
+        "SELECT"
+      ],
+      "action": "复用原固定版本的有效确认与重复；仅对方法变化/覆盖缺项补未调参确认，记录暴露历史和扩量判断，不强制所有案例重跑。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/confirmation.csv"
+      ],
+      "acceptance": "现有或必要新增证据支持协议准入；数据/版本/暴露记录明确，不把旧确认称新 held-out；无未修复系统性退化，相对 B3 降本且轻量对照价值可解释。"
+    },
+    {
+      "id": "SMALL_MAIN",
+      "status": "todo",
+      "depends_on": [
+        "CONFIRM"
+      ],
+      "action": "确认支持后完成完整 Small 历史固定维护负载四行表；仅三类初始记忆，兼容旧分区合法复用、AR 快照分支独立。Source-only/Overlay 同预选核心子集，Delta Edit 优先分版本复用。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/public_main.csv",
+        "results/tables/focused-maintenance-v4/source_only_compare.csv",
+        "results/tables/focused-maintenance-v4/ablation.csv",
+        "results/figures/focused-maintenance-v4/"
+      ],
+      "acceptance": "完整历史库、固定负载和实际版本有清单；主表及匹配 Source-only/Overlay、分版本 Delta Edit、连续图、必要确认/代表重复、质量/失败与复现齐全；合法复用计入完成。"
+    },
+    {
+      "id": "WRITE",
+      "status": "todo",
+      "depends_on": [],
+      "action": "立即写 paper/manuscript.md 的问题、方法和设置；随新结果更新正文，依据 paper/README.md 整理证据。",
+      "outputs": [
+        "paper/manuscript.md",
+        "paper/reproduction.md"
+      ],
+      "acceptance": "形成连贯稿件与实际复现入口；历史版本不能合并冒充最终实现。"
+    },
+    {
+      "id": "PACKAGE",
+      "status": "todo",
+      "depends_on": [
+        "SMALL_MAIN",
+        "WRITE"
+      ],
+      "action": "核对最终主表、机制表、图、确认、正文和复现；更新实际完成状态。",
+      "acceptance": "GOAL.md 完成条件逐项由真实结果满足；正式 Small 主表而非开发表、机制/核心消融、连续图、独立确认、正文和复现齐全，主张与证据相符。"
+    }
+  ],
+  "active_plan_task_ids": [
+    "ALIGN",
+    "SOURCE_ONLY",
+    "WRITE"
+  ],
+  "backlog": [
+    {
+      "id": "NEW_FRAMEWORKS",
+      "status": "deferred",
+      "action": "Codex、AgentRunbook-C、MemForest、LightMem 及其他新适配暂停。"
+    },
+    {
+      "id": "NEW_CONSTRUCTION_DIRECTIONS",
+      "status": "deferred",
+      "action": "冷构建/自然增长新方法、新数据集、Medium 暂停。完整 Small 历史维护实验已列 SMALL_MAIN，非首轮前置且非 deferred。"
+    },
+    {
+      "id": "NATIVE_JUDGE",
+      "status": "deferred",
+      "action": "官方 Judge 不可用时保留待评答案，继续可评分质量与本地成本实验。"
+    }
+  ],
+  "update_revision": "execution-ready-r2",
+  "reuse_inventory": "execution/reuse_inventory.csv",
+  "optimization_guide": "docs/REUSE_AND_OPTIMIZATION.md"
+}

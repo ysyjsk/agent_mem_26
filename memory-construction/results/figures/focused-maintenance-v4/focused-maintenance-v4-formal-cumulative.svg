@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#222}.small{font-size:12px}.axis{stroke:#777;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}</style>
+<text x="100" y="25" font-size="18" font-weight="bold">Formal maintenance cost: update + fixed Reader tokens</text>
+<line class="grid" x1="100" x2="920" y1="440.0" y2="440.0"/>
+<text class="small" x="92" y="444.0" text-anchor="end">0k</text>
+<line class="grid" x1="100" x2="920" y1="343.8" y2="343.8"/>
+<text class="small" x="92" y="347.8" text-anchor="end">10k</text>
+<line class="grid" x1="100" x2="920" y1="247.5" y2="247.5"/>
+<text class="small" x="92" y="251.5" text-anchor="end">20k</text>
+<line class="grid" x1="100" x2="920" y1="151.2" y2="151.2"/>
+<text class="small" x="92" y="155.2" text-anchor="end">30k</text>
+<line class="grid" x1="100" x2="920" y1="55.0" y2="55.0"/>
+<text class="small" x="92" y="59.0" text-anchor="end">40k</text>
+<line class="axis" x1="100" x2="100" y1="55" y2="440"/><line class="axis" x1="100" x2="920" y1="440" y2="440"/>
+<text x="270" y="478" text-anchor="middle" font-weight="bold">web</text>
+<rect x="140" y="356.1" width="92" height="83.9" fill="#315b9a"/>
+<rect x="140" y="202.7" width="92" height="153.4" fill="#315b9a" opacity="0.35"/>
+<text class="small" x="186.0" y="196.7" text-anchor="middle">24.5k</text>
+<text class="small" x="186.0" y="458" text-anchor="middle">b3</text>
+<rect x="248" y="240.7" width="92" height="199.3" fill="#d47b2c" opacity="0.35"/>
+<text class="small" x="294.0" y="234.7" text-anchor="middle">20.5k</text>
+<text class="small" x="294.0" y="458" text-anchor="middle">only</text>
+<rect x="356" y="314.8" width="92" height="125.2" fill="#3b8f6b" opacity="0.35"/>
+<text class="small" x="402.0" y="308.8" text-anchor="middle">12.9k</text>
+<text class="small" x="402.0" y="458" text-anchor="middle">coalesced</text>
+<text x="632" y="478" text-anchor="middle" font-weight="bold">enterprise</text>
+<rect x="502" y="295.9" width="92" height="144.1" fill="#315b9a"/>
+<rect x="502" y="113.7" width="92" height="182.2" fill="#315b9a" opacity="0.35"/>
+<text class="small" x="548.0" y="107.7" text-anchor="middle">33.6k</text>
+<text class="small" x="548.0" y="458" text-anchor="middle">b3</text>
+<rect x="610" y="231.4" width="92" height="208.6" fill="#d47b2c" opacity="0.35"/>
+<text class="small" x="656.0" y="225.4" text-anchor="middle">21.5k</text>
+<text class="small" x="656.0" y="458" text-anchor="middle">only</text>
+<rect x="718" y="229.7" width="92" height="210.3" fill="#3b8f6b" opacity="0.35"/>
+<text class="small" x="764.0" y="223.7" text-anchor="middle">21.7k</text>
+<text class="small" x="764.0" y="458" text-anchor="middle">coalesced</text>
+<text class="small" transform="translate(20,247.5) rotate(-90)" text-anchor="middle">tokens</text>
+<text class="small" x="560" y="535" text-anchor="middle">dark = update LLM tokens; translucent = query/Reader LLM tokens</text>
+</svg>

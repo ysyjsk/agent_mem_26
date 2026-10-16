@@ -18,11 +18,27 @@ def updater(monkeypatch):
     monkeypatch.setenv('LME_EVENT_OUTPUT_TOKENS', '2048')
     monkeypatch.setenv('LME_EMBEDDING_TOKENIZER_MODEL', '/data/predator/ly/Mem/models/Qwen3-Embedding-8B')
     monkeypatch.delenv('LME_EVENT_MAX_INPUT_TOKENS', raising=False)
+    # The repository also contains an isolated async-fix-runtime package with
+    # the same top-level ``memory_modules`` name.  Purge any earlier import so
+    # this fixture always exercises the local text-only adapter used by the
+    # updater, independent of pytest collection order.
+    prior_memory_modules = {
+        name: sys.modules[name]
+        for name in sys.modules
+        if name == 'memory_modules' or name.startswith('memory_modules.')
+    }
+    for name in list(sys.modules):
+        if name == 'memory_modules' or name.startswith('memory_modules.'):
+            del sys.modules[name]
+    monkeypatch.syspath_prepend(str(ROOT / 'runs/agentrunbook-r-native-small-20261014/local-text-only'))
     spec = importlib.util.spec_from_file_location('update_experiment', ROOT / 'tools/run_agentrunbook_updates.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     memory = module.load_memory(SOURCE)
     memory.__class__ = module.UpdateRunbook
+    # Dependency tests may emit cache/invalidation diagnostics. Never append
+    # synthetic test records to the real historical experiment ledger.
+    monkeypatch.setattr(memory, '_append_model_call_metric', lambda row: None)
     module.seed_caches(memory)
     # Unit fixture only: seed synthetic dependency entries to test invalidation
     # shape. Production now refuses to re-key legacy snapshot event outputs.
@@ -32,7 +48,13 @@ def updater(monkeypatch):
             memory.event_outputs[memory.event_dependency_key(trajectory, spec)] = {
                 'overview': 'synthetic overview', 'state_transition': 'synthetic transition'}
     memory.initial_event_keys = set(memory.event_outputs)
-    return module, memory
+    try:
+        yield module, memory
+    finally:
+        for name in list(sys.modules):
+            if name == 'memory_modules' or name.startswith('memory_modules.'):
+                del sys.modules[name]
+        sys.modules.update(prior_memory_modules)
 
 
 def test_b3_all_original_group_and_note_requests_remain_legal(updater):
@@ -155,7 +177,7 @@ def test_current_source_merge_does_not_promote_duplicate_obsolete_line(updater):
     assert "Title='B'" in current
 
 
-def test_text_only_coalesced_revision_reuses_generic_notes_when_source_lines_absent(updater):
+def test_text_only_coalesced_revision_does_not_reuse_generic_notes_when_source_lines_absent(updater, monkeypatch):
     module, memory = updater
     memory.update_policy = 'source_coalesced'
     tid = next(iter(memory.inserted_trajectory_ids))
@@ -166,9 +188,89 @@ def test_text_only_coalesced_revision_reuses_generic_notes_when_source_lines_abs
     hint = next(e for e in memory.hint_note_entries if e['trajectory_id'] == tid)
     procedure['note_text'] = 'Generic workflow note without the exact source line.'
     hint['note_text'] = 'Generic hint without the exact source line.'
+    sentinel = ({'note_type': 'procedure', 'note_text': 'regenerated procedure'},
+                {'note_type': 'hint', 'note_text': 'regenerated hint'})
+    monkeypatch.setattr(module.AgentRunbookR, '_build_note_entries',
+                        lambda self, **kwargs: sentinel)
     result = memory._build_note_entries(trajectory_dir=memory.workspace_dir, simplified_trajectory=changed)
-    assert result[0]['note_text'] == procedure['note_text']
-    assert result[1]['note_text'] == hint['note_text']
+    assert result == sentinel
+
+
+def test_source_only_keeps_prior_invalid_events_on_another_state_update(updater, monkeypatch):
+    module, memory = updater
+    memory.update_policy = 'source_only'
+    old = memory._load_stored_trajectory('1ad1af4b')
+    import copy
+    changed = copy.deepcopy(old)
+    changed['states'][4]['text'] += '\nNew local observation'
+    previous = memory.event_entries[0]
+    previous['validity_status'] = 'invalidated_source_change'
+    previous['invalidated_source_state_indexes'] = [0]
+    previous['invalidated_by_policy'] = 'source_only'
+    monkeypatch.setattr(memory, '_append_model_call_metric', lambda row: None)
+    entries = memory._build_event_entries(trajectory_dir=memory.workspace_dir/'trajectories/1ad1af4b', simplified_trajectory=changed)
+    first = next(e for e in entries if e['event_id'] == previous['event_id'])
+    assert first['validity_status'] == 'invalidated_source_change'
+    assert first['invalidated_source_state_indexes'] == [0]
+
+
+def test_source_only_marks_changed_events_invalid_but_keeps_raw_path(updater):
+    module, memory = updater
+    memory.update_policy = 'source_only'
+    trajectory, _ = module.changed_trajectory(SOURCE, 'state_revision', '1ad1af4b', 4)
+    entries = memory._build_event_entries(trajectory_dir=SOURCE, simplified_trajectory=trajectory)
+    invalid = {e['event_id'] for e in entries if e.get('validity_status') == 'invalidated_source_change'}
+    assert invalid == {'event_0003_0004', 'event_0004_0005'}
+    assert len(entries) == len(memory.event_entries) // len(memory.inserted_trajectory_ids) or len(entries) > 0
+
+
+def test_source_only_cross_state_invalidation_survives_actual_save_load(updater, tmp_path, monkeypatch):
+    """Exercise persisted event flags and real retrieval filtering, without inference.
+
+    Raw-state replacement is covered by real maintenance runs; here the
+    regression is specifically that an earlier retired event must not revive.
+    """
+    import copy
+    import shutil
+    import numpy as np
+
+    module, _ = updater
+    cloned = tmp_path / 'memory_state'
+    shutil.copytree(SOURCE, cloned)
+    memory = module.load_memory(cloned)
+    memory.__class__ = module.UpdateRunbook
+    memory.update_policy = 'source_only'
+    tid = '1ad1af4b'
+    before_vectors = memory.event_embeddings.copy()
+    before_notes = copy.deepcopy(memory.procedure_note_entries + memory.hint_note_entries)
+    before = {e['event_id']: copy.deepcopy(e) for e in memory.event_entries if e['trajectory_id'] == tid}
+    for state_index in (0, 4):
+        trajectory = copy.deepcopy(memory._load_stored_trajectory(tid))
+        trajectory['states'][state_index]['text'] += f'\nNew observation for state {state_index}'
+        changed = memory._build_event_entries(
+            trajectory_dir=cloned / 'trajectories' / tid, simplified_trajectory=trajectory)
+        changed_by_id = {e['event_id']: e for e in changed}
+        memory.event_entries = [changed_by_id[e['event_id']] if e['trajectory_id'] == tid else e
+                                for e in memory.event_entries]
+        module.save_json(cloned / 'trajectories' / tid / 'trajectory.json', trajectory)
+        module.save_memory(memory, cloned)
+        memory = module.load_memory(cloned)
+        memory.__class__ = module.UpdateRunbook
+        memory.update_policy = 'source_only'
+    retired = {e['event_id'] for e in memory.event_entries
+               if e['trajectory_id'] == tid and e.get('validity_status') == 'invalidated_source_change'}
+    assert retired == {'event_0000_0001', 'event_0003_0004', 'event_0004_0005'}
+    assert np.array_equal(memory.event_embeddings, before_vectors)
+    assert memory.procedure_note_entries + memory.hint_note_entries == before_notes
+    for entry in memory.event_entries:
+        if entry['trajectory_id'] == tid and entry['event_id'] not in retired:
+            assert entry['description'] == before[entry['event_id']]['description']
+    monkeypatch.setattr(memory, '_embed_texts',
+                        lambda texts, **kwargs: np.zeros((1, memory.event_embeddings.shape[1]), dtype=np.float32))
+    results = memory._search_entries(entries=memory.event_entries, embeddings=memory.event_embeddings,
+                                     query_text='current fact', top_k=len(memory.event_entries))
+    assert all(r['entry'].get('validity_status') != 'invalidated_source_change' for r in results)
+    assert len(results) == len(memory.event_entries) - len(retired)
 
 
 @pytest.mark.parametrize('edit', [

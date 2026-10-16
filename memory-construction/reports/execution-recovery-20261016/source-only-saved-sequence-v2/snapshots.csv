@@ -1,0 +1,7 @@
+domain,round,raw_path,source_roundtrip,prior_retired_events_remain_retired,retired_events,unchanged_event_descriptions_and_vectors_preserved,notes_and_vectors_preserved,corrected_source_lines_in_raw_pool
+web,1,runs/focused-maintenance-v4/dev/sequence-final/web-r1/literal_revision-source_only,True,True,2,True,True,True
+web,2,runs/focused-maintenance-v4/dev/sequence-final/web-r2/literal_revision-source_only,True,True,2,True,True,True
+web,3,runs/focused-maintenance-v4/dev/sequence-final/web-r3/literal_revision-source_only,True,True,2,True,True,True
+enterprise,1,runs/focused-maintenance-v4/dev/sequence-final/enterprise-r1/literal_revision-source_only,True,True,2,True,True,True
+enterprise,2,runs/focused-maintenance-v4/dev/sequence-final/enterprise-r2/literal_revision-source_only,True,True,2,True,True,True
+enterprise,3,runs/focused-maintenance-v4/dev/sequence-final/enterprise-r3/literal_revision-source_only,True,True,2,True,True,True

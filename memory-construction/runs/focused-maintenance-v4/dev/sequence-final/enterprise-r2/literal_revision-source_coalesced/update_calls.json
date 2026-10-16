@@ -1,0 +1,201 @@
+[
+  {
+    "record_id": "0fc8b4f5a3574d9f9b036a99974089d3",
+    "timestamp_epoch": 1792076223.8542178,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "current_source_coalesced_v13",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -41,5 +41,5 @@\n \t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n \t\t\t\t[a35] region '', live='polite', relevant='additions text'\n-\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n+\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 105 records'\n \t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n \t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n@@ -658,14 +658,14 @@\n \t\t\t\t\t\t\t[a883] row '', visible\n \t\t\t\t\t\t\t\t[a884] gridcell '', visible\n-\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\n+\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 105 to 20 of 105 Next page Last page', visible\n \t\t\t\t\t\t\t\t\t[a887] button 'First page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a890] button 'Previous page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a893] textbox 'Skip to row' value='1', clickable, visible, describedby='08b0fcd093f0f250f629fd085d03d6d2_description_of_skip_to'\n \t\t\t\t\t\t\t\t\t\tStaticText '1'\n-\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 103'\n+\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 105'\n \t\t\t\t\t\t\t\t\tStaticText 'to'\n \t\t\t\t\t\t\t\t\tStaticText '20'\n \t\t\t\t\t\t\t\t\tStaticText 'of'\n-\t\t\t\t\t\t\t\t\tStaticText '103'\n+\t\t\t\t\t\t\t\t\tStaticText '105'\n \t\t\t\t\t\t\t\t\t[a898] button 'Next page', visible\n \t\t\t\t\t\t\t\t\t[a900] button 'Last page', visible",
+        "append_only": false
+      }
+    ],
+    "before": [
+      {
+        "overview": "Prior-source interpretation (f07d0e7b28fe4043); superseded ONLY for the corrected observations below: The agent is configuring a filter on the Change Requests list to find specific entries. This step attempts to set the first condition by clicking the 'Normal' option within the 'Type' field dropdown to restrict the list to normal change requests.",
+        "state_transition": "Prior-source interpretation (f07d0e7b28fe4043); not authoritative for corrected field observations: The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 101 unfiltered records, and the filter condition for Type has not been applied.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 4, \"role\": \"pre-state\", \"current_evidence\": \"[a35] region '', live='polite', relevant='additions text'\\nStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\\n[a36] region '', live='assertive', relevant='additions text'\\n[a884] gridcell '', visible\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\\n[a887] button 'First page', visible, disabled=True\\nStaticText '1'\\nStaticText 'Showing rows 1 to 20 of 101'\\nStaticText 'to'\"}, {\"state_index\": 5, \"role\": \"post-state\", \"current_evidence\": \"StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\\nStaticText 'Showing rows 1 to 20 of 103'\\nStaticText '103'\"}]"
+      },
+      {
+        "overview": "Prior-source interpretation (f07d0e7b28fe4043); superseded ONLY for the corrected observations below: Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.",
+        "state_transition": "Prior-source interpretation (f07d0e7b28fe4043); not authoritative for corrected field observations: The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 5, \"role\": \"pre-state\", \"current_evidence\": \"StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\\nStaticText 'Showing rows 1 to 20 of 103'\\nStaticText '103'\"}, {\"state_index\": 6, \"role\": \"post-state\", \"current_evidence\": \"[a35] region '', live='polite', relevant='additions text'\\nStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\\n[a36] region '', live='assertive', relevant='additions text'\\n[a884] gridcell '', visible\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\\n[a887] button 'First page', visible, disabled=True\\nStaticText '1'\\nStaticText 'Showing rows 1 to 20 of 101'\\nStaticText 'to'\"}]"
+      }
+    ],
+    "after": [
+      {
+        "overview": "Prior-source interpretation (f07d0e7b28fe4043); superseded ONLY for the corrected observations below: The agent is configuring a filter on the Change Requests list to find specific entries. This step attempts to set the first condition by clicking the 'Normal' option within the 'Type' field dropdown to restrict the list to normal change requests.",
+        "state_transition": "Prior-source interpretation (f07d0e7b28fe4043); not authoritative for corrected field observations: The action to click the 'Normal' option failed because the element was not interactive. The 'Type' field combobox remains open with the dropdown expanded, but the value did not change from '-- None --'. The Change Requests list continues to display the full set of 101 unfiltered records, and the filter condition for Type has not been applied.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 4, \"role\": \"pre-state\", \"current_evidence\": \"[a35] region '', live='polite', relevant='additions text'\\nStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\\n[a36] region '', live='assertive', relevant='additions text'\\n[a884] gridcell '', visible\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\\n[a887] button 'First page', visible, disabled=True\\nStaticText '1'\\nStaticText 'Showing rows 1 to 20 of 101'\\nStaticText 'to'\"}, {\"state_index\": 5, \"role\": \"post-state\", \"current_evidence\": \"StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\\nStaticText 'Showing rows 1 to 20 of 103'\\nStaticText '103'\"}]"
+      },
+      {
+        "overview": "Prior-source interpretation (f07d0e7b28fe4043); superseded ONLY for the corrected observations below: Following the failed click attempt, the agent switches methods to programmatically select the 'Normal' value for the 'Type' filter field to ensure the first condition is established before adding subsequent criteria.",
+        "state_transition": "Prior-source interpretation (f07d0e7b28fe4043); not authoritative for corrected field observations: The selection of 'Normal' for the 'Type' field was successful. The combobox value updated from '-- None --' to 'normal', and the filter condition 'Type is Normal' is now active in the filtering toolbar. The Change Requests list remains visible with the unfiltered records displayed, awaiting the application of the full filter set.\nCURRENT STATE OBSERVATIONS (authoritative for the listed fields; pre-state and post-state are independent, not a claim that values persist):\n[{\"state_index\": 5, \"role\": \"pre-state\", \"current_evidence\": \"StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\\nStaticText 'Showing rows 1 to 20 of 103'\\nStaticText '103'\"}, {\"state_index\": 6, \"role\": \"post-state\", \"current_evidence\": \"[a35] region '', live='polite', relevant='additions text'\\nStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\\n[a36] region '', live='assertive', relevant='additions text'\\n[a884] gridcell '', visible\\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\\n[a887] button 'First page', visible, disabled=True\\nStaticText '1'\\nStaticText 'Showing rows 1 to 20 of 101'\\nStaticText 'to'\"}]"
+      }
+    ],
+    "validity": "Prior interpretation is explicitly version-labeled by the common state-evidence publisher, NOT reused as current assertion"
+  },
+  {
+    "record_id": "0f71bbb5522c418c9ef7a4bdc2f4612f",
+    "timestamp_epoch": 1792076223.8543458,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "58d75ccd4cf043718640d636c650d22f",
+    "timestamp_epoch": 1792076223.8593671,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0004_0005",
+    "before_chars": 1784,
+    "after_chars": 1784,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "050874f79bb94f0393e4d03034de6ea9",
+    "timestamp_epoch": 1792076223.8626697,
+    "channel": "current_evidence_merge",
+    "status": "success",
+    "event_id": "event_0005_0006",
+    "before_chars": 1741,
+    "after_chars": 1741,
+    "mode": "retain_only_exact_current_source_lines; union_by_state; no_model"
+  },
+  {
+    "record_id": "4930f4943f1b4c628ebacdcc5b5aa1a1",
+    "timestamp_epoch": 1792076223.8667278,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "6a7c9ffebf180c5eaac5f05b794243994688ace320215f1c587fe1ecfe88f3e4",
+    "stage": "notes"
+  },
+  {
+    "record_id": "88a76a7d07e841c49218c38d756381c2",
+    "timestamp_epoch": 1792076224.9873626,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9675516049901489,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 14441,
+    "input_sha256": [
+      "5b7b3d0d8d35e72f33e730ccd7b41b9a6feda9f5ca0296e45c13ce401f07c2dc"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "94dc59a238e4418d90c6263e0576cf2a",
+    "timestamp_epoch": 1792076224.987491,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 1,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.9685980070207734,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "53baa46993454ea24591ab08f0bbc30c6d3bc846db5c81eb17b91cf30bedd4d3",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "f7a91fbfccfb47cc837d7683a7430784",
+    "timestamp_epoch": 1792076225.2528205,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.262330481025856,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 3529,
+    "input_sha256": [
+      "0cdf85e83887cf80cf383d0808d3a03024ab20ce985b869ac10428becbcba9f3",
+      "de33cc051b1fd747d682b0f0ee64d533d7b1e27c9df88069b4364bdd502554dc"
+    ],
+    "prompt_tokens": 977,
+    "total_tokens": 977,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "6673d648a0654790afbba135b5ebe9a3",
+    "timestamp_epoch": 1792076225.2529461,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.26261205298942514,
+    "input_keys": [
+      "9a756f1863bcf45dd6787f1008cef51f9c4a37cfa2c27031ceccbffc7028e9b3",
+      "624340a63b7866febdae09b6a5dfe2ad1b9d76d5c311e845a8c655afee038ffa",
+      "16aa71dd6768afe8606866a1dd4d765b60606e9762315b1f464700c1c22214a2",
+      "3db9155529813c47457941c0b3a9675116be0f7cf245188621419570d5ccf2a7",
+      "9abb65ad91b3abaee259c6e75dbc8c854d45d01be89bcbfe37bef8635cc956fd",
+      "b0ead066671263d474d32a19d2268c0f6ae99fbe86b353f8c11f3ccfd9ed1155",
+      "de80478a7204632f623097b80f6d0abc40cb4076afce13d3d05bbc82db13a0ed",
+      "94b70ab75d8f46b60808fbbd51822d8a909e263166b23f26e61477e2bd8e8ab1",
+      "bcbee332f39229b703d1440045eb9e741295393a7a18706e9f9c78ccdae99a86",
+      "1b55febdb9fd02c04387b81cf823d57e0f9df973c1335221e752f91d4ddabdeb",
+      "93deee367be126fb7f0ec8ed685e9313f9b2cf4809cea186d8dbfc771428bfab",
+      "c2ce6a7af8a9731bc0181f3effc052625469f78f78e845b6698b8f4583569672",
+      "15012222f64f86041d36fc0e3963c50c44a0ef0065f5db873e694917bfc67b2c",
+      "02ed35b503aa986305e6d07b4aaa71d26b414c1ddfe594171baf9046127667c2",
+      "6e45e3108b11a0d345774664db6feb2735bec734764a44f1195a3a0eac4b4102"
+    ]
+  },
+  {
+    "record_id": "26ac61ed730e4495834846538995392a",
+    "timestamp_epoch": 1792076225.2535708,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.711097477003932e-05,
+    "input_keys": [
+      "e70e0d86c3610a23eb0c3886b368b55ef3cdc5494a3e5fa4290fd2a5081214d5"
+    ]
+  },
+  {
+    "record_id": "cb74fffed9bf464aa0cdeee0276d283e",
+    "timestamp_epoch": 1792076225.2540045,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.1796004148200154e-05,
+    "input_keys": [
+      "8ac76485b63108c1cb96252057face905ea765781705e33113c29d9d657ab7f7"
+    ]
+  }
+]

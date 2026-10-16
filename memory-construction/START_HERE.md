@@ -1,9 +1,9 @@
-# 交给执行 Codex 的当前任务
+# 从这里接续
+执行修订：execution-recovery-20261016；协议仍为 focused-maintenance-v4-20261015。
 
-读本目录 WORKPLAN.md v4。立即用现有本地 Qwen 和开发数据，完成 B0/Fresh 与 Ours-dev 的真实小规模对比，输出 first_compare.csv，然后补强 B3 并逐轮优化指标。
+1. 读 [执行更新](EXECUTION_UPDATE.md) 与 [实际队列](execution/queue.json)，短核对活动作业。
+2. 按 [恢复与自主诊断](docs/EXECUTION_RECOVERY.md) 执行 [当前 Prompt](execution/prompts/CONTINUE_RESEARCH.md)。
+3. 目标看 [GOAL](GOAL.md)，科学比较看 [协议](docs/EXPERIMENT_PROTOCOL.md)，实际运行配置看 [contract](execution/experiment_contract.json)。
 
-不要继续扩展 MemForest；不要为了原生 baseline 先下载整套截图、另建服务或补齐全量依赖。外部复现保留为后续工作。首表不等待 tune、完整恢复框架或官方 QA；计时范围及未评质量如实标注。
-
-先核对 GPU 上已有工作，复用已有构建接口，只补一个窄比较入口。报错修复；未改善分析后再改；每轮产生真实数字及差样本。持续执行而不是只给计划或报告。
-
-本项目已不是从零开始，不重新 P0。当前路径、方法、数据、指标和验收均写在 WORKPLAN.md。正在运行的会话先读 EXECUTION_UPDATE.md，并采用 v4 优先级。
+先修评测再补缺，复用已有有效快照。不要重开方法探索，也不要依据旧 complete 标记结束。
+长实验沿用 execution/launch_detached.sh；历史 runs/.../local-text-only 含实际代码，保留路径。

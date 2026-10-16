@@ -1,0 +1,44 @@
+[
+  {
+    "record_id": "6517348c814c48ec8112469c67b0c335",
+    "timestamp_epoch": 1792122149.085587,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 1.9719447029929142,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 3,
+    "input_characters": 23700,
+    "input_sha256": [
+      "c888a6e7ac1b935500ccc003be2252e8ce8c2e04c00d190ff1b23e79b19e0d04",
+      "608e5c2c746de9226d3a5f9a534bf975ab49a43f674bccfe409760b5b88db784",
+      "d0dfdd2dbafef8e1dc1b123325a71541474f90a57cdaa40b059713e101196975"
+    ],
+    "prompt_tokens": 7503,
+    "total_tokens": 7503,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "4071cd5818664f9a833d884752bc1efb",
+    "timestamp_epoch": 1792122149.085731,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 3,
+    "cache_hits": 5,
+    "elapsed_seconds": 1.9724780580145307,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "50f88a9affc52dbca444eb5417857edf349420f1bc49ba1b9cf0d353165f6da1",
+      "1b635376e5a78e5a1d12a389e66cc214cf44cd0368f06d1b368de5053cb25a9f",
+      "adba7807d35c38828a034f807bf6a335d398bf7aa440861e4c9a35e0bff54c49",
+      "90c856f46852ed9e6ce9fc36aef33e1958e133a5450247c623ec764d46b6913e",
+      "f667050e42ad84b464ac7d2ceca4ffdb13d2f09fa498117a3f0b6afb4722930b"
+    ]
+  }
+]

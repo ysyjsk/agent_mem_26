@@ -1,0 +1,26 @@
+{
+  "trajectory_id": "12c22166",
+  "selection_reason": "Paired workflow-intent revision on the same preselected trajectory and state; no state/action changes.",
+  "source_edits": [
+    {
+      "state_index": 4,
+      "field": "thoughts",
+      "old": "The Quantity is already set to 6 (option a197 selected) and the subtotal reflects 6 items. To place the order I should click the \"Order Now\" button which is visible and clickable (bid a232).",
+      "new": "The Quantity is already set to 6 (option a197 selected) and the subtotal reflects 6 items. To place the order I should click the \"Order Now\" button which is visible and clickable (bid a232). Workflow clarification: verify the required field before proceeding to the next form field."
+    }
+  ],
+  "derived_rules": [
+    {
+      "target": "notes",
+      "required": [
+        "required",
+        "before|prior"
+      ],
+      "forbidden": []
+    }
+  ],
+  "manual_checks": [
+    "Generated notes must preserve the added verification and its ordering. This is recorded intent, not evidence the action was executed.",
+    "Original source state and actions remain unchanged."
+  ]
+}

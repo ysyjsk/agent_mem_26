@@ -1,0 +1,35 @@
+{
+  "update_id": "focused-maintenance-v4-20261015",
+  "update_revision": "execution-ready-r1",
+  "deployed_at": "20261015T131302Z",
+  "backup": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports/goal-history/pre-execution-ready-r1-20261015T131302Z",
+  "verified_sha256": {
+    "project/GOAL.md": "a03becbf66e21495b006557b643de5e2bfa3ec920b217000e96b961aca4fd2c2",
+    "project/WORKPLAN.md": "70df272a475894a4c3b31f9280840bf9dc6fe01995a60ff9315f65aae8dde68b",
+    "project/docs/EXPERIMENT_PROTOCOL.md": "61dd349c87e89f44594b01fea69c519f16f9cebfd24efc027a928cc2da95262f",
+    "project/AGENTS.md": "57b9c7a037536bf1e3764c9c741196334e1170b7a9fab60d1ae9a77eb5fb0063",
+    "project/execution/prompts/CONTINUE_RESEARCH.md": "4c65d26fd92011906a87b26b880f7723f5d3490364a6807a5b1e3350ee9ea6ae",
+    "project/START_HERE.md": "f20043c065c0d240219c4a0b5839de8911b3af6be54632b359f35e6c1057887e",
+    "project/README.md": "df2e2f0ef96b258ea70bdaf6fa39c9f96323f8f0a372b0464226cee2bfcee1f6",
+    "project/paper/README.md": "2ca8e043db689c17d22651520b40dda6341181a38c9b35215aa9a8b41bb6d988",
+    "project/STATUS.md": "1952bae8b26de413ae3b3073406fc0a22c3b239e8c51aa5497da2bb9f34176d7",
+    "project/execution/skill/memory-research-loop/SKILL.md": "9c0ba1b9220438dce26df7732df97605b24086e9c183667eea4b47c76ad2d678",
+    "project/execution/skill/memory-research-loop/references/project-context.md": "1e353dbf2db8c757f1e927781bbaf40996e379c1e669367b28bfe0a42e564933",
+    "project/execution/queue.json": "2eaa07b104fe6a0a88787e0b346a6a95e868769b9669a0c4d2cbc8814d995208",
+    "installed-skill/SKILL.md": "9c0ba1b9220438dce26df7732df97605b24086e9c183667eea4b47c76ad2d678",
+    "installed-skill/references/project-context.md": "1e353dbf2db8c757f1e927781bbaf40996e379c1e669367b28bfe0a42e564933",
+    "project/EXECUTION_UPDATE.md": "13ad42235a2e185d967ed69ba5d813bdbc0cc9bebe54e6522464b5ce0a0151fa"
+  },
+  "validation": {
+    "task_dag": "pass",
+    "workplan_task_alignment": "pass",
+    "goal_alignment": "pass",
+    "relative_links_checked": 10,
+    "python_ast": "pass",
+    "protected_code_and_results_unchanged": 12
+  },
+  "executor_ack": "pending",
+  "native_goal": "not_queried_in_executor",
+  "source_only_tests": "not_run_not_implemented_by_this_deployment",
+  "formal_manifests": "not_frozen_by_this_deployment"
+}

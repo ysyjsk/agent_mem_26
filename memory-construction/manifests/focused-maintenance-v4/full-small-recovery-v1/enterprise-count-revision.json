@@ -1,0 +1,39 @@
+{
+  "trajectory_id": "0ab99e0c",
+  "selection_reason": "Existing complete enterprise list trajectory with a repeated page-count fact. Replace every exact occurrence at one state; neither selection method nor task goal changes. This exercises a derived numeric fact and joint-group interior.",
+  "source_edits": [
+    {
+      "state_index": 5,
+      "field": "text",
+      "old": "101",
+      "new": "103",
+      "count": 5
+    }
+  ],
+  "derived_rules": [
+    {
+      "target": "event_0004_0005",
+      "required": [
+        "103",
+        "not interactive|not clickable|failed"
+      ],
+      "forbidden": [
+        "101 unfiltered records"
+      ]
+    },
+    {
+      "target": "event_0005_0006",
+      "required": [
+        "103",
+        "Normal",
+        "None"
+      ],
+      "forbidden": []
+    }
+  ],
+  "manual_checks": [
+    "At corrected state5 the page count is 103; the untouched neighboring states can still legitimately show 101.",
+    "Failed click, empty selection and following select_option success must remain distinguished.",
+    "Existing notes are about the filtering workflow, not the page count; preserve their relevant steps."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "selected_structural_checks_passed",
+  "scope": "Offline structural checks only; not semantic quality, fair-comparison or complete-research certification.",
+  "issue_counts": {},
+  "issues": [],
+  "observations": [
+    {
+      "manifest": "manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json",
+      "scope": "complete official Small history IDs, text-only/adapted fixed local maintenance; not native multimodal or all official QA",
+      "note": "Checks declared IDs; inspect loaded snapshots/haystacks as well."
+    }
+  ],
+  "artifact_sha256": {
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json": "67f7b8c9a7e93a0b1db3ccaa32fad8cfa0f3ad0c0546332444b430bb76765eab",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/third_party/LongMemEval-V2/data/longmemeval-v2/haystacks/lme_v2_small.json": "9b5301defb23a088a5f06e45ff8d5f35e569d78305a66d492046a9fff9b46593",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/third_party/LongMemEval-V2/data/longmemeval-v2/questions.jsonl": "0a3ae5ebea938c24d7800e1e0b0828e08ae1646f939a53853b2b8cdc08e292b7"
+  },
+  "next_action": "Diagnose issues; preserve valid stages; repair and rerun affected units only. Continue other authorized work."
+}

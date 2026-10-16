@@ -1,0 +1,53 @@
+{
+  "trajectory_id": "12c22166",
+  "selection_reason": "Predeclared before confirmation inference: unused complete six-state catalog-order trajectory, distinct from developed enterprise filter cases. Quantity and subtotal are revised consistently at one state; action goal and final order remain original. Not chosen by method scores.",
+  "source_edits": [
+    {
+      "state_index": 4,
+      "field": "text",
+      "old": "[a191] combobox 'Quantity' value='6'",
+      "new": "[a191] combobox 'Quantity' value='4'"
+    },
+    {
+      "state_index": 4,
+      "field": "text",
+      "old": "[a195] option '4', selected=False",
+      "new": "[a195] option '4', selected=True"
+    },
+    {
+      "state_index": 4,
+      "field": "text",
+      "old": "[a197] option '6', selected=True",
+      "new": "[a197] option '6', selected=False"
+    },
+    {
+      "state_index": 4,
+      "field": "text",
+      "old": "StaticText '$2,099.94'",
+      "new": "StaticText '$1,399.96'"
+    }
+  ],
+  "derived_rules": [
+    {
+      "target": "event_0003_0004",
+      "required": [
+        "value='4'|quantity.{0,20}4",
+        "1,399.96"
+      ],
+      "forbidden": []
+    },
+    {
+      "target": "event_0004_0005",
+      "required": [
+        "value='4'|quantity.{0,20}4",
+        "Apple Watch"
+      ],
+      "forbidden": []
+    }
+  ],
+  "manual_checks": [
+    "Observed state4 Quantity is4, selected option4 and subtotal1399.96; attempted selection6 is not the observation.",
+    "Final state5 order quantity6 remains unchanged and must not be overwritten from the revised pre-state.",
+    "Original generic order procedure notes and untouched product facts remain available."
+  ]
+}

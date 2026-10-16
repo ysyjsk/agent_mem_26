@@ -12,7 +12,7 @@ SOURCE = Path(__file__).resolve().parents[1] / 'runs/agentrunbook-r-native-small
 def owner_fixture():
     tree = ast.parse(SOURCE.read_text())
     cls = next(n for n in tree.body if isinstance(n, ast.ClassDef) and n.name == 'AgentRunbookR')
-    names = {'_build_event_group_messages', '_extract_event_group_async'}
+    names = {'_build_event_generation_messages', '_build_event_group_messages', '_extract_event_group_async'}
     defs = [n for n in cls.body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef)) and n.name in names]
     prompt = next(n.value.value for n in tree.body if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'EVENT_GENERATION_SYSTEM_PROMPT' for t in n.targets))
     def require(ok, message):
@@ -24,6 +24,7 @@ def owner_fixture():
            '_parse_single_event_response': lambda text: {k: v for k, v in json.loads(text).items() if k in ('overview', 'state_transition') and v}}
     exec(compile(ast.Module(body=defs, type_ignores=[]), str(SOURCE), 'exec'), env)
     class Owner:
+        _build_event_generation_messages = env['_build_event_generation_messages']
         _build_event_group_messages = env['_build_event_group_messages']
         _extract_event_group_async = env['_extract_event_group_async']
         tokens = 100
@@ -38,14 +39,18 @@ def owner_fixture():
         async def _extract_single_event_fields_async(self, **kwargs):
             self.singles.append(kwargs['spec']['event_id'])
             return {'overview': 'o', 'state_transition': 's'}
-    specs = [dict(event_id=e, trajectory_id='t', pre_state_index=i, post_state_index=i+1,
+    specs = [dict(event_id=e, trajectory_id='t', goal='task', outcome='done',
+                  pre_state_index=i, post_state_index=i+1, pre_url='url', post_url='url',
+                  pre_thoughts='thought', post_thoughts='thought', pre_screenshot='x', post_screenshot='x',
                   local_action=f'action{i}', pre_incoming_action='initial', transition_number=i+1, transition_count=2)
              for i, e in enumerate(['a', 'b'])]
-    trajectory = {'goal': 'task', 'start_url': 'url', 'states': [{'state_index': i, 'text': f'UNIQUE_STATE_{i}'} for i in range(3)]}
+    trajectory = {'id': 't', 'goal': 'task', 'outcome': 'done', 'start_url': 'url',
+                  'states': [{'state_index': i, 'text': f'UNIQUE_STATE_{i}'} for i in range(3)]}
     return Owner(), {'trajectory_dir': Path('.'), 'simplified_trajectory': trajectory, 'specs': specs}
 
 
 def test_joint_request_shares_middle_state_and_preserves_schema(monkeypatch):
+    monkeypatch.setenv('LME_TEXT_ONLY', '1')
     monkeypatch.setenv('LME_EVENT_OUTPUT_TOKENS', '2048')
     owner, args = owner_fixture()
     messages = owner._build_event_group_messages(**args)
@@ -57,7 +62,8 @@ def test_joint_request_shares_middle_state_and_preserves_schema(monkeypatch):
     assert owner.logs[0]['status'] == 'parsed'
 
 
-def test_context_split_and_bad_ids_only_fall_back_affected_group():
+def test_context_split_and_bad_ids_only_fall_back_affected_group(monkeypatch):
+    monkeypatch.setenv('LME_TEXT_ONLY', '1')
     owner, args = owner_fixture()
     owner.tokens = 32769
     assert len(asyncio.run(owner._extract_event_group_async(**args))) == 2
@@ -69,7 +75,8 @@ def test_context_split_and_bad_ids_only_fall_back_affected_group():
     assert owner.logs[-1]['reason'] == 'group_parse_failure'
 
 
-def test_arrived_singleton_does_not_wait_for_future_event():
+def test_arrived_singleton_does_not_wait_for_future_event(monkeypatch):
+    monkeypatch.setenv('LME_TEXT_ONLY', '1')
     owner, args = owner_fixture()
     args['specs'] = args['specs'][:1]
     assert len(asyncio.run(owner._extract_event_group_async(**args))) == 1

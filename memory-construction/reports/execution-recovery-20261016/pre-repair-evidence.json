@@ -1,0 +1,614 @@
+{
+  "status": "needs_attention",
+  "scope": "Offline structural checks only; not semantic quality, fair-comparison or complete-research certification.",
+  "issue_counts": {
+    "history_scope_mismatch": 2,
+    "text_only_violation": 16,
+    "reader_history_mismatch": 16,
+    "snapshot_history_mismatch": 16,
+    "unreadable_evidence": 16,
+    "cost_components_missing": 2,
+    "required_method_missing": 4
+  },
+  "issues": [
+    {
+      "code": "history_scope_mismatch",
+      "path": "results/tables/focused-maintenance-v4-manifest.json",
+      "detail": {
+        "domain": "web",
+        "actual": 10,
+        "required": 100,
+        "missing": 90,
+        "extra": 0
+      }
+    },
+    {
+      "code": "history_scope_mismatch",
+      "path": "results/tables/focused-maintenance-v4-manifest.json",
+      "detail": {
+        "domain": "enterprise",
+        "actual": 10,
+        "required": 100,
+        "missing": 90,
+        "extra": 0
+      }
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/revision_reader",
+      "detail": {
+        "requests_with_images": 1,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/revision_reader",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/revision_reader",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/revision_reader/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/revision_reader/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-b3",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-b3",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-b3/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-b3/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-b3",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-b3",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-b3/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-b3/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced/effective_runtime.json'"
+    },
+    {
+      "code": "text_only_violation",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_only",
+      "detail": {
+        "requests_with_images": 2,
+        "requests": 2
+      }
+    },
+    {
+      "code": "reader_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_only",
+      "detail": "Actual question haystack differs from full official domain history."
+    },
+    {
+      "code": "snapshot_history_mismatch",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/memory_state",
+      "detail": "Loaded memory does not cover the full domain history."
+    },
+    {
+      "code": "unreadable_evidence",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_only/effective_runtime.json",
+      "detail": "[Errno 2] No such file or directory: '/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_only/effective_runtime.json'"
+    },
+    {
+      "code": "cost_components_missing",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/public_main.csv",
+      "detail": [
+        "query_controller_input_tokens",
+        "query_controller_output_tokens"
+      ]
+    },
+    {
+      "code": "required_method_missing",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/public_main.csv",
+      "detail": {
+        "domain": "web",
+        "method": "Raw RAG"
+      }
+    },
+    {
+      "code": "required_method_missing",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/public_main.csv",
+      "detail": {
+        "domain": "web",
+        "method": "RAG+Notes"
+      }
+    },
+    {
+      "code": "required_method_missing",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/public_main.csv",
+      "detail": {
+        "domain": "enterprise",
+        "method": "Raw RAG"
+      }
+    },
+    {
+      "code": "required_method_missing",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/public_main.csv",
+      "detail": {
+        "domain": "enterprise",
+        "method": "RAG+Notes"
+      }
+    },
+    {
+      "code": "cost_components_missing",
+      "path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/formal_ablation_extended.csv",
+      "detail": [
+        "query_controller_input_tokens",
+        "query_controller_output_tokens"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "manifest": "results/tables/focused-maintenance-v4-manifest.json",
+      "scope": "complete adapted Small history libraries with fixed local maintenance load; not native multimodal or official Judge",
+      "note": "Checks declared IDs; inspect loaded snapshots/haystacks as well."
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/revision_reader",
+      "requests": 2,
+      "image_requests": 1
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/revision_reader",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-b3",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-b3",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "reader": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_only",
+      "requests": 2,
+      "image_requests": 2
+    },
+    {
+      "table": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/public_main.csv",
+      "rows": 6,
+      "role": "public_main"
+    },
+    {
+      "table": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/formal_ablation_extended.csv",
+      "rows": 4,
+      "role": "cost"
+    },
+    {
+      "queue": "execution/queue.json",
+      "remaining_required_tasks": [
+        "REPAIR_EVAL",
+        "PUBLIC_BASELINES",
+        "SELECT",
+        "CONFIRM",
+        "SMALL_MAIN",
+        "WRITE",
+        "PACKAGE"
+      ],
+      "note": "Task labels alone never prove completion."
+    }
+  ],
+  "artifact_sha256": {
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4-manifest.json": "6907c259a4f0061b3e72f6561827b4aa06a3697c33fb8996def03b7ac6565b88",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/third_party/LongMemEval-V2/data/longmemeval-v2/haystacks/lme_v2_small.json": "9b5301defb23a088a5f06e45ff8d5f35e569d78305a66d492046a9fff9b46593",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/third_party/LongMemEval-V2/data/longmemeval-v2/questions.jsonl": "0a3ae5ebea938c24d7800e1e0b0828e08ae1646f939a53853b2b8cdc08e292b7",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/revision_reader/prompt_rows.jsonl": "2187f5af27b14758665a39d1e70a69f3d88405580be05a758c9acf74dd54a76e",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/revision_reader/run_args.json": "45746225e30a7ec5b7ae74f435fb904fd0ab474ca6cbd7bd61c7edabc8f0fbc1",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-delta_guarded/memory_state/index.json": "25478af4edfa8e8b48f8277f382ab5f85fda49fa31289781cfe49dd8c7704249",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/revision_reader/prompt_rows.jsonl": "ee80d2547e88d8b97c43ed6192c572872bfd5cf207749ccf91643747bff2bfa7",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/revision_reader/run_args.json": "f19c79f452f6d0b5bf8783807600efadd4e7aa2f825034c8ee7a18be8f03663a",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-ablation-update/literal_revision-source_overlay/memory_state/index.json": "25478af4edfa8e8b48f8277f382ab5f85fda49fa31289781cfe49dd8c7704249",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/revision_reader/prompt_rows.jsonl": "bc0096466f2a72ea86550b1d7958bf48fbc3260916bbe0f0d43ca9b3aec021f6",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/revision_reader/run_args.json": "2e1a92aa057576e3730d7d2c378593ee5e3107438b496e5ed63ccb1efca88317",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-b3/memory_state/index.json": "25478af4edfa8e8b48f8277f382ab5f85fda49fa31289781cfe49dd8c7704249",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/revision_reader/prompt_rows.jsonl": "937aea3f3054fd14664092a991f1564103d61e8b00c36b43818a02b95af3601b",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/revision_reader/run_args.json": "e9acec9161698f69e146a96b3cd037bbca7b752ea8a9d446f95943bf6a30da6a",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_coalesced/memory_state/index.json": "25478af4edfa8e8b48f8277f382ab5f85fda49fa31289781cfe49dd8c7704249",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/revision_reader/prompt_rows.jsonl": "3e0af9fa6914c2ff52c8fd37cb2e07973427f573b2469d22f6f6ec942adda274",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/revision_reader/run_args.json": "8c79fbba33d99abaa5ec27394c6fd29f051a93702fbf07c32fa71cc8793de3ee",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/enterprise-update/literal_revision-source_only/memory_state/index.json": "25478af4edfa8e8b48f8277f382ab5f85fda49fa31289781cfe49dd8c7704249",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/revision_reader/prompt_rows.jsonl": "26290abc092d0db14f77b95482d20d5ff2d712fd30c07c212c4f2a061e913ea8",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/revision_reader/run_args.json": "87d869bdff64b7bba159a75b54f71024d157fe28df13c326bddb62391219c9b7",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-delta_guarded/memory_state/index.json": "02506ebaf2688b0fc55ccf3793bc5060776c3228e581c6f1ce190a2e7c3a2623",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/revision_reader/prompt_rows.jsonl": "8ae53b6f59a9e319c6b722e44ff53756a76e337543b2055f7c233acf5984c086",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/revision_reader/run_args.json": "5840f2ae0fb8e3f65a55826b95b0aefa3b1b6b26fe0820f1cbadcfcc3fe12505",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-ablation-update/literal_revision-source_overlay/memory_state/index.json": "02506ebaf2688b0fc55ccf3793bc5060776c3228e581c6f1ce190a2e7c3a2623",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/revision_reader/prompt_rows.jsonl": "e8bb7f738dea4570dfb7a8299296a8815baa3ff2225a124998c71aeefbd175af",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/revision_reader/run_args.json": "9167b642c9dd2ef46e62cb9bb91b50a46aaaed556d2580f0e132c570889c5b75",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-b3/memory_state/index.json": "02506ebaf2688b0fc55ccf3793bc5060776c3228e581c6f1ce190a2e7c3a2623",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/revision_reader/prompt_rows.jsonl": "13e374d042b7fdda0f836e8bd9e6bcc7aacffe89740dc84f7e51301834c57c94",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/revision_reader/run_args.json": "0d4a572961e91e69ba7996e99134eff3accdbf99dc53065460e9a756c8850593",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_coalesced/memory_state/index.json": "02506ebaf2688b0fc55ccf3793bc5060776c3228e581c6f1ce190a2e7c3a2623",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/revision_reader/prompt_rows.jsonl": "3d096f3c93630757ed53f62c7ad5b4f20e0b0dbf9c7d800e64d4e6a0660e72b4",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/revision_reader/run_args.json": "96d1f5d8de49858a5672fb50732928e0a76b0ea85a4c344e1ad040922f26bf94",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/formal/web-update/literal_revision-source_only/memory_state/index.json": "02506ebaf2688b0fc55ccf3793bc5060776c3228e581c6f1ce190a2e7c3a2623",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-b3/prompt_rows.jsonl": "f819b54fb9e8db8ab12bfa62c9653f9cd5bb00ff3612fbdc728fd64fc9d0f80b",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-b3/run_args.json": "82f15192653cb329a993091a7c060a98ec1a5f9823e16090acc15e4384702191",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced/prompt_rows.jsonl": "3fd05c25aae30153c612f9b63ba069533be13d5c6ea83548da0abc2f4e35b7f8",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced/run_args.json": "865c658a78f72e9d96af3d25bbc3bc0145d8f4bfc3b9b5f281846f9e9b80ee2b",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only/prompt_rows.jsonl": "0703974891f0b25a20abb92c841ac0e4842d39d231285ab8b7134dfdef13ae40",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only/run_args.json": "4d7fbe913dca02ccc878a73fb8e02408b301045d452d467d77bc5e9e84020c68",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-b3/prompt_rows.jsonl": "bdebab8566b21987bce4bfcf63816f5082010c5752e2ea3f072fc7a9182fff58",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-b3/run_args.json": "f0f0323f1bade228a812c063e4dc256a032b48cdf238ea3811cb2c9b250e3ab2",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced/prompt_rows.jsonl": "47ce116b106587e3ce1bd2b4d88e96b4fe6bb5bd630fc2353b59f8da6fb2dd3d",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced/run_args.json": "a57d57f15d6051f0354e44f57a8835f115b3801b52deeb77652c1f9eff766989",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_only/prompt_rows.jsonl": "0a2547270b0dad57f16415304849d4f2a6943cba066a02984bace84232c29380",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/repeat-20261016/web-source_only/run_args.json": "1ab5ae5d212d48a7e28e14a35d8cb86c56fa9cc7d49b6ceb02c372cb1dcbfc1a",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/public_main.csv": "5850b4678127574da5223e97bb5cad9f82c468feddd4efdf7482def547d3ca8e",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/results/tables/focused-maintenance-v4/formal_ablation_extended.csv": "3dd39e15733b5d6c8317996f5170dd1db42f1826690e52a613477ee52bf8d042",
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/execution/queue.json": "e806fb4210273cf707896da13bc2b0171f2ee3158dd6756e2459441221dee341"
+  },
+  "next_action": "Diagnose issues; preserve valid stages; repair and rerun affected units only. Continue other authorized work."
+}

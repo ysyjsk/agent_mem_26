@@ -1,0 +1,177 @@
+{
+  "schema_version": 2,
+  "update_id": "focused-maintenance-v4-20261015",
+  "goal": "以现有 v13 Coalescing 为核心完成固定范围的 Agent Memory Maintenance 正式验证与论文证据。先按阶段复用已有合法结果，只补必要的 Notes 规则修正、Source-only 一致性及 Raw RAG/RAG+Notes 更新接口和维护数据。必要正确性、公平性与真实更新查询检查通过后冻结实现、模型、Reader、评分和数据清单，直接完成完整 Small 历史库上的固定维护实验、核心消融、连续成本、质量分项、必要重复及正文/复现交付。可选工程优化默认跳过，本轮全程最多两个主要候选，必须在正式冻结前小范围配对验证且不延误主线；不以优于 Source-only 或所有 baseline 作为启动或完成条件。依据完整可追溯结果判断成本—质量价值：有支持则写相应论文主张，无独特优势则完整保存负结果、原因与贡献不足的结论，完成本轮既定实验并结束，不无限寻找 trick。",
+  "current_phase": "formal_ablation_complete_paper_sync_complete",
+  "native_goal": {
+    "status": "complete",
+    "note": "当前会话先查询到 null，随后创建与冻结正式交付一致的原生 Goal 并在全部产物完成后标记 complete。",
+    "previous_record": {
+      "status": "null_on_latest_query",
+      "verified": "2026-10-15",
+      "previous": "blocked/unfinished",
+      "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
+    }
+  },
+  "executor_ack": {
+    "status": "pending",
+    "path": "execution/ack-focused-maintenance-v4.json",
+    "expected_update_revision": "execution-ready-r2-freeze"
+  },
+  "best_available": "v13 source_coalesced core before added full-source-line-absence note reuse; final selection pending Source-only and matched public comparison",
+  "next_candidate": "Only missing Source-only/Raw RAG/RAG+Notes maintenance units; no full development rerun",
+  "primary_metric": "update LLM input+output and update+query total LLM tokens; wall, embedding, initial cost, quality and failures separately",
+  "tasks": [
+    {
+      "id": "EVIDENCE",
+      "status": "done",
+      "evidence": [
+        "results/tables/method_v13_sequence.csv",
+        "results/tables/method_v13_repeats.csv",
+        "results/tables/method_v13_confirmation.csv"
+      ],
+      "scope": "existing versioned evidence only; not final public/source-only comparison"
+    },
+    {
+      "id": "ALIGN",
+      "status": "done",
+      "depends_on": [
+        "EVIDENCE"
+      ],
+      "action": "短检查作业/新产物；按阶段更新复用清单并先输出已有/缺失/新增计算。核对共同 Notes 行为和必要测试，只有必要新增确认才选数据。",
+      "acceptance": "真实接收/理解确认；复用证据与缺口及每个重跑原因明确；共同配置/Notes 规则成立，下一缺失单元可运行，不等待全历史审计。",
+      "outputs": [
+        "execution/reuse_inventory.csv"
+      ]
+    },
+    {
+      "id": "SOURCE_ONLY",
+      "status": "done",
+      "depends_on": [
+        "ALIGN"
+      ],
+      "action": "实现最小分支和四项准入，只补缺失六轮/查询；优先引用匹配 B3/Ours，第一项真实检查可计入。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/dev/source_only_compare.csv"
+      ],
+      "acceptance": "四项一致性通过且新 Raw State 正常可查；两域三轮 B3/Source-only/Ours 匹配实测或合法复用；连续快照、成本、答案、失败和来源可追溯。"
+    },
+    {
+      "id": "PUBLIC_BASELINES",
+      "status": "deferred",
+      "depends_on": [
+        "SOURCE_ONLY"
+      ],
+      "action": "只补 Raw RAG/Notes 缺失维护/查询各六轮，引用合法 B3/Ours 组装四行开发表；初始构建/正常 QA 不重做。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/dev/public_main.csv"
+      ],
+      "acceptance": "四行维护表同负载可比，原始路径/版本与复用依据明确；每个新增或重跑有具体缺口原因，不要求四方法新跑。"
+    },
+    {
+      "id": "SELECT",
+      "status": "done",
+      "depends_on": [
+        "SOURCE_ONLY",
+        "PUBLIC_BASELINES"
+      ],
+      "action": "必要实现修复后冻结 v13 与实际配置/Manifest。可选主要候选最多两个、允许零个、不延误主线，不能为追求胜出延长开发。",
+      "acceptance": "必要正确性/公平性检查通过、实际冻结记录完整即可；不要求优于 Source-only 或任何对照。"
+    },
+    {
+      "id": "CONFIRM",
+      "status": "done",
+      "depends_on": [
+        "SELECT"
+      ],
+      "action": "复用合法确认并补必要覆盖，以冻结版本评价；分数/成本不领先如实记录。只有明确实现 bug 修复，不自动回 SELECT 做方法搜索。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/confirmation.csv"
+      ],
+      "acceptance": "配置与数据/暴露记录完整，真实链路和一致性/公平性有效；结果可追溯，无需收益阈值，随后进入 Small。"
+    },
+    {
+      "id": "SMALL_MAIN",
+      "status": "done",
+      "depends_on": [
+        "CONFIRM"
+      ],
+      "action": "必要一致性/公平性和冻结检查通过后直接运行完整 Small 固定维护负载。保留三类初始记忆复用，独立维护分支；不按结果选样本或调方法，不要求 Ours 先胜出。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/public_main.csv",
+        "results/tables/focused-maintenance-v4/source_only_compare.csv",
+        "results/tables/focused-maintenance-v4/ablation.csv",
+        "results/figures/focused-maintenance-v4/"
+      ],
+      "acceptance": "完整历史库、固定负载和实际版本有清单；主表及匹配 Source-only/Overlay、分版本 Delta Edit、连续图、必要确认/代表重复、质量/失败与复现齐全；合法复用计入完成。"
+    },
+    {
+      "id": "WRITE",
+      "status": "done",
+      "depends_on": [],
+      "action": "立即写 paper/manuscript.md 的问题、方法和设置；随新结果更新正文，依据 paper/README.md 整理证据。",
+      "outputs": [
+        "paper/manuscript.md",
+        "paper/reproduction.md"
+      ],
+      "acceptance": "形成连贯稿件与实际复现入口；历史版本不能合并冒充最终实现。"
+    },
+    {
+      "id": "PACKAGE",
+      "status": "done",
+      "depends_on": [
+        "SMALL_MAIN",
+        "WRITE"
+      ],
+      "action": "核对最终主表、机制表、图、确认、正文和复现；更新实际完成状态。",
+      "acceptance": "GOAL.md 既定正式主表、核心消融、连续图、质量/失败、确认/重复、正文及复现完成；结论可为优势成立或独特贡献不足，不预设胜出。"
+    }
+  ],
+  "active_plan_task_ids": [],
+  "backlog": [
+    {
+      "id": "NEW_FRAMEWORKS",
+      "status": "deferred",
+      "action": "Codex、AgentRunbook-C、MemForest、LightMem 及其他新适配暂停。"
+    },
+    {
+      "id": "NEW_CONSTRUCTION_DIRECTIONS",
+      "status": "deferred",
+      "action": "冷构建/自然增长新方法、新数据集、Medium 暂停。完整 Small 历史维护实验已列 SMALL_MAIN，非首轮前置且非 deferred。"
+    },
+    {
+      "id": "NATIVE_JUDGE",
+      "status": "deferred",
+      "action": "官方 Judge 不可用时保留待评答案，继续可评分质量与本地成本实验。"
+    }
+  ],
+  "update_revision": "execution-ready-r2-freeze",
+  "reuse_inventory": "execution/reuse_inventory.csv",
+  "optimization_guide": "docs/REUSE_AND_OPTIMIZATION.md",
+  "optimization_budget": {
+    "max_major_candidates": 2,
+    "default_action": "skip_optional_optimization",
+    "counting": "whole remaining development phase; switching bottlenecks does not reset",
+    "formal_evaluation": "no performance tuning; necessary bug fixes only"
+  },
+  "research_completion": "Core formal artifacts, frozen mechanism ablations, correctness regression, tables, reports and paper synchronization are complete with explicit negative quality boundaries",
+  "experiment_queue": {
+    "queue_id": "focused-maintenance-v4-formal-main-20261016",
+    "status": "completed",
+    "execution_mode": "detached-sequential-single-gpu",
+    "runner": "execution/run_formal_ablation_queue.sh",
+    "single_gpu_rule": true,
+    "tasks": [
+      {"id": "CORE_MAIN", "status": "complete_reused", "evidence": ["results/tables/focused-maintenance-v4/public_main.csv", "results/tables/focused-maintenance-v4/source_only_compare.csv", "results/tables/focused-maintenance-v4/formal_reader_answers.csv"], "scope": "B3, Source-only and source_coalesced on the frozen 10-trajectory/domain maintenance workload"},
+      {"id": "CORE_READER_REPEAT", "status": "complete_reused", "evidence": ["results/tables/focused-maintenance-v4/formal_reader_repeat_20261016.csv"], "scope": "one detached repeat with complete parseable answers; retained as variability evidence"},
+      {"id": "COLD_COMPONENT_ABLATIONS", "status": "complete_reused", "evidence": ["results/tables/paper02_cold_construction.csv", "results/tables/paper04_ablation_scale.csv"], "scope": "joint extraction and exact embedding reuse; negative wall-time result retained"},
+      {"id": "PUBLIC_EXTERNAL_REFERENCE", "status": "complete_reused_with_boundary", "evidence": ["results/tables/paper03_local_adapted_main.csv", "reports/paper03_local_adapted_main.md"], "scope": "Raw RAG/RAG+Notes cold/development reference only; no unsupported maintenance adapter is claimed"},
+      {"id": "FORMAL_OVERLAY_ABLATION", "status": "complete", "depends_on": ["CORE_MAIN"], "action": "Run source_overlay on the same frozen web and enterprise snapshots/revisions with identical current-state evidence, caches and budgets", "output": "runs/focused-maintenance-v4/formal/{web,enterprise}-ablation-update/literal_revision-source_overlay"},
+      {"id": "FORMAL_DELTA_GUARDED_ABLATION", "status": "complete", "depends_on": ["CORE_MAIN"], "action": "Run delta_guarded on the same paired snapshots; record fallback/model work rather than treating a failure as zero cost", "output": "runs/focused-maintenance-v4/formal/{web,enterprise}-ablation-update/literal_revision-delta_guarded"},
+      {"id": "FORMAL_ABLATION_READERS", "status": "complete", "depends_on": ["FORMAL_OVERLAY_ABLATION", "FORMAL_DELTA_GUARDED_ABLATION"], "action": "Run fixed 2048-token Reader and two fixed questions per domain for both ablations; no retuning", "output": "runs/focused-maintenance-v4/formal/*-ablation-update/literal_revision-*/revision_reader"},
+      {"id": "FORMAL_ABLATION_REPORT", "status": "complete", "depends_on": ["FORMAL_ABLATION_READERS"], "action": "Aggregate update/query/embedding/quality/failure metrics into the extended ablation table and report", "output": "results/tables/focused-maintenance-v4/formal_ablation_extended.csv"},
+      {"id": "PAPER_SYNC", "status": "complete", "depends_on": ["FORMAL_ABLATION_REPORT"], "action": "Synchronize manuscript/reproduction with the completed or failed ablation rows; preserve negative and pending quality claims", "output": ["paper/manuscript.md", "paper/reproduction.md"]}
+    ],
+    "boundary": "No new external framework, native multimodal route or adaptive parameter search is queued. Existing public Raw RAG/RAG+Notes measurements remain a clearly labeled external development reference."
+  }
+}

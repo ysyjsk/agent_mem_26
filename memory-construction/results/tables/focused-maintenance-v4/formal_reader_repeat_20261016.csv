@@ -1,0 +1,7 @@
+repeat_id,domain,policy,correct,scored,complete_parseable,truncated,service_failure,parse_failure,reader_input_tokens,reader_output_tokens,reader_total_tokens,prompt_build_s,reader_generation_s,raw_path
+formal-reader-repeat-20261016,enterprise,b3,1,2,2,0,0,0,20700,472,21172,42.176754526997684,21.342196509998757,runs/focused-maintenance-v4/repeat-20261016/enterprise-b3
+formal-reader-repeat-20261016,enterprise,source_coalesced,0,2,2,0,0,0,21299,963,22262,36.07578891798039,35.59296780900331,runs/focused-maintenance-v4/repeat-20261016/enterprise-source_coalesced
+formal-reader-repeat-20261016,enterprise,source_only,0,2,2,0,0,0,16274,1676,17950,28.259444325987715,53.02120501300669,runs/focused-maintenance-v4/repeat-20261016/enterprise-source_only
+formal-reader-repeat-20261016,web,b3,1,2,2,0,0,0,20790,953,21743,10.559473999979673,35.14599403401371,runs/focused-maintenance-v4/repeat-20261016/web-b3
+formal-reader-repeat-20261016,web,source_coalesced,1,2,2,0,0,0,20706,1581,22287,12.246260548999999,52.8662307819759,runs/focused-maintenance-v4/repeat-20261016/web-source_coalesced
+formal-reader-repeat-20261016,web,source_only,0,2,2,0,0,0,19922,1075,20997,15.127735529007623,38.19180212900392,runs/focused-maintenance-v4/repeat-20261016/web-source_only

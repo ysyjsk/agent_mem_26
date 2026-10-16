@@ -1,0 +1,17 @@
+{
+  "status": "selected_structural_checks_passed",
+  "scope": "Offline structural checks only; not semantic quality, fair-comparison or complete-research certification.",
+  "issue_counts": {},
+  "issues": [],
+  "observations": [
+    {
+      "table": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports/execution-recovery-20261016/public-v1/public_main.csv",
+      "rows": 12,
+      "role": "public_main"
+    }
+  ],
+  "artifact_sha256": {
+    "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports/execution-recovery-20261016/public-v1/public_main.csv": "9e53e1eabb594b2cf1592343e22546ec7cdb20e3bd575fb5ec09f3c9b5c17010"
+  },
+  "next_action": "Diagnose issues; preserve valid stages; repair and rerun affected units only. Continue other authorized work."
+}

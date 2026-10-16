@@ -1,0 +1,220 @@
+[
+  {
+    "record_id": "0acd0ca1d3014b27aa2b294803a38e15",
+    "timestamp_epoch": 1792088253.2623687,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "absent_literal_source_merge_v11",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0004_0005"
+    ],
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -41,5 +41,5 @@\n \t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n \t\t\t\t[a35] region '', live='polite', relevant='additions text'\n-\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\n+\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n \t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n \t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n@@ -658,14 +658,14 @@\n \t\t\t\t\t\t\t[a883] row '', visible\n \t\t\t\t\t\t\t\t[a884] gridcell '', visible\n-\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\n+\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\n \t\t\t\t\t\t\t\t\t[a887] button 'First page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a890] button 'Previous page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a893] textbox 'Skip to row' value='1', clickable, visible, describedby='08b0fcd093f0f250f629fd085d03d6d2_description_of_skip_to'\n \t\t\t\t\t\t\t\t\t\tStaticText '1'\n-\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 101'\n+\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 103'\n \t\t\t\t\t\t\t\t\tStaticText 'to'\n \t\t\t\t\t\t\t\t\tStaticText '20'\n \t\t\t\t\t\t\t\t\tStaticText 'of'\n-\t\t\t\t\t\t\t\t\tStaticText '101'\n+\t\t\t\t\t\t\t\t\tStaticText '103'\n \t\t\t\t\t\t\t\t\t[a898] button 'Next page', visible\n \t\t\t\t\t\t\t\t\t[a900] button 'Last page', visible",
+        "append_only": false,
+        "role": "post-state"
+      }
+    ],
+    "before": [
+      {
+        "overview": "The agent is building a filter for the Change Request list to find entries with specific criteria, starting with the 'Type' field. This step involves attempting to select the 'Normal' option from the 'Type' dropdown to establish the first condition in the filter chain.",
+        "state_transition": "After clicking the 'Normal' option within the 'Type' combobox, the visible UI remains largely unchanged. The combobox labeled 'Choose option for field: Type' still displays '-- None --' as its value, and the option list appears to remain expanded or the selection did not register visually. The list of change requests below continues to show unfiltered records, indicating that the filter condition has not yet been successfully applied or confirmed in the interface."
+      }
+    ],
+    "after": [
+      {
+        "overview": "The agent is building a filter for the Change Request list to find entries with specific criteria, starting with the 'Type' field. This step involves attempting to select the 'Normal' option from the 'Type' dropdown to establish the first condition in the filter chain.",
+        "state_transition": "After clicking the 'Normal' option within the 'Type' combobox, the visible UI remains largely unchanged. The combobox labeled 'Choose option for field: Type' still displays '-- None --' as its value, and the option list appears to remain expanded or the selection did not register visually. The list of change requests below continues to show unfiltered records, indicating that the filter condition has not yet been successfully applied or confirmed in the interface.\nCurrent post-state observation (state 5, corrected source): StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\nStaticText 'Showing rows 1 to 20 of 103'\nStaticText '103'"
+      }
+    ],
+    "absent_old_literals": [
+      "101"
+    ],
+    "scope": "literal numeric/value changes only; paraphrase validity requires review"
+  },
+  {
+    "record_id": "39eba79dca284798801f1c5c302adb08",
+    "timestamp_epoch": 1792088253.2624671,
+    "channel": "event_delta",
+    "status": "merged",
+    "mode": "absent_literal_source_merge_v11",
+    "trajectory_id": "0ab99e0c",
+    "event_ids": [
+      "event_0005_0006"
+    ],
+    "source_delta": [
+      {
+        "state_index": 5,
+        "field": "text",
+        "diff": "--- \n+++ \n@@ -41,5 +41,5 @@\n \t\t\tRootWebArea 'Change Requests | ServiceNow', focused\n \t\t\t\t[a35] region '', live='polite', relevant='additions text'\n-\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 101 records'\n+\t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n \t\t\t\t[a36] region '', live='assertive', relevant='additions text'\n \t\t\t\t[a42] region 'Change Requests, filtering toolbar', visible\n@@ -658,14 +658,14 @@\n \t\t\t\t\t\t\t[a883] row '', visible\n \t\t\t\t\t\t\t\t[a884] gridcell '', visible\n-\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 101 to 20 of 101 Next page Last page', visible\n+\t\t\t\t\t\t\t\t[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\n \t\t\t\t\t\t\t\t\t[a887] button 'First page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a890] button 'Previous page', visible, disabled=True\n \t\t\t\t\t\t\t\t\t[a893] textbox 'Skip to row' value='1', clickable, visible, describedby='08b0fcd093f0f250f629fd085d03d6d2_description_of_skip_to'\n \t\t\t\t\t\t\t\t\t\tStaticText '1'\n-\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 101'\n+\t\t\t\t\t\t\t\t\tStaticText 'Showing rows 1 to 20 of 103'\n \t\t\t\t\t\t\t\t\tStaticText 'to'\n \t\t\t\t\t\t\t\t\tStaticText '20'\n \t\t\t\t\t\t\t\t\tStaticText 'of'\n-\t\t\t\t\t\t\t\t\tStaticText '101'\n+\t\t\t\t\t\t\t\t\tStaticText '103'\n \t\t\t\t\t\t\t\t\t[a898] button 'Next page', visible\n \t\t\t\t\t\t\t\t\t[a900] button 'Last page', visible",
+        "append_only": false,
+        "role": "pre-state"
+      }
+    ],
+    "before": [
+      {
+        "overview": "Continuing the filter construction process, the agent successfully sets the 'Type' condition to 'Normal' after the previous click attempt failed. This confirms the first part of the complex filter requiring entries where Type is Normal, Requested by is System Administrator, Model is empty, Short description matches a specific text, and State is Scheduled.",
+        "state_transition": "Following the successful selection of the 'normal' option via the select_option action, the combobox labeled 'Choose option for field: Type' updates its displayed value from '-- None --' to 'Normal'. This change indicates that the first filter condition has been properly configured. The surrounding interface, including the unfiltered list of change requests, remains visible, awaiting the addition of subsequent AND conditions."
+      }
+    ],
+    "after": [
+      {
+        "overview": "Continuing the filter construction process, the agent successfully sets the 'Type' condition to 'Normal' after the previous click attempt failed. This confirms the first part of the complex filter requiring entries where Type is Normal, Requested by is System Administrator, Model is empty, Short description matches a specific text, and State is Scheduled.",
+        "state_transition": "Following the successful selection of the 'normal' option via the select_option action, the combobox labeled 'Choose option for field: Type' updates its displayed value from '-- None --' to 'Normal'. This change indicates that the first filter condition has been properly configured. The surrounding interface, including the unfiltered list of change requests, remains visible, awaiting the addition of subsequent AND conditions.\nCurrent pre-state observation (state 5, corrected source): StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'\n[a885] gridcell 'First page Previous page 1 Showing rows 1 to 20 of 103 to 20 of 103 Next page Last page', visible\nStaticText 'Showing rows 1 to 20 of 103'\nStaticText '103'"
+      }
+    ],
+    "absent_old_literals": [
+      "101"
+    ],
+    "scope": "literal numeric/value changes only; paraphrase validity requires review"
+  },
+  {
+    "record_id": "1478ac92c0654b299e8a9e6049414693",
+    "timestamp_epoch": 1792088253.262513,
+    "channel": "update_event_dependency",
+    "status": "validated",
+    "events": 15,
+    "reused": 13
+  },
+  {
+    "record_id": "62174e06cc474a78a8da239d4af67850",
+    "timestamp_epoch": 1792088253.2690365,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "8e919c593b992e7c28ffa3d747883491be5ecc9322f339521e882c5afc12a36c",
+    "stage": "notes"
+  },
+  {
+    "record_id": "7204d4633495436a8376044ffe52565a",
+    "timestamp_epoch": 1792088253.2691662,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9aadac85cbf37993254f01eae3b0840eeddd017f34d3370d42df335073915be1",
+    "stage": "notes"
+  },
+  {
+    "record_id": "6e5fa923a5624ecbad49c5590c701ca4",
+    "timestamp_epoch": 1792088254.3905723,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.9794070939824451,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 1,
+    "input_characters": 14441,
+    "input_sha256": [
+      "e4010a9c03fa37ffc23c420fcbb30a55e25f0b34ddd04d09d6ed03cc449b298d"
+    ],
+    "prompt_tokens": 4096,
+    "total_tokens": 4096,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "3fab666c8ced4e798a4f6c37438aebdf",
+    "timestamp_epoch": 1792088254.3907394,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 16,
+    "actual_vectors": 1,
+    "cache_hits": 15,
+    "elapsed_seconds": 0.9804369379999116,
+    "input_keys": [
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "452198da76af34cb04898d2bba2595286be59ae45cddffda29ac81a6e09f6b18",
+      "9d3d2556969d10d7f2f88b3946da041d77f422cbdb62f023efa100a9266017e3",
+      "8eb6bc28301db3128327093500bdee82529d20a09d3d5fc47d068482c1555882",
+      "110546ca8a8a0756bb9b412791d2082dbfaf676339e24946e31ce28387287c99",
+      "4f344a81faa9124b7c0f4df87205836c512f78be5245664d019a3a2bd6d8c054",
+      "31d082b5ddf61c96563ec937c74a3376c55ee393824a6bb0b406b9f0350f4927",
+      "3784f5d03d80ce076f2024e7e9ab4918c8f99b05d5229c70322bc4b0dfe93b9b",
+      "22a1e8dbba4f672877abf9dcf9d00508cfe30dac1a5215aeab37f8baac754949",
+      "e03738fd219ef1583e5a4cdceaa0edc8253ac09373e7a565bfe85eac87ec974b",
+      "ab58143067954191a94f31a2d4b4763bf4ba8acf1d9d7028d26779879fd4f1d7",
+      "ab4734fc15eeffeaafdce0a4ffe623de36a5995c8d8ada16577b55023a3c14f1",
+      "c624c7a9f1b422ab766b52853bb90326946705b7e82e4c364fcfb1f209b0cb13",
+      "f9c5e426e4d3ef96cb20e84cc7c7e891ce0791d40b808dd711bec6485daf25d9",
+      "56530cf5632867c61591917d38527b6dc64751dc86bc826ec4a2b471d4ef6cb9",
+      "edfe6e404b54552e5eec19e5f8b09305ecf913e02581c7f108cb646c3298c9e3"
+    ]
+  },
+  {
+    "record_id": "539e4dbda3bb42e6a61afba326157118",
+    "timestamp_epoch": 1792088254.6968474,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 0.30277349599055015,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 2,
+    "input_characters": 4392,
+    "input_sha256": [
+      "5a39836c33a5a8e8e87705b7b8bc28b95113a3bc7f414b3469b423be09ba3607",
+      "de683d7dc352271390118d2f495f34b92085e7701bf957e8568e9437247dea56"
+    ],
+    "prompt_tokens": 1261,
+    "total_tokens": 1261,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "3fdc12a1ec12434992dc73b8501cab76",
+    "timestamp_epoch": 1792088254.696963,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 15,
+    "actual_vectors": 2,
+    "cache_hits": 13,
+    "elapsed_seconds": 0.3030433300009463,
+    "input_keys": [
+      "2ed1b91a871ef9e49c3993518e1c81e6813a74412c9d4e4e00cc9024ffeecbb9",
+      "e04c54566a34e1872ffe868e949b16e4f1aed731de424543649d53e0e55c1209",
+      "e6a7b2303d7c5607f2d55ca9a03c7a51915dff23093c81cf4b12e7a4e50ef433",
+      "737ce879fdd05aa47fd8400deddca46924caf4a15546e38886c34dbb2f32beda",
+      "ef51ffa008d2c4ae4b45a153e7d2f6e148f60e8281998611ef7df7d964ea61a3",
+      "5bd0ac47bcbb0230a6cace46e0ef80470efdb23336e7c6a3302a7d84884cb97d",
+      "caebb383246268c088a2a7b378db6a01032df0201b7958d6cd0d43056cdbf815",
+      "35070f0035308db43bb008a0b24d19c5c9defe57ac0cd771651fc550f018f981",
+      "22ebf4a20a2b23b2ff706565ee6f14b773cffc7d73d994e39115d5eb74a81840",
+      "a5afae2f1b594c4a71240caced8e6527533afbd79ae43002cd3e929c237e7efb",
+      "8190c1a8997cf6e3a94993ee0d70c14a5f455f516f7385684de2d025ebbf7b92",
+      "c210af904e7a59571aaeccf456982405dfabf2ccb9ffa025ade3510526b9876b",
+      "857c5ea4331903ba8931e09e831cedb0102ad41995c886a176a1c5dc08f10a96",
+      "adbf3c6b9d2b63573c24aad3ef5fcd7ac4bbcb7cc47555e7c605ac4537635e6f",
+      "26543ea4a8910fc4757873b30630209ae0b2df48766fcb37ad5820c78370804e"
+    ]
+  },
+  {
+    "record_id": "d955d43bc76e47b68b397f6a29c1adeb",
+    "timestamp_epoch": 1792088254.697467,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 2.1104002371430397e-05,
+    "input_keys": [
+      "fa19f7cdeff56273c67797e2a0dd641482f4c24ac549a1dcc945376e57ffd04e"
+    ]
+  },
+  {
+    "record_id": "7de4f75d34574bfdb67f4a9b8a52fba8",
+    "timestamp_epoch": 1792088254.6977417,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.4134013326838613e-05,
+    "input_keys": [
+      "07643cd1be73520935745a722401fff77d452a9134913ba105ca3cd0f62e96f4"
+    ]
+  }
+]

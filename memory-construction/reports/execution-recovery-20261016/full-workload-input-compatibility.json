@@ -1,0 +1,18 @@
+{
+  "checked_date": "2026-10-16",
+  "scope": "Eight frozen revision cases materialized against all three inherited original architecture libraries; no model calls",
+  "architectures": ["agentrunbook", "raw_rag", "rag_notes"],
+  "comparison": "Whole revised trajectory object with screenshot/image path fields excluded; goal, outcome, all states, thoughts, actions and text retained",
+  "all_three_architectures_match": true,
+  "revised_text_object_sha256": {
+    "web-title": "4a9ab4e5c1ea9a073f3bb857cda73f4b79004fa9e4a4b58f29cb713d9bc97fc1",
+    "web-title-workflow": "752ea5879dfcea08331080c79bbefcd8173a32370234977c3f8fb45aeca1c7ed",
+    "web-date": "71b0808ef97af9865f3476f00f658671e43d560f300744af2e46f575859798ee",
+    "web-date-workflow": "279c7644a74d3c0dbf4392b50216a847bf0c0a8b444bb0f7da95afb2a7122877",
+    "enterprise-count": "db49fdf25a6667e5935faf94ed32b5f47d015c9888d61644957c90d9966ff309",
+    "enterprise-count-workflow": "5413723b47e880ae3141f8ca875539343a72150c779e419413566a9f9f0ebcae",
+    "enterprise-quantity": "665d15475e494d4edcdf6b84f18dee03b095453305d4cd6e361342b0322c34fe",
+    "enterprise-quantity-workflow": "b006402e987ff6ee461af4bab0cb543405d1839a6da4d63ef3488544c20aa737"
+  },
+  "boundary": "Validates equal intended inputs for existing target partitions, not completion or quality of future full-history updates. Official200 original trajectory hashes were separately checked at queue registration; runtime freeze must check actual full histories."
+}

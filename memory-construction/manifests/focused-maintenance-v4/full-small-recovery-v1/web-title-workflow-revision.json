@@ -1,0 +1,26 @@
+{
+  "trajectory_id": "1ad1af4b",
+  "selection_reason": "Paired workflow-intent revision on the same preselected trajectory and state; no state/action changes.",
+  "source_edits": [
+    {
+      "state_index": 4,
+      "field": "thoughts",
+      "old": "Name and Title are already set to \"Cyberpunk\". The next required field is Description; I will fill it with \"Welcome to the future\" as requested.",
+      "new": "Name and Title are already set to \"Cyberpunk\". The next required field is Description; I will fill it with \"Welcome to the future\" as requested. Workflow clarification: verify the required field before proceeding to the next form field."
+    }
+  ],
+  "derived_rules": [
+    {
+      "target": "notes",
+      "required": [
+        "required",
+        "before|prior"
+      ],
+      "forbidden": []
+    }
+  ],
+  "manual_checks": [
+    "Generated notes must preserve the added verification and its ordering. This is recorded intent, not evidence the action was executed.",
+    "Original source state and actions remain unchanged."
+  ]
+}

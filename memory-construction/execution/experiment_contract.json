@@ -1,0 +1,50 @@
+{
+  "protocol": "focused-maintenance-v4-20261015",
+  "execution_revision": "execution-recovery-20261016",
+  "purpose": "Machine-readable runtime expectations and scope checks; not a new algorithm or proof that a run used these settings.",
+  "domains": ["web", "enterprise"],
+  "official_haystack": "third_party/LongMemEval-V2/data/longmemeval-v2/haystacks/lme_v2_small.json",
+  "official_questions": "third_party/LongMemEval-V2/data/longmemeval-v2/questions.jsonl",
+  "reader": {
+    "model": "Qwen/Qwen3.5-9B",
+    "reader_enable_thinking": false,
+    "max_completion_tokens": 2048,
+    "memory_context_max_tokens": 12000,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20
+  },
+  "common_environment": {
+    "LME_TEXT_ONLY": "1",
+    "LME_CHUNK_MEMORY_CONTEXT": "1",
+    "LME_CACHE_CONTEXT_TOKENIZER": "1",
+    "LME_LEXICAL_BACKFILL": "1",
+    "LME_REUSE_QUERY_EMBEDDING": "1"
+  },
+  "query_runtime": {
+    "controller_disable_thinking": true,
+    "query_generation_disable_thinking": true,
+    "controller_max_retries": 0
+  },
+  "cost_components": [
+    "update_llm_input_tokens", "update_llm_output_tokens",
+    "query_controller_input_tokens", "query_controller_output_tokens",
+    "query_reader_input_tokens", "query_reader_output_tokens"
+  ],
+  "required_main_methods": {
+    "Raw RAG": ["rag_query_to_slice", "raw_rag"],
+    "RAG+Notes": ["rag_query_to_slice_notes", "rag_notes"],
+    "AgentRunbook-R/B3": ["b3", "agentrunbook_r"],
+    "Ours": ["source_coalesced", "ours"]
+  },
+  "required_tasks": ["EVIDENCE", "ALIGN", "SOURCE_ONLY", "REPAIR_EVAL", "PUBLIC_BASELINES", "SELECT", "CONFIRM", "SMALL_MAIN", "WRITE", "PACKAGE"],
+  "audit_inputs": {
+    "manifest": "results/tables/focused-maintenance-v4-manifest.json",
+    "main_table": "results/tables/focused-maintenance-v4/public_main.csv",
+    "cost_tables": ["results/tables/focused-maintenance-v4/formal_ablation_extended.csv"],
+    "reader_globs": [
+      "runs/focused-maintenance-v4/formal/*-update/literal_revision-*/revision_reader",
+      "runs/focused-maintenance-v4/repeat-20261016/*"
+    ]
+  }
+}

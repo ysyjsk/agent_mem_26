@@ -1,0 +1,452 @@
+[
+  {
+    "unit": "web-r1-raw_rag",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "4a9ab4e5c1ea9a073f3bb857cda73f4b79004fa9e4a4b58f29cb713d9bc97fc1",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "0196f78ebdb112f5ca03d01d7631b1cb7fff223d940b8e6013dd776c12b531c6"
+  },
+  {
+    "unit": "web-r1-rag_notes",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "4a9ab4e5c1ea9a073f3bb857cda73f4b79004fa9e4a4b58f29cb713d9bc97fc1",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "4b869a45154a066060576bd9a3a4ff23f402608b6815c45e8a5edc4715fa0f32"
+  },
+  {
+    "unit": "web-r1-b3",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "4a9ab4e5c1ea9a073f3bb857cda73f4b79004fa9e4a4b58f29cb713d9bc97fc1",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "6008076b55f91f9861ad8c3777929f0e7da7032140b75e9de62e3b28c6c7b010"
+  },
+  {
+    "unit": "web-r1-source_only",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "4a9ab4e5c1ea9a073f3bb857cda73f4b79004fa9e4a4b58f29cb713d9bc97fc1",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "6865f5a61c3832544637c30119220e97277e1725020002d866c31d9b890b328b"
+  },
+  {
+    "unit": "web-r1-source_coalesced",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "4a9ab4e5c1ea9a073f3bb857cda73f4b79004fa9e4a4b58f29cb713d9bc97fc1",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "8fbd914fdf1c62a71163f3c80184fc9d10733b5979839f0976486ea6c23ee0f3"
+  },
+  {
+    "unit": "web-r2-raw_rag",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "b8fbbf645d87621f18b4e612fc24ff9102c53c77dc407efbd9a54c12db648851",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "92cf6bc89a9be68d162897431894a16696f1ea3dbfdaf279f719dbf5e10d6e26"
+  },
+  {
+    "unit": "web-r2-rag_notes",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "b8fbbf645d87621f18b4e612fc24ff9102c53c77dc407efbd9a54c12db648851",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "6208b521541f1c3b038fcf1148bc90c691d753173ec12e71bd8d98fdc4f83f4f"
+  },
+  {
+    "unit": "web-r2-b3",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "b8fbbf645d87621f18b4e612fc24ff9102c53c77dc407efbd9a54c12db648851",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "a4f43b64fda23eb9174637d3adec3deb3f4f9b55321eeece688347d550a9cc29"
+  },
+  {
+    "unit": "web-r2-source_only",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "b8fbbf645d87621f18b4e612fc24ff9102c53c77dc407efbd9a54c12db648851",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "8da5cc2e41c9008fa2ceb72b2c34d17ece58abba992dd1b8b90abdb731e66fb1"
+  },
+  {
+    "unit": "web-r2-source_coalesced",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "b8fbbf645d87621f18b4e612fc24ff9102c53c77dc407efbd9a54c12db648851",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "2899d6c211ed75037df437b077d832b36f656d62fd70b7944770034109d35525"
+  },
+  {
+    "unit": "web-r3-raw_rag",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "7e2823c0175385b337cc9536322f5c64d5c33e4ffe317adf82e0c28951cfc63c",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "9995643862ecea2c12832ea6cba6955c006ba5e90f154f8e51c8502e021e4121"
+  },
+  {
+    "unit": "web-r3-rag_notes",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "7e2823c0175385b337cc9536322f5c64d5c33e4ffe317adf82e0c28951cfc63c",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "e0f3d27a29412d3c6c63f6f353122725319a8c20e14a73e055496fc1f85ccdbb"
+  },
+  {
+    "unit": "web-r3-b3",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "7e2823c0175385b337cc9536322f5c64d5c33e4ffe317adf82e0c28951cfc63c",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "d721b57f09f8e9ada22049d60c0d800a904fd521030ef977197cbc8dc880a314"
+  },
+  {
+    "unit": "web-r3-source_only",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "7e2823c0175385b337cc9536322f5c64d5c33e4ffe317adf82e0c28951cfc63c",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "14335ffaa4041d90b8f3920f979537fcbf4e5cee3e57aba380e31adc7dd608dd"
+  },
+  {
+    "unit": "web-r3-source_coalesced",
+    "history_ids": [
+      "1ad1af4b",
+      "4ba5e9cb",
+      "2e8f6477",
+      "2a99f536",
+      "3331c568"
+    ],
+    "updated_text_sha256": "7e2823c0175385b337cc9536322f5c64d5c33e4ffe317adf82e0c28951cfc63c",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "6f5ec36e617ef2267fcc5cf88f3490323b0063088052c59bc5c5ac36781003fe"
+  },
+  {
+    "unit": "enterprise-r1-raw_rag",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "db49fdf25a6667e5935faf94ed32b5f47d015c9888d61644957c90d9966ff309",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "ea64fc585ef49f191372132001c33269ca62b00b7d1493276611d37b9632cfb6"
+  },
+  {
+    "unit": "enterprise-r1-rag_notes",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "db49fdf25a6667e5935faf94ed32b5f47d015c9888d61644957c90d9966ff309",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "4037bd0d7cb7b5d7af9f9c89514b23de29974911a082c25b25506aa7ac638108"
+  },
+  {
+    "unit": "enterprise-r1-b3",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "db49fdf25a6667e5935faf94ed32b5f47d015c9888d61644957c90d9966ff309",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "7babbe067261f0404351e544b2fb9317f228a04d18d81d7c46c6088fb6523ba2"
+  },
+  {
+    "unit": "enterprise-r1-source_only",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "db49fdf25a6667e5935faf94ed32b5f47d015c9888d61644957c90d9966ff309",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "a1db928aac743d94f6da24900e818272d6c1b271e3c1a5c83af1c7bad03679f2"
+  },
+  {
+    "unit": "enterprise-r1-source_coalesced",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "db49fdf25a6667e5935faf94ed32b5f47d015c9888d61644957c90d9966ff309",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "97c07cd09452c7ba6bd32bdd24a87f9f4fa6f8f4019e304c2c625d4067712cca"
+  },
+  {
+    "unit": "enterprise-r2-raw_rag",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "ed986e10ebaf8e9a70ea26e07e5c7f931b5e91d93da92a8e400ac3053218fa4a",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "d64716ea5b9841578cdbecef13774b73e1e0cdeec98687277923c3ab2b8e4b6d"
+  },
+  {
+    "unit": "enterprise-r2-rag_notes",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "ed986e10ebaf8e9a70ea26e07e5c7f931b5e91d93da92a8e400ac3053218fa4a",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "e6246d6625237e58b46e20716435ffb31a2ed48e326699a40a92ed5da9315f82"
+  },
+  {
+    "unit": "enterprise-r2-b3",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "ed986e10ebaf8e9a70ea26e07e5c7f931b5e91d93da92a8e400ac3053218fa4a",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "23cb66f2f7d736df949cf74fb9ada68d85ecef16c981247221ea9007dbd8d9bc"
+  },
+  {
+    "unit": "enterprise-r2-source_only",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "ed986e10ebaf8e9a70ea26e07e5c7f931b5e91d93da92a8e400ac3053218fa4a",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "ea2e5896dc7307998b974cae8020745933c56f6cd1bd660a6aac283246f7ba16"
+  },
+  {
+    "unit": "enterprise-r2-source_coalesced",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "ed986e10ebaf8e9a70ea26e07e5c7f931b5e91d93da92a8e400ac3053218fa4a",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "99f6b674d608cb9f21d49e71091480e8cf5f5064b315520954c521c1edc7e11a"
+  },
+  {
+    "unit": "enterprise-r3-raw_rag",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "20af827453d2eafe6a97861922349eeb4f43e379571253b8bdd3305d19cf8ec2",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "b67b927b55ec917d0f300d07309d416ebc2569d280c4d15f6032d47eddcdb311"
+  },
+  {
+    "unit": "enterprise-r3-rag_notes",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "20af827453d2eafe6a97861922349eeb4f43e379571253b8bdd3305d19cf8ec2",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "b3e7a6f880ec61e2c5a9ab436bcd260ffa5457cf7a71d539d00cc5c01295e00f"
+  },
+  {
+    "unit": "enterprise-r3-b3",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "20af827453d2eafe6a97861922349eeb4f43e379571253b8bdd3305d19cf8ec2",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "a2d0a0291314562b3dc5fc3083c55399dcdc58d0f16dd8afb272cd34e11300b7"
+  },
+  {
+    "unit": "enterprise-r3-source_only",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "20af827453d2eafe6a97861922349eeb4f43e379571253b8bdd3305d19cf8ec2",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "12c72531b9ca20462b8f0f45a71dc6188306234ac1bad46443dbc4c8469e6a48"
+  },
+  {
+    "unit": "enterprise-r3-source_coalesced",
+    "history_ids": [
+      "0ab99e0c",
+      "12c22166",
+      "276f9dff",
+      "49f98e9e",
+      "0c80a9e1"
+    ],
+    "updated_text_sha256": "20af827453d2eafe6a97861922349eeb4f43e379571253b8bdd3305d19cf8ec2",
+    "actual_reader_image_count": 0,
+    "reader_settings_checked": true,
+    "actual_query_controller_thinking_disabled": true,
+    "prompt_sha256": "9cce6b946d6c3b98311eb424b1e896871c8e697807c7532ddf0051f38717d70e"
+  }
+]

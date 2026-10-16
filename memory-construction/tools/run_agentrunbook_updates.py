@@ -323,32 +323,48 @@ class UpdateRunbook(AgentRunbookR):
                     'source_state_indexes': [d['state_index'] for d in thought_changes],
                     'mode': 'additive_workflow_only; reuse_generated_source_observation'})
                 return procedure, hint
-        if self.update_policy == 'source_coalesced':
-            old = self._load_stored_trajectory(simplified_trajectory['id'])
-            changes = source_delta(old, simplified_trajectory)
-            # Text-only state corrections do not change the reusable procedure
-            # unless the exact source line was already copied into a note. The
-            # notes are action/workflow summaries, not a second current-state
-            # event store. Reuse is deliberately conservative: if an entire
-            # obsolete/current source line occurs in either note, fall back to
-            # the ordinary note request rather than infer semantic irrelevance.
-            if changes and all(d['field'] == 'text' for d in changes):
-                existing = [e for e in self.procedure_note_entries + self.hint_note_entries
-                            if e.get('trajectory_id') == simplified_trajectory['id']]
-                note_blob = '\n'.join(e.get('note_text', '') for e in existing)
-                revisions = explicit_source_revisions({'changes_for_this_event': changes})
-                source_lines = [line.strip() for revision in revisions
-                                for line in revision['obsolete_source_lines'] + revision['current_source_lines']
-                                if line.strip()]
-                if existing and not any(line in note_blob for line in source_lines):
-                    procedure = copy.deepcopy(next(e for e in existing if e['note_type'] == 'procedure'))
-                    hint = copy.deepcopy(next(e for e in existing if e['note_type'] == 'hint'))
-                    self._append_model_call_metric({'channel': 'note_delta', 'status': 'reused',
-                        'trajectory_id': simplified_trajectory['id'], 'modified_notes': 0,
-                        'unchanged_notes': 2, 'source_state_indexes': sorted({d['state_index'] for d in changes}),
-                        'mode': 'text_only_exact_source_line_absence'})
-                    return procedure, hint
         return super()._build_note_entries(trajectory_dir=trajectory_dir, simplified_trajectory=simplified_trajectory)
+
+    def _build_event_entries(self, *, trajectory_dir, simplified_trajectory):
+        """Source-only maintenance keeps raw evidence and retires stale Events.
+
+        The old Event text remains persisted for auditability, but invalidated
+        entries are excluded by the shared retrieval path.  No model event
+        extraction is performed for this policy.
+        """
+        if self.update_policy != 'source_only':
+            return super()._build_event_entries(trajectory_dir=trajectory_dir,
+                                                 simplified_trajectory=simplified_trajectory)
+        old = self._load_stored_trajectory(simplified_trajectory['id'])
+        changes = source_delta(old, simplified_trajectory) or []
+        changed_states = {d['state_index'] for d in changes}
+        changed_events = set()
+        for spec in self._build_event_transition_specs(simplified_trajectory):
+            if spec['pre_state_index'] in changed_states or spec['post_state_index'] in changed_states:
+                changed_events.add(spec['event_id'])
+        previous = {e['event_id']: e for e in self.event_entries
+                    if e.get('trajectory_id') == simplified_trajectory['id']}
+        entries = []
+        for spec in self._build_event_transition_specs(simplified_trajectory):
+            entry = copy.deepcopy(previous.get(spec['event_id']))
+            if entry is None:
+                raise ValueError(f'source_only requires persisted event {spec["event_id"]}')
+            if spec['event_id'] in changed_events:
+                entry['validity_status'] = 'invalidated_source_change'
+                entry['invalidated_source_state_indexes'] = sorted(
+                    set(entry.get('invalidated_source_state_indexes', [])) | changed_states)
+                entry['invalidated_by_policy'] = 'source_only'
+            elif entry.get('validity_status') != 'invalidated_source_change':
+                # A different-state correction does not rebuild old retired
+                # events. Only actual reconstruction can make them current.
+                entry['validity_status'] = 'current'
+                entry.pop('invalidated_source_state_indexes', None)
+                entry.pop('invalidated_by_policy', None)
+            entries.append(entry)
+        self._append_model_call_metric({'channel': 'source_only_invalidation', 'status': 'success',
+            'trajectory_id': simplified_trajectory['id'], 'invalidated_event_ids': sorted(changed_events),
+            'changed_source_state_indexes': sorted(changed_states), 'event_model_calls': 0})
+        return entries
 
     async def _edit_event_group(self, trajectory, specs):
         previous = self._load_stored_trajectory(trajectory['id'])
@@ -654,6 +670,24 @@ class UpdateRunbook(AgentRunbookR):
 
 def seed_caches(memory):
     memory.exact_requests = {}
+    # Legacy persisted snapshots can be loaded by an older memory class that
+    # predates exact-input construction embedding reuse.  Initialize the
+    # runtime-only memo before hydrating persisted vectors; this preserves the
+    # original vectors and cache keys without re-keying old model outputs.
+    if not hasattr(memory, '_construction_embedding_memo'):
+        memory._construction_embedding_memo = {}
+    embedding_key = getattr(memory, '_construction_embedding_key', None)
+    if embedding_key is None:
+        # Older loaded classes predate the helper method itself.  Reproduce
+        # the current actual-input key format locally so persisted vectors can
+        # be reused without semantic or cross-model collisions.
+        def embedding_key(text):
+            config = (getattr(memory, 'embedding_model', None),
+                      getattr(memory, 'embedding_base_url', None),
+                      getattr(memory, 'embedding_max_input_tokens', None),
+                      os.getenv('LME_EMBEDDING_TOKENIZER_MODEL'),
+                      'default-dimensions/float/normalized-v1', text)
+            return hashlib.sha256(json.dumps(config, ensure_ascii=False).encode('utf-8')).hexdigest()
     for record in jsonl(memory.workspace_dir / 'model_calls.jsonl'):
         if record.get('query_invocation_id') or record.get('channel') != 'controller' or record.get('status') != 'success': continue
         if not record.get('messages') or record.get('finish_reason') != 'stop': continue
@@ -680,7 +714,7 @@ def seed_caches(memory):
                                   (memory.hint_note_entries, memory.hint_note_embeddings, 'note_text')]:
         for entry, vector in zip(entries, vectors):
             text = memory._truncate_for_embedding(entry[field])
-            memory._construction_embedding_memo[memory._construction_embedding_key(text)] = vector.copy()
+            memory._construction_embedding_memo[embedding_key(text)] = vector.copy()
     memory.update_event_outputs = 0
     memory.update_notes_regenerated = 0
     memory.delta_observations = {}
@@ -913,6 +947,8 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
     source_states = {s['state_index']: s for s in original.get('states', [])}
     changed_state = changed['states'][state_index]
     patches = list(workload.get('patches') or ([workload.get('patch')] if workload.get('patch') else []))
+    if case == 'literal_revision':
+        patches.extend(edit.get('new', '') for edit in workload.get('source_edits', []) if edit.get('new'))
     raw_after = [e for e in updated_memory.raw_state_entries if e.get('trajectory_id') == trajectory_id]
     raw_other_before = [_entry_digest(e) for e in source_memory.raw_state_entries if e.get('trajectory_id') != trajectory_id]
     raw_other_after = [_entry_digest(e) for e in updated_memory.raw_state_entries if e.get('trajectory_id') != trajectory_id]
@@ -952,6 +988,9 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
     # check. Persisted source evidence alone cannot certify generated memory.
     derived_events = {e['event_id']: '\n'.join(e.get(k, '') for k in ('overview', 'state_transition')) for e in target_events}
     derived_notes = '\n'.join(e.get('note_text', '') for e in target_notes)
+    source_only_invalid = {e['event_id'] for e in target_events
+                           if e.get('validity_status') == 'invalidated_source_change'}
+    source_only_expected = dirty_ids if policy == 'source_only' else set()
     if all('Title validation: saved' in patch for patch in patches):
         def has_change(text):
             return bool(re.search(r'title\s+validation\s*:\s*saved', text, re.I))
@@ -969,10 +1008,36 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
             return bool(patches) and all(patch.casefold() in text.casefold() for patch in patches)
     derived_hits = {eid: has_change(derived_events.get(eid, '')) for eid in sorted(dirty_ids)}
     notes_change = has_change(derived_notes) if case == 'workflow_revision' else None
-    checks_pass = bool(derived_hits and all(derived_hits.values()) and notes_change is not False and
-                       untouched_retained and event_coverage and reuse_check)
+    if policy == 'source_only':
+        # Source-only intentionally does not rewrite Event prose. Its gate is
+        # that the new raw observation is published, affected Events are
+        # explicitly retired, and unaffected Events/Notes survive. Retrieval
+        # filtering is checked separately on the reloaded memory.
+        checks_pass = bool(new_fact_present and source_only_invalid == source_only_expected and
+                           untouched_retained and event_coverage)
+    else:
+        checks_pass = bool(derived_hits and all(derived_hits.values()) and notes_change is not False and
+                           untouched_retained and event_coverage and reuse_check)
     literal_rules = []
-    if case == 'literal_revision':
+    if case == 'literal_revision' and policy == 'source_coalesced':
+        # Coalesced Events deliberately retain prior prose for auditability.
+        # Evaluate changed facts only inside the authoritative CURRENT block;
+        # a stale value in the prior interpretation is not a current-fact leak.
+        current_event_text = {}
+        for eid, text in derived_events.items():
+            current_event_text[eid] = text.split(CURRENT_OBSERVATIONS, 1)[1] if CURRENT_OBSERVATIONS in text else ''
+        for rule in workload.get('derived_rules', []):
+            text = current_event_text.get(rule['target'], '') if rule['target'] != 'notes' else derived_notes
+            required = {p: bool(re.search(p, text, re.I | re.S)) for p in rule.get('required', [])}
+            forbidden = {p: bool(re.search(p, text, re.I | re.S)) for p in rule.get('forbidden', [])}
+            literal_rules.append({'target': rule['target'], 'required_hits': required,
+                                  'forbidden_hits': forbidden,
+                                  'pass': all(required.values()) and not any(forbidden.values())})
+        derived_hits = {r['target']: r['pass'] for r in literal_rules if r['target'] != 'notes'}
+        notes_change = next((r['pass'] for r in literal_rules if r['target'] == 'notes'), None)
+        checks_pass = bool(literal_rules and all(r['pass'] for r in literal_rules) and
+                           untouched_retained and event_coverage and reuse_check)
+    elif case == 'literal_revision' and policy != 'source_only':
         for rule in workload.get('derived_rules', []):
             text = (derived_notes if rule['target'] == 'notes' else
                     derived_events.get(rule['target'], ''))
@@ -985,6 +1050,12 @@ def _quality_checks(source_memory, updated_memory, original, changed, workload, 
         notes_change = next((r['pass'] for r in literal_rules if r['target'] == 'notes'), None)
         checks_pass = bool(literal_rules and all(r['pass'] for r in literal_rules) and
                            untouched_retained and event_coverage and reuse_check)
+    elif case == 'literal_revision' and policy == 'source_only':
+        literal_rules = [{'target': 'raw_state', 'required_hits': {'new_fact': new_fact_present},
+                          'forbidden_hits': {'affected_events_current': bool(source_only_invalid & source_only_expected)},
+                          'pass': checks_pass}]
+        derived_hits = {}
+        notes_change = None
     return {
         'new_fact_present': new_fact_present,
         'old_fact_retained': old_fact_retained,
@@ -1074,11 +1145,12 @@ def run_one(args, case, policy):
         'started_epoch': started_epoch, 'completed_epoch': time.time(),
         'artifact_build_s': build_elapsed, 'publication_and_reload_s': publication_elapsed,
         'runner_sha256': RUNNER_SHA256,
-        'delta_version': ('current-source-coalesced-v13' if policy == 'source_coalesced' else 'source-overlay-v12' if policy == 'source_overlay' else 'source-guarded-v11' if policy == 'delta_guarded' else 'source-retract-v10' if policy == 'delta_retract' else
+        'delta_version': ('source-only-invalidate-v4' if policy == 'source_only' else 'current-source-coalesced-v13' if policy == 'source_coalesced' else 'source-overlay-v12' if policy == 'source_overlay' else 'source-guarded-v11' if policy == 'delta_guarded' else 'source-retract-v10' if policy == 'delta_retract' else
                           'source-edit-v8' if policy in ('delta', 'delta_notes') else None),
         'source_append_comparator': policy == 'source_append',
         'current_state_evidence': args.current_state_evidence,
         'source_overlay_comparator': policy == 'source_overlay',
+        'source_only_invalidation': policy == 'source_only',
         'reextracted_event_outputs': memory.update_event_outputs, 'regenerated_notes': memory.update_notes_regenerated,
         'llm_calls': len(c), 'llm_input_tokens_known': sum(r.get('prompt_tokens') or 0 for r in c),
         'llm_output_tokens_known': sum(r.get('completion_tokens') or 0 for r in c),
@@ -1130,7 +1202,7 @@ def main():
     parser.add_argument('--revision-file', type=Path, help='Small literal source-edit manifest and predeclared derived checks')
     parser.add_argument('--revision-count', type=int, default=1, help='For state/workflow revision screen, apply this many adjacent state corrections')
     parser.add_argument('--current-state-evidence', action='store_true', help='Shared current pre/post source annotation for B3 and candidates, before Embedding')
-    parser.add_argument('--policy-order', nargs='+', choices=['fresh', 'b3', 'ours', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced'], default=['b3', 'ours'],
+    parser.add_argument('--policy-order', nargs='+', choices=['fresh', 'b3', 'ours', 'source_only', 'delta', 'delta_notes', 'source_append', 'delta_retract', 'delta_guarded', 'source_overlay', 'source_coalesced'], default=['b3', 'ours'],
                         help='Paired update policies; fresh rebuilds the touched partition without build caches')
     parser.add_argument('--cases', nargs='+', default=['append', 'state_revision', 'workflow_revision'])
     args = parser.parse_args()

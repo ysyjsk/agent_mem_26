@@ -1,14 +1,15 @@
-# 当前执行：focused-method-v3
-2026-10-15；总目标见GOAL.md，完整要求见reports/FOCUSED_METHOD_GOAL_20261015.md。历史及失败保留。
+# 执行顺序
+协议 focused-maintenance-v4-20261015；修订 execution-recovery-20261016。
+任务状态只读取 [execution/queue.json](execution/queue.json)；本文件不保存另一份 done/todo。
 
-| 项目 | 状态 | 当前动作/决策 |
+| 阶段 | 实际动作 | 复用边界 |
 |---|---|---|
-| METHOD01 | 完成复用 | matched两域快照与合法缓存，不重做 |
-| 正常检索验证 | 四例完成 | overlay/edit修改事实8/8；B3七正确一截断；普通回归分别14/16、13/16、14/16；已审查生成events/notes |
-| 当前证据候选 | 真实运行中 | v13三轮连续修订：两个域、B3/overlay/coalesced，各自连续快照，固定查询；session69993 |
-| 新案例与取舍 | 待上述结果 | 预选填写拒绝/选择不匹配案例；判断覆盖或必要编辑，不调Reader |
-| 确认/冻结 | 未满足 | 主表、核心消融、未调参案例、三次成本配对；持续机制补真实累计曲线 |
-| 必要论文实验 | 收益确认后直接执行 | 冻结两域范围、表图、章节、局限、复现 |
+| REPAIR_EVAL | 核验入口修复；离线修成本/事实检查；先 8 个 B3/Ours 回答，再补受影响策略和正常问题 | 复用现有更新快照；不重建记忆 |
+| PUBLIC_BASELINES | 补 Raw RAG、RAG+Notes 更新薄接口及同负载维护查询 | 不重跑已合法的冷构建/正常 QA |
+| SELECT / CONFIRM | 冻结修复后的配置与数据，补必要一致性/确认 | 已观察的两例只是修复诊断，不改称独立确认 |
+| SMALL_MAIN | 实际官方 Small 历史库上的固定修订/问题；四行主表、核心消融和连续成本 | 三类初始记忆一次构建，兼容部分补缺；AR 各策略独立分支 |
+| WRITE / PACKAGE | 纠正草稿结论，完成可追溯表图/复现；逐条核验 GOAL 完成条件 | 历史有效证据分版本引用 |
 
-主指标总LLM tokens；墙钟、Embedding、失败与查询成本并列。现成强B3/AgentRunbook-R作主比较，Raw RAG/Notes历史简单参照。暂停MemForest/LightMem新适配及扩量。GPU串行，活动有限Reader队列继续，不另开监督器。
-原生Goal本次null、此前blocked/unfinished；当前会话继续，文件更新不代表激活。
+开发表、旧正式错误查询与纠正后的结果分开。沿用 runs/focused-maintenance-v4/；本次修复建议 runs/focused-maintenance-v4/repair-20261016/；最终扩量输出单独命名，清单放 manifests/focused-maintenance-v4/。
+旧结果不覆盖。完整历史库与独立修订/问题数分别报告；正常/工作流问题不能被内部状态定位题全部替代。连续曲线按真实修订轮累计。
+长任务沿用 execution/launch_detached.sh 与 background_status.sh；退出码只表示命令执行结果，不表示实验验收。

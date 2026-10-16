@@ -1,0 +1,112 @@
+[
+  {
+    "record_id": "d886f803de6f452192f790616fa0923d",
+    "timestamp_epoch": 1792079347.6065664,
+    "channel": "source_only_invalidation",
+    "status": "success",
+    "trajectory_id": "1ad1af4b",
+    "invalidated_event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "changed_source_state_indexes": [
+      4
+    ],
+    "event_model_calls": 0
+  },
+  {
+    "record_id": "41ff346f2cfd4eaf82be5f595ef790a1",
+    "timestamp_epoch": 1792079347.6072152,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b4efb604b647dcc6248f65491b2b3af575e9f80422686b204c31389c8c479996",
+    "stage": "notes"
+  },
+  {
+    "record_id": "86a981dac0fe4dc58d5c5820213ea4c8",
+    "timestamp_epoch": 1792079349.6208973,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 1.9771078499907162,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 3,
+    "input_characters": 23700,
+    "input_sha256": [
+      "b93827fc3613a38d441021fc52c4bdd2a526a1e15d839745f9d52d15ecd9cfb0",
+      "7060c96be94c367cb8ed2aa69a4fb5d89ac8030ee588fba883c9871b350bee05",
+      "58920b4beef041e322282de3fb87f793e66b40ebc147c4f7c9270f592e30912d"
+    ],
+    "prompt_tokens": 7503,
+    "total_tokens": 7503,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "6bb0f28074054489860245ad9acf4947",
+    "timestamp_epoch": 1792079349.6210775,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 3,
+    "cache_hits": 5,
+    "elapsed_seconds": 1.9776735930063296,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "5608c0815d8aca22dedb02fc5e4f5a693e4f2c1c4a3c227e29949c3ec8eb318e",
+      "2be290c306c0f49a16c6136041744586c10901fc4deafdcb6a7864ba2bda30b1",
+      "ba51b9508d373ef15194a45e9ed2f4c32c75d7a4d0ecf93d37fb296d4d9435cf",
+      "90c856f46852ed9e6ce9fc36aef33e1958e133a5450247c623ec764d46b6913e",
+      "f667050e42ad84b464ac7d2ceca4ffdb13d2f09fa498117a3f0b6afb4722930b"
+    ]
+  },
+  {
+    "record_id": "8a62279a8827497c9f443ce708b5c7ad",
+    "timestamp_epoch": 1792079349.6224575,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 7,
+    "actual_vectors": 0,
+    "cache_hits": 7,
+    "elapsed_seconds": 6.325700087472796e-05,
+    "input_keys": [
+      "6391da3cf3ce57a308348d957cd030355768e5c5bf8a810c4c146aea10c4fa6e",
+      "31c933c5bf7a973f3b7d21f50b7a6a3efad950ad0fb77bf4447ddb07e313437f",
+      "68ebab232cda59c469ab174729ce03b1a6f837c7f910aaa9e482b2909a633de9",
+      "0966af750c963da13e25cf803cd4cf5037f3f2406d7b7bb8e86aec1a86f6ee86",
+      "fee5be9bcfac3ae07f8122077f628fcae08171914493d9e080a5edbde2927564",
+      "13667ccade00f99e24a454095f3bac5866cb098244ab2de2b40389dcf9f48944",
+      "81c83dfb9ee583615d4fe6e249aa513c614adae57ea5380b96cc0ffca3541c8b"
+    ]
+  },
+  {
+    "record_id": "0af9e22b666142679fcc9a17288cd449",
+    "timestamp_epoch": 1792079349.6227129,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.2060976587235928e-05,
+    "input_keys": [
+      "bb37e1e74b28e38aaad36b5c201bde7cf3fb8d8d906112f0aef7eff731b70a82"
+    ]
+  },
+  {
+    "record_id": "6b81245ce7e343de854f256872a18bdd",
+    "timestamp_epoch": 1792079349.622942,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.2345000868663192e-05,
+    "input_keys": [
+      "4c5a3931531f21430accf13de6b314e3a13fd5cdc4a921505ba6c6f8a3909f6e"
+    ]
+  }
+]

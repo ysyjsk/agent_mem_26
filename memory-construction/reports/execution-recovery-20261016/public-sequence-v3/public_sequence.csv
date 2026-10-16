@@ -1,0 +1,6 @@
+policy,updates,unique_target_trajectories,history_trajectories_per_domain,update_llm_tokens,update_llm_calls,update_publish_s,reextracted_events,regenerated_notes,update_embedding_vectors,update_embedding_input_tokens,query_controller_input_tokens,query_controller_output_tokens,query_reader_input_tokens,query_reader_output_tokens,query_embedding_vectors,query_embedding_input_tokens,update_plus_query_llm_tokens,update_plus_query_wall_s,fixed_questions,correct,complete_answers,pending,truncated,service_failures,parse_failures
+raw_rag,6,2,5,0,0,9.771718914038502,0,0,12,34791,0,0,133195,107,12,807,133302,56.17162425100105,12,5,12,0,0,0,0
+rag_notes,6,2,5,7030,4,56.63654558401322,0,4,16,35472,0,0,121126,526,12,807,128682,111.11160106904572,12,5,12,0,0,0,0
+b3,6,2,5,70612,9,133.73595935403137,18,0,30,40683,16113,915,125262,119,40,1588,213021,210.74769456402282,12,12,12,0,0,0,0
+source_only,6,2,5,0,0,9.987561930989614,0,0,12,34791,16113,922,132095,369,40,1597,149499,95.82421212596819,12,8,12,0,0,0,0
+source_coalesced,6,2,5,0,0,12.239102038060082,0,0,24,39911,16306,1001,125082,119,37,1530,142508,91.15662445611088,12,12,12,0,0,0,0

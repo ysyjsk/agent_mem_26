@@ -1,14 +1,14 @@
-# 实际续接：focused-method-v3 / 2026-10-15
-已完整读取focused提示及目标并采用新排序。get_goal本次返回null，之前记录blocked/unfinished；不新建Goal或执行器，不伪称active/complete。
+# 执行纠正：修复评测并继续正式实验
+update_id: focused-maintenance-v4-20261015
+update_revision: execution-recovery-20261016
 
-当前实际运行：bash tools/run_method_v12_remaining.sh，工具session57438，日志runs/method-first-20261015/v12-remaining.log。Title/sort六次更新已落盘，四例三方普通/修订值Reader仍在有限队列。不能重跑脚本头部构建覆盖已有目录。
+先读本文件、execution/queue.json、docs/EXECUTION_RECOVERY.md，再执行 execution/prompts/CONTINUE_RESEARCH.md。研究方法、baseline 范围和 GOAL.md 总目标未改变；这不是新一轮方法探索。
 
-新成本：Title B3 8633tokens/40.140s、edit1993/25.172s、overlay0/2.466s；sort B3 13555/25.709s、edit674/4.244s、overlay0/1.728s。overlay词面质量失败仍保留，等待正常修改事实QA解释。reply/count普通回归三方均7/8，不是修改事实QA。
+已核实的问题：正式/消融 20 个实际 Reader 请求中 19 个带截图，重复 12/12 带截图；开发连续序列 36 个请求均无图。正式入口未继承原 text-only 和检索 flags。正式库每域 10 条且引用开发 Manifest，官方 Small 为每域 100 条；缺 Raw RAG/Notes 同负载维护；汇总漏 controller；Coalesced 检查把未改事实也限制在 CURRENT 块。
+旧“全部完成”声明已撤回为待修复/补缺。已完成构建、更新及开发序列保留，不重新从 P0 开始。
 
-下一主要候选：当前来源证据合并，避免同状态修订嵌套，正确持久化连续更新来源/缓存归属。先看检索失败，不堆prompt版本。填写拒绝和选择不匹配新案例已事前固定但尚未运行。
+本次已新增共享运行配置 tools/focused_runtime.py，并让正式 Reader 先加载配置再导入 harness，记录 effective_runtime.json；这仅完成代码修复和离线验证，尚未产生纠正后的 Reader 数字。execution/verify_evidence.py 可离线查实际请求、历史范围、成本分项和任务依赖；发现错误后按报告修复，不能直接停工。
+第一项实际工作：短核对活动作业，运行 python3 execution/verify_evidence.py --current，确认当前待修项后，复用现有快照做两域 B3/Ours 最小配对查询（原 4 题，共 8 个回答）。先检查实际请求无图、有效配置一致，再补其他策略和正常问题覆盖。不要先重跑重复实验。
 
-MemForest自身worker此前已停止，session89708退出130，web-v1保留2条完成轨迹和全部日志。无活动MemForest作业，不继续该适配/扩量；外部框架完成不再是冻结门槛。
-
-v13连续维护已完成：web/enterprise各3轮、B3/overlay/coalesced各自独立快照。B3更新70,580 tokens/206.049s，coalesced 0/12.841s；含查询与Reader总LLM tokens 214,714→140,111，序列QA coalesced12/12、B3 11/12。overlay证据块2/4/6增长，coalesced固定2。两条未调参轨迹日期与数量确认均B3/coalesced3/3；拒绝填写和选择不匹配也3/3。
-
-安全笔记复用已在enterprise选择不匹配新快照验证：旧coalesced3,260更新tokens/14.646s，修订后0/1.779s、Embedding5798tokens、Reader3/3；仅复用完整旧/新源行都未出现在笔记中的文本修订。语义编辑降为消融。当前下一动作只剩核心机制消融、配置冻结与论文表图/章节/复现；不再新增外部框架。
+由服务器执行会话写 execution/ack-execution-recovery-20261016.json，包含 update_id、update_revision、received_at、当前作业、下一实际任务、真实查询的 native_goal_status，并确认“配置错自行修、阶段复用、不能缩库/删必需方法、负结果不等于交付完成”。
+旧回执保留。当前部署不代写接收，不操作原生 Goal，不启动第二执行器。

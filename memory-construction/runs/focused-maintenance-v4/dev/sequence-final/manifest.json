@@ -1,0 +1,38 @@
+{
+  "version": "focused-v13-current-evidence",
+  "cases": [
+    [
+      "web",
+      "1ad1af4b",
+      4,
+      "title",
+      [
+        "Cyberpunk",
+        "Neon Harbor",
+        "Cedar Point",
+        "Silver Cove"
+      ]
+    ],
+    [
+      "enterprise",
+      "0ab99e0c",
+      5,
+      "count",
+      [
+        "101",
+        "103",
+        "105",
+        "107"
+      ]
+    ]
+  ],
+  "rounds": 3,
+  "selection": "Two pre-existing complete trajectories: web form field / enterprise list count; not selected by branch win.",
+  "scope": "Controlled sequential revisions of a fixed state, NOT new trajectories or streaming growth.",
+  "primary": "cumulative update LLM input+output tokens",
+  "secondary": "update publish wall, embedding work, all query costs, current evidence length",
+  "quality_constraint": "All latest values and unchanged-field probes; no service/parse failures; current evidence retired correctly; inspect derived notes/events.",
+  "decision": "Keep coalescing only if current evidence quality survives with reduced accumulated context/work. Do not claim further LLM saving against zero-LLM overlay.",
+  "cache": "Common initial matched snapshot; independent method history and all lawful exact request/vector caches; never use another method outputs.",
+  "frozen_query": "Existing 12000-token memory, 2048 Reader output, no thinking; chunk/tokenizer/lexical/query-embedding reuse unchanged"
+}

@@ -1,0 +1,32 @@
+{
+  "update_id": "focused-maintenance-v4-20261015",
+  "deployed_at": "2026-10-15T12:30:41.769429+00:00",
+  "status": "documents_deployed_verified",
+  "backup": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports/goal-history/pre-focused-maintenance-v4-20261015-202240",
+  "files": {
+    "GOAL.md": "08c5877398707bdaca01554ba5c64cd23695ba162e8caf9eb41ee735ada91c68",
+    "AGENTS.md": "b8c41e352ac5be48e4e2a91f4cc8c87fbafdaefd0e2c2ebd3f6fa2d93969f8e7",
+    "WORKPLAN.md": "72c9215e950f5bf3bae5616c0642c59b8256050b3d0ef85760f764384ce6d8c6",
+    "docs/EXPERIMENT_PROTOCOL.md": "77b2e651f3c77191f9c1007154accef7bb9f41d6cb72556f888180fb0542f061",
+    "execution/prompts/CONTINUE_RESEARCH.md": "c799bddd75f7ce04b1d2696b4def1d937391509f178df215dd18c16a50a1d9c3",
+    "START_HERE.md": "45f683723f574cf9d398ee364bfb013f213ad018db6f8857e7df50c7a3dc5cef",
+    "README.md": "e1fa6581674b7799898a5b3194bf6e137e5cfab080af1b716209af46f7f529f2",
+    "STATUS.md": "a9697b8246d8a7f75249bad60db0188b1652936f1abc6de82257b618332d54b4",
+    "paper/README.md": "2f588a5d0bdfc26722948711a5724992519ff09858cbc1393c9b4ab1c82a30dc",
+    "EXECUTION_UPDATE.md": "365e9e1c5b78733e8d5d5a21adf3ac9a084d5362dac49735e02eb3c17ab08a7d",
+    "execution/queue.json": "f676de80d0fd6f44077f6d34fc168b6741dcbee6b726710c896073b4a0bae57b"
+  },
+  "protected_experiment_files": {
+    "tools/run_agentrunbook_updates.py": "a40d1564e56abbf27f4ea90a6ddcd014f417e11c70907a76ab1d3bf1215a2a80",
+    "tools/run_method_v13_sequence.py": "50068eee343d485f3be4e1c525f47e56caf747bd9b8602ed71eb2936be9af2fd",
+    "tools/report_method_v13_sequence.py": "7c37af6454a3162021fe9947ba3e60c922c8c0cc1d908aea5e676b9dc6146c4f",
+    "results/tables/method_v13_sequence.csv": "8f4dd053db77fda1b39707bdbb8f42dbe068fb4d73d937ef0830960359a6b0e3",
+    "results/tables/method_v13_repeats.csv": "6cdd586a5c6c945f2d5c91feae54e3c3d80dc2213cbd66e1c7c6d108577190e8",
+    "results/tables/method_v13_confirmation.csv": "9d58583fd7a99fe106affdab74e90f904aa6e7586f298ad63fc80304abe36f89",
+    "runs/method-first-20261015/v13-sequential/manifest.json": "6bb6e73aac059f8207392eb661dc344cbad868ba4a85fdb18ab37c4a6f3953fc"
+  },
+  "executor_ack": "pending",
+  "native_goal": "not_checked_on_remote_executor",
+  "experiments_started": false,
+  "note": "No experiment code or raw results modified; current VS Code session must read the handoff."
+}

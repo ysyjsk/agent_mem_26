@@ -1,0 +1,101 @@
+{
+  "version": "fact-roles-v1",
+  "policy": "delta_guarded",
+  "legacy_checks_preserved": {
+    "new_fact_present": true,
+    "old_fact_retained": true,
+    "untouched_facts_retained": true,
+    "event_source_coverage": true,
+    "reused_joint_events_complete": true,
+    "dirty_event_ids": [
+      "event_0004_0005",
+      "event_0005_0006"
+    ],
+    "reused_event_count": 13,
+    "unchanged_candidate_event_count": 13,
+    "fixed_reader_regression": "not_run",
+    "derived_event_change_hits": {
+      "event_0004_0005": false,
+      "event_0005_0006": true
+    },
+    "derived_notes_change_hit": null,
+    "notes_change_required": false,
+    "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+    "literal_derived_rules": [
+      {
+        "target": "event_0004_0005",
+        "required_hits": {
+          "103": true,
+          "not interactive|not clickable|failed": false
+        },
+        "forbidden_hits": {
+          "101 unfiltered records": false
+        },
+        "pass": false
+      },
+      {
+        "target": "event_0005_0006",
+        "required_hits": {
+          "103": true,
+          "Normal": true,
+          "None": true
+        },
+        "forbidden_hits": {},
+        "pass": true
+      }
+    ],
+    "derived_automated_checks_pass": false,
+    "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+    "quality_pass": null,
+    "semantic_review": "pending"
+  },
+  "events": [
+    {
+      "target": "event_0004_0005",
+      "retired_event": false,
+      "changed_pattern_hits": {
+        "103": true
+      },
+      "unchanged_full_event_pattern_hits": {
+        "not interactive|not clickable|failed": false
+      },
+      "current_source_line_checks": [
+        {
+          "state": 5,
+          "role": "post-state",
+          "changed_lines_present": false
+        }
+      ],
+      "noncurrent_source_lines_labeled_current": [],
+      "state_role_errors": [],
+      "pattern_pass": false,
+      "semantic_state_attribution_and_stale_use": "pending"
+    },
+    {
+      "target": "event_0005_0006",
+      "retired_event": false,
+      "changed_pattern_hits": {
+        "103": true
+      },
+      "unchanged_full_event_pattern_hits": {
+        "Normal": true,
+        "None": true
+      },
+      "current_source_line_checks": [
+        {
+          "state": 5,
+          "role": "pre-state",
+          "changed_lines_present": false
+        }
+      ],
+      "noncurrent_source_lines_labeled_current": [],
+      "state_role_errors": [],
+      "pattern_pass": true,
+      "semantic_state_attribution_and_stale_use": "pending"
+    }
+  ],
+  "notes_preserved_exactly": true,
+  "notes_semantic_review": "pending",
+  "semantic_quality_pass": null,
+  "scope": "offline diagnostics; no gate relaxation or semantic equivalence claim; unchanged facts checked over full retained event"
+}

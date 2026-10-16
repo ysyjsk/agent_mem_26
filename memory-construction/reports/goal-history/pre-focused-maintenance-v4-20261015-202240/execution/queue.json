@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "update_id": "focused-method-v3",
+  "goal": "以记忆质量和下游可用性为约束改进或替换方法，获得相对相关强对照可重复的主要成本收益，再完成必要论文证据与复现。当前未完成。",
+  "current_phase": "method_exploration",
+  "native_goal": {
+    "status": "null_on_latest_query",
+    "verified": "2026-10-15",
+    "previous": "blocked/unfinished",
+    "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
+  },
+  "best_available": "v12 source_overlay provisional cheap correction branch; quality not certified",
+  "next_candidate": "v13 source_coalesced: consolidate current source evidence; preselected semantic and unused-trajectory confirmation follow if supported",
+  "primary_metric": "total LLM input+output tokens; wall/embedding/failures/query cost separately",
+  "tasks": [
+    {
+      "id": "METHOD01",
+      "status": "done",
+      "evidence": "matched snapshots and lawful caches reused"
+    },
+    {
+      "id": "NORMAL_QA",
+      "status": "done",
+      "evidence": "Four v12 cases: fixed B3/overlay14/16 edit13/16; revised overlay/edit8/8 B3 seven correct + one truncated; derived note/event review saved."
+    },
+    {
+      "id": "CURRENT_EVIDENCE",
+      "status": "done",
+      "evidence": "V13 two-domain x three-round sequence: coalesced 0 update LLM tokens, 12.841s publish, 12/12 QA; B3 70,580 tokens, 206.049s, 11/12 QA. Current evidence blocks remain 2; overlay grows 2/4/6."
+    },
+    {
+      "id": "CONFIRM",
+      "status": "done",
+      "evidence": "Held-out date and quantity cases both B3/coalesced 3/3; rejected-fill and selection-mismatch both 3/3. Four cost repeats saved; note-reuse enterprise confirmation 0 update LLM/3/3."
+    },
+    {
+      "id": "FREEZE_PAPER",
+      "status": "in_progress",
+      "action": "Freeze source_coalesced + safe note reuse; ablation report is saved from B3/overlay/coalesced and semantic-edit comparator. Finalize focused tables/figure/method/experiment/limitations/reproduction; keep total Goal unfinished until these are delivered."
+    }
+  ],
+  "active_plan_task_ids": ["FREEZE_PAPER"],
+  "backlog": [
+    {
+      "id": "EXTERNAL_ADAPTATIONS",
+      "status": "deferred",
+      "action": "Stop new MemForest/LightMem adapters and scale; preserve results. Existing AgentRunbook/B3 main comparison; Raw RAG/Notes historical references."
+    },
+    {
+      "id": "NATIVE_JUDGE",
+      "status": "blocked_external",
+      "action": "Does not block local focused work"
+    }
+  ]
+}

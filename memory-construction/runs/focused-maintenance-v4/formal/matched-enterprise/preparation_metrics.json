@@ -1,0 +1,10 @@
+{
+  "reprepared_trajectories": [
+    "0ab99e0c"
+  ],
+  "historical_base": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/dev-adapted-text-v1/results/enterprise-expanded20-agentrunbook-r-officialroot-build-v1/memory_state",
+  "elapsed_s_including_no_change_check": 208.7271889669937,
+  "no_change_real_calls": 0,
+  "signature": "888e4e709ebcc15001e60a2e8ca8ae029a9f9fc8916baedf743e85c077e49083",
+  "scope": "matched partition preparation, NOT full cold construction"
+}

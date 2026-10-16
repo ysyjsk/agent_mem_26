@@ -1,0 +1,629 @@
+[
+  {
+    "unit": "v13-confirm-web-2a99f536-date-b3",
+    "domain": "web",
+    "policy": "b3",
+    "case_id": "v13-confirm-web-2a99f536-date",
+    "review_path": "runs/method-first-20261015/v13-confirm-web-2a99f536-date/literal_revision-b3/derived_quality_review.json",
+    "event_and_notes_checks": {
+      "version": "fact-roles-v1",
+      "policy": "b3",
+      "legacy_checks_preserved": {
+        "new_fact_present": false,
+        "old_fact_retained": true,
+        "untouched_facts_retained": true,
+        "event_source_coverage": true,
+        "reused_joint_events_complete": "not_applicable_b3",
+        "dirty_event_ids": [
+          "event_0002_0003",
+          "event_0003_0004"
+        ],
+        "reused_event_count": 0,
+        "unchanged_candidate_event_count": 3,
+        "fixed_reader_regression": "not_run",
+        "derived_event_change_hits": {
+          "event_0002_0003": true,
+          "event_0003_0004": true
+        },
+        "derived_notes_change_hit": null,
+        "notes_change_required": false,
+        "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+        "literal_derived_rules": [
+          {
+            "target": "event_0002_0003",
+            "required_hits": {
+              "07/06/2021": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          },
+          {
+            "target": "event_0003_0004",
+            "required_hits": {
+              "07/06/2021": true,
+              "05/31/2023": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          }
+        ],
+        "derived_automated_checks_pass": true,
+        "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+        "quality_pass": null,
+        "semantic_review": "pending"
+      },
+      "events": [
+        {
+          "target": "event_0002_0003",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "07/06/2021": true
+          },
+          "unchanged_full_event_pattern_hits": {},
+          "current_source_line_checks": [
+            {
+              "state": 3,
+              "role": "post-state",
+              "changed_lines_present": false
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        },
+        {
+          "target": "event_0003_0004",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "07/06/2021": true
+          },
+          "unchanged_full_event_pattern_hits": {
+            "05/31/2023": true
+          },
+          "current_source_line_checks": [
+            {
+              "state": 3,
+              "role": "pre-state",
+              "changed_lines_present": false
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        }
+      ],
+      "notes_preserved_exactly": true,
+      "notes_semantic_review": "pending",
+      "semantic_quality_pass": null,
+      "scope": "offline diagnostics; no gate relaxation or semantic equivalence claim; unchanged facts checked over full retained event",
+      "generated_events_applicable": true,
+      "generated_notes_applicable": true
+    },
+    "all_versioned_evidence_blocks": [
+      {
+        "event_id": "event_0002_0003",
+        "block_number": 1,
+        "state_index": 2,
+        "role": "pre-state",
+        "lines": 3,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0002_0003",
+        "block_number": 1,
+        "state_index": 3,
+        "role": "post-state",
+        "lines": 2,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 3,
+        "role": "pre-state",
+        "lines": 2,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 4,
+        "role": "post-state",
+        "lines": 3,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      }
+    ],
+    "semantic_review_status": "pending_manual",
+    "instruction": "Read changed current facts, untouched context, pre/post roles, old conclusions, and generated notes. Raw save success alone is insufficient."
+  },
+  {
+    "unit": "v13-confirm-web-2a99f536-date-source_coalesced",
+    "domain": "web",
+    "policy": "source_coalesced",
+    "case_id": "v13-confirm-web-2a99f536-date",
+    "review_path": "runs/method-first-20261015/v13-confirm-web-2a99f536-date/literal_revision-source_coalesced/derived_quality_review.json",
+    "event_and_notes_checks": {
+      "version": "fact-roles-v1",
+      "policy": "source_coalesced",
+      "legacy_checks_preserved": {
+        "new_fact_present": false,
+        "old_fact_retained": true,
+        "untouched_facts_retained": true,
+        "event_source_coverage": true,
+        "reused_joint_events_complete": true,
+        "dirty_event_ids": [
+          "event_0002_0003",
+          "event_0003_0004"
+        ],
+        "reused_event_count": 3,
+        "unchanged_candidate_event_count": 3,
+        "fixed_reader_regression": "not_run",
+        "derived_event_change_hits": {
+          "event_0002_0003": true,
+          "event_0003_0004": true
+        },
+        "derived_notes_change_hit": null,
+        "notes_change_required": false,
+        "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+        "literal_derived_rules": [
+          {
+            "target": "event_0002_0003",
+            "required_hits": {
+              "07/06/2021": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          },
+          {
+            "target": "event_0003_0004",
+            "required_hits": {
+              "07/06/2021": true,
+              "05/31/2023": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          }
+        ],
+        "derived_automated_checks_pass": true,
+        "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+        "quality_pass": null,
+        "semantic_review": "pending"
+      },
+      "events": [
+        {
+          "target": "event_0002_0003",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "07/06/2021": true
+          },
+          "unchanged_full_event_pattern_hits": {},
+          "current_source_line_checks": [
+            {
+              "state": 3,
+              "role": "post-state",
+              "changed_lines_present": false
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        },
+        {
+          "target": "event_0003_0004",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "07/06/2021": true
+          },
+          "unchanged_full_event_pattern_hits": {
+            "05/31/2023": true
+          },
+          "current_source_line_checks": [
+            {
+              "state": 3,
+              "role": "pre-state",
+              "changed_lines_present": false
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        }
+      ],
+      "notes_preserved_exactly": true,
+      "notes_semantic_review": "pending",
+      "semantic_quality_pass": null,
+      "scope": "offline diagnostics; no gate relaxation or semantic equivalence claim; unchanged facts checked over full retained event",
+      "generated_events_applicable": true,
+      "generated_notes_applicable": true
+    },
+    "all_versioned_evidence_blocks": [
+      {
+        "event_id": "event_0002_0003",
+        "block_number": 1,
+        "state_index": 2,
+        "role": "pre-state",
+        "lines": 3,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0002_0003",
+        "block_number": 1,
+        "state_index": 3,
+        "role": "post-state",
+        "lines": 2,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 3,
+        "role": "pre-state",
+        "lines": 2,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 4,
+        "role": "post-state",
+        "lines": 3,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      }
+    ],
+    "semantic_review_status": "pending_manual",
+    "instruction": "Read changed current facts, untouched context, pre/post roles, old conclusions, and generated notes. Raw save success alone is insufficient."
+  },
+  {
+    "unit": "v13-confirm-enterprise-12c22166-quantity-b3",
+    "domain": "enterprise",
+    "policy": "b3",
+    "case_id": "v13-confirm-enterprise-12c22166-quantity",
+    "review_path": "runs/method-first-20261015/v13-confirm-enterprise-12c22166-quantity/literal_revision-b3/derived_quality_review.json",
+    "event_and_notes_checks": {
+      "version": "fact-roles-v1",
+      "policy": "b3",
+      "legacy_checks_preserved": {
+        "new_fact_present": false,
+        "old_fact_retained": true,
+        "untouched_facts_retained": true,
+        "event_source_coverage": true,
+        "reused_joint_events_complete": "not_applicable_b3",
+        "dirty_event_ids": [
+          "event_0003_0004",
+          "event_0004_0005"
+        ],
+        "reused_event_count": 0,
+        "unchanged_candidate_event_count": 3,
+        "fixed_reader_regression": "not_run",
+        "derived_event_change_hits": {
+          "event_0003_0004": true,
+          "event_0004_0005": true
+        },
+        "derived_notes_change_hit": null,
+        "notes_change_required": false,
+        "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+        "literal_derived_rules": [
+          {
+            "target": "event_0003_0004",
+            "required_hits": {
+              "value='4'|quantity.{0,20}4": true,
+              "1,399.96": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          },
+          {
+            "target": "event_0004_0005",
+            "required_hits": {
+              "value='4'|quantity.{0,20}4": true,
+              "Apple Watch": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          }
+        ],
+        "derived_automated_checks_pass": true,
+        "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+        "quality_pass": null,
+        "semantic_review": "pending"
+      },
+      "events": [
+        {
+          "target": "event_0003_0004",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "value='4'|quantity.{0,20}4": true,
+            "1,399.96": true
+          },
+          "unchanged_full_event_pattern_hits": {},
+          "current_source_line_checks": [
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": false
+            },
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": true
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        },
+        {
+          "target": "event_0004_0005",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "value='4'|quantity.{0,20}4": true
+          },
+          "unchanged_full_event_pattern_hits": {
+            "Apple Watch": true
+          },
+          "current_source_line_checks": [
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": false
+            },
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": true
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        }
+      ],
+      "notes_preserved_exactly": true,
+      "notes_semantic_review": "pending",
+      "semantic_quality_pass": null,
+      "scope": "offline diagnostics; no gate relaxation or semantic equivalence claim; unchanged facts checked over full retained event",
+      "generated_events_applicable": true,
+      "generated_notes_applicable": true
+    },
+    "all_versioned_evidence_blocks": [
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 3,
+        "role": "pre-state",
+        "lines": 8,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 4,
+        "role": "post-state",
+        "lines": 4,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0004_0005",
+        "block_number": 1,
+        "state_index": 4,
+        "role": "pre-state",
+        "lines": 4,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0004_0005",
+        "block_number": 1,
+        "state_index": 5,
+        "role": "post-state",
+        "lines": 0,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      }
+    ],
+    "semantic_review_status": "pending_manual",
+    "instruction": "Read changed current facts, untouched context, pre/post roles, old conclusions, and generated notes. Raw save success alone is insufficient."
+  },
+  {
+    "unit": "v13-confirm-enterprise-12c22166-quantity-source_coalesced",
+    "domain": "enterprise",
+    "policy": "source_coalesced",
+    "case_id": "v13-confirm-enterprise-12c22166-quantity",
+    "review_path": "runs/method-first-20261015/v13-confirm-enterprise-12c22166-quantity/literal_revision-source_coalesced/derived_quality_review.json",
+    "event_and_notes_checks": {
+      "version": "fact-roles-v1",
+      "policy": "source_coalesced",
+      "legacy_checks_preserved": {
+        "new_fact_present": false,
+        "old_fact_retained": true,
+        "untouched_facts_retained": true,
+        "event_source_coverage": true,
+        "reused_joint_events_complete": true,
+        "dirty_event_ids": [
+          "event_0003_0004",
+          "event_0004_0005"
+        ],
+        "reused_event_count": 3,
+        "unchanged_candidate_event_count": 3,
+        "fixed_reader_regression": "not_run",
+        "derived_event_change_hits": {
+          "event_0003_0004": true,
+          "event_0004_0005": true
+        },
+        "derived_notes_change_hit": null,
+        "notes_change_required": false,
+        "old_fact_semantics": "local source replacement; role-specific old/new assertions require manual review",
+        "literal_derived_rules": [
+          {
+            "target": "event_0003_0004",
+            "required_hits": {
+              "value='4'|quantity.{0,20}4": true,
+              "1,399.96": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          },
+          {
+            "target": "event_0004_0005",
+            "required_hits": {
+              "value='4'|quantity.{0,20}4": true,
+              "Apple Watch": true
+            },
+            "forbidden_hits": {},
+            "pass": true
+          }
+        ],
+        "derived_automated_checks_pass": true,
+        "quality_scope": "generated overview/state_transition and note_text only; necessary lexical checks, NOT semantic certification",
+        "quality_pass": null,
+        "semantic_review": "pending"
+      },
+      "events": [
+        {
+          "target": "event_0003_0004",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "value='4'|quantity.{0,20}4": true,
+            "1,399.96": true
+          },
+          "unchanged_full_event_pattern_hits": {},
+          "current_source_line_checks": [
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": false
+            },
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "post-state",
+              "changed_lines_present": true
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        },
+        {
+          "target": "event_0004_0005",
+          "retired_event": false,
+          "changed_pattern_hits": {
+            "value='4'|quantity.{0,20}4": true
+          },
+          "unchanged_full_event_pattern_hits": {
+            "Apple Watch": true
+          },
+          "current_source_line_checks": [
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": false
+            },
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": true
+            },
+            {
+              "state": 4,
+              "role": "pre-state",
+              "changed_lines_present": true
+            }
+          ],
+          "noncurrent_source_lines_labeled_current": [],
+          "state_role_errors": [],
+          "pattern_pass": true,
+          "semantic_state_attribution_and_stale_use": "pending"
+        }
+      ],
+      "notes_preserved_exactly": true,
+      "notes_semantic_review": "pending",
+      "semantic_quality_pass": null,
+      "scope": "offline diagnostics; no gate relaxation or semantic equivalence claim; unchanged facts checked over full retained event",
+      "generated_events_applicable": true,
+      "generated_notes_applicable": true
+    },
+    "all_versioned_evidence_blocks": [
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 3,
+        "role": "pre-state",
+        "lines": 8,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0003_0004",
+        "block_number": 1,
+        "state_index": 4,
+        "role": "post-state",
+        "lines": 4,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      },
+      {
+        "event_id": "event_0004_0005",
+        "block_number": 1,
+        "state_index": 4,
+        "role": "pre-state",
+        "lines": 4,
+        "lines_not_in_current_source": [],
+        "interpretation": "A historical overlay block may be superseded by a later block; retained old text alone is not stale-answer use."
+      }
+    ],
+    "semantic_review_status": "pending_manual",
+    "instruction": "Read changed current facts, untouched context, pre/post roles, old conclusions, and generated notes. Raw save success alone is insufficient."
+  }
+]

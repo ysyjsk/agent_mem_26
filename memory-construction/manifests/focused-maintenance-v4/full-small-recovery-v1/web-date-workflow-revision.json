@@ -1,0 +1,26 @@
+{
+  "trajectory_id": "2a99f536",
+  "selection_reason": "Paired workflow-intent revision on the same preselected trajectory and state; no state/action changes.",
+  "source_edits": [
+    {
+      "state_index": 3,
+      "field": "thoughts",
+      "old": "The \"From\" date is already set to 07/05/2021. To generate the report for the requested range I must set the \"To\" field to 05/31/2023. I'll fill the \"To\" textbox (bid 775) with '05/31/2023'.",
+      "new": "The \"From\" date is already set to 07/05/2021. To generate the report for the requested range I must set the \"To\" field to 05/31/2023. I'll fill the \"To\" textbox (bid 775) with '05/31/2023'. Workflow clarification: verify the required field before proceeding to the next form field."
+    }
+  ],
+  "derived_rules": [
+    {
+      "target": "notes",
+      "required": [
+        "required",
+        "before|prior"
+      ],
+      "forbidden": []
+    }
+  ],
+  "manual_checks": [
+    "Generated notes must preserve the added verification and its ordering. This is recorded intent, not evidence the action was executed.",
+    "Original source state and actions remain unchanged."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "update_id": "focused-maintenance-v4-20261015",
+  "goal": "在现有本地 AgentRunbook-R 链路和完整轨迹数据上，完成源证据驱动的局部记忆维护方法及可直接写作的实验包：公开比较固定 Raw RAG、RAG+Notes、AgentRunbook-R（统一适配与合法缓存）和 Ours；关键机制比较固定 B3、Source-only、Ours，并复用 overlay→coalesced 解释合并作用。以更新及更新＋查询的真实成本为优化目标，以正常问题、修改事实和动作/跨状态问题为质量约束。先补 Source-only，再补同负载公开 baseline、未调参确认和必要消融，实验期间同步写方法与实验章节；出现失败或优势不足时在现有方法内进行有依据的局部修复或简化，直到形成经验证的最终版本、完整必要表图、逐题记录与可复现稿件。暂停 Codex、AgentRunbook-C、MemForest、LightMem、新数据集和冷构建/自然增长新路线；不以零调用、表格数量或预定胜出代替实际效果。",
+  "current_phase": "focused_validation_and_paper",
+  "native_goal": {
+    "status": "unverified_in_executor",
+    "note": "文档部署未查询服务器执行会话的原生 Goal；由该会话实际核实，不伪称已激活。",
+    "previous_record": {
+      "status": "null_on_latest_query",
+      "verified": "2026-10-15",
+      "previous": "blocked/unfinished",
+      "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
+    }
+  },
+  "executor_ack": {
+    "status": "pending",
+    "path": "execution/ack-focused-maintenance-v4.json"
+  },
+  "best_available": "v13 source_coalesced core before added full-source-line-absence note reuse; final selection pending Source-only and matched public comparison",
+  "next_candidate": "Source-only ablation on existing two-domain three-round sequence",
+  "primary_metric": "update LLM input+output and update+query total LLM tokens; wall, embedding, initial cost, quality and failures separately",
+  "tasks": [
+    {
+      "id": "EVIDENCE",
+      "status": "done",
+      "evidence": [
+        "results/tables/method_v13_sequence.csv",
+        "results/tables/method_v13_repeats.csv",
+        "results/tables/method_v13_confirmation.csv"
+      ],
+      "scope": "existing versioned evidence only; not final public/source-only comparison"
+    },
+    {
+      "id": "ALIGN",
+      "status": "todo",
+      "depends_on": [
+        "EVIDENCE"
+      ],
+      "action": "执行会话接收、检查现有作业，对齐已验证 v13 核心和共同笔记规则，登记实际版本/清单，不重做 P0。",
+      "acceptance": "真实接收记录、可复用结果范围、当前版本和 Source-only 下一运行位置明确。"
+    },
+    {
+      "id": "SOURCE_ONLY",
+      "status": "todo",
+      "depends_on": [
+        "ALIGN"
+      ],
+      "action": "实现最小 Source-only 分支和必要失效/重载验证，补既有两域各三轮真实连续更新与查询。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/source_only_compare.csv"
+      ],
+      "acceptance": "B3/Source-only/Ours 可比，失效不泄露，独立连续快照，成本/逐题质量/失败有原始路径。"
+    },
+    {
+      "id": "PUBLIC_BASELINES",
+      "status": "todo",
+      "depends_on": [
+        "SOURCE_ONLY"
+      ],
+      "action": "复用官方 Raw RAG/Notes 和当前 AgentRunbook-R，补薄维护入口；同一修订/查询负载完成四行主比较。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/public_main.csv"
+      ],
+      "acceptance": "Raw RAG、RAG+Notes、AgentRunbook-R/B3、Ours 四行同负载实测；初始/更新/查询分开，保留各公开方法的检索设计。"
+    },
+    {
+      "id": "SELECT",
+      "status": "todo",
+      "depends_on": [
+        "SOURCE_ONLY",
+        "PUBLIC_BASELINES"
+      ],
+      "action": "依据真实结果在现有方法内修复或简化，固定最终版本及可支持主张。",
+      "acceptance": "明确相对强 B3 及低成本对照的收益/取舍；不得把无收益组件写为创新或只因文档齐全宣布完成。"
+    },
+    {
+      "id": "CONFIRM",
+      "status": "todo",
+      "depends_on": [
+        "SELECT"
+      ],
+      "action": "未调参完整轨迹确认，必要正常问题回归、合并/编辑消融和缺失的成本重复。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/confirmation.csv",
+        "results/tables/focused-maintenance-v4/ablation.csv"
+      ],
+      "acceptance": "预先记录确认清单、独立样本/重复数、质量分项和全部结果；发生改动后保留确认暴露记录。"
+    },
+    {
+      "id": "WRITE",
+      "status": "todo",
+      "depends_on": [],
+      "action": "立即写 paper/manuscript.md 的问题、方法和设置；随新结果更新正文，依据 paper/README.md 整理证据。",
+      "outputs": [
+        "paper/manuscript.md",
+        "paper/reproduction.md"
+      ],
+      "acceptance": "形成连贯稿件与实际复现入口；历史版本不能合并冒充最终实现。"
+    },
+    {
+      "id": "PACKAGE",
+      "status": "todo",
+      "depends_on": [
+        "CONFIRM",
+        "WRITE"
+      ],
+      "action": "核对最终主表、机制表、图、确认、正文和复现；更新实际完成状态。",
+      "acceptance": "全部必要交付有真实证据且主张匹配；原生 Goal 是否完成由执行会话按实际目标及宿主规则判断。"
+    }
+  ],
+  "active_plan_task_ids": [
+    "ALIGN",
+    "SOURCE_ONLY",
+    "WRITE"
+  ],
+  "backlog": [
+    {
+      "id": "NEW_FRAMEWORKS",
+      "status": "deferred",
+      "action": "Codex、AgentRunbook-C、MemForest、LightMem 及其他新适配暂停。"
+    },
+    {
+      "id": "NEW_CONSTRUCTION_DIRECTIONS",
+      "status": "deferred",
+      "action": "冷构建/自然增长新方法、新数据集、完整 Small/Medium 扩量不作为本轮前置。"
+    },
+    {
+      "id": "NATIVE_JUDGE",
+      "status": "deferred",
+      "action": "官方 Judge 不可用时保留待评答案，继续可评分质量与本地成本实验。"
+    }
+  ]
+}

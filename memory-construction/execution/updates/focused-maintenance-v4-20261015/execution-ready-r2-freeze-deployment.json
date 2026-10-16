@@ -1,0 +1,36 @@
+{
+  "update_id": "focused-maintenance-v4-20261015",
+  "update_revision": "execution-ready-r2-freeze",
+  "deployed_at": "20261015T135855Z",
+  "backup": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports/goal-history/pre-r2-freeze-20261015T135855Z",
+  "verified_sha256": {
+    "project/GOAL.md": "bd44407e34ec87315d38a8f060f158924d4626c77548c6aec2ecd078bc5d1abb",
+    "project/WORKPLAN.md": "5e16f336f2d082eeea7d0dc57372de46f8aa51e657fa2362e1a7dd21b5e36e47",
+    "project/docs/EXPERIMENT_PROTOCOL.md": "ff78a816ed75adabafff909137cd4f909ed1e32da2a884529cde76fb1cb2f172",
+    "project/AGENTS.md": "67039e8e794533be95ecfd4b12ccb46253d9eade960675072fca2f86673c8d42",
+    "project/execution/prompts/CONTINUE_RESEARCH.md": "631142034ac370cbf0b0705857553ad04eca48939ab15654ed8eaf0085148561",
+    "project/START_HERE.md": "df6325790e1635f8e87d410067a5786b7cfd48e25d428fa42356201e13597d31",
+    "project/README.md": "d4224ac32fc4bc950f05d0b9cfc46ee6a8bb0cc089a5e1ec2cab859482956caa",
+    "project/paper/README.md": "496f473142e5400b903228deb06bb93f337d9f27da651106660f938cf39ad226",
+    "project/STATUS.md": "5631b2e52217e2e3ce211cbddf61a9b4ffd86e68003030b567abf333daf61c37",
+    "project/execution/skill/memory-research-loop/SKILL.md": "87b51b354c42d4b282e6ca7d94a448b74b5ec992f16676748c395a3e703b7b83",
+    "project/execution/skill/memory-research-loop/references/project-context.md": "5c9e77b3e53d03e9d516771e57ad75ebb9f19718fba1a8d96307a110fcd33ce1",
+    "project/execution/queue.json": "8cc9e1a883290e1b3ce62342ad815502abb8f34219c430cfaefb6b771ff7ae0a",
+    "project/docs/REUSE_AND_OPTIMIZATION.md": "2a0d5d3ab5677f42132d0e0e1fc4c2fb2220ab26fcad3ef25efc686fa3abbe9e",
+    "repository-root/AGENTS.md": "6ef6bd52fcef6f17948e655db56a0f38045c70a60c19d3597ba0ea7e4c5775ce",
+    "repository-root/WORKPLAN.md": "f2cd4959ea30ce9b96109cfd5fc67381249273b44cdb3a772dcf61c9e334e418",
+    "installed-skill/SKILL.md": "87b51b354c42d4b282e6ca7d94a448b74b5ec992f16676748c395a3e703b7b83",
+    "installed-skill/references/project-context.md": "5c9e77b3e53d03e9d516771e57ad75ebb9f19718fba1a8d96307a110fcd33ce1",
+    "project/EXECUTION_UPDATE.md": "ce7b4d0436c0065aa3e2d50c71e47d54702bc2389bdc4a6db502b085a6c0c55e"
+  },
+  "validation": {
+    "goal_queue_workplan": "pass",
+    "task_dag": "pass",
+    "stale_success_gates_removed": "pass",
+    "relative_links": 20,
+    "protected_code_and_results_unchanged": 15
+  },
+  "executor_ack": "pending",
+  "formal_freeze": "not_performed_by_document_deployment",
+  "experiments_launched": 0
+}

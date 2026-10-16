@@ -1,0 +1,120 @@
+[
+  {
+    "record_id": "ebafdc8df3854958be0da87f390299c0",
+    "timestamp_epoch": 1792076083.8127596,
+    "channel": "source_only_invalidation",
+    "status": "success",
+    "trajectory_id": "1ad1af4b",
+    "invalidated_event_ids": [
+      "event_0003_0004",
+      "event_0004_0005"
+    ],
+    "changed_source_state_indexes": [
+      4
+    ],
+    "event_model_calls": 0
+  },
+  {
+    "record_id": "695b1a8d53df463b9e580dbefe62384b",
+    "timestamp_epoch": 1792076083.8133283,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "b4efb604b647dcc6248f65491b2b3af575e9f80422686b204c31389c8c479996",
+    "stage": "notes"
+  },
+  {
+    "record_id": "d070434fe41643d3b06b912f46237038",
+    "timestamp_epoch": 1792076083.813404,
+    "channel": "update_request_cache",
+    "status": "hit",
+    "key": "9c7b1e9a9af734d93bb5e84b3d6286c500d726d722721fb8312b93d7a5a6f9ca",
+    "stage": "notes"
+  },
+  {
+    "record_id": "40d3b719fddb4156b070402b096fcffa",
+    "timestamp_epoch": 1792076085.8138502,
+    "channel": "embedding",
+    "call_mode": "construction",
+    "status": "success",
+    "elapsed_seconds": 1.9666896229900885,
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "base_url": "http://localhost:8114/v1",
+    "input_text_count": 3,
+    "input_characters": 23700,
+    "input_sha256": [
+      "694ae148f1f3fc295cc00a9dade4c5d1d3a7a4a283e0b68eab230bd982614d3d",
+      "8651e813420aa847564e6c8d9fcc2f75f7d5243c5e1a643954d194cc2b9239b0",
+      "578d45cae1cd5f0bd49e01f9eb221c9371beb9ac5f4f51fd1da784f459f92203"
+    ],
+    "prompt_tokens": 7497,
+    "total_tokens": 7497,
+    "query_invocation_id": null,
+    "error_type": null,
+    "error_status_code": null
+  },
+  {
+    "record_id": "4a7c421977a34fa39229e9a57988833e",
+    "timestamp_epoch": 1792076085.8140318,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 8,
+    "actual_vectors": 3,
+    "cache_hits": 5,
+    "elapsed_seconds": 1.9672620049968828,
+    "input_keys": [
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "ca9d477b7c7d44d6e9ceba666a111d3298e8868e31235c34bca50dc2950cc82c",
+      "d0c2e9fe3b59fe77a1c2d8921a557f2c1a13f1676fdd8396047dfed1aabfa2ab",
+      "3bd15fe23952356fb7a46de10544d7c54e2e7f153eed64b9c56ea5d63e5cfa69",
+      "4ebaa135f5801b2c30ea717d4c4bc5d53693d7cf248a61c4b5de7a15a86e45c8",
+      "cb6236dc49440a39321908d021fa2b5eb80a5683d3395ee08e1f2989f1b1eba6",
+      "90c856f46852ed9e6ce9fc36aef33e1958e133a5450247c623ec764d46b6913e",
+      "f667050e42ad84b464ac7d2ceca4ffdb13d2f09fa498117a3f0b6afb4722930b"
+    ]
+  },
+  {
+    "record_id": "ffd862aa45714ae5a46db469410743c0",
+    "timestamp_epoch": 1792076085.815596,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 7,
+    "actual_vectors": 0,
+    "cache_hits": 7,
+    "elapsed_seconds": 7.503200322389603e-05,
+    "input_keys": [
+      "bb1411d48885c1cbe1dcfe7672cbb55eed3fa850458c95a59e66477b07930fc8",
+      "cf3101b22d14cd86849e9f5ff6abf486b8e57a73a5580000689eef50ab1a20b7",
+      "83cc22633810abc5116fa5f555682a70530e7318b55cfb5c4b76cbb609fe5ef2",
+      "09a89cc4a9d5917339367f9739a46287b7e62a18c8e03d844c0ad641d93cb44a",
+      "6dfd96361902efc0fb7b16d3c1f2e0e2979f41590e92eba38ad85331560d6a67",
+      "4e6f2808e4eea6f8ec523213f2f057530815f04110c15bff0358ffd8523967b4",
+      "b56cf745abf59aba02489bd337ba1b2c5b38ba09be0089a3cfe40cbe44c53c6f"
+    ]
+  },
+  {
+    "record_id": "2fd1f34408714162a4fd4990c0fa74aa",
+    "timestamp_epoch": 1792076085.815917,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.6411999240517616e-05,
+    "input_keys": [
+      "219b2686392d6afddc64507c6217c57eca937ea5c4e02817a41eef7e5ab2d864"
+    ]
+  },
+  {
+    "record_id": "396aac85d5824e6c980c9b4e0f70f458",
+    "timestamp_epoch": 1792076085.8161771,
+    "channel": "build_embedding_cache",
+    "status": "success",
+    "logical_vectors": 1,
+    "actual_vectors": 0,
+    "cache_hits": 1,
+    "elapsed_seconds": 1.4949007891118526e-05,
+    "input_keys": [
+      "0f6e15bf2bf2967749e6151ee073bdc0b96f822d4a63071ea11b65dcb12c56fb"
+    ]
+  }
+]

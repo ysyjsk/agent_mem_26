@@ -1,55 +1,331 @@
 {
   "schema_version": 2,
-  "update_id": "focused-method-v3",
-  "goal": "以记忆质量和下游可用性为约束改进或替换方法，获得相对相关强对照可重复的主要成本收益，再完成必要论文证据与复现。当前未完成。",
-  "current_phase": "method_exploration",
+  "update_id": "focused-maintenance-v4-20261015",
+  "goal": "以现有 v13 Coalescing 为核心完成固定范围的 Agent Memory Maintenance 正式验证与论文证据。先按阶段复用已有合法结果，只补必要的 Notes 规则修正、Source-only 一致性及 Raw RAG/RAG+Notes 更新接口和维护数据。必要正确性、公平性与真实更新查询检查通过后冻结实现、模型、Reader、评分和数据清单，直接完成完整 Small 历史库上的固定维护实验、核心消融、连续成本、质量分项、必要重复及正文/复现交付。可选工程优化默认跳过，本轮全程最多两个主要候选，必须在正式冻结前小范围配对验证且不延误主线；不以优于 Source-only 或所有 baseline 作为启动或完成条件。依据完整可追溯结果判断成本—质量价值：有支持则写相应论文主张，无独特优势则完整保存负结果、原因与贡献不足的结论，完成本轮既定实验并结束，不无限寻找 trick。",
+  "current_phase": "full_small_expansion_and_registered_formal_queue",
   "native_goal": {
-    "status": "null_on_latest_query",
-    "verified": "2026-10-15",
-    "previous": "blocked/unfinished",
-    "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
+    "status": "active_verified_20261016",
+    "current_receipt": "execution/ack-execution-recovery-20261016.json",
+    "previous_executor_record": {
+      "status": "complete",
+      "note": "当前会话先查询到 null，随后创建与冻结正式交付一致的原生 Goal 并在全部产物完成后标记 complete。",
+      "previous_record": {
+        "status": "null_on_latest_query",
+        "verified": "2026-10-15",
+        "previous": "blocked/unfinished",
+        "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
+      }
+    },
+    "required_action": "Executing VS Code session must query actual Goal. Previous completion does not satisfy missing project evidence; continue/create corrective Goal as host permits."
   },
-  "best_available": "v12 source_overlay provisional cheap correction branch; quality not certified",
-  "next_candidate": "v13 source_coalesced: consolidate current source evidence; preselected semantic and unused-trajectory confirmation follow if supported",
-  "primary_metric": "total LLM input+output tokens; wall/embedding/failures/query cost separately",
+  "executor_ack": {
+    "status": "received",
+    "path": "execution/ack-execution-recovery-20261016.json",
+    "expected_update_revision": "execution-recovery-20261016",
+    "previous_receipt": "execution/ack-focused-maintenance-v4.json"
+  },
+  "best_available": "Repaired text-only development comparison: public-v1 includes six methods, two revisions and diagnostic4+normal8. Original noncompliant queries remain historical; official full-history expansion is active.",
+  "next_candidate": "No new candidate. Registered finite full Small matrix: 32 main updates, 4 core ablation updates, 24 repeated updates, 24 sequential updates, 126 query batches; independent caches and fixed scoring.",
+  "primary_metric": "update LLM input+output and update+query total LLM tokens; wall, embedding, initial cost, quality and failures separately",
   "tasks": [
     {
-      "id": "METHOD01",
+      "id": "EVIDENCE",
       "status": "done",
-      "evidence": "matched snapshots and lawful caches reused"
+      "evidence": [
+        "results/tables/method_v13_sequence.csv",
+        "results/tables/method_v13_repeats.csv",
+        "results/tables/method_v13_confirmation.csv"
+      ],
+      "scope": "existing versioned evidence only; not final public/source-only comparison"
     },
     {
-      "id": "NORMAL_QA",
+      "id": "ALIGN",
       "status": "done",
-      "evidence": "Four v12 cases: fixed B3/overlay14/16 edit13/16; revised overlay/edit8/8 B3 seven correct + one truncated; derived note/event review saved."
+      "depends_on": [
+        "EVIDENCE"
+      ],
+      "action": "短检查作业/新产物；按阶段更新复用清单并先输出已有/缺失/新增计算。核对共同 Notes 行为和必要测试，只有必要新增确认才选数据。",
+      "acceptance": "真实接收/理解确认；复用证据与缺口及每个重跑原因明确；共同配置/Notes 规则成立，下一缺失单元可运行，不等待全历史审计。",
+      "outputs": [
+        "execution/reuse_inventory.csv"
+      ],
+      "evidence_note": "Previous alignment retained as historical work; new receipt and repair task handle the current correction."
     },
     {
-      "id": "CURRENT_EVIDENCE",
+      "id": "SOURCE_ONLY",
       "status": "done",
-      "evidence": "V13 two-domain x three-round sequence: coalesced 0 update LLM tokens, 12.841s publish, 12/12 QA; B3 70,580 tokens, 206.049s, 11/12 QA. Current evidence blocks remain 2; overlay grows 2/4/6."
+      "depends_on": [
+        "ALIGN"
+      ],
+      "action": "实现最小分支和四项准入，只补缺失六轮/查询；优先引用匹配 B3/Ours，第一项真实检查可计入。",
+      "outputs": [
+        "runs/focused-maintenance-v4/dev/sequence-final/manifest.json",
+        "runs/focused-maintenance-v4/dev/sequence-final"
+      ],
+      "acceptance": "四项一致性通过且新 Raw State 正常可查；两域三轮 B3/Source-only/Ours 匹配实测或合法复用；连续快照、成本、答案、失败和来源可追溯。",
+      "evidence_note": "Existing implementation and 18 development sequence units retained. 36 saved Reader requests have no images; this is not a new full semantic acceptance. Offline source-only-saved-sequence-v2 checks six saved Source-only snapshots and12 actual queries: no invalidated-event retrieval;9 contexts contain some changed lines,6 all. Four errors separate supplied-but-misinterpreted current counts from missing target-state field evidence; no scoring/method changes.",
+      "quality_review": "reports/execution-recovery-20261016/source-only-saved-sequence-v2/error-review.md"
+    },
+    {
+      "id": "REPAIR_EVAL",
+      "status": "done",
+      "depends_on": [
+        "SOURCE_ONLY"
+      ],
+      "action": "Offline audit; verify shared runtime fix with two-domain B3/Ours snapshots (8 answers), then missing query stages. Reaggregate controller costs; fix fact-role checks using saved memory. Continue automatically after repair.",
+      "acceptance": "Actual serialized requests have no images and expected effective settings; accounting includes all LLM stages/retries; changed/unchanged/stale-use checks are distinguished; corrected paired results reference preserved snapshots and new outputs. Helper PASS alone is not quality equivalence.",
+      "outputs": [
+        "reports/execution-recovery-20261016/",
+        "runs/focused-maintenance-v4/repair-20261016/"
+      ],
+      "preserve": [
+        "existing initial memory and update snapshots",
+        "valid text-only development sequence",
+        "original formal outputs with noncompliant query label"
+      ],
+      "evidence": ["reports/execution-recovery-20261016/diagnostic-v1", "reports/execution-recovery-20261016/normal-v1", "reports/execution-recovery-20261016/legacy-accounting-v1"],
+      "completion_scope": "Actual repaired text-only/controller settings verified. Cost accounting includes query controllers. Fact-role checker repaired; semantic certification remains separate and pending, not declared equivalent. Formal Reader transport now disables unlogged SDK retries uniformly."
+    },
+    {
+      "id": "PUBLIC_BASELINES",
+      "status": "done",
+      "depends_on": [
+        "SOURCE_ONLY"
+      ],
+      "action": "只补 Raw RAG/Notes 缺失维护/查询各六轮，引用合法 B3/Ours 组装四行开发表；初始构建/正常 QA 不重做。",
+      "outputs": [
+        "reports/execution-recovery-20261016/public-v1/public_main.csv",
+        "reports/execution-recovery-20261016/public-sequence-v2/public_sequence.csv",
+        "reports/execution-recovery-20261016/public-sequence-v2/continuous_cost.svg",
+        "reports/execution-recovery-20261016/public-sequence-v3/evidence_size.svg",
+        "reports/execution-recovery-20261016/coalesced-sequence-memory-review.md",
+        "runs/focused-maintenance-v4/public-repair-20261016/paired10",
+        "runs/focused-maintenance-v4/public-repair-20261016/sequence"
+      ],
+      "acceptance": "四行维护表同负载可比，原始路径/版本与复用依据明确；每个新增或重跑有具体缺口原因，不要求四方法新跑。",
+      "reopened_reason": "Required same-load maintenance comparison was deferred without satisfying GOAL; historical cold-build reference is insufficient."
+    },
+    {
+      "id": "SELECT",
+      "status": "in_progress",
+      "depends_on": [
+        "REPAIR_EVAL",
+        "PUBLIC_BASELINES"
+      ],
+      "action": "必要实现修复后冻结 v13 与实际配置/Manifest。可选主要候选最多两个、允许零个、不延误主线，不能为追求胜出延长开发。",
+      "acceptance": "必要正确性/公平性检查通过、实际冻结记录完整即可；不要求优于 Source-only 或任何对照。",
+      "reopened_reason": "Frozen manifest did not match effective formal query configuration or official full-history scope."
     },
     {
       "id": "CONFIRM",
-      "status": "done",
-      "evidence": "Held-out date and quantity cases both B3/coalesced 3/3; rejected-fill and selection-mismatch both 3/3. Four cost repeats saved; note-reuse enterprise confirmation 0 update LLM/3/3."
+      "status": "in_progress",
+      "depends_on": [
+        "SELECT"
+      ],
+      "action": "复用合法确认并补必要覆盖，以冻结版本评价；分数/成本不领先如实记录。只有明确实现 bug 修复，不自动回 SELECT 做方法搜索。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/confirmation.csv",
+        "reports/execution-recovery-20261016/confirmation-reuse-v1/confirmation.csv"
+      ],
+      "evidence_note": "Historical a04 v13 confirmation reaggregated with retrieval controllers: both branches6/6; update+query93398 vs70175 tokens. Actual messages/config/snapshot matching verified. Remains original-version exposed evidence, not new held-out validation; final compatibility and generated-memory acceptance not automatically complete.",
+      "acceptance": "配置与数据/暴露记录完整，真实链路和一致性/公平性有效；结果可追溯，无需收益阈值，随后进入 Small。",
+      "reopened_reason": "Verify effective repaired query path and exposure; reuse valid earlier confirmation, do not relabel exposed diagnosis as independent."
     },
     {
-      "id": "FREEZE_PAPER",
+      "id": "SMALL_MAIN",
       "status": "in_progress",
-      "action": "Freeze source_coalesced + safe note reuse; ablation report is saved from B3/overlay/coalesced and semantic-edit comparator. Finalize focused tables/figure/method/experiment/limitations/reproduction; keep total Goal unfinished until these are delivered."
+      "depends_on": [
+        "CONFIRM"
+      ],
+      "action": "必要一致性/公平性和冻结检查通过后直接运行完整 Small 固定维护负载。保留三类初始记忆复用，独立维护分支；不按结果选样本或调方法，不要求 Ours 先胜出。",
+      "outputs": [
+        "results/tables/focused-maintenance-v4/public_main.csv",
+        "results/tables/focused-maintenance-v4/source_only_compare.csv",
+        "results/tables/focused-maintenance-v4/ablation.csv",
+        "results/figures/focused-maintenance-v4/"
+      ],
+      "acceptance": "完整历史库、固定负载和实际版本有清单；主表及匹配 Source-only/Overlay、分版本 Delta Edit、连续图、必要确认/代表重复、质量/失败与复现齐全；合法复用计入完成。",
+      "reopened_reason": "Observed histories have only 10 trajectories/domain, one revision/domain and two diagnostic questions/domain; official history and required workload evidence missing."
+    },
+    {
+      "id": "WRITE",
+      "status": "in_progress",
+      "depends_on": [],
+      "action": "立即写 paper/manuscript.md 的问题、方法和设置；随新结果更新正文，依据 paper/README.md 整理证据。",
+      "outputs": [
+        "paper/manuscript.md",
+        "paper/reproduction.md"
+      ],
+      "acceptance": "形成连贯稿件与实际复现入口；历史版本不能合并冒充最终实现。",
+      "reopened_reason": "Draft exists; scope, incomplete cost totals and unsupported quality-cause claims need correction."
+    },
+    {
+      "id": "PACKAGE",
+      "status": "todo",
+      "depends_on": [
+        "REPAIR_EVAL",
+        "PUBLIC_BASELINES",
+        "SMALL_MAIN",
+        "WRITE"
+      ],
+      "action": "核对最终主表、机制表、图、确认、正文和复现；更新实际完成状态。",
+      "acceptance": "GOAL.md 既定正式主表、核心消融、连续图、质量/失败、确认/重复、正文及复现完成；结论可为优势成立或独特贡献不足，不预设胜出。",
+      "reopened_reason": "Command/file completion did not meet actual GOAL acceptance."
     }
   ],
-  "active_plan_task_ids": ["FREEZE_PAPER"],
+  "active_plan_task_ids": [
+    "SELECT",
+    "SMALL_MAIN",
+    "WRITE"
+  ],
   "backlog": [
     {
-      "id": "EXTERNAL_ADAPTATIONS",
+      "id": "NEW_FRAMEWORKS",
       "status": "deferred",
-      "action": "Stop new MemForest/LightMem adapters and scale; preserve results. Existing AgentRunbook/B3 main comparison; Raw RAG/Notes historical references."
+      "action": "Codex、AgentRunbook-C、MemForest、LightMem 及其他新适配暂停。"
+    },
+    {
+      "id": "NEW_CONSTRUCTION_DIRECTIONS",
+      "status": "deferred",
+      "action": "冷构建/自然增长新方法、新数据集、Medium 暂停。完整 Small 历史维护实验已列 SMALL_MAIN，非首轮前置且非 deferred。"
     },
     {
       "id": "NATIVE_JUDGE",
-      "status": "blocked_external",
-      "action": "Does not block local focused work"
+      "status": "deferred",
+      "action": "官方 Judge 不可用时保留待评答案，继续可评分质量与本地成本实验。"
     }
-  ]
+  ],
+  "update_revision": "execution-recovery-20261016",
+  "reuse_inventory": "execution/reuse_inventory.csv",
+  "optimization_guide": "docs/REUSE_AND_OPTIMIZATION.md",
+  "optimization_budget": {
+    "max_major_candidates": 2,
+    "default_action": "skip_optional_optimization",
+    "counting": "whole remaining development phase; switching bottlenecks does not reset",
+    "formal_evaluation": "no performance tuning; necessary bug fixes only"
+  },
+  "research_completion": "not_complete: correct evaluation and complete original required scope; negative conclusions allowed only after that scope is delivered",
+  "experiment_queue": {
+    "queue_id": "full-small-formal-queue-20261016-v1",
+    "status": "detached_wait_for_existing_expansion_then_sequential_execution",
+    "runner": "tools/run_full_small_formal.py",
+    "registered_plan": "execution/full-small-recovery-v1/experiment_plan.json",
+    "data_manifest": "manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json",
+    "runtime_manifest": "runs/focused-maintenance-v4/full-small-recovery-v1/runtime_manifest.json",
+    "runtime_freeze_status": "code_and_inputs_registered; actual complete snapshots must pass queued freeze gate before maintenance",
+    "active_gpu_job": "full-small-web-expansion-20261016-v1",
+    "queued_job": "full-small-formal-queue-20261016-v1",
+    "execution_mode": "existing detached launcher; waits for predecessor actual process/receipt; at most one model subprocess",
+    "required_history": {"web": 100, "enterprise": 100},
+    "fixed_cases": 8,
+    "unique_questions": 22,
+    "main_update_units": 32,
+    "ablation_update_units": 4,
+    "additional_repeat_update_units": 24,
+    "additional_sequence_update_units": 24,
+    "query_batches": 126,
+    "repeats_per_representative_case": 3,
+    "raw_unit_receipts": "execution/full-small-recovery-v1/units",
+    "scheduled_report": "reports/execution-recovery-20261016/full-small-v1",
+    "scheduled_initial_source_content_check": "reports/execution-recovery-20261016/full-small-v1/initial_source_contents.json",
+    "partial_initial_source_content_evidence": "reports/execution-recovery-20261016/initial-source-content-check-v1.json",
+    "boundary": "Registered/running is not completed. Round1 is reused in sequence/repeat summaries, not independent measurement. Semantic review and final paper acceptance still required. Exposed trajectories not relabeled held-out."
+  },
+  "historical_experiment_queue": {
+    "queue_id": "focused-maintenance-v4-formal-main-20261016",
+    "status": "historical_commands_finished_not_protocol_acceptance",
+    "execution_mode": "detached-sequential-single-gpu",
+    "runner": "execution/run_formal_ablation_queue.sh",
+    "single_gpu_rule": true,
+    "tasks": [
+      {
+        "id": "CORE_MAIN",
+        "status": "complete_reused",
+        "evidence": [
+          "results/tables/focused-maintenance-v4/public_main.csv",
+          "results/tables/focused-maintenance-v4/source_only_compare.csv",
+          "results/tables/focused-maintenance-v4/formal_reader_answers.csv"
+        ],
+        "scope": "B3, Source-only and source_coalesced on the frozen 10-trajectory/domain maintenance workload"
+      },
+      {
+        "id": "CORE_READER_REPEAT",
+        "status": "complete_reused",
+        "evidence": [
+          "results/tables/focused-maintenance-v4/formal_reader_repeat_20261016.csv"
+        ],
+        "scope": "one detached repeat with complete parseable answers; retained as variability evidence"
+      },
+      {
+        "id": "COLD_COMPONENT_ABLATIONS",
+        "status": "complete_reused",
+        "evidence": [
+          "results/tables/paper02_cold_construction.csv",
+          "results/tables/paper04_ablation_scale.csv"
+        ],
+        "scope": "joint extraction and exact embedding reuse; negative wall-time result retained"
+      },
+      {
+        "id": "PUBLIC_EXTERNAL_REFERENCE",
+        "status": "complete_reused_with_boundary",
+        "evidence": [
+          "results/tables/paper03_local_adapted_main.csv",
+          "reports/paper03_local_adapted_main.md"
+        ],
+        "scope": "Raw RAG/RAG+Notes cold/development reference only; no unsupported maintenance adapter is claimed"
+      },
+      {
+        "id": "FORMAL_OVERLAY_ABLATION",
+        "status": "complete",
+        "depends_on": [
+          "CORE_MAIN"
+        ],
+        "action": "Run source_overlay on the same frozen web and enterprise snapshots/revisions with identical current-state evidence, caches and budgets",
+        "output": "runs/focused-maintenance-v4/formal/{web,enterprise}-ablation-update/literal_revision-source_overlay"
+      },
+      {
+        "id": "FORMAL_DELTA_GUARDED_ABLATION",
+        "status": "complete",
+        "depends_on": [
+          "CORE_MAIN"
+        ],
+        "action": "Run delta_guarded on the same paired snapshots; record fallback/model work rather than treating a failure as zero cost",
+        "output": "runs/focused-maintenance-v4/formal/{web,enterprise}-ablation-update/literal_revision-delta_guarded"
+      },
+      {
+        "id": "FORMAL_ABLATION_READERS",
+        "status": "complete",
+        "depends_on": [
+          "FORMAL_OVERLAY_ABLATION",
+          "FORMAL_DELTA_GUARDED_ABLATION"
+        ],
+        "action": "Run fixed 2048-token Reader and two fixed questions per domain for both ablations; no retuning",
+        "output": "runs/focused-maintenance-v4/formal/*-ablation-update/literal_revision-*/revision_reader"
+      },
+      {
+        "id": "FORMAL_ABLATION_REPORT",
+        "status": "complete",
+        "depends_on": [
+          "FORMAL_ABLATION_READERS"
+        ],
+        "action": "Aggregate update/query/embedding/quality/failure metrics into the extended ablation table and report",
+        "output": "results/tables/focused-maintenance-v4/formal_ablation_extended.csv"
+      },
+      {
+        "id": "PAPER_SYNC",
+        "status": "complete",
+        "depends_on": [
+          "FORMAL_ABLATION_REPORT"
+        ],
+        "action": "Synchronize manuscript/reproduction with the completed or failed ablation rows; preserve negative and pending quality claims",
+        "output": [
+          "paper/manuscript.md",
+          "paper/reproduction.md"
+        ]
+      }
+    ],
+    "boundary": "Preserved historical execution receipts only. Query configuration is noncompliant, 10/domain is development scale, public maintenance is missing. Follow root tasks for current work."
+  },
+  "evidence_contract": "execution/experiment_contract.json",
+  "evidence_checker": "execution/verify_evidence.py"
 }

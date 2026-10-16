@@ -1,0 +1,12 @@
+{
+  "revision": "execution-recovery-20261016",
+  "deployed_contents_match": true,
+  "task_dependencies_acyclic": true,
+  "protected_files_unchanged": 10,
+  "regression_tests_passed": 9,
+  "old_reader_requests": 32,
+  "old_reader_requests_with_images": 31,
+  "new_model_calls": 0,
+  "pending": "Executing VS Code Codex receipt and first corrected paired Reader run",
+  "readiness": "Code/structure checks only; research remains incomplete"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "policy": "b3",
+    "update_llm_tokens": 23621,
+    "update_publish_s": 42.03799966600491,
+    "update_plus_query_llm_tokens": 93398,
+    "update_plus_query_wall_s": 80.50018013600493,
+    "correct": 6,
+    "fixed_questions": 6
+  },
+  {
+    "policy": "source_coalesced",
+    "update_llm_tokens": 0,
+    "update_publish_s": 4.369252108008368,
+    "update_plus_query_llm_tokens": 70175,
+    "update_plus_query_wall_s": 41.94963712396566,
+    "correct": 6,
+    "fixed_questions": 6
+  }
+]
