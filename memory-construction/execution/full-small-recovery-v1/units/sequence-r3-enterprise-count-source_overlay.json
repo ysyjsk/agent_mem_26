@@ -1,0 +1,25 @@
+{
+  "id": "sequence-r3-enterprise-count-source_overlay",
+  "started_at": "2026-10-16T10:08:55.170450+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_agentrunbook_updates.py",
+    "--source",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/sequence/r2/enterprise-count/source_overlay/literal_revision-source_overlay/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/sequence/r3/enterprise-count/source_overlay",
+    "--trajectory-id",
+    "0ab99e0c",
+    "--state-index",
+    "5",
+    "--revision-file",
+    "runs/focused-maintenance-v4/dev/sequence-final/enterprise-r3/revision.json",
+    "--cases",
+    "literal_revision",
+    "--policy-order",
+    "source_overlay",
+    "--current-state-evidence"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.170452+00:00"
+}

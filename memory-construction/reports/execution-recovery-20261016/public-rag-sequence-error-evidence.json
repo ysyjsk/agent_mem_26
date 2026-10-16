@@ -1,0 +1,841 @@
+{
+  "reviewed_at_utc": "2026-10-16T08:38:09.730229+00:00",
+  "scope": "Saved public development sequence; 5 histories/domain; same2targets repeated3times; no new QA trial",
+  "new_model_calls": 0,
+  "summary": {
+    "snapshots": 12,
+    "queries": 24,
+    "all_source_roundtrips": true,
+    "all_target_field_lines_still_published": true,
+    "complete_answers": 24,
+    "correct_answers": 10,
+    "actual_image_requests": 0,
+    "incorrect_missing_target_field_evidence": 12,
+    "incorrect_despite_supplied_current_fact": 2
+  },
+  "snapshots": [
+    {
+      "run": "web-r1-raw_rag",
+      "source_text_roundtrip": true,
+      "target_state_index": 4,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "title_current": [
+          "[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required"
+        ],
+        "name_preserved": [
+          "[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "e86e63f2f52e30da4665ad971be71ae3b26187578521a140e1a8f5f66dc271ad",
+      "published_trajectory_sha256": "9fcbfcf5da7a12683f389c77d7b91071455bb54fdcdefb69b92e34a80cb0c9db"
+    },
+    {
+      "run": "web-r1-rag_notes",
+      "source_text_roundtrip": true,
+      "target_state_index": 4,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "title_current": [
+          "[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required"
+        ],
+        "name_preserved": [
+          "[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "e86e63f2f52e30da4665ad971be71ae3b26187578521a140e1a8f5f66dc271ad",
+      "published_trajectory_sha256": "9fcbfcf5da7a12683f389c77d7b91071455bb54fdcdefb69b92e34a80cb0c9db"
+    },
+    {
+      "run": "web-r2-raw_rag",
+      "source_text_roundtrip": true,
+      "target_state_index": 4,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "title_current": [
+          "[121] textbox 'Title This field is required.' value='Cedar Point', clickable, visible, focused, required"
+        ],
+        "name_preserved": [
+          "[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "01b94407e594917df6ad2c0cfa824872c3fd01d8efa153234ae73975afd807a3",
+      "published_trajectory_sha256": "4238ac5849b8c2480388be991d7b18f5ed24572033120fed077161607c4a5735"
+    },
+    {
+      "run": "web-r2-rag_notes",
+      "source_text_roundtrip": true,
+      "target_state_index": 4,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "title_current": [
+          "[121] textbox 'Title This field is required.' value='Cedar Point', clickable, visible, focused, required"
+        ],
+        "name_preserved": [
+          "[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "01b94407e594917df6ad2c0cfa824872c3fd01d8efa153234ae73975afd807a3",
+      "published_trajectory_sha256": "4238ac5849b8c2480388be991d7b18f5ed24572033120fed077161607c4a5735"
+    },
+    {
+      "run": "web-r3-raw_rag",
+      "source_text_roundtrip": true,
+      "target_state_index": 4,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "title_current": [
+          "[121] textbox 'Title This field is required.' value='Silver Cove', clickable, visible, focused, required"
+        ],
+        "name_preserved": [
+          "[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "8170bf47b4cd8933aba843d8562fdb8f8b54db1adacc585da6707553434f5cf9",
+      "published_trajectory_sha256": "be5234b6258c668a06effdbbf2ea4de91a1c4b1be93a6bec7544a98aa32ebd6a"
+    },
+    {
+      "run": "web-r3-rag_notes",
+      "source_text_roundtrip": true,
+      "target_state_index": 4,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "title_current": [
+          "[121] textbox 'Title This field is required.' value='Silver Cove', clickable, visible, focused, required"
+        ],
+        "name_preserved": [
+          "[116] textbox 'Name This field is required.' value='Cyberpunk', clickable, visible, required"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "8170bf47b4cd8933aba843d8562fdb8f8b54db1adacc585da6707553434f5cf9",
+      "published_trajectory_sha256": "be5234b6258c668a06effdbbf2ea4de91a1c4b1be93a6bec7544a98aa32ebd6a"
+    },
+    {
+      "run": "enterprise-r1-raw_rag",
+      "source_text_roundtrip": true,
+      "target_state_index": 5,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "count_current": [
+          "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'"
+        ],
+        "selection_preserved": [
+          "[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "31989f5e1b86c521357be35b229f5b7bceb54ace14f88b3b1260fb3cf0b61ef5",
+      "published_trajectory_sha256": "470df0af855eef0b927ed9649a9ec0ed21f9f152ccc35baa8b3a9f131e3b83d5"
+    },
+    {
+      "run": "enterprise-r1-rag_notes",
+      "source_text_roundtrip": true,
+      "target_state_index": 5,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "count_current": [
+          "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'"
+        ],
+        "selection_preserved": [
+          "[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "31989f5e1b86c521357be35b229f5b7bceb54ace14f88b3b1260fb3cf0b61ef5",
+      "published_trajectory_sha256": "470df0af855eef0b927ed9649a9ec0ed21f9f152ccc35baa8b3a9f131e3b83d5"
+    },
+    {
+      "run": "enterprise-r2-raw_rag",
+      "source_text_roundtrip": true,
+      "target_state_index": 5,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "count_current": [
+          "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 105 records'"
+        ],
+        "selection_preserved": [
+          "[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "83ca6c497ac32cba0f97ff1ae320e5f8d775aec0044bcec0ea0a67c8d1d879c5",
+      "published_trajectory_sha256": "ca70601688dc54c13b63f6c43491d0d2740a817b18dd242c2974f184e847330c"
+    },
+    {
+      "run": "enterprise-r2-rag_notes",
+      "source_text_roundtrip": true,
+      "target_state_index": 5,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "count_current": [
+          "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 105 records'"
+        ],
+        "selection_preserved": [
+          "[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "83ca6c497ac32cba0f97ff1ae320e5f8d775aec0044bcec0ea0a67c8d1d879c5",
+      "published_trajectory_sha256": "ca70601688dc54c13b63f6c43491d0d2740a817b18dd242c2974f184e847330c"
+    },
+    {
+      "run": "enterprise-r3-raw_rag",
+      "source_text_roundtrip": true,
+      "target_state_index": 5,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "count_current": [
+          "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 107 records'"
+        ],
+        "selection_preserved": [
+          "[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "cf02d4f4c2c7e00d48649a315397a7d27ced30762464f4fc68215dfb906896f9",
+      "published_trajectory_sha256": "229ccaa22c923d3d619cd99c24b84134c638571f61d697ce1c0f2f867dba61d3"
+    },
+    {
+      "run": "enterprise-r3-rag_notes",
+      "source_text_roundtrip": true,
+      "target_state_index": 5,
+      "target_center_slice_covers_state": true,
+      "expected_field_lines": {
+        "count_current": [
+          "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 107 records'"
+        ],
+        "selection_preserved": [
+          "[a1639] combobox 'Choose option for field: Type' value='-- None --', clickable, visible, focused, hasPopup='menu', expanded=True"
+        ]
+      },
+      "all_expected_field_lines_in_target_center_slice": true,
+      "input_sha256": "cf02d4f4c2c7e00d48649a315397a7d27ced30762464f4fc68215dfb906896f9",
+      "published_trajectory_sha256": "229ccaa22c923d3d619cd99c24b84134c638571f61d697ce1c0f2f867dba61d3"
+    }
+  ],
+  "queries": [
+    {
+      "run": "web-r1-raw_rag",
+      "domain": "web",
+      "policy": "raw_rag",
+      "round": 1,
+      "question_id": "title_current",
+      "score": 1,
+      "answer": "Neon Harbor",
+      "gold": "Neon Harbor",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [
+        "[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required"
+      ],
+      "context_original_tokens": 22883,
+      "context_supplied_tokens": 11645,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r1-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "0196f78ebdb112f5ca03d01d7631b1cb7fff223d940b8e6013dd776c12b531c6",
+      "answers_sha256": "323597bfafd4fec38ced63d1c574617c59974f99712638c4f8cf94afe0a52a7d"
+    },
+    {
+      "run": "web-r1-raw_rag",
+      "domain": "web",
+      "policy": "raw_rag",
+      "round": 1,
+      "question_id": "name_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "Cyberpunk",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 47602,
+      "context_supplied_tokens": 8883,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r1-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "0196f78ebdb112f5ca03d01d7631b1cb7fff223d940b8e6013dd776c12b531c6",
+      "answers_sha256": "323597bfafd4fec38ced63d1c574617c59974f99712638c4f8cf94afe0a52a7d"
+    },
+    {
+      "run": "web-r1-rag_notes",
+      "domain": "web",
+      "policy": "rag_notes",
+      "round": 1,
+      "question_id": "title_current",
+      "score": 1,
+      "answer": "Neon Harbor",
+      "gold": "Neon Harbor",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [
+        "[121] textbox 'Title This field is required.' value='Neon Harbor', clickable, visible, focused, required"
+      ],
+      "context_original_tokens": 24166,
+      "context_supplied_tokens": 9614,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r1-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "4b869a45154a066060576bd9a3a4ff23f402608b6815c45e8a5edc4715fa0f32",
+      "answers_sha256": "27534caefcc8e172840e013f492dbe06c3ff085fa7bbdf1c2c17eb4fb232a35e"
+    },
+    {
+      "run": "web-r1-rag_notes",
+      "domain": "web",
+      "policy": "rag_notes",
+      "round": 1,
+      "question_id": "name_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "Cyberpunk",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 48844,
+      "context_supplied_tokens": 10125,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r1-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "4b869a45154a066060576bd9a3a4ff23f402608b6815c45e8a5edc4715fa0f32",
+      "answers_sha256": "27534caefcc8e172840e013f492dbe06c3ff085fa7bbdf1c2c17eb4fb232a35e"
+    },
+    {
+      "run": "web-r2-raw_rag",
+      "domain": "web",
+      "policy": "raw_rag",
+      "round": 2,
+      "question_id": "title_current",
+      "score": 1,
+      "answer": "Cedar Point",
+      "gold": "Cedar Point",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [
+        "[121] textbox 'Title This field is required.' value='Cedar Point', clickable, visible, focused, required"
+      ],
+      "context_original_tokens": 22883,
+      "context_supplied_tokens": 11357,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r2-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "92cf6bc89a9be68d162897431894a16696f1ea3dbfdaf279f719dbf5e10d6e26",
+      "answers_sha256": "d5d6f9fa9fa323ff426bfa1f056e615ecd7967af17cf9c42ae5dbd39d136644a"
+    },
+    {
+      "run": "web-r2-raw_rag",
+      "domain": "web",
+      "policy": "raw_rag",
+      "round": 2,
+      "question_id": "name_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "Cyberpunk",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 47602,
+      "context_supplied_tokens": 8883,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r2-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "92cf6bc89a9be68d162897431894a16696f1ea3dbfdaf279f719dbf5e10d6e26",
+      "answers_sha256": "d5d6f9fa9fa323ff426bfa1f056e615ecd7967af17cf9c42ae5dbd39d136644a"
+    },
+    {
+      "run": "web-r2-rag_notes",
+      "domain": "web",
+      "policy": "rag_notes",
+      "round": 2,
+      "question_id": "title_current",
+      "score": 1,
+      "answer": "Cedar Point",
+      "gold": "Cedar Point",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [
+        "[121] textbox 'Title This field is required.' value='Cedar Point', clickable, visible, focused, required"
+      ],
+      "context_original_tokens": 24166,
+      "context_supplied_tokens": 9614,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r2-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "6208b521541f1c3b038fcf1148bc90c691d753173ec12e71bd8d98fdc4f83f4f",
+      "answers_sha256": "2e2d1cc65cdc05553cec41a217a8a99f7c17c9ce12803fa25f9b749d347df72e"
+    },
+    {
+      "run": "web-r2-rag_notes",
+      "domain": "web",
+      "policy": "rag_notes",
+      "round": 2,
+      "question_id": "name_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "Cyberpunk",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 48844,
+      "context_supplied_tokens": 10125,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r2-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "6208b521541f1c3b038fcf1148bc90c691d753173ec12e71bd8d98fdc4f83f4f",
+      "answers_sha256": "2e2d1cc65cdc05553cec41a217a8a99f7c17c9ce12803fa25f9b749d347df72e"
+    },
+    {
+      "run": "web-r3-raw_rag",
+      "domain": "web",
+      "policy": "raw_rag",
+      "round": 3,
+      "question_id": "title_current",
+      "score": 1,
+      "answer": "Silver Cove",
+      "gold": "Silver Cove",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [
+        "[121] textbox 'Title This field is required.' value='Silver Cove', clickable, visible, focused, required"
+      ],
+      "context_original_tokens": 22879,
+      "context_supplied_tokens": 11643,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r3-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "9995643862ecea2c12832ea6cba6955c006ba5e90f154f8e51c8502e021e4121",
+      "answers_sha256": "e9d447d818f3597458d990a2a82341ebf514d85d7e62f3db83a84cf0427477f3"
+    },
+    {
+      "run": "web-r3-raw_rag",
+      "domain": "web",
+      "policy": "raw_rag",
+      "round": 3,
+      "question_id": "name_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "Cyberpunk",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 47602,
+      "context_supplied_tokens": 8883,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r3-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "9995643862ecea2c12832ea6cba6955c006ba5e90f154f8e51c8502e021e4121",
+      "answers_sha256": "e9d447d818f3597458d990a2a82341ebf514d85d7e62f3db83a84cf0427477f3"
+    },
+    {
+      "run": "web-r3-rag_notes",
+      "domain": "web",
+      "policy": "rag_notes",
+      "round": 3,
+      "question_id": "title_current",
+      "score": 1,
+      "answer": "Silver Cove",
+      "gold": "Silver Cove",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [
+        "[121] textbox 'Title This field is required.' value='Silver Cove', clickable, visible, focused, required"
+      ],
+      "context_original_tokens": 24162,
+      "context_supplied_tokens": 9612,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r3-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "e0f3d27a29412d3c6c63f6f353122725319a8c20e14a73e055496fc1f85ccdbb",
+      "answers_sha256": "ab8ff8d9b5719e57d7509fa4c04b9b4592cd60cfc545afd139097e00cae86fd5"
+    },
+    {
+      "run": "web-r3-rag_notes",
+      "domain": "web",
+      "policy": "rag_notes",
+      "round": 3,
+      "question_id": "name_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "Cyberpunk",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 48844,
+      "context_supplied_tokens": 10125,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/web-r3-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "e0f3d27a29412d3c6c63f6f353122725319a8c20e14a73e055496fc1f85ccdbb",
+      "answers_sha256": "ab8ff8d9b5719e57d7509fa4c04b9b4592cd60cfc545afd139097e00cae86fd5"
+    },
+    {
+      "run": "enterprise-r1-raw_rag",
+      "domain": "enterprise",
+      "policy": "raw_rag",
+      "round": 1,
+      "question_id": "count_current",
+      "score": 0,
+      "answer": "101",
+      "gold": "103",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [
+        "[0ab99e0c state 5 line 42] \t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'"
+      ],
+      "expected_field_lines_supplied": [
+        "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'"
+      ],
+      "context_original_tokens": 209108,
+      "context_supplied_tokens": 11392,
+      "context_budget_pruned": true,
+      "observed_failure_class": "supplied_current_fact_not_used",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r1-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "ea64fc585ef49f191372132001c33269ca62b00b7d1493276611d37b9632cfb6",
+      "answers_sha256": "ab6c4abd78f2f41cad1ef7f5cac53815297d47e72eb3422153fa9316ce3a34e1"
+    },
+    {
+      "run": "enterprise-r1-raw_rag",
+      "domain": "enterprise",
+      "policy": "raw_rag",
+      "round": 1,
+      "question_id": "selection_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "None",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 111784,
+      "context_supplied_tokens": 11818,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r1-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "ea64fc585ef49f191372132001c33269ca62b00b7d1493276611d37b9632cfb6",
+      "answers_sha256": "ab6c4abd78f2f41cad1ef7f5cac53815297d47e72eb3422153fa9316ce3a34e1"
+    },
+    {
+      "run": "enterprise-r1-rag_notes",
+      "domain": "enterprise",
+      "policy": "rag_notes",
+      "round": 1,
+      "question_id": "count_current",
+      "score": 1,
+      "answer": "103",
+      "gold": "103",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [
+        "[0ab99e0c state 5 line 42] \t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'"
+      ],
+      "expected_field_lines_supplied": [
+        "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 103 records'"
+      ],
+      "context_original_tokens": 210424,
+      "context_supplied_tokens": 9749,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r1-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "4037bd0d7cb7b5d7af9f9c89514b23de29974911a082c25b25506aa7ac638108",
+      "answers_sha256": "06b8f7b4e0674cb5157a750f9c3a5125964db569130785d712cf7c8d82de6dc8"
+    },
+    {
+      "run": "enterprise-r1-rag_notes",
+      "domain": "enterprise",
+      "policy": "rag_notes",
+      "round": 1,
+      "question_id": "selection_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "None",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 113070,
+      "context_supplied_tokens": 10131,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r1-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "4037bd0d7cb7b5d7af9f9c89514b23de29974911a082c25b25506aa7ac638108",
+      "answers_sha256": "06b8f7b4e0674cb5157a750f9c3a5125964db569130785d712cf7c8d82de6dc8"
+    },
+    {
+      "run": "enterprise-r2-raw_rag",
+      "domain": "enterprise",
+      "policy": "raw_rag",
+      "round": 2,
+      "question_id": "count_current",
+      "score": 1,
+      "answer": "105",
+      "gold": "105",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [
+        "[0ab99e0c state 5 line 42] \t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 105 records'"
+      ],
+      "expected_field_lines_supplied": [
+        "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 105 records'"
+      ],
+      "context_original_tokens": 209108,
+      "context_supplied_tokens": 11392,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r2-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "d64716ea5b9841578cdbecef13774b73e1e0cdeec98687277923c3ab2b8e4b6d",
+      "answers_sha256": "564217a44bbeefccfc6e5b56f284b6c6b75314b36e5e25bd8eece1b4583fb33b"
+    },
+    {
+      "run": "enterprise-r2-raw_rag",
+      "domain": "enterprise",
+      "policy": "raw_rag",
+      "round": 2,
+      "question_id": "selection_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "None",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 111784,
+      "context_supplied_tokens": 11818,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r2-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "d64716ea5b9841578cdbecef13774b73e1e0cdeec98687277923c3ab2b8e4b6d",
+      "answers_sha256": "564217a44bbeefccfc6e5b56f284b6c6b75314b36e5e25bd8eece1b4583fb33b"
+    },
+    {
+      "run": "enterprise-r2-rag_notes",
+      "domain": "enterprise",
+      "policy": "rag_notes",
+      "round": 2,
+      "question_id": "count_current",
+      "score": 1,
+      "answer": "105",
+      "gold": "105",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [
+        "[0ab99e0c state 5 line 42] \t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 105 records'"
+      ],
+      "expected_field_lines_supplied": [
+        "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 105 records'"
+      ],
+      "context_original_tokens": 210424,
+      "context_supplied_tokens": 9749,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r2-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "e6246d6625237e58b46e20716435ffb31a2ed48e326699a40a92ed5da9315f82",
+      "answers_sha256": "270b5e33f6dd2a375268948fe8c3ddaf84e920f8f20b04aea3b2e10cbe925d94"
+    },
+    {
+      "run": "enterprise-r2-rag_notes",
+      "domain": "enterprise",
+      "policy": "rag_notes",
+      "round": 2,
+      "question_id": "selection_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "None",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 113070,
+      "context_supplied_tokens": 10131,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r2-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "e6246d6625237e58b46e20716435ffb31a2ed48e326699a40a92ed5da9315f82",
+      "answers_sha256": "270b5e33f6dd2a375268948fe8c3ddaf84e920f8f20b04aea3b2e10cbe925d94"
+    },
+    {
+      "run": "enterprise-r3-raw_rag",
+      "domain": "enterprise",
+      "policy": "raw_rag",
+      "round": 3,
+      "question_id": "count_current",
+      "score": 1,
+      "answer": "107",
+      "gold": "107",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": true,
+      "target_state_excerpt_lines": [
+        "[0ab99e0c state 5 line 42] \t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 107 records'"
+      ],
+      "expected_field_lines_supplied": [
+        "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 107 records'"
+      ],
+      "context_original_tokens": 209108,
+      "context_supplied_tokens": 11392,
+      "context_budget_pruned": true,
+      "observed_failure_class": "correct",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r3-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "b67b927b55ec917d0f300d07309d416ebc2569d280c4d15f6032d47eddcdb311",
+      "answers_sha256": "05947cff53b7a3682542d97b2cf8a93d437395d2677586c7cbc6429f1cb63cc4"
+    },
+    {
+      "run": "enterprise-r3-raw_rag",
+      "domain": "enterprise",
+      "policy": "raw_rag",
+      "round": 3,
+      "question_id": "selection_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "None",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 111784,
+      "context_supplied_tokens": 11818,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r3-raw_rag/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "b67b927b55ec917d0f300d07309d416ebc2569d280c4d15f6032d47eddcdb311",
+      "answers_sha256": "05947cff53b7a3682542d97b2cf8a93d437395d2677586c7cbc6429f1cb63cc4"
+    },
+    {
+      "run": "enterprise-r3-rag_notes",
+      "domain": "enterprise",
+      "policy": "rag_notes",
+      "round": 3,
+      "question_id": "count_current",
+      "score": 0,
+      "answer": "101",
+      "gold": "107",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [
+        "[0ab99e0c state 5 line 42] \t\t\t\t\tStaticText 'Unfiltered Change Requests list showing 1 to 20 of 107 records'"
+      ],
+      "expected_field_lines_supplied": [
+        "StaticText 'Unfiltered Change Requests list showing 1 to 20 of 107 records'"
+      ],
+      "context_original_tokens": 210424,
+      "context_supplied_tokens": 9749,
+      "context_budget_pruned": true,
+      "observed_failure_class": "supplied_current_fact_not_used",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r3-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "b3e7a6f880ec61e2c5a9ab436bcd260ffa5457cf7a71d539d00cc5c01295e00f",
+      "answers_sha256": "bbcdaa9b652dad50eae2432ca1a9fbcc1a511d32c7ce9a042b7f4b95a22d4507"
+    },
+    {
+      "run": "enterprise-r3-rag_notes",
+      "domain": "enterprise",
+      "policy": "rag_notes",
+      "round": 3,
+      "question_id": "selection_preserved",
+      "score": 0,
+      "answer": "UNKNOWN",
+      "gold": "None",
+      "complete": true,
+      "truncated": false,
+      "service_status": "ok",
+      "actual_message_image_count": 0,
+      "target_raw_section_in_actual_message": false,
+      "target_state_excerpt_lines": [],
+      "expected_field_lines_supplied": [],
+      "context_original_tokens": 113070,
+      "context_supplied_tokens": 10131,
+      "context_budget_pruned": true,
+      "observed_failure_class": "target_state_field_evidence_absent",
+      "actual_requests_path": "runs/focused-maintenance-v4/public-repair-20261016/sequence/enterprise-r3-rag_notes/revision_reader/prompt_rows.jsonl",
+      "actual_requests_sha256": "b3e7a6f880ec61e2c5a9ab436bcd260ffa5457cf7a71d539d00cc5c01295e00f",
+      "answers_sha256": "bbcdaa9b652dad50eae2432ca1a9fbcc1a511d32c7ce9a042b7f4b95a22d4507"
+    }
+  ],
+  "limitations": [
+    "Final supplied contexts are post-budget; absent target evidence cannot distinguish initial ranking from budget pruning without a pre-budget trace.",
+    "Exact field-line checks are supplemented by scoped manual reading; not general semantic certification.",
+    "Generated Notes reviewed separately in rag-notes-sequence-memory-review.md. Scores and frozen methods unchanged."
+  ]
+}

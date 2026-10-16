@@ -1,0 +1,34 @@
+{
+  "revision_id": "confirmation-v2-web-2ab85f90-text",
+  "trajectory_id": "2ab85f90",
+  "domain": "web",
+  "source_edits": [
+    {
+      "state_index": 20,
+      "field": "text",
+      "old": "\t\t[679] heading 'Orders', visible",
+      "new": "\t\t[679] heading 'Sales Orders', visible",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Sales Orders",
+  "neighbor_state_index": 19,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  },
+  "revision_kind": "controlled_observation_correction",
+  "observation_field": "the main heading of the Magento orders page",
+  "old_value": "Orders",
+  "new_value": "Sales Orders",
+  "counterfactual_notice": "Researcher-defined local correction to one recorded text observation; not a naturally observed environment change. Actions, thoughts, outcomes and other states remain unchanged.",
+  "source_evidence": {
+    "official_file": "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl",
+    "state_index": 20,
+    "text_sha256": "0b52d7fc41bd951d7d349699de67b0bc354c0125f21dc4a4162102256d34324b",
+    "url": "http://localhost:9083/admin/sales/order/index/order_id/136/"
+  }
+}

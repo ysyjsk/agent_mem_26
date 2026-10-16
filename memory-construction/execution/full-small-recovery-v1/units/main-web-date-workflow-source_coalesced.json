@@ -1,0 +1,25 @@
+{
+  "id": "main-web-date-workflow-source_coalesced",
+  "started_at": "2026-10-16T10:08:55.160992+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_agentrunbook_updates.py",
+    "--source",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/matched/web/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/web-date-workflow/source_coalesced",
+    "--trajectory-id",
+    "2a99f536",
+    "--state-index",
+    "3",
+    "--revision-file",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/web-date-workflow-revision.json",
+    "--cases",
+    "literal_revision",
+    "--policy-order",
+    "source_coalesced",
+    "--current-state-evidence"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.160994+00:00"
+}

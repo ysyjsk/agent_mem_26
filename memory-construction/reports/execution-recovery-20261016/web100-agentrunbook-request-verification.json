@@ -1,0 +1,328 @@
+{
+  "checked_at_utc": "2026-10-16T08:47:19.235133+00:00",
+  "scope": "Completed90-trajectory web AgentRunbook expansion; excludes10historical partitions and queries",
+  "raw_ledger": "runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-agentrunbook/memory_state/model_calls.jsonl",
+  "raw_ledger_sha256": "724c68c1c9584f13a91ccebd74d15e6b12fa59328289ee780c02765d04c0ffa2",
+  "new_model_calls_for_check": 0,
+  "actual_llm_attempts": 892,
+  "request_settings_exceptions": [],
+  "actual_request_kinds": {
+    "joint_event": {
+      "llm_calls": 727,
+      "llm_input_tokens": 10697000,
+      "llm_output_tokens": 264899,
+      "llm_unknown_usage_calls": 0,
+      "llm_failed_calls": 0,
+      "budgets": {
+        "2048": 727
+      },
+      "recorded_request_elapsed_sum_s": 10896.459357833723,
+      "time_scope": "sum of request elapsed times, NOT publish/process wall"
+    },
+    "single_event": {
+      "llm_calls": 60,
+      "llm_input_tokens": 627311,
+      "llm_output_tokens": 11141,
+      "llm_unknown_usage_calls": 0,
+      "llm_failed_calls": 0,
+      "budgets": {
+        "1024": 60
+      },
+      "recorded_request_elapsed_sum_s": 501.83511992014246,
+      "time_scope": "sum of request elapsed times, NOT publish/process wall"
+    },
+    "notes_generation": {
+      "llm_calls": 90,
+      "llm_input_tokens": 261895,
+      "llm_output_tokens": 39895,
+      "llm_unknown_usage_calls": 0,
+      "llm_failed_calls": 0,
+      "budgets": {
+        "8192": 90
+      },
+      "recorded_request_elapsed_sum_s": 1172.855832604575,
+      "time_scope": "sum of request elapsed times, NOT publish/process wall"
+    },
+    "notes_json_repair": {
+      "llm_calls": 15,
+      "llm_input_tokens": 8527,
+      "llm_output_tokens": 6620,
+      "llm_unknown_usage_calls": 0,
+      "llm_failed_calls": 0,
+      "budgets": {
+        "8192": 15
+      },
+      "recorded_request_elapsed_sum_s": 180.34991260891547,
+      "time_scope": "sum of request elapsed times, NOT publish/process wall"
+    }
+  },
+  "boundary": "Actual request type, text-only/thinking/model settings, finish reasons and recorded usage. Stop and nonempty JSON do not certify semantic quality.",
+  "extraction_outcomes": {
+    "parsed_joint_groups": 723,
+    "split_groups_by_reason": {
+      "group_parse_failure": 4,
+      "input_context_limit": 6
+    },
+    "unsuccessful_joint_output_cost_included_in_totals": {
+      "llm_calls": 4,
+      "llm_input_tokens": 60279,
+      "llm_output_tokens": 1218,
+      "llm_unknown_usage_calls": 0,
+      "llm_failed_calls": 0
+    },
+    "all_split_records": [
+      {
+        "record_id": "d0512e1798de4c0f9a1f6745415fbd12",
+        "timestamp_epoch": 1792123610.4110203,
+        "channel": "event_group",
+        "trajectory_id": "06c70de4",
+        "event_ids": [
+          "event_0042_0043",
+          "event_0043_0044"
+        ],
+        "state_ids": [
+          42,
+          43,
+          44
+        ],
+        "full_input_tokens_preflight": 29588,
+        "single_input_tokens_preflight": [
+          17720,
+          17752
+        ],
+        "prepared_input_tokens": 15198,
+        "state_max_chars": 12000,
+        "request_sha256": "bbb94d7066d9911efa60fb63c31019c451de7904775a6b4a9e14328412b379f9",
+        "status": "split",
+        "reason": "group_parse_failure"
+      },
+      {
+        "record_id": "aa152098ba4940c6aedfe580e479ac2d",
+        "timestamp_epoch": 1792130213.8334465,
+        "channel": "event_group",
+        "trajectory_id": "87d5dc7f",
+        "event_ids": [
+          "event_0000_0001",
+          "event_0001_0002"
+        ],
+        "state_ids": [
+          0,
+          1,
+          2
+        ],
+        "full_input_tokens_preflight": 12122,
+        "single_input_tokens_preflight": [
+          10050,
+          8341
+        ],
+        "prepared_input_tokens": 12122,
+        "state_max_chars": null,
+        "request_sha256": "2e989845c83354203c49cc917d3da306c71c3ae8f79be98bdb3905bd6d7ad49d",
+        "status": "split",
+        "reason": "group_parse_failure"
+      },
+      {
+        "record_id": "72166508f1d5441aa0059e2477a95c78",
+        "timestamp_epoch": 1792130473.1648653,
+        "channel": "event_group",
+        "trajectory_id": "87d5dc7f",
+        "event_ids": [
+          "event_0036_0037",
+          "event_0037_0038"
+        ],
+        "state_ids": [
+          36,
+          37,
+          38
+        ],
+        "full_input_tokens_preflight": 17895,
+        "single_input_tokens_preflight": [
+          12851,
+          12875
+        ],
+        "prepared_input_tokens": 17895,
+        "state_max_chars": null,
+        "request_sha256": "6201b0cb3a315800b016d5621b3e713fcacfa57d8e7821d0efad637814dfab82",
+        "status": "split",
+        "reason": "group_parse_failure"
+      },
+      {
+        "record_id": "67794373b34e4484afb465767f589fca",
+        "timestamp_epoch": 1792134109.2872021,
+        "channel": "event_group",
+        "trajectory_id": "c8041f65",
+        "event_ids": [
+          "event_0020_0021",
+          "event_0021_0022"
+        ],
+        "state_ids": [
+          20,
+          21,
+          22
+        ],
+        "full_input_tokens_preflight": 21782,
+        "single_input_tokens_preflight": [
+          15201,
+          15264
+        ],
+        "prepared_input_tokens": 15064,
+        "state_max_chars": 12000,
+        "request_sha256": "0f9371c9c595ca69fbf6e5124d98219bee4d98c99291cc584a1030e1a1936d80",
+        "status": "split",
+        "reason": "group_parse_failure"
+      },
+      {
+        "record_id": "8122b4894cb84759b760ed56904c96b9",
+        "timestamp_epoch": 1792134256.011269,
+        "channel": "event_group",
+        "trajectory_id": "cdc1b110",
+        "event_ids": [
+          "event_0008_0009",
+          "event_0009_0010"
+        ],
+        "state_ids": [
+          8,
+          9,
+          10
+        ],
+        "full_input_tokens_preflight": 32718,
+        "single_input_tokens_preflight": [
+          22332,
+          22440
+        ],
+        "prepared_input_tokens": 18408,
+        "state_max_chars": 12000,
+        "request_sha256": "519f685697b2f25b8e12f73faab90b36f5f5bfb9096dcb1a603d44a8588cd1dd",
+        "status": "split",
+        "reason": "input_context_limit"
+      },
+      {
+        "record_id": "4816b7c420bb4060a33928fbb23151b3",
+        "timestamp_epoch": 1792134275.1344638,
+        "channel": "event_group",
+        "trajectory_id": "cdc1b110",
+        "event_ids": [
+          "event_0010_0011",
+          "event_0011_0012"
+        ],
+        "state_ids": [
+          10,
+          11,
+          12
+        ],
+        "full_input_tokens_preflight": 32975,
+        "single_input_tokens_preflight": [
+          22524,
+          22658
+        ],
+        "prepared_input_tokens": 18656,
+        "state_max_chars": 12000,
+        "request_sha256": "b46294092d0bf04f46012707693934cd4e8ce6238d58d40ae719a4d2b72195f7",
+        "status": "split",
+        "reason": "input_context_limit"
+      },
+      {
+        "record_id": "4381bfd91026466b937fc2b3a1eafb32",
+        "timestamp_epoch": 1792134294.1993124,
+        "channel": "event_group",
+        "trajectory_id": "cdc1b110",
+        "event_ids": [
+          "event_0012_0013",
+          "event_0013_0014"
+        ],
+        "state_ids": [
+          12,
+          13,
+          14
+        ],
+        "full_input_tokens_preflight": 32771,
+        "single_input_tokens_preflight": [
+          22458,
+          22354
+        ],
+        "prepared_input_tokens": 18452,
+        "state_max_chars": 12000,
+        "request_sha256": "592e178405d4cbee6ef2ee3122540a1e9b65244cec9b05c891746905bf42c69e",
+        "status": "split",
+        "reason": "input_context_limit"
+      },
+      {
+        "record_id": "35d9884389714aa791ff1ba6bab0060a",
+        "timestamp_epoch": 1792134313.3265939,
+        "channel": "event_group",
+        "trajectory_id": "cdc1b110",
+        "event_ids": [
+          "event_0014_0015",
+          "event_0015_0016"
+        ],
+        "state_ids": [
+          14,
+          15,
+          16
+        ],
+        "full_input_tokens_preflight": 32719,
+        "single_input_tokens_preflight": [
+          22443,
+          22371
+        ],
+        "prepared_input_tokens": 18400,
+        "state_max_chars": 12000,
+        "request_sha256": "3b659f6d3bc495983f4764191fba6c22bd3ae969036b1ecc9864c942bca29998",
+        "status": "split",
+        "reason": "input_context_limit"
+      },
+      {
+        "record_id": "37e66a40509040c8aa3598744aba8bad",
+        "timestamp_epoch": 1792134332.358457,
+        "channel": "event_group",
+        "trajectory_id": "cdc1b110",
+        "event_ids": [
+          "event_0016_0017",
+          "event_0017_0018"
+        ],
+        "state_ids": [
+          16,
+          17,
+          18
+        ],
+        "full_input_tokens_preflight": 32745,
+        "single_input_tokens_preflight": [
+          22458,
+          22401
+        ],
+        "prepared_input_tokens": 18426,
+        "state_max_chars": 12000,
+        "request_sha256": "ea8da7c1d8859fa5cd1f9bff05b818cf7b1e31fe39d877c1afc03348fcaaf79e",
+        "status": "split",
+        "reason": "input_context_limit"
+      },
+      {
+        "record_id": "a0513431844a4de4b3f001a9a4f95024",
+        "timestamp_epoch": 1792134352.277227,
+        "channel": "event_group",
+        "trajectory_id": "cdc1b110",
+        "event_ids": [
+          "event_0018_0019",
+          "event_0019_0020"
+        ],
+        "state_ids": [
+          18,
+          19,
+          20
+        ],
+        "full_input_tokens_preflight": 32808,
+        "single_input_tokens_preflight": [
+          22481,
+          22499
+        ],
+        "prepared_input_tokens": 18489,
+        "state_max_chars": 12000,
+        "request_sha256": "3f18fc68cf76142e24a79d8db3efe53db6c22182ed8a19822da550815eaa7337",
+        "status": "split",
+        "reason": "input_context_limit"
+      }
+    ],
+    "new_note_fallbacks": [],
+    "boundary": "No transport failures is not zero parse failures; four unsuccessful joint outputs and15notes-format-repair requests remain fully charged."
+  }
+}

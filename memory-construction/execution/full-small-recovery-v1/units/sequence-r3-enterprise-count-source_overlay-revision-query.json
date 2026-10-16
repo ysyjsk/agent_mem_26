@@ -1,0 +1,22 @@
+{
+  "id": "sequence-r3-enterprise-count-source_overlay-revision-query",
+  "started_at": "2026-10-16T10:08:55.170505+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_focused_formal_reader.py",
+    "--domain",
+    "enterprise",
+    "--policy",
+    "source_overlay",
+    "--memory-dir",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/sequence/r3/enterprise-count/source_overlay/literal_revision-source_overlay/memory_state",
+    "--questions-path",
+    "runs/focused-maintenance-v4/dev/sequence-final/enterprise-r3/data/questions.jsonl",
+    "--output-root",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/sequence/r3/enterprise-count/source_overlay/literal_revision-source_overlay/revision-reader",
+    "--trajectories-path",
+    "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.170507+00:00"
+}

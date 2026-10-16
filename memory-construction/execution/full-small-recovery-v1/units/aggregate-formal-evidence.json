@@ -1,0 +1,10 @@
+{
+  "id": "aggregate-formal-evidence",
+  "started_at": "2026-10-16T10:08:55.170556+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/report_full_small_formal.py"
+  ],
+  "status": "completed",
+  "finished_at": "2026-10-16T10:08:55.564538+00:00"
+}

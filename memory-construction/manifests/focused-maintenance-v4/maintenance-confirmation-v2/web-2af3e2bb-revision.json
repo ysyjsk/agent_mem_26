@@ -1,0 +1,34 @@
+{
+  "revision_id": "confirmation-v2-web-2af3e2bb-text",
+  "trajectory_id": "2af3e2bb",
+  "domain": "web",
+  "source_edits": [
+    {
+      "state_index": 13,
+      "field": "text",
+      "old": "\t\t\t[143] textbox 'Title This field is required.' value='We won first place in the costume contest!', visible, required\n\t\t\t\tStaticText 'We won first place in the costume contest!'",
+      "new": "\t\t\t[143] textbox 'Title This field is required.' value='We won second place in the costume contest!', visible, required\n\t\t\t\tStaticText 'We won second place in the costume contest!'",
+      "count": 1
+    }
+  ],
+  "changed_fact": "We won second place in the costume contest!",
+  "neighbor_state_index": 12,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  },
+  "revision_kind": "controlled_observation_correction",
+  "observation_field": "the text in the Title field of the funny submission form",
+  "old_value": "We won first place in the costume contest!",
+  "new_value": "We won second place in the costume contest!",
+  "counterfactual_notice": "Researcher-defined local correction to one recorded text observation; not a naturally observed environment change. Actions, thoughts, outcomes and other states remain unchanged.",
+  "source_evidence": {
+    "official_file": "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl",
+    "state_index": 13,
+    "text_sha256": "b9cfc0d983582e53327c1732a042563c6d155977df4238b78a08ddb2988fa0e8",
+    "url": "http://localhost:9080/submit/funny"
+  }
+}

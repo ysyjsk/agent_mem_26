@@ -1,0 +1,23 @@
+{
+  "revision_id": "independent-enterprise-1a755059-thought",
+  "trajectory_id": "1a755059",
+  "domain": "enterprise",
+  "source_edits": [
+    {
+      "state_index": 50,
+      "field": "thoughts",
+      "old": "The page is the ServiceNow Order Status confirmation for the completed order. It shows Request Number REQ0013212 and estimated delivery date 2026-02-15 for “Request for iPad mini” (qty 1, total $499.00). The goal (placing the order) is already complete, so the best next action is to send the user the confirmation details.",
+      "new": "The page is the ServiceNow Order Status confirmation for the completed order. It shows Request Number REQ0013212 and estimated delivery date 2026-02-15 for “Request for iPad mini” (qty 1, total $499.00). The goal (placing the order) is already complete, so the best next action is to send the user the confirmation details. Independent correction: the problem-workflow status is confirmed current.",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Independent correction: the problem-workflow status is confirmed current.",
+  "neighbor_state_index": 49,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  }
+}

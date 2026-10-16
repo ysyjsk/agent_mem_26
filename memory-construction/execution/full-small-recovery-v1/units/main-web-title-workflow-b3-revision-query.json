@@ -1,0 +1,22 @@
+{
+  "id": "main-web-title-workflow-b3-revision-query",
+  "started_at": "2026-10-16T10:08:55.159546+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_focused_formal_reader.py",
+    "--domain",
+    "web",
+    "--policy",
+    "b3",
+    "--memory-dir",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/web-title-workflow/b3/literal_revision-b3/memory_state",
+    "--questions-path",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/web-title-workflow-questions.jsonl",
+    "--output-root",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/web-title-workflow/b3/literal_revision-b3/revision-reader",
+    "--trajectories-path",
+    "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.159548+00:00"
+}

@@ -92,3 +92,6 @@ Manifest 使用现有 JSON 即可，不建设新管理平台：
 
 ## 执行落实（execution-recovery-20261016）
 运行参数统一读取 execution/experiment_contract.json；正式 Reader 由 tools/focused_runtime.py 在导入 harness 前应用共同设置。实际发送 messages、加载快照和 usage 是核验依据，不以注释、目录名或声明替代。修复与质量分类见 docs/EXECUTION_RECOVERY.md；本次不更改前述科学比较范围。实际四行维护主表与完整历史缺失时，不能以负结果或冷构建参考替代完成条件。
+
+## 收尾补充（paper-delivery-20261016）
+按 [PAPER_EVIDENCE_PLAN](PAPER_EVIDENCE_PLAN.md) 完成 A 既定矩阵，再执行 maintenance-confirmation-v2。B旧v1全是thoughts修订，与直接Coalescing要求text不符；此次评测前纠正负载，不改方法、A输入、8目标轨迹或计算预算。B有历史评测暴露，不称held-out。该计划已固定统计、正常题语义评分和四表两图；不增加性能候选、公开框架或第三批。本文早期“先首表/补Source-only”等实施建议只在阶段缺失时执行，不是重做命令。

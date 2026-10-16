@@ -1,0 +1,19 @@
+{
+  "id": "expand-enterprise-agentrunbook",
+  "started_at": "2026-10-16T08:57:35.723186+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/extend_full_small_memory.py",
+    "--domain",
+    "enterprise",
+    "--source",
+    "runs/focused-maintenance-v4/formal/matched-enterprise/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/initial/enterprise-agentrunbook",
+    "--manifest",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json"
+  ],
+  "status": "failed",
+  "error": "CalledProcessError(1, ['/data/predator/ly/Mem/.venv/bin/python', 'tools/extend_full_small_memory.py', '--domain', 'enterprise', '--source', 'runs/focused-maintenance-v4/formal/matched-enterprise/memory_state', '--output', 'runs/focused-maintenance-v4/full-small-recovery-v1/initial/enterprise-agentrunbook', '--manifest', 'manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json'])",
+  "finished_at": "2026-10-16T09:17:57.008419+00:00"
+}

@@ -5,6 +5,7 @@ No model calls, no score changes, no automatic semantic certification. The
 original outputs and legacy tables are never overwritten.
 """
 import argparse
+from collections import Counter
 import csv
 import hashlib
 from html import escape
@@ -38,6 +39,18 @@ def initial_ledger_summary(records):
     controllers = [r for r in records if r.get('channel') == 'controller']
     embedding = [r for r in records if r.get('channel') == 'embedding']
     result = attempt_costs(controllers, 'initial_llm')
+    groups = [r for r in records if r.get('channel') == 'event_group']
+    result.update(initial_joint_parsed_groups=sum(r.get('status') == 'parsed' for r in groups),
+                  initial_joint_split_groups=sum(r.get('status') == 'split' for r in groups),
+                  initial_joint_parse_failures=sum(r.get('status') == 'split' and r.get('reason') == 'group_parse_failure' for r in groups),
+                  initial_joint_budget_splits=sum(r.get('status') == 'split' and r.get('reason') == 'input_context_limit' for r in groups),
+                  initial_notes_repair_calls=sum(
+                      any(m.get('role') == 'system' and isinstance(m.get('content'), str)
+                          and m['content'].startswith('Rewrite the draft into valid JSON only.')
+                          for m in r.get('messages', [])) for r in controllers))
+    result['failure_count_scope'] = ('llm_failed_calls counts logged request failures, not parse/semantic failure; '
+                                     'joint parse failures and Notes repair requests are separate observed records, '
+                                     'with their request costs already included in totals; missing legacy traces are not proof of absence')
     result.update(initial_embedding_calls=len(embedding),
                   initial_embedding_vectors=usage(embedding,'input_text_count'),
                   initial_embedding_input_tokens=usage(embedding,'prompt_tokens'),
@@ -48,6 +61,23 @@ def initial_ledger_summary(records):
     result['initial_llm_tokens'] = total([result['initial_llm_input_tokens'], result['initial_llm_output_tokens']])
     result['ledger_coverage'] = 'observed non-query requests in inherited own-history ledger; not proof all historical work was logged'
     return result
+
+
+def initial_note_fallbacks(memory, trajectory_ids):
+    """Native fallback Notes are usable artifacts, not successful extraction."""
+    rows = []
+    for pool in ('procedure_note', 'hint_note'):
+        path = Path(memory)/'pools'/f'{pool}_pool.jsonl'
+        if not path.exists():
+            continue
+        for note in jsonl(path):
+            if (note.get('trajectory_id') in trajectory_ids and
+                    note.get('description') in (
+                        'Fallback procedure note built when LLM note extraction failed.',
+                        'Fallback hint note built when LLM note extraction failed.')):
+                rows.append({'pool':pool, 'trajectory_id':note['trajectory_id'],
+                             'entry_id':note['entry_id'], 'title':note.get('title')})
+    return rows
 
 
 def dump(path, value):
@@ -73,6 +103,37 @@ def reader_usage(answer):
     if not u.get('prompt_tokens') and not u.get('completion_tokens'):
         return {}
     return u
+
+
+def execution_evidence(steps):
+    """A marker alone cannot certify a unit whose queue validation failed.
+
+    The aggregation step itself has no terminal receipt while this reporter
+    runs; only upstream measurement/freeze units are included here.
+    """
+    rows = []
+    for step in steps:
+        if step['kind'] == 'report':
+            continue
+        receipt_path = PLAN.parent/'units'/f"{step['id']}.json"
+        receipt = load(receipt_path) if receipt_path.exists() else {}
+        matches = bool(receipt) and receipt.get('id') == step['id'] and receipt.get('command') == step['command']
+        marker_exists = (ROOT/step['marker']).exists()
+        rows.append({'unit':step['id'], 'kind':step['kind'], 'marker_exists':marker_exists,
+                     'receipt_path':str(receipt_path), 'receipt_status':receipt.get('status', 'missing'),
+                     'receipt_matches_registered_step':matches, 'error':receipt.get('error'),
+                     'queue_unit_accepted':marker_exists and matches and receipt.get('status') == 'completed'})
+    return rows
+
+
+def question_identity(fixed, answers):
+    """Keep the fixed denominator; duplicate/foreign answers cannot fill gaps."""
+    expected = Counter(q['id'] for q in fixed)
+    actual = Counter(a['question_id'] for a in answers)
+    return {'missing_answers':sum((expected-actual).values()),
+            'unexpected_or_excess_answers':sum((actual-expected).values()),
+            'duplicate_answer_records':sum(n-1 for n in actual.values()),
+            'query_id_mismatch_batches':int(expected != actual)}
 
 
 def target_event_size(events, trajectory_id, policy):
@@ -184,8 +245,8 @@ def query_evidence(step):
                   unscored_incomplete=sum(a.get('evaluation_status') == 'not_scored_incomplete' for a in answers),
                   truncated=sum(bool(a.get('reader_truncated')) for a in answers),
                   service_failures=sum(a.get('reader_status') != 'ok' for a in answers),
-                  parse_failures=sum(a.get('reader_status') == 'ok' and not a.get('reader_truncated') and a.get('reader_parse_status') != 'boxed' for a in answers),
-                  missing_answers=max(len(fixed) - len(answers), 0))
+                  parse_failures=sum(a.get('reader_status') == 'ok' and not a.get('reader_truncated') and a.get('reader_parse_status') != 'boxed' for a in answers))
+    result.update(question_identity(fixed, answers))
     result['query_embedding_transport_attempts'] = None
     result['query_llm_tokens'] = total(result[p+'_'+s] for p in ('query_controller', 'query_reader')
                                        for s in ('input_tokens', 'output_tokens'))
@@ -317,6 +378,7 @@ SUM_FIELDS = ['update_publish_s', 'update_llm_calls', 'update_llm_input_tokens',
               'query_embedding_input_tokens', 'query_embedding_failed_calls', 'query_embedding_unknown_usage_calls', 'query_wall_s',
               'update_plus_query_llm_tokens', 'update_plus_query_wall_s', 'complete_answers', 'fixed_questions',
               'correct', 'pending', 'unscored_incomplete', 'truncated', 'service_failures', 'parse_failures', 'missing_answers',
+              'unexpected_or_excess_answers', 'duplicate_answer_records', 'query_id_mismatch_batches',
               'revision_fixed_questions', 'revision_correct', 'normal_fixed_questions', 'normal_correct']
 
 
@@ -339,7 +401,10 @@ def aggregate(rows, policies, expected_cases, *, case_definitions=None, domain=N
             row[field] = total(r.get(field) for r in selected) if selected else None
         expected_ids = {c['id'] for c in case_definitions} if case_definitions is not None else None
         ids_match = expected_ids is None or {r['case_id'] for r in selected} == expected_ids
-        row['complete_fixed_workload'] = len(selected) == expected_cases and ids_match and all(r['expected_query_batches'] == r['completed_query_batches'] for r in selected)
+        row['complete_fixed_workload'] = len(selected) == expected_cases and ids_match and all(
+            r['expected_query_batches'] == r['completed_query_batches'] and
+            r.get('queue_unit_accepted') is True and r.get('query_batches_accepted') is True and
+            r.get('query_id_mismatch_batches') == 0 for r in selected)
         if domain is not None:row['domain'] = domain
         if expected_ids is not None:row['expected_case_ids'] = json.dumps(sorted(expected_ids))
         result.append(row)
@@ -352,6 +417,9 @@ def continuous_figure(path, rows, *, title='Full-history fixed revisions: measur
     columns = columns or [('cumulative_update_query_llm_tokens', 'cumulative LLM tokens'),
                           ('cumulative_update_query_wall_s', 'cumulative seconds')]
     colors = dict(zip(POLICIES, ['#64748b','#9333ea','#2563eb','#059669','#d97706','#dc2626']))
+    dashes = dict(zip(POLICIES, ['none', '9 3', 'none', '7 4', '2 3', '9 3 2 3']))
+    labels = dict(zip(POLICIES, ['Raw RAG', 'RAG+Notes', 'AgentRunbook-R/B3',
+                               'Coalesced', 'Source-only', 'Overlay']))
     svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="640">',
            '<rect width="100%" height="100%" fill="white"/>',
            '<g font-family="sans-serif" font-size="12">',
@@ -370,15 +438,20 @@ def continuous_figure(path, rows, *, title='Full-history fixed revisions: measur
                 rr = sorted((r for r in data if r['policy'] == policy), key=lambda r:r['round'])
                 points = ' '.join(f'{x+(r["round"]-1)*w/2:.1f},{y+h*(1-r[field]/maximum):.1f}' for r in rr)
                 if rr:
-                    svg.append(f'<polyline points="{points}" fill="none" stroke="{colors[policy]}" stroke-width="2"/>')
+                    # Dashed Coalesced remains distinguishable when it exactly
+                    # coincides with the solid B3 line; do not jitter real data.
+                    svg.append(f'<polyline data-policy="{policy}" points="{points}" fill="none" stroke="{colors[policy]}" stroke-width="2" stroke-dasharray="{dashes[policy]}"/>')
                     for point in points.split():
                         cx,cy=point.split(',')
                         svg.append(f'<circle cx="{cx}" cy="{cy}" r="3" fill="{colors[policy]}"/>')
             for round_number in (1,2,3):
                 svg.append(f'<text x="{x+(round_number-1)*w/2}" y="{y+h+18}">{round_number}</text>')
+            svg.append(f'<text x="{x+w/2}" y="{y+h+38}" text-anchor="middle">revision round</text>')
             svg.append(f'<text x="{x}" y="{y-12}">{domain}: {escape(label)}</text>')
     for i, policy in enumerate(policies):
-        svg.append(f'<text x="{25+i*172}" y="625" fill="{colors[policy]}">{policy}</text>')
+        lx = 15+i*174
+        svg.append(f'<line x1="{lx}" y1="621" x2="{lx+21}" y2="621" stroke="{colors[policy]}" stroke-width="2" stroke-dasharray="{dashes[policy]}"/>')
+        svg.append(f'<text x="{lx+26}" y="625" fill="{colors[policy]}">{labels[policy]}</text>')
     svg.append('</g></svg>')
     Path(path).write_text('\n'.join(svg)+'\n')
 
@@ -398,15 +471,23 @@ def main():
     out = ROOT / a.output
     out.mkdir(parents=True, exist_ok=False)
     plan = load(PLAN); steps = plan['steps']
+    execution = execution_evidence(steps)
+    execution_by_id = {r['unit']:r for r in execution}
+    table(out/'execution_receipts.csv', execution)
     manifest = load(ROOT/'manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json')
     case_definitions = manifest['cases']
     updates = [s for s in steps if s['kind'] == 'update']
     rows, questions, checks, missing, by_unit, query_by_unit = [], [], [], [], {}, {}
+    identity_mismatches = []
     for step in updates:
         if not (ROOT / step['marker']).exists():
             missing.append(step['id']); continue
         children = [q for q in steps if q['kind'] == 'reader' and step['id'] in q['depends_on']]
         row, answers, queries = update_evidence(step, children)
+        row['queue_unit_accepted'] = execution_by_id[step['id']]['queue_unit_accepted']
+        row['queue_validation_status'] = execution_by_id[step['id']]['receipt_status']
+        row['query_batches_accepted'] = all(execution_by_id[q['id']]['queue_unit_accepted'] for q in children)
+        identity_mismatches.extend(q['id'] for q,cost in queries if cost['query_id_mismatch_batches'])
         rows.append(row); questions.extend(answers); checks.append(quality_record(step))
         by_unit[step['id']] = row; query_by_unit[step['id']] = queries
     table(out/'all_update_units.csv', rows); table(out/'per_question.csv', questions)
@@ -496,6 +577,7 @@ def main():
         origin=load(folder/'expansion_origin.json')
         metrics=jsonl(folder/'expansion_metrics.jsonl') if (folder/'expansion_metrics.jsonl').exists() else []
         failures=sorted(str(p.relative_to(ROOT)) for p in folder.glob('failure-*.json'))
+        note_fallbacks=initial_note_fallbacks(folder/'memory_state', {r['trajectory_id'] for r in metrics})
         initial.append({'domain':step['domain'],'initial_library':step['id'],
             'historical_source':origin['source'],'historical_trajectory_count':len(origin['reused_ids']),
             'new_trajectories_measured':len(metrics),'expansion_publish_stage_sum_s':sum(r['publish_wall_s'] for r in metrics),
@@ -503,6 +585,9 @@ def main():
             'expansion_llm_tokens_known':sum(r['llm_tokens_known'] for r in metrics),
             'expansion_unknown_usage_calls':sum(r['unknown_usage_calls'] for r in metrics),
             'failed_or_interrupted_trajectory_records':len(failures), 'failure_paths':json.dumps(failures),
+            'new_native_fallback_note_entries':len(note_fallbacks),
+            'new_native_fallback_note_trajectories':len({n['trajectory_id'] for n in note_fallbacks}),
+            'native_note_fallback_evidence':json.dumps(note_fallbacks),
             'expansion_cost_completeness':'completed trajectories only; failure ledger costs need separate accounting' if failures else 'completed trajectory metrics; verify full-ID marker separately',
             'historical_cost_scope':'reference, not a new cold build; matched preparation separately recorded',
             'lifecycle_total_tokens':None,'lifecycle_status':'not summed without a complete compatible historical cost reference',
@@ -535,20 +620,27 @@ def main():
         if step.get('query_kind') != 'initial_normal_shared_reference' or not (ROOT/step['marker']).exists():
             continue
         q, _ = query_evidence(step)
+        if q['query_id_mismatch_batches']:
+            identity_mismatches.append(step['id'])
         initial_queries.append({'domain':step['domain'],'architecture':step['policy'],
+                                'queue_unit_accepted':execution_by_id[step['id']]['queue_unit_accepted'],
                                 'shared_by':'b3/source_coalesced/source_only/source_overlay' if step['policy']=='b3' else step['policy'],
                                 'reader_path':step['reader'], **q})
     table(out/'initial_normal_qa.csv', initial_queries)
     source_contents=initial_source_evidence()
     dump(out/'initial_source_contents.json',source_contents)
     missing_queries=[s['id'] for s in steps if s['kind']=='reader' and not (ROOT/s['marker']).exists()]
+    unaccepted = [r['unit'] for r in execution if not r['queue_unit_accepted']]
     status={'scope':'official full Small histories; fixed local maintenance; text-only/adapted',
         'reporter_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'accounting_helper_sha256':hashlib.sha256((ROOT/'tools/focused_evidence.py').read_bytes()).hexdigest(),
         'expected_update_units':len(updates),'observed_update_units':len(rows),'missing_updates':missing,
         'missing_query_units':missing_queries,'generated_memory_reviews':len(checks),
         'semantic_quality_status':'manual review required; structural/fact checks do not establish quality equivalence',
-        'research_complete':False,'measurement_matrix_complete':not missing and not missing_queries,
+        'research_complete':False,
+        'measurement_matrix_complete':not missing and not missing_queries and not unaccepted and not identity_mismatches and source_contents['full_text_matches'],
+        'unaccepted_execution_units':unaccepted,'query_identity_mismatch_units':identity_mismatches,
+        'acceptance_scope':'Upstream queue validation receipts, fixed answer identities and complete saved source content; not semantic certification. Available failed/partial artifacts are not certified by file presence; missing stages remain incomplete.',
         'initial_costs':'historical reference + measured expansion/preparation, never fresh cold measurements'}
     status['initial_source_contents_status']=source_contents['status']
     status['initial_source_full_text_matches']=source_contents['full_text_matches']
@@ -563,7 +655,8 @@ def main():
         lines.append(f"| {r['policy']} | {r['measured_revision_cases']}/8 | {r['update_llm_tokens']} | {r['update_plus_query_llm_tokens']} | {r['revision_correct']}/{r.get('revision_fixed_questions')} | {r['normal_correct']}/{r.get('normal_fixed_questions')} |")
     lines+=['','Normal questions repeat across changed snapshots; report unique questions separately. '
         'Generated event/notes semantic review remains pending until annotated. A small QA difference is not proof of equivalence or systematic loss.',
-        '',f"Missing update units: {len(missing)}; missing query units: {len(missing_queries)}."]
+        '',f"Missing update units: {len(missing)}; missing query units: {len(missing_queries)}.",
+        f"Unaccepted upstream units: {len(unaccepted)}; question-identity mismatches: {len(identity_mismatches)}. Observed files/costs do not override failed or missing validation receipts."]
     (out/'report.md').write_text('\n'.join(lines)+'\n')
     print(json.dumps(status))
 

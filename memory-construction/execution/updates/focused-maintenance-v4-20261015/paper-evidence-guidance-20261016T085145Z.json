@@ -1,0 +1,27 @@
+{
+  "guidance_revision": "paper-evidence-20261016",
+  "created_at": "20261016T085145Z",
+  "backup": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports/goal-history/pre-paper-evidence-20261016T085145Z",
+  "files": {
+    "docs/PAPER_EVIDENCE_PLAN.md": "bf3398ff7746e0bc0b7f5b0200f6bc198691c7be3afc603fffa459308b607fd4",
+    "GOAL.md": "3f57cedbe3842d0560d08dd2ad127cbc9439500ac9229ecb4cbbfb0e1d069d81",
+    "WORKPLAN.md": "8d5778d4807f76a56d813870b3e12236acc171edb2ad532667ed3032d5792dbe",
+    "EXECUTION_UPDATE.md": "dcd92ce821772d76193f8fdb30a63b8d09aabfc0990f0c9040e6deedd5dbb0e4",
+    "execution/prompts/CONTINUE_RESEARCH.md": "3b3c33933e5be26882911c37f8c2fc9a43d0d2ae15f6a7fc978a88033575eb19",
+    "STATUS.md": "067501ccbc5fb0286ab106f902d1ca65bb01c1ba53f9893799eed0a6e732d3ca",
+    "AGENTS.md": "9130359c22ea744066f84b91ad31b93f940c303a153cb000d344cd5d435ed712",
+    "docs/EXPERIMENT_PROTOCOL.md": "5ee31b7a1d5b83e9b737c13993610c46d20e370ccd04083541be276a36471190",
+    "docs/EXECUTION_RECOVERY.md": "7eb8f319e3cb5db6f71d1b33e83cac8bc9d9a5732546dd00b82fd9460dc5af32"
+  },
+  "protected_inputs_count": 78,
+  "protected_inputs_changed": [],
+  "queue_written": false,
+  "code_written": false,
+  "model_calls": 0,
+  "executor_receipt": "pending_actual_executor_read",
+  "validation": {
+    "document_errors": [],
+    "registered_input_mismatches": [],
+    "checked_at": "2026-10-16T08:52:33.300719+00:00"
+  }
+}

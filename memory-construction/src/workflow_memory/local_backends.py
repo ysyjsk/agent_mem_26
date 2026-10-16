@@ -380,6 +380,19 @@ class TransformersQwenBackend:
             "num_return_sequences": 1,
             "return_dict_in_generate": False,
         }
+        # Long construction prompts can exhaust a 24-GiB GPU even when the
+        # model weights fit: the decoder KV cache grows with prompt length and
+        # output budget.  Keep ordinary requests on the existing GPU cache, but
+        # offload the cache for the long requests that caused the recorded OOMs.
+        # The model, prompt, decoding budget and output remain unchanged; only
+        # cache placement changes.  The threshold is explicit so the restarted
+        # service can record it in its runtime manifest.
+        offload_threshold = int(os.getenv("LME_OFFLOAD_CACHE_PROMPT_TOKENS", "12000"))
+        if prompt_lengths and max(prompt_lengths) > offload_threshold:
+            generation_kwargs["cache_implementation"] = "offloaded"
+            cache_mode = "offloaded"
+        else:
+            cache_mode = "gpu_dynamic"
         if top_p is not None:
             generation_kwargs["top_p"] = top_p
         if top_k is not None:
@@ -435,6 +448,8 @@ class TransformersQwenBackend:
                     "completion_tokens_including_reasoning": completion_tokens,
                     "termination": termination,
                     "completion_includes_eos": eos_index is not None,
+                    "cache_implementation": cache_mode,
+                    "offload_cache_prompt_threshold": offload_threshold,
                 },
                 request_fingerprint=request.fingerprint,
                 finish_reason=finish_reason,

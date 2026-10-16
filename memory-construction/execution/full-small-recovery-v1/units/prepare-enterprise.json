@@ -1,0 +1,17 @@
+{
+  "id": "prepare-enterprise",
+  "started_at": "2026-10-16T09:17:57.008635+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_agentrunbook_updates.py",
+    "--source",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/initial/enterprise-agentrunbook/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/matched/enterprise",
+    "--prepare-trajectories",
+    "0ab99e0c",
+    "12c22166"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T09:17:57.008641+00:00"
+}

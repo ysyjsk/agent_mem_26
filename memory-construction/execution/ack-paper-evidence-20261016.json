@@ -1,0 +1,34 @@
+{
+  "guidance_revision": "paper-evidence-20261016",
+  "received_at": "2026-10-16T17:15:09+08:00",
+  "receiver": "actual execution session, thread 01a13837-178d-7083-ba90-2239dd15f7d5",
+  "read": ["EXECUTION_UPDATE.md", "AGENTS.md", "GOAL.md", "WORKPLAN.md", "docs/EXPERIMENT_PROTOCOL.md", "docs/PAPER_EVIDENCE_PLAN.md", "docs/EXECUTION_RECOVERY.md", "execution/prompts/CONTINUE_RESEARCH.md", "execution/queue.json"],
+  "native_goal": {
+    "observed_before": null,
+    "action": "create corrective continuation only after actual null response; no prior unfinished Goal marked complete",
+    "observed_after": "active",
+    "created_at_epoch": 1792142128,
+    "thread_id": "01a13837-178d-7083-ba90-2239dd15f7d5"
+  },
+  "active_job": {
+    "id": "full-small-formal-queue-20261016-v1",
+    "runner_pid": 743265,
+    "model_child_pid": 4012849,
+    "current_stage": "expand-enterprise-agentrunbook",
+    "published_history_at_receipt": 11,
+    "required_history": 100
+  },
+  "preserved": ["all original results", "completed web initial memories: AgentRunbook/RawRAG/RAG+Notes 100 trajectories each", "registered A code/config/Manifest/plan", "existing single detached executor"],
+  "next_action": "B offline selection is now frozen in manifests/focused-maintenance-v4/independent-confirmation-v1/manifest.json; wait for A, then bind actual snapshot/runtime hashes before the first B call.",
+  "b_preparation": {
+    "targets": 8,
+    "normal_questions": 24,
+    "update_questions": 16,
+    "ablation_cases": ["web-06a17a60", "web-2af3e2bb", "enterprise-02dad10c", "enterprise-1a755059"],
+    "selection_method": "official Small membership, source completeness, length/page-family spread and fixed category quota; no scores read",
+    "exposure": "targets absent from maintenance tuning set but historically native-evaluated; all normal questions historically evaluated; no held-out claim",
+    "status": "frozen_data_pending_runtime_hashes"
+  },
+  "scope": "A→B→C, no new methods/baselines, one same-dataset confirmation batch, no score-based replacement. A already includes two-domain three-round Overlay/Coalesced; no duplicate sequence in B.",
+  "completion": "not_complete"
+}

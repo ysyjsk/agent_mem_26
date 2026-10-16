@@ -1,0 +1,74 @@
+{
+  "checked_at_utc": "2026-10-16T08:21:23.380453+00:00",
+  "scope": "Completed web Raw RAG expansion only; no maintenance or generated Notes semantic claim",
+  "new_model_calls_for_check": 0,
+  "manifest_sha256": "67f7b8c9a7e93a0b1db3ccaa32fad8cfa0f3ad0c0546332444b430bb76765eab",
+  "official_trajectories_checked": 100,
+  "official_source_errors": [],
+  "snapshot": {
+    "memory_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-raw_rag/memory_state",
+    "expected_trajectories": 100,
+    "loaded_trajectories": 100,
+    "exact_id_set_matches": true,
+    "checked_states": 1737,
+    "checked_source_characters": 65792253,
+    "expected_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+    "observed_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+    "mismatched_trajectory_ids": [],
+    "unreadable_trajectories": [],
+    "full_text_matches": true,
+    "boundary": "Stored textual trajectory completeness; not generated-memory semantic certification."
+  },
+  "raw_slices": {
+    "radius": 1,
+    "expected_entries": 1737,
+    "actual_entries": 1737,
+    "duplicate_entry_ids": 0,
+    "missing_entry_ids": [],
+    "extra_entry_ids": [],
+    "mismatched_entries": [],
+    "full_source_slice_and_action_mapping_matches": true
+  },
+  "embeddings": {
+    "shape": [
+      1737,
+      4096
+    ],
+    "finite": true,
+    "rows_match_slice_entries": true,
+    "max_input_tokens": 4096,
+    "boundary": "Every original slice retained; embedding input uses the frozen token bound, not unlimited source text. Row count/finite values do not certify semantic retrieval."
+  },
+  "expansion": {
+    "reused_history_count": 10,
+    "new_trajectories": 90,
+    "publish_stage_sum_s": 1344.5587420039228,
+    "wall_scope": "sum of sequential publication intervals; excludes startup/cloning/historical work; not a fresh cold build or full process wall",
+    "llm_calls": 0,
+    "llm_tokens_known": 0,
+    "embedding_vectors": 1402,
+    "unknown_usage_calls": 0,
+    "failure_records": 0,
+    "cost_ledger": {
+      "initial_llm_calls": 0,
+      "initial_llm_input_tokens": 0,
+      "initial_llm_output_tokens": 0,
+      "initial_llm_unknown_usage_calls": 0,
+      "initial_llm_failed_calls": 0,
+      "initial_embedding_calls": 88,
+      "initial_embedding_vectors": 1402,
+      "initial_embedding_input_tokens": 5711320,
+      "initial_embedding_failed_calls": 0,
+      "initial_embedding_unknown_usage_calls": 0,
+      "initial_embedding_transport_attempts": null,
+      "embedding_call_scope": "logged embedding operations; inherited SDK permits transport retries, whose individual attempts are not logged",
+      "initial_llm_tokens": 0,
+      "ledger_coverage": "observed non-query requests in inherited own-history ledger; not proof all historical work was logged"
+    },
+    "embedding_cache_logical_vectors": 1596,
+    "embedding_cache_actual_vectors": 1402,
+    "embedding_cache_hits": 194,
+    "metrics_match_ledger": true
+  },
+  "quality_boundary": "Stored full source, exact raw-slice/action mapping and finite aligned vector coverage; downstream retrieval/answer quality remains pending."
+}

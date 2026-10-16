@@ -1,0 +1,23 @@
+{
+  "guidance_revision": "paper-delivery-20261016",
+  "deployed_at": "2026-10-16T15:01:33.605588+00:00",
+  "docs": {
+    "docs/PAPER_EVIDENCE_PLAN.md": "e0ec41f0b6289b942944e7a219e5826f8d5bc0f643f716b2aac7898101b8e2f4",
+    "GOAL.md": "bc4d3e61fc8ad6c039bded20ae5c5822be9d2702ead2695160fc95eef21580e8",
+    "execution/prompts/CONTINUE_RESEARCH.md": "f3cc55c24f34a9b4eba6a36831186bc22f406c589675291cd9f529acee1af8e5",
+    "EXECUTION_UPDATE.md": "a49896f2334dabb4ef9ad5aeab923f133b5adacf336122fdc31a4d476d5d5b09",
+    "AGENTS.md": "8b9ce5746e7b3df785f046f8bd0d0e2589ff24da1a43fdca7792a9305f22b00e",
+    "docs/EXPERIMENT_PROTOCOL.md": "d76af149ccdcef351baf5ba0b3afe15ee306ff3c7889b3615b70482e96d9ca1d"
+  },
+  "new_b_manifest": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/manifest.json",
+  "new_b_manifest_sha256": "0e0bb34ccf68e969afa6bdcab300688216d98444be86af3b607dc7f0d9a638e8",
+  "backup": "reports/goal-history/pre-paper-delivery-20261016T150133Z",
+  "A_registered_inputs_unchanged": 77,
+  "A_plan_unchanged": true,
+  "old_B_files_unchanged": 19,
+  "model_calls": 0,
+  "queue_modified": false,
+  "processes_modified": false,
+  "executor_acknowledged": false,
+  "note": "B amendment fixes pre-evaluation workload type; no method change or result-based selection."
+}

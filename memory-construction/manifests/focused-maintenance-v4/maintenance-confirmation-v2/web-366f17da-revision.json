@@ -1,0 +1,34 @@
+{
+  "revision_id": "confirmation-v2-web-366f17da-text",
+  "trajectory_id": "366f17da",
+  "domain": "web",
+  "source_edits": [
+    {
+      "state_index": 18,
+      "field": "text",
+      "old": "\t\t\t\t\t[753] textbox 'Default Label *' value='Size', clickable, required\n\t\t\t\t\t\tStaticText 'Size'",
+      "new": "\t\t\t\t\t[753] textbox 'Default Label *' value='Garment Size', clickable, required\n\t\t\t\t\t\tStaticText 'Garment Size'",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Garment Size",
+  "neighbor_state_index": 17,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  },
+  "revision_kind": "controlled_observation_correction",
+  "observation_field": "the Default Label of the size product attribute",
+  "old_value": "Size",
+  "new_value": "Garment Size",
+  "counterfactual_notice": "Researcher-defined local correction to one recorded text observation; not a naturally observed environment change. Actions, thoughts, outcomes and other states remain unchanged.",
+  "source_evidence": {
+    "official_file": "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl",
+    "state_index": 18,
+    "text_sha256": "b3a9fefe9c36938b85ef4fc6b381e23e06ddd115292cea8a46dbba6204433b21",
+    "url": "http://localhost:9083/admin/catalog/product_attribute/edit/attribute_id/144/"
+  }
+}

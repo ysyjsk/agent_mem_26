@@ -1,6 +1,8 @@
 # 当前执行入口
 协议 focused-maintenance-v4-20261015；执行修订 execution-recovery-20261016。用户最新指令优先。
 
+最新收尾指导为 paper-delivery-20261016，见 docs/PAPER_EVIDENCE_PLAN.md：A矩阵继续；B使用maintenance-confirmation-v2的受控text字段修订，旧v1 thoughts负载不作为核心确认。仅补固定的一批维护确认与正常QA。旧“先8个回答”等恢复动作仅在对应阶段实际缺失时执行。
+
 每次输出先用一段话讲清本次动作。从 EXECUTION_UPDATE.md 接续，不按旧报告中的完成声明停止。
 - GOAL.md 定义交付，docs/EXPERIMENT_PROTOCOL.md 定义实验比较；execution/experiment_contract.json 保存可检查的运行参数与范围；execution/queue.json 是唯一任务状态。WORKPLAN/STATUS/README 只导航，不各自维护状态副本。
 - 沿用 v13 局部维护和四行公开主表；Raw RAG、RAG+Notes 不可自行降为仅冷构建参考。Source-only/Overlay 是机制对照，B3 与 AgentRunbook-R 是同一公开行。完整 Small 历史范围从官方映射验证，不用开发库替代。

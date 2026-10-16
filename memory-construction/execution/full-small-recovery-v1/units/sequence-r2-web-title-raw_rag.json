@@ -1,0 +1,16 @@
+{
+  "id": "sequence-r2-web-title-raw_rag",
+  "started_at": "2026-10-16T10:08:55.167865+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_rag_updates.py",
+    "--source",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/web-title/raw_rag/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/sequence/r2/web-title/raw_rag",
+    "--revision-file",
+    "runs/focused-maintenance-v4/dev/sequence-final/web-r2/revision.json"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.167868+00:00"
+}

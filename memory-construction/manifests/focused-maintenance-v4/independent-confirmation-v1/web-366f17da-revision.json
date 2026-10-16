@@ -1,0 +1,23 @@
+{
+  "revision_id": "independent-web-366f17da-thought",
+  "trajectory_id": "366f17da",
+  "domain": "web",
+  "source_edits": [
+    {
+      "state_index": 18,
+      "field": "thoughts",
+      "old": "A new empty swatch row was added (the blank row beginning at bid 1544). I will enter the admin label \"XXS\" into the Admin swatch textbox for that new row (bid '1551'). After this I will need to fill the store view value as well and save the attribute.",
+      "new": "A new empty swatch row was added (the blank row beginning at bid 1544). I will enter the admin label \"XXS\" into the Admin swatch textbox for that new row (bid '1551'). After this I will need to fill the store view value as well and save the attribute. Independent correction: the admin-record status is confirmed current.",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Independent correction: the admin-record status is confirmed current.",
+  "neighbor_state_index": 17,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  }
+}

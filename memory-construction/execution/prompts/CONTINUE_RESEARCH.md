@@ -1,19 +1,13 @@
-# 接续执行：先纠正实际配置，再完成既定实验
-协议 focused-maintenance-v4-20261015；执行修订 execution-recovery-20261016。
-项目 /data/predator/ly/agent-memory-construction-2026-10-12/memory-construction。
+# 继续执行：以论文结果为交付
+延续当前 Goal。读取 EXECUTION_UPDATE.md、GOAL.md、docs/PAPER_EVIDENCE_PLAN.md 后直接补缺，不重复已完成的 dry-run、全量测试或 OOM 复现。
 
-读取 EXECUTION_UPDATE.md、execution/queue.json、docs/EXECUTION_RECOVERY.md 与当前 memory-research-loop 技能。延续已有成果，不重新规划 Methodology，不重跑全部冷构建。GOAL.md 的正式交付仍有效。
+当前优先级是解决真实阻塞并完成既定论文证据。恢复入口的状态修复已做；由你在安全持久化边界修复长请求显存条件，首个修复后请求直接补失败 Notes/Event，复用所有有效分区。catch-all 产生的占位笔记不能冒充正常构建；只补受影响条目，不能重建全库或偷减输入。共同后端修复纳入实际 runtime freeze，不计为 Ours 收益。
 
-先短查作业并运行 python3 execution/verify_evidence.py --current；报告非零表示待修证据，不是停止指令。根据原始请求/源数据自行区分配置错误、计量/检查器错误、实现错误和真实负结果；定位后最小修复、验证并接着执行，不仅汇报问题。常规修复和阶段级补跑已授权。
+A 保持 full-small-recovery-v1 的84更新/126查询批次和现有执行依赖；一次一个GPU执行器，保留健康作业。每完成可比配对即更新论文表，不等全部结束才写作。
 
-正式 Reader 已改为通过 tools/focused_runtime.py 读取 execution/experiment_contract.json，在导入 harness 前启用 text-only/共同检索配置并记录生效环境。尚未运行真实修复验证。第一项交付是复用已有两域 B3/Ours 更新快照，对原四题产生共 8 个回答；核对实际 messages 无图及有效参数一致后，再补其他方法的受影响查询/正常问题。输出新路径，保留旧记录。
+B 改用 manifests/focused-maintenance-v4/maintenance-confirmation-v2/manifest.json：原v1八例都是 thoughts 修订，不能检验源码要求 text 的直接 Coalescing；v2已在首次B模型调用前按源证据准备8条真实字段锚点的受控修订。原轨迹/状态位置、24正常题和方法预算未增加，旧v1保留。不要再运行v1的泛化追加句子。
+B 总量24更新、48诊断回答、96正常QA回答；正常QA使用manifest指定的每域代表快照，按SCORING.md完成18确定性＋6语义题并如实标评分方式。运行前补实际快照与runtime哈希。B仅称同数据集新增维护修订确认，不称held-out。
 
-同时离线修复成本漏计和质量检查。总 LLM 必须含更新、retrieval controller、Reader；失败/重试未知 usage 不填零。将改后事实、未改事实、旧值被误当当前值分别核验；不得通过放松检查直接宣布质量保持。仅修改计量或评分时重聚合/重评，查询错误只补查询，真实维护错误才补受影响更新链。
-
-随后补 Raw RAG/RAG+Notes 同负载维护对照，完成真实完整 Small 历史上的固定修订和问题集合、核心消融、连续累计曲线、必要重复及论文。每域 10 条是开发库；完整历史按官方映射和实际加载快照核对。独立修订数、问题数、重复数分别报告。四行主表不能被三种内部策略或冷构建参考替代。
-
-继续冻结 v13 主方法；不以 Ours 胜过 Source-only 为扩量条件。恢复冻结配置属于必要修复；配置正确后仍差则保留负结果并完成其余交付，不无限调参。正式数据参与方法修复时记录版本/暴露，不能仍称独立确认。
-
-更新 queue/reuse inventory 和论文的实际证据；每轮给新增数字、修复原因、保留阶段及下一项已启动任务。成功退出或文件存在不等于研究完成，必需任务不得擅自 deferred。等待 GPU 时处理相关离线聚合/写作，不新建监督平台或第二执行器。
-
-在 execution/ack-execution-recovery-20261016.json 写真实接收回执并查询本会话原生 Goal。若旧 Goal 已完成，按用户本次纠正请求创建“修复评测并补齐 GOAL.md 剩余证据”的后续 Goal；有未完成目标则按宿主能力延续，不伪标完成以换名。工具不可用时如实记录并继续授权工作。不要只回复计划，立即接续上述首项。
+将B v2接到现有CONFIRM任务，不新建状态体系；以实际证据记录首次阅读本指导的时间与继续动作，不能只回“已读”。执行前如发现B v1已被另一个作业调用，保留暴露记录并明确分版本，不能覆盖历史。
+成本包含更新、controller和Reader，Embedding另列。分别报告当前事实、未改事实、旧值误用、正常QA。Source-only/Ours看事件证据整体作用；Overlay/Coalesced看三轮累计成本，不能只凭零LLM或块数宣称独特贡献。
+按PAPER_EVIDENCE_PLAN完成四表两图和正文。固定范围内遇到实现错误自行最小修复并继续；没有新故障就继续实际实验，不再重复审计、调参、改题、加baseline或扩大数据范围。每次汇报只给新增有效数字、真实缺口和下一已启动任务。

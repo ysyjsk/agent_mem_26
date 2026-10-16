@@ -1,0 +1,34 @@
+{
+  "revision_id": "confirmation-v2-enterprise-1a755059-text",
+  "trajectory_id": "1a755059",
+  "domain": "enterprise",
+  "source_edits": [
+    {
+      "state_index": 50,
+      "field": "text",
+      "old": "2026-02-15",
+      "new": "2026-02-16",
+      "count": 2
+    }
+  ],
+  "changed_fact": "2026-02-16",
+  "neighbor_state_index": 49,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  },
+  "revision_kind": "controlled_observation_correction",
+  "observation_field": "the estimated delivery date of complete order REQ0013212",
+  "old_value": "2026-02-15",
+  "new_value": "2026-02-16",
+  "counterfactual_notice": "Researcher-defined local correction to one recorded text observation; not a naturally observed environment change. Actions, thoughts, outcomes and other states remain unchanged.",
+  "source_evidence": {
+    "official_file": "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl",
+    "state_index": 50,
+    "text_sha256": "55e0bcf38d5d1bd2951da76c235483ade1e7f1c39393becce5ed2f928dd4f736",
+    "url": "https://workarenapublic15.service-now.com/now/nav/ui/classic/params/target/com.glideapp.servicecatalog_checkout_view_v2.do%3Fv%3D1%26sysparm_sys_id%3Deeb77e693b8f7e501eab3e0eb3e45aac%26sysparm_new_request%3Dtrue%26sysparm_view%3Dtext_search%26sysparm_catalog%3De0d08b13c3330100c8b837659bba8fb4%26sysparm_catalog_view%3Dcatalog_default%26sysparm_view%3Dtext_search%26sysparm_view%3Dtext_search"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "freeze-runtime",
+  "started_at": "2026-10-16T10:08:55.156838+00:00",
+  "command": [],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.156848+00:00"
+}

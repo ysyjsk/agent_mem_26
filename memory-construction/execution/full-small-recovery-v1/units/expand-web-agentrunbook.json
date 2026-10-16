@@ -1,0 +1,18 @@
+{
+  "id": "expand-web-agentrunbook",
+  "started_at": "2026-10-16T07:48:31.426840+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/extend_full_small_memory.py",
+    "--domain",
+    "web",
+    "--source",
+    "runs/focused-maintenance-v4/formal/matched-web/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-agentrunbook",
+    "--manifest",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json"
+  ],
+  "status": "completed",
+  "finished_at": "2026-10-16T07:48:40.471714+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "main-enterprise-quantity-source_coalesced-normal-query",
+  "started_at": "2026-10-16T10:08:55.163498+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_focused_formal_reader.py",
+    "--domain",
+    "enterprise",
+    "--policy",
+    "source_coalesced",
+    "--memory-dir",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/enterprise-quantity/source_coalesced/literal_revision-source_coalesced/memory_state",
+    "--questions-path",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/enterprise-normal-questions.jsonl",
+    "--output-root",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/enterprise-quantity/source_coalesced/literal_revision-source_coalesced/normal-reader",
+    "--trajectories-path",
+    "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.163501+00:00"
+}

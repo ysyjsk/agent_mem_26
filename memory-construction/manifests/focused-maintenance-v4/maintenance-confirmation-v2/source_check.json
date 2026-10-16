@@ -1,0 +1,94 @@
+{
+  "status": "offline_source_anchors_verified",
+  "model_calls": 0,
+  "cases": [
+    {
+      "case": "web-06a17a60",
+      "state_index": 15,
+      "field": "the order total displayed for order 000000169",
+      "old": "$52.35",
+      "new": "$54.35",
+      "neighbor": 14,
+      "neighbor_answer": "http://localhost:9082/sales/order/history/",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "web-2af3e2bb",
+      "state_index": 13,
+      "field": "the text in the Title field of the funny submission form",
+      "old": "We won first place in the costume contest!",
+      "new": "We won second place in the costume contest!",
+      "neighbor": 12,
+      "neighbor_answer": "We won first place in the costume contest!",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "web-2ab85f90",
+      "state_index": 20,
+      "field": "the main heading of the Magento orders page",
+      "old": "Orders",
+      "new": "Sales Orders",
+      "neighbor": 19,
+      "neighbor_answer": "Orders",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "web-366f17da",
+      "state_index": 18,
+      "field": "the Default Label of the size product attribute",
+      "old": "Size",
+      "new": "Garment Size",
+      "neighbor": 17,
+      "neighbor_answer": "Size",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "enterprise-02dad10c",
+      "state_index": 50,
+      "field": "the Quantity shown on the asset form",
+      "old": "1",
+      "new": "2",
+      "neighbor": 49,
+      "neighbor_answer": "1",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "enterprise-1a755059",
+      "state_index": 50,
+      "field": "the estimated delivery date of complete order REQ0013212",
+      "old": "2026-02-15",
+      "new": "2026-02-16",
+      "neighbor": 49,
+      "neighbor_answer": "2026-02-15",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "enterprise-3fafa5c3",
+      "state_index": 50,
+      "field": "the amount shown for expense line EXP-12020870781",
+      "old": "$8,318.76",
+      "new": "$8,320.76",
+      "neighbor": 49,
+      "neighbor_answer": "$8,318.76",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    },
+    {
+      "case": "enterprise-454485ca",
+      "state_index": 50,
+      "field": "the Short description displayed for incident INC0014521",
+      "old": "Unable to access team file share",
+      "new": "Unable to access shared project folder",
+      "neighbor": 49,
+      "neighbor_answer": "https://workarenapublic16.service-now.com/now/nav/ui/classic/params/target/vtb_task.do%3Fsys_id%3D77fc1dde938fb2902b00ff87dd03d6cd",
+      "source_anchor_verified": true,
+      "model_calls": 0
+    }
+  ]
+}

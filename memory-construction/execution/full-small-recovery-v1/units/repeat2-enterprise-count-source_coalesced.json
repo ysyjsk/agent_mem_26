@@ -1,0 +1,25 @@
+{
+  "id": "repeat2-enterprise-count-source_coalesced",
+  "started_at": "2026-10-16T10:08:55.165869+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_agentrunbook_updates.py",
+    "--source",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/matched/enterprise/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/repeats/r2/enterprise-count/source_coalesced",
+    "--trajectory-id",
+    "0ab99e0c",
+    "--state-index",
+    "5",
+    "--revision-file",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/enterprise-count-revision.json",
+    "--cases",
+    "literal_revision",
+    "--policy-order",
+    "source_coalesced",
+    "--current-state-evidence"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.165871+00:00"
+}

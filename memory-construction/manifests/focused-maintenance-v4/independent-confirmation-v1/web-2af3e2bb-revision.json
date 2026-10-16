@@ -1,0 +1,23 @@
+{
+  "revision_id": "independent-web-2af3e2bb-thought",
+  "trajectory_id": "2af3e2bb",
+  "domain": "web",
+  "source_edits": [
+    {
+      "state_index": 13,
+      "field": "thoughts",
+      "old": "The form is currently blocked by two server-side errors: an invalid CSRF token (likely due to using the back button/expired form) and a rate-limit (“You cannot post more. Wait a while…”). The best next step is to reload the submission page to obtain a fresh CSRF token, then we can see whether the rate-limit has cleared or if we must wait before submitting again.",
+      "new": "The form is currently blocked by two server-side errors: an invalid CSRF token (likely due to using the back button/expired form) and a rate-limit (“You cannot post more. Wait a while…”). The best next step is to reload the submission page to obtain a fresh CSRF token, then we can see whether the rate-limit has cleared or if we must wait before submitting again. Independent correction: the forum-reply status is confirmed current.",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Independent correction: the forum-reply status is confirmed current.",
+  "neighbor_state_index": 12,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  }
+}

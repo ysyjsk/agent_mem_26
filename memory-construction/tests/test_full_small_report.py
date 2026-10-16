@@ -50,7 +50,8 @@ def test_missing_runtime_does_not_certify_initial_source_content(tmp_path,monkey
 def test_disaggregated_workloads_keep_declared_cases_and_trajectory_count():
     cases=[{'id':'state-a','trajectory_id':'a'}, {'id':'workflow-a','trajectory_id':'a'}]
     row={'policy':'b3','domain':'web','case_id':'state-a','raw_update_path':'p',
-         'expected_query_batches':2,'completed_query_batches':2,'update_llm_tokens':10}
+         'expected_query_batches':2,'completed_query_batches':2,'update_llm_tokens':10,
+         'queue_unit_accepted':True,'query_batches_accepted':True,'query_id_mismatch_batches':0}
     missing=report.aggregate([row,row],['b3'],2,case_definitions=cases,domain='web')[0]
     assert not missing['complete_fixed_workload']  # duplicates cannot replace the workflow case
     complete=report.aggregate([row,dict(row,case_id='workflow-a',update_llm_tokens=20)],
@@ -59,6 +60,49 @@ def test_disaggregated_workloads_keep_declared_cases_and_trajectory_count():
     assert complete['independent_revision_trajectories']==1
     assert complete['histories']=='web100'
     assert complete['update_llm_tokens']==30
+
+
+def test_rejected_queue_validation_is_not_a_complete_workload():
+    row={'policy':'b3','domain':'web','case_id':'a','raw_update_path':'p',
+         'expected_query_batches':1,'completed_query_batches':1,
+         'queue_unit_accepted':False,'query_batches_accepted':True,'query_id_mismatch_batches':0}
+    assert not report.aggregate([row],['b3'],1)[0]['complete_fixed_workload']
+    row.update(queue_unit_accepted=True,query_batches_accepted=False)
+    assert not report.aggregate([row],['b3'],1)[0]['complete_fixed_workload']
+    row.update(query_batches_accepted=True,query_id_mismatch_batches=1)
+    assert not report.aggregate([row],['b3'],1)[0]['complete_fixed_workload']
+
+
+def test_duplicate_or_foreign_answers_cannot_hide_missing_fixed_question():
+    fixed=[{'id':'a'},{'id':'b'}]
+    result=report.question_identity(fixed,[{'question_id':'a'},{'question_id':'a'}])
+    assert result == {'missing_answers':1,'unexpected_or_excess_answers':1,
+                      'duplicate_answer_records':1,'query_id_mismatch_batches':1}
+    result=report.question_identity(fixed,[{'question_id':'a'},{'question_id':'c'}])
+    assert result['missing_answers']==result['unexpected_or_excess_answers']==1
+    assert result['duplicate_answer_records']==0
+    assert not report.question_identity(fixed,[{'question_id':'b'},{'question_id':'a'}])['query_id_mismatch_batches']
+
+
+def test_marker_and_failed_receipt_do_not_certify_measurement(tmp_path,monkeypatch):
+    import json
+    monkeypatch.setattr(report,'ROOT',tmp_path)
+    monkeypatch.setattr(report,'PLAN',tmp_path/'plan.json')
+    (tmp_path/'units').mkdir()
+    (tmp_path/'marker.json').write_text('{}')
+    step={'id':'unit','kind':'reader','marker':'marker.json','command':['python','reader.py']}
+    assert not report.execution_evidence([step])[0]['queue_unit_accepted']
+    receipt=dict(id='unit',command=step['command'],status='failed',error='effective reader config mismatch')
+    path=tmp_path/'units/unit.json'
+    path.write_text(json.dumps(receipt))
+    result=report.execution_evidence([step])[0]
+    assert result['marker_exists'] and not result['queue_unit_accepted']
+    assert 'config mismatch' in result['error']
+    receipt['status']='completed';path.write_text(json.dumps(receipt))
+    assert report.execution_evidence([step])[0]['queue_unit_accepted']
+    receipt['command']=['different'];path.write_text(json.dumps(receipt))
+    assert not report.execution_evidence([step])[0]['queue_unit_accepted']
+    assert report.execution_evidence([{'kind':'report'}])==[]
 
 
 def test_evidence_figure_is_labeled_snapshot_size_not_cumulative_cost(tmp_path):
@@ -73,6 +117,24 @@ def test_evidence_figure_is_labeled_snapshot_size_not_cumulative_cost(tmp_path):
     assert 'Snapshot after each revision' in text
     assert 'cumulative LLM tokens' not in text
     assert len(tree.findall('.//{http://www.w3.org/2000/svg}circle')) == 2
+
+
+def test_equal_evidence_curves_use_distinct_styles_without_changing_values(tmp_path):
+    import xml.etree.ElementTree as ET
+    path=tmp_path/'equal.svg'
+    rows=[{'domain':'web','policy':policy,'round':r,
+           'target_query_eligible_event_chars':500,'target_current_evidence_blocks':2}
+          for policy in ('b3','source_coalesced') for r in (1,2,3)]
+    report.evidence_figure(path,rows,policies=['b3','source_coalesced'])
+    tree=ET.parse(path)
+    curves=tree.findall('.//{http://www.w3.org/2000/svg}polyline')
+    assert len(curves)==4
+    for b3,coalesced in (curves[:2],curves[2:]):
+        assert b3.attrib['points']==coalesced.attrib['points']
+        assert b3.attrib['stroke-dasharray']!=coalesced.attrib['stroke-dasharray']
+    text=' '.join(tree.getroot().itertext())
+    assert 'AgentRunbook-R/B3' in text and 'Coalesced' in text
+    assert 'revision round' in text
 
 
 def test_real_query_trace_includes_controller_without_inherited_history():
@@ -96,6 +158,38 @@ def test_initial_ledger_excludes_queries_and_keeps_failed_attempt_unknown():
     assert result['initial_llm_calls']==2
     assert result['initial_llm_tokens'] is None
     assert result['initial_llm_failed_calls']==1
+
+
+def test_initial_parse_fallback_and_notes_repair_are_not_zero_failure_claim():
+    records=[{'record_id':'group-call','channel':'controller','status':'success',
+              'prompt_tokens':100,'completion_tokens':20},
+             {'record_id':'parse','channel':'event_group','status':'split','reason':'group_parse_failure'},
+             {'record_id':'preflight','channel':'event_group','status':'split','reason':'input_context_limit'},
+             {'record_id':'parsed','channel':'event_group','status':'parsed'},
+             {'record_id':'repair','channel':'controller','status':'success','prompt_tokens':30,'completion_tokens':10,
+              'messages':[{'role':'system','content':'Rewrite the draft into valid JSON only.\nRules:'}]}]
+    result=report.initial_ledger_summary(records+[records[1]])
+    assert result['initial_llm_failed_calls']==0
+    assert result['initial_joint_parse_failures']==1
+    assert result['initial_joint_budget_splits']==1
+    assert result['initial_joint_split_groups']==2
+    assert result['initial_joint_parsed_groups']==1
+    assert result['initial_notes_repair_calls']==1
+    assert result['initial_llm_calls']==2 and result['initial_llm_tokens']==160
+
+
+def test_native_note_fallbacks_report_only_requested_new_partitions(tmp_path):
+    import json
+    pools=tmp_path/'pools';pools.mkdir()
+    entries=[{'entry_id':'new:procedure','trajectory_id':'new','title':'native fallback',
+              'description':'Fallback procedure note built when LLM note extraction failed.'},
+             {'entry_id':'old:procedure','trajectory_id':'old','title':'native fallback',
+              'description':'Fallback procedure note built when LLM note extraction failed.'},
+             {'entry_id':'new:normal','trajectory_id':'new','title':'fallback strategy',
+              'description':'A valid note discussing fallback navigation.'}]
+    (pools/'procedure_note_pool.jsonl').write_text('\n'.join(json.dumps(x) for x in entries)+'\n')
+    result=report.initial_note_fallbacks(tmp_path,{'new'})
+    assert len(result)==1 and result[0]['entry_id']=='new:procedure'
 
 
 def test_saved_update_reports_publication_boundary_without_inventing_total_wall():

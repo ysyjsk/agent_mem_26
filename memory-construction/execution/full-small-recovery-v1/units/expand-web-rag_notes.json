@@ -1,0 +1,18 @@
+{
+  "id": "expand-web-rag_notes",
+  "started_at": "2026-10-16T08:12:17.482516+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/extend_full_small_memory.py",
+    "--domain",
+    "web",
+    "--source",
+    "runs/dev-adapted-text-v1/results/web-expanded20-rag-notes-v1/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-rag_notes",
+    "--manifest",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json"
+  ],
+  "status": "completed",
+  "finished_at": "2026-10-16T08:57:35.723026+00:00"
+}

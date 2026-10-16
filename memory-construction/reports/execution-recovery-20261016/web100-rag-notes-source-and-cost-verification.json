@@ -1,0 +1,133 @@
+{
+  "checked_at_utc": "2026-10-16T08:58:46.261133+00:00",
+  "scope": "Completed web RAG+Notes expansion only; semantic generated-memory/QA acceptance remains separate",
+  "new_model_calls_for_check": 0,
+  "manifest_sha256": "67f7b8c9a7e93a0b1db3ccaa32fad8cfa0f3ad0c0546332444b430bb76765eab",
+  "reference_content_evidence": "reports/execution-recovery-20261016/web100-source-and-cost-verification.json",
+  "reference_normalized_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+  "snapshot": {
+    "memory_path": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-rag_notes/memory_state",
+    "expected_trajectories": 100,
+    "loaded_trajectories": 100,
+    "exact_id_set_matches": true,
+    "checked_states": 1737,
+    "checked_source_characters": 65792253,
+    "expected_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+    "observed_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+    "mismatched_trajectory_ids": [],
+    "unreadable_trajectories": [],
+    "full_text_matches": true,
+    "boundary": "Stored textual trajectory completeness; not generated-memory semantic certification."
+  },
+  "raw_slices": {
+    "radius": 1,
+    "expected_entries": 1737,
+    "actual_entries": 1737,
+    "duplicate_entry_ids": 0,
+    "missing_ids": [],
+    "extra_ids": [],
+    "mismatched_ids": [],
+    "vector_shape": [
+      1737,
+      4096
+    ],
+    "vectors_finite": true,
+    "vector_rows_match_entries": true
+  },
+  "notes": {
+    "procedure_note": {
+      "count": 100,
+      "one_per_trajectory": true,
+      "empty_required_fields": [],
+      "fallback_note_ids": [
+        "d0bcf4db:procedure_note"
+      ],
+      "vector_shape": [
+        100,
+        4096
+      ],
+      "vectors_finite": true,
+      "vector_rows_match_entries": true,
+      "historical_notes_and_vectors_preserved": true
+    },
+    "hint_note": {
+      "count": 100,
+      "one_per_trajectory": true,
+      "empty_required_fields": [],
+      "fallback_note_ids": [
+        "d0bcf4db:hint_note"
+      ],
+      "vector_shape": [
+        100,
+        4096
+      ],
+      "vectors_finite": true,
+      "vector_rows_match_entries": true,
+      "historical_notes_and_vectors_preserved": true
+    }
+  },
+  "actual_new_llm_requests": {
+    "count": 104,
+    "configuration_exception_record_ids": [],
+    "finish_reasons": {
+      "stop": 104
+    },
+    "logged_statuses": {
+      "success": 104
+    }
+  },
+  "expansion": {
+    "reused_history_count": 10,
+    "new_trajectories": 90,
+    "publish_stage_sum_s": 2708.5480374942417,
+    "wall_scope": "sum of sequential publication stages; excludes startup/cloning/inherited cost; not fresh cold build or process wall",
+    "llm_calls": 104,
+    "llm_tokens_known": 316433,
+    "embedding_vectors": 1582,
+    "unknown_usage_calls": 0,
+    "failure_records": 0,
+    "cost_ledger": {
+      "initial_llm_calls": 104,
+      "initial_llm_input_tokens": 270408,
+      "initial_llm_output_tokens": 46025,
+      "initial_llm_unknown_usage_calls": 0,
+      "initial_llm_failed_calls": 0,
+      "initial_joint_parsed_groups": 0,
+      "initial_joint_split_groups": 0,
+      "initial_joint_parse_failures": 0,
+      "initial_joint_budget_splits": 0,
+      "initial_notes_repair_calls": 14,
+      "failure_count_scope": "llm_failed_calls counts logged request failures, not parse/semantic failure; joint parse failures and Notes repair requests are separate observed records, with their request costs already included in totals; missing legacy traces are not proof of absence",
+      "initial_embedding_calls": 268,
+      "initial_embedding_vectors": 1582,
+      "initial_embedding_input_tokens": 5743700,
+      "initial_embedding_failed_calls": 0,
+      "initial_embedding_unknown_usage_calls": 0,
+      "initial_embedding_transport_attempts": null,
+      "embedding_call_scope": "logged embedding operations; inherited SDK permits transport retries, whose individual attempts are not logged",
+      "initial_llm_tokens": 316433,
+      "ledger_coverage": "observed non-query requests in inherited own-history ledger; not proof all historical work was logged"
+    },
+    "embedding_cache_logical_vectors": 1776,
+    "embedding_cache_actual_vectors": 1582,
+    "embedding_cache_hits": 194,
+    "metrics_match_ledger": true
+  },
+  "quality_boundary": "Exact full source and slice mapping, nonempty Notes and finite aligned vector rows, preserved inherited Notes/vectors. Not semantic quality or downstream QA certification.",
+  "native_note_fallback_review": {
+    "trajectory_id": "d0bcf4db",
+    "request_record_ids": [
+      "98487f11105e4ed9bde44347c2c84248",
+      "8d5612af6fbc45f88651322b475e4a83"
+    ],
+    "observed_issue": "Primary and repair responses remain invalid JSON with unescaped quoted size strings and array content instead of the required string.",
+    "input_tokens": 2699,
+    "output_tokens": 992,
+    "total_tokens": 3691,
+    "transport_finish": "Both stop; no transport failure or output-budget truncation",
+    "published_procedure": "Native deterministic fallback contains first8 of11 annotated actions, omitting the later order-navigation and final size-answer action.",
+    "published_hint": "Native deterministic fallback preserves recorded outcome failure, start URL, action count and first action.",
+    "source_retained": "Complete12-state trajectory and source slices retained; fallback Notes do not establish full workflow coverage.",
+    "decision": "Preserve native fallback, recorded costs and limited-quality label; no rerun or runtime/scoring modification."
+  }
+}

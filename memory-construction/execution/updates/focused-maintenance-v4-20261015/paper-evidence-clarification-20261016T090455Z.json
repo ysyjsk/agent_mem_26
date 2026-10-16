@@ -1,0 +1,15 @@
+{
+  "guidance_revision": "paper-evidence-20261016",
+  "clarification": "freeze_selection_mechanism_accounting_completion",
+  "created_at": "20261016T090455Z",
+  "backup": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/reports/goal-history/pre-paper-evidence-clarification-20261016T090455Z",
+  "files": {
+    "docs/PAPER_EVIDENCE_PLAN.md": "fa788a2659dc0c38bb104a8f624d4953c5d60c0cbbb491b5bded1f194e2dc9e8",
+    "execution/prompts/CONTINUE_RESEARCH.md": "e3900b5e9822c8732474b16217f93f0eaf1a6ac642462eb1be77183e6d1912a0"
+  },
+  "frozen_inputs_unchanged": 78,
+  "broken_links": [],
+  "model_calls": 0,
+  "queue_written": false,
+  "executor_receipt": "not_observed"
+}

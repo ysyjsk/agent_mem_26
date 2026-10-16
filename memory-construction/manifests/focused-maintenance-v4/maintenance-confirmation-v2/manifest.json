@@ -1,0 +1,347 @@
+{
+  "version": "maintenance-confirmation-v2",
+  "status": "data_amendment_frozen_before_evaluation_calls_runtime_pending",
+  "scope": "Same-dataset new maintenance revisions on previously evaluated histories; text-only/adapted controlled text-observation corrections, not benchmark-held-out or natural temporal updates.",
+  "target_count": 8,
+  "targets_per_domain": 4,
+  "normal_qa_count": 24,
+  "normal_qa_per_domain": 12,
+  "update_qa_count": 16,
+  "cases": [
+    {
+      "case_id": "web-06a17a60",
+      "domain": "web",
+      "trajectory_id": "06a17a60",
+      "page_family": "shopping",
+      "state_count": 30,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-06a17a60-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-06a17a60-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [
+        "source_only",
+        "source_overlay"
+      ],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 15,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    },
+    {
+      "case_id": "web-2af3e2bb",
+      "domain": "web",
+      "trajectory_id": "2af3e2bb",
+      "page_family": "reddit",
+      "state_count": 26,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2af3e2bb-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2af3e2bb-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [
+        "source_only",
+        "source_overlay"
+      ],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 13,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    },
+    {
+      "case_id": "web-2ab85f90",
+      "domain": "web",
+      "trajectory_id": "2ab85f90",
+      "page_family": "admin",
+      "state_count": 40,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2ab85f90-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2ab85f90-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 20,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    },
+    {
+      "case_id": "web-366f17da",
+      "domain": "web",
+      "trajectory_id": "366f17da",
+      "page_family": "admin",
+      "state_count": 37,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-366f17da-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-366f17da-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 18,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    },
+    {
+      "case_id": "enterprise-02dad10c",
+      "domain": "enterprise",
+      "trajectory_id": "02dad10c",
+      "page_family": "workarena14",
+      "state_count": 101,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-02dad10c-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-02dad10c-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [
+        "source_only",
+        "source_overlay"
+      ],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 50,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    },
+    {
+      "case_id": "enterprise-1a755059",
+      "domain": "enterprise",
+      "trajectory_id": "1a755059",
+      "page_family": "workarena15",
+      "state_count": 101,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-1a755059-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-1a755059-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [
+        "source_only",
+        "source_overlay"
+      ],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 50,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    },
+    {
+      "case_id": "enterprise-3fafa5c3",
+      "domain": "enterprise",
+      "trajectory_id": "3fafa5c3",
+      "page_family": "workarena17",
+      "state_count": 101,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-3fafa5c3-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-3fafa5c3-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 50,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    },
+    {
+      "case_id": "enterprise-454485ca",
+      "domain": "enterprise",
+      "trajectory_id": "454485ca",
+      "page_family": "workarena16",
+      "state_count": 101,
+      "revision": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-454485ca-revision.json",
+      "update_questions": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-454485ca-update-questions.jsonl",
+      "methods": [
+        "b3",
+        "source_coalesced"
+      ],
+      "ablation_methods": [],
+      "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+      "exposure": {
+        "maintenance_method_tuning": false,
+        "historical_native_full_eval": true,
+        "independent_confirmation": false,
+        "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+      },
+      "revision_kind": "controlled_text_observation_correction",
+      "source_state_index": 50,
+      "expected_primary_route": "source_coalesced/source_overlay direct text-evidence maintenance; actual route must be logged, not assumed"
+    }
+  ],
+  "normal_questions": {
+    "web": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-normal-questions.jsonl",
+    "enterprise": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-normal-questions.jsonl"
+  },
+  "normal_question_ids": {
+    "web": [
+      "00aa905a",
+      "06a5a25f",
+      "07d86be1",
+      "07ab3723",
+      "07b49858",
+      "18f9d965",
+      "05cce9b3",
+      "0738c1ac",
+      "0a4a47e6",
+      "0401f0c8",
+      "0a13e290",
+      "0cd6dc43"
+    ],
+    "enterprise": [
+      "01307e07",
+      "0d07143c",
+      "14a823df",
+      "025db8ef",
+      "25b00876",
+      "32909aa1",
+      "057a2d4d",
+      "080b0218",
+      "0cf979c4",
+      "109b334c",
+      "11cc7ac2",
+      "12286151"
+    ]
+  },
+  "methods": [
+    "b3",
+    "source_coalesced"
+  ],
+  "ablation_methods": [
+    "source_only",
+    "source_overlay"
+  ],
+  "ablation_cases": [
+    "web-06a17a60",
+    "web-2af3e2bb",
+    "enterprise-02dad10c",
+    "enterprise-1a755059"
+  ],
+  "normal_qa_protocol": "One preselected representative revised snapshot per domain for b3/ours/source-only/overlay; 24 questions x 4 methods are 96 responses, not 96 independent questions.",
+  "update_protocol": "B3/Ours on all eight cases; Source-only/Overlay on two preselected cases/domain; changed-fact and unchanged-neighbor checks.",
+  "selection_rule": "Official Small membership, complete source, nonempty evidence, length/page-family spread, fixed category quota and ID order; no score/result inspection.",
+  "exposure_summary": "Target histories were not in this maintenance tuning set but were present in historical native evaluation; every normal question was historically evaluated. No held-out benchmark claim.",
+  "runtime_freeze": {
+    "status": "pending_actual_initial_snapshots_and_A_completion",
+    "required_before_first_call": [
+      "actual snapshot hashes",
+      "effective runtime/config hash",
+      "code/patch hash",
+      "method/Reader/retriever/budget",
+      "revision/question hashes"
+    ],
+    "additionally_record": [
+      "initial Event/Notes fallback provenance",
+      "normal QA representative snapshot IDs",
+      "actual request/service parameters",
+      "v2 data hashes"
+    ]
+  },
+  "official_sources": {
+    "haystack": "third_party/LongMemEval-V2/data/longmemeval-v2/haystacks/lme_v2_small.json",
+    "haystack_sha256": "9b5301defb23a088a5f06e45ff8d5f35e569d78305a66d492046a9fff9b46593",
+    "questions": "third_party/LongMemEval-V2/data/longmemeval-v2/questions.jsonl",
+    "questions_sha256": "0a3ae5ebea938c24d7800e1e0b0828e08ae1646f939a53853b2b8cdc08e292b7",
+    "trajectories": "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl",
+    "trajectories_sha256": "363cec9a8e87aa8d9101ce4e600aadbf7031d674056ebe4f969e8424abc5f3c6"
+  },
+  "files": {
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-06a17a60-revision.json": "6384b4642f4d701c9e688ac979e7e8349ca7f9f7f22cbf43e7288626ebb0eb0b",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-06a17a60-update-questions.jsonl": "2a013293002128ad677e4b9fe2fbcd12d56c8ef78b04340dc4633904f98e682e",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2af3e2bb-revision.json": "0077c9bb5cd87c79be6f8e3295f1f84fbbb8b8be957157fb204b31f7ddf2a913",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2af3e2bb-update-questions.jsonl": "d3b1f2969ecddb9284e5bc26a12dcd2bfd823cafc0d6038ca724dff99913003d",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2ab85f90-revision.json": "071b8d628195b5a77d3e1f297d0200796a74ec6e5663ac613105755bc12447f5",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-2ab85f90-update-questions.jsonl": "6b23bd4abc1a8204298de18422bca32dba57d287255cdd00fa39e71fbcf4d524",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-366f17da-revision.json": "503621aa9a7748176d046f7db6066868903eda6caf94740c33ea0284a68c955f",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-366f17da-update-questions.jsonl": "aa993cf57c4baf62f5b918cd1147c4214b0186e71c68c744c87fa21aae5a2f8b",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-02dad10c-revision.json": "8d389d93d6bdc01708179d8015508230a797310477d7ffb41376794eb814ebbb",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-02dad10c-update-questions.jsonl": "e35015725008a715a745564e6b9662328e230119636231aaf67a302caf780cc5",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-1a755059-revision.json": "d6dde965575ca938e4609f15fb152faa3ceb75e55e47836f2af42df13e51120c",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-1a755059-update-questions.jsonl": "da050173f964a0865f0bc8c305b1a2485b33b32abe8f84f281913a402524bce8",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-3fafa5c3-revision.json": "e3a03ebe0fe793d4b79badcfbd64ce9b6abcb37ff37644b591f3339720be1653",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-3fafa5c3-update-questions.jsonl": "6558bbe6001959aa104674c423fc653a92705f7cdc47fddc75b2fea4c10f1e4f",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-454485ca-revision.json": "324af2aa754320f9965386c6f5e963856d0dca3a8e2049c75db5188e40ce7daa",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-454485ca-update-questions.jsonl": "2cbf1c7031e6a157e30f5350a2d7dad3e0964a3869179279c10778f16a8d0215",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/web-normal-questions.jsonl": "667f0d4a251e7222a52f966a34e754e7c5e4543f2f8d2946191dbd3d5b3fc4d9",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/enterprise-normal-questions.jsonl": "f73eba6a2d5c8f3f3b5a4444834c2f2dd4d20841b6491f24358563dccfbc3233",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/source_check.json": "eb966c8c9a16b3a81f1eec47a73c9aefa9f1f78d8e29993e491259acacf918a0",
+    "manifests/focused-maintenance-v4/maintenance-confirmation-v2/SCORING.md": "99e79323285a2c6f014a4b32b343e770040853e1c519df08e1402d85ff5afe70"
+  },
+  "supersedes_for_execution": "manifests/focused-maintenance-v4/independent-confirmation-v1/manifest.json",
+  "amendment": {
+    "reason": "All eight v1 edits changed thoughts, but run_agentrunbook_updates.py direct source_coalesced/source_overlay route requires text. v1 therefore tests fallback rather than the intended mechanism. Amend before evaluation, retaining all eight trajectories, exact state positions, normal QA, method allocation and workload size.",
+    "decision_basis": "Source code branch and source observations only; no B method outcomes used.",
+    "old_manifest_sha256": "32d81d15c1223275e12873ee79e3627ddec53ecc0059f6333210d0a5d8e3ca29",
+    "created_at": "2026-10-16T14:55:00.110900+00:00",
+    "changed": "Eight revision specifications and sixteen diagnostic questions; URL-only neighbors replaced by neighboring field values where present. No extra experimental cases.",
+    "preserved": "A manifest/plan/code; original v1 files; B trajectory and state selection, 24 normal questions byte-for-byte, baseline allocation."
+  },
+  "normal_qa_representative_cases": {
+    "web": "web-06a17a60",
+    "enterprise": "enterprise-02dad10c"
+  },
+  "normal_qa_representative_rule": "First originally frozen ablation case in each domain, selected without results.",
+  "diagnostic_notice": "Sixteen update questions explicitly identify trajectory/state to test local correctness. They are not counted as normal QA.",
+  "normal_qa_scoring": {
+    "deterministic_questions": 18,
+    "semantic_abstention_questions": 6,
+    "deterministic": "Use existing eval_function unchanged.",
+    "abstention": "Use the existing official judge if available. Otherwise perform method-blinded source/gold-based review using the fixed rubric in SCORING.md; label as adapted assisted review, not official judge. Never use keyword matching as a semantic substitute.",
+    "denominator": "Report scored/total, pending and full-answer rate. Do not count pending as wrong or claim all-24 accuracy before all are scored."
+  },
+  "planned_work": {
+    "updates": 24,
+    "diagnostic_responses": 48,
+    "normal_responses": 96,
+    "normal_unique_questions": 24,
+    "diagnostic_unique_questions": 16,
+    "total_reader_responses": 144,
+    "full_history_rebuilds": 0,
+    "shared_target_preparation": "Reuse provenance and exact request cache; prepare missing target partitions once for all compared methods if required by the existing matched-snapshot implementation. Account actual setup calls separately; 144 counts Reader answers, not all LLM calls."
+  },
+  "source_validation": "All eight replacement anchors and sixteen gold source references checked offline against official source. This is not a model-quality result or proof of text-only coverage of all normal QA."
+}

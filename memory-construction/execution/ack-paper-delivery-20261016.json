@@ -1,0 +1,20 @@
+{
+  "guidance_revision": "paper-delivery-20261016",
+  "received_at": "2026-10-16T23:08:36.226176+08:00",
+  "thread_id": "01a13837-178d-7083-ba90-2239dd15f7d5",
+  "native_goal_observed": "null",
+  "action": "created same-thread corrective Goal; no competing executor",
+  "active_jobs": [
+    "full-small-recovery-20261016-v9",
+    "full-small-recovery-continuation-20261016-v1"
+  ],
+  "v9_progress": "56/100 at receipt",
+  "preserved": [
+    "valid web initial partitions",
+    "enterprise Raw RAG",
+    "all previous ledgers/results",
+    "v1 manifest as historical"
+  ],
+  "next_action": "wait for v9 safe persistence; then apply minimal OOM service fix, supplement affected Event/Notes, freeze A, run A, then B-v2",
+  "scope": "A 84 updates/126 query batches; B-v2 8 targets/24 updates/144 Reader responses; no new methods/baselines/samples"
+}

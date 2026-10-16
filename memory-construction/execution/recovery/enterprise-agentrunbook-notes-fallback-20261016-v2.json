@@ -1,0 +1,12 @@
+{
+  "version": "enterprise-agentrunbook-notes-fallback-20261016-v2",
+  "created_at": "2026-10-16T19:00:00+08:00",
+  "affected_unit": "expand-enterprise-agentrunbook",
+  "trajectory": "02dad10c",
+  "reason": "registered recovery reached state 100 but the final long-trajectory Notes request exhausted CUDA memory; fresh service boundary used before retry",
+  "scope": "only the failed enterprise AgentRunbook initial expansion and its blocked dependents; successful web and independent RAG stages are reused",
+  "fallback": "existing AgentRunbook-R deterministic procedure/hint fallback is available only on an exception; valid v7 requests are audited separately",
+  "quality_boundary": "event/source checks remain applicable; fallback Notes are not claimed semantically equivalent and require separate review",
+  "code_sha256": "86498237cf979e9ce0744db6be5e2cc5f0623d739641d8872bf75ef7cef0c4f1",
+  "prior_attempts": ["v1 path error","v2 path error","v3 CUDA OOM","v4 circular import","v5 missing tools path","v6 service PYTHONPATH mismatch"]
+}

@@ -1,0 +1,34 @@
+{
+  "revision_id": "confirmation-v2-enterprise-02dad10c-text",
+  "trajectory_id": "02dad10c",
+  "domain": "enterprise",
+  "source_edits": [
+    {
+      "state_index": 50,
+      "field": "text",
+      "old": "\t\t\t\t\t\t[a252] textbox 'Quantity' value='1', clickable, visible\n\t\t\t\t\t\t\tStaticText '1'",
+      "new": "\t\t\t\t\t\t[a252] textbox 'Quantity' value='2', clickable, visible\n\t\t\t\t\t\t\tStaticText '2'",
+      "count": 1
+    }
+  ],
+  "changed_fact": "2",
+  "neighbor_state_index": 49,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  },
+  "revision_kind": "controlled_observation_correction",
+  "observation_field": "the Quantity shown on the asset form",
+  "old_value": "1",
+  "new_value": "2",
+  "counterfactual_notice": "Researcher-defined local correction to one recorded text observation; not a naturally observed environment change. Actions, thoughts, outcomes and other states remain unchanged.",
+  "source_evidence": {
+    "official_file": "third_party/LongMemEval-V2/data/longmemeval-v2/trajectories.jsonl",
+    "state_index": 50,
+    "text_sha256": "90fe8c3b4c494006d637ad36b181375c2a52d3a078ddf3bddf882233a239b2a6",
+    "url": "https://workarenapublic14.service-now.com/now/nav/ui/classic/params/target/alm_asset.do%3Fsys_id%3D7bf7acfe935ffad065c5ff87dd03d696%26sysparm_view%3D%26sysparm_record_row%3D2%26sysparm_record_rows%3D2%26sysparm_record_list%3Dassigned_to.name%253dMark-Ricardo%2BYu-Proctor%255eORDERBYassigned_to%26sysparm_record_target%3Dalm_asset%26sysparm_template_editable%3D%26sysparm_exclude_tiny_parms%3Dsys_id%252csysparm_record_row%26sysparm_nostack%3Dyes"
+  }
+}

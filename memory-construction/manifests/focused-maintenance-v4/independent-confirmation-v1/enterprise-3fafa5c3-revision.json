@@ -1,0 +1,23 @@
+{
+  "revision_id": "independent-enterprise-3fafa5c3-thought",
+  "trajectory_id": "3fafa5c3",
+  "domain": "enterprise",
+  "source_edits": [
+    {
+      "state_index": 50,
+      "field": "thoughts",
+      "old": "We initiated a bulk delete (selected all rows and chose “Delete” from “Actions on selected rows”). The next required step is to confirm the deletion in the confirmation dialog, but we need the dialog to fully render so its buttons become available to click. Waiting briefly should surface the confirmation UI.",
+      "new": "We initiated a bulk delete (selected all rows and chose “Delete” from “Actions on selected rows”). The next required step is to confirm the deletion in the confirmation dialog, but we need the dialog to fully render so its buttons become available to click. Waiting briefly should surface the confirmation UI. Independent correction: the catalog-task status is confirmed current.",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Independent correction: the catalog-task status is confirmed current.",
+  "neighbor_state_index": 49,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  }
+}

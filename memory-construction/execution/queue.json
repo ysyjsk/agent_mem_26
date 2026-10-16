@@ -1,11 +1,12 @@
 {
   "schema_version": 2,
   "update_id": "focused-maintenance-v4-20261015",
-  "goal": "以现有 v13 Coalescing 为核心完成固定范围的 Agent Memory Maintenance 正式验证与论文证据。先按阶段复用已有合法结果，只补必要的 Notes 规则修正、Source-only 一致性及 Raw RAG/RAG+Notes 更新接口和维护数据。必要正确性、公平性与真实更新查询检查通过后冻结实现、模型、Reader、评分和数据清单，直接完成完整 Small 历史库上的固定维护实验、核心消融、连续成本、质量分项、必要重复及正文/复现交付。可选工程优化默认跳过，本轮全程最多两个主要候选，必须在正式冻结前小范围配对验证且不延误主线；不以优于 Source-only 或所有 baseline 作为启动或完成条件。依据完整可追溯结果判断成本—质量价值：有支持则写相应论文主张，无独特优势则完整保存负结果、原因与贡献不足的结论，完成本轮既定实验并结束，不无限寻找 trick。",
+  "goal": "按 paper-evidence-20261016 完成 A→B→C：A 保持 v13、现有 baseline 和活动冻结输入，完成 full-small-recovery-v1 已登记矩阵并复用合法阶段；B 复用完整初始快照，一次性预冻结有限的新修订及两域24道正常QA，记录筛选、答案、评分、暴露与逐题配对；C 分开组织维护主表、Overlay/Coalesced真实累计成本和证据增长、质量与独立确认，完成论文及复现。不得新增方法、baseline或按结果换样本。可恢复故障最小修复，仅补受影响单元；失败日志不能代替缺失可比结果。全部必要证据齐备后据实收尾，不预设胜出。",
   "current_phase": "full_small_expansion_and_registered_formal_queue",
   "native_goal": {
-    "status": "active_verified_20261016",
-    "current_receipt": "execution/ack-execution-recovery-20261016.json",
+    "status": "active_paper_delivery_continuation_20261016",
+    "current_receipt": "execution/ack-paper-delivery-20261016.json",
+    "host_transition": "Latest get_goal returned null; created one continuation Goal on the same thread. Existing detached experiment runner preserved; no additional executor started.",
     "previous_executor_record": {
       "status": "complete",
       "note": "当前会话先查询到 null，随后创建与冻结正式交付一致的原生 Goal 并在全部产物完成后标记 complete。",
@@ -16,16 +17,17 @@
         "note": "No resume/objective-update interface; no duplicate executor or fabricated activation."
       }
     },
-    "required_action": "Executing VS Code session must query actual Goal. Previous completion does not satisfy missing project evidence; continue/create corrective Goal as host permits."
+    "required_action": "Continue same-thread Goal; preserve v9/continuation; switch service only after safe persistence boundary; execute A then B-v2."
   },
   "executor_ack": {
     "status": "received",
-    "path": "execution/ack-execution-recovery-20261016.json",
+    "path": "execution/ack-paper-evidence-20261016.json",
+    "guidance_revision": "paper-evidence-20261016",
     "expected_update_revision": "execution-recovery-20261016",
-    "previous_receipt": "execution/ack-focused-maintenance-v4.json"
+    "previous_receipt": "execution/ack-execution-recovery-20261016.json"
   },
   "best_available": "Repaired text-only development comparison: public-v1 includes six methods, two revisions and diagnostic4+normal8. Original noncompliant queries remain historical; official full-history expansion is active.",
-  "next_candidate": "No new candidate. Registered finite full Small matrix: 32 main updates, 4 core ablation updates, 24 repeated updates, 24 sequential updates, 126 query batches; independent caches and fixed scoring.",
+  "next_candidate": "No new candidate. A registered matrix continues unchanged; B evidence-only selection is prepared offline before its first evaluation call, then runs sequentially after A using the same complete initial snapshots.",
   "primary_metric": "update LLM input+output and update+query total LLM tokens; wall, embedding, initial cost, quality and failures separately",
   "tasks": [
     {
@@ -83,7 +85,11 @@
         "valid text-only development sequence",
         "original formal outputs with noncompliant query label"
       ],
-      "evidence": ["reports/execution-recovery-20261016/diagnostic-v1", "reports/execution-recovery-20261016/normal-v1", "reports/execution-recovery-20261016/legacy-accounting-v1"],
+      "evidence": [
+        "reports/execution-recovery-20261016/diagnostic-v1",
+        "reports/execution-recovery-20261016/normal-v1",
+        "reports/execution-recovery-20261016/legacy-accounting-v1"
+      ],
       "completion_scope": "Actual repaired text-only/controller settings verified. Cost accounting includes query controllers. Fact-role checker repaired; semantic certification remains separate and pending, not declared equivalent. Formal Reader transport now disables unlogged SDK retries uniformly."
     },
     {
@@ -99,6 +105,9 @@
         "reports/execution-recovery-20261016/public-sequence-v2/continuous_cost.svg",
         "reports/execution-recovery-20261016/public-sequence-v3/evidence_size.svg",
         "reports/execution-recovery-20261016/coalesced-sequence-memory-review.md",
+        "reports/execution-recovery-20261016/rag-notes-sequence-memory-review.md",
+        "reports/execution-recovery-20261016/public-rag-sequence-error-review.md",
+        "reports/execution-recovery-20261016/public-rag-sequence-error-evidence.json",
         "runs/focused-maintenance-v4/public-repair-20261016/paired10",
         "runs/focused-maintenance-v4/public-repair-20261016/sequence"
       ],
@@ -112,7 +121,7 @@
         "REPAIR_EVAL",
         "PUBLIC_BASELINES"
       ],
-      "action": "必要实现修复后冻结 v13 与实际配置/Manifest。可选主要候选最多两个、允许零个、不延误主线，不能为追求胜出延长开发。",
+      "action": "必要实现修复后冻结 v13 与实际配置/Manifest；当前活动登记输入保持不变，不新增性能候选。",
       "acceptance": "必要正确性/公平性检查通过、实际冻结记录完整即可；不要求优于 Source-only 或任何对照。",
       "reopened_reason": "Frozen manifest did not match effective formal query configuration or official full-history scope."
     },
@@ -120,22 +129,41 @@
       "id": "CONFIRM",
       "status": "in_progress",
       "depends_on": [
-        "SELECT"
+        "SMALL_MAIN"
       ],
-      "action": "复用合法确认并补必要覆盖，以冻结版本评价；分数/成本不领先如实记录。只有明确实现 bug 修复，不自动回 SELECT 做方法搜索。",
+      "action": "B-v2: after A runtime freeze, bind actual snapshots/runtime/code hashes and run maintenance-confirmation-v2 manifest once; do not execute independent-confirmation-v1.",
       "outputs": [
-        "results/tables/focused-maintenance-v4/confirmation.csv",
-        "reports/execution-recovery-20261016/confirmation-reuse-v1/confirmation.csv"
+        "results/tables/focused-maintenance-v4/confirmation-v2.csv",
+        "manifests/focused-maintenance-v4/maintenance-confirmation-v2/manifest.json",
+        "runs/focused-maintenance-v4/maintenance-confirmation-v2",
+        "reports/execution-recovery-20261016/maintenance-confirmation-v2"
       ],
+      "preparation": {
+        "status": "frozen_data_pending_A_runtime_hashes",
+        "script": "tools/prepare_independent_confirmation.py",
+        "manifest": "manifests/focused-maintenance-v4/maintenance-confirmation-v2/manifest.json",
+        "targets": 8,
+        "normal_questions": 24,
+        "update_questions": 16,
+        "ablation_cases": [
+          "web-06a17a60",
+          "web-2af3e2bb",
+          "enterprise-02dad10c",
+          "enterprise-1a755059"
+        ],
+        "selection_basis": "official Small membership, complete text source, trajectory length/page-family spread, fixed question categories and ID order; no scores/results inspected",
+        "exposure": "targets not in maintenance tuning set but historical native evaluation exposed them; all selected normal questions historically evaluated; no held-out claim",
+        "first_call_gate": "after A, bind actual initial snapshot hashes, effective runtime/config, code/patch hash, method/Reader/retriever/budget and preserve this manifest unchanged"
+      },
       "evidence_note": "Historical a04 v13 confirmation reaggregated with retrieval controllers: both branches6/6; update+query93398 vs70175 tokens. Actual messages/config/snapshot matching verified. Remains original-version exposed evidence, not new held-out validation; final compatibility and generated-memory acceptance not automatically complete.",
-      "acceptance": "配置与数据/暴露记录完整，真实链路和一致性/公平性有效；结果可追溯，无需收益阈值，随后进入 Small。",
-      "reopened_reason": "Verify effective repaired query path and exposure; reuse valid earlier confirmation, do not relabel exposed diagnosis as independent."
+      "acceptance": "一次性冻结清单全部有效配对结果、逐题答案与生成Event/Notes语义核对可追溯；24正常问题不算96独立题。同数据集确认与已暴露证据分开；可恢复失败补受影响单元，真实负结果保留。不要求胜出，随后完成论文交付。",
+      "reopened_reason": "paper-delivery correction: v1 thoughts revisions cannot test direct text Coalescing; v2 is frozen before evaluation."
     },
     {
       "id": "SMALL_MAIN",
       "status": "in_progress",
       "depends_on": [
-        "CONFIRM"
+        "SELECT"
       ],
       "action": "必要一致性/公平性和冻结检查通过后直接运行完整 Small 固定维护负载。保留三类初始记忆复用，独立维护分支；不按结果选样本或调方法，不要求 Ours 先胜出。",
       "outputs": [
@@ -166,16 +194,18 @@
         "REPAIR_EVAL",
         "PUBLIC_BASELINES",
         "SMALL_MAIN",
+        "CONFIRM",
         "WRITE"
       ],
       "action": "核对最终主表、机制表、图、确认、正文和复现；更新实际完成状态。",
-      "acceptance": "GOAL.md 既定正式主表、核心消融、连续图、质量/失败、确认/重复、正文及复现完成；结论可为优势成立或独特贡献不足，不预设胜出。",
+      "acceptance": "A已登记矩阵、B预冻结独立确认/正常QA及C论文主表/核心消融/连续图/语义质量/失败/重复/正文/复现逐项有真实证据；基础设施失败日志不替代缺失可比结果。结论可为优势成立或独特贡献不足，不预设胜出。",
       "reopened_reason": "Command/file completion did not meet actual GOAL acceptance."
     }
   ],
   "active_plan_task_ids": [
     "SELECT",
     "SMALL_MAIN",
+    "CONFIRM",
     "WRITE"
   ],
   "backlog": [
@@ -196,6 +226,7 @@
     }
   ],
   "update_revision": "execution-recovery-20261016",
+  "guidance_revision": "paper-delivery-20261016",
   "reuse_inventory": "execution/reuse_inventory.csv",
   "optimization_guide": "docs/REUSE_AND_OPTIMIZATION.md",
   "optimization_budget": {
@@ -207,16 +238,22 @@
   "research_completion": "not_complete: correct evaluation and complete original required scope; negative conclusions allowed only after that scope is delivered",
   "experiment_queue": {
     "queue_id": "full-small-formal-queue-20261016-v1",
-    "status": "detached_wait_for_existing_expansion_then_sequential_execution",
+    "status": "detached_recovery_of_failed_enterprise_initial_unit",
     "runner": "tools/run_full_small_formal.py",
     "registered_plan": "execution/full-small-recovery-v1/experiment_plan.json",
     "data_manifest": "manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json",
     "runtime_manifest": "runs/focused-maintenance-v4/full-small-recovery-v1/runtime_manifest.json",
     "runtime_freeze_status": "code_and_inputs_registered; actual complete snapshots must pass queued freeze gate before maintenance",
-    "active_gpu_job": "full-small-web-expansion-20261016-v1",
-    "queued_job": "full-small-formal-queue-20261016-v1",
-    "execution_mode": "existing detached launcher; waits for predecessor actual process/receipt; at most one model subprocess",
-    "required_history": {"web": 100, "enterprise": 100},
+    "active_gpu_job": "full-small-recovery-20261016-v9",
+    "recovery_of": "full-small-formal-queue-20261016-v1 / expand-enterprise-agentrunbook",
+    "recovery_scope": "only failed enterprise AgentRunbook initial expansion and its previously blocked dependents; successful web and independent RAG stages are reused; v7 uses a recovery-only existing-note fallback wrapper if the long Notes call fails",
+    "queued_job": "full-small-recovery-continuation-20261016-v1 (waits for v9 terminal, then resumes registered recovery dependencies)",
+    "completed_predecessor": "full-small-web-expansion-20261016-v1: exit 0, actual published history100; original launcher exited, no duplicate runner",
+    "execution_mode": "existing detached launcher; predecessor completed; at most one model subprocess; per-unit progress in terminal receipts and actual child process",
+    "required_history": {
+      "web": 100,
+      "enterprise": 100
+    },
     "fixed_cases": 8,
     "unique_questions": 22,
     "main_update_units": 32,
@@ -229,6 +266,10 @@
     "scheduled_report": "reports/execution-recovery-20261016/full-small-v1",
     "scheduled_initial_source_content_check": "reports/execution-recovery-20261016/full-small-v1/initial_source_contents.json",
     "partial_initial_source_content_evidence": "reports/execution-recovery-20261016/initial-source-content-check-v1.json",
+    "completed_web_initial_evidence": "reports/execution-recovery-20261016/web100-source-and-cost-verification.json",
+    "completed_web_initial_request_evidence": "reports/execution-recovery-20261016/web100-agentrunbook-request-verification.json",
+    "completed_web_raw_rag_initial_evidence": "reports/execution-recovery-20261016/web100-raw-rag-source-and-cost-verification.json",
+    "completed_web_rag_notes_initial_evidence": "reports/execution-recovery-20261016/web100-rag-notes-source-and-cost-verification.json",
     "boundary": "Registered/running is not completed. Round1 is reused in sequence/repeat summaries, not independent measurement. Semantic review and final paper acceptance still required. Exposed trajectories not relabeled held-out."
   },
   "historical_experiment_queue": {

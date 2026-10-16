@@ -1,0 +1,16 @@
+{
+  "id": "main-web-title-workflow-rag_notes",
+  "started_at": "2026-10-16T10:08:55.159333+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_rag_updates.py",
+    "--source",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-rag_notes/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/web-title-workflow/rag_notes",
+    "--revision-file",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/web-title-workflow-revision.json"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.159335+00:00"
+}

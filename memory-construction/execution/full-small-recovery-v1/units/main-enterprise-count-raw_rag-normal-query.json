@@ -1,0 +1,18 @@
+{
+  "id": "main-enterprise-count-raw_rag-normal-query",
+  "started_at": "2026-10-16T10:08:55.161271+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_rag_maintenance_reader.py",
+    "--domain",
+    "enterprise",
+    "--memory-dir",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/enterprise-count/raw_rag/memory_state",
+    "--questions-path",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/enterprise-normal-questions.jsonl",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/main/enterprise-count/raw_rag/normal-reader"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.161273+00:00"
+}

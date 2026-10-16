@@ -1,0 +1,23 @@
+{
+  "revision_id": "independent-enterprise-02dad10c-thought",
+  "trajectory_id": "02dad10c",
+  "domain": "enterprise",
+  "source_edits": [
+    {
+      "state_index": 50,
+      "field": "thoughts",
+      "old": "We’re currently inside the Asset form for “CONSUMABLE733 - Apple iPhone 5” (assigned to Mark-Ricardo Yu-Proctor). Instead of repeatedly paging between records, the best next step is to return to the filtered “All Assets” list so we can view and capture both matching assets at once.",
+      "new": "We’re currently inside the Asset form for “CONSUMABLE733 - Apple iPhone 5” (assigned to Mark-Ricardo Yu-Proctor). Instead of repeatedly paging between records, the best next step is to return to the filtered “All Assets” list so we can view and capture both matching assets at once. Independent correction: the incident-workflow status is confirmed current.",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Independent correction: the incident-workflow status is confirmed current.",
+  "neighbor_state_index": 49,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  }
+}

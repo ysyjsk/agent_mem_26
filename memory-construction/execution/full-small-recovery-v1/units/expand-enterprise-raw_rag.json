@@ -1,0 +1,18 @@
+{
+  "id": "expand-enterprise-raw_rag",
+  "started_at": "2026-10-16T09:17:57.008709+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/extend_full_small_memory.py",
+    "--domain",
+    "enterprise",
+    "--source",
+    "runs/dev-adapted-text-v1/results/enterprise-expanded20-rag-raw-optL-v1/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/initial/enterprise-raw_rag",
+    "--manifest",
+    "manifests/focused-maintenance-v4/full-small-recovery-v1/data_manifest.json"
+  ],
+  "status": "completed",
+  "finished_at": "2026-10-16T10:07:44.350105+00:00"
+}

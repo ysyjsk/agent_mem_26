@@ -1,0 +1,18 @@
+{
+  "id": "sequence-r3-web-title-rag_notes-revision-query",
+  "started_at": "2026-10-16T10:08:55.168236+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_rag_maintenance_reader.py",
+    "--domain",
+    "web",
+    "--memory-dir",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/sequence/r3/web-title/rag_notes/memory_state",
+    "--questions-path",
+    "runs/focused-maintenance-v4/dev/sequence-final/web-r3/data/questions.jsonl",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/sequence/r3/web-title/rag_notes/revision-reader"
+  ],
+  "status": "blocked_by_failed_dependency",
+  "finished_at": "2026-10-16T10:08:55.168239+00:00"
+}

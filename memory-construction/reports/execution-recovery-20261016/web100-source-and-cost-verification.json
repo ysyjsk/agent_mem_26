@@ -1,0 +1,137 @@
+{
+  "checked_at_utc": "2026-10-16T07:53:18.397469+00:00",
+  "scope": "Completed web AgentRunbook expansion and matched setup only; remaining architectures/domains and formal maintenance pending",
+  "new_model_calls_for_check": 0,
+  "manifest_sha256": "67f7b8c9a7e93a0b1db3ccaa32fad8cfa0f3ad0c0546332444b430bb76765eab",
+  "normalizer_sha256": "437b825499000f7ae774f948a5e62a2ff9f455367491f97d0382431965ce594c",
+  "official_trajectories_checked": 100,
+  "official_source_errors": [],
+  "snapshots": [
+    {
+      "memory_path": "runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-agentrunbook/memory_state",
+      "expected_trajectories": 100,
+      "loaded_trajectories": 100,
+      "exact_id_set_matches": true,
+      "checked_states": 1737,
+      "checked_source_characters": 65792253,
+      "expected_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+      "observed_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+      "mismatched_trajectory_ids": [],
+      "unreadable_trajectories": [],
+      "full_text_matches": true,
+      "boundary": "Stored textual trajectory completeness; not generated-memory semantic certification.",
+      "library": "expanded",
+      "expected_transitions": 1637,
+      "stored_events": 1637,
+      "event_coverage_exact": true,
+      "missing_transitions": [],
+      "extra_or_duplicate_transitions": [],
+      "empty_event_fields": [],
+      "notes": {
+        "procedure_note": {
+          "count": 100,
+          "one_per_trajectory": true,
+          "empty_note_ids": []
+        },
+        "hint_note": {
+          "count": 100,
+          "one_per_trajectory": true,
+          "empty_note_ids": []
+        }
+      },
+      "semantic_generated_memory_certified": false
+    },
+    {
+      "memory_path": "runs/focused-maintenance-v4/full-small-recovery-v1/matched/web/memory_state",
+      "expected_trajectories": 100,
+      "loaded_trajectories": 100,
+      "exact_id_set_matches": true,
+      "checked_states": 1737,
+      "checked_source_characters": 65792253,
+      "expected_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+      "observed_text_fingerprint_sha256": "2007a37b3a8952d642b86837f97e7b2878d30a916532e529f5e8ba79895d16dd",
+      "mismatched_trajectory_ids": [],
+      "unreadable_trajectories": [],
+      "full_text_matches": true,
+      "boundary": "Stored textual trajectory completeness; not generated-memory semantic certification.",
+      "library": "matched",
+      "expected_transitions": 1637,
+      "stored_events": 1637,
+      "event_coverage_exact": true,
+      "missing_transitions": [],
+      "extra_or_duplicate_transitions": [],
+      "empty_event_fields": [],
+      "notes": {
+        "procedure_note": {
+          "count": 100,
+          "one_per_trajectory": true,
+          "empty_note_ids": []
+        },
+        "hint_note": {
+          "count": 100,
+          "one_per_trajectory": true,
+          "empty_note_ids": []
+        }
+      },
+      "semantic_generated_memory_certified": false
+    }
+  ],
+  "expansion": {
+    "reused_history_count": 10,
+    "new_trajectories": 90,
+    "publish_stage_sum_s": 14284.801659357094,
+    "wall_scope": "sum of sequential trajectory publication intervals, excludes startup/cloning; NOT fresh cold build or process wall",
+    "llm_calls": 892,
+    "llm_tokens_known": 11917288,
+    "embedding_vectors": 3088,
+    "unknown_usage_calls": 0,
+    "failure_records": 0,
+    "cost_ledger": {
+      "initial_llm_calls": 892,
+      "initial_llm_input_tokens": 11594733,
+      "initial_llm_output_tokens": 322555,
+      "initial_llm_unknown_usage_calls": 0,
+      "initial_llm_failed_calls": 0,
+      "initial_embedding_calls": 358,
+      "initial_embedding_vectors": 3088,
+      "initial_embedding_input_tokens": 5961015,
+      "initial_embedding_failed_calls": 0,
+      "initial_embedding_unknown_usage_calls": 0,
+      "initial_embedding_transport_attempts": null,
+      "embedding_call_scope": "logged embedding operations; inherited SDK permits transport retries, whose individual attempts are not logged",
+      "initial_llm_tokens": 11917288,
+      "ledger_coverage": "observed non-query requests in inherited own-history ledger; not proof all historical work was logged"
+    },
+    "metrics_match_llm_ledger": true
+  },
+  "matched_preparation": {
+    "metrics": {
+      "reprepared_trajectories": [
+        "1ad1af4b",
+        "2a99f536"
+      ],
+      "historical_base": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-agentrunbook/memory_state",
+      "elapsed_s_including_no_change_check": 31.483312944008503,
+      "no_change_real_calls": 0,
+      "signature": "9df62b69e5a8d9ac1b52c290e6538af0cae3efa8e4effc59f3408e01bf55e761",
+      "scope": "matched partition preparation, NOT full cold construction"
+    },
+    "costs": {
+      "initial_llm_calls": 0,
+      "initial_llm_input_tokens": 0,
+      "initial_llm_output_tokens": 0,
+      "initial_llm_unknown_usage_calls": 0,
+      "initial_llm_failed_calls": 0,
+      "initial_embedding_calls": 0,
+      "initial_embedding_vectors": 0,
+      "initial_embedding_input_tokens": 0,
+      "initial_embedding_failed_calls": 0,
+      "initial_embedding_unknown_usage_calls": 0,
+      "initial_embedding_transport_attempts": null,
+      "embedding_call_scope": "logged embedding operations; inherited SDK permits transport retries, whose individual attempts are not logged",
+      "initial_llm_tokens": 0,
+      "ledger_coverage": "observed non-query requests in inherited own-history ledger; not proof all historical work was logged"
+    }
+  },
+  "quality_boundary": "Full source identity, structural event/Notes coverage and recorded cost consistency; not semantic quality or downstream QA certification"
+}

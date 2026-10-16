@@ -1,0 +1,11 @@
+{
+  "reprepared_trajectories": [
+    "1ad1af4b",
+    "2a99f536"
+  ],
+  "historical_base": "/data/predator/ly/agent-memory-construction-2026-10-12/memory-construction/runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-agentrunbook/memory_state",
+  "elapsed_s_including_no_change_check": 31.483312944008503,
+  "no_change_real_calls": 0,
+  "signature": "9df62b69e5a8d9ac1b52c290e6538af0cae3efa8e4effc59f3408e01bf55e761",
+  "scope": "matched partition preparation, NOT full cold construction"
+}

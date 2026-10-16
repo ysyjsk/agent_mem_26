@@ -1,0 +1,17 @@
+{
+  "id": "prepare-web",
+  "started_at": "2026-10-16T07:48:40.471879+00:00",
+  "command": [
+    "/data/predator/ly/Mem/.venv/bin/python",
+    "tools/run_agentrunbook_updates.py",
+    "--source",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/initial/web-agentrunbook/memory_state",
+    "--output",
+    "runs/focused-maintenance-v4/full-small-recovery-v1/matched/web",
+    "--prepare-trajectories",
+    "1ad1af4b",
+    "2a99f536"
+  ],
+  "status": "completed",
+  "finished_at": "2026-10-16T07:49:40.761996+00:00"
+}

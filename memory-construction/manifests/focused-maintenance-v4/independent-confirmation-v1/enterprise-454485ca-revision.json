@@ -1,0 +1,23 @@
+{
+  "revision_id": "independent-enterprise-454485ca-thought",
+  "trajectory_id": "454485ca",
+  "domain": "enterprise",
+  "source_edits": [
+    {
+      "state_index": 50,
+      "field": "thoughts",
+      "old": "The incident INC0014521 is created and open, but the Description field is still blank and other required values (from the Private Task instructions) may need to be entered exactly. The best next action is to switch to the Private Task tab to read the required Description/other field values verbatim before updating the incident.",
+      "new": "The incident INC0014521 is created and open, but the Description field is still blank and other required values (from the Private Task instructions) may need to be entered exactly. The best next action is to switch to the Private Task tab to read the required Description/other field values verbatim before updating the incident. Independent correction: the change-workflow status is confirmed current.",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Independent correction: the change-workflow status is confirmed current.",
+  "neighbor_state_index": 49,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  }
+}

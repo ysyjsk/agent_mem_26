@@ -36,7 +36,9 @@ their provenance; no synthetic attempt counts are claimed for old hidden retries
 | Raw RAG/Notes actual maintenance and queries | `runs/focused-maintenance-v4/public-repair-20261016` |
 | Six-method shared-load development table | `reports/execution-recovery-20261016/public-v1/public_main.csv` |
 | Generated event/notes inspection | `reports/execution-recovery-20261016/generated-memory-review-v1.md` |
+| Public RAG sequence: stored facts versus actual Reader evidence | `reports/execution-recovery-20261016/public-rag-sequence-error-review.md` and adjacent evidence JSON |
 | Five-method measured continuous development table/curve | `reports/execution-recovery-20261016/public-sequence-v2/` |
+| Paper figure renders from identical saved development numbers | `paper/figures/README.md` (source: `public-sequence-v3/continuous_cost.csv`) |
 | Old noncompliant-query accounting repair | `reports/execution-recovery-20261016/legacy-accounting-v1` |
 | Versioned historical confirmation with full query accounting | `reports/execution-recovery-20261016/confirmation-reuse-v1/` |
 
@@ -80,6 +82,16 @@ gate in `runs/focused-maintenance-v4/full-small-recovery-v1/runtime_manifest.jso
 That file must exist with validated actual histories before maintenance starts;
 registration alone is not runtime freeze or experiment completion.
 
+The current recovery boundary is recorded in
+`reports/execution-recovery-20261016/full-small-v1/recovery_diagnostics.md`.
+As of 2026-10-16 22:57 +08:00, enterprise AgentRunbook is still running at
+54/100 histories (12,119,038 known expansion tokens, 1,157 calls, 3,328
+vectors, and 313 unknown-usage calls in the current partial ledger). Enterprise RAG+Notes has a separate failed expansion at
+`02dad10c`; the repaired continuation entry discovers both failed roots and
+reuses validated completed units without another call. CUDA-OOM, import-error,
+and deterministic fallback records remain explicit failures/limitations rather
+than successful semantic construction, and unknown usage is not zero-filled.
+
 The queue uses three initial architectures per domain, reuses each architecture's
 own existing10 partitions and adds missing official trajectories. Target
 AgentRunbook partitions are prepared under matched construction settings;
@@ -101,6 +113,14 @@ same predeclared runs, not additional experiments or independent observations.
 The per-kind rows keep actual Notes regeneration/fallback costs; literal zero-LLM
 updates must not be generalized to workflow revisions. Case completeness checks
 match declared IDs as well as counts. Missing measurements remain null/incomplete.
+
+Workflow inputs are synthetic recorded-intent additions, not new executed actions:
+the four cases append the same required-field verification sentence to `thoughts`
+and share the expected short answer `required field`. Report four task contexts
+but one clarification template. Frozen phrase scoring does not by itself check
+verification ordering or whether generated Notes invent an executed action;
+inspect those separately against `manual_checks` in each revision JSON.
+State text, actions and original success/failure outcomes must stay unchanged.
 
 ## Background execution and resumption
 
@@ -144,6 +164,17 @@ review inputs and `continuous_cost.svg` under
 update+controller+Reader totals over successive rounds, excluding initial cost;
 it is not a one-update stacked bar or an extrapolation.
 
+`execution_receipts.csv` distinguishes observed output files from successfully
+validated queue units. An update/query marker left by a command whose subsequent
+validation failed is not a completed measurement. Completed receipts must match
+the registered unit ID and command. The reporter's own receipt is excluded
+because it is written after aggregation returns. Fixed question-ID multiplicities
+are checked independently: duplicate or unexpected answers cannot substitute for
+missing questions. Such artifacts retain their observable costs and failure
+labels but cannot make the workload-completion flags true. These are reporting
+checks, not changes to the frozen method, Reader or score rules. Complete saved
+source verification and separate generated-memory semantic review remain required.
+
 ```bash
 /data/predator/ly/Mem/.venv/bin/python -m pytest -q \
   tests/test_agentrunbook_update_dependencies.py tests/test_rag_update_adapter.py \
@@ -166,6 +197,28 @@ and Notes review is separate from source roundtrip and Reader accuracy. Normal
 questions repeated across changed snapshots are not independent new questions.
 The final paper and native Goal remain incomplete until the registered workload,
 quality records, paired variation and traceable final writing are delivered.
+
+## Finite independent-confirmation batch (prepared, not yet run)
+
+The one confirmation batch is frozen offline at
+`manifests/focused-maintenance-v4/independent-confirmation-v1/manifest.json`;
+the preparation script is `tools/prepare_independent_confirmation.py`. It
+contains eight official Small target histories, sixteen changed/unchanged update
+checks and twenty-four normal questions. Four target cases per domain receive
+B3/Coalesced updates; two preselected cases per domain additionally receive
+Source-only/Overlay. Normal QA is evaluated once on one preselected revised
+snapshot per domain for all four methods. The selected histories and questions
+were present in earlier native evaluation artifacts, so this is not held-out
+benchmark QA; the exposure labels and fixed selection reasons are preserved.
+
+After A's complete initial snapshots pass the runtime-freeze gate, bind the
+actual snapshot, effective-runtime, code/patch and configuration hashes into a
+new B output record before the first model call. Then use the existing
+`run_agentrunbook_updates.py` and `run_focused_formal_reader.py` paths with
+independent clones, fixed Reader/retriever/score settings, and the manifest's
+questions. Never replace a case or question after observing an answer; a
+repair is allowed only for an explicit implementation bug and must create a
+versioned affected-unit record.
 
 Embedding transport has a separate observability limitation: the inherited
 client permits up to3 SDK retries, while the operation ledger records one outer

@@ -1,0 +1,21 @@
+{
+  "revision": "paper-delivery-20261016-cache-offload-v1",
+  "created_at": "2026-10-16T23:21:43.651243+08:00",
+  "scope": "safe-boundary recovery only; no change to A/B scientific inputs or method logic",
+  "trigger": "recorded CUDA OOM on long 12k-20k-token construction requests near 24-GiB GPU capacity",
+  "change": {
+    "backend": "src/workflow_memory/local_backends.py",
+    "cache_implementation": "offloaded",
+    "threshold_prompt_tokens": 12000,
+    "env": "LME_OFFLOAD_CACHE_PROMPT_TOKENS=12000",
+    "model_dtype": "bfloat16",
+    "model": "Qwen3.5-9B",
+    "input_output_budgets_unchanged": true
+  },
+  "service_restart": "execution/wait_then_resume_full_small.sh at v9 terminal persistence boundary only",
+  "affected_missing_work": "failed Event/Notes entries and blocked enterprise RAG+Notes root only; fallback artifacts remain non-semantic",
+  "code_sha256": "927b5029fbb1528fb47254bbb97dd4171781bb4b54b47e8153a2ce056a3ba5f6",
+  "resume_sha256": "62d21e16a7c090ac66b41faecdf5adf9649216e0b1bf1977d2ae08856206a04e",
+  "v2_manifest_sha256": "0e0bb34ccf68e969afa6bdcab300688216d98444be86af3b607dc7f0d9a638e8",
+  "status": "prepared_pending_v9_terminal"
+}

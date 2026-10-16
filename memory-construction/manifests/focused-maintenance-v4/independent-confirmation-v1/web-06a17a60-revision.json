@@ -1,0 +1,23 @@
+{
+  "revision_id": "independent-web-06a17a60-thought",
+  "trajectory_id": "06a17a60",
+  "domain": "web",
+  "source_edits": [
+    {
+      "state_index": 15,
+      "field": "thoughts",
+      "old": "The orders list shows three March 2022 orders: 000000173 (3/10/22, $206.59, Canceled), 000000160 (3/2/22, $115.18, Canceled), and 000000169 (3/2/22, $52.35, Complete). To determine how much was actually spent on cooking/food in March 2022 I should inspect the items in the completed March order(s) first. I'll open the completed order 000000169 by clicking its \"View Order\" link (bid 1557) to see the line items and categories.",
+      "new": "The orders list shows three March 2022 orders: 000000173 (3/10/22, $206.59, Canceled), 000000160 (3/2/22, $115.18, Canceled), and 000000169 (3/2/22, $52.35, Complete). To determine how much was actually spent on cooking/food in March 2022 I should inspect the items in the completed March order(s) first. I'll open the completed order 000000169 by clicking its \"View Order\" link (bid 1557) to see the line items and categories. Independent correction: the product-list status is confirmed current.",
+      "count": 1
+    }
+  ],
+  "changed_fact": "Independent correction: the product-list status is confirmed current.",
+  "neighbor_state_index": 14,
+  "selection_reason": "Official Small membership, complete source, nonempty evidence, length/page-family spread; no scores or model results inspected.",
+  "exposure": {
+    "maintenance_method_tuning": false,
+    "historical_native_full_eval": true,
+    "independent_confirmation": false,
+    "note": "Prior native evaluation exposure; not a benchmark-held-out claim."
+  }
+}

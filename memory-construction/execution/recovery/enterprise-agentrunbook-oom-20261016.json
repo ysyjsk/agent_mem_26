@@ -1,0 +1,13 @@
+{
+  "unit": "expand-enterprise-agentrunbook",
+  "observed_at": "2026-10-16T17:52:00+08:00",
+  "status": "failed_recoverable_pending_active_runner",
+  "failure_class": "controller_service_cuda_oom",
+  "evidence": "execution/background/full-small-formal-queue-20261016-v1/stderr.log",
+  "partial_history_count": 11,
+  "required_history_count": 100,
+  "preserve_partial_output": true,
+  "recovery_rule": "Do not launch while the registered detached runner or any model-consuming child is active. After terminal state, rerun only this failed initial unit from the preserved source/output with the same manifest and configuration, using a fresh service/process boundary; do not rerun successful web or RAG units.",
+  "impact": "Enterprise AgentRunbook matched preparation and dependent formal maintenance are incomplete; enterprise Raw RAG/RAG+Notes remain independent and continue.",
+  "not_a_method_result": true
+}
